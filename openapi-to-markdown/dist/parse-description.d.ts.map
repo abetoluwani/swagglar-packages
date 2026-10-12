@@ -1,1 +1,0 @@
-{"version":3,"file":"parse-description.d.ts","sourceRoot":"","sources":["../src/parse-description.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAe,WAAW,EAAE,MAAM,OAAO,CAAA;AA2ErD,0FAA0F;AAC1F,MAAM,MAAM,iBAAiB,GAAG,CAAC,KAAK,CAAC,EAAE,MAAM,KAAK,OAAO,CAAC,WAAW,EAAE,CAAC,CAAA;AAE1E,mGAAmG;AACnG,eAAO,MAAM,uBAAuB,QAAO,CAAC,MAAM,iBAAiB,CA0ClE,CAAA"}

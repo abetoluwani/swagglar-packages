@@ -1,1 +1,0 @@
-{"version":3,"file":"get-operation.d.ts","sourceRoot":"","sources":["../../src/utils/get-operation.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,WAAW,EAAE,MAAM,uBAAuB,CAAA;AAIxD;;;;GAIG;AACH,eAAO,MAAM,aAAa,GACxB,OAAO,WAAW,CAAC,cAAc,GAAG;IAClC,oBAAoB,CAAC,EAAE,MAAM,CAAC,MAAM,EAAE,WAAW,CAAC,eAAe,CAAC,CAAA;CACnE,KACA,MAAM,CAAC,MAAM,EAAE,WAAW,CAAC,eAAe,CAc5C,CAAA"}

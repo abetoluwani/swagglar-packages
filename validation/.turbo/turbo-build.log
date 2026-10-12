@@ -1,5 +1,0 @@
-! Corepack is about to download https://registry.npmjs.org/pnpm/-/pnpm-10.16.1.tgz
-
-> @scalar/validation@0.6.5 build /Users/rabbithole/Documents/scalar/packages/validation
-> tsc -p tsconfig.build.json && tsc-alias -p tsconfig.build.json
-
