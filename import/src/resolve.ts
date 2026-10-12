@@ -1,8 +1,8 @@
-import { makeUrlAbsolute } from '@scalar/helpers/url/make-url-absolute'
+import { makeUrlAbsolute } from '@swagglar/helpers/url/make-url-absolute'
 import { parse } from 'yaml'
 
 /**
- * Find an OpenAPI document URL in the HTML of @scalar/api-reference and other places.
+ * Find an OpenAPI document URL in the HTML of @swagglar/api-reference and other places.
  * This is useful to open the OpenAPI document from basically any source.
  */
 export async function resolve(
@@ -126,10 +126,10 @@ export async function resolve(
           return embeddedSpec
         }
       } else {
-        console.warn(`[@scalar/import] Failed to fetch ${value}`)
+        console.warn(`[@swagglar/import] Failed to fetch ${value}`)
       }
     } catch (error) {
-      console.error(`[@scalar/import] Failed to fetch ${value}`, error)
+      console.error(`[@swagglar/import] Failed to fetch ${value}`, error)
     }
   }
 
@@ -259,7 +259,7 @@ function parseScriptContent(html: string): Record<string, any> | undefined {
       }
     }
   } catch (error) {
-    console.error('[@scalar/import] Failed to parse script content:', error)
+    console.error('[@swagglar/import] Failed to parse script content:', error)
   }
 
   return undefined
@@ -329,7 +329,7 @@ function parseEmbeddedOpenApi(html: string): object | undefined {
       return content
     }
   } catch (error) {
-    console.error('[@scalar/import] Failed to parse embedded OpenAPI document:', error)
+    console.error('[@swagglar/import] Failed to parse embedded OpenAPI document:', error)
   }
 
   return undefined

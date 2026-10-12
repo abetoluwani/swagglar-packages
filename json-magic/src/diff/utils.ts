@@ -1,5 +1,5 @@
-import { isObjectLike } from '@scalar/helpers/object/is-object'
-import { isPollutionKey } from '@scalar/helpers/object/prevent-pollution'
+import { isObjectLike } from '@swagglar/helpers/object/is-object'
+import { isPollutionKey } from '@swagglar/helpers/object/prevent-pollution'
 
 /**
  * Deep check for objects for collisions

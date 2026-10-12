@@ -1,6 +1,6 @@
-import type { OpenAPIV3_1 } from '@scalar/openapi-types'
-import type { SecurityScheme } from '@scalar/types/entities'
-import { nullable, object, string, union, type Static } from '@scalar/validation'
+import type { OpenAPIV3_1 } from '@swagglar/openapi-types'
+import type { SecurityScheme } from '@swagglar/types/entities'
+import { nullable, object, string, union, type Static } from '@swagglar/validation'
 
 export const registryApiMetadata = object({
   id: string(),

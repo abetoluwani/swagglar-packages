@@ -1,5 +1,5 @@
 {
-  "name": "@scalar/void-server",
+  "name": "@swagglar/void-server",
   "description": "Mirror for HTTP requests",
   "license": "MIT",
   "author": "Scalar (https://github.com/scalar)",
@@ -42,7 +42,7 @@
   ],
   "dependencies": {
     "@hono/node-server": "catalog:*",
-    "@scalar/helpers": "workspace:*",
+    "@swagglar/helpers": "workspace:*",
     "hono": "catalog:*",
     "js-base64": "catalog:*",
     "ws": "^8.19.0"

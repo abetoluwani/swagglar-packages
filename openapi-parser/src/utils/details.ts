@@ -1,4 +1,4 @@
-import { isObject } from '@scalar/helpers/object/is-object'
+import { isObject } from '@swagglar/helpers/object/is-object'
 
 import { OpenApiVersions } from '@/configuration'
 import type { DetailsResult } from '@/types/index'
@@ -24,7 +24,7 @@ export function details(specification: unknown): DetailsResult {
         continue
       }
 
-      // Match on major.minor exactly, mirroring `@scalar/openapi-validator`'s
+      // Match on major.minor exactly, mirroring `@swagglar/openapi-validator`'s
       // version detection. A `startsWith` check would mistake a future "3.10.0"
       // for "3.1", so the parser and the validator would disagree on the version.
       const [major, minor] = value.split('.')

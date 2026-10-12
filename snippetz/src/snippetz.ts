@@ -1,4 +1,4 @@
-import type { ClientId, HarRequest, TargetId } from '@scalar/types/snippetz'
+import type { ClientId, HarRequest, TargetId } from '@swagglar/types/snippetz'
 
 import { clients } from '@/clients'
 

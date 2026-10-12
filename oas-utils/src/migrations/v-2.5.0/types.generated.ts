@@ -1,4 +1,4 @@
-import type { XScalarStability } from '@scalar/types/legacy'
+import type { XScalarStability } from '@swagglar/types/legacy'
 
 type Collection = {
   'type': 'collection'

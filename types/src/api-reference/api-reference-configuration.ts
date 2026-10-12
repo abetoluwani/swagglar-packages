@@ -533,7 +533,7 @@ export type ApiReferenceConfiguration = ApiReferenceConfigurationRaw & {
    * `multipart/form-data` body for request signing).
    *
    * **Experimental:** The builder matches {@link https://github.com/scalar/scalar/blob/main/packages/workspace-store/src/request-example/builder/request-factory.ts RequestFactory}
-   * (`import type { RequestFactory } from '@scalar/workspace-store/request-example'`). That shape is still experimental and may change in minor releases.
+   * (`import type { RequestFactory } from '@swagglar/workspace-store/request-example'`). That shape is still experimental and may change in minor releases.
    *
    * @param input - Hook argument from the integration layer.
    * @param input.request - **Deprecated** when treated as a fetch API `Request`. Prefer thinking of this value as the

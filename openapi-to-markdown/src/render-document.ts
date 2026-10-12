@@ -1,9 +1,9 @@
 import {
   forEachPathItemOperation,
   getResolvedPathItem,
-} from '@scalar/workspace-store/helpers/for-each-path-item-operation'
-import { getResolvedRef, mergeSiblingReferences } from '@scalar/workspace-store/helpers/get-resolved-ref'
-import type { OpenApiDocument, OperationObject } from '@scalar/workspace-store/schemas/v3.2/strict/openapi-document'
+} from '@swagglar/workspace-store/helpers/for-each-path-item-operation'
+import { getResolvedRef, mergeSiblingReferences } from '@swagglar/workspace-store/helpers/get-resolved-ref'
+import type { OpenApiDocument, OperationObject } from '@swagglar/workspace-store/schemas/v3.2/strict/openapi-document'
 import type { ListItem, Root, RootContent } from 'mdast'
 import remarkGfm from 'remark-gfm'
 import remarkStringify from 'remark-stringify'

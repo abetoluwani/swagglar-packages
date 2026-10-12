@@ -91,7 +91,7 @@ describe('OpenAPI', () => {
   })
 })
 
-describe('@scalar/openapi-types/3.1', () => {
+describe('@swagglar/openapi-types/3.1', () => {
   it('allows boolean schemas anywhere a schema object is accepted', () => {
     expectTypeOf<true>().toExtend<OpenAPIV3_1SchemaObject>()
     expectTypeOf<false>().toExtend<OpenAPIV3_1SchemaObject>()
@@ -124,7 +124,7 @@ describe('@scalar/openapi-types/3.1', () => {
   })
 })
 
-describe('@scalar/openapi-types/3.2', () => {
+describe('@swagglar/openapi-types/3.2', () => {
   it('allows boolean schemas anywhere a schema object is accepted', () => {
     expectTypeOf<true>().toExtend<OpenAPIV3_2SchemaObject>()
     expectTypeOf<false>().toExtend<OpenAPIV3_2SchemaObject>()

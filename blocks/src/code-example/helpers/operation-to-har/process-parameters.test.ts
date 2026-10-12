@@ -1,10 +1,10 @@
-import { buildRequest, requestFactory } from '@scalar/workspace-store/request-example'
-import { coerceValue } from '@scalar/workspace-store/schemas/typebox-coerce'
+import { buildRequest, requestFactory } from '@swagglar/workspace-store/request-example'
+import { coerceValue } from '@swagglar/workspace-store/schemas/typebox-coerce'
 import {
   type OperationObject,
   type ParameterObject,
   SchemaObjectSchema,
-} from '@scalar/workspace-store/schemas/v3.2/strict/openapi-document'
+} from '@swagglar/workspace-store/schemas/v3.2/strict/openapi-document'
 import type { Request as HarRequest } from 'har-format'
 import { describe, expect, it, vi } from 'vitest'
 

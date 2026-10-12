@@ -1,14 +1,14 @@
-import type { OpenAPIV3_1 } from '@scalar/openapi-types'
-import type { AsyncApiDocument, AsyncApiMessageObject } from '@scalar/types/asyncapi/3.1'
+import type { OpenAPIV3_1 } from '@swagglar/openapi-types'
+import type { AsyncApiDocument, AsyncApiMessageObject } from '@swagglar/types/asyncapi/3.1'
 import {
   ASYNCAPI_WEBSOCKET_PROTOCOLS,
   getAllChannelMessages,
   getAsyncApiServers,
   getChannelOperations,
   resolveChannel,
-} from '@scalar/workspace-store/channel-example'
-import { getNameFromRef } from '@scalar/workspace-store/helpers/get-name-from-ref'
-import { getResolvedRef } from '@scalar/workspace-store/helpers/get-resolved-ref'
+} from '@swagglar/workspace-store/channel-example'
+import { getNameFromRef } from '@swagglar/workspace-store/helpers/get-name-from-ref'
+import { getResolvedRef } from '@swagglar/workspace-store/helpers/get-resolved-ref'
 
 import type { ResolvedChannel, ResolvedMessage, ResolvedOperation } from '@/transports/types'
 import { honoRouteFromPath } from '@/utils/hono-route-from-path'
@@ -79,7 +79,7 @@ function resolveProtocols(document: AsyncApiDocument, channel: Record<string, an
 /**
  * Normalize an AsyncAPI 3.1 document into a flat list of {@link ResolvedChannel}s a transport can
  * serve. Channel, message, operation, and server resolution are delegated to
- * `@scalar/workspace-store/channel-example` — the same layer the API client uses to connect to
+ * `@swagglar/workspace-store/channel-example` — the same layer the API client uses to connect to
  * channels — so the mock and the client agree on how a document maps to channels and operations
  * (including operation traits). This function only adapts that output into the transport types.
  */

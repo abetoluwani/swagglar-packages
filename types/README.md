@@ -1,4 +1,4 @@
-# @scalar/types
+# @swagglar/types
 
 Types to work with Scalar packages
 

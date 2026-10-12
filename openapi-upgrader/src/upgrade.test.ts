@@ -1,5 +1,5 @@
-import type { OpenAPIV3_2 } from '@scalar/openapi-types'
-import type { UnknownObject } from '@scalar/types/utils'
+import type { OpenAPIV3_2 } from '@swagglar/openapi-types'
+import type { UnknownObject } from '@swagglar/types/utils'
 import { describe, expect, expectTypeOf, it } from 'vitest'
 
 import { type UpgradeOptions, type UpgradeResult, upgrade } from './upgrade'

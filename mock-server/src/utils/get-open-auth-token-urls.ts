@@ -1,5 +1,5 @@
-import type { OpenAPI, OpenAPIV3, OpenAPIV3_1, OpenAPIV3_2 } from '@scalar/openapi-types'
-import { getResolvedRef } from '@scalar/workspace-store/helpers/get-resolved-ref'
+import type { OpenAPI, OpenAPIV3, OpenAPIV3_1, OpenAPIV3_2 } from '@swagglar/openapi-types'
+import { getResolvedRef } from '@swagglar/workspace-store/helpers/get-resolved-ref'
 
 /**
  * Extract path from URL. Metadata routes preserve trailing slashes because discovery

@@ -1,6 +1,6 @@
-import { isJsonMediaType } from '@scalar/helpers/http/is-json-media-type'
-import { parseMimeType } from '@scalar/helpers/http/mime-type'
-import type { Plugin } from '@scalar/types/snippetz'
+import { isJsonMediaType } from '@swagglar/helpers/http/is-json-media-type'
+import { parseMimeType } from '@swagglar/helpers/http/mime-type'
+import type { Plugin } from '@swagglar/types/snippetz'
 import { encode } from 'js-base64'
 
 import { joinUrlAndQuery, normalizeMethod } from '@/libs/http'

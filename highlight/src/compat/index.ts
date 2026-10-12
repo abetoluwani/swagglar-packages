@@ -1,5 +1,5 @@
 /**
- * `@scalar/code-highlight` compatibility layer.
+ * `@swagglar/code-highlight` compatibility layer.
  *
  * Enough of that package's surface to swap this highlighter in underneath
  * `ScalarCodeBlock` without touching the component, the stylesheet, or any
@@ -7,12 +7,12 @@
  * the same as everywhere else in this package:
  *
  * ```js
- * import '@scalar/highlight/all';                       // or register the few you need
- * import { syntaxHighlight } from '@scalar/highlight/compat';
+ * import '@swagglar/highlight/all';                       // or register the few you need
+ * import { syntaxHighlight } from '@swagglar/highlight/compat';
  * ```
  *
  * What this layer deliberately does *not* cover is the Markdown half of
- * `@scalar/code-highlight` — `htmlFromMarkdown`, `getHeadings`, `splitContent`,
+ * `@swagglar/code-highlight` — `htmlFromMarkdown`, `getHeadings`, `splitContent`,
  * `rehypeAlert`, `rehypeHighlight`. Those are a remark/rehype pipeline that has
  * nothing to do with tokenizing code, and they stay where they are.
  */

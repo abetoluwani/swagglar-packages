@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { ScalarWrappingText } from '@scalar/components/wrapping-text'
+import { ScalarWrappingText } from '@swagglar/components/wrapping-text'
 
 import type { Item } from '@/types'
 

@@ -1,4 +1,4 @@
-import { capitalize } from '@scalar/helpers/string/capitalize'
+import { capitalize } from '@swagglar/helpers/string/capitalize'
 
 /**
  * Display names for the most common languages found in custom code samples.

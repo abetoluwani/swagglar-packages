@@ -1,5 +1,5 @@
 {
-  "name": "@scalar/openapi-validator",
+  "name": "@swagglar/openapi-validator",
   "description": "Validate OpenAPI documents against the OpenAPI Specification",
   "license": "MIT",
   "author": "Scalar (https://github.com/scalar)",
@@ -45,14 +45,14 @@
   ],
   "sideEffects": false,
   "dependencies": {
-    "@scalar/helpers": "workspace:*",
-    "@scalar/json-schema-validator": "workspace:*",
-    "@scalar/types": "workspace:*",
+    "@swagglar/helpers": "workspace:*",
+    "@swagglar/json-schema-validator": "workspace:*",
+    "@swagglar/types": "workspace:*",
     "yaml": "catalog:*"
   },
   "devDependencies": {
-    "@scalar/themes": "workspace:*",
-    "@scalar/use-codemirror": "workspace:*",
+    "@swagglar/themes": "workspace:*",
+    "@swagglar/use-codemirror": "workspace:*",
     "@tailwindcss/vite": "catalog:*",
     "@types/node": "catalog:*",
     "@vitejs/plugin-vue": "catalog:*",

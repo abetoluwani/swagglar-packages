@@ -1,8 +1,8 @@
 # Scalar Scripts
 
-[![Version](https://img.shields.io/npm/v/%40scalar/scripts)](https://www.npmjs.com/package/@scalar/pre-post-request-scripts)
-[![Downloads](https://img.shields.io/npm/dm/%40scalar/scripts)](https://www.npmjs.com/package/@scalar/pre-post-request-scripts)
-[![License](https://img.shields.io/npm/l/%40scalar%2Fmock-server)](https://www.npmjs.com/package/@scalar/pre-post-request-scripts)
+[![Version](https://img.shields.io/npm/v/%40scalar/scripts)](https://www.npmjs.com/package/@swagglar/pre-post-request-scripts)
+[![Downloads](https://img.shields.io/npm/dm/%40scalar/scripts)](https://www.npmjs.com/package/@swagglar/pre-post-request-scripts)
+[![License](https://img.shields.io/npm/l/%40scalar%2Fmock-server)](https://www.npmjs.com/package/@swagglar/pre-post-request-scripts)
 [![Discord](https://img.shields.io/discord/1135330207960678410?style=flat&color=5865F2)](https://discord.gg/scalar)
 
 Post-response scripts for your OpenAPI documents.
@@ -22,20 +22,20 @@ Scalar is an open-source API platform for teams who want beautiful developer int
 
 Scripts are executed with the official Postman sandbox runtime (`postman-sandbox`), so the `pm` API behavior follows Postman semantics.
 
-> Note: This is intended to be used as a plugin with @scalar/api-client.
+> Note: This is intended to be used as a plugin with @swagglar/api-client.
 
 ## Installation
 
 ```bash
-npm install @scalar/pre-post-request-scripts
+npm install @swagglar/pre-post-request-scripts
 ```
 
 ## Usage
 
 ```ts
-import { createApiClientWeb } from '@scalar/api-client/layouts/Web'
-import { postResponseScriptsPlugin } from '@scalar/pre-post-request-scripts'
-import '@scalar/api-client/style.css'
+import { createApiClientWeb } from '@swagglar/api-client/layouts/Web'
+import { postResponseScriptsPlugin } from '@swagglar/pre-post-request-scripts'
+import '@swagglar/api-client/style.css'
 
 createApiClientWeb(
   document.getElementById('app'),

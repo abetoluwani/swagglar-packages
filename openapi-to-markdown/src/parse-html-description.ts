@@ -1,4 +1,4 @@
-import { htmlFromMarkdown } from '@scalar/code-highlight'
+import { htmlFromMarkdown } from '@swagglar/code-highlight'
 import type { Root } from 'mdast'
 import rehypeParse from 'rehype-parse'
 import rehypeRemark from 'rehype-remark'

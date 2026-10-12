@@ -1,4 +1,4 @@
-# @scalar/openapi-upgrader
+# @swagglar/openapi-upgrader
 
 ## 0.4.0
 
@@ -46,7 +46,7 @@
 
 ### Patch Changes
 
-- [#9666](https://github.com/scalar/scalar/pull/9666): Only normalize OpenAPI Reference Objects during bundling, never Schema Objects. `normalizeRefs` used to strip every sibling except `$ref` on any node outside `components/schemas`, which also hit inline schemas. In JSON Schema 2020-12 a `$ref` may legally carry sibling keywords — for example a `$defs`/`$dynamicAnchor` binding that specializes a generic template like `Paginated<T>` — and such schemas appear inline anywhere a schema is allowed (a response's `content.<media>.schema`, an `allOf` branch, …). Dropping those siblings discarded the binding, leaving `$dynamicRef` to resolve to the template's empty fallback and rendering an empty array (for example the `data` array of `GET /planets` in the Scalar Galaxy). Reference Objects are still normalized as before. A new `@scalar/helpers/openapi/is-schema-path` helper detects schema positions.
+- [#9666](https://github.com/scalar/scalar/pull/9666): Only normalize OpenAPI Reference Objects during bundling, never Schema Objects. `normalizeRefs` used to strip every sibling except `$ref` on any node outside `components/schemas`, which also hit inline schemas. In JSON Schema 2020-12 a `$ref` may legally carry sibling keywords — for example a `$defs`/`$dynamicAnchor` binding that specializes a generic template like `Paginated<T>` — and such schemas appear inline anywhere a schema is allowed (a response's `content.<media>.schema`, an `allOf` branch, …). Dropping those siblings discarded the binding, leaving `$dynamicRef` to resolve to the template's empty fallback and rendering an empty array (for example the `data` array of `GET /planets` in the Scalar Galaxy). Reference Objects are still normalized as before. A new `@swagglar/helpers/openapi/is-schema-path` helper detects schema positions.
 - [#10140](https://github.com/scalar/scalar/pull/10140): Replace redundant type assertions with compiler-checked annotations, typed accumulators, and existing guards across helpers, API conversion, request handling, and schema rendering.
 
   Narrow DOM elements and caught errors before accessing their properties. Correct header lookup to include missing values and handle them during PowerShell snippet generation.
@@ -142,7 +142,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/openapi-types@0.6.0**
+- **@swagglar/openapi-types@0.6.0**
   - [#8322](https://github.com/scalar/scalar/pull/8322): chore: bump required node version to >=22 (LTS)
 
 ## 0.1.11
@@ -153,7 +153,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/openapi-types@0.5.4**
+- **@swagglar/openapi-types@0.5.4**
   - [#8275](https://github.com/scalar/scalar/pull/8275): fix(openapi-types): make the `$ref` property in the `ReferenceObject` type required
 
 ## 0.1.10
@@ -186,14 +186,14 @@
 ### Patch Changes
 
 - Updated dependencies [[`72cd82f`](https://github.com/scalar/scalar/commit/72cd82fb8df63a9e5d0db1202978aebfefd0457a)]:
-  - @scalar/openapi-types@0.5.3
+  - @swagglar/openapi-types@0.5.3
 
 ## 0.1.5
 
 ### Patch Changes
 
 - Updated dependencies [[`a164d76`](https://github.com/scalar/scalar/commit/a164d76f21437b3a35210d62a996b6c9d483e5a4)]:
-  - @scalar/openapi-types@0.5.2
+  - @swagglar/openapi-types@0.5.2
 
 ## 0.1.4
 
@@ -204,28 +204,28 @@
 - [#7092](https://github.com/scalar/scalar/pull/7092) [`134ff5f`](https://github.com/scalar/scalar/commit/134ff5f32aa6842696bf146c7e0817b1662905eb) Thanks [@baywet](https://github.com/baywet)! - feat - upgrader - adds support for migrating XML nodes to 3.2.0
 
 - Updated dependencies [[`2239843`](https://github.com/scalar/scalar/commit/2239843150ed16d1ca35b0b1f8e90cd3e35be7ce)]:
-  - @scalar/openapi-types@0.5.1
+  - @swagglar/openapi-types@0.5.1
 
 ## 0.1.3
 
 ### Patch Changes
 
 - Updated dependencies [f69e7cc]
-  - @scalar/openapi-types@0.5.0
+  - @swagglar/openapi-types@0.5.0
 
 ## 0.1.2
 
 ### Patch Changes
 
 - Updated dependencies [15c4240]
-  - @scalar/openapi-types@0.4.1
+  - @swagglar/openapi-types@0.4.1
 
 ## 0.1.1
 
 ### Patch Changes
 
 - Updated dependencies [008a0f3]
-  - @scalar/openapi-types@0.4.0
+  - @swagglar/openapi-types@0.4.0
 
 ## 0.1.0
 

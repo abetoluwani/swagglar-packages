@@ -1,4 +1,4 @@
-import type { UnknownObject } from '@scalar/types/utils'
+import type { UnknownObject } from '@swagglar/types/utils'
 import { describe, expect, it } from 'vitest'
 
 import { upgrade } from './upgrade'

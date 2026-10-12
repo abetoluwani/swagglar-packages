@@ -4,11 +4,11 @@ A hook for interacting with the clipboard.
 
 ## Copying to Clipboard
 
-The default notification is a toast that requires `@scalar/use-toasts` to be initialized in the current project.
+The default notification is a toast that requires `@swagglar/use-toasts` to be initialized in the current project.
 
 ```vue
 <script setup lang="ts">
-import { useClipboard } from '@scalar/use-hooks'
+import { useClipboard } from '@swagglar/use-hooks'
 
 const { copyToClipboard } = useClipboard()
 

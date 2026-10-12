@@ -1,5 +1,5 @@
 <script lang="ts">
-import { useBindCx } from '@scalar/use-hooks/useBindCx'
+import { useBindCx } from '@swagglar/use-hooks/useBindCx'
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import type ScalarColorModeToggle from './ScalarColorModeToggle.vue'

@@ -1,4 +1,4 @@
-# @scalar/react-renderer
+# @swagglar/react-renderer
 
 ## 0.4.4
 

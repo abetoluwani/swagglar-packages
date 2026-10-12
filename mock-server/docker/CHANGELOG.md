@@ -1,4 +1,4 @@
-# @scalar/mock-server-docker
+# @swagglar/mock-server-docker
 
 ## 0.2.64
 
@@ -134,7 +134,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/mock-server@0.9.9**
+- **@swagglar/mock-server@0.9.9**
 
 - **@scalar/hono-api-reference@0.10.3**
 
@@ -144,7 +144,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/mock-server@0.9.8**
+- **@swagglar/mock-server@0.9.8**
 
 - **@scalar/hono-api-reference@0.10.3**
 
@@ -154,7 +154,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/mock-server@0.9.7**
+- **@swagglar/mock-server@0.9.7**
 
 - **@scalar/hono-api-reference@0.10.3**
 
@@ -164,7 +164,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/mock-server@0.9.6**
+- **@swagglar/mock-server@0.9.6**
 
 - **@scalar/hono-api-reference@0.10.3**
 
@@ -174,7 +174,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/mock-server@0.9.5**
+- **@swagglar/mock-server@0.9.5**
 
 - **@scalar/hono-api-reference@0.10.2**
 
@@ -184,7 +184,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/mock-server@0.9.4**
+- **@swagglar/mock-server@0.9.4**
 
 - **@scalar/hono-api-reference@0.10.2**
 
@@ -196,7 +196,7 @@
 
 - **@scalar/hono-api-reference@0.10.1**
 
-- **@scalar/mock-server@0.9.3**
+- **@swagglar/mock-server@0.9.3**
 
 ## 0.2.2
 
@@ -204,7 +204,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/mock-server@0.9.2**
+- **@swagglar/mock-server@0.9.2**
 
 - **@scalar/hono-api-reference@0.10.0**
 
@@ -214,7 +214,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/mock-server@0.9.1**
+- **@swagglar/mock-server@0.9.1**
 
 - **@scalar/hono-api-reference@0.10.0**
 
@@ -228,7 +228,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/mock-server@0.9.0**
+- **@swagglar/mock-server@0.9.0**
   - [#8322](https://github.com/scalar/scalar/pull/8322): chore: bump required node version to >=22 (LTS)
 
 - **@scalar/hono-api-reference@0.10.0**
@@ -240,7 +240,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/mock-server@0.8.48**
+- **@swagglar/mock-server@0.8.48**
 
 - **@scalar/hono-api-reference@0.9.48**
 
@@ -250,7 +250,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/mock-server@0.8.47**
+- **@swagglar/mock-server@0.8.47**
 
 - **@scalar/hono-api-reference@0.9.47**
 
@@ -260,7 +260,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/mock-server@0.8.46**
+- **@swagglar/mock-server@0.8.46**
 
 - **@scalar/hono-api-reference@0.9.47**
 
@@ -270,7 +270,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/mock-server@0.8.45**
+- **@swagglar/mock-server@0.8.45**
 
 - **@scalar/hono-api-reference@0.9.46**
 
@@ -280,7 +280,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/mock-server@0.8.44**
+- **@swagglar/mock-server@0.8.44**
 
 - **@scalar/hono-api-reference@0.9.46**
 
@@ -290,7 +290,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/mock-server@0.8.43**
+- **@swagglar/mock-server@0.8.43**
 
 - **@scalar/hono-api-reference@0.9.46**
 
@@ -300,7 +300,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/mock-server@0.8.42**
+- **@swagglar/mock-server@0.8.42**
 
 - **@scalar/hono-api-reference@0.9.45**
 
@@ -310,7 +310,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/mock-server@0.8.41**
+- **@swagglar/mock-server@0.8.41**
 
 - **@scalar/hono-api-reference@0.9.44**
 
@@ -320,7 +320,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/mock-server@0.8.40**
+- **@swagglar/mock-server@0.8.40**
 
 - **@scalar/hono-api-reference@0.9.44**
 
@@ -330,7 +330,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/mock-server@0.8.39**
+- **@swagglar/mock-server@0.8.39**
 
 - **@scalar/hono-api-reference@0.9.43**
 
@@ -340,7 +340,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/mock-server@0.8.38**
+- **@swagglar/mock-server@0.8.38**
 
 - **@scalar/hono-api-reference@0.9.42**
 
@@ -350,7 +350,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/mock-server@0.8.37**
+- **@swagglar/mock-server@0.8.37**
   - [#8146](https://github.com/scalar/scalar/pull/8146): fix: oauth2 confirmation page shows broken logo
   - [#8146](https://github.com/scalar/scalar/pull/8146): feat: show requested scopes on oauth2 confirmation page
 
@@ -362,7 +362,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/mock-server@0.8.36**
+- **@swagglar/mock-server@0.8.36**
 
 - **@scalar/hono-api-reference@0.9.40**
 
@@ -372,7 +372,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/mock-server@0.8.35**
+- **@swagglar/mock-server@0.8.35**
 
 - **@scalar/hono-api-reference@0.9.40**
 
@@ -382,7 +382,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/mock-server@0.8.34**
+- **@swagglar/mock-server@0.8.34**
 
 - **@scalar/hono-api-reference@0.9.40**
 
@@ -392,7 +392,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/mock-server@0.8.33**
+- **@swagglar/mock-server@0.8.33**
 
 - **@scalar/hono-api-reference@0.9.40**
 
@@ -402,7 +402,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/mock-server@0.8.32**
+- **@swagglar/mock-server@0.8.32**
 
 - **@scalar/hono-api-reference@0.9.40**
 
@@ -412,7 +412,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/mock-server@0.8.31**
+- **@swagglar/mock-server@0.8.31**
 
 - **@scalar/hono-api-reference@0.9.40**
 
@@ -422,7 +422,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/mock-server@0.8.30**
+- **@swagglar/mock-server@0.8.30**
 
 - **@scalar/hono-api-reference@0.9.40**
 
@@ -432,7 +432,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/mock-server@0.8.29**
+- **@swagglar/mock-server@0.8.29**
 
 - **@scalar/hono-api-reference@0.9.40**
 
@@ -442,7 +442,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/mock-server@0.8.28**
+- **@swagglar/mock-server@0.8.28**
 
 - **@scalar/hono-api-reference@0.9.40**
 
@@ -454,7 +454,7 @@
 
 - **@scalar/hono-api-reference@0.9.39**
 
-- **@scalar/mock-server@0.8.27**
+- **@swagglar/mock-server@0.8.27**
 
 ## 0.1.22
 
@@ -466,7 +466,7 @@
   - [#7968](https://github.com/scalar/scalar/pull/7968): fix: export `apiReference` directly from index, removing the `Scalar` alias
   - [#7968](https://github.com/scalar/scalar/pull/7968): fix: remove `export` from internal `customTheme`
 
-- **@scalar/mock-server@0.8.26**
+- **@swagglar/mock-server@0.8.26**
 
 ## 0.1.21
 
@@ -476,7 +476,7 @@
 
 - **@scalar/hono-api-reference@0.9.38**
 
-- **@scalar/mock-server@0.8.25**
+- **@swagglar/mock-server@0.8.25**
 
 ## 0.1.20
 
@@ -484,7 +484,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/mock-server@0.8.24**
+- **@swagglar/mock-server@0.8.24**
 
 - **@scalar/hono-api-reference@0.9.37**
 
@@ -494,7 +494,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/mock-server@0.8.23**
+- **@swagglar/mock-server@0.8.23**
 
 - **@scalar/hono-api-reference@0.9.37**
 
@@ -504,7 +504,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/mock-server@0.8.22**
+- **@swagglar/mock-server@0.8.22**
 
 - **@scalar/hono-api-reference@0.9.37**
 
@@ -514,7 +514,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/mock-server@0.8.21**
+- **@swagglar/mock-server@0.8.21**
 
 - **@scalar/hono-api-reference@0.9.36**
 
@@ -524,7 +524,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/mock-server@0.8.20**
+- **@swagglar/mock-server@0.8.20**
 
 - **@scalar/hono-api-reference@0.9.36**
 
@@ -534,7 +534,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/mock-server@0.8.19**
+- **@swagglar/mock-server@0.8.19**
 
 - **@scalar/hono-api-reference@0.9.35**
 
@@ -544,7 +544,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/mock-server@0.8.18**
+- **@swagglar/mock-server@0.8.18**
 
 - **@scalar/hono-api-reference@0.9.35**
 
@@ -554,7 +554,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/mock-server@0.8.17**
+- **@swagglar/mock-server@0.8.17**
 
 - **@scalar/hono-api-reference@0.9.35**
 
@@ -566,7 +566,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/mock-server@0.8.16**
+- **@swagglar/mock-server@0.8.16**
   - [#7810](https://github.com/scalar/scalar/pull/7810): docs: update documentation domain
 
 - **@scalar/hono-api-reference@0.9.35**
@@ -578,7 +578,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/mock-server@0.8.15**
+- **@swagglar/mock-server@0.8.15**
 
 - **@scalar/hono-api-reference@0.9.34**
 
@@ -588,7 +588,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/mock-server@0.8.14**
+- **@swagglar/mock-server@0.8.14**
 
 - **@scalar/hono-api-reference@0.9.34**
 
@@ -598,7 +598,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/mock-server@0.8.13**
+- **@swagglar/mock-server@0.8.13**
 
 - **@scalar/hono-api-reference@0.9.33**
 
@@ -608,7 +608,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/mock-server@0.8.12**
+- **@swagglar/mock-server@0.8.12**
 
 - **@scalar/hono-api-reference@0.9.33**
 
@@ -618,7 +618,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/mock-server@0.8.11**
+- **@swagglar/mock-server@0.8.11**
 
 - **@scalar/hono-api-reference@0.9.33**
 
@@ -628,7 +628,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/mock-server@0.8.10**
+- **@swagglar/mock-server@0.8.10**
 
 - **@scalar/hono-api-reference@0.9.32**
 
@@ -648,7 +648,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/mock-server@0.8.9**
+- **@swagglar/mock-server@0.8.9**
 
 - **@scalar/hono-api-reference@0.9.32**
 
@@ -658,7 +658,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/mock-server@0.8.8**
+- **@swagglar/mock-server@0.8.8**
 
 - **@scalar/hono-api-reference@0.9.31**
 
@@ -670,7 +670,7 @@
 
 - **@scalar/hono-api-reference@0.9.30**
 
-- **@scalar/mock-server@0.8.7**
+- **@swagglar/mock-server@0.8.7**
 
 ## 0.1.1
 
@@ -692,7 +692,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/mock-server@0.8.6**
+- **@swagglar/mock-server@0.8.6**
   - [#7581](https://github.com/scalar/scalar/pull/7581): fix: npm publish job
 
 - **@scalar/hono-api-reference@0.9.30**

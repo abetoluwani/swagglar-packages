@@ -1,8 +1,8 @@
 # Scalar API Client React
 
-[![Version](https://img.shields.io/npm/v/%40scalar/api-client-react)](https://www.npmjs.com/package/@scalar/api-client-react)
-[![Downloads](https://img.shields.io/npm/dm/%40scalar/api-client-react)](https://www.npmjs.com/package/@scalar/api-client-react)
-[![License](https://img.shields.io/npm/l/%40scalar%2Fapi-client-react)](https://www.npmjs.com/package/@scalar/api-client-react)
+[![Version](https://img.shields.io/npm/v/%40scalar/api-client-react)](https://www.npmjs.com/package/@swagglar/api-client-react)
+[![Downloads](https://img.shields.io/npm/dm/%40scalar/api-client-react)](https://www.npmjs.com/package/@swagglar/api-client-react)
+[![License](https://img.shields.io/npm/l/%40scalar%2Fapi-client-react)](https://www.npmjs.com/package/@swagglar/api-client-react)
 [![Discord](https://img.shields.io/discord/1135330207960678410?style=flat&color=5865F2)](https://discord.gg/scalar)
 
 ---
@@ -21,7 +21,7 @@ Scalar is an open-source API platform for teams who want beautiful developer int
 ## Installation
 
 ```bash
-npm install @scalar/api-client-react
+npm install @swagglar/api-client-react
 ```
 
 ## ⚠️ Breaking Changes
@@ -39,8 +39,8 @@ The code is ESM lazy loaded with the dynamic import function to make the smalles
 handle de-duplication of documents so as long as the URL is the same you will only get one.
 
 ```tsx
-import { useApiClient } from '@scalar/api-client-react'
-import '@scalar/api-client-react/style.css'
+import { useApiClient } from '@swagglar/api-client-react'
+import '@swagglar/api-client-react/style.css'
 
 export const OpenButton = () => {
   const client = useApiClient({

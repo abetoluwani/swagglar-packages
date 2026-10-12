@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { validate } from '@scalar/openapi-validator'
-import { useCodeMirror } from '@scalar/use-codemirror'
+import { validate } from '@swagglar/openapi-validator'
+import { useCodeMirror } from '@swagglar/use-codemirror'
 import { computed, ref } from 'vue'
 
 import { EXAMPLES } from './examples'

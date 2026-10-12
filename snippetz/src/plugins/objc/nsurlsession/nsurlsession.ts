@@ -1,4 +1,4 @@
-import type { Plugin } from '@scalar/types/snippetz'
+import type { Plugin } from '@swagglar/types/snippetz'
 
 import { collectHeaders, joinUrlAndQuery, normalizeMethod, normalizeUrl } from '@/libs/http'
 

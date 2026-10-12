@@ -1,5 +1,5 @@
-import { getValueAtPath } from '@scalar/helpers/object/get-value-at-path'
-import type { AnyObject } from '@scalar/types/utils'
+import { getValueAtPath } from '@swagglar/helpers/object/get-value-at-path'
+import type { AnyObject } from '@swagglar/types/utils'
 
 import type { ErrorObject } from '@/types'
 

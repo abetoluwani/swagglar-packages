@@ -1,4 +1,4 @@
-# @scalar/json-magic
+# @swagglar/json-magic
 
 ## 0.15.2
 
@@ -17,7 +17,7 @@
 ### Minor Changes
 
 - [#10206](https://github.com/scalar/scalar/pull/10206): Preserve authored references between embedded schema resources when the containing document has no declared identity. This keeps references valid across `$id` scopes and when exporting the bundle to a different retrieval URL.
-- [#10274](https://github.com/scalar/scalar/pull/10274): Add a standard-agnostic `join` utility with configurable merge strategies and conflict reporting to `@scalar/json-magic/join`. Use it in the OpenAPI parser while retaining OpenAPI upgrades, component prefixes, and OpenAPI conflict reports in the parser.
+- [#10274](https://github.com/scalar/scalar/pull/10274): Add a standard-agnostic `join` utility with configurable merge strategies and conflict reporting to `@swagglar/json-magic/join`. Use it in the OpenAPI parser while retaining OpenAPI upgrades, component prefixes, and OpenAPI conflict reports in the parser.
 - [#10206](https://github.com/scalar/scalar/pull/10206): Add generic document identity hooks for bundling and an explicit root URI option for reference proxies. Honor OpenAPI 3.2 `$self` through an OpenAPI plugin in workspace-store, including external documents and partial bundles, and enable it in OpenAPI bundling callers.
 
   URI resolution now honors root-relative and protocol-relative URLs, query/fragment references, and trailing-slash directory bases for all bundler consumers. Absolute non-HTTP identifiers remain unchanged instead of becoming filesystem paths; loader support is unchanged. Relative HTTP references retain query strings and fragments and are emitted only when they round-trip to the original URL.
@@ -41,7 +41,7 @@
 ### Patch Changes
 
 - [#9817](https://github.com/scalar/scalar/pull/9817): Resolve relative `externalValue` URLs on example objects against the document origin, so external request and response examples load even when referenced with a relative path
-- [#9666](https://github.com/scalar/scalar/pull/9666): Only normalize OpenAPI Reference Objects during bundling, never Schema Objects. `normalizeRefs` used to strip every sibling except `$ref` on any node outside `components/schemas`, which also hit inline schemas. In JSON Schema 2020-12 a `$ref` may legally carry sibling keywords — for example a `$defs`/`$dynamicAnchor` binding that specializes a generic template like `Paginated<T>` — and such schemas appear inline anywhere a schema is allowed (a response's `content.<media>.schema`, an `allOf` branch, …). Dropping those siblings discarded the binding, leaving `$dynamicRef` to resolve to the template's empty fallback and rendering an empty array (for example the `data` array of `GET /planets` in the Scalar Galaxy). Reference Objects are still normalized as before. A new `@scalar/helpers/openapi/is-schema-path` helper detects schema positions.
+- [#9666](https://github.com/scalar/scalar/pull/9666): Only normalize OpenAPI Reference Objects during bundling, never Schema Objects. `normalizeRefs` used to strip every sibling except `$ref` on any node outside `components/schemas`, which also hit inline schemas. In JSON Schema 2020-12 a `$ref` may legally carry sibling keywords — for example a `$defs`/`$dynamicAnchor` binding that specializes a generic template like `Paginated<T>` — and such schemas appear inline anywhere a schema is allowed (a response's `content.<media>.schema`, an `allOf` branch, …). Dropping those siblings discarded the binding, leaving `$dynamicRef` to resolve to the template's empty fallback and rendering an empty array (for example the `data` array of `GET /planets` in the Scalar Galaxy). Reference Objects are still normalized as before. A new `@swagglar/helpers/openapi/is-schema-path` helper detects schema positions.
 - [#10112](https://github.com/scalar/scalar/pull/10112): Pin guarded requests to validated public IP addresses and reject custom transports that bypass the connection checks.
 - [#10140](https://github.com/scalar/scalar/pull/10140): Replace redundant type assertions with compiler-checked annotations, typed accumulators, and existing guards across helpers, API conversion, request handling, and schema rendering.
 
@@ -81,7 +81,7 @@
 
   This does change behaviour for documents that legitimately carry a property with one of those names, which JSON allows and a schema is free to describe. `diff` no longer compares such a property, so editing it on its own is not reported as a change, and a merge that previously surfaced it as a conflict now merges cleanly. The property still travels along when its parent object is added or updated wholesale, because a new subtree is emitted as a single value. This trade-off matches `preventPollution`, which the rest of the codebase already applies to untrusted keys.
 
-  `@scalar/helpers` gains an `isPollutionKey` predicate next to the existing `preventPollution`, so the list of dangerous keys lives in one place.
+  `@swagglar/helpers` gains an `isPollutionKey` predicate next to the existing `preventPollution`, so the list of dangerous keys lives in one place.
 
 - [#9907](https://github.com/scalar/scalar/pull/9907): Explain the root-level change `apply` cannot handle, and document that `diff`, `merge` and `apply` share references with the documents they work on.
 
@@ -175,7 +175,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/helpers@0.4.1**
+- **@swagglar/helpers@0.4.1**
   - [#8420](https://github.com/scalar/scalar/pull/8420): fix TypeScript access to navigator.userAgentData in isMacOS without ts-expect-error
 
 ## 0.12.2
@@ -184,7 +184,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/helpers@0.4.0**
+- **@swagglar/helpers@0.4.0**
   - [#8336](https://github.com/scalar/scalar/pull/8336): feat: support flushing any pending operations
 
 ## 0.12.1
@@ -203,7 +203,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/helpers@0.3.0**
+- **@swagglar/helpers@0.3.0**
   - [#8322](https://github.com/scalar/scalar/pull/8322): chore: bump required node version to >=22 (LTS)
 
 ## 0.11.7
@@ -214,7 +214,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/helpers@0.2.18**
+- **@swagglar/helpers@0.2.18**
   - [#8314](https://github.com/scalar/scalar/pull/8314): chore: limit concurrent operations while migrating workspaces
 
 ## 0.11.6
@@ -225,7 +225,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/helpers@0.2.17**
+- **@swagglar/helpers@0.2.17**
   - [#8310](https://github.com/scalar/scalar/pull/8310): refactor: move helpers to the helpers package to share primitive helpers
 
 ## 0.11.5
@@ -234,7 +234,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/helpers@0.2.16**
+- **@swagglar/helpers@0.2.16**
   - [#8248](https://github.com/scalar/scalar/pull/8248): fix: local storage migration script
 
 ## 0.11.4
@@ -245,7 +245,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/helpers@0.2.15**
+- **@swagglar/helpers@0.2.15**
   - [#8212](https://github.com/scalar/scalar/pull/8212): chore: version bump
 
 ## 0.11.3
@@ -256,7 +256,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/helpers@0.2.14**
+- **@swagglar/helpers@0.2.14**
   - [#8207](https://github.com/scalar/scalar/pull/8207): chore: version bump
 
 ## 0.11.2
@@ -267,7 +267,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/helpers@0.2.13**
+- **@swagglar/helpers@0.2.13**
   - [#7826](https://github.com/scalar/scalar/pull/7826): feat: added migrator for v1 local storage to v2 indexdb
 
 ## 0.11.1
@@ -276,7 +276,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/helpers@0.2.12**
+- **@swagglar/helpers@0.2.12**
   - [#8178](https://github.com/scalar/scalar/pull/8178): chore: package bump due to ci failure
 
 ## 0.11.0
@@ -298,7 +298,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/helpers@0.2.11**
+- **@swagglar/helpers@0.2.11**
   - [#8016](https://github.com/scalar/scalar/pull/8016): feat: move history and auth into their own store
 
 ## 0.9.5
@@ -309,7 +309,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/helpers@0.2.10**
+- **@swagglar/helpers@0.2.10**
   - [#7963](https://github.com/scalar/scalar/pull/7963): feat: unify is-object helpers
 
 ## 0.9.4
@@ -324,7 +324,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/helpers@0.2.9**
+- **@swagglar/helpers@0.2.9**
   - [#7894](https://github.com/scalar/scalar/pull/7894): fix: the import and export of redirect to proxy
 
 ## 0.9.2
@@ -339,7 +339,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/helpers@0.2.8**
+- **@swagglar/helpers@0.2.8**
   - [#7751](https://github.com/scalar/scalar/pull/7751): fix: auth persistence
 
 ## 0.9.0
@@ -352,7 +352,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/helpers@0.2.7**
+- **@swagglar/helpers@0.2.7**
   - [#7720](https://github.com/scalar/scalar/pull/7720): feat: escape XML in json2xml
 
 ## 0.8.10
@@ -361,7 +361,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/helpers@0.2.6**
+- **@swagglar/helpers@0.2.6**
   - [#7661](https://github.com/scalar/scalar/pull/7661): fix: all issues for client modal v2 preparation
 
 ## 0.8.9
@@ -370,7 +370,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/helpers@0.2.5**
+- **@swagglar/helpers@0.2.5**
   - [#7605](https://github.com/scalar/scalar/pull/7605): fix: all issues for client modal v2 preparation
 
 ## 0.8.8
@@ -381,7 +381,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/helpers@0.2.4**
+- **@swagglar/helpers@0.2.4**
   - [#7581](https://github.com/scalar/scalar/pull/7581): fix: npm publish job
   - [#7567](https://github.com/scalar/scalar/pull/7567): feat: add code samples to client v2
 
@@ -391,7 +391,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/helpers@0.2.3**
+- **@swagglar/helpers@0.2.3**
   - [#7575](https://github.com/scalar/scalar/pull/7575): feat: add support for object examples + hide body when empty
 
 ## 0.8.6
@@ -399,7 +399,7 @@
 ### Patch Changes
 
 - Updated dependencies [[`f7c24e4`](https://github.com/scalar/scalar/commit/f7c24e4995580649dbc3cb87007a683f5dd91f7c)]:
-  - @scalar/helpers@0.2.2
+  - @swagglar/helpers@0.2.2
 
 ## 0.8.5
 
@@ -408,14 +408,14 @@
 - [#7506](https://github.com/scalar/scalar/pull/7506) [`72cd82f`](https://github.com/scalar/scalar/commit/72cd82fb8df63a9e5d0db1202978aebfefd0457a) Thanks [@marcalexiei](https://github.com/marcalexiei)! - fix: use caret version for `yaml`
 
 - Updated dependencies [[`21aa62e`](https://github.com/scalar/scalar/commit/21aa62e2ebdd262cb5aa53658c3b659736660722)]:
-  - @scalar/helpers@0.2.1
+  - @swagglar/helpers@0.2.1
 
 ## 0.8.4
 
 ### Patch Changes
 
 - Updated dependencies [[`9ec8adf`](https://github.com/scalar/scalar/commit/9ec8adfea017333dee5bc3949104232f7dc57f4a)]:
-  - @scalar/helpers@0.2.0
+  - @swagglar/helpers@0.2.0
 
 ## 0.8.3
 
@@ -428,7 +428,7 @@
 - [#7422](https://github.com/scalar/scalar/pull/7422) [`af54a80`](https://github.com/scalar/scalar/commit/af54a80349269a4269a68f6a372f837177a3537c) Thanks [@inyourtime](https://github.com/inyourtime)! - build(json-magic): prevent src folder from being published
 
 - Updated dependencies [[`bfd814a`](https://github.com/scalar/scalar/commit/bfd814a4219660face190041cc4845182b56ab03), [`86f028d`](https://github.com/scalar/scalar/commit/86f028deb0b456f923edd261f5f4b0fa9b616b7d)]:
-  - @scalar/helpers@0.1.3
+  - @swagglar/helpers@0.1.3
 
 ## 0.8.2
 
@@ -437,27 +437,27 @@
 - [#7392](https://github.com/scalar/scalar/pull/7392) [`d86f1d6`](https://github.com/scalar/scalar/commit/d86f1d6911ecbca70b011a2a0efb6d6e0eca59bb) Thanks [@amritk](https://github.com/amritk)! - fix: move away from wasm hashing algo
 
 - Updated dependencies [[`d86f1d6`](https://github.com/scalar/scalar/commit/d86f1d6911ecbca70b011a2a0efb6d6e0eca59bb), [`cded2d6`](https://github.com/scalar/scalar/commit/cded2d6c087418c3c44731d344d0827a87b78b74)]:
-  - @scalar/helpers@0.1.2
+  - @swagglar/helpers@0.1.2
 
 ## 0.8.1
 
 ### Patch Changes
 
 - Updated dependencies [[`9c9dbba`](https://github.com/scalar/scalar/commit/9c9dbbaa940667303f0ace59469fd78c2a741937), [`4bec1ba`](https://github.com/scalar/scalar/commit/4bec1ba332e919c4ee32dcfbfb07bd8ee42c4d74)]:
-  - @scalar/helpers@0.1.1
+  - @swagglar/helpers@0.1.1
 
 ## 0.8.0
 
 ### Minor Changes
 
-- [#7235](https://github.com/scalar/scalar/pull/7235) [`c1ecd0c`](https://github.com/scalar/scalar/commit/c1ecd0c6096f3fbe2e3d8ad3794ea718bb6bce66) Thanks [@marcalexiei](https://github.com/marcalexiei)! - feat(json-magic): use `@scalar/helpers/node/path` polyfill
+- [#7235](https://github.com/scalar/scalar/pull/7235) [`c1ecd0c`](https://github.com/scalar/scalar/commit/c1ecd0c6096f3fbe2e3d8ad3794ea718bb6bce66) Thanks [@marcalexiei](https://github.com/marcalexiei)! - feat(json-magic): use `@swagglar/helpers/node/path` polyfill
 
 ### Patch Changes
 
 - [#7266](https://github.com/scalar/scalar/pull/7266) [`fddf294`](https://github.com/scalar/scalar/commit/fddf294b00dd8c9eb5c713c338f2ec6e3f62523d) Thanks [@amritk](https://github.com/amritk)! - fix: remove useage of crypto.subtle in all contexts
 
 - Updated dependencies [[`fddf294`](https://github.com/scalar/scalar/commit/fddf294b00dd8c9eb5c713c338f2ec6e3f62523d), [`c1ecd0c`](https://github.com/scalar/scalar/commit/c1ecd0c6096f3fbe2e3d8ad3794ea718bb6bce66)]:
-  - @scalar/helpers@0.1.0
+  - @swagglar/helpers@0.1.0
 
 ## 0.7.0
 
@@ -470,7 +470,7 @@
 - [#7213](https://github.com/scalar/scalar/pull/7213) [`43bc5e8`](https://github.com/scalar/scalar/commit/43bc5e8b90dc0edf7176d0ddfc64bf3212494458) Thanks [@DemonHa](https://github.com/DemonHa)! - fix: proxy performance issue because of multiple proxies
 
 - Updated dependencies [[`6ec8c29`](https://github.com/scalar/scalar/commit/6ec8c299d912111b029e8058979d00968b70691a)]:
-  - @scalar/helpers@0.0.13
+  - @swagglar/helpers@0.0.13
 
 ## 0.6.1
 
@@ -479,7 +479,7 @@
 - 2089748: chore: add logs when fetching unsupported formats
 - 8a7fb2a: fix: schema properties starting with an underscore are hidden
 - Updated dependencies [3f6d0b9]
-  - @scalar/helpers@0.0.12
+  - @swagglar/helpers@0.0.12
 
 ## 0.6.0
 
@@ -507,14 +507,14 @@
 
 ### Patch Changes
 
-- dcf50ef: refactor: move escapeJsonPointer to @scalar/json-magic
+- dcf50ef: refactor: move escapeJsonPointer to @swagglar/json-magic
 
 ## 0.4.3
 
 ### Patch Changes
 
 - Updated dependencies [bff46e5]
-  - @scalar/helpers@0.0.11
+  - @swagglar/helpers@0.0.11
 
 ## 0.4.2
 
@@ -528,7 +528,7 @@
 ### Patch Changes
 
 - Updated dependencies [821717b]
-  - @scalar/helpers@0.0.10
+  - @swagglar/helpers@0.0.10
 
 ## 0.4.0
 
@@ -542,7 +542,7 @@
 - 63283aa: fix: use hidden properties during validation
 - Updated dependencies [98c55d0]
 - Updated dependencies [0e747c7]
-  - @scalar/helpers@0.0.9
+  - @swagglar/helpers@0.0.9
 
 ## 0.3.1
 
@@ -563,7 +563,7 @@
 
 - 0fcd446: feat(workspace-store): performance improvements
 - Updated dependencies [66b18fc]
-  - @scalar/helpers@0.0.8
+  - @swagglar/helpers@0.0.8
 
 ## 0.2.0
 

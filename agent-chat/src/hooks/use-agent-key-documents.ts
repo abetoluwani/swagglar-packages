@@ -1,4 +1,4 @@
-import { useToasts } from '@scalar/use-toasts'
+import { useToasts } from '@swagglar/use-toasts'
 import { onMounted } from 'vue'
 
 import { useState } from '@/state/state'

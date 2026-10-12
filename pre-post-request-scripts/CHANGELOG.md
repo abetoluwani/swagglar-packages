@@ -96,7 +96,7 @@
 
 ### Patch Changes
 
-- [#9291](https://github.com/scalar/scalar/pull/9291): chore: import from `@scalar/components` subpaths instead of the package barrel for better tree-shaking
+- [#9291](https://github.com/scalar/scalar/pull/9291): chore: import from `@swagglar/components` subpaths instead of the package barrel for better tree-shaking
 - [#9260](https://github.com/scalar/scalar/pull/9260): chore: remove `'unsafe-eval'` from the desktop/web app CSP
 
   Pre-request and post-response scripts run through `postman-sandbox`, which relies on `eval`. Instead of allowing `'unsafe-eval'` in the main application CSP, script execution now happens inside an isolated sandbox iframe (`sandbox.html`) that is loaded from a real same-origin URL and carries its own permissive CSP. The host talks to it over `postMessage`, so the main `script-src` no longer needs `'unsafe-eval'`.
@@ -205,10 +205,10 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.20.9**
+- **@swagglar/components@0.20.9**
   - [#8453](https://github.com/scalar/scalar/pull/8453): refactor: remove @ts-expect-error from ScalarTextArea
 
-- **@scalar/oas-utils@0.10.8**
+- **@swagglar/oas-utils@0.10.8**
 
 ## 0.3.8
 
@@ -216,9 +216,9 @@
 
 #### Updated Dependencies
 
-- **@scalar/oas-utils@0.10.7**
+- **@swagglar/oas-utils@0.10.7**
 
-- **@scalar/components@0.20.8**
+- **@swagglar/components@0.20.8**
 
 ## 0.3.7
 
@@ -226,9 +226,9 @@
 
 #### Updated Dependencies
 
-- **@scalar/oas-utils@0.10.6**
+- **@swagglar/oas-utils@0.10.6**
 
-- **@scalar/components@0.20.7**
+- **@swagglar/components@0.20.7**
 
 ## 0.3.6
 
@@ -236,10 +236,10 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.20.6**
+- **@swagglar/components@0.20.6**
   - [#8327](https://github.com/scalar/scalar/pull/8327): fix: markdown tables with specified width attributes in td/th break the layout
 
-- **@scalar/oas-utils@0.10.5**
+- **@swagglar/oas-utils@0.10.5**
 
 ## 0.3.5
 
@@ -247,9 +247,9 @@
 
 #### Updated Dependencies
 
-- **@scalar/oas-utils@0.10.4**
+- **@swagglar/oas-utils@0.10.4**
 
-- **@scalar/components@0.20.5**
+- **@swagglar/components@0.20.5**
 
 ## 0.3.4
 
@@ -257,10 +257,10 @@
 
 #### Updated Dependencies
 
-- **@scalar/oas-utils@0.10.3**
+- **@swagglar/oas-utils@0.10.3**
   - [#8253](https://github.com/scalar/scalar/pull/8253): feat(api-reference): support propertyNames enum for additionalProperties
 
-- **@scalar/components@0.20.4**
+- **@swagglar/components@0.20.4**
 
 ## 0.3.3
 
@@ -268,9 +268,9 @@
 
 #### Updated Dependencies
 
-- **@scalar/oas-utils@0.10.2**
+- **@swagglar/oas-utils@0.10.2**
 
-- **@scalar/components@0.20.3**
+- **@swagglar/components@0.20.3**
 
 ## 0.3.2
 
@@ -278,10 +278,10 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.20.2**
+- **@swagglar/components@0.20.2**
   - [#8366](https://github.com/scalar/scalar/pull/8366): fix(components): clean up search components and add snapshots
 
-- **@scalar/oas-utils@0.10.1**
+- **@swagglar/oas-utils@0.10.1**
 
 ## 0.3.1
 
@@ -289,10 +289,10 @@
 
 #### Updated Dependencies
 
-- **@scalar/oas-utils@0.10.0**
+- **@swagglar/oas-utils@0.10.0**
   - [#8266](https://github.com/scalar/scalar/pull/8266): support operation level authentication and servers
 
-- **@scalar/components@0.20.1**
+- **@swagglar/components@0.20.1**
 
 ## 0.3.0
 
@@ -304,10 +304,10 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.20.0**
+- **@swagglar/components@0.20.0**
   - [#8322](https://github.com/scalar/scalar/pull/8322): chore: bump required node version to >=22 (LTS)
 
-- **@scalar/oas-utils@0.9.0**
+- **@swagglar/oas-utils@0.9.0**
   - [#8322](https://github.com/scalar/scalar/pull/8322): chore: bump required node version to >=22 (LTS)
 
 ## 0.2.9
@@ -316,10 +316,10 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.19.15**
+- **@swagglar/components@0.19.15**
   - [#8319](https://github.com/scalar/scalar/pull/8319): fix(components): fix adjust sidebar section line height
 
-- **@scalar/oas-utils@0.8.3**
+- **@swagglar/oas-utils@0.8.3**
   - [#8314](https://github.com/scalar/scalar/pull/8314): chore: limit concurrent operations while migrating workspaces
 
 ## 0.2.8
@@ -328,9 +328,9 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.19.14**
+- **@swagglar/components@0.19.14**
 
-- **@scalar/oas-utils@0.8.2**
+- **@swagglar/oas-utils@0.8.2**
 
 ## 0.2.7
 
@@ -338,10 +338,10 @@
 
 #### Updated Dependencies
 
-- **@scalar/oas-utils@0.8.1**
+- **@swagglar/oas-utils@0.8.1**
   - [#8310](https://github.com/scalar/scalar/pull/8310): fix: correctly handle circular documents during the migration to indexdb
 
-- **@scalar/components@0.19.13**
+- **@swagglar/components@0.19.13**
 
 ## 0.2.6
 
@@ -349,10 +349,10 @@
 
 #### Updated Dependencies
 
-- **@scalar/oas-utils@0.8.0**
+- **@swagglar/oas-utils@0.8.0**
   - [#8290](https://github.com/scalar/scalar/pull/8290): chore: update deps
 
-- **@scalar/components@0.19.12**
+- **@swagglar/components@0.19.12**
   - [#8290](https://github.com/scalar/scalar/pull/8290): chore: update deps
 
 ## 0.2.5
@@ -361,10 +361,10 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.19.11**
+- **@swagglar/components@0.19.11**
   - [#8276](https://github.com/scalar/scalar/pull/8276): feat(components): standardize form inputs to have a height of 40px
 
-- **@scalar/oas-utils@0.7.0**
+- **@swagglar/oas-utils@0.7.0**
   - [#8234](https://github.com/scalar/scalar/pull/8234): support operation level authentication and servers
 
 ## 0.2.4
@@ -373,9 +373,9 @@
 
 #### Updated Dependencies
 
-- **@scalar/oas-utils@0.6.48**
+- **@swagglar/oas-utils@0.6.48**
 
-- **@scalar/components@0.19.10**
+- **@swagglar/components@0.19.10**
 
 ## 0.2.3
 
@@ -383,12 +383,12 @@
 
 #### Updated Dependencies
 
-- **@scalar/oas-utils@0.6.47**
+- **@swagglar/oas-utils@0.6.47**
   - [#8248](https://github.com/scalar/scalar/pull/8248): fix: local storage migration script
   - [#8248](https://github.com/scalar/scalar/pull/8248): fix: remove unnecessary property truncation in example generation
   - [#8248](https://github.com/scalar/scalar/pull/8248): chore: map themeId to slug and add default operation to drafts
 
-- **@scalar/components@0.19.9**
+- **@swagglar/components@0.19.9**
   - [#8248](https://github.com/scalar/scalar/pull/8248): feat: slugs for headings with nested content
   - [#8248](https://github.com/scalar/scalar/pull/8248): feat: add optional chevron click handler for the sidebar
 
@@ -398,9 +398,9 @@
 
 #### Updated Dependencies
 
-- **@scalar/oas-utils@0.6.46**
+- **@swagglar/oas-utils@0.6.46**
 
-- **@scalar/components@0.19.8**
+- **@swagglar/components@0.19.8**
 
 ## 0.2.1
 
@@ -410,10 +410,10 @@
 
 #### Updated Dependencies
 
-- **@scalar/oas-utils@0.6.45**
+- **@swagglar/oas-utils@0.6.45**
   - [#8212](https://github.com/scalar/scalar/pull/8212): chore: version bump
 
-- **@scalar/components@0.19.7**
+- **@swagglar/components@0.19.7**
 
 ## 0.2.0
 
@@ -425,10 +425,10 @@
 
 #### Updated Dependencies
 
-- **@scalar/oas-utils@0.6.44**
+- **@swagglar/oas-utils@0.6.44**
   - [#8207](https://github.com/scalar/scalar/pull/8207): chore: version bump
 
-- **@scalar/components@0.19.6**
+- **@swagglar/components@0.19.6**
 
 ## 0.1.0
 
@@ -440,10 +440,10 @@
 
 #### Updated Dependencies
 
-- **@scalar/oas-utils@0.6.43**
+- **@swagglar/oas-utils@0.6.43**
   - [#7826](https://github.com/scalar/scalar/pull/7826): feat: added migrator for v1 local storage to v2 indexdb
 
-- **@scalar/components@0.19.5**
+- **@swagglar/components@0.19.5**
 
 ## 0.0.89
 
@@ -451,10 +451,10 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.19.4**
+- **@swagglar/components@0.19.4**
   - [#8178](https://github.com/scalar/scalar/pull/8178): chore: package bump due to ci failure
 
-- **@scalar/oas-utils@0.6.42**
+- **@swagglar/oas-utils@0.6.42**
 
 ## 0.0.88
 
@@ -462,10 +462,10 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.19.3**
+- **@swagglar/components@0.19.3**
   - [#8155](https://github.com/scalar/scalar/pull/8155): fix(api-reference): bugs with cards rendering
 
-- **@scalar/oas-utils@0.6.41**
+- **@swagglar/oas-utils@0.6.41**
 
 ## 0.0.87
 
@@ -475,10 +475,10 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.19.2**
+- **@swagglar/components@0.19.2**
   - [#8134](https://github.com/scalar/scalar/pull/8134): fix(components): change caret position to right
 
-- **@scalar/oas-utils@0.6.40**
+- **@swagglar/oas-utils@0.6.40**
   - [#8121](https://github.com/scalar/scalar/pull/8121): chore: moved client plugin types to oas-utils so they can be shared
 
 ## 0.0.86
@@ -487,9 +487,9 @@
 
 #### Updated Dependencies
 
-- **@scalar/oas-utils@0.6.39**
+- **@swagglar/oas-utils@0.6.39**
 
-- **@scalar/components@0.19.1**
+- **@swagglar/components@0.19.1**
 
 ## 0.0.85
 
@@ -497,11 +497,11 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.19.0**
+- **@swagglar/components@0.19.0**
   - [#8081](https://github.com/scalar/scalar/pull/8081): feat(components): improve ScalarCodeBlock copy UI
   - [#8065](https://github.com/scalar/scalar/pull/8065): feat(components): add editor to ScalarMenu and optionally remove docs
 
-- **@scalar/oas-utils@0.6.38**
+- **@swagglar/oas-utils@0.6.38**
 
 ## 0.0.84
 
@@ -509,10 +509,10 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.18.0**
+- **@swagglar/components@0.18.0**
   - [#8077](https://github.com/scalar/scalar/pull/8077): feat: support team workspaces
 
-- **@scalar/oas-utils@0.6.37**
+- **@swagglar/oas-utils@0.6.37**
 
 ## 0.0.83
 
@@ -520,10 +520,10 @@
 
 #### Updated Dependencies
 
-- **@scalar/oas-utils@0.6.36**
+- **@swagglar/oas-utils@0.6.36**
   - [#8037](https://github.com/scalar/scalar/pull/8037): Improve error message when running oas-utils tests while test-servers are not running
 
-- **@scalar/components@0.17.6**
+- **@swagglar/components@0.17.6**
   - [#8070](https://github.com/scalar/scalar/pull/8070): chore: remove the import modal and change the workspace picker to support groups
 
 ## 0.0.82
@@ -532,9 +532,9 @@
 
 #### Updated Dependencies
 
-- **@scalar/oas-utils@0.6.35**
+- **@swagglar/oas-utils@0.6.35**
 
-- **@scalar/components@0.17.5**
+- **@swagglar/components@0.17.5**
 
 ## 0.0.81
 
@@ -542,9 +542,9 @@
 
 #### Updated Dependencies
 
-- **@scalar/oas-utils@0.6.34**
+- **@swagglar/oas-utils@0.6.34**
 
-- **@scalar/components@0.17.4**
+- **@swagglar/components@0.17.4**
 
 ## 0.0.80
 
@@ -552,9 +552,9 @@
 
 #### Updated Dependencies
 
-- **@scalar/oas-utils@0.6.33**
+- **@swagglar/oas-utils@0.6.33**
 
-- **@scalar/components@0.17.3**
+- **@swagglar/components@0.17.3**
 
 ## 0.0.79
 
@@ -562,10 +562,10 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.17.2**
+- **@swagglar/components@0.17.2**
   - [#7934](https://github.com/scalar/scalar/pull/7934): fix: z-index issues in addressBar
 
-- **@scalar/oas-utils@0.6.32**
+- **@swagglar/oas-utils@0.6.32**
 
 ## 0.0.78
 
@@ -573,9 +573,9 @@
 
 #### Updated Dependencies
 
-- **@scalar/oas-utils@0.6.31**
+- **@swagglar/oas-utils@0.6.31**
 
-- **@scalar/components@0.17.1**
+- **@swagglar/components@0.17.1**
 
 ## 0.0.77
 
@@ -583,10 +583,10 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.17.0**
+- **@swagglar/components@0.17.0**
   - [#7959](https://github.com/scalar/scalar/pull/7959): feat(agent): add agent scalar to localhost
 
-- **@scalar/oas-utils@0.6.30**
+- **@swagglar/oas-utils@0.6.30**
 
 ## 0.0.76
 
@@ -594,9 +594,9 @@
 
 #### Updated Dependencies
 
-- **@scalar/oas-utils@0.6.29**
+- **@swagglar/oas-utils@0.6.29**
 
-- **@scalar/components@0.16.32**
+- **@swagglar/components@0.16.32**
 
 ## 0.0.75
 
@@ -604,9 +604,9 @@
 
 #### Updated Dependencies
 
-- **@scalar/oas-utils@0.6.28**
+- **@swagglar/oas-utils@0.6.28**
 
-- **@scalar/components@0.16.31**
+- **@swagglar/components@0.16.31**
 
 ## 0.0.74
 
@@ -614,10 +614,10 @@
 
 #### Updated Dependencies
 
-- **@scalar/oas-utils@0.6.27**
+- **@swagglar/oas-utils@0.6.27**
   - [#7894](https://github.com/scalar/scalar/pull/7894): fix: the import and export of redirect to proxy
 
-- **@scalar/components@0.16.30**
+- **@swagglar/components@0.16.30**
 
 ## 0.0.73
 
@@ -625,9 +625,9 @@
 
 #### Updated Dependencies
 
-- **@scalar/oas-utils@0.6.26**
+- **@swagglar/oas-utils@0.6.26**
 
-- **@scalar/components@0.16.29**
+- **@swagglar/components@0.16.29**
 
 ## 0.0.72
 
@@ -635,9 +635,9 @@
 
 #### Updated Dependencies
 
-- **@scalar/oas-utils@0.6.25**
+- **@swagglar/oas-utils@0.6.25**
 
-- **@scalar/components@0.16.28**
+- **@swagglar/components@0.16.28**
 
 ## 0.0.71
 
@@ -645,9 +645,9 @@
 
 #### Updated Dependencies
 
-- **@scalar/oas-utils@0.6.24**
+- **@swagglar/oas-utils@0.6.24**
 
-- **@scalar/components@0.16.27**
+- **@swagglar/components@0.16.27**
 
 ## 0.0.70
 
@@ -655,10 +655,10 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.16.26**
+- **@swagglar/components@0.16.26**
   - [#7846](https://github.com/scalar/scalar/pull/7846): Fix dev dep issue
 
-- **@scalar/oas-utils@0.6.23**
+- **@swagglar/oas-utils@0.6.23**
 
 ## 0.0.69
 
@@ -666,10 +666,10 @@
 
 #### Updated Dependencies
 
-- **@scalar/oas-utils@0.6.22**
+- **@swagglar/oas-utils@0.6.22**
   - [#7814](https://github.com/scalar/scalar/pull/7814): fix: additional properties generate invalid example
 
-- **@scalar/components@0.16.25**
+- **@swagglar/components@0.16.25**
 
 ## 0.0.68
 
@@ -677,10 +677,10 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.16.24**
+- **@swagglar/components@0.16.24**
   - [#7802](https://github.com/scalar/scalar/pull/7802): fix: Vue warning because of deprecated icon syntax
 
-- **@scalar/oas-utils@0.6.21**
+- **@swagglar/oas-utils@0.6.21**
 
 ## 0.0.67
 
@@ -688,9 +688,9 @@
 
 #### Updated Dependencies
 
-- **@scalar/oas-utils@0.6.20**
+- **@swagglar/oas-utils@0.6.20**
 
-- **@scalar/components@0.16.23**
+- **@swagglar/components@0.16.23**
 
 ## 0.0.66
 
@@ -698,9 +698,9 @@
 
 #### Updated Dependencies
 
-- **@scalar/oas-utils@0.6.19**
+- **@swagglar/oas-utils@0.6.19**
 
-- **@scalar/components@0.16.22**
+- **@swagglar/components@0.16.22**
 
 ## 0.0.65
 
@@ -708,9 +708,9 @@
 
 #### Updated Dependencies
 
-- **@scalar/oas-utils@0.6.18**
+- **@swagglar/oas-utils@0.6.18**
 
-- **@scalar/components@0.16.21**
+- **@swagglar/components@0.16.21**
 
 ## 0.0.64
 
@@ -718,9 +718,9 @@
 
 #### Updated Dependencies
 
-- **@scalar/oas-utils@0.6.17**
+- **@swagglar/oas-utils@0.6.17**
 
-- **@scalar/components@0.16.20**
+- **@swagglar/components@0.16.20**
 
 ## 0.0.63
 
@@ -728,11 +728,11 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.16.19**
+- **@swagglar/components@0.16.19**
   - [#7725](https://github.com/scalar/scalar/pull/7725): fix(components): support slot for nested items icon
   - [#7693](https://github.com/scalar/scalar/pull/7693): feat: markdown default line height
 
-- **@scalar/oas-utils@0.6.16**
+- **@swagglar/oas-utils@0.6.16**
 
 ## 0.0.62
 
@@ -740,9 +740,9 @@
 
 #### Updated Dependencies
 
-- **@scalar/oas-utils@0.6.15**
+- **@swagglar/oas-utils@0.6.15**
 
-- **@scalar/components@0.16.18**
+- **@swagglar/components@0.16.18**
 
 ## 0.0.61
 
@@ -750,7 +750,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.16.17**
+- **@swagglar/components@0.16.17**
   - [#7680](https://github.com/scalar/scalar/pull/7680): feat(components): simplify nested sidebar items styles
 
 ## 0.0.60
@@ -759,9 +759,9 @@
 
 #### Updated Dependencies
 
-- **@scalar/oas-utils@0.6.14**
+- **@swagglar/oas-utils@0.6.14**
 
-- **@scalar/components@0.16.16**
+- **@swagglar/components@0.16.16**
 
 ## 0.0.59
 
@@ -769,9 +769,9 @@
 
 #### Updated Dependencies
 
-- **@scalar/oas-utils@0.6.13**
+- **@swagglar/oas-utils@0.6.13**
 
-- **@scalar/components@0.16.15**
+- **@swagglar/components@0.16.15**
 
 ## 0.0.58
 
@@ -779,10 +779,10 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.16.14**
+- **@swagglar/components@0.16.14**
   - [#7654](https://github.com/scalar/scalar/pull/7654): fix(components): explicitly set line height for buttons and sections
 
-- **@scalar/oas-utils@0.6.12**
+- **@swagglar/oas-utils@0.6.12**
 
 ## 0.0.57
 
@@ -793,7 +793,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.16.13**
+- **@swagglar/components@0.16.13**
   - [#7584](https://github.com/scalar/scalar/pull/7584): fix: remove internal unused export
     - `CARD_Heading_SYMBOL`
     - `FORM_GROUP_SYMBOL`
@@ -802,11 +802,11 @@
     - `MaybeElement`
     - `ScalarComboBox#isGroup`
 
-  - [#7584](https://github.com/scalar/scalar/pull/7584): fix: remove unused `@scalar/use-toasts` dependency
+  - [#7584](https://github.com/scalar/scalar/pull/7584): fix: remove unused `@swagglar/use-toasts` dependency
   - [#7604](https://github.com/scalar/scalar/pull/7604): fix(components): improve sidebar groups
   - [#7589](https://github.com/scalar/scalar/pull/7589): chore(components): upgrade to Storybook 10
 
-- **@scalar/oas-utils@0.6.12**
+- **@swagglar/oas-utils@0.6.12**
 
 ## 0.0.56
 
@@ -814,7 +814,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.16.12**
+- **@swagglar/components@0.16.12**
   - [#7562](https://github.com/scalar/scalar/pull/7562): feat(components): remove headless ui from dropdown component
 
 ## 0.0.55
@@ -825,10 +825,10 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.16.11**
+- **@swagglar/components@0.16.11**
   - [#7581](https://github.com/scalar/scalar/pull/7581): fix: npm publish job
 
-- **@scalar/oas-utils@0.6.11**
+- **@swagglar/oas-utils@0.6.11**
   - [#7581](https://github.com/scalar/scalar/pull/7581): fix: npm publish job
 
 ## 0.0.54
@@ -837,90 +837,90 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.16.10**
+- **@swagglar/components@0.16.10**
   - [#7531](https://github.com/scalar/scalar/pull/7531): feat(components): add discrete sidebar group buttons
 
-- **@scalar/oas-utils@0.6.10**
+- **@swagglar/oas-utils@0.6.10**
 
 ## 0.0.53
 
 ### Patch Changes
 
 - Updated dependencies []:
-  - @scalar/components@0.16.9
-  - @scalar/oas-utils@0.6.9
+  - @swagglar/components@0.16.9
+  - @swagglar/oas-utils@0.6.9
 
 ## 0.0.52
 
 ### Patch Changes
 
 - Updated dependencies [[`4ac6227`](https://github.com/scalar/scalar/commit/4ac62278d4205c34a1a302b756ef3632185876cf)]:
-  - @scalar/components@0.16.8
-  - @scalar/oas-utils@0.6.8
+  - @swagglar/components@0.16.8
+  - @swagglar/oas-utils@0.6.8
 
 ## 0.0.51
 
 ### Patch Changes
 
 - Updated dependencies [[`72cd82f`](https://github.com/scalar/scalar/commit/72cd82fb8df63a9e5d0db1202978aebfefd0457a), [`72cd82f`](https://github.com/scalar/scalar/commit/72cd82fb8df63a9e5d0db1202978aebfefd0457a)]:
-  - @scalar/oas-utils@0.6.7
-  - @scalar/components@0.16.7
+  - @swagglar/oas-utils@0.6.7
+  - @swagglar/components@0.16.7
 
 ## 0.0.50
 
 ### Patch Changes
 
 - Updated dependencies []:
-  - @scalar/oas-utils@0.6.6
-  - @scalar/components@0.16.6
+  - @swagglar/oas-utils@0.6.6
+  - @swagglar/components@0.16.6
 
 ## 0.0.49
 
 ### Patch Changes
 
 - Updated dependencies [[`5aa0380`](https://github.com/scalar/scalar/commit/5aa0380adfcd173e58659fb5dd57df363d985583), [`62b5210`](https://github.com/scalar/scalar/commit/62b521092bafeb8e83e79222e13378c4a19defc8)]:
-  - @scalar/components@0.16.5
-  - @scalar/oas-utils@0.6.5
+  - @swagglar/components@0.16.5
+  - @swagglar/oas-utils@0.6.5
 
 ## 0.0.48
 
 ### Patch Changes
 
 - Updated dependencies [[`0519a33`](https://github.com/scalar/scalar/commit/0519a33c7d3f3cf65b93b37392c51d3c0586cbab), [`5a108fc`](https://github.com/scalar/scalar/commit/5a108fcbc52ae7957731c23689896ba353b83d3b), [`cded2d6`](https://github.com/scalar/scalar/commit/cded2d6c087418c3c44731d344d0827a87b78b74)]:
-  - @scalar/oas-utils@0.6.4
-  - @scalar/components@0.16.4
+  - @swagglar/oas-utils@0.6.4
+  - @swagglar/components@0.16.4
 
 ## 0.0.47
 
 ### Patch Changes
 
 - Updated dependencies [[`4bec1ba`](https://github.com/scalar/scalar/commit/4bec1ba332e919c4ee32dcfbfb07bd8ee42c4d74)]:
-  - @scalar/components@0.16.3
-  - @scalar/oas-utils@0.6.3
+  - @swagglar/components@0.16.3
+  - @swagglar/oas-utils@0.6.3
 
 ## 0.0.46
 
 ### Patch Changes
 
 - Updated dependencies [[`2377b76`](https://github.com/scalar/scalar/commit/2377b76d050f8de70037b17a32d0dd1181d3311d)]:
-  - @scalar/oas-utils@0.6.2
-  - @scalar/components@0.16.2
+  - @swagglar/oas-utils@0.6.2
+  - @swagglar/components@0.16.2
 
 ## 0.0.45
 
 ### Patch Changes
 
 - Updated dependencies []:
-  - @scalar/oas-utils@0.6.1
-  - @scalar/components@0.16.1
+  - @swagglar/oas-utils@0.6.1
+  - @swagglar/components@0.16.1
 
 ## 0.0.44
 
 ### Patch Changes
 
 - Updated dependencies [[`348f8f6`](https://github.com/scalar/scalar/commit/348f8f6292ef41844fda1fdd3089a55d97adbc0e), [`c22fc4e`](https://github.com/scalar/scalar/commit/c22fc4e5acb49d648014a6100c724a5b33c59cde), [`6ec8c29`](https://github.com/scalar/scalar/commit/6ec8c299d912111b029e8058979d00968b70691a), [`9661e81`](https://github.com/scalar/scalar/commit/9661e81907d1a9b74ba30f270f2d6c8e49834cd5), [`81b0a7a`](https://github.com/scalar/scalar/commit/81b0a7a4245619f03161eae639dc5834b77432b6), [`8a5a6a0`](https://github.com/scalar/scalar/commit/8a5a6a052cc05b0902b05052c80cc429ebc5a730), [`704fa30`](https://github.com/scalar/scalar/commit/704fa302b2cdbb17b19ca2d742537ca163d58c1c), [`0319b8a`](https://github.com/scalar/scalar/commit/0319b8a8652a50667776b2e9fd27c3e15b34f765), [`a26ced6`](https://github.com/scalar/scalar/commit/a26ced6f2897074f0c102d5ccbff55c6fd520e12), [`6a090a2`](https://github.com/scalar/scalar/commit/6a090a2e07ef961c56041c85ee9786180437593a), [`592533f`](https://github.com/scalar/scalar/commit/592533faf60b6a5ba27909a4ca0847ca9f04a96d), [`eba18d0`](https://github.com/scalar/scalar/commit/eba18d06267a163a8f91396a66f817100ee59461), [`c72a2c5`](https://github.com/scalar/scalar/commit/c72a2c59eb80e1f5e216c687229ff90bea88f554), [`0d9c945`](https://github.com/scalar/scalar/commit/0d9c945a696ea8b826d86f7b48ec6de4d85e64f0)]:
-  - @scalar/components@0.16.0
-  - @scalar/oas-utils@0.6.0
+  - @swagglar/components@0.16.0
+  - @swagglar/oas-utils@0.6.0
 
 ## 0.0.43
 
@@ -928,8 +928,8 @@
 
 - Updated dependencies [f8efecd]
 - Updated dependencies [f8efecd]
-  - @scalar/components@0.15.1
-  - @scalar/oas-utils@0.5.2
+  - @swagglar/components@0.15.1
+  - @swagglar/oas-utils@0.5.2
 
 ## 0.0.42
 
@@ -941,8 +941,8 @@
 - Updated dependencies [a747da6]
 - Updated dependencies [c69cb71]
 - Updated dependencies [90d54b6]
-  - @scalar/oas-utils@0.5.1
-  - @scalar/components@0.15.0
+  - @swagglar/oas-utils@0.5.1
+  - @swagglar/components@0.15.0
 
 ## 0.0.41
 
@@ -951,15 +951,15 @@
 - Updated dependencies [008a0f3]
 - Updated dependencies [f833196]
 - Updated dependencies [a9f8d56]
-  - @scalar/oas-utils@0.5.0
-  - @scalar/components@0.14.40
+  - @swagglar/oas-utils@0.5.0
+  - @swagglar/components@0.14.40
 
 ## 0.0.40
 
 ### Patch Changes
 
-- @scalar/oas-utils@0.4.34
-- @scalar/components@0.14.39
+- @swagglar/oas-utils@0.4.34
+- @swagglar/components@0.14.39
 
 ## 0.0.39
 
@@ -967,30 +967,30 @@
 
 - Updated dependencies [0b3c6fa]
 - Updated dependencies [bbceb27]
-  - @scalar/components@0.14.38
-  - @scalar/oas-utils@0.4.33
+  - @swagglar/components@0.14.38
+  - @swagglar/oas-utils@0.4.33
 
 ## 0.0.38
 
 ### Patch Changes
 
 - Updated dependencies [db5b649]
-  - @scalar/components@0.14.37
-  - @scalar/oas-utils@0.4.32
+  - @swagglar/components@0.14.37
+  - @swagglar/oas-utils@0.4.32
 
 ## 0.0.37
 
 ### Patch Changes
 
-- @scalar/oas-utils@0.4.31
-- @scalar/components@0.14.36
+- @swagglar/oas-utils@0.4.31
+- @swagglar/components@0.14.36
 
 ## 0.0.36
 
 ### Patch Changes
 
-- @scalar/oas-utils@0.4.30
-- @scalar/components@0.14.35
+- @swagglar/oas-utils@0.4.30
+- @swagglar/components@0.14.35
 
 ## 0.0.35
 
@@ -998,22 +998,22 @@
 
 - Updated dependencies [498f771]
 - Updated dependencies [8f2a2f2]
-  - @scalar/components@0.14.34
-  - @scalar/oas-utils@0.4.29
+  - @swagglar/components@0.14.34
+  - @swagglar/oas-utils@0.4.29
 
 ## 0.0.34
 
 ### Patch Changes
 
-- @scalar/oas-utils@0.4.28
-- @scalar/components@0.14.33
+- @swagglar/oas-utils@0.4.28
+- @swagglar/components@0.14.33
 
 ## 0.0.33
 
 ### Patch Changes
 
-- @scalar/oas-utils@0.4.27
-- @scalar/components@0.14.32
+- @swagglar/oas-utils@0.4.27
+- @swagglar/components@0.14.32
 
 ## 0.0.32
 
@@ -1021,23 +1021,23 @@
 
 - Updated dependencies [821717b]
 - Updated dependencies [2249fe3]
-  - @scalar/oas-utils@0.4.26
-  - @scalar/components@0.14.31
+  - @swagglar/oas-utils@0.4.26
+  - @swagglar/components@0.14.31
 
 ## 0.0.31
 
 ### Patch Changes
 
-- @scalar/oas-utils@0.4.25
-- @scalar/components@0.14.30
+- @swagglar/oas-utils@0.4.25
+- @swagglar/components@0.14.30
 
 ## 0.0.30
 
 ### Patch Changes
 
 - Updated dependencies [c470c60]
-  - @scalar/components@0.14.29
-  - @scalar/oas-utils@0.4.24
+  - @swagglar/components@0.14.29
+  - @swagglar/oas-utils@0.4.24
 
 ## 0.0.29
 
@@ -1050,15 +1050,15 @@
 - Updated dependencies [a6ae22a]
 - Updated dependencies [422cb2b]
 - Updated dependencies [976366f]
-  - @scalar/oas-utils@0.4.23
-  - @scalar/components@0.14.28
+  - @swagglar/oas-utils@0.4.23
+  - @swagglar/components@0.14.28
 
 ## 0.0.28
 
 ### Patch Changes
 
-- @scalar/oas-utils@0.4.22
-- @scalar/components@0.14.27
+- @swagglar/oas-utils@0.4.22
+- @swagglar/components@0.14.27
 
 ## 0.0.27
 
@@ -1066,8 +1066,8 @@
 
 - Updated dependencies [e2272a1]
 - Updated dependencies [b6f4b60]
-  - @scalar/oas-utils@0.4.21
-  - @scalar/components@0.14.26
+  - @swagglar/oas-utils@0.4.21
+  - @swagglar/components@0.14.26
 
 ## 0.0.26
 
@@ -1082,8 +1082,8 @@
 - Updated dependencies [6c24be9]
 - Updated dependencies [638120c]
 - Updated dependencies [0804cfc]
-  - @scalar/oas-utils@0.4.20
-  - @scalar/components@0.14.25
+  - @swagglar/oas-utils@0.4.20
+  - @swagglar/components@0.14.25
 
 ## 0.0.25
 
@@ -1093,16 +1093,16 @@
 - Updated dependencies [3de82ac]
 - Updated dependencies [58b9321]
 - Updated dependencies [fbafeab]
-  - @scalar/oas-utils@0.4.19
-  - @scalar/components@0.14.24
+  - @swagglar/oas-utils@0.4.19
+  - @swagglar/components@0.14.24
 
 ## 0.0.24
 
 ### Patch Changes
 
 - Updated dependencies [46bfd2f]
-  - @scalar/oas-utils@0.4.18
-  - @scalar/components@0.14.23
+  - @swagglar/oas-utils@0.4.18
+  - @swagglar/components@0.14.23
 
 ## 0.0.23
 
@@ -1110,8 +1110,8 @@
 
 - Updated dependencies [46ebe6e]
 - Updated dependencies [dd00357]
-  - @scalar/oas-utils@0.4.17
-  - @scalar/components@0.14.22
+  - @swagglar/oas-utils@0.4.17
+  - @swagglar/components@0.14.22
 
 ## 0.0.22
 
@@ -1124,8 +1124,8 @@
 - Updated dependencies [b957a2c]
 - Updated dependencies [f3d0216]
 - Updated dependencies [af22451]
-  - @scalar/components@0.14.21
-  - @scalar/oas-utils@0.4.16
+  - @swagglar/components@0.14.21
+  - @swagglar/oas-utils@0.4.16
 
 ## 0.0.21
 
@@ -1133,8 +1133,8 @@
 
 - Updated dependencies [60c7bef]
 - Updated dependencies [cac47ea]
-  - @scalar/components@0.14.20
-  - @scalar/oas-utils@0.4.15
+  - @swagglar/components@0.14.20
+  - @swagglar/oas-utils@0.4.15
 
 ## 0.0.20
 
@@ -1146,8 +1146,8 @@
 - Updated dependencies [85ee2ce]
 - Updated dependencies [97721b5]
 - Updated dependencies [85ee2ce]
-  - @scalar/components@0.14.19
-  - @scalar/oas-utils@0.4.14
+  - @swagglar/components@0.14.19
+  - @swagglar/oas-utils@0.4.14
 
 ## 0.0.19
 
@@ -1155,8 +1155,8 @@
 
 - Updated dependencies [934dff9]
 - Updated dependencies [71958fd]
-  - @scalar/components@0.14.18
-  - @scalar/oas-utils@0.4.13
+  - @swagglar/components@0.14.18
+  - @swagglar/oas-utils@0.4.13
 
 ## 0.0.18
 
@@ -1168,8 +1168,8 @@
 - Updated dependencies [4d89219]
 - Updated dependencies [244edda]
 - Updated dependencies [1db9130]
-  - @scalar/oas-utils@0.4.12
-  - @scalar/components@0.14.17
+  - @swagglar/oas-utils@0.4.12
+  - @swagglar/components@0.14.17
 
 ## 0.0.17
 
@@ -1181,8 +1181,8 @@
 - Updated dependencies [ca77d70]
 - Updated dependencies [a696604]
 - Updated dependencies [3fdc2f2]
-  - @scalar/oas-utils@0.4.11
-  - @scalar/components@0.14.16
+  - @swagglar/oas-utils@0.4.11
+  - @swagglar/components@0.14.16
 
 ## 0.0.16
 
@@ -1190,8 +1190,8 @@
 
 - 2d7f995: refactor: use more common straight apostrophe ' instead of the real apostrophe ’
 - Updated dependencies [2d7f995]
-  - @scalar/oas-utils@0.4.10
-  - @scalar/components@0.14.15
+  - @swagglar/oas-utils@0.4.10
+  - @swagglar/components@0.14.15
 
 ## 0.0.15
 
@@ -1202,8 +1202,8 @@
 - Updated dependencies [4f47b3c]
 - Updated dependencies [23b150b]
 - Updated dependencies [8e85856]
-  - @scalar/components@0.14.14
-  - @scalar/oas-utils@0.4.9
+  - @swagglar/components@0.14.14
+  - @swagglar/oas-utils@0.4.9
 
 ## 0.0.14
 
@@ -1211,22 +1211,22 @@
 
 - Updated dependencies [c907685]
 - Updated dependencies [4bbbb32]
-  - @scalar/components@0.14.13
-  - @scalar/oas-utils@0.4.8
+  - @swagglar/components@0.14.13
+  - @swagglar/oas-utils@0.4.8
 
 ## 0.0.13
 
 ### Patch Changes
 
-- @scalar/components@0.14.12
-- @scalar/oas-utils@0.4.7
+- @swagglar/components@0.14.12
+- @swagglar/oas-utils@0.4.7
 
 ## 0.0.12
 
 ### Patch Changes
 
 - Updated dependencies [699df60]
-  - @scalar/components@0.14.11
+  - @swagglar/components@0.14.11
 
 ## 0.0.11
 
@@ -1234,14 +1234,14 @@
 
 - Updated dependencies [979139e]
 - Updated dependencies [aaf90bf]
-  - @scalar/oas-utils@0.4.6
-  - @scalar/components@0.14.10
+  - @swagglar/oas-utils@0.4.6
+  - @swagglar/components@0.14.10
 
 ## 0.0.10
 
 ### Patch Changes
 
-- @scalar/components@0.14.9
+- @swagglar/components@0.14.9
 
 ## 0.0.9
 
@@ -1251,15 +1251,15 @@
 - Updated dependencies [221e35f]
 - Updated dependencies [4156f1d]
 - Updated dependencies [177438d]
-  - @scalar/oas-utils@0.4.5
-  - @scalar/components@0.14.8
+  - @swagglar/oas-utils@0.4.5
+  - @swagglar/components@0.14.8
 
 ## 0.0.8
 
 ### Patch Changes
 
-- @scalar/oas-utils@0.4.4
-- @scalar/components@0.14.7
+- @swagglar/oas-utils@0.4.4
+- @swagglar/components@0.14.7
 
 ## 0.0.7
 
@@ -1267,8 +1267,8 @@
 
 - Updated dependencies [8165b3b]
 - Updated dependencies [ba84a3c]
-  - @scalar/oas-utils@0.4.3
-  - @scalar/components@0.14.6
+  - @swagglar/oas-utils@0.4.3
+  - @swagglar/components@0.14.6
 
 ## 0.0.6
 
@@ -1277,15 +1277,15 @@
 - Updated dependencies [f1c0c01]
 - Updated dependencies [df7efac]
 - Updated dependencies [7ca47ab]
-  - @scalar/components@0.14.5
-  - @scalar/oas-utils@0.4.2
+  - @swagglar/components@0.14.5
+  - @swagglar/oas-utils@0.4.2
 
 ## 0.0.5
 
 ### Patch Changes
 
-- @scalar/components@0.14.4
-- @scalar/oas-utils@0.4.1
+- @swagglar/components@0.14.4
+- @swagglar/oas-utils@0.4.1
 
 ## 0.0.4
 
@@ -1297,8 +1297,8 @@
 - Updated dependencies [cad6277]
 - Updated dependencies [ffa93fa]
 - Updated dependencies [cedca9b]
-  - @scalar/components@0.14.3
-  - @scalar/oas-utils@0.4.0
+  - @swagglar/components@0.14.3
+  - @swagglar/oas-utils@0.4.0
 
 ## 0.0.3
 
@@ -1306,16 +1306,16 @@
 
 - Updated dependencies [151ef09]
 - Updated dependencies [442c0a3]
-  - @scalar/oas-utils@0.3.2
-  - @scalar/components@0.14.2
+  - @swagglar/oas-utils@0.3.2
+  - @swagglar/components@0.14.2
 
 ## 0.0.2
 
 ### Patch Changes
 
 - Updated dependencies [4440949]
-  - @scalar/components@0.14.1
-  - @scalar/oas-utils@0.3.1
+  - @swagglar/components@0.14.1
+  - @swagglar/oas-utils@0.3.1
 
 ## 0.0.1
 
@@ -1325,5 +1325,5 @@
 - Updated dependencies [5613e40]
 - Updated dependencies [483ca93]
 - Updated dependencies [0efcab4]
-  - @scalar/oas-utils@0.3.0
-  - @scalar/components@0.14.0
+  - @swagglar/oas-utils@0.3.0
+  - @swagglar/components@0.14.0

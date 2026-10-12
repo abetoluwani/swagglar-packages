@@ -1,23 +1,23 @@
-# @scalar/highlight
+# @swagglar/highlight
 
 Scalar's code highlighter.
 
 - **Small.** 2.3 KB core, ~1.7 KB for Python, gzipped. Nothing you do not import.
-- **No theme system.** Colors come from the `--scalar-*` variables `@scalar/themes` already defines, so a code block follows the app's theme and switches with `.light-mode` / `.dark-mode` — without being re-highlighted.
+- **No theme system.** Colors come from the `--scalar-*` variables `@swagglar/themes` already defines, so a code block follows the app's theme and switches with `.light-mode` / `.dark-mode` — without being re-highlighted.
 - **Zero runtime dependencies.**
 
 Forty languages ship today: Python, JavaScript/TypeScript/JSX/TSX, Rust, Go, C, C++, C#, F#, Java, Kotlin, Scala, Swift, Objective-C, OCaml, Haskell, Elixir, Clojure, Dart, Mojo, PHP, Perl, Ruby, Lua, R, MATLAB, Bash, PowerShell, SQL, GraphQL, HTTP, YAML, JSON, TOML/INI, CSS, HTML, Markdown, Dockerfiles, Makefiles, nginx configs, and diffs.
 
 ```bash
-npm install @scalar/highlight
+npm install @swagglar/highlight
 ```
 
 ## Quick start
 
 ```js
-import { highlightBlock, registerLanguage } from '@scalar/highlight';
-import python from '@scalar/highlight/langs/python';
-import '@scalar/highlight/style.css';
+import { highlightBlock, registerLanguage } from '@swagglar/highlight';
+import python from '@swagglar/highlight/langs/python';
+import '@swagglar/highlight/style.css';
 
 registerLanguage(python);
 
@@ -27,7 +27,7 @@ const html = highlightBlock(source, 'python', { lineNumbers: true });
 That is the whole setup. `html` is a `<pre class="shl-code">…</pre>` block, and the
 stylesheet colors it from the theme already loaded on the page.
 
-> **Requires a mode class.** `@scalar/themes` defines its palette only under
+> **Requires a mode class.** `@swagglar/themes` defines its palette only under
 > `.light-mode` or `.dark-mode`, so one of them must be on a container — the same
 > contract every other Scalar component has. Without it the block still renders,
 > readable but unstyled.
@@ -35,8 +35,8 @@ stylesheet colors it from the theme already loaded on the page.
 ### Loading languages on demand
 
 ```js
-import { highlight } from '@scalar/highlight';
-import { loadLanguage } from '@scalar/highlight/lazy';
+import { highlight } from '@swagglar/highlight';
+import { loadLanguage } from '@swagglar/highlight/lazy';
 
 await loadLanguage('rust');   // one dynamic import, one bundler chunk
 highlight(source, 'rust');
@@ -49,18 +49,18 @@ own chunk. The initial chunk with the loader and no languages is 3.9 KB.
 
 | Import | What you get |
 | --- | --- |
-| `@scalar/highlight` | `highlight`, `highlightBlock`, `tokenize`, the registry |
-| `@scalar/highlight/style.css` | The stylesheet. Required for color |
-| `@scalar/highlight/core` | Just the engine |
-| `@scalar/highlight/langs/<name>` | One grammar |
-| `@scalar/highlight/lazy` | `loadLanguage`, for code splitting |
-| `@scalar/highlight/all` | Every language, registered. For build-time rendering |
-| `@scalar/highlight/compat` | Drop-in `syntaxHighlight` for `@scalar/code-highlight` |
+| `@swagglar/highlight` | `highlight`, `highlightBlock`, `tokenize`, the registry |
+| `@swagglar/highlight/style.css` | The stylesheet. Required for color |
+| `@swagglar/highlight/core` | Just the engine |
+| `@swagglar/highlight/langs/<name>` | One grammar |
+| `@swagglar/highlight/lazy` | `loadLanguage`, for code splitting |
+| `@swagglar/highlight/all` | Every language, registered. For build-time rendering |
+| `@swagglar/highlight/compat` | Drop-in `syntaxHighlight` for `@swagglar/code-highlight` |
 
 ### Rendering somewhere other than HTML
 
 ```js
-import { tokenize } from '@scalar/highlight';
+import { tokenize } from '@swagglar/highlight';
 
 for (const { scope, text } of tokenize(source, 'python')) {
   // scope is 'keyword.control' | 'string' | … | null
@@ -71,7 +71,7 @@ For hot paths there is a streaming form that allocates nothing per token — it 
 HTML renderer uses:
 
 ```js
-import { tokenizeStream, resolveGrammar } from '@scalar/highlight';
+import { tokenizeStream, resolveGrammar } from '@swagglar/highlight';
 
 tokenizeStream(source, resolveGrammar('python'), (scope, start, end) => { … });
 ```
@@ -83,7 +83,7 @@ re-exporting it, so tree-shaking runs the way it does in a real app.
 
 | Bundle | Gzipped |
 | --- | ---: |
-| `@scalar/highlight` core | 2.32 KB |
+| `@swagglar/highlight` core | 2.32 KB |
 | …+ Python | 4.33 KB |
 | …lazy loader, initial chunk | 3.93 KB |
 | …`style.css` | 1.26 KB |
@@ -142,7 +142,7 @@ classes at fourteen semantic slots:
 .shl-code { --scalar-hl-string: var(--scalar-color-purple); }
 ```
 
-Because the color lives in a variable that `@scalar/themes` already swaps, changing theme
+Because the color lives in a variable that `@swagglar/themes` already swaps, changing theme
 is a class change on a container. The HTML never moves — which also means a page can be
 rendered once at build time and still respect a runtime theme toggle.
 
@@ -168,7 +168,7 @@ code they punctuate.
 A grammar is plain data with no imports beyond its type:
 
 ```ts
-import type { Grammar } from '@scalar/highlight/core';
+import type { Grammar } from '@swagglar/highlight/core';
 
 const toml: Grammar = {
   name: 'toml',
@@ -204,17 +204,17 @@ reconstruct the source exactly, that scopes come from the shared vocabulary, and
 tokenizing every truncated prefix terminates and stays consistent — which is what an editor
 does on every keystroke.
 
-## Replacing `@scalar/code-highlight`
+## Replacing `@swagglar/code-highlight`
 
-`@scalar/highlight/compat` is a drop-in `syntaxHighlight`. Same signature, same
+`@swagglar/highlight/compat` is a drop-in `syntaxHighlight`. Same signature, same
 `<pre><code class="hljs language-x">` envelope, same `hljs-*` token classes — so
 [`code.css`](https://github.com/scalar/scalar/blob/main/packages/code-highlight/src/css/code.css)
 keeps working unchanged and `ScalarCodeBlock` needs one import line changed:
 
 ```diff
--import { standardLanguages, syntaxHighlight } from '@scalar/code-highlight';
-+import '@scalar/highlight/all';
-+import { standardLanguages, syntaxHighlight } from '@scalar/highlight/compat';
+-import { standardLanguages, syntaxHighlight } from '@swagglar/code-highlight';
++import '@swagglar/highlight/all';
++import { standardLanguages, syntaxHighlight } from '@swagglar/highlight/compat';
 ```
 
 `standardLanguages` is re-exported with the same key set, so `StandardLanguageKey` is
@@ -222,7 +222,7 @@ unchanged and the component's props keep their types.
 
 ### What it covers, and what it does not
 
-`@scalar/code-highlight` is two packages wearing one name. The compat layer replaces the
+`@swagglar/code-highlight` is two packages wearing one name. The compat layer replaces the
 first half only:
 
 | export | status |
@@ -236,7 +236,7 @@ first half only:
 
 The Markdown half is a remark/rehype pipeline — GFM, sanitization, GitHub alerts, external
 links — that has nothing to do with tokenizing code, and it is not something this library
-should grow. A swap keeps `@scalar/code-highlight` as a dependency for
+should grow. A swap keeps `@swagglar/code-highlight` as a dependency for
 `ScalarMarkdown` and drops it from `ScalarCodeBlock`.
 
 The one `standardLanguages` name with no grammar — `plaintext` — renders as escaped,
@@ -248,9 +248,9 @@ class comes from the name the caller asked for.
 ### Verifying it
 
 [`src/compat/compat.test.ts`](src/compat/compat.test.ts) runs the real lowlight pipeline —
-imported straight from [`@scalar/code-highlight`](../code-highlight) — beside ours over the
+imported straight from [`@swagglar/code-highlight`](../code-highlight) — beside ours over the
 shared sample corpus, and asserts that the rendered text, the `<code>` envelope and the line
-elements match exactly. It also ports the four assertions `@scalar/code-highlight` ships
+elements match exactly. It also ports the four assertions `@swagglar/code-highlight` ships
 today. Because the comparison runs against the workspace package rather than a copy of it,
 a change on either side shows up here.
 
@@ -268,8 +268,8 @@ For the same three languages `ScalarCodeBlock` shows most often:
 
 | | gzipped |
 | --- | ---: |
-| `@scalar/code-highlight` | 127.34 KB |
-| `@scalar/highlight/compat` | 5.36 KB |
+| `@swagglar/code-highlight` | 127.34 KB |
+| `@swagglar/highlight/compat` | 5.36 KB |
 
 ## Trade-offs
 
@@ -301,8 +301,8 @@ From the repository root:
 ```bash
 pnpm install
 pnpm vitest packages/highlight --run       # the suite
-pnpm --filter @scalar/highlight build      # tsc, plus a copy of style.css
-pnpm --filter @scalar/highlight types:check
+pnpm --filter @swagglar/highlight build      # tsc, plus a copy of style.css
+pnpm --filter @swagglar/highlight types:check
 ```
 
 From this directory:
@@ -310,7 +310,7 @@ From this directory:
 ```bash
 pnpm bench          # throughput per language, for comparing a branch against main
 pnpm size           # bundle size per entry point and per language
-pnpm compat:report  # @scalar/code-highlight swap report; --detail for colour drift
+pnpm compat:report  # @swagglar/code-highlight swap report; --detail for colour drift
 ```
 
 The published package ships zero dependencies. `rolldown` measures bundle size and

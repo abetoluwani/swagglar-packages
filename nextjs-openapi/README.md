@@ -1,8 +1,8 @@
 # [PRE-ALPHA] Scalar Next.js API Reference Handler
 
-[![Version](https://img.shields.io/npm/v/%40scalar/nextjs-openapi)](https://www.npmjs.com/package/@scalar/nextjs-openapi)
-[![Downloads](https://img.shields.io/npm/dm/%40scalar/nextjs-openapi)](https://www.npmjs.com/package/@scalar/nextjs-openapi)
-[![License](https://img.shields.io/npm/l/%40scalar%2fnextjs-openapi)](https://www.npmjs.com/package/@scalar/nextjs-openapi)
+[![Version](https://img.shields.io/npm/v/%40scalar/nextjs-openapi)](https://www.npmjs.com/package/@swagglar/nextjs-openapi)
+[![Downloads](https://img.shields.io/npm/dm/%40scalar/nextjs-openapi)](https://www.npmjs.com/package/@swagglar/nextjs-openapi)
+[![License](https://img.shields.io/npm/l/%40scalar%2fnextjs-openapi)](https://www.npmjs.com/package/@swagglar/nextjs-openapi)
 [![Discord](https://img.shields.io/discord/1135330207960678410?style=flat&color=5865F2)](https://discord.gg/scalar)
 
 This plugin automatically generates an OpenAPI schema file based on a Next.js API.
@@ -29,7 +29,7 @@ Scalar is an open-source API platform for teams who want beautiful developer int
 ## Installation
 
 ```bash
-npm install @scalar/nextjs-openapi
+npm install @swagglar/nextjs-openapi
 ```
 
 ## Usage
@@ -42,7 +42,7 @@ You just need to drop this file into the `app/api/openapi/[[...openapi]]` folder
 
 ```ts
 // app/api/openapi/[[...slug]]/route.ts
-import { OpenAPI } from '@scalar/nextjs-openapi'
+import { OpenAPI } from '@swagglar/nextjs-openapi'
 
 export const GET = OpenAPI().GET
 ```

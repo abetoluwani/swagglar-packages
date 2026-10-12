@@ -1,4 +1,4 @@
-import { ScalarIconWebhooksLogo } from '@scalar/icons'
+import { ScalarIconWebhooksLogo } from '@swagglar/icons'
 import { mount } from '@vue/test-utils'
 import { describe, expect, it } from 'vitest'
 

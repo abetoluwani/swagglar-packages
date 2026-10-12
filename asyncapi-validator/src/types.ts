@@ -1,8 +1,8 @@
-import type { ValidationOutcome as GenericValidationOutcome } from '@scalar/json-schema-validator'
+import type { ValidationOutcome as GenericValidationOutcome } from '@swagglar/json-schema-validator'
 
 import type { AsyncApiVersion } from '@/specifications'
 
-export type { ErrorObject } from '@scalar/json-schema-validator'
+export type { ErrorObject } from '@swagglar/json-schema-validator'
 
 export type { AsyncApiVersion } from '@/specifications'
 

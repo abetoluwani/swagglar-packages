@@ -1,5 +1,5 @@
-import { type DarkLightMode, applyColorMode, getSystemColorMode } from '@scalar/helpers/theme/color-mode'
-import { literal, union, validate } from '@scalar/validation'
+import { type DarkLightMode, applyColorMode, getSystemColorMode } from '@swagglar/helpers/theme/color-mode'
+import { literal, union, validate } from '@swagglar/validation'
 import { computed, onMounted, onUnmounted, ref, watch } from 'vue'
 
 const colorMode = ref<ColorMode>('dark')

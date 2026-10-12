@@ -1,4 +1,4 @@
-import { ScalarIconAcorn } from '@scalar/icons'
+import { ScalarIconAcorn } from '@swagglar/icons'
 import { mount } from '@vue/test-utils'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { markRaw, nextTick } from 'vue'

@@ -1,6 +1,6 @@
-import { isXmlMediaType } from '@scalar/helpers/http/is-xml-media-type'
-import { getXmlBodyExample } from '@scalar/workspace-store/request-example'
-import type { SchemaObject } from '@scalar/workspace-store/schemas/v3.2/strict/openapi-document'
+import { isXmlMediaType } from '@swagglar/helpers/http/is-xml-media-type'
+import { getXmlBodyExample } from '@swagglar/workspace-store/request-example'
+import type { SchemaObject } from '@swagglar/workspace-store/schemas/v3.2/strict/openapi-document'
 import type { RootContent } from 'mdast'
 
 import { type ExampleSource, getMarkdownExamples } from './get-markdown-examples'

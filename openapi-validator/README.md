@@ -1,13 +1,13 @@
 # Scalar OpenAPI Validator
 
-[![Version](https://img.shields.io/npm/v/%40scalar/openapi-validator)](https://www.npmjs.com/package/@scalar/openapi-validator)
-[![Downloads](https://img.shields.io/npm/dm/%40scalar/openapi-validator)](https://www.npmjs.com/package/@scalar/openapi-validator)
-[![License](https://img.shields.io/npm/l/%40scalar%2Fopenapi-validator)](https://www.npmjs.com/package/@scalar/openapi-validator)
+[![Version](https://img.shields.io/npm/v/%40scalar/openapi-validator)](https://www.npmjs.com/package/@swagglar/openapi-validator)
+[![Downloads](https://img.shields.io/npm/dm/%40scalar/openapi-validator)](https://www.npmjs.com/package/@swagglar/openapi-validator)
+[![License](https://img.shields.io/npm/l/%40scalar%2Fopenapi-validator)](https://www.npmjs.com/package/@swagglar/openapi-validator)
 [![Discord](https://img.shields.io/discord/1135330207960678410?style=flat&color=5865F2)](https://discord.gg/scalar)
 
 Validate OpenAPI documents against the OpenAPI Specification. Supports OpenAPI 3.2, 3.1, 3.0 and Swagger 2.0.
 
-This package does the schema validation part of [`@scalar/openapi-parser`](https://www.npmjs.com/package/@scalar/openapi-parser) on its own. Use it when all you need is validation and you do not want the rest of the parser.
+This package does the schema validation part of [`@swagglar/openapi-parser`](https://www.npmjs.com/package/@swagglar/openapi-parser) on its own. Use it when all you need is validation and you do not want the rest of the parser.
 
 ---
 
@@ -25,7 +25,7 @@ Scalar is an open-source API platform for teams who want beautiful developer int
 ## Installation
 
 ```bash
-npm add @scalar/openapi-validator
+npm add @swagglar/openapi-validator
 ```
 
 ## Usage
@@ -33,7 +33,7 @@ npm add @scalar/openapi-validator
 Pass a JSON string, a YAML string, or an object:
 
 ```ts
-import { validate } from '@scalar/openapi-validator'
+import { validate } from '@swagglar/openapi-validator'
 
 const result = validate({
   openapi: '3.1.0',
@@ -53,12 +53,12 @@ if (!result.valid) {
 
 ### References
 
-This validator does not resolve references. It validates a single, self-contained document. If your document references other files or URLs, bundle or dereference it first (for example with [`@scalar/json-magic`](https://www.npmjs.com/package/@scalar/json-magic) or [`@scalar/openapi-parser`](https://www.npmjs.com/package/@scalar/openapi-parser)) and then validate the result.
+This validator does not resolve references. It validates a single, self-contained document. If your document references other files or URLs, bundle or dereference it first (for example with [`@swagglar/json-magic`](https://www.npmjs.com/package/@swagglar/json-magic) or [`@swagglar/openapi-parser`](https://www.npmjs.com/package/@swagglar/openapi-parser)) and then validate the result.
 
 ### Throw on error
 
 ```ts
-import { validate } from '@scalar/openapi-validator'
+import { validate } from '@swagglar/openapi-validator'
 
 try {
   validate(document, { throwOnError: true })

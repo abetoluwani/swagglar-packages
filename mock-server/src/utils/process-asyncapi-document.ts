@@ -1,11 +1,11 @@
 import path from 'node:path'
 import { cwd } from 'node:process'
 
-import { bundle } from '@scalar/json-magic/bundle'
-import { fetchUrls, parseJson, parseYaml, readFiles } from '@scalar/json-magic/bundle/plugins/node'
-import { isFilePath } from '@scalar/json-magic/helpers/is-file-path'
-import { createMagicProxy } from '@scalar/json-magic/magic-proxy'
-import type { AsyncApiDocument } from '@scalar/types/asyncapi/3.1'
+import { bundle } from '@swagglar/json-magic/bundle'
+import { fetchUrls, parseJson, parseYaml, readFiles } from '@swagglar/json-magic/bundle/plugins/node'
+import { isFilePath } from '@swagglar/json-magic/helpers/is-file-path'
+import { createMagicProxy } from '@swagglar/json-magic/magic-proxy'
+import type { AsyncApiDocument } from '@swagglar/types/asyncapi/3.1'
 
 /**
  * Processes an AsyncAPI document by bundling external references and wrapping it so internal
@@ -13,7 +13,7 @@ import type { AsyncApiDocument } from '@scalar/types/asyncapi/3.1'
  * {@link processOpenApiDocument}.
  *
  * Unlike a full dereference, the returned document keeps `$ref` nodes in place. Consumers resolve
- * them on demand with `getResolvedRef` from `@scalar/workspace-store`, which reads the `$ref-value`
+ * them on demand with `getResolvedRef` from `@swagglar/workspace-store`, which reads the `$ref-value`
  * exposed by the magic proxy. This avoids eagerly flattening (and duplicating) the whole document.
  *
  * Only AsyncAPI 3.1 is supported; 2.x documents should be upgraded before being passed in.

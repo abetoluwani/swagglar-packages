@@ -1,5 +1,5 @@
-import { isObjectLike } from '@scalar/helpers/object/is-object'
-import type { Plugin } from '@scalar/types/snippetz'
+import { isObjectLike } from '@swagglar/helpers/object/is-object'
+import type { Plugin } from '@swagglar/types/snippetz'
 
 import { accumulateRepeatedValue, buildQueryString, normalizeMethod } from '@/libs/http'
 import { objectToString } from '@/libs/php'

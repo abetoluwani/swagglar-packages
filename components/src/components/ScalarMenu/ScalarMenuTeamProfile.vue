@@ -11,8 +11,8 @@
 export default {}
 </script>
 <script setup lang="ts">
-import { ScalarIconUsers } from '@scalar/icons'
-import { useBindCx } from '@scalar/use-hooks/useBindCx'
+import { ScalarIconUsers } from '@swagglar/icons'
+import { useBindCx } from '@swagglar/use-hooks/useBindCx'
 
 defineProps<{
   src?: string

@@ -116,7 +116,7 @@ describe('createMockServer', () => {
 
     it.each([false, true])('exports a URL document without refetching (preloaded: %s)', async (preloaded) => {
       // Guarded URL loading uses the bundler's Undici transport rather than global fetch.
-      const bundlerRequire = createRequire(import.meta.resolve('@scalar/json-magic/bundle'))
+      const bundlerRequire = createRequire(import.meta.resolve('@swagglar/json-magic/bundle'))
       const { Agent, MockAgent } = bundlerRequire('undici') as typeof import('undici')
       const transport = new MockAgent()
       transport.disableNetConnect()

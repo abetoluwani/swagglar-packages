@@ -1,5 +1,5 @@
 {
-  "name": "@scalar/api-client-react",
+  "name": "@swagglar/api-client-react",
   "description": "the open source API testing client for react",
   "license": "MIT",
   "author": "Scalar (https://github.com/scalar)",
@@ -45,10 +45,10 @@
     "CHANGELOG.md"
   ],
   "dependencies": {
-    "@scalar/api-client": "workspace:*",
-    "@scalar/blocks": "workspace:*",
-    "@scalar/helpers": "workspace:*",
-    "@scalar/workspace-store": "workspace:*"
+    "@swagglar/api-client": "workspace:*",
+    "@swagglar/blocks": "workspace:*",
+    "@swagglar/helpers": "workspace:*",
+    "@swagglar/workspace-store": "workspace:*"
   },
   "devDependencies": {
     "@testing-library/dom": "^10.4.1",

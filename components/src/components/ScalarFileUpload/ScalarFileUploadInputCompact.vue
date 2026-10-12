@@ -10,8 +10,8 @@
 export default {}
 </script>
 <script setup lang="ts">
-import { ScalarIconUploadSimple } from '@scalar/icons'
-import { useBindCx } from '@scalar/use-hooks/useBindCx'
+import { ScalarIconUploadSimple } from '@swagglar/icons'
+import { useBindCx } from '@swagglar/use-hooks/useBindCx'
 
 import type {
   FileUploadInputEmits,

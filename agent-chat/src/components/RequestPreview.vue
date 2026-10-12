@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { ScalarCodeBlock } from '@scalar/components/code-block'
-import { ScalarIconCaretDown, ScalarIconCaretRight } from '@scalar/icons'
+import { ScalarCodeBlock } from '@swagglar/components/code-block'
+import { ScalarIconCaretDown, ScalarIconCaretRight } from '@swagglar/icons'
 import { type DeepPartial } from 'ai'
 import { computed, ref } from 'vue'
 

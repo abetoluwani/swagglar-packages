@@ -1,5 +1,5 @@
-import { isObject } from '@scalar/helpers/object/is-object'
-import type { AnyObject } from '@scalar/types/utils'
+import { isObject } from '@swagglar/helpers/object/is-object'
+import type { AnyObject } from '@swagglar/types/utils'
 import { parse as parseYaml } from 'yaml'
 
 import type { ErrorObject, ValidationOutcome } from '@/types'

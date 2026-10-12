@@ -6,7 +6,7 @@
  */
 
 /* Dependency Tailwind Configurations */
-@import "@scalar/components/tailwind.config.css";
+@import "@swagglar/components/tailwind.config.css";
 
 /* Search for Tailwind classes in Scalar Blocks */
 @source "../";

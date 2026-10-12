@@ -1,4 +1,4 @@
-import type { OpenAPIV3 } from '@scalar/openapi-types'
+import type { OpenAPIV3 } from '@swagglar/openapi-types'
 
 /**
  * Check whether the given security scheme key is in the `security` configuration for this operation.

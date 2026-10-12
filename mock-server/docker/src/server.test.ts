@@ -1,4 +1,4 @@
-import type { AsyncApiMockServer } from '@scalar/mock-server'
+import type { AsyncApiMockServer } from '@swagglar/mock-server'
 import type { Hono } from 'hono'
 import { beforeAll, beforeEach, describe, expect, it, vi } from 'vitest'
 
@@ -10,8 +10,8 @@ vi.mock('@hono/node-server', async (importOriginal) => ({
   serve: vi.fn(),
 }))
 
-// Mock @scalar/mock-server
-vi.mock('@scalar/mock-server', () => ({
+// Mock @swagglar/mock-server
+vi.mock('@swagglar/mock-server', () => ({
   createMockServer: vi.fn(),
   createAsyncApiMockServer: vi.fn(),
   isAsyncApiDocument: vi.fn(() => false),
@@ -37,7 +37,7 @@ describe('startMockServer', () => {
   beforeAll(async () => {
     // Loading the real handler can take longer on busy runners, so keep it outside the test timeout.
     const { createAsyncApiMockServer } =
-      await vi.importActual<typeof import('@scalar/mock-server')>('@scalar/mock-server')
+      await vi.importActual<typeof import('@swagglar/mock-server')>('@swagglar/mock-server')
     const server = await createAsyncApiMockServer({
       document: '{"asyncapi":"3.1.0","info":{"title":"Test","version":"1.0.0"}}',
     })
@@ -49,7 +49,7 @@ describe('startMockServer', () => {
 
     // Import mocked modules
     const { serve } = await import('@hono/node-server')
-    const { createMockServer, createAsyncApiMockServer, isAsyncApiDocument } = await import('@scalar/mock-server')
+    const { createMockServer, createAsyncApiMockServer, isAsyncApiDocument } = await import('@swagglar/mock-server')
     const { Scalar } = await import('@scalar/hono-api-reference')
 
     mockServe = vi.mocked(serve)

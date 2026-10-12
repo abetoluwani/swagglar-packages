@@ -1,4 +1,4 @@
-import { presets } from '@scalar/themes'
+import { presets } from '@swagglar/themes'
 import { describe, expect, it } from 'vitest'
 import { ref } from 'vue'
 

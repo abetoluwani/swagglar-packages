@@ -1,9 +1,9 @@
-import { useToasts } from '@scalar/use-toasts'
+import { useToasts } from '@swagglar/use-toasts'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 
 import { useClipboard } from './useClipboard'
 
-vi.mock(import('@scalar/use-toasts'), () => ({
+vi.mock(import('@swagglar/use-toasts'), () => ({
   useToasts: vi.fn().mockReturnValue({
     toast: vi.fn(),
     initializeToasts: vi.fn(),

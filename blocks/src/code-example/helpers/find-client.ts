@@ -1,4 +1,4 @@
-import { AVAILABLE_CLIENTS, type AvailableClients } from '@scalar/snippetz'
+import { AVAILABLE_CLIENTS, type AvailableClients } from '@swagglar/snippetz'
 
 import type { ClientOption, CustomClientOption, CustomClientOptionGroup } from '../types'
 

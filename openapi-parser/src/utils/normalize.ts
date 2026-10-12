@@ -1,4 +1,4 @@
-import type { UnknownObject } from '@scalar/types/utils'
+import type { UnknownObject } from '@swagglar/types/utils'
 import { parse } from 'yaml'
 
 import type { Filesystem } from '@/types/index'

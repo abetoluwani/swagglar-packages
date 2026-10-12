@@ -1,4 +1,4 @@
-import { createLimiter } from '@scalar/helpers/general/create-limiter'
+import { createLimiter } from '@swagglar/helpers/general/create-limiter'
 
 import type { LoaderPlugin, ResolveResult } from '@/bundle'
 import { isHttpUrl } from '@/helpers/is-http-url'

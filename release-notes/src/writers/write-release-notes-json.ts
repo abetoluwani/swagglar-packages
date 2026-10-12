@@ -1,8 +1,8 @@
 import { mkdir, readFile, writeFile } from 'node:fs/promises'
 import { dirname } from 'node:path'
 
-import { compareVersions } from '@scalar/helpers/general/compare-versions'
-import { isObjectLike } from '@scalar/helpers/object/is-object'
+import { compareVersions } from '@swagglar/helpers/general/compare-versions'
+import { isObjectLike } from '@swagglar/helpers/object/is-object'
 
 import { type ReleaseNote, releaseNoteSchema } from '../types'
 

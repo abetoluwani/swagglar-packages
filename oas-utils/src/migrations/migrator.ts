@@ -1,4 +1,4 @@
-import { isVersionLessThan } from '@scalar/helpers/general/compare-versions'
+import { isVersionLessThan } from '@swagglar/helpers/general/compare-versions'
 
 import { getLocalStorageVersion, parseLocalStorage } from '@/migrations/local-storage'
 import { migrate_v_2_1_0 } from '@/migrations/v-2.1.0/migration'

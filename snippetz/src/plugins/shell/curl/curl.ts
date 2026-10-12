@@ -1,6 +1,6 @@
-import { isJsonMediaType } from '@scalar/helpers/http/is-json-media-type'
-import { isStreamingContentType } from '@scalar/helpers/http/is-streaming-content-type'
-import type { Plugin } from '@scalar/types/snippetz'
+import { isJsonMediaType } from '@swagglar/helpers/http/is-json-media-type'
+import { isStreamingContentType } from '@swagglar/helpers/http/is-streaming-content-type'
+import type { Plugin } from '@swagglar/types/snippetz'
 
 import { normalizeMethod } from '@/libs/http'
 import { escapeSingleQuotes } from '@/libs/shell'

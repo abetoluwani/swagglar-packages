@@ -2,8 +2,8 @@ import type {
   XCodeSample,
   XLanguageExample,
   XReadmeCodeSample,
-} from '@scalar/workspace-store/schemas/extensions/operation'
-import type { OperationObject } from '@scalar/workspace-store/schemas/v3.2/strict/openapi-document'
+} from '@swagglar/workspace-store/schemas/extensions/operation'
+import type { OperationObject } from '@swagglar/workspace-store/schemas/v3.2/strict/openapi-document'
 
 /** Turns a `{ language: source }` map (x-stainless-snippets) into code samples. */
 const fromSnippetMap = (snippets: Record<string, string> | undefined, label?: string): XCodeSample[] =>

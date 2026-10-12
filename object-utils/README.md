@@ -1,4 +1,4 @@
-# @scalar/object-utils
+# @swagglar/object-utils
 
 Object manipulation utilities
 

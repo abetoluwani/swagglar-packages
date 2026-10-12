@@ -1,5 +1,5 @@
 {
-  "name": "@scalar/validation",
+  "name": "@swagglar/validation",
   "description": "A lightweight, schema-first validation library for Scalar",
   "license": "MIT",
   "author": "Scalar (https://github.com/scalar)",

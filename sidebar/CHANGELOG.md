@@ -1,4 +1,4 @@
-# @scalar/sidebar
+# @swagglar/sidebar
 
 ## 0.11.8
 
@@ -39,15 +39,15 @@
 ### Minor Changes
 
 - [#9918](https://github.com/scalar/scalar/pull/9918): Render sidebar navigation as anchor links instead of buttons.
-  - `@scalar/sidebar`: `ScalarSidebar` and `SidebarItem` accept a new `getHref` callback. When it returns a URL for an item, that item renders as a real link — this covers every entry except tag-group headings, which are section labels rather than navigation targets. Plain left clicks on the link still emit `selectItem` for in-app navigation (with the default navigation prevented), modified clicks are left to the browser so links can be opened in a new tab, and clicks on decorator content outside the link keep their native behavior. Items are built with the existing `button` slot on `ScalarSidebarItem` and `ScalarSidebarGroup`, so `@scalar/components` needs no new API to support this.
-  - `@scalar/api-reference`: the sidebar now passes `getHref` using the new SSR-safe `makeHrefFromId` helper, so the rendered sidebar contains real anchor tags whose paths match the URLs pushed to history (the hrefs are relative, so they do not carry the current query string). With path routing this makes the navigation crawlable and indexable by search engines; with hash routing and hash-base-path routing the fragment hrefs improve link semantics and open-in-new-tab behavior, but search engines do not treat fragments as separate URLs — configure `pathRouting` if URL discovery is the goal. Note that sidebar entries now follow standard link keyboard semantics (Enter activates them, Space scrolls the page), and links inside collapsed groups are only present in server-rendered HTML for groups that are expanded during SSR (for example via `defaultOpenAllTags`).
-  - `@scalar/helpers`: new `isPlainLeftClick` helper in `dom/is-plain-left-click` for deciding when a click should be hijacked for client-side navigation.
+  - `@swagglar/sidebar`: `ScalarSidebar` and `SidebarItem` accept a new `getHref` callback. When it returns a URL for an item, that item renders as a real link — this covers every entry except tag-group headings, which are section labels rather than navigation targets. Plain left clicks on the link still emit `selectItem` for in-app navigation (with the default navigation prevented), modified clicks are left to the browser so links can be opened in a new tab, and clicks on decorator content outside the link keep their native behavior. Items are built with the existing `button` slot on `ScalarSidebarItem` and `ScalarSidebarGroup`, so `@swagglar/components` needs no new API to support this.
+  - `@swagglar/api-reference`: the sidebar now passes `getHref` using the new SSR-safe `makeHrefFromId` helper, so the rendered sidebar contains real anchor tags whose paths match the URLs pushed to history (the hrefs are relative, so they do not carry the current query string). With path routing this makes the navigation crawlable and indexable by search engines; with hash routing and hash-base-path routing the fragment hrefs improve link semantics and open-in-new-tab behavior, but search engines do not treat fragments as separate URLs — configure `pathRouting` if URL discovery is the goal. Note that sidebar entries now follow standard link keyboard semantics (Enter activates them, Space scrolls the page), and links inside collapsed groups are only present in server-rendered HTML for groups that are expanded during SSR (for example via `defaultOpenAllTags`).
+  - `@swagglar/helpers`: new `isPlainLeftClick` helper in `dom/is-plain-left-click` for deciding when a click should be hijacked for client-side navigation.
 
 - [#9922](https://github.com/scalar/scalar/pull/9922): Give sidebar groups whose label is a link their own expand and collapse button.
 
   Group labels render as anchors so the navigation stays crawlable, which left the caret as a plain `<div>` inside the link. That gave each row a single focusable element: pressing Enter followed the link (expanding the group as a side effect) and nothing collapsed it again, `aria-expanded` sat on the link rather than on a control that can toggle, and the caret's screen reader text ran into the link's accessible name ("Authentication Close Group").
-  - `@scalar/components`: new `ScalarSidebarGroupToggleButton` and `ScalarSidebarGroupToggleSpacer`, which `ScalarSidebarGroup` now uses for its discrete toggle in place of an inline button. `ScalarSidebarGroup` no longer sets `aria-expanded` on the group label when `discrete` is set, because the toggle button is what owns the expanded state.
-  - `@scalar/sidebar`: a group renders a discrete toggle whenever `getHref` returns a URL for it, so tags, models and documents in the reference sidebar each get a toggle button of their own. The caret is now focusable and operable from the keyboard, `aria-expanded` moved from the label onto that button, and the button is named after the group it belongs to ("Open Group - Authentication") so a screen reader user can tell the toggles apart. Groups without an href are unchanged, so the client sidebar keeps its current behavior.
+  - `@swagglar/components`: new `ScalarSidebarGroupToggleButton` and `ScalarSidebarGroupToggleSpacer`, which `ScalarSidebarGroup` now uses for its discrete toggle in place of an inline button. `ScalarSidebarGroup` no longer sets `aria-expanded` on the group label when `discrete` is set, because the toggle button is what owns the expanded state.
+  - `@swagglar/sidebar`: a group renders a discrete toggle whenever `getHref` returns a URL for it, so tags, models and documents in the reference sidebar each get a toggle button of their own. The caret is now focusable and operable from the keyboard, `aria-expanded` moved from the label onto that button, and the button is named after the group it belongs to ("Open Group - Authentication") so a screen reader user can tell the toggles apart. Groups without an href are unchanged, so the client sidebar keeps its current behavior.
 
 ## 0.9.37
 
@@ -85,7 +85,7 @@
 
   Update the shared theme reset so text inputs align to the logical start by default for RTL documents.
 
-  Add a `mergeObjects` deep-merge helper to `@scalar/helpers`, used by the localization layer to merge translation overrides onto the built-in locale.
+  Add a `mergeObjects` deep-merge helper to `@swagglar/helpers`, used by the localization layer to merge translation overrides onto the built-in locale.
 
 ## 0.9.24
 
@@ -209,10 +209,10 @@
 
 #### Updated Dependencies
 
-- **@scalar/workspace-store@0.40.2**
+- **@swagglar/workspace-store@0.40.2**
   - [#8468](https://github.com/scalar/scalar/pull/8468): fix: ignore response examples when generating navigation
 
-- **@scalar/components@0.20.9**
+- **@swagglar/components@0.20.9**
   - [#8453](https://github.com/scalar/scalar/pull/8453): refactor: remove @ts-expect-error from ScalarTextArea
 
 ## 0.8.8
@@ -221,11 +221,11 @@
 
 #### Updated Dependencies
 
-- **@scalar/workspace-store@0.40.1**
+- **@swagglar/workspace-store@0.40.1**
   - [#8424](https://github.com/scalar/scalar/pull/8424): feat: export XScalarCredentialsLocation
   - [#8445](https://github.com/scalar/scalar/pull/8445): fix: generate unique id for models
 
-- **@scalar/components@0.20.8**
+- **@swagglar/components@0.20.8**
 
 ## 0.8.7
 
@@ -233,10 +233,10 @@
 
 #### Updated Dependencies
 
-- **@scalar/workspace-store@0.40.0**
+- **@swagglar/workspace-store@0.40.0**
   - [#8426](https://github.com/scalar/scalar/pull/8426): feat: interact with the original and intermediate documents
 
-- **@scalar/components@0.20.7**
+- **@swagglar/components@0.20.7**
 
 ## 0.8.6
 
@@ -244,13 +244,13 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.20.6**
+- **@swagglar/components@0.20.6**
   - [#8327](https://github.com/scalar/scalar/pull/8327): fix: markdown tables with specified width attributes in td/th break the layout
 
-- **@scalar/helpers@0.4.1**
+- **@swagglar/helpers@0.4.1**
   - [#8420](https://github.com/scalar/scalar/pull/8420): fix TypeScript access to navigator.userAgentData in isMacOS without ts-expect-error
 
-- **@scalar/workspace-store@0.39.2**
+- **@swagglar/workspace-store@0.39.2**
 
 ## 0.8.5
 
@@ -260,11 +260,11 @@
 
 #### Updated Dependencies
 
-- **@scalar/workspace-store@0.39.1**
+- **@swagglar/workspace-store@0.39.1**
   - [#8393](https://github.com/scalar/scalar/pull/8393): fix: correctly update active tab on tab close event
   - [#8403](https://github.com/scalar/scalar/pull/8403): Persist auth url and token url in local storage
 
-- **@scalar/components@0.20.5**
+- **@swagglar/components@0.20.5**
 
 ## 0.8.4
 
@@ -272,16 +272,16 @@
 
 #### Updated Dependencies
 
-- **@scalar/workspace-store@0.39.0**
+- **@swagglar/workspace-store@0.39.0**
   - [#8372](https://github.com/scalar/scalar/pull/8372): fix: avoid inlining $ref path parameters during path parameter sync
   - [#8349](https://github.com/scalar/scalar/pull/8349): feat: support operation example rename
   - [#8336](https://github.com/scalar/scalar/pull/8336): fix: sidebar title update and detect delete operaitons for proxy
   - [#8253](https://github.com/scalar/scalar/pull/8253): feat(api-reference): support propertyNames enum for additionalProperties
 
-- **@scalar/helpers@0.4.0**
+- **@swagglar/helpers@0.4.0**
   - [#8336](https://github.com/scalar/scalar/pull/8336): feat: support flushing any pending operations
 
-- **@scalar/components@0.20.4**
+- **@swagglar/components@0.20.4**
 
 ## 0.8.3
 
@@ -289,9 +289,9 @@
 
 #### Updated Dependencies
 
-- **@scalar/workspace-store@0.38.1**
+- **@swagglar/workspace-store@0.38.1**
 
-- **@scalar/components@0.20.3**
+- **@swagglar/components@0.20.3**
 
 ## 0.8.2
 
@@ -299,11 +299,11 @@
 
 #### Updated Dependencies
 
-- **@scalar/workspace-store@0.38.0**
+- **@swagglar/workspace-store@0.38.0**
   - [#8347](https://github.com/scalar/scalar/pull/8347): chore: export server workspace type
   - [#8365](https://github.com/scalar/scalar/pull/8365): feat: store oauth flow refresh tokens on the auth store
 
-- **@scalar/components@0.20.2**
+- **@swagglar/components@0.20.2**
   - [#8366](https://github.com/scalar/scalar/pull/8366): fix(components): clean up search components and add snapshots
 
 ## 0.8.1
@@ -312,10 +312,10 @@
 
 #### Updated Dependencies
 
-- **@scalar/workspace-store@0.37.0**
+- **@swagglar/workspace-store@0.37.0**
   - [#8266](https://github.com/scalar/scalar/pull/8266): support operation level authentication and servers
 
-- **@scalar/components@0.20.1**
+- **@swagglar/components@0.20.1**
 
 ## 0.8.0
 
@@ -327,24 +327,24 @@
 
 #### Updated Dependencies
 
-- **@scalar/workspace-store@0.36.0**
+- **@swagglar/workspace-store@0.36.0**
   - [#8340](https://github.com/scalar/scalar/pull/8340): feat: support navigation options on server store
   - [#8322](https://github.com/scalar/scalar/pull/8322): chore: bump required node version to >=22 (LTS)
   - [#8340](https://github.com/scalar/scalar/pull/8340): chore: disable perf logs by default
 
-- **@scalar/components@0.20.0**
+- **@swagglar/components@0.20.0**
   - [#8322](https://github.com/scalar/scalar/pull/8322): chore: bump required node version to >=22 (LTS)
 
-- **@scalar/use-hooks@0.4.0**
+- **@swagglar/use-hooks@0.4.0**
   - [#8322](https://github.com/scalar/scalar/pull/8322): chore: bump required node version to >=22 (LTS)
 
-- **@scalar/helpers@0.3.0**
+- **@swagglar/helpers@0.3.0**
   - [#8322](https://github.com/scalar/scalar/pull/8322): chore: bump required node version to >=22 (LTS)
 
-- **@scalar/themes@0.15.0**
+- **@swagglar/themes@0.15.0**
   - [#8322](https://github.com/scalar/scalar/pull/8322): chore: bump required node version to >=22 (LTS)
 
-- **@scalar/icons@0.6.0**
+- **@swagglar/icons@0.6.0**
   - [#8322](https://github.com/scalar/scalar/pull/8322): chore: bump required node version to >=22 (LTS)
 
 ## 0.7.46
@@ -353,13 +353,13 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.19.15**
+- **@swagglar/components@0.19.15**
   - [#8319](https://github.com/scalar/scalar/pull/8319): fix(components): fix adjust sidebar section line height
 
-- **@scalar/helpers@0.2.18**
+- **@swagglar/helpers@0.2.18**
   - [#8314](https://github.com/scalar/scalar/pull/8314): chore: limit concurrent operations while migrating workspaces
 
-- **@scalar/workspace-store@0.35.3**
+- **@swagglar/workspace-store@0.35.3**
 
 ## 0.7.45
 
@@ -367,10 +367,10 @@
 
 #### Updated Dependencies
 
-- **@scalar/themes@0.14.3**
+- **@swagglar/themes@0.14.3**
   - [#8315](https://github.com/scalar/scalar/pull/8315): feat(theme): standardize tailwind line height behavior
 
-- **@scalar/components@0.19.14**
+- **@swagglar/components@0.19.14**
 
 ## 0.7.44
 
@@ -378,15 +378,15 @@
 
 #### Updated Dependencies
 
-- **@scalar/workspace-store@0.35.2**
+- **@swagglar/workspace-store@0.35.2**
   - [#8310](https://github.com/scalar/scalar/pull/8310): refactor: move helpers to the helpers package to share primitive helpers
   - [#8294](https://github.com/scalar/scalar/pull/8294): default createAnySecurityScheme to false and fix index clamp issue
   - [#8287](https://github.com/scalar/scalar/pull/8287): consider path-level parameters in syncPathParameters instead of creating bare synthetic ones
 
-- **@scalar/helpers@0.2.17**
+- **@swagglar/helpers@0.2.17**
   - [#8310](https://github.com/scalar/scalar/pull/8310): refactor: move helpers to the helpers package to share primitive helpers
 
-- **@scalar/components@0.19.13**
+- **@swagglar/components@0.19.13**
 
 ## 0.7.43
 
@@ -394,13 +394,13 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.19.12**
+- **@swagglar/components@0.19.12**
   - [#8290](https://github.com/scalar/scalar/pull/8290): chore: update deps
 
-- **@scalar/themes@0.14.2**
+- **@swagglar/themes@0.14.2**
   - [#8290](https://github.com/scalar/scalar/pull/8290): chore: update deps
 
-- **@scalar/workspace-store@0.35.1**
+- **@swagglar/workspace-store@0.35.1**
   - [#8290](https://github.com/scalar/scalar/pull/8290): chore: update deps
 
 ## 0.7.42
@@ -409,13 +409,13 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.19.11**
+- **@swagglar/components@0.19.11**
   - [#8276](https://github.com/scalar/scalar/pull/8276): feat(components): standardize form inputs to have a height of 40px
 
-- **@scalar/themes@0.14.1**
+- **@swagglar/themes@0.14.1**
   - [#8276](https://github.com/scalar/scalar/pull/8276): feat(components): standardize form inputs to have a height of 40px
 
-- **@scalar/workspace-store@0.35.0**
+- **@swagglar/workspace-store@0.35.0**
   - [#8234](https://github.com/scalar/scalar/pull/8234): support operation level authentication and servers
 
 ## 0.7.41
@@ -424,9 +424,9 @@
 
 #### Updated Dependencies
 
-- **@scalar/workspace-store@0.34.4**
+- **@swagglar/workspace-store@0.34.4**
 
-- **@scalar/components@0.19.10**
+- **@swagglar/components@0.19.10**
 
 ## 0.7.40
 
@@ -436,15 +436,15 @@
 
 #### Updated Dependencies
 
-- **@scalar/workspace-store@0.34.3**
+- **@swagglar/workspace-store@0.34.3**
   - [#8248](https://github.com/scalar/scalar/pull/8248): fix: local storage migration script
   - [#8248](https://github.com/scalar/scalar/pull/8248): feat: nest description headings in the sidebar
   - [#8248](https://github.com/scalar/scalar/pull/8248): chore: map themeId to slug and add default operation to drafts
 
-- **@scalar/helpers@0.2.16**
+- **@swagglar/helpers@0.2.16**
   - [#8248](https://github.com/scalar/scalar/pull/8248): fix: local storage migration script
 
-- **@scalar/components@0.19.9**
+- **@swagglar/components@0.19.9**
   - [#8248](https://github.com/scalar/scalar/pull/8248): feat: slugs for headings with nested content
   - [#8248](https://github.com/scalar/scalar/pull/8248): feat: add optional chevron click handler for the sidebar
 
@@ -454,10 +454,10 @@
 
 #### Updated Dependencies
 
-- **@scalar/workspace-store@0.34.2**
+- **@swagglar/workspace-store@0.34.2**
   - [#8219](https://github.com/scalar/scalar/pull/8219): chore: default to proxy for web layout
 
-- **@scalar/components@0.19.8**
+- **@swagglar/components@0.19.8**
 
 ## 0.7.38
 
@@ -467,13 +467,13 @@
 
 #### Updated Dependencies
 
-- **@scalar/helpers@0.2.15**
+- **@swagglar/helpers@0.2.15**
   - [#8212](https://github.com/scalar/scalar/pull/8212): chore: version bump
 
-- **@scalar/workspace-store@0.34.1**
+- **@swagglar/workspace-store@0.34.1**
   - [#8212](https://github.com/scalar/scalar/pull/8212): chore: version bump
 
-- **@scalar/components@0.19.7**
+- **@swagglar/components@0.19.7**
 
 ## 0.7.37
 
@@ -483,15 +483,15 @@
 
 #### Updated Dependencies
 
-- **@scalar/workspace-store@0.34.0**
+- **@swagglar/workspace-store@0.34.0**
   - [#8198](https://github.com/scalar/scalar/pull/8198): feat: handle workspace rename
   - [#8208](https://github.com/scalar/scalar/pull/8208): fix: unpack proxy before assigning
   - [#8207](https://github.com/scalar/scalar/pull/8207): chore: version bump
 
-- **@scalar/helpers@0.2.14**
+- **@swagglar/helpers@0.2.14**
   - [#8207](https://github.com/scalar/scalar/pull/8207): chore: version bump
 
-- **@scalar/components@0.19.6**
+- **@swagglar/components@0.19.6**
 
 ## 0.7.36
 
@@ -502,7 +502,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/workspace-store@0.33.0**
+- **@swagglar/workspace-store@0.33.0**
   - [#8162](https://github.com/scalar/scalar/pull/8162): feat: allow editing tags
   - [#8151](https://github.com/scalar/scalar/pull/8151): fix: resolve external references on windows
   - [#8191](https://github.com/scalar/scalar/pull/8191): chore: rename create document command
@@ -511,10 +511,10 @@
   - [#8160](https://github.com/scalar/scalar/pull/8160): fix: update sidebar entry when the operation summary changes
   - [#8133](https://github.com/scalar/scalar/pull/8133): fix: allow editing content-type query parameters in the API client
 
-- **@scalar/helpers@0.2.13**
+- **@swagglar/helpers@0.2.13**
   - [#7826](https://github.com/scalar/scalar/pull/7826): feat: added migrator for v1 local storage to v2 indexdb
 
-- **@scalar/components@0.19.5**
+- **@swagglar/components@0.19.5**
 
 ## 0.7.35
 
@@ -524,14 +524,14 @@
 
 #### Updated Dependencies
 
-- **@scalar/workspace-store@0.32.1**
+- **@swagglar/workspace-store@0.32.1**
   - [#8159](https://github.com/scalar/scalar/pull/8159): fix: do not mutate document after ingress
   - [#8178](https://github.com/scalar/scalar/pull/8178): chore: package bump due to ci failure
 
-- **@scalar/components@0.19.4**
+- **@swagglar/components@0.19.4**
   - [#8178](https://github.com/scalar/scalar/pull/8178): chore: package bump due to ci failure
 
-- **@scalar/helpers@0.2.12**
+- **@swagglar/helpers@0.2.12**
   - [#8178](https://github.com/scalar/scalar/pull/8178): chore: package bump due to ci failure
 
 ## 0.7.34
@@ -540,11 +540,11 @@
 
 #### Updated Dependencies
 
-- **@scalar/workspace-store@0.32.0**
+- **@swagglar/workspace-store@0.32.0**
   - [#8135](https://github.com/scalar/scalar/pull/8135): feat: added support for OpenID Connect Discovery
   - [#8152](https://github.com/scalar/scalar/pull/8152): feat: support custom themes
 
-- **@scalar/components@0.19.3**
+- **@swagglar/components@0.19.3**
   - [#8155](https://github.com/scalar/scalar/pull/8155): fix(api-reference): bugs with cards rendering
 
 ## 0.7.33
@@ -556,14 +556,14 @@
 
 #### Updated Dependencies
 
-- **@scalar/workspace-store@0.31.2**
+- **@swagglar/workspace-store@0.31.2**
   - [#8120](https://github.com/scalar/scalar/pull/8120): refactor: make navigation router-agnostic
   - [#8121](https://github.com/scalar/scalar/pull/8121): feat: added post response scripts/testing to api client v2
 
-- **@scalar/components@0.19.2**
+- **@swagglar/components@0.19.2**
   - [#8134](https://github.com/scalar/scalar/pull/8134): fix(components): change caret position to right
 
-- **@scalar/icons@0.5.3**
+- **@swagglar/icons@0.5.3**
   - [#8134](https://github.com/scalar/scalar/pull/8134): fix(components): change caret position to right
 
 ## 0.7.32
@@ -572,11 +572,11 @@
 
 #### Updated Dependencies
 
-- **@scalar/workspace-store@0.31.1**
+- **@swagglar/workspace-store@0.31.1**
   - [#8114](https://github.com/scalar/scalar/pull/8114): feat(workspace-store): sync path variables on ingress
   - [#8094](https://github.com/scalar/scalar/pull/8094): feat: open client to the correct example name
 
-- **@scalar/components@0.19.1**
+- **@swagglar/components@0.19.1**
 
 ## 0.7.31
 
@@ -584,11 +584,11 @@
 
 #### Updated Dependencies
 
-- **@scalar/workspace-store@0.31.0**
+- **@swagglar/workspace-store@0.31.0**
   - [#8095](https://github.com/scalar/scalar/pull/8095): feat: support loading files into the store
   - [#8096](https://github.com/scalar/scalar/pull/8096): feat: store relative urls/paths against base under the url mappings
 
-- **@scalar/components@0.19.0**
+- **@swagglar/components@0.19.0**
   - [#8081](https://github.com/scalar/scalar/pull/8081): feat(components): improve ScalarCodeBlock copy UI
   - [#8065](https://github.com/scalar/scalar/pull/8065): feat(components): add editor to ScalarMenu and optionally remove docs
 
@@ -598,10 +598,10 @@
 
 #### Updated Dependencies
 
-- **@scalar/workspace-store@0.30.0**
+- **@swagglar/workspace-store@0.30.0**
   - [#8077](https://github.com/scalar/scalar/pull/8077): feat: support team workspaces
 
-- **@scalar/components@0.18.0**
+- **@swagglar/components@0.18.0**
   - [#8077](https://github.com/scalar/scalar/pull/8077): feat: support team workspaces
 
 ## 0.7.29
@@ -610,11 +610,11 @@
 
 #### Updated Dependencies
 
-- **@scalar/workspace-store@0.29.0**
+- **@swagglar/workspace-store@0.29.0**
   - [#8061](https://github.com/scalar/scalar/pull/8061): fix: do not throw when try to update a non existent document metadata
   - [#8045](https://github.com/scalar/scalar/pull/8045): feat: manage active environments
 
-- **@scalar/components@0.17.6**
+- **@swagglar/components@0.17.6**
   - [#8070](https://github.com/scalar/scalar/pull/8070): chore: remove the import modal and change the workspace picker to support groups
 
 ## 0.7.28
@@ -623,10 +623,10 @@
 
 #### Updated Dependencies
 
-- **@scalar/workspace-store@0.28.4**
+- **@swagglar/workspace-store@0.28.4**
   - [#8047](https://github.com/scalar/scalar/pull/8047): fix: unpack proxy when update an environment
 
-- **@scalar/components@0.17.5**
+- **@swagglar/components@0.17.5**
 
 ## 0.7.27
 
@@ -634,11 +634,11 @@
 
 #### Updated Dependencies
 
-- **@scalar/workspace-store@0.28.3**
+- **@swagglar/workspace-store@0.28.3**
   - [#8035](https://github.com/scalar/scalar/pull/8035): fix: correctly resolve and validate refs
   - [#8034](https://github.com/scalar/scalar/pull/8034): fix: allow setting servers which dont exist in the document (from the config)
 
-- **@scalar/components@0.17.4**
+- **@swagglar/components@0.17.4**
 
 ## 0.7.26
 
@@ -646,13 +646,13 @@
 
 #### Updated Dependencies
 
-- **@scalar/workspace-store@0.28.2**
+- **@swagglar/workspace-store@0.28.2**
   - [#8016](https://github.com/scalar/scalar/pull/8016): feat: move history and auth into their own store
 
-- **@scalar/helpers@0.2.11**
+- **@swagglar/helpers@0.2.11**
   - [#8016](https://github.com/scalar/scalar/pull/8016): feat: move history and auth into their own store
 
-- **@scalar/components@0.17.3**
+- **@swagglar/components@0.17.3**
 
 ## 0.7.25
 
@@ -660,10 +660,10 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.17.2**
+- **@swagglar/components@0.17.2**
   - [#7934](https://github.com/scalar/scalar/pull/7934): fix: z-index issues in addressBar
 
-- **@scalar/workspace-store@0.28.1**
+- **@swagglar/workspace-store@0.28.1**
   - [#7823](https://github.com/scalar/scalar/pull/7823): chore: update workspace schema index to support teamUid queries and local
 
 ## 0.7.24
@@ -674,18 +674,18 @@
 
 #### Updated Dependencies
 
-- **@scalar/workspace-store@0.28.0**
+- **@swagglar/workspace-store@0.28.0**
   - [#7970](https://github.com/scalar/scalar/pull/7970): feat: update sidebar when docuemnt title changes
   - [#7988](https://github.com/scalar/scalar/pull/7988): feat: restore old client search
   - [#7963](https://github.com/scalar/scalar/pull/7963): feat: unify is-object helpers
 
-- **@scalar/use-hooks@0.3.7**
+- **@swagglar/use-hooks@0.3.7**
   - [#7977](https://github.com/scalar/scalar/pull/7977): chore(use-hooks): update tailwind merge to v3.4.0
 
-- **@scalar/helpers@0.2.10**
+- **@swagglar/helpers@0.2.10**
   - [#7963](https://github.com/scalar/scalar/pull/7963): feat: unify is-object helpers
 
-- **@scalar/components@0.17.1**
+- **@swagglar/components@0.17.1**
 
 ## 0.7.23
 
@@ -693,13 +693,13 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.17.0**
+- **@swagglar/components@0.17.0**
   - [#7959](https://github.com/scalar/scalar/pull/7959): feat(agent): add agent scalar to localhost
 
-- **@scalar/themes@0.14.0**
+- **@swagglar/themes@0.14.0**
   - [#7959](https://github.com/scalar/scalar/pull/7959): feat(agent): add agent scalar to localhost
 
-- **@scalar/workspace-store@0.27.2**
+- **@swagglar/workspace-store@0.27.2**
 
 ## 0.7.22
 
@@ -707,10 +707,10 @@
 
 #### Updated Dependencies
 
-- **@scalar/workspace-store@0.27.1**
+- **@swagglar/workspace-store@0.27.1**
   - [#7926](https://github.com/scalar/scalar/pull/7926): Make V2 command palette extensible and improve types
 
-- **@scalar/components@0.16.32**
+- **@swagglar/components@0.16.32**
 
 ## 0.7.21
 
@@ -718,11 +718,11 @@
 
 #### Updated Dependencies
 
-- **@scalar/workspace-store@0.27.0**
+- **@swagglar/workspace-store@0.27.0**
   - [#7906](https://github.com/scalar/scalar/pull/7906): feat: remove parsing from codeinput and move to getExample
   - [#7905](https://github.com/scalar/scalar/pull/7905): feat: support loading files on the store
 
-- **@scalar/components@0.16.31**
+- **@swagglar/components@0.16.31**
 
 ## 0.7.20
 
@@ -730,13 +730,13 @@
 
 #### Updated Dependencies
 
-- **@scalar/helpers@0.2.9**
+- **@swagglar/helpers@0.2.9**
   - [#7894](https://github.com/scalar/scalar/pull/7894): fix: the import and export of redirect to proxy
 
-- **@scalar/workspace-store@0.26.2**
+- **@swagglar/workspace-store@0.26.2**
   - [#7894](https://github.com/scalar/scalar/pull/7894): fix: the import and export of redirect to proxy
 
-- **@scalar/components@0.16.30**
+- **@swagglar/components@0.16.30**
 
 ## 0.7.19
 
@@ -744,10 +744,10 @@
 
 #### Updated Dependencies
 
-- **@scalar/workspace-store@0.26.1**
+- **@swagglar/workspace-store@0.26.1**
   - [#7888](https://github.com/scalar/scalar/pull/7888): fix: more robust parameter upsert and deletion
 
-- **@scalar/components@0.16.29**
+- **@swagglar/components@0.16.29**
 
 ## 0.7.18
 
@@ -757,11 +757,11 @@
 
 #### Updated Dependencies
 
-- **@scalar/workspace-store@0.26.0**
+- **@swagglar/workspace-store@0.26.0**
   - [#7866](https://github.com/scalar/scalar/pull/7866): feat: history per operation support
   - [#7886](https://github.com/scalar/scalar/pull/7886): fix: unpack proxy when we pop history items
 
-- **@scalar/components@0.16.28**
+- **@swagglar/components@0.16.28**
 
 ## 0.7.17
 
@@ -769,11 +769,11 @@
 
 #### Updated Dependencies
 
-- **@scalar/workspace-store@0.25.3**
+- **@swagglar/workspace-store@0.25.3**
   - [#7850](https://github.com/scalar/scalar/pull/7850): fix: remove unused workspace config
   - [#7868](https://github.com/scalar/scalar/pull/7868): fix: updating path with a variable in it
 
-- **@scalar/components@0.16.27**
+- **@swagglar/components@0.16.27**
 
 ## 0.7.16
 
@@ -781,10 +781,10 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.16.26**
+- **@swagglar/components@0.16.26**
   - [#7846](https://github.com/scalar/scalar/pull/7846): Fix dev dep issue
 
-- **@scalar/workspace-store@0.25.2**
+- **@swagglar/workspace-store@0.25.2**
 
 ## 0.7.15
 
@@ -792,10 +792,10 @@
 
 #### Updated Dependencies
 
-- **@scalar/workspace-store@0.25.1**
+- **@swagglar/workspace-store@0.25.1**
   - [#7828](https://github.com/scalar/scalar/pull/7828): fix: switch to upsert params due to race condition
 
-- **@scalar/components@0.16.25**
+- **@swagglar/components@0.16.25**
 
 ## 0.7.14
 
@@ -803,12 +803,12 @@
 
 #### Updated Dependencies
 
-- **@scalar/workspace-store@0.25.0**
+- **@swagglar/workspace-store@0.25.0**
   - [#7786](https://github.com/scalar/scalar/pull/7786): chore: refactor mutators in workspace store
   - [#7753](https://github.com/scalar/scalar/pull/7753): feat: default headers and global cookies
   - [#7763](https://github.com/scalar/scalar/pull/7763): fix: normalize securitySchemes 'scheme'
 
-- **@scalar/components@0.16.24**
+- **@swagglar/components@0.16.24**
   - [#7802](https://github.com/scalar/scalar/pull/7802): fix: Vue warning because of deprecated icon syntax
 
 ## 0.7.13
@@ -817,10 +817,10 @@
 
 #### Updated Dependencies
 
-- **@scalar/workspace-store@0.24.10**
+- **@swagglar/workspace-store@0.24.10**
   - [#7774](https://github.com/scalar/scalar/pull/7774): Adds exports to V2 client.
 
-- **@scalar/components@0.16.23**
+- **@swagglar/components@0.16.23**
 
 ## 0.7.12
 
@@ -828,13 +828,13 @@
 
 #### Updated Dependencies
 
-- **@scalar/workspace-store@0.24.9**
+- **@swagglar/workspace-store@0.24.9**
   - [#7751](https://github.com/scalar/scalar/pull/7751): fix: auth persistence
 
-- **@scalar/helpers@0.2.8**
+- **@swagglar/helpers@0.2.8**
   - [#7751](https://github.com/scalar/scalar/pull/7751): fix: auth persistence
 
-- **@scalar/components@0.16.22**
+- **@swagglar/components@0.16.22**
 
 ## 0.7.11
 
@@ -842,10 +842,10 @@
 
 #### Updated Dependencies
 
-- **@scalar/workspace-store@0.24.8**
+- **@swagglar/workspace-store@0.24.8**
   - [#7728](https://github.com/scalar/scalar/pull/7728): fix: formBody handling in api client
 
-- **@scalar/components@0.16.21**
+- **@swagglar/components@0.16.21**
 
 ## 0.7.10
 
@@ -853,10 +853,10 @@
 
 #### Updated Dependencies
 
-- **@scalar/workspace-store@0.24.7**
+- **@swagglar/workspace-store@0.24.7**
   - [#7745](https://github.com/scalar/scalar/pull/7745): fix: add nested array support to references
 
-- **@scalar/components@0.16.20**
+- **@swagglar/components@0.16.20**
 
 ## 0.7.9
 
@@ -866,17 +866,17 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.16.19**
+- **@swagglar/components@0.16.19**
   - [#7725](https://github.com/scalar/scalar/pull/7725): fix(components): support slot for nested items icon
   - [#7693](https://github.com/scalar/scalar/pull/7693): feat: markdown default line height
 
-- **@scalar/helpers@0.2.7**
+- **@swagglar/helpers@0.2.7**
   - [#7720](https://github.com/scalar/scalar/pull/7720): feat: escape XML in json2xml
 
-- **@scalar/use-hooks@0.3.6**
+- **@swagglar/use-hooks@0.3.6**
   - [#7678](https://github.com/scalar/scalar/pull/7678): feat: added object stringification to useClipboard
 
-- **@scalar/workspace-store@0.24.6**
+- **@swagglar/workspace-store@0.24.6**
 
 ## 0.7.8
 
@@ -884,10 +884,10 @@
 
 #### Updated Dependencies
 
-- **@scalar/workspace-store@0.24.5**
+- **@swagglar/workspace-store@0.24.5**
   - [#7699](https://github.com/scalar/scalar/pull/7699): feat: added ui for oauth2 credentials location
 
-- **@scalar/components@0.16.18**
+- **@swagglar/components@0.16.18**
 
 ## 0.7.7
 
@@ -895,7 +895,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.16.17**
+- **@swagglar/components@0.16.17**
   - [#7680](https://github.com/scalar/scalar/pull/7680): feat(components): simplify nested sidebar items styles
 
 ## 0.7.6
@@ -904,16 +904,16 @@
 
 #### Updated Dependencies
 
-- **@scalar/workspace-store@0.24.4**
+- **@swagglar/workspace-store@0.24.4**
   - [#7661](https://github.com/scalar/scalar/pull/7661): fix: all issues for client modal v2 preparation
 
-- **@scalar/use-hooks@0.3.5**
+- **@swagglar/use-hooks@0.3.5**
   - [#7661](https://github.com/scalar/scalar/pull/7661): fix: all issues for client modal v2 preparation
 
-- **@scalar/helpers@0.2.6**
+- **@swagglar/helpers@0.2.6**
   - [#7661](https://github.com/scalar/scalar/pull/7661): fix: all issues for client modal v2 preparation
 
-- **@scalar/components@0.16.16**
+- **@swagglar/components@0.16.16**
 
 ## 0.7.5
 
@@ -921,16 +921,16 @@
 
 #### Updated Dependencies
 
-- **@scalar/workspace-store@0.24.3**
+- **@swagglar/workspace-store@0.24.3**
   - [#7605](https://github.com/scalar/scalar/pull/7605): fix: all issues for client modal v2 preparation
 
-- **@scalar/use-hooks@0.3.4**
+- **@swagglar/use-hooks@0.3.4**
   - [#7605](https://github.com/scalar/scalar/pull/7605): fix: all issues for client modal v2 preparation
 
-- **@scalar/helpers@0.2.5**
+- **@swagglar/helpers@0.2.5**
   - [#7605](https://github.com/scalar/scalar/pull/7605): fix: all issues for client modal v2 preparation
 
-- **@scalar/components@0.16.15**
+- **@swagglar/components@0.16.15**
 
 ## 0.7.4
 
@@ -938,18 +938,18 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.16.14**
+- **@swagglar/components@0.16.14**
   - [#7654](https://github.com/scalar/scalar/pull/7654): fix(components): explicitly set line height for buttons and sections
 
-- **@scalar/helpers@0.2.4**
+- **@swagglar/helpers@0.2.4**
 
-- **@scalar/icons@0.5.2**
+- **@swagglar/icons@0.5.2**
 
-- **@scalar/themes@0.13.26**
+- **@swagglar/themes@0.13.26**
 
-- **@scalar/use-hooks@0.3.3**
+- **@swagglar/use-hooks@0.3.3**
 
-- **@scalar/workspace-store@0.24.2**
+- **@swagglar/workspace-store@0.24.2**
 
 ## 0.7.3
 
@@ -957,7 +957,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.16.13**
+- **@swagglar/components@0.16.13**
   - [#7584](https://github.com/scalar/scalar/pull/7584): fix: remove internal unused export
     - `CARD_Heading_SYMBOL`
     - `FORM_GROUP_SYMBOL`
@@ -966,11 +966,11 @@
     - `MaybeElement`
     - `ScalarComboBox#isGroup`
 
-  - [#7584](https://github.com/scalar/scalar/pull/7584): fix: remove unused `@scalar/use-toasts` dependency
+  - [#7584](https://github.com/scalar/scalar/pull/7584): fix: remove unused `@swagglar/use-toasts` dependency
   - [#7604](https://github.com/scalar/scalar/pull/7604): fix(components): improve sidebar groups
   - [#7589](https://github.com/scalar/scalar/pull/7589): chore(components): upgrade to Storybook 10
 
-- **@scalar/workspace-store@0.24.2**
+- **@swagglar/workspace-store@0.24.2**
   - [#7643](https://github.com/scalar/scalar/pull/7643): chore: update typebox
 
 ## 0.7.2
@@ -981,7 +981,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.16.12**
+- **@swagglar/components@0.16.12**
   - [#7562](https://github.com/scalar/scalar/pull/7562): feat(components): remove headless ui from dropdown component
 
 ## 0.7.1
@@ -993,20 +993,20 @@
 
 #### Updated Dependencies
 
-- **@scalar/workspace-store@0.24.1**
+- **@swagglar/workspace-store@0.24.1**
   - [#7580](https://github.com/scalar/scalar/pull/7580): feat: added default auth on client v2
   - [#7581](https://github.com/scalar/scalar/pull/7581): fix: npm publish job
   - [#7567](https://github.com/scalar/scalar/pull/7567): feat: add code samples to client v2
   - [#7568](https://github.com/scalar/scalar/pull/7568): fix: object merge replacing arrays
 
-- **@scalar/components@0.16.11**
+- **@swagglar/components@0.16.11**
   - [#7581](https://github.com/scalar/scalar/pull/7581): fix: npm publish job
 
-- **@scalar/helpers@0.2.4**
+- **@swagglar/helpers@0.2.4**
   - [#7581](https://github.com/scalar/scalar/pull/7581): fix: npm publish job
   - [#7567](https://github.com/scalar/scalar/pull/7567): feat: add code samples to client v2
 
-- **@scalar/icons@0.5.2**
+- **@swagglar/icons@0.5.2**
   - [#7581](https://github.com/scalar/scalar/pull/7581): fix: npm publish job
 
 ## 0.7.0
@@ -1019,24 +1019,24 @@
 
 #### Updated Dependencies
 
-- **@scalar/workspace-store@0.24.0**
+- **@swagglar/workspace-store@0.24.0**
   - [#7564](https://github.com/scalar/scalar/pull/7564): feat: restore cursor position after path/method update
   - [#7530](https://github.com/scalar/scalar/pull/7530): fix: handle operation level servers when adding a new operation
   - [#7559](https://github.com/scalar/scalar/pull/7559): feat: set the content-type header when switching body content-type
   - [#7549](https://github.com/scalar/scalar/pull/7549): feat: send request animation
   - [#7575](https://github.com/scalar/scalar/pull/7575): feat: add support for object examples + hide body when empty
 
-- **@scalar/icons@0.5.1**
+- **@swagglar/icons@0.5.1**
   - [#7542](https://github.com/scalar/scalar/pull/7542): fix: move `generate-icons` script outside of src folder
 
 No need to include it in published packages
 
 - [#7542](https://github.com/scalar/scalar/pull/7542): fix: use named instead of star exports
 
-- **@scalar/helpers@0.2.3**
+- **@swagglar/helpers@0.2.3**
   - [#7575](https://github.com/scalar/scalar/pull/7575): feat: add support for object examples + hide body when empty
 
-- **@scalar/components@0.16.10**
+- **@swagglar/components@0.16.10**
   - [#7531](https://github.com/scalar/scalar/pull/7531): feat(components): add discrete sidebar group buttons
 
 ## 0.6.1
@@ -1044,12 +1044,12 @@ No need to include it in published packages
 ### Patch Changes
 
 - Updated dependencies [[`099237a`](https://github.com/scalar/scalar/commit/099237ad9cba4d29dcc5e742e39c3e42429a5817)]:
-  - @scalar/workspace-store@0.23.1
-  - @scalar/components@0.16.9
-  - @scalar/helpers@0.2.2
-  - @scalar/icons@0.5.0
-  - @scalar/themes@0.13.26
-  - @scalar/use-hooks@0.3.3
+  - @swagglar/workspace-store@0.23.1
+  - @swagglar/components@0.16.9
+  - @swagglar/helpers@0.2.2
+  - @swagglar/icons@0.5.0
+  - @swagglar/themes@0.13.26
+  - @swagglar/use-hooks@0.3.3
 
 ## 0.6.0
 
@@ -1060,30 +1060,30 @@ No need to include it in published packages
 ### Patch Changes
 
 - Updated dependencies [[`f7c24e4`](https://github.com/scalar/scalar/commit/f7c24e4995580649dbc3cb87007a683f5dd91f7c), [`4ac6227`](https://github.com/scalar/scalar/commit/4ac62278d4205c34a1a302b756ef3632185876cf), [`10318b6`](https://github.com/scalar/scalar/commit/10318b6a59df49905225bdbd9e19044521cd4581), [`4ac6227`](https://github.com/scalar/scalar/commit/4ac62278d4205c34a1a302b756ef3632185876cf), [`3f797b6`](https://github.com/scalar/scalar/commit/3f797b67489e07c4f3bf34a39b2175ed2d6f1465)]:
-  - @scalar/workspace-store@0.23.0
-  - @scalar/helpers@0.2.2
-  - @scalar/themes@0.13.26
-  - @scalar/components@0.16.8
+  - @swagglar/workspace-store@0.23.0
+  - @swagglar/helpers@0.2.2
+  - @swagglar/themes@0.13.26
+  - @swagglar/components@0.16.8
 
 ## 0.5.2
 
 ### Patch Changes
 
 - Updated dependencies [[`72cd82f`](https://github.com/scalar/scalar/commit/72cd82fb8df63a9e5d0db1202978aebfefd0457a), [`21aa62e`](https://github.com/scalar/scalar/commit/21aa62e2ebdd262cb5aa53658c3b659736660722), [`72cd82f`](https://github.com/scalar/scalar/commit/72cd82fb8df63a9e5d0db1202978aebfefd0457a)]:
-  - @scalar/workspace-store@0.22.2
-  - @scalar/helpers@0.2.1
-  - @scalar/use-hooks@0.3.3
-  - @scalar/components@0.16.7
+  - @swagglar/workspace-store@0.22.2
+  - @swagglar/helpers@0.2.1
+  - @swagglar/use-hooks@0.3.3
+  - @swagglar/components@0.16.7
 
 ## 0.5.1
 
 ### Patch Changes
 
 - Updated dependencies [[`8842799`](https://github.com/scalar/scalar/commit/884279984b144082e85b699014e77ed71e9ae6a5), [`9ec8adf`](https://github.com/scalar/scalar/commit/9ec8adfea017333dee5bc3949104232f7dc57f4a), [`cc4de25`](https://github.com/scalar/scalar/commit/cc4de2587b36f0d169b01c1bf312ba91b67e3e0c)]:
-  - @scalar/workspace-store@0.22.1
-  - @scalar/helpers@0.2.0
-  - @scalar/use-hooks@0.3.2
-  - @scalar/components@0.16.6
+  - @swagglar/workspace-store@0.22.1
+  - @swagglar/helpers@0.2.0
+  - @swagglar/use-hooks@0.3.2
+  - @swagglar/components@0.16.6
 
 ## 0.5.0
 
@@ -1098,12 +1098,12 @@ No need to include it in published packages
 - [#7416](https://github.com/scalar/scalar/pull/7416) [`86f028d`](https://github.com/scalar/scalar/commit/86f028deb0b456f923edd261f5f4b0fa9b616b7d) Thanks [@amritk](https://github.com/amritk)! - feat: add update method to client v2
 
 - Updated dependencies [[`5aa0380`](https://github.com/scalar/scalar/commit/5aa0380adfcd173e58659fb5dd57df363d985583), [`61c980c`](https://github.com/scalar/scalar/commit/61c980cebef219685a05f3a4cb1e379984922cd4), [`1bc2b45`](https://github.com/scalar/scalar/commit/1bc2b45b6eabd5c5045e77d67f59d202ab04d3fb), [`9342adc`](https://github.com/scalar/scalar/commit/9342adcd76e26a8e5eff75c1a2abee2c207b1487), [`62b5210`](https://github.com/scalar/scalar/commit/62b521092bafeb8e83e79222e13378c4a19defc8), [`bfd814a`](https://github.com/scalar/scalar/commit/bfd814a4219660face190041cc4845182b56ab03), [`35af6bf`](https://github.com/scalar/scalar/commit/35af6bfce4bc4ae3d0fc5783ea36e0165e964361), [`86f028d`](https://github.com/scalar/scalar/commit/86f028deb0b456f923edd261f5f4b0fa9b616b7d), [`294f9fc`](https://github.com/scalar/scalar/commit/294f9fc6cfd43cdab110deb1c851883509bc2b84)]:
-  - @scalar/components@0.16.5
-  - @scalar/workspace-store@0.22.0
-  - @scalar/helpers@0.1.3
-  - @scalar/themes@0.13.25
-  - @scalar/icons@0.5.0
-  - @scalar/use-hooks@0.3.1
+  - @swagglar/components@0.16.5
+  - @swagglar/workspace-store@0.22.0
+  - @swagglar/helpers@0.1.3
+  - @swagglar/themes@0.13.25
+  - @swagglar/icons@0.5.0
+  - @swagglar/use-hooks@0.3.1
 
 ## 0.4.0
 
@@ -1118,12 +1118,12 @@ No need to include it in published packages
 - [#7348](https://github.com/scalar/scalar/pull/7348) [`cded2d6`](https://github.com/scalar/scalar/commit/cded2d6c087418c3c44731d344d0827a87b78b74) Thanks [@hwkr](https://github.com/hwkr)! - feat(components): add ScalarWrappingText component
 
 - Updated dependencies [[`d86f1d6`](https://github.com/scalar/scalar/commit/d86f1d6911ecbca70b011a2a0efb6d6e0eca59bb), [`6e1cb89`](https://github.com/scalar/scalar/commit/6e1cb89f71770601a5059449d68b409ffc87d332), [`1fbd809`](https://github.com/scalar/scalar/commit/1fbd809197bfaef77d7d3cb8cf7b657f397232a7), [`dd5c518`](https://github.com/scalar/scalar/commit/dd5c518a422dddc7948c0253861101cf741b6af0), [`5a108fc`](https://github.com/scalar/scalar/commit/5a108fcbc52ae7957731c23689896ba353b83d3b), [`4cda566`](https://github.com/scalar/scalar/commit/4cda566c2dc2cf306e4e3597e292ae1c2dadd78c), [`cded2d6`](https://github.com/scalar/scalar/commit/cded2d6c087418c3c44731d344d0827a87b78b74), [`3ebff92`](https://github.com/scalar/scalar/commit/3ebff92f29d8d03d626d4000e8323528e794e755), [`4059e68`](https://github.com/scalar/scalar/commit/4059e68375d31ec0142a8019b385bc3ac82055fc)]:
-  - @scalar/workspace-store@0.21.0
-  - @scalar/helpers@0.1.2
-  - @scalar/components@0.16.4
-  - @scalar/themes@0.13.24
-  - @scalar/draggable@0.3.0
-  - @scalar/icons@0.5.0
+  - @swagglar/workspace-store@0.21.0
+  - @swagglar/helpers@0.1.2
+  - @swagglar/components@0.16.4
+  - @swagglar/themes@0.13.24
+  - @swagglar/draggable@0.3.0
+  - @swagglar/icons@0.5.0
 
 ## 0.3.0
 
@@ -1136,26 +1136,26 @@ No need to include it in published packages
 - [#7252](https://github.com/scalar/scalar/pull/7252) [`4bec1ba`](https://github.com/scalar/scalar/commit/4bec1ba332e919c4ee32dcfbfb07bd8ee42c4d74) Thanks [@hwkr](https://github.com/hwkr)! - fix(api-reference): improve wrapping of long strings
 
 - Updated dependencies [[`c7a4690`](https://github.com/scalar/scalar/commit/c7a4690cec484ee16cee8dcba7ef5cb0fbb98133), [`9c9dbba`](https://github.com/scalar/scalar/commit/9c9dbbaa940667303f0ace59469fd78c2a741937), [`4bec1ba`](https://github.com/scalar/scalar/commit/4bec1ba332e919c4ee32dcfbfb07bd8ee42c4d74), [`7ccd035`](https://github.com/scalar/scalar/commit/7ccd0351de104f78ef9c6e16538753d302c50d47)]:
-  - @scalar/workspace-store@0.20.0
-  - @scalar/helpers@0.1.1
-  - @scalar/components@0.16.3
+  - @swagglar/workspace-store@0.20.0
+  - @swagglar/helpers@0.1.1
+  - @swagglar/components@0.16.3
 
 ## 0.2.2
 
 ### Patch Changes
 
 - Updated dependencies [[`fddf294`](https://github.com/scalar/scalar/commit/fddf294b00dd8c9eb5c713c338f2ec6e3f62523d), [`d6154a2`](https://github.com/scalar/scalar/commit/d6154a24d97fc28977def486f99b2eeee52d268c), [`c1ecd0c`](https://github.com/scalar/scalar/commit/c1ecd0c6096f3fbe2e3d8ad3794ea718bb6bce66)]:
-  - @scalar/workspace-store@0.19.0
-  - @scalar/helpers@0.1.0
-  - @scalar/components@0.16.2
+  - @swagglar/workspace-store@0.19.0
+  - @swagglar/helpers@0.1.0
+  - @swagglar/components@0.16.2
 
 ## 0.2.1
 
 ### Patch Changes
 
 - Updated dependencies [[`bffef40`](https://github.com/scalar/scalar/commit/bffef4092e40d12052f8538267af71bc99b7172f)]:
-  - @scalar/workspace-store@0.18.1
-  - @scalar/components@0.16.1
+  - @swagglar/workspace-store@0.18.1
+  - @swagglar/components@0.16.1
 
 ## 0.2.0
 
@@ -1182,12 +1182,12 @@ No need to include it in published packages
 - [#7152](https://github.com/scalar/scalar/pull/7152) [`592533f`](https://github.com/scalar/scalar/commit/592533faf60b6a5ba27909a4ca0847ca9f04a96d) Thanks [@hwkr](https://github.com/hwkr)! - refactor(sidebar): remove some divs from sidebar elements
 
 - Updated dependencies [[`913607c`](https://github.com/scalar/scalar/commit/913607c7d67236f08f5369408f304440c6c42b22), [`348f8f6`](https://github.com/scalar/scalar/commit/348f8f6292ef41844fda1fdd3089a55d97adbc0e), [`17817ad`](https://github.com/scalar/scalar/commit/17817addbca916c8d625a03335ae58be3a1c4e4b), [`c22fc4e`](https://github.com/scalar/scalar/commit/c22fc4e5acb49d648014a6100c724a5b33c59cde), [`6ec8c29`](https://github.com/scalar/scalar/commit/6ec8c299d912111b029e8058979d00968b70691a), [`c162bb6`](https://github.com/scalar/scalar/commit/c162bb64b86e698427c1fce36f6d8a2b789e094a), [`b64265b`](https://github.com/scalar/scalar/commit/b64265b3e8b447a4d1c6dafaca8135ef69545d98), [`6ca835e`](https://github.com/scalar/scalar/commit/6ca835e5afd3e8c603e073e7c83f2cdd961a0f69), [`6aa06b0`](https://github.com/scalar/scalar/commit/6aa06b0f843ae3d8e6771e3c02ac11ee0043a4b1), [`81b0a7a`](https://github.com/scalar/scalar/commit/81b0a7a4245619f03161eae639dc5834b77432b6), [`8a5a6a0`](https://github.com/scalar/scalar/commit/8a5a6a052cc05b0902b05052c80cc429ebc5a730), [`6ec8c29`](https://github.com/scalar/scalar/commit/6ec8c299d912111b029e8058979d00968b70691a), [`704fa30`](https://github.com/scalar/scalar/commit/704fa302b2cdbb17b19ca2d742537ca163d58c1c), [`a26ced6`](https://github.com/scalar/scalar/commit/a26ced6f2897074f0c102d5ccbff55c6fd520e12), [`33edbf2`](https://github.com/scalar/scalar/commit/33edbf2a2648eb72ae49e36dfd289d4d57dc18e0), [`6a090a2`](https://github.com/scalar/scalar/commit/6a090a2e07ef961c56041c85ee9786180437593a), [`4fe1643`](https://github.com/scalar/scalar/commit/4fe1643be51f76a8ebdfd75f5675337b8d43418e), [`592533f`](https://github.com/scalar/scalar/commit/592533faf60b6a5ba27909a4ca0847ca9f04a96d), [`75ad74c`](https://github.com/scalar/scalar/commit/75ad74c0eee10103b966ce4707e4823d819456a8), [`eba18d0`](https://github.com/scalar/scalar/commit/eba18d06267a163a8f91396a66f817100ee59461), [`c72a2c5`](https://github.com/scalar/scalar/commit/c72a2c59eb80e1f5e216c687229ff90bea88f554), [`0d9c945`](https://github.com/scalar/scalar/commit/0d9c945a696ea8b826d86f7b48ec6de4d85e64f0), [`43bc5e8`](https://github.com/scalar/scalar/commit/43bc5e8b90dc0edf7176d0ddfc64bf3212494458)]:
-  - @scalar/workspace-store@0.18.0
-  - @scalar/components@0.16.0
-  - @scalar/helpers@0.0.13
-  - @scalar/draggable@0.3.0
-  - @scalar/icons@0.5.0
-  - @scalar/themes@0.13.23
+  - @swagglar/workspace-store@0.18.0
+  - @swagglar/components@0.16.0
+  - @swagglar/helpers@0.0.13
+  - @swagglar/draggable@0.3.0
+  - @swagglar/icons@0.5.0
+  - @swagglar/themes@0.13.23
 
 ## 0.1.1
 
@@ -1197,10 +1197,10 @@ No need to include it in published packages
 - Updated dependencies [3f6d0b9]
 - Updated dependencies [1335923]
 - Updated dependencies [07397c8]
-  - @scalar/components@0.15.1
-  - @scalar/helpers@0.0.12
-  - @scalar/workspace-store@0.17.1
-  - @scalar/themes@0.13.22
+  - @swagglar/components@0.15.1
+  - @swagglar/helpers@0.0.12
+  - @swagglar/workspace-store@0.17.1
+  - @swagglar/themes@0.13.22
 
 ## 0.1.0
 
@@ -1216,6 +1216,6 @@ No need to include it in published packages
 - Updated dependencies [a747da6]
 - Updated dependencies [c69cb71]
 - Updated dependencies [90d54b6]
-  - @scalar/themes@0.13.21
-  - @scalar/workspace-store@0.17.0
-  - @scalar/components@0.15.0
+  - @swagglar/themes@0.13.21
+  - @swagglar/workspace-store@0.17.0
+  - @swagglar/components@0.15.0

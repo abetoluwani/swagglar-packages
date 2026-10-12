@@ -1,4 +1,4 @@
-# @scalar/sidebar
+# @swagglar/sidebar
 
 Scalar sidebar component and sidebar state management
 

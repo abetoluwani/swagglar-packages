@@ -1,6 +1,6 @@
-import { getValueAtPath } from '@scalar/helpers/object/get-value-at-path'
-import { isObject } from '@scalar/helpers/object/is-object'
-import type { UnknownObject } from '@scalar/types/utils'
+import { getValueAtPath } from '@swagglar/helpers/object/get-value-at-path'
+import { isObject } from '@swagglar/helpers/object/is-object'
+import type { UnknownObject } from '@swagglar/types/utils'
 import { describe, expect, it } from 'vitest'
 
 import { UpgradeIncompatibilityError } from '../upgrade-incompatibility-error'

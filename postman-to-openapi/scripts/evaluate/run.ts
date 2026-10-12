@@ -1,8 +1,8 @@
 import fs from 'node:fs/promises'
 import path from 'node:path'
 
-import { type ErrorObject, validate } from '@scalar/openapi-parser'
-import type { OpenAPIV3_1 } from '@scalar/openapi-types'
+import { type ErrorObject, validate } from '@swagglar/openapi-parser'
+import type { OpenAPIV3_1 } from '@swagglar/openapi-types'
 
 import { convert } from '../../src/index'
 import type { Item, ItemGroup, PostmanCollection, Request, RequestBody } from '../../src/types'

@@ -1,5 +1,5 @@
-import { redirectToProxy } from '@scalar/helpers/url/redirect-to-proxy'
-import { coerce, object, string, validate } from '@scalar/validation'
+import { redirectToProxy } from '@swagglar/helpers/url/redirect-to-proxy'
+import { coerce, object, string, validate } from '@swagglar/validation'
 import { ref } from 'vue'
 
 import { useState } from '@/state/state'

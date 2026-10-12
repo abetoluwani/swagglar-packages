@@ -1,4 +1,4 @@
-import { AVAILABLE_CLIENTS } from '@scalar/snippetz'
+import { AVAILABLE_CLIENTS } from '@swagglar/snippetz'
 import { describe, expect, it } from 'vitest'
 
 import { generateClientOptions, getCustomClientIds } from './generate-client-options'

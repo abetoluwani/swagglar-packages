@@ -1,4 +1,4 @@
-export { compose, cva, cx, tw, useBindCx } from '@scalar/use-hooks/useBindCx'
+export { compose, cva, cx, tw, useBindCx } from '@swagglar/use-hooks/useBindCx'
 
 export type { ScalarButtonSize, ScalarButtonVariant } from './components/ScalarButton'
 export { ScalarButton } from './components/ScalarButton'

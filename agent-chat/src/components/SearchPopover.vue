@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { ScalarPopover } from '@scalar/components/popover'
-import { ScalarTextInput } from '@scalar/components/text-input'
-import { ScalarIconMagnifyingGlass } from '@scalar/icons'
+import { ScalarPopover } from '@swagglar/components/popover'
+import { ScalarTextInput } from '@swagglar/components/text-input'
+import { ScalarIconMagnifyingGlass } from '@swagglar/icons'
 import { computed } from 'vue'
 
 import { useSearch } from '@/hooks/use-search'

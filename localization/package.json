@@ -1,5 +1,5 @@
 {
-  "name": "@scalar/localization",
+  "name": "@swagglar/localization",
   "description": "Framework-agnostic localization engine for Scalar packages",
   "license": "MIT",
   "author": "Scalar (https://github.com/scalar)",
@@ -43,7 +43,7 @@
   ],
   "sideEffects": false,
   "dependencies": {
-    "@scalar/helpers": "workspace:*",
+    "@swagglar/helpers": "workspace:*",
     "type-fest": "catalog:*",
     "vue": "catalog:*"
   },

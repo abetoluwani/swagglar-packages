@@ -1,6 +1,6 @@
-import type { OpenAPIV3_1 } from '@scalar/openapi-types'
-import { getResolvedRef } from '@scalar/workspace-store/helpers/get-resolved-ref'
-import { getResolvedRefDeep } from '@scalar/workspace-store/helpers/get-resolved-ref-deep'
+import type { OpenAPIV3_1 } from '@swagglar/openapi-types'
+import { getResolvedRef } from '@swagglar/workspace-store/helpers/get-resolved-ref'
+import { getResolvedRefDeep } from '@swagglar/workspace-store/helpers/get-resolved-ref-deep'
 import type { Context } from 'hono'
 import { accepts } from 'hono/accepts'
 

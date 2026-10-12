@@ -1,8 +1,8 @@
-# @scalar/json-magic
+# @swagglar/json-magic
 
-[![Version](https://img.shields.io/npm/v/%40scalar/json-magic)](https://www.npmjs.com/package/@scalar/json-magic)
-[![Downloads](https://img.shields.io/npm/dm/%40scalar/json-magic)](https://www.npmjs.com/package/@scalar/json-magic)
-[![License](https://img.shields.io/npm/l/%40scalar%2Fjson-magic)](https://www.npmjs.com/package/@scalar/json-magic)
+[![Version](https://img.shields.io/npm/v/%40scalar/json-magic)](https://www.npmjs.com/package/@swagglar/json-magic)
+[![Downloads](https://img.shields.io/npm/dm/%40scalar/json-magic)](https://www.npmjs.com/package/@swagglar/json-magic)
+[![License](https://img.shields.io/npm/l/%40scalar%2Fjson-magic)](https://www.npmjs.com/package/@swagglar/json-magic)
 [![Discord](https://img.shields.io/discord/1135330207960678410?style=flat&color=5865F2)](https://discord.gg/scalar)
 
 A collection of utilities for working with JSON objects, including diffing, conflict resolution, bundling and more.
@@ -23,7 +23,7 @@ Scalar is an open-source API platform for teams who want beautiful developer int
 ## Installation
 
 ```bash
-npm add @scalar/json-magic
+npm add @swagglar/json-magic
 ```
 
 ## Entry points
@@ -32,15 +32,15 @@ There is no root export. Every module is imported from its own entry point, so y
 
 | Entry point | Exports |
 | --- | --- |
-| `@scalar/json-magic/bundle` | `bundle`, `isLocalRef`, `prefixInternalRef`, `prefixInternalRefRecursive`, `resolveAndCopyReferences`, plus the `Plugin`, `LoaderPlugin`, `LifecyclePlugin` and `ResolveResult` types |
-| `@scalar/json-magic/bundle/plugins/browser` | `fetchUrls`, `parseJson`, `parseYaml` |
-| `@scalar/json-magic/bundle/plugins/node` | `fetchUrls`, `parseJson`, `parseYaml`, `readFiles` |
-| `@scalar/json-magic/bundle/value-generator` | `getHash`, `generateUniqueValue`, `uniqueValueGeneratorFactory` |
-| `@scalar/json-magic/dereference` | `dereference` |
-| `@scalar/json-magic/join` | `join`, plus the `JoinOptions`, `JoinStrategy`, `JoinContext`, `JoinConflict` and `JoinResult` types |
-| `@scalar/json-magic/diff` | `diff`, `merge`, `apply`, the `Difference` type |
-| `@scalar/json-magic/magic-proxy` | `createMagicProxy`, `getRaw` |
-| `@scalar/json-magic/helpers/*` | Small standalone helpers, see [Helpers](#helpers) |
+| `@swagglar/json-magic/bundle` | `bundle`, `isLocalRef`, `prefixInternalRef`, `prefixInternalRefRecursive`, `resolveAndCopyReferences`, plus the `Plugin`, `LoaderPlugin`, `LifecyclePlugin` and `ResolveResult` types |
+| `@swagglar/json-magic/bundle/plugins/browser` | `fetchUrls`, `parseJson`, `parseYaml` |
+| `@swagglar/json-magic/bundle/plugins/node` | `fetchUrls`, `parseJson`, `parseYaml`, `readFiles` |
+| `@swagglar/json-magic/bundle/value-generator` | `getHash`, `generateUniqueValue`, `uniqueValueGeneratorFactory` |
+| `@swagglar/json-magic/dereference` | `dereference` |
+| `@swagglar/json-magic/join` | `join`, plus the `JoinOptions`, `JoinStrategy`, `JoinContext`, `JoinConflict` and `JoinResult` types |
+| `@swagglar/json-magic/diff` | `diff`, `merge`, `apply`, the `Difference` type |
+| `@swagglar/json-magic/magic-proxy` | `createMagicProxy`, `getRaw` |
+| `@swagglar/json-magic/helpers/*` | Small standalone helpers, see [Helpers](#helpers) |
 
 ## Which module do I need?
 
@@ -56,7 +56,7 @@ There is no root export. Every module is imported from its own entry point, so y
 `join` combines JSON objects without assuming a document standard. It merges objects recursively and replaces arrays and scalar values with those from later inputs. It does not mutate inputs, upgrade document versions, resolve references, or rename definitions. Literal keys such as `__proto__`, `constructor`, and `prototype` are preserved as own data properties without changing object prototypes.
 
 ```ts
-import { join } from '@scalar/json-magic/join'
+import { join } from '@swagglar/json-magic/join'
 
 const result = join(
   [
@@ -96,7 +96,7 @@ The optional `strategy` callback receives `{ path, current, incoming }` for each
 
 An empty input list returns `{ ok: true, document: {} }`. Conflicts return `{ ok: false, conflicts }` without a partial document. Inputs must be acyclic JSON objects.
 
-For OpenAPI, use `join` from `@scalar/openapi-parser`, which supplies OpenAPI rules, version upgrades, and optional component prefixes. Other formats can supply their own rules; this module does not include an AsyncAPI adapter.
+For OpenAPI, use `join` from `@swagglar/openapi-parser`, which supplies OpenAPI rules, version upgrades, and optional component prefixes. Other formats can supply their own rules; this module does not include an AsyncAPI adapter.
 
 ## bundle
 
@@ -121,8 +121,8 @@ External documents are stored under the `x-ext` key, and the mapping between the
 ### Quick start
 
 ```ts
-import { bundle } from '@scalar/json-magic/bundle'
-import { fetchUrls } from '@scalar/json-magic/bundle/plugins/browser'
+import { bundle } from '@swagglar/json-magic/bundle'
+import { fetchUrls } from '@swagglar/json-magic/bundle/plugins/browser'
 
 const result = await bundle(
   { $ref: 'http://example.com/document.json' },
@@ -140,7 +140,7 @@ When the input is an object it is modified in place, and the same object is retu
 
 ### Loaders
 
-A loader plugin teaches the bundler how to read one kind of reference. Import loaders from `@scalar/json-magic/bundle/plugins/browser` in the browser, or from `@scalar/json-magic/bundle/plugins/node` in Node.js. The Node entry point is a superset: it adds `readFiles`, which needs filesystem access.
+A loader plugin teaches the bundler how to read one kind of reference. Import loaders from `@swagglar/json-magic/bundle/plugins/browser` in the browser, or from `@swagglar/json-magic/bundle/plugins/node` in Node.js. The Node entry point is a superset: it adds `readFiles`, which needs filesystem access.
 
 | Loader | Handles | Available in |
 | --- | --- | --- |
@@ -156,8 +156,8 @@ You can combine as many loaders as you need. The first one whose `validate` retu
 Resolves remote documents over HTTP. It works in both Node.js and the browser.
 
 ```ts
-import { bundle } from '@scalar/json-magic/bundle'
-import { fetchUrls } from '@scalar/json-magic/bundle/plugins/browser'
+import { bundle } from '@swagglar/json-magic/bundle'
+import { fetchUrls } from '@swagglar/json-magic/bundle/plugins/browser'
 
 const document = {
   openapi: '3.1.0',
@@ -183,8 +183,8 @@ console.log(document)
 ##### Limiting the number of concurrent requests
 
 ```ts
-import { bundle } from '@scalar/json-magic/bundle'
-import { fetchUrls } from '@scalar/json-magic/bundle/plugins/browser'
+import { bundle } from '@swagglar/json-magic/bundle'
+import { fetchUrls } from '@swagglar/json-magic/bundle/plugins/browser'
 
 await bundle(document, {
   plugins: [
@@ -202,8 +202,8 @@ await bundle(document, {
 Headers are matched against the host of the reference, so a token is only ever sent to the domains you list.
 
 ```ts
-import { bundle } from '@scalar/json-magic/bundle'
-import { fetchUrls } from '@scalar/json-magic/bundle/plugins/browser'
+import { bundle } from '@swagglar/json-magic/bundle'
+import { fetchUrls } from '@swagglar/json-magic/bundle/plugins/browser'
 
 await bundle(document, {
   plugins: [
@@ -227,8 +227,8 @@ await bundle(document, {
 For advanced use cases like proxying requests or implementing custom network logic, you can provide your own fetch implementation. This allows you to handle things like CORS restrictions, custom authentication flows, or request and response transformations.
 
 ```ts
-import { bundle } from '@scalar/json-magic/bundle'
-import { fetchUrls } from '@scalar/json-magic/bundle/plugins/browser'
+import { bundle } from '@swagglar/json-magic/bundle'
+import { fetchUrls } from '@swagglar/json-magic/bundle/plugins/browser'
 
 await bundle(document, {
   plugins: [
@@ -248,8 +248,8 @@ await bundle(document, {
 The input itself can be a URL, as long as a loader can handle it.
 
 ```ts
-import { bundle } from '@scalar/json-magic/bundle'
-import { fetchUrls } from '@scalar/json-magic/bundle/plugins/browser'
+import { bundle } from '@swagglar/json-magic/bundle'
+import { fetchUrls } from '@swagglar/json-magic/bundle/plugins/browser'
 
 const result = await bundle('https://example.com/openapi.json', {
   plugins: [fetchUrls()],
@@ -265,8 +265,8 @@ console.log(result)
 Resolves local files. This loader only works in a Node.js environment.
 
 ```ts
-import { bundle } from '@scalar/json-magic/bundle'
-import { readFiles } from '@scalar/json-magic/bundle/plugins/node'
+import { bundle } from '@swagglar/json-magic/bundle'
+import { readFiles } from '@swagglar/json-magic/bundle/plugins/node'
 
 const document = {
   openapi: '3.1.0',
@@ -292,8 +292,8 @@ console.log(document)
 You can pass the file path directly, as long as `readFiles` is registered to read it.
 
 ```ts
-import { bundle } from '@scalar/json-magic/bundle'
-import { readFiles } from '@scalar/json-magic/bundle/plugins/node'
+import { bundle } from '@swagglar/json-magic/bundle'
+import { readFiles } from '@swagglar/json-magic/bundle/plugins/node'
 
 const result = await bundle('./input.json', {
   plugins: [readFiles()],
@@ -307,8 +307,8 @@ console.log(result)
 A document that mixes remote and local references needs both loaders:
 
 ```ts
-import { bundle } from '@scalar/json-magic/bundle'
-import { fetchUrls, readFiles } from '@scalar/json-magic/bundle/plugins/node'
+import { bundle } from '@swagglar/json-magic/bundle'
+import { fetchUrls, readFiles } from '@swagglar/json-magic/bundle/plugins/node'
 
 await bundle('./openapi.json', {
   plugins: [readFiles(), fetchUrls()],
@@ -321,8 +321,8 @@ await bundle('./openapi.json', {
 Accepts a raw JSON string as the input.
 
 ```ts
-import { bundle } from '@scalar/json-magic/bundle'
-import { parseJson } from '@scalar/json-magic/bundle/plugins/browser'
+import { bundle } from '@swagglar/json-magic/bundle'
+import { parseJson } from '@swagglar/json-magic/bundle/plugins/browser'
 
 const result = await bundle('{ "openapi": "3.1.1" }', {
   plugins: [parseJson()],
@@ -338,8 +338,8 @@ console.log(result)
 Accepts a raw YAML string as the input.
 
 ```ts
-import { bundle } from '@scalar/json-magic/bundle'
-import { parseYaml } from '@scalar/json-magic/bundle/plugins/browser'
+import { bundle } from '@swagglar/json-magic/bundle'
+import { parseYaml } from '@swagglar/json-magic/bundle/plugins/browser'
 
 const result = await bundle('openapi: "3.1.1"\n', {
   plugins: [parseYaml()],
@@ -355,7 +355,7 @@ console.log(result)
 A loader is a plain object, so you can resolve references from anywhere: a database, an in-memory map, or a custom protocol.
 
 ```ts
-import { bundle, type LoaderPlugin } from '@scalar/json-magic/bundle'
+import { bundle, type LoaderPlugin } from '@swagglar/json-magic/bundle'
 
 const workspaceFiles: LoaderPlugin = {
   type: 'loader',
@@ -403,8 +403,8 @@ The `depth` option controls how deeply the bundler resolves `$ref` references. W
 **Note:** When using `depth`, the resulting bundle may not be fully self-contained, since nested references deeper than the given depth stay unresolved. If you use `depth` together with `visitedNodes`, be aware that parent nodes may be marked as visited even if their child references have not been fully resolved yet. Use this option with care if you require a complete bundle.
 
 ```ts
-import { bundle } from '@scalar/json-magic/bundle'
-import { fetchUrls } from '@scalar/json-magic/bundle/plugins/browser'
+import { bundle } from '@swagglar/json-magic/bundle'
+import { fetchUrls } from '@swagglar/json-magic/bundle/plugins/browser'
 
 await bundle(input, {
   plugins: [fetchUrls()],
@@ -418,8 +418,8 @@ await bundle(input, {
 The `externalDocumentsKey` option controls the key used to store external references. This key contains all bundled external documents, which keeps a clean separation between the main document and its bundled references. **Defaults** to `x-ext`.
 
 ```ts
-import { bundle } from '@scalar/json-magic/bundle'
-import { fetchUrls } from '@scalar/json-magic/bundle/plugins/browser'
+import { bundle } from '@swagglar/json-magic/bundle'
+import { fetchUrls } from '@swagglar/json-magic/bundle/plugins/browser'
 
 await bundle(input, {
   plugins: [fetchUrls()],
@@ -433,8 +433,8 @@ await bundle(input, {
 The `externalDocumentsMappingsKey` option controls the key used to maintain a mapping between generated keys and their original URLs. This mapping is essential for tracking the source of bundled references. It is removed from the output of a full bundle unless `urlMap` is enabled. **Defaults** to `x-ext-urls`.
 
 ```ts
-import { bundle } from '@scalar/json-magic/bundle'
-import { fetchUrls } from '@scalar/json-magic/bundle/plugins/browser'
+import { bundle } from '@swagglar/json-magic/bundle'
+import { fetchUrls } from '@swagglar/json-magic/bundle/plugins/browser'
 
 await bundle(input, {
   plugins: [fetchUrls()],
@@ -457,8 +457,8 @@ Hooks let you observe and extend the bundling process, which is handy for progre
 | `onAfterNodeProcess` | After a node is processed, may be async |
 
 ```ts
-import { bundle } from '@scalar/json-magic/bundle'
-import { fetchUrls } from '@scalar/json-magic/bundle/plugins/browser'
+import { bundle } from '@swagglar/json-magic/bundle'
+import { fetchUrls } from '@swagglar/json-magic/bundle/plugins/browser'
 
 const errors: string[] = []
 
@@ -476,8 +476,8 @@ await bundle(document, {
 The same hooks can be shipped as a reusable lifecycle plugin, which is then passed alongside the loaders:
 
 ```ts
-import { bundle, type LifecyclePlugin } from '@scalar/json-magic/bundle'
-import { fetchUrls } from '@scalar/json-magic/bundle/plugins/browser'
+import { bundle, type LifecyclePlugin } from '@swagglar/json-magic/bundle'
+import { fetchUrls } from '@swagglar/json-magic/bundle/plugins/browser'
 
 const logProgress: LifecyclePlugin = {
   type: 'lifecycle',
@@ -509,7 +509,7 @@ It works in two modes:
 The result is an object with a `success` property. On success it carries the dereferenced `data`, and on failure it carries an `errors` array describing the references that could not be resolved.
 
 ```ts
-import { dereference } from '@scalar/json-magic/dereference'
+import { dereference } from '@swagglar/json-magic/dereference'
 
 const result = dereference({ a: 'hello', b: { $ref: '#/a' } }, { sync: true })
 
@@ -522,7 +522,7 @@ if (result.success) {
 To resolve external references as well, drop `sync` (or set it to `false`) and await the result.
 
 ```ts
-import { dereference } from '@scalar/json-magic/dereference'
+import { dereference } from '@swagglar/json-magic/dereference'
 
 const result = await dereference({
   a: 'hello',
@@ -539,8 +539,8 @@ if (result.success) {
 To resolve references from somewhere other than HTTP, pass your own loaders:
 
 ```ts
-import { dereference } from '@scalar/json-magic/dereference'
-import { fetchUrls, readFiles } from '@scalar/json-magic/bundle/plugins/node'
+import { dereference } from '@swagglar/json-magic/dereference'
+import { fetchUrls, readFiles } from '@swagglar/json-magic/bundle/plugins/node'
 
 const result = await dereference(document, {
   plugins: [readFiles(), fetchUrls()],
@@ -564,7 +564,7 @@ These three functions work on the documents themselves, not on copies of them. `
 ### Quickstart
 
 ```ts
-import { apply, diff, merge } from '@scalar/json-magic/diff'
+import { apply, diff, merge } from '@swagglar/json-magic/diff'
 
 const baseObject = {
   openapi: '3.0.0',
@@ -606,7 +606,7 @@ const finalDocument = apply(baseObject, diffs)
 `merge` only returns the changes it can combine safely. When both sides touch the same path, the pair is returned in `conflicts` for you to resolve, and it is left out of `diffs`.
 
 ```ts
-import { diff, merge } from '@scalar/json-magic/diff'
+import { diff, merge } from '@swagglar/json-magic/diff'
 
 const { diffs, conflicts } = merge(diff(base, mine), diff(base, theirs))
 
@@ -623,7 +623,7 @@ A JavaScript proxy that resolves internal references as you access properties. N
 ### Quick start
 
 ```ts
-import { createMagicProxy, getRaw } from '@scalar/json-magic/magic-proxy'
+import { createMagicProxy, getRaw } from '@swagglar/json-magic/magic-proxy'
 
 const result = createMagicProxy({
   a: 'hello',
@@ -668,19 +668,19 @@ Standalone helpers, each with its own entry point.
 
 | Helper | Description |
 | --- | --- |
-| `@scalar/json-magic/helpers/escape-json-pointer` | Escape `~` and `/` in a JSON pointer segment |
-| `@scalar/json-magic/helpers/unescape-json-pointer` | Reverse of `escapeJsonPointer` |
-| `@scalar/json-magic/helpers/get-segments-from-path` | Split a JSON pointer into unescaped segments |
-| `@scalar/json-magic/helpers/get-value-by-path` | Read the value at a list of path segments |
-| `@scalar/json-magic/helpers/set-value-at-path` | Write a value at a JSON pointer, creating missing nodes |
-| `@scalar/json-magic/helpers/is-file-path` | Check whether a string looks like a file path |
-| `@scalar/json-magic/helpers/is-http-url` | Check whether a string is an HTTP or HTTPS URL |
-| `@scalar/json-magic/helpers/is-json-object` | Check whether a string is a JSON object |
-| `@scalar/json-magic/helpers/is-yaml` | Check whether a string is valid YAML |
-| `@scalar/json-magic/helpers/normalize` | Parse a JSON or YAML string into an object |
+| `@swagglar/json-magic/helpers/escape-json-pointer` | Escape `~` and `/` in a JSON pointer segment |
+| `@swagglar/json-magic/helpers/unescape-json-pointer` | Reverse of `escapeJsonPointer` |
+| `@swagglar/json-magic/helpers/get-segments-from-path` | Split a JSON pointer into unescaped segments |
+| `@swagglar/json-magic/helpers/get-value-by-path` | Read the value at a list of path segments |
+| `@swagglar/json-magic/helpers/set-value-at-path` | Write a value at a JSON pointer, creating missing nodes |
+| `@swagglar/json-magic/helpers/is-file-path` | Check whether a string looks like a file path |
+| `@swagglar/json-magic/helpers/is-http-url` | Check whether a string is an HTTP or HTTPS URL |
+| `@swagglar/json-magic/helpers/is-json-object` | Check whether a string is a JSON object |
+| `@swagglar/json-magic/helpers/is-yaml` | Check whether a string is valid YAML |
+| `@swagglar/json-magic/helpers/normalize` | Parse a JSON or YAML string into an object |
 
 ```ts
-import { getValueByPath } from '@scalar/json-magic/helpers/get-value-by-path'
+import { getValueByPath } from '@swagglar/json-magic/helpers/get-value-by-path'
 
 const { value } = getValueByPath({ components: { schemas: { User: { type: 'object' } } } }, [
   'components',

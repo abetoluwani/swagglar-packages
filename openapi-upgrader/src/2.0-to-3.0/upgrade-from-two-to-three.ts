@@ -1,6 +1,6 @@
-import { isObjectLike } from '@scalar/helpers/object/is-object'
-import type { OpenAPIV2, OpenAPIV3 } from '@scalar/openapi-types'
-import type { UnknownObject } from '@scalar/types/utils'
+import { isObjectLike } from '@swagglar/helpers/object/is-object'
+import type { OpenAPIV2, OpenAPIV3 } from '@swagglar/openapi-types'
+import type { UnknownObject } from '@swagglar/types/utils'
 
 import { traverse } from '@/helpers/traverse'
 

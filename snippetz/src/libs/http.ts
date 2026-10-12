@@ -1,5 +1,5 @@
-import { isHttpMethod } from '@scalar/helpers/http/is-http-method'
-import type { HarRequest } from '@scalar/types/snippetz'
+import { isHttpMethod } from '@swagglar/helpers/http/is-http-method'
+import type { HarRequest } from '@swagglar/types/snippetz'
 
 type HeaderPair = {
   name: string

@@ -1,10 +1,10 @@
-import { isObjectLike } from '@scalar/helpers/object/is-object'
-import { getParameterExample } from '@scalar/workspace-store/helpers/get-parameter-example'
-import { getResolvedRef } from '@scalar/workspace-store/helpers/get-resolved-ref'
+import { isObjectLike } from '@swagglar/helpers/object/is-object'
+import { getParameterExample } from '@swagglar/workspace-store/helpers/get-parameter-example'
+import { getResolvedRef } from '@swagglar/workspace-store/helpers/get-resolved-ref'
 import {
   getQuerystringParameter,
   serializeQuerystringParameter,
-} from '@scalar/workspace-store/helpers/querystring-parameter'
+} from '@swagglar/workspace-store/helpers/querystring-parameter'
 import {
   deSerializeParameter,
   getExampleFromSchema,
@@ -17,8 +17,8 @@ import {
   serializePipeDelimitedStyle,
   serializeSimpleStyle,
   serializeSpaceDelimitedStyle,
-} from '@scalar/workspace-store/request-example'
-import type { OperationObject, ParameterObject } from '@scalar/workspace-store/schemas/v3.2/strict/openapi-document'
+} from '@swagglar/workspace-store/request-example'
+import type { OperationObject, ParameterObject } from '@swagglar/workspace-store/schemas/v3.2/strict/openapi-document'
 import type { Request as HarRequest } from 'har-format'
 
 type ProcessedParameters = {

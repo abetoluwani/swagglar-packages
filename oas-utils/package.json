@@ -1,5 +1,5 @@
 {
-  "name": "@scalar/oas-utils",
+  "name": "@swagglar/oas-utils",
   "description": "Open API spec and Yaml handling utilities",
   "license": "MIT",
   "author": "Scalar (https://github.com/scalar)",
@@ -45,10 +45,10 @@
     "CHANGELOG.md"
   ],
   "dependencies": {
-    "@scalar/helpers": "workspace:*",
-    "@scalar/themes": "workspace:*",
-    "@scalar/types": "workspace:*",
-    "@scalar/workspace-store": "workspace:*",
+    "@swagglar/helpers": "workspace:*",
+    "@swagglar/themes": "workspace:*",
+    "@swagglar/types": "workspace:*",
+    "@swagglar/workspace-store": "workspace:*",
     "flatted": "catalog:*",
     "vue": "catalog:*",
     "yaml": "catalog:*"

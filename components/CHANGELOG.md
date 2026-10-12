@@ -1,4 +1,4 @@
-# @scalar/components
+# @swagglar/components
 
 ## 0.30.3
 
@@ -100,8 +100,8 @@
 - [#9922](https://github.com/scalar/scalar/pull/9922): Give sidebar groups whose label is a link their own expand and collapse button.
 
   Group labels render as anchors so the navigation stays crawlable, which left the caret as a plain `<div>` inside the link. That gave each row a single focusable element: pressing Enter followed the link (expanding the group as a side effect) and nothing collapsed it again, `aria-expanded` sat on the link rather than on a control that can toggle, and the caret's screen reader text ran into the link's accessible name ("Authentication Close Group").
-  - `@scalar/components`: new `ScalarSidebarGroupToggleButton` and `ScalarSidebarGroupToggleSpacer`, which `ScalarSidebarGroup` now uses for its discrete toggle in place of an inline button. `ScalarSidebarGroup` no longer sets `aria-expanded` on the group label when `discrete` is set, because the toggle button is what owns the expanded state.
-  - `@scalar/sidebar`: a group renders a discrete toggle whenever `getHref` returns a URL for it, so tags, models and documents in the reference sidebar each get a toggle button of their own. The caret is now focusable and operable from the keyboard, `aria-expanded` moved from the label onto that button, and the button is named after the group it belongs to ("Open Group - Authentication") so a screen reader user can tell the toggles apart. Groups without an href are unchanged, so the client sidebar keeps its current behavior.
+  - `@swagglar/components`: new `ScalarSidebarGroupToggleButton` and `ScalarSidebarGroupToggleSpacer`, which `ScalarSidebarGroup` now uses for its discrete toggle in place of an inline button. `ScalarSidebarGroup` no longer sets `aria-expanded` on the group label when `discrete` is set, because the toggle button is what owns the expanded state.
+  - `@swagglar/sidebar`: a group renders a discrete toggle whenever `getHref` returns a URL for it, so tags, models and documents in the reference sidebar each get a toggle button of their own. The caret is now focusable and operable from the keyboard, `aria-expanded` moved from the label onto that button, and the button is named after the group it belongs to ("Open Group - Authentication") so a screen reader user can tell the toggles apart. Groups without an href are unchanged, so the client sidebar keeps its current behavior.
 
 ### Patch Changes
 
@@ -207,7 +207,7 @@
 
   Update the shared theme reset so text inputs align to the logical start by default for RTL documents.
 
-  Add a `mergeObjects` deep-merge helper to `@scalar/helpers`, used by the localization layer to merge translation overrides onto the built-in locale.
+  Add a `mergeObjects` deep-merge helper to `@swagglar/helpers`, used by the localization layer to merge translation overrides onto the built-in locale.
 
 - [#9590](https://github.com/scalar/scalar/pull/9590): Add syntax highlighting for the Mojo programming language
 
@@ -248,7 +248,7 @@
 
 ### Minor Changes
 
-- [#9291](https://github.com/scalar/scalar/pull/9291): refactor: rename component subpath exports to kebab-case without the `Scalar` prefix (e.g. `@scalar/components/scalar-button` is now `@scalar/components/button`). The exported component names are unchanged (`ScalarButton`, etc.).
+- [#9291](https://github.com/scalar/scalar/pull/9291): refactor: rename component subpath exports to kebab-case without the `Scalar` prefix (e.g. `@swagglar/components/scalar-button` is now `@swagglar/components/button`). The exported component names are unchanged (`ScalarButton`, etc.).
 
 ### Patch Changes
 
@@ -269,7 +269,7 @@
 - [#9211](https://github.com/scalar/scalar/pull/9211): feat: some polish for the scalar-app
 - [#9211](https://github.com/scalar/scalar/pull/9211): fix(components): add `highlighted` Tailwind variant for Radix menu item highlight state
 
-  Adds a new `highlighted` custom Tailwind variant (matching `[data-highlighted]`) to `@scalar/themes` and uses it in `ScalarDropdownButton` to restore the hover and keyboard-navigation highlight in the workspace and team picker dropdowns.
+  Adds a new `highlighted` custom Tailwind variant (matching `[data-highlighted]`) to `@swagglar/themes` and uses it in `ScalarDropdownButton` to restore the hover and keyboard-navigation highlight in the workspace and team picker dropdowns.
 
 - [#9211](https://github.com/scalar/scalar/pull/9211): feat: add team switching to the scalar app
 - [#9211](https://github.com/scalar/scalar/pull/9211): fix: respect optional `VITE_SCALAR_HOTKEY_SYMBOL_SET` on ScalarHotkey to override OS-based modifier
@@ -285,7 +285,7 @@
 - [#9199](https://github.com/scalar/scalar/pull/9199): feat: some polish for the scalar-app
 - [#9198](https://github.com/scalar/scalar/pull/9198): fix(components): add `highlighted` Tailwind variant for Radix menu item highlight state
 
-  Adds a new `highlighted` custom Tailwind variant (matching `[data-highlighted]`) to `@scalar/themes` and uses it in `ScalarDropdownButton` to restore the hover and keyboard-navigation highlight in the workspace and team picker dropdowns.
+  Adds a new `highlighted` custom Tailwind variant (matching `[data-highlighted]`) to `@swagglar/themes` and uses it in `ScalarDropdownButton` to restore the hover and keyboard-navigation highlight in the workspace and team picker dropdowns.
 
 - [#9152](https://github.com/scalar/scalar/pull/9152): feat: add team switching to the scalar app
 - [#9118](https://github.com/scalar/scalar/pull/9118): fix: respect optional `VITE_SCALAR_HOTKEY_SYMBOL_SET` on ScalarHotkey to override OS-based modifier
@@ -417,7 +417,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/oas-utils@0.10.8**
+- **@swagglar/oas-utils@0.10.8**
 
 ## 0.20.8
 
@@ -425,7 +425,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/oas-utils@0.10.7**
+- **@swagglar/oas-utils@0.10.7**
 
 ## 0.20.7
 
@@ -433,7 +433,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/oas-utils@0.10.6**
+- **@swagglar/oas-utils@0.10.6**
 
 ## 0.20.6
 
@@ -443,10 +443,10 @@
 
 #### Updated Dependencies
 
-- **@scalar/helpers@0.4.1**
+- **@swagglar/helpers@0.4.1**
   - [#8420](https://github.com/scalar/scalar/pull/8420): fix TypeScript access to navigator.userAgentData in isMacOS without ts-expect-error
 
-- **@scalar/oas-utils@0.10.5**
+- **@swagglar/oas-utils@0.10.5**
 
 ## 0.20.5
 
@@ -454,7 +454,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/oas-utils@0.10.4**
+- **@swagglar/oas-utils@0.10.4**
 
 ## 0.20.4
 
@@ -462,10 +462,10 @@
 
 #### Updated Dependencies
 
-- **@scalar/helpers@0.4.0**
+- **@swagglar/helpers@0.4.0**
   - [#8336](https://github.com/scalar/scalar/pull/8336): feat: support flushing any pending operations
 
-- **@scalar/oas-utils@0.10.3**
+- **@swagglar/oas-utils@0.10.3**
   - [#8253](https://github.com/scalar/scalar/pull/8253): feat(api-reference): support propertyNames enum for additionalProperties
 
 ## 0.20.3
@@ -474,7 +474,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/oas-utils@0.10.2**
+- **@swagglar/oas-utils@0.10.2**
 
 ## 0.20.2
 
@@ -484,7 +484,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/oas-utils@0.10.1**
+- **@swagglar/oas-utils@0.10.1**
 
 ## 0.20.1
 
@@ -492,7 +492,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/oas-utils@0.10.0**
+- **@swagglar/oas-utils@0.10.0**
   - [#8266](https://github.com/scalar/scalar/pull/8266): support operation level authentication and servers
 
 ## 0.20.0
@@ -505,22 +505,22 @@
 
 #### Updated Dependencies
 
-- **@scalar/code-highlight@0.3.0**
+- **@swagglar/code-highlight@0.3.0**
   - [#8322](https://github.com/scalar/scalar/pull/8322): chore: bump required node version to >=22 (LTS)
 
-- **@scalar/oas-utils@0.9.0**
+- **@swagglar/oas-utils@0.9.0**
   - [#8322](https://github.com/scalar/scalar/pull/8322): chore: bump required node version to >=22 (LTS)
 
-- **@scalar/use-hooks@0.4.0**
+- **@swagglar/use-hooks@0.4.0**
   - [#8322](https://github.com/scalar/scalar/pull/8322): chore: bump required node version to >=22 (LTS)
 
-- **@scalar/helpers@0.3.0**
+- **@swagglar/helpers@0.3.0**
   - [#8322](https://github.com/scalar/scalar/pull/8322): chore: bump required node version to >=22 (LTS)
 
-- **@scalar/themes@0.15.0**
+- **@swagglar/themes@0.15.0**
   - [#8322](https://github.com/scalar/scalar/pull/8322): chore: bump required node version to >=22 (LTS)
 
-- **@scalar/icons@0.6.0**
+- **@swagglar/icons@0.6.0**
   - [#8322](https://github.com/scalar/scalar/pull/8322): chore: bump required node version to >=22 (LTS)
 
 ## 0.19.15
@@ -531,10 +531,10 @@
 
 #### Updated Dependencies
 
-- **@scalar/oas-utils@0.8.3**
+- **@swagglar/oas-utils@0.8.3**
   - [#8314](https://github.com/scalar/scalar/pull/8314): chore: limit concurrent operations while migrating workspaces
 
-- **@scalar/helpers@0.2.18**
+- **@swagglar/helpers@0.2.18**
   - [#8314](https://github.com/scalar/scalar/pull/8314): chore: limit concurrent operations while migrating workspaces
 
 ## 0.19.14
@@ -543,12 +543,12 @@
 
 #### Updated Dependencies
 
-- **@scalar/themes@0.14.3**
+- **@swagglar/themes@0.14.3**
   - [#8315](https://github.com/scalar/scalar/pull/8315): feat(theme): standardize tailwind line height behavior
 
-- **@scalar/code-highlight@0.2.4**
+- **@swagglar/code-highlight@0.2.4**
 
-- **@scalar/oas-utils@0.8.2**
+- **@swagglar/oas-utils@0.8.2**
 
 ## 0.19.13
 
@@ -556,10 +556,10 @@
 
 #### Updated Dependencies
 
-- **@scalar/helpers@0.2.17**
+- **@swagglar/helpers@0.2.17**
   - [#8310](https://github.com/scalar/scalar/pull/8310): refactor: move helpers to the helpers package to share primitive helpers
 
-- **@scalar/oas-utils@0.8.1**
+- **@swagglar/oas-utils@0.8.1**
   - [#8310](https://github.com/scalar/scalar/pull/8310): fix: correctly handle circular documents during the migration to indexdb
 
 ## 0.19.12
@@ -570,13 +570,13 @@
 
 #### Updated Dependencies
 
-- **@scalar/oas-utils@0.8.0**
+- **@swagglar/oas-utils@0.8.0**
   - [#8290](https://github.com/scalar/scalar/pull/8290): chore: update deps
 
-- **@scalar/themes@0.14.2**
+- **@swagglar/themes@0.14.2**
   - [#8290](https://github.com/scalar/scalar/pull/8290): chore: update deps
 
-- **@scalar/code-highlight@0.2.4**
+- **@swagglar/code-highlight@0.2.4**
 
 ## 0.19.11
 
@@ -586,13 +586,13 @@
 
 #### Updated Dependencies
 
-- **@scalar/themes@0.14.1**
+- **@swagglar/themes@0.14.1**
   - [#8276](https://github.com/scalar/scalar/pull/8276): feat(components): standardize form inputs to have a height of 40px
 
-- **@scalar/oas-utils@0.7.0**
+- **@swagglar/oas-utils@0.7.0**
   - [#8234](https://github.com/scalar/scalar/pull/8234): support operation level authentication and servers
 
-- **@scalar/code-highlight@0.2.4**
+- **@swagglar/code-highlight@0.2.4**
 
 ## 0.19.10
 
@@ -600,7 +600,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/oas-utils@0.6.48**
+- **@swagglar/oas-utils@0.6.48**
 
 ## 0.19.9
 
@@ -611,15 +611,15 @@
 
 #### Updated Dependencies
 
-- **@scalar/oas-utils@0.6.47**
+- **@swagglar/oas-utils@0.6.47**
   - [#8248](https://github.com/scalar/scalar/pull/8248): fix: local storage migration script
   - [#8248](https://github.com/scalar/scalar/pull/8248): fix: remove unnecessary property truncation in example generation
   - [#8248](https://github.com/scalar/scalar/pull/8248): chore: map themeId to slug and add default operation to drafts
 
-- **@scalar/helpers@0.2.16**
+- **@swagglar/helpers@0.2.16**
   - [#8248](https://github.com/scalar/scalar/pull/8248): fix: local storage migration script
 
-- **@scalar/code-highlight@0.2.4**
+- **@swagglar/code-highlight@0.2.4**
   - [#8248](https://github.com/scalar/scalar/pull/8248): feat: slugs for headings with nested content
 
 ## 0.19.8
@@ -628,7 +628,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/oas-utils@0.6.46**
+- **@swagglar/oas-utils@0.6.46**
 
 ## 0.19.7
 
@@ -636,10 +636,10 @@
 
 #### Updated Dependencies
 
-- **@scalar/helpers@0.2.15**
+- **@swagglar/helpers@0.2.15**
   - [#8212](https://github.com/scalar/scalar/pull/8212): chore: version bump
 
-- **@scalar/oas-utils@0.6.45**
+- **@swagglar/oas-utils@0.6.45**
   - [#8212](https://github.com/scalar/scalar/pull/8212): chore: version bump
 
 ## 0.19.6
@@ -648,10 +648,10 @@
 
 #### Updated Dependencies
 
-- **@scalar/helpers@0.2.14**
+- **@swagglar/helpers@0.2.14**
   - [#8207](https://github.com/scalar/scalar/pull/8207): chore: version bump
 
-- **@scalar/oas-utils@0.6.44**
+- **@swagglar/oas-utils@0.6.44**
   - [#8207](https://github.com/scalar/scalar/pull/8207): chore: version bump
 
 ## 0.19.5
@@ -660,10 +660,10 @@
 
 #### Updated Dependencies
 
-- **@scalar/oas-utils@0.6.43**
+- **@swagglar/oas-utils@0.6.43**
   - [#7826](https://github.com/scalar/scalar/pull/7826): feat: added migrator for v1 local storage to v2 indexdb
 
-- **@scalar/helpers@0.2.13**
+- **@swagglar/helpers@0.2.13**
   - [#7826](https://github.com/scalar/scalar/pull/7826): feat: added migrator for v1 local storage to v2 indexdb
 
 ## 0.19.4
@@ -674,10 +674,10 @@
 
 #### Updated Dependencies
 
-- **@scalar/helpers@0.2.12**
+- **@swagglar/helpers@0.2.12**
   - [#8178](https://github.com/scalar/scalar/pull/8178): chore: package bump due to ci failure
 
-- **@scalar/oas-utils@0.6.42**
+- **@swagglar/oas-utils@0.6.42**
 
 ## 0.19.3
 
@@ -687,7 +687,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/oas-utils@0.6.41**
+- **@swagglar/oas-utils@0.6.41**
 
 ## 0.19.2
 
@@ -697,10 +697,10 @@
 
 #### Updated Dependencies
 
-- **@scalar/icons@0.5.3**
+- **@swagglar/icons@0.5.3**
   - [#8134](https://github.com/scalar/scalar/pull/8134): fix(components): change caret position to right
 
-- **@scalar/oas-utils@0.6.40**
+- **@swagglar/oas-utils@0.6.40**
   - [#8121](https://github.com/scalar/scalar/pull/8121): chore: moved client plugin types to oas-utils so they can be shared
 
 ## 0.19.1
@@ -709,7 +709,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/oas-utils@0.6.39**
+- **@swagglar/oas-utils@0.6.39**
 
 ## 0.19.0
 
@@ -723,10 +723,10 @@
 
 #### Updated Dependencies
 
-- **@scalar/code-highlight@0.2.3**
+- **@swagglar/code-highlight@0.2.3**
   - [#8081](https://github.com/scalar/scalar/pull/8081): feat(components): improve ScalarCodeBlock copy UI
 
-- **@scalar/oas-utils@0.6.38**
+- **@swagglar/oas-utils@0.6.38**
 
 ## 0.18.0
 
@@ -738,7 +738,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/oas-utils@0.6.37**
+- **@swagglar/oas-utils@0.6.37**
 
 ## 0.17.6
 
@@ -748,7 +748,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/oas-utils@0.6.36**
+- **@swagglar/oas-utils@0.6.36**
   - [#8037](https://github.com/scalar/scalar/pull/8037): Improve error message when running oas-utils tests while test-servers are not running
 
 ## 0.17.5
@@ -757,7 +757,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/oas-utils@0.6.35**
+- **@swagglar/oas-utils@0.6.35**
 
 ## 0.17.4
 
@@ -765,7 +765,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/oas-utils@0.6.34**
+- **@swagglar/oas-utils@0.6.34**
 
 ## 0.17.3
 
@@ -773,10 +773,10 @@
 
 #### Updated Dependencies
 
-- **@scalar/helpers@0.2.11**
+- **@swagglar/helpers@0.2.11**
   - [#8016](https://github.com/scalar/scalar/pull/8016): feat: move history and auth into their own store
 
-- **@scalar/oas-utils@0.6.33**
+- **@swagglar/oas-utils@0.6.33**
 
 ## 0.17.2
 
@@ -786,7 +786,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/oas-utils@0.6.32**
+- **@swagglar/oas-utils@0.6.32**
 
 ## 0.17.1
 
@@ -794,13 +794,13 @@
 
 #### Updated Dependencies
 
-- **@scalar/use-hooks@0.3.7**
+- **@swagglar/use-hooks@0.3.7**
   - [#7977](https://github.com/scalar/scalar/pull/7977): chore(use-hooks): update tailwind merge to v3.4.0
 
-- **@scalar/helpers@0.2.10**
+- **@swagglar/helpers@0.2.10**
   - [#7963](https://github.com/scalar/scalar/pull/7963): feat: unify is-object helpers
 
-- **@scalar/oas-utils@0.6.31**
+- **@swagglar/oas-utils@0.6.31**
 
 ## 0.17.0
 
@@ -812,12 +812,12 @@
 
 #### Updated Dependencies
 
-- **@scalar/themes@0.14.0**
+- **@swagglar/themes@0.14.0**
   - [#7959](https://github.com/scalar/scalar/pull/7959): feat(agent): add agent scalar to localhost
 
-- **@scalar/code-highlight@0.2.2**
+- **@swagglar/code-highlight@0.2.2**
 
-- **@scalar/oas-utils@0.6.30**
+- **@swagglar/oas-utils@0.6.30**
 
 ## 0.16.32
 
@@ -825,7 +825,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/oas-utils@0.6.29**
+- **@swagglar/oas-utils@0.6.29**
 
 ## 0.16.31
 
@@ -833,7 +833,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/oas-utils@0.6.28**
+- **@swagglar/oas-utils@0.6.28**
 
 ## 0.16.30
 
@@ -841,10 +841,10 @@
 
 #### Updated Dependencies
 
-- **@scalar/oas-utils@0.6.27**
+- **@swagglar/oas-utils@0.6.27**
   - [#7894](https://github.com/scalar/scalar/pull/7894): fix: the import and export of redirect to proxy
 
-- **@scalar/helpers@0.2.9**
+- **@swagglar/helpers@0.2.9**
   - [#7894](https://github.com/scalar/scalar/pull/7894): fix: the import and export of redirect to proxy
 
 ## 0.16.29
@@ -853,7 +853,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/oas-utils@0.6.26**
+- **@swagglar/oas-utils@0.6.26**
 
 ## 0.16.28
 
@@ -861,7 +861,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/oas-utils@0.6.25**
+- **@swagglar/oas-utils@0.6.25**
 
 ## 0.16.27
 
@@ -869,7 +869,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/oas-utils@0.6.24**
+- **@swagglar/oas-utils@0.6.24**
 
 ## 0.16.26
 
@@ -879,7 +879,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/oas-utils@0.6.23**
+- **@swagglar/oas-utils@0.6.23**
 
 ## 0.16.25
 
@@ -887,7 +887,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/oas-utils@0.6.22**
+- **@swagglar/oas-utils@0.6.22**
   - [#7814](https://github.com/scalar/scalar/pull/7814): fix: additional properties generate invalid example
 
 ## 0.16.24
@@ -898,7 +898,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/oas-utils@0.6.21**
+- **@swagglar/oas-utils@0.6.21**
 
 ## 0.16.23
 
@@ -906,7 +906,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/oas-utils@0.6.20**
+- **@swagglar/oas-utils@0.6.20**
 
 ## 0.16.22
 
@@ -914,10 +914,10 @@
 
 #### Updated Dependencies
 
-- **@scalar/helpers@0.2.8**
+- **@swagglar/helpers@0.2.8**
   - [#7751](https://github.com/scalar/scalar/pull/7751): fix: auth persistence
 
-- **@scalar/oas-utils@0.6.19**
+- **@swagglar/oas-utils@0.6.19**
 
 ## 0.16.21
 
@@ -925,7 +925,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/oas-utils@0.6.18**
+- **@swagglar/oas-utils@0.6.18**
 
 ## 0.16.20
 
@@ -933,7 +933,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/oas-utils@0.6.17**
+- **@swagglar/oas-utils@0.6.17**
 
 ## 0.16.19
 
@@ -944,13 +944,13 @@
 
 #### Updated Dependencies
 
-- **@scalar/helpers@0.2.7**
+- **@swagglar/helpers@0.2.7**
   - [#7720](https://github.com/scalar/scalar/pull/7720): feat: escape XML in json2xml
 
-- **@scalar/use-hooks@0.3.6**
+- **@swagglar/use-hooks@0.3.6**
   - [#7678](https://github.com/scalar/scalar/pull/7678): feat: added object stringification to useClipboard
 
-- **@scalar/oas-utils@0.6.16**
+- **@swagglar/oas-utils@0.6.16**
 
 ## 0.16.18
 
@@ -958,7 +958,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/oas-utils@0.6.15**
+- **@swagglar/oas-utils@0.6.15**
 
 ## 0.16.17
 
@@ -972,13 +972,13 @@
 
 #### Updated Dependencies
 
-- **@scalar/use-hooks@0.3.5**
+- **@swagglar/use-hooks@0.3.5**
   - [#7661](https://github.com/scalar/scalar/pull/7661): fix: all issues for client modal v2 preparation
 
-- **@scalar/helpers@0.2.6**
+- **@swagglar/helpers@0.2.6**
   - [#7661](https://github.com/scalar/scalar/pull/7661): fix: all issues for client modal v2 preparation
 
-- **@scalar/oas-utils@0.6.14**
+- **@swagglar/oas-utils@0.6.14**
 
 ## 0.16.15
 
@@ -986,13 +986,13 @@
 
 #### Updated Dependencies
 
-- **@scalar/use-hooks@0.3.4**
+- **@swagglar/use-hooks@0.3.4**
   - [#7605](https://github.com/scalar/scalar/pull/7605): fix: all issues for client modal v2 preparation
 
-- **@scalar/helpers@0.2.5**
+- **@swagglar/helpers@0.2.5**
   - [#7605](https://github.com/scalar/scalar/pull/7605): fix: all issues for client modal v2 preparation
 
-- **@scalar/oas-utils@0.6.13**
+- **@swagglar/oas-utils@0.6.13**
 
 ## 0.16.14
 
@@ -1002,17 +1002,17 @@
 
 #### Updated Dependencies
 
-- **@scalar/code-highlight@0.2.2**
+- **@swagglar/code-highlight@0.2.2**
 
-- **@scalar/helpers@0.2.4**
+- **@swagglar/helpers@0.2.4**
 
-- **@scalar/icons@0.5.2**
+- **@swagglar/icons@0.5.2**
 
-- **@scalar/oas-utils@0.6.12**
+- **@swagglar/oas-utils@0.6.12**
 
-- **@scalar/themes@0.13.26**
+- **@swagglar/themes@0.13.26**
 
-- **@scalar/use-hooks@0.3.3**
+- **@swagglar/use-hooks@0.3.3**
 
 ## 0.16.13
 
@@ -1026,13 +1026,13 @@
   - `MaybeElement`
   - `ScalarComboBox#isGroup`
 
-- [#7584](https://github.com/scalar/scalar/pull/7584): fix: remove unused `@scalar/use-toasts` dependency
+- [#7584](https://github.com/scalar/scalar/pull/7584): fix: remove unused `@swagglar/use-toasts` dependency
 - [#7604](https://github.com/scalar/scalar/pull/7604): fix(components): improve sidebar groups
 - [#7589](https://github.com/scalar/scalar/pull/7589): chore(components): upgrade to Storybook 10
 
 #### Updated Dependencies
 
-- **@scalar/oas-utils@0.6.12**
+- **@swagglar/oas-utils@0.6.12**
 
 ## 0.16.12
 
@@ -1048,14 +1048,14 @@
 
 #### Updated Dependencies
 
-- **@scalar/helpers@0.2.4**
+- **@swagglar/helpers@0.2.4**
   - [#7581](https://github.com/scalar/scalar/pull/7581): fix: npm publish job
   - [#7567](https://github.com/scalar/scalar/pull/7567): feat: add code samples to client v2
 
-- **@scalar/icons@0.5.2**
+- **@swagglar/icons@0.5.2**
   - [#7581](https://github.com/scalar/scalar/pull/7581): fix: npm publish job
 
-- **@scalar/oas-utils@0.6.11**
+- **@swagglar/oas-utils@0.6.11**
   - [#7581](https://github.com/scalar/scalar/pull/7581): fix: npm publish job
 
 ## 0.16.10
@@ -1066,30 +1066,30 @@
 
 #### Updated Dependencies
 
-- **@scalar/icons@0.5.1**
+- **@swagglar/icons@0.5.1**
   - [#7542](https://github.com/scalar/scalar/pull/7542): fix: move `generate-icons` script outside of src folder
 
 No need to include it in published packages
 
 - [#7542](https://github.com/scalar/scalar/pull/7542): fix: use named instead of star exports
 
-- **@scalar/helpers@0.2.3**
+- **@swagglar/helpers@0.2.3**
   - [#7575](https://github.com/scalar/scalar/pull/7575): feat: add support for object examples + hide body when empty
 
-- **@scalar/oas-utils@0.6.10**
+- **@swagglar/oas-utils@0.6.10**
 
 ## 0.16.9
 
 ### Patch Changes
 
 - Updated dependencies [[`93ffb63`](https://github.com/scalar/scalar/commit/93ffb63e9d97c7a4ea810d9eeb95cc416c368806)]:
-  - @scalar/code-highlight@0.2.2
-  - @scalar/oas-utils@0.6.9
-  - @scalar/helpers@0.2.2
-  - @scalar/icons@0.5.0
-  - @scalar/themes@0.13.26
-  - @scalar/use-hooks@0.3.3
-  - @scalar/use-toasts@0.9.1
+  - @swagglar/code-highlight@0.2.2
+  - @swagglar/oas-utils@0.6.9
+  - @swagglar/helpers@0.2.2
+  - @swagglar/icons@0.5.0
+  - @swagglar/themes@0.13.26
+  - @swagglar/use-hooks@0.3.3
+  - @swagglar/use-toasts@0.9.1
 
 ## 0.16.8
 
@@ -1098,28 +1098,28 @@ No need to include it in published packages
 - [#7520](https://github.com/scalar/scalar/pull/7520) [`4ac6227`](https://github.com/scalar/scalar/commit/4ac62278d4205c34a1a302b756ef3632185876cf) Thanks [@hwkr](https://github.com/hwkr)! - refactor(components): apply sidebar variables
 
 - Updated dependencies [[`f7c24e4`](https://github.com/scalar/scalar/commit/f7c24e4995580649dbc3cb87007a683f5dd91f7c), [`4ac6227`](https://github.com/scalar/scalar/commit/4ac62278d4205c34a1a302b756ef3632185876cf)]:
-  - @scalar/helpers@0.2.2
-  - @scalar/themes@0.13.26
-  - @scalar/oas-utils@0.6.8
-  - @scalar/code-highlight@0.2.1
+  - @swagglar/helpers@0.2.2
+  - @swagglar/themes@0.13.26
+  - @swagglar/oas-utils@0.6.8
+  - @swagglar/code-highlight@0.2.1
 
 ## 0.16.7
 
 ### Patch Changes
 
 - Updated dependencies [[`72cd82f`](https://github.com/scalar/scalar/commit/72cd82fb8df63a9e5d0db1202978aebfefd0457a), [`21aa62e`](https://github.com/scalar/scalar/commit/21aa62e2ebdd262cb5aa53658c3b659736660722), [`72cd82f`](https://github.com/scalar/scalar/commit/72cd82fb8df63a9e5d0db1202978aebfefd0457a)]:
-  - @scalar/oas-utils@0.6.7
-  - @scalar/helpers@0.2.1
-  - @scalar/use-hooks@0.3.3
+  - @swagglar/oas-utils@0.6.7
+  - @swagglar/helpers@0.2.1
+  - @swagglar/use-hooks@0.3.3
 
 ## 0.16.6
 
 ### Patch Changes
 
 - Updated dependencies [[`9ec8adf`](https://github.com/scalar/scalar/commit/9ec8adfea017333dee5bc3949104232f7dc57f4a), [`cc4de25`](https://github.com/scalar/scalar/commit/cc4de2587b36f0d169b01c1bf312ba91b67e3e0c)]:
-  - @scalar/helpers@0.2.0
-  - @scalar/use-hooks@0.3.2
-  - @scalar/oas-utils@0.6.6
+  - @swagglar/helpers@0.2.0
+  - @swagglar/use-hooks@0.3.2
+  - @swagglar/oas-utils@0.6.6
 
 ## 0.16.5
 
@@ -1130,13 +1130,13 @@ No need to include it in published packages
 - [#7460](https://github.com/scalar/scalar/pull/7460) [`62b5210`](https://github.com/scalar/scalar/commit/62b521092bafeb8e83e79222e13378c4a19defc8) Thanks [@hwkr](https://github.com/hwkr)! - feat(components): update and polish ScalarLoading
 
 - Updated dependencies [[`781f264`](https://github.com/scalar/scalar/commit/781f2648bc758a251435c3a1e2b126a37f20e44f), [`ea13cd2`](https://github.com/scalar/scalar/commit/ea13cd2a44ff1ba7f19abcfcad1e51c9e7a0b75d), [`bfd814a`](https://github.com/scalar/scalar/commit/bfd814a4219660face190041cc4845182b56ab03), [`ea13cd2`](https://github.com/scalar/scalar/commit/ea13cd2a44ff1ba7f19abcfcad1e51c9e7a0b75d), [`781f264`](https://github.com/scalar/scalar/commit/781f2648bc758a251435c3a1e2b126a37f20e44f), [`35af6bf`](https://github.com/scalar/scalar/commit/35af6bfce4bc4ae3d0fc5783ea36e0165e964361), [`86f028d`](https://github.com/scalar/scalar/commit/86f028deb0b456f923edd261f5f4b0fa9b616b7d)]:
-  - @scalar/code-highlight@0.2.1
-  - @scalar/use-toasts@0.9.1
-  - @scalar/helpers@0.1.3
-  - @scalar/themes@0.13.25
-  - @scalar/oas-utils@0.6.5
-  - @scalar/icons@0.5.0
-  - @scalar/use-hooks@0.3.1
+  - @swagglar/code-highlight@0.2.1
+  - @swagglar/use-toasts@0.9.1
+  - @swagglar/helpers@0.1.3
+  - @swagglar/themes@0.13.25
+  - @swagglar/oas-utils@0.6.5
+  - @swagglar/icons@0.5.0
+  - @swagglar/use-hooks@0.3.1
 
 ## 0.16.4
 
@@ -1147,13 +1147,13 @@ No need to include it in published packages
 - [#7348](https://github.com/scalar/scalar/pull/7348) [`cded2d6`](https://github.com/scalar/scalar/commit/cded2d6c087418c3c44731d344d0827a87b78b74) Thanks [@hwkr](https://github.com/hwkr)! - feat(components): add ScalarWrappingText component
 
 - Updated dependencies [[`d86f1d6`](https://github.com/scalar/scalar/commit/d86f1d6911ecbca70b011a2a0efb6d6e0eca59bb), [`0519a33`](https://github.com/scalar/scalar/commit/0519a33c7d3f3cf65b93b37392c51d3c0586cbab), [`5a108fc`](https://github.com/scalar/scalar/commit/5a108fcbc52ae7957731c23689896ba353b83d3b), [`cded2d6`](https://github.com/scalar/scalar/commit/cded2d6c087418c3c44731d344d0827a87b78b74)]:
-  - @scalar/helpers@0.1.2
-  - @scalar/oas-utils@0.6.4
-  - @scalar/themes@0.13.24
-  - @scalar/code-highlight@0.2.0
-  - @scalar/icons@0.5.0
-  - @scalar/use-hooks@0.3.0
-  - @scalar/use-toasts@0.9.0
+  - @swagglar/helpers@0.1.2
+  - @swagglar/oas-utils@0.6.4
+  - @swagglar/themes@0.13.24
+  - @swagglar/code-highlight@0.2.0
+  - @swagglar/icons@0.5.0
+  - @swagglar/use-hooks@0.3.0
+  - @swagglar/use-toasts@0.9.0
 
 ## 0.16.3
 
@@ -1162,23 +1162,23 @@ No need to include it in published packages
 - [#7252](https://github.com/scalar/scalar/pull/7252) [`4bec1ba`](https://github.com/scalar/scalar/commit/4bec1ba332e919c4ee32dcfbfb07bd8ee42c4d74) Thanks [@hwkr](https://github.com/hwkr)! - fix(api-reference): improve wrapping of long strings
 
 - Updated dependencies [[`9c9dbba`](https://github.com/scalar/scalar/commit/9c9dbbaa940667303f0ace59469fd78c2a741937), [`4bec1ba`](https://github.com/scalar/scalar/commit/4bec1ba332e919c4ee32dcfbfb07bd8ee42c4d74)]:
-  - @scalar/helpers@0.1.1
-  - @scalar/oas-utils@0.6.3
+  - @swagglar/helpers@0.1.1
+  - @swagglar/oas-utils@0.6.3
 
 ## 0.16.2
 
 ### Patch Changes
 
 - Updated dependencies [[`fddf294`](https://github.com/scalar/scalar/commit/fddf294b00dd8c9eb5c713c338f2ec6e3f62523d), [`c1ecd0c`](https://github.com/scalar/scalar/commit/c1ecd0c6096f3fbe2e3d8ad3794ea718bb6bce66), [`2377b76`](https://github.com/scalar/scalar/commit/2377b76d050f8de70037b17a32d0dd1181d3311d)]:
-  - @scalar/helpers@0.1.0
-  - @scalar/oas-utils@0.6.2
+  - @swagglar/helpers@0.1.0
+  - @swagglar/oas-utils@0.6.2
 
 ## 0.16.1
 
 ### Patch Changes
 
 - Updated dependencies []:
-  - @scalar/oas-utils@0.6.1
+  - @swagglar/oas-utils@0.6.1
 
 ## 0.16.0
 
@@ -1209,13 +1209,13 @@ No need to include it in published packages
 - [#7183](https://github.com/scalar/scalar/pull/7183) [`c72a2c5`](https://github.com/scalar/scalar/commit/c72a2c59eb80e1f5e216c687229ff90bea88f554) Thanks [@hwkr](https://github.com/hwkr)! - test(components): fixture team picker snapshots
 
 - Updated dependencies [[`6ec8c29`](https://github.com/scalar/scalar/commit/6ec8c299d912111b029e8058979d00968b70691a), [`9661e81`](https://github.com/scalar/scalar/commit/9661e81907d1a9b74ba30f270f2d6c8e49834cd5), [`81b0a7a`](https://github.com/scalar/scalar/commit/81b0a7a4245619f03161eae639dc5834b77432b6), [`0319b8a`](https://github.com/scalar/scalar/commit/0319b8a8652a50667776b2e9fd27c3e15b34f765), [`6a090a2`](https://github.com/scalar/scalar/commit/6a090a2e07ef961c56041c85ee9786180437593a), [`eba18d0`](https://github.com/scalar/scalar/commit/eba18d06267a163a8f91396a66f817100ee59461), [`0d9c945`](https://github.com/scalar/scalar/commit/0d9c945a696ea8b826d86f7b48ec6de4d85e64f0)]:
-  - @scalar/helpers@0.0.13
-  - @scalar/oas-utils@0.6.0
-  - @scalar/use-hooks@0.3.0
-  - @scalar/use-toasts@0.9.0
-  - @scalar/icons@0.5.0
-  - @scalar/themes@0.13.23
-  - @scalar/code-highlight@0.2.0
+  - @swagglar/helpers@0.0.13
+  - @swagglar/oas-utils@0.6.0
+  - @swagglar/use-hooks@0.3.0
+  - @swagglar/use-toasts@0.9.0
+  - @swagglar/icons@0.5.0
+  - @swagglar/themes@0.13.23
+  - @swagglar/code-highlight@0.2.0
 
 ## 0.15.1
 
@@ -1224,10 +1224,10 @@ No need to include it in published packages
 - f8efecd: chore: accept unknown in code block
 - Updated dependencies [3f6d0b9]
 - Updated dependencies [f8efecd]
-  - @scalar/helpers@0.0.12
-  - @scalar/oas-utils@0.5.2
-  - @scalar/themes@0.13.22
-  - @scalar/code-highlight@0.2.0
+  - @swagglar/helpers@0.0.12
+  - @swagglar/oas-utils@0.5.2
+  - @swagglar/themes@0.13.22
+  - @swagglar/code-highlight@0.2.0
 
 ## 0.15.0
 
@@ -1242,9 +1242,9 @@ No need to include it in published packages
 - 90d54b6: fix(components): use border to table instead of box shadow
 - Updated dependencies [debdcf6]
 - Updated dependencies [13dcd89]
-  - @scalar/oas-utils@0.5.1
-  - @scalar/themes@0.13.21
-  - @scalar/code-highlight@0.2.0
+  - @swagglar/oas-utils@0.5.1
+  - @swagglar/themes@0.13.21
+  - @swagglar/code-highlight@0.2.0
 
 ## 0.14.40
 
@@ -1253,15 +1253,15 @@ No need to include it in published packages
 - a9f8d56: test(components): expand markdown lists test baselines
 - Updated dependencies [008a0f3]
 - Updated dependencies [f833196]
-  - @scalar/oas-utils@0.5.0
-  - @scalar/themes@0.13.20
-  - @scalar/code-highlight@0.2.0
+  - @swagglar/oas-utils@0.5.0
+  - @swagglar/themes@0.13.20
+  - @swagglar/code-highlight@0.2.0
 
 ## 0.14.39
 
 ### Patch Changes
 
-- @scalar/oas-utils@0.4.34
+- @swagglar/oas-utils@0.4.34
 
 ## 0.14.38
 
@@ -1270,31 +1270,31 @@ No need to include it in published packages
 - 0b3c6fa: feat(api-reference): localhost development toolbar
 - bbceb27: fix: long words break markdown table layout
 - Updated dependencies [0b3c6fa]
-  - @scalar/themes@0.13.19
-  - @scalar/code-highlight@0.2.0
-  - @scalar/oas-utils@0.4.33
+  - @swagglar/themes@0.13.19
+  - @swagglar/code-highlight@0.2.0
+  - @swagglar/oas-utils@0.4.33
 
 ## 0.14.37
 
 ### Patch Changes
 
 - db5b649: feat: auth selector block
-  - @scalar/oas-utils@0.4.32
+  - @swagglar/oas-utils@0.4.32
 
 ## 0.14.36
 
 ### Patch Changes
 
-- @scalar/oas-utils@0.4.31
+- @swagglar/oas-utils@0.4.31
 
 ## 0.14.35
 
 ### Patch Changes
 
 - Updated dependencies [0aa6d26]
-  - @scalar/code-highlight@0.2.0
-  - @scalar/oas-utils@0.4.30
-  - @scalar/themes@0.13.18
+  - @swagglar/code-highlight@0.2.0
+  - @swagglar/oas-utils@0.4.30
+  - @swagglar/themes@0.13.18
 
 ## 0.14.34
 
@@ -1304,23 +1304,23 @@ No need to include it in published packages
 - 8f2a2f2: Bump some dependencies to latest
 - Updated dependencies [bff46e5]
 - Updated dependencies [8f2a2f2]
-  - @scalar/helpers@0.0.11
-  - @scalar/use-hooks@0.2.5
-  - @scalar/themes@0.13.17
-  - @scalar/oas-utils@0.4.29
-  - @scalar/code-highlight@0.1.9
+  - @swagglar/helpers@0.0.11
+  - @swagglar/use-hooks@0.2.5
+  - @swagglar/themes@0.13.17
+  - @swagglar/oas-utils@0.4.29
+  - @swagglar/code-highlight@0.1.9
 
 ## 0.14.33
 
 ### Patch Changes
 
-- @scalar/oas-utils@0.4.28
+- @swagglar/oas-utils@0.4.28
 
 ## 0.14.32
 
 ### Patch Changes
 
-- @scalar/oas-utils@0.4.27
+- @swagglar/oas-utils@0.4.27
 
 ## 0.14.31
 
@@ -1328,23 +1328,23 @@ No need to include it in published packages
 
 - 2249fe3: fix: a > img takes the full width
 - Updated dependencies [821717b]
-  - @scalar/oas-utils@0.4.26
-  - @scalar/helpers@0.0.10
+  - @swagglar/oas-utils@0.4.26
+  - @swagglar/helpers@0.0.10
 
 ## 0.14.30
 
 ### Patch Changes
 
-- @scalar/oas-utils@0.4.25
+- @swagglar/oas-utils@0.4.25
 
 ## 0.14.29
 
 ### Patch Changes
 
 - c470c60: fix(components): update scalar menu button flex
-  - @scalar/oas-utils@0.4.24
-  - @scalar/themes@0.13.16
-  - @scalar/code-highlight@0.1.9
+  - @swagglar/oas-utils@0.4.24
+  - @swagglar/themes@0.13.16
+  - @swagglar/code-highlight@0.1.9
 
 ## 0.14.28
 
@@ -1359,18 +1359,18 @@ No need to include it in published packages
 - Updated dependencies [2b22eab]
 - Updated dependencies [0e747c7]
 - Updated dependencies [976366f]
-  - @scalar/oas-utils@0.4.23
-  - @scalar/helpers@0.0.9
-  - @scalar/themes@0.13.15
-  - @scalar/code-highlight@0.1.9
+  - @swagglar/oas-utils@0.4.23
+  - @swagglar/helpers@0.0.9
+  - @swagglar/themes@0.13.15
+  - @swagglar/code-highlight@0.1.9
 
 ## 0.14.27
 
 ### Patch Changes
 
-- @scalar/oas-utils@0.4.22
-- @scalar/themes@0.13.14
-- @scalar/code-highlight@0.1.9
+- @swagglar/oas-utils@0.4.22
+- @swagglar/themes@0.13.14
+- @swagglar/code-highlight@0.1.9
 
 ## 0.14.26
 
@@ -1378,7 +1378,7 @@ No need to include it in published packages
 
 - Updated dependencies [e2272a1]
 - Updated dependencies [b6f4b60]
-  - @scalar/oas-utils@0.4.21
+  - @swagglar/oas-utils@0.4.21
 
 ## 0.14.25
 
@@ -1394,13 +1394,13 @@ No need to include it in published packages
 - Updated dependencies [66b18fc]
 - Updated dependencies [5f022b5]
 - Updated dependencies [6c24be9]
-  - @scalar/oas-utils@0.4.20
-  - @scalar/helpers@0.0.8
-  - @scalar/themes@0.13.13
-  - @scalar/code-highlight@0.1.9
-  - @scalar/icons@0.4.7
-  - @scalar/use-hooks@0.2.4
-  - @scalar/use-toasts@0.8.0
+  - @swagglar/oas-utils@0.4.20
+  - @swagglar/helpers@0.0.8
+  - @swagglar/themes@0.13.13
+  - @swagglar/code-highlight@0.1.9
+  - @swagglar/icons@0.4.7
+  - @swagglar/use-hooks@0.2.4
+  - @swagglar/use-toasts@0.8.0
 
 ## 0.14.24
 
@@ -1410,19 +1410,19 @@ No need to include it in published packages
 - fbafeab: test(components): add snapshot testing to scalar components
 - Updated dependencies [3de82ac]
 - Updated dependencies [b1ceaab]
-  - @scalar/oas-utils@0.4.19
-  - @scalar/icons@0.4.7
-  - @scalar/code-highlight@0.1.9
-  - @scalar/themes@0.13.12
-  - @scalar/use-hooks@0.2.4
-  - @scalar/use-toasts@0.8.0
+  - @swagglar/oas-utils@0.4.19
+  - @swagglar/icons@0.4.7
+  - @swagglar/code-highlight@0.1.9
+  - @swagglar/themes@0.13.12
+  - @swagglar/use-hooks@0.2.4
+  - @swagglar/use-toasts@0.8.0
 
 ## 0.14.23
 
 ### Patch Changes
 
 - Updated dependencies [46bfd2f]
-  - @scalar/oas-utils@0.4.18
+  - @swagglar/oas-utils@0.4.18
 
 ## 0.14.22
 
@@ -1430,7 +1430,7 @@ No need to include it in published packages
 
 - dd00357: feat(components): add support for custom combobox items
 - Updated dependencies [46ebe6e]
-  - @scalar/oas-utils@0.4.17
+  - @swagglar/oas-utils@0.4.17
 
 ## 0.14.21
 
@@ -1446,9 +1446,9 @@ No need to include it in published packages
 - Updated dependencies [952f471]
 - Updated dependencies [b957a2c]
 - Updated dependencies [3c1e3e3]
-  - @scalar/code-highlight@0.1.9
-  - @scalar/oas-utils@0.4.16
-  - @scalar/themes@0.13.12
+  - @swagglar/code-highlight@0.1.9
+  - @swagglar/oas-utils@0.4.16
+  - @swagglar/themes@0.13.12
 
 ## 0.14.20
 
@@ -1457,9 +1457,9 @@ No need to include it in published packages
 - 60c7bef: fix: updates auth description overflowing line clamp
 - cac47ea: fix: sets missing line height contraint and transform reset
 - Updated dependencies [fb62e1b]
-  - @scalar/themes@0.13.11
-  - @scalar/oas-utils@0.4.15
-  - @scalar/code-highlight@0.1.8
+  - @swagglar/themes@0.13.11
+  - @swagglar/oas-utils@0.4.15
+  - @swagglar/code-highlight@0.1.8
 
 ## 0.14.19
 
@@ -1474,9 +1474,9 @@ No need to include it in published packages
 - Updated dependencies [85ee2ce]
 - Updated dependencies [85ee2ce]
 - Updated dependencies [8a67f4f]
-  - @scalar/code-highlight@0.1.8
-  - @scalar/themes@0.13.10
-  - @scalar/oas-utils@0.4.14
+  - @swagglar/code-highlight@0.1.8
+  - @swagglar/themes@0.13.10
+  - @swagglar/oas-utils@0.4.14
 
 ## 0.14.18
 
@@ -1485,8 +1485,8 @@ No need to include it in published packages
 - 934dff9: feat(components): sidebar component follow up
 - Updated dependencies [6ab3a21]
 - Updated dependencies [71958fd]
-  - @scalar/code-highlight@0.1.7
-  - @scalar/oas-utils@0.4.13
+  - @swagglar/code-highlight@0.1.7
+  - @swagglar/oas-utils@0.4.13
 
 ## 0.14.17
 
@@ -1500,9 +1500,9 @@ No need to include it in published packages
 - Updated dependencies [c826b3e]
 - Updated dependencies [903f975]
 - Updated dependencies [80acf84]
-  - @scalar/themes@0.13.9
-  - @scalar/oas-utils@0.4.12
-  - @scalar/code-highlight@0.1.6
+  - @swagglar/themes@0.13.9
+  - @swagglar/oas-utils@0.4.12
+  - @swagglar/code-highlight@0.1.6
 
 ## 0.14.16
 
@@ -1514,21 +1514,21 @@ No need to include it in published packages
 - Updated dependencies [58287f8]
 - Updated dependencies [74fdc0e]
 - Updated dependencies [3fdc2f2]
-  - @scalar/oas-utils@0.4.11
-  - @scalar/themes@0.13.8
-  - @scalar/code-highlight@0.1.5
+  - @swagglar/oas-utils@0.4.11
+  - @swagglar/themes@0.13.8
+  - @swagglar/code-highlight@0.1.5
 
 ## 0.14.15
 
 ### Patch Changes
 
 - Updated dependencies [2d7f995]
-  - @scalar/code-highlight@0.1.5
-  - @scalar/oas-utils@0.4.10
-  - @scalar/use-hooks@0.2.4
-  - @scalar/themes@0.13.7
-  - @scalar/icons@0.4.6
-  - @scalar/use-toasts@0.8.0
+  - @swagglar/code-highlight@0.1.5
+  - @swagglar/oas-utils@0.4.10
+  - @swagglar/use-hooks@0.2.4
+  - @swagglar/themes@0.13.7
+  - @swagglar/icons@0.4.6
+  - @swagglar/use-toasts@0.8.0
 
 ## 0.14.14
 
@@ -1540,10 +1540,10 @@ No need to include it in published packages
 - 8e85856: fix: autofocus scroll on popover panel
 - Updated dependencies [4f47b3c]
 - Updated dependencies [23b150b]
-  - @scalar/icons@0.4.5
-  - @scalar/oas-utils@0.4.9
-  - @scalar/themes@0.13.6
-  - @scalar/code-highlight@0.1.4
+  - @swagglar/icons@0.4.5
+  - @swagglar/oas-utils@0.4.9
+  - @swagglar/themes@0.13.6
+  - @swagglar/code-highlight@0.1.4
 
 ## 0.14.13
 
@@ -1552,19 +1552,19 @@ No need to include it in published packages
 - c907685: fix(components): set sidebar search button leading
 - 4bbbb32: feat(components): add sidebar sections
 - Updated dependencies [4bbbb32]
-  - @scalar/use-hooks@0.2.3
-  - @scalar/themes@0.13.5
-  - @scalar/code-highlight@0.1.4
-  - @scalar/oas-utils@0.4.8
+  - @swagglar/use-hooks@0.2.3
+  - @swagglar/themes@0.13.5
+  - @swagglar/code-highlight@0.1.4
+  - @swagglar/oas-utils@0.4.8
 
 ## 0.14.12
 
 ### Patch Changes
 
 - Updated dependencies [ca18c0b]
-  - @scalar/themes@0.13.4
-  - @scalar/code-highlight@0.1.4
-  - @scalar/oas-utils@0.4.7
+  - @swagglar/themes@0.13.4
+  - @swagglar/code-highlight@0.1.4
+  - @swagglar/oas-utils@0.4.7
 
 ## 0.14.11
 
@@ -1572,7 +1572,7 @@ No need to include it in published packages
 
 - 699df60: feat(components): sidebar search input / button
 - Updated dependencies [699df60]
-  - @scalar/icons@0.4.4
+  - @swagglar/icons@0.4.4
 
 ## 0.14.10
 
@@ -1580,14 +1580,14 @@ No need to include it in published packages
 
 - Updated dependencies [979139e]
 - Updated dependencies [aaf90bf]
-  - @scalar/oas-utils@0.4.6
+  - @swagglar/oas-utils@0.4.6
 
 ## 0.14.9
 
 ### Patch Changes
 
 - Updated dependencies [7913193]
-  - @scalar/code-highlight@0.1.4
+  - @swagglar/code-highlight@0.1.4
 
 ## 0.14.8
 
@@ -1600,18 +1600,18 @@ No need to include it in published packages
 - Updated dependencies [4156f1d]
 - Updated dependencies [a37df33]
 - Updated dependencies [177438d]
-  - @scalar/oas-utils@0.4.5
-  - @scalar/code-highlight@0.1.3
-  - @scalar/icons@0.4.3
-  - @scalar/themes@0.13.3
-  - @scalar/use-hooks@0.2.2
-  - @scalar/use-toasts@0.8.0
+  - @swagglar/oas-utils@0.4.5
+  - @swagglar/code-highlight@0.1.3
+  - @swagglar/icons@0.4.3
+  - @swagglar/themes@0.13.3
+  - @swagglar/use-hooks@0.2.2
+  - @swagglar/use-toasts@0.8.0
 
 ## 0.14.7
 
 ### Patch Changes
 
-- @scalar/oas-utils@0.4.4
+- @swagglar/oas-utils@0.4.4
 
 ## 0.14.6
 
@@ -1622,12 +1622,12 @@ No need to include it in published packages
 - Updated dependencies [ba84a3c]
 - Updated dependencies [8165b3b]
 - Updated dependencies [358eb63]
-  - @scalar/code-highlight@0.1.2
-  - @scalar/themes@0.13.2
-  - @scalar/oas-utils@0.4.3
-  - @scalar/icons@0.4.2
-  - @scalar/use-hooks@0.2.2
-  - @scalar/use-toasts@0.8.0
+  - @swagglar/code-highlight@0.1.2
+  - @swagglar/themes@0.13.2
+  - @swagglar/oas-utils@0.4.3
+  - @swagglar/icons@0.4.2
+  - @swagglar/use-hooks@0.2.2
+  - @swagglar/use-toasts@0.8.0
 
 ## 0.14.5
 
@@ -1636,16 +1636,16 @@ No need to include it in published packages
 - f1c0c01: fix(components): clean up ScalarButton disabled behaviour
 - df7efac: fix: reverts variant change zoomed to md in scalar modal
 - Updated dependencies [7ca47ab]
-  - @scalar/oas-utils@0.4.2
+  - @swagglar/oas-utils@0.4.2
 
 ## 0.14.4
 
 ### Patch Changes
 
 - Updated dependencies [85877aa]
-  - @scalar/themes@0.13.1
-  - @scalar/code-highlight@0.1.1
-  - @scalar/oas-utils@0.4.1
+  - @swagglar/themes@0.13.1
+  - @swagglar/code-highlight@0.1.1
+  - @swagglar/oas-utils@0.4.1
 
 ## 0.14.3
 
@@ -1658,12 +1658,12 @@ No need to include it in published packages
 - Updated dependencies [785939b]
 - Updated dependencies [1e87feb]
 - Updated dependencies [cad6277]
-  - @scalar/code-highlight@0.1.1
-  - @scalar/oas-utils@0.4.0
-  - @scalar/themes@0.13.0
-  - @scalar/use-hooks@0.2.2
-  - @scalar/icons@0.4.2
-  - @scalar/use-toasts@0.8.0
+  - @swagglar/code-highlight@0.1.1
+  - @swagglar/oas-utils@0.4.0
+  - @swagglar/themes@0.13.0
+  - @swagglar/use-hooks@0.2.2
+  - @swagglar/icons@0.4.2
+  - @swagglar/use-toasts@0.8.0
 
 ## 0.14.2
 
@@ -1671,7 +1671,7 @@ No need to include it in published packages
 
 - Updated dependencies [151ef09]
 - Updated dependencies [442c0a3]
-  - @scalar/oas-utils@0.3.2
+  - @swagglar/oas-utils@0.3.2
 
 ## 0.14.1
 
@@ -1679,11 +1679,11 @@ No need to include it in published packages
 
 - 4440949: chore: bumping packages
 - Updated dependencies [4440949]
-  - @scalar/oas-utils@0.3.1
-  - @scalar/themes@0.12.1
-  - @scalar/code-highlight@0.1.0
-  - @scalar/use-hooks@0.2.1
-  - @scalar/icons@0.4.1
+  - @swagglar/oas-utils@0.3.1
+  - @swagglar/themes@0.12.1
+  - @swagglar/code-highlight@0.1.0
+  - @swagglar/use-hooks@0.2.1
+  - @swagglar/icons@0.4.1
 
 ## 0.14.0
 
@@ -1698,22 +1698,22 @@ No need to include it in published packages
 - Updated dependencies [30bab1d]
 - Updated dependencies [5613e40]
 - Updated dependencies [483ca93]
-  - @scalar/oas-utils@0.3.0
-  - @scalar/themes@0.12.0
-  - @scalar/code-highlight@0.1.0
-  - @scalar/use-toasts@0.8.0
-  - @scalar/use-hooks@0.2.0
-  - @scalar/icons@0.4.0
+  - @swagglar/oas-utils@0.3.0
+  - @swagglar/themes@0.12.0
+  - @swagglar/code-highlight@0.1.0
+  - @swagglar/use-toasts@0.8.0
+  - @swagglar/use-hooks@0.2.0
+  - @swagglar/icons@0.4.0
 
 ## 0.13.59
 
 ### Patch Changes
 
 - 1843cfe: fix(components): set search result item to use an anchor tag
-  - @scalar/themes@0.11.3
-  - @scalar/code-highlight@0.0.29
-  - @scalar/use-hooks@0.1.50
-  - @scalar/icons@0.3.7
+  - @swagglar/themes@0.11.3
+  - @swagglar/code-highlight@0.0.29
+  - @swagglar/use-hooks@0.1.50
+  - @swagglar/icons@0.3.7
 
 ## 0.13.58
 
@@ -1721,10 +1721,10 @@ No need to include it in published packages
 
 - af38fa6: feat: updates scalar loading component style
 - Updated dependencies [90b773e]
-  - @scalar/themes@0.11.2
-  - @scalar/code-highlight@0.0.29
-  - @scalar/use-hooks@0.1.49
-  - @scalar/icons@0.3.6
+  - @swagglar/themes@0.11.2
+  - @swagglar/code-highlight@0.0.29
+  - @swagglar/use-hooks@0.1.49
+  - @swagglar/icons@0.3.6
 
 ## 0.13.57
 
@@ -1733,21 +1733,21 @@ No need to include it in published packages
 - 8c7bad8: chore: move build tooling to esbuild
 - Updated dependencies [8c7bad8]
 - Updated dependencies [2157fb4]
-  - @scalar/code-highlight@0.0.29
-  - @scalar/use-toasts@0.7.10
-  - @scalar/use-hooks@0.1.48
-  - @scalar/themes@0.11.1
-  - @scalar/icons@0.3.5
+  - @swagglar/code-highlight@0.0.29
+  - @swagglar/use-toasts@0.7.10
+  - @swagglar/use-hooks@0.1.48
+  - @swagglar/themes@0.11.1
+  - @swagglar/icons@0.3.5
 
 ## 0.13.56
 
 ### Patch Changes
 
 - Updated dependencies [e8457cb]
-  - @scalar/themes@0.11.0
-  - @scalar/code-highlight@0.0.28
-  - @scalar/use-hooks@0.1.47
-  - @scalar/icons@0.3.4
+  - @swagglar/themes@0.11.0
+  - @swagglar/code-highlight@0.0.28
+  - @swagglar/use-hooks@0.1.47
+  - @swagglar/icons@0.3.4
 
 ## 0.13.55
 
@@ -1759,30 +1759,30 @@ No need to include it in published packages
 
 ### Patch Changes
 
-- @scalar/themes@0.10.4
-- @scalar/code-highlight@0.0.27
-- @scalar/icons@0.3.3
-- @scalar/use-hooks@0.1.46
-- @scalar/use-toasts@0.7.9
+- @swagglar/themes@0.10.4
+- @swagglar/code-highlight@0.0.27
+- @swagglar/icons@0.3.3
+- @swagglar/use-hooks@0.1.46
+- @swagglar/use-toasts@0.7.9
 
 ## 0.13.53
 
 ### Patch Changes
 
-- @scalar/themes@0.10.3
-- @scalar/code-highlight@0.0.27
-- @scalar/use-hooks@0.1.45
-- @scalar/icons@0.3.2
+- @swagglar/themes@0.10.3
+- @swagglar/code-highlight@0.0.27
+- @swagglar/use-hooks@0.1.45
+- @swagglar/icons@0.3.2
 
 ## 0.13.52
 
 ### Patch Changes
 
 - 1f8ac99: chore: export type for combobox group
-  - @scalar/themes@0.10.2
-  - @scalar/code-highlight@0.0.27
-  - @scalar/use-hooks@0.1.44
-  - @scalar/icons@0.3.1
+  - @swagglar/themes@0.10.2
+  - @swagglar/code-highlight@0.0.27
+  - @swagglar/use-hooks@0.1.44
+  - @swagglar/icons@0.3.1
 
 ## 0.13.51
 
@@ -1792,20 +1792,20 @@ No need to include it in published packages
 - ab4cf5a: fix: adds text size variants to scalar tooltip
 - Updated dependencies [2b61d8e]
 - Updated dependencies [49f1297]
-  - @scalar/use-hooks@0.1.43
-  - @scalar/icons@0.3.0
-  - @scalar/themes@0.10.1
-  - @scalar/code-highlight@0.0.27
+  - @swagglar/use-hooks@0.1.43
+  - @swagglar/icons@0.3.0
+  - @swagglar/themes@0.10.1
+  - @swagglar/code-highlight@0.0.27
 
 ## 0.13.50
 
 ### Patch Changes
 
-- 363276e: feat(icons): add Phosphor icons to @scalar/icons
+- 363276e: feat(icons): add Phosphor icons to @swagglar/icons
 - a9f232a: fix(components): break words when wrapping search results
 - Updated dependencies [363276e]
-  - @scalar/icons@0.2.0
-  - @scalar/use-hooks@0.1.42
+  - @swagglar/icons@0.2.0
+  - @swagglar/use-hooks@0.1.42
 
 ## 0.13.49
 
@@ -1818,9 +1818,9 @@ No need to include it in published packages
 ### Patch Changes
 
 - Updated dependencies [feaa314]
-  - @scalar/themes@0.10.0
-  - @scalar/code-highlight@0.0.27
-  - @scalar/use-hooks@0.1.41
+  - @swagglar/themes@0.10.0
+  - @swagglar/code-highlight@0.0.27
+  - @swagglar/use-hooks@0.1.41
 
 ## 0.13.47
 
@@ -1828,18 +1828,18 @@ No need to include it in published packages
 
 - 5b19c90: refactor(components): cleanup old icons in Scalar components
 - f705230: feat(components): scalar form text field improvements
-  - @scalar/themes@0.9.86
-  - @scalar/code-highlight@0.0.27
-  - @scalar/use-hooks@0.1.40
+  - @swagglar/themes@0.9.86
+  - @swagglar/code-highlight@0.0.27
+  - @swagglar/use-hooks@0.1.40
 
 ## 0.13.46
 
 ### Patch Changes
 
 - Updated dependencies [8720ae7]
-  - @scalar/themes@0.9.85
-  - @scalar/code-highlight@0.0.27
-  - @scalar/use-hooks@0.1.39
+  - @swagglar/themes@0.9.85
+  - @swagglar/code-highlight@0.0.27
+  - @swagglar/use-hooks@0.1.39
 
 ## 0.13.45
 
@@ -1848,46 +1848,46 @@ No need to include it in published packages
 - 799845f: feat(components): allow ScalarCodeblock to support different font sizes
 - 73f5553: fix(api-reference): references search a11y improvements
 - Updated dependencies [799845f]
-  - @scalar/code-highlight@0.0.27
+  - @swagglar/code-highlight@0.0.27
 
 ## 0.13.44
 
 ### Patch Changes
 
 - Updated dependencies [0e888bc]
-  - @scalar/code-highlight@0.0.26
+  - @swagglar/code-highlight@0.0.26
 
 ## 0.13.43
 
 ### Patch Changes
 
-- @scalar/themes@0.9.84
-- @scalar/code-highlight@0.0.25
-- @scalar/use-hooks@0.1.38
+- @swagglar/themes@0.9.84
+- @swagglar/code-highlight@0.0.25
+- @swagglar/use-hooks@0.1.38
 
 ## 0.13.42
 
 ### Patch Changes
 
-- @scalar/themes@0.9.83
-- @scalar/code-highlight@0.0.25
-- @scalar/use-hooks@0.1.37
+- @swagglar/themes@0.9.83
+- @swagglar/code-highlight@0.0.25
+- @swagglar/use-hooks@0.1.37
 
 ## 0.13.41
 
 ### Patch Changes
 
-- @scalar/themes@0.9.82
-- @scalar/code-highlight@0.0.25
-- @scalar/use-hooks@0.1.36
+- @swagglar/themes@0.9.82
+- @swagglar/code-highlight@0.0.25
+- @swagglar/use-hooks@0.1.36
 
 ## 0.13.40
 
 ### Patch Changes
 
-- @scalar/themes@0.9.81
-- @scalar/code-highlight@0.0.25
-- @scalar/use-hooks@0.1.35
+- @swagglar/themes@0.9.81
+- @swagglar/code-highlight@0.0.25
+- @swagglar/use-hooks@0.1.35
 
 ## 0.13.39
 
@@ -1903,17 +1903,17 @@ No need to include it in published packages
 - 0f13162: chore: enable more Biome flags, apply linter fixes
 - cc1ec74: fix(components): use nearest for combobox scrollIntoView
 - 2716898: fix(components): handle no active option for combobox
-  - @scalar/themes@0.9.80
-  - @scalar/code-highlight@0.0.25
-  - @scalar/use-hooks@0.1.34
+  - @swagglar/themes@0.9.80
+  - @swagglar/code-highlight@0.0.25
+  - @swagglar/use-hooks@0.1.34
 
 ## 0.13.37
 
 ### Patch Changes
 
-- @scalar/themes@0.9.79
-- @scalar/code-highlight@0.0.25
-- @scalar/use-hooks@0.1.33
+- @swagglar/themes@0.9.79
+- @swagglar/code-highlight@0.0.25
+- @swagglar/use-hooks@0.1.33
 
 ## 0.13.36
 
@@ -1924,34 +1924,34 @@ No need to include it in published packages
 - Updated dependencies [1437882]
 - Updated dependencies [e00fa7e]
 - Updated dependencies [632978d]
-  - @scalar/themes@0.9.78
-  - @scalar/code-highlight@0.0.25
-  - @scalar/use-hooks@0.1.32
+  - @swagglar/themes@0.9.78
+  - @swagglar/code-highlight@0.0.25
+  - @swagglar/use-hooks@0.1.32
 
 ## 0.13.35
 
 ### Patch Changes
 
-- @scalar/themes@0.9.77
-- @scalar/code-highlight@0.0.24
-- @scalar/use-hooks@0.1.31
+- @swagglar/themes@0.9.77
+- @swagglar/code-highlight@0.0.24
+- @swagglar/use-hooks@0.1.31
 
 ## 0.13.34
 
 ### Patch Changes
 
-- @scalar/themes@0.9.76
-- @scalar/code-highlight@0.0.24
-- @scalar/use-hooks@0.1.30
+- @swagglar/themes@0.9.76
+- @swagglar/code-highlight@0.0.24
+- @swagglar/use-hooks@0.1.30
 
 ## 0.13.33
 
 ### Patch Changes
 
 - 4d03e0f: feat: multiple documents
-  - @scalar/themes@0.9.75
-  - @scalar/code-highlight@0.0.24
-  - @scalar/use-hooks@0.1.29
+  - @swagglar/themes@0.9.75
+  - @swagglar/code-highlight@0.0.24
+  - @swagglar/use-hooks@0.1.29
 
 ## 0.13.32
 
@@ -1961,24 +1961,24 @@ No need to include it in published packages
 - 8c5b0c6: fix: removes scalar modal scoped position
 - Updated dependencies [9319c0c]
 - Updated dependencies [9319c0c]
-  - @scalar/code-highlight@0.0.24
+  - @swagglar/code-highlight@0.0.24
 
 ## 0.13.31
 
 ### Patch Changes
 
 - 3f99afc: fix: removes auto margin in scalar modal
-  - @scalar/themes@0.9.74
-  - @scalar/code-highlight@0.0.23
-  - @scalar/use-hooks@0.1.28
+  - @swagglar/themes@0.9.74
+  - @swagglar/code-highlight@0.0.23
+  - @swagglar/use-hooks@0.1.28
 
 ## 0.13.30
 
 ### Patch Changes
 
-- @scalar/themes@0.9.73
-- @scalar/code-highlight@0.0.23
-- @scalar/use-hooks@0.1.27
+- @swagglar/themes@0.9.73
+- @swagglar/code-highlight@0.0.23
+- @swagglar/use-hooks@0.1.27
 
 ## 0.13.29
 
@@ -1986,10 +1986,10 @@ No need to include it in published packages
 
 - 479a2ef: fix(api-reference): improve references focus management
 - Updated dependencies [89d8b75]
-  - @scalar/themes@0.9.72
-  - @scalar/code-highlight@0.0.23
-  - @scalar/use-hooks@0.1.26
-  - @scalar/use-toasts@0.7.9
+  - @swagglar/themes@0.9.72
+  - @swagglar/code-highlight@0.0.23
+  - @swagglar/use-hooks@0.1.26
+  - @swagglar/use-toasts@0.7.9
 
 ## 0.13.28
 
@@ -1997,17 +1997,17 @@ No need to include it in published packages
 
 - 0d4520f: fix(themes): improve how we handle zoomed in screens
 - Updated dependencies [0d4520f]
-  - @scalar/use-hooks@0.1.25
-  - @scalar/themes@0.9.71
-  - @scalar/code-highlight@0.0.23
+  - @swagglar/use-hooks@0.1.25
+  - @swagglar/themes@0.9.71
+  - @swagglar/code-highlight@0.0.23
 
 ## 0.13.27
 
 ### Patch Changes
 
-- @scalar/themes@0.9.70
-- @scalar/code-highlight@0.0.23
-- @scalar/use-hooks@0.1.24
+- @swagglar/themes@0.9.70
+- @swagglar/code-highlight@0.0.23
+- @swagglar/use-hooks@0.1.24
 
 ## 0.13.26
 
@@ -2023,10 +2023,10 @@ No need to include it in published packages
 - Updated dependencies [c10bbf5]
 - Updated dependencies [9251b22]
 - Updated dependencies [8d9a2c0]
-  - @scalar/themes@0.9.69
-  - @scalar/code-highlight@0.0.23
-  - @scalar/use-hooks@0.1.23
-  - @scalar/use-toasts@0.7.9
+  - @swagglar/themes@0.9.69
+  - @swagglar/code-highlight@0.0.23
+  - @swagglar/use-hooks@0.1.23
+  - @swagglar/use-toasts@0.7.9
 
 ## 0.13.25
 
@@ -2036,10 +2036,10 @@ No need to include it in published packages
 - e47a698: feat: adds alert icon
 - Updated dependencies [e350f23]
 - Updated dependencies [e47a698]
-  - @scalar/code-highlight@0.0.22
-  - @scalar/themes@0.9.68
-  - @scalar/use-hooks@0.1.22
-  - @scalar/use-toasts@0.7.9
+  - @swagglar/code-highlight@0.0.22
+  - @swagglar/themes@0.9.68
+  - @swagglar/use-hooks@0.1.22
+  - @swagglar/use-toasts@0.7.9
 
 ## 0.13.24
 
@@ -2048,10 +2048,10 @@ No need to include it in published packages
 - 825bc40: feat(components): update lock icons to align with other icons
 - Updated dependencies [fa6afe8]
 - Updated dependencies [1223c1f]
-  - @scalar/code-highlight@0.0.21
-  - @scalar/use-toasts@0.7.9
-  - @scalar/use-hooks@0.1.21
-  - @scalar/themes@0.9.67
+  - @swagglar/code-highlight@0.0.21
+  - @swagglar/use-toasts@0.7.9
+  - @swagglar/use-hooks@0.1.21
+  - @swagglar/themes@0.9.67
 
 ## 0.13.23
 
@@ -2059,9 +2059,9 @@ No need to include it in published packages
 
 - 69da9e0: feat(components): create file uploader component
 - f500435: chore: stricter TypeScript configuration
-  - @scalar/themes@0.9.66
-  - @scalar/code-highlight@0.0.20
-  - @scalar/use-hooks@0.1.20
+  - @swagglar/themes@0.9.66
+  - @swagglar/code-highlight@0.0.20
+  - @swagglar/use-hooks@0.1.20
 
 ## 0.13.22
 
@@ -2076,9 +2076,9 @@ No need to include it in published packages
 - 9f2ec32: fix(components): set z-index on ScalarMenu by default
 - 9f2ec32: fix(components): improve combobox resizing
 - 28f23d9: feat(components): create sidebar item components
-  - @scalar/themes@0.9.65
-  - @scalar/code-highlight@0.0.20
-  - @scalar/use-hooks@0.1.19
+  - @swagglar/themes@0.9.65
+  - @swagglar/code-highlight@0.0.20
+  - @swagglar/use-hooks@0.1.19
 
 ## 0.13.20
 
@@ -2090,9 +2090,9 @@ No need to include it in published packages
 
 ### Patch Changes
 
-- @scalar/themes@0.9.64
-- @scalar/code-highlight@0.0.20
-- @scalar/use-hooks@0.1.18
+- @swagglar/themes@0.9.64
+- @swagglar/code-highlight@0.0.20
+- @swagglar/use-hooks@0.1.18
 
 ## 0.13.18
 
@@ -2100,9 +2100,9 @@ No need to include it in published packages
 
 - 42d08d7: fix: sets border on inactive checkbox state
 - Updated dependencies [51f3177]
-  - @scalar/themes@0.9.63
-  - @scalar/code-highlight@0.0.20
-  - @scalar/use-hooks@0.1.17
+  - @swagglar/themes@0.9.63
+  - @swagglar/code-highlight@0.0.20
+  - @swagglar/use-hooks@0.1.17
 
 ## 0.13.17
 
@@ -2117,9 +2117,9 @@ No need to include it in published packages
 - Updated dependencies [776a4e2]
 - Updated dependencies [2ed681b]
 - Updated dependencies [4f12fe4]
-  - @scalar/themes@0.9.62
-  - @scalar/code-highlight@0.0.20
-  - @scalar/use-hooks@0.1.16
+  - @swagglar/themes@0.9.62
+  - @swagglar/code-highlight@0.0.20
+  - @swagglar/use-hooks@0.1.16
 
 ## 0.13.16
 
@@ -2134,9 +2134,9 @@ No need to include it in published packages
 - 97d8981: feat(components): host storybook on netlify
 - 1bee104: fix: ScalarFloating breaks SSG/SSR environments
 - Updated dependencies [109e320]
-  - @scalar/code-highlight@0.0.20
-  - @scalar/themes@0.9.61
-  - @scalar/use-hooks@0.1.15
+  - @swagglar/code-highlight@0.0.20
+  - @swagglar/themes@0.9.61
+  - @swagglar/use-hooks@0.1.15
 
 ## 0.13.14
 
@@ -2145,9 +2145,9 @@ No need to include it in published packages
 - 2ad0407: fix: updates scalar modal body class specificity
 - e866487: feat(components): create dark light toggle components
 - Updated dependencies [e866487]
-  - @scalar/use-hooks@0.1.14
-  - @scalar/themes@0.9.60
-  - @scalar/code-highlight@0.0.19
+  - @swagglar/use-hooks@0.1.14
+  - @swagglar/themes@0.9.60
+  - @swagglar/code-highlight@0.0.19
 
 ## 0.13.13
 
@@ -2156,17 +2156,17 @@ No need to include it in published packages
 - e17ac68: feat(components): add create team button to team picker
 - 7b4ab2c: feat(components): make ScalarMenu into a dropdown
 - Updated dependencies [7b4ab2c]
-  - @scalar/themes@0.9.59
-  - @scalar/code-highlight@0.0.19
-  - @scalar/use-hooks@0.1.13
+  - @swagglar/themes@0.9.59
+  - @swagglar/code-highlight@0.0.19
+  - @swagglar/use-hooks@0.1.13
 
 ## 0.13.12
 
 ### Patch Changes
 
 - Updated dependencies [66bc910]
-  - @scalar/use-toasts@0.7.8
-  - @scalar/use-hooks@0.1.12
+  - @swagglar/use-toasts@0.7.8
+  - @swagglar/use-hooks@0.1.12
 
 ## 0.13.11
 
@@ -2193,17 +2193,17 @@ No need to include it in published packages
 - c65f3fc: chore(components): ScalarMenu component cleanup
 - Updated dependencies [6407b2b]
 - Updated dependencies [c65f3fc]
-  - @scalar/code-highlight@0.0.19
-  - @scalar/themes@0.9.58
-  - @scalar/use-hooks@0.1.11
+  - @swagglar/code-highlight@0.0.19
+  - @swagglar/themes@0.9.58
+  - @swagglar/use-hooks@0.1.11
 
 ## 0.13.7
 
 ### Patch Changes
 
-- @scalar/themes@0.9.57
-- @scalar/code-highlight@0.0.18
-- @scalar/use-hooks@0.1.10
+- @swagglar/themes@0.9.57
+- @swagglar/code-highlight@0.0.18
+- @swagglar/use-hooks@0.1.10
 
 ## 0.13.6
 
@@ -2211,17 +2211,17 @@ No need to include it in published packages
 
 - 23daedd: feat(components): create ScalarHeader component
 - Updated dependencies [23daedd]
-  - @scalar/themes@0.9.56
-  - @scalar/code-highlight@0.0.18
-  - @scalar/use-hooks@0.1.9
+  - @swagglar/themes@0.9.56
+  - @swagglar/code-highlight@0.0.18
+  - @swagglar/use-hooks@0.1.9
 
 ## 0.13.5
 
 ### Patch Changes
 
-- @scalar/themes@0.9.55
-- @scalar/code-highlight@0.0.18
-- @scalar/use-hooks@0.1.8
+- @swagglar/themes@0.9.55
+- @swagglar/code-highlight@0.0.18
+- @swagglar/use-hooks@0.1.8
 
 ## 0.13.4
 
@@ -2251,9 +2251,9 @@ No need to include it in published packages
 - 1f730c6: feat: upgraded cva and added tests
 - f30ce11: feat(components): clean up reactivity for useBindCx
 - Updated dependencies [e199e9b]
-  - @scalar/code-highlight@0.0.18
-  - @scalar/themes@0.9.54
-  - @scalar/use-hooks@0.1.7
+  - @swagglar/code-highlight@0.0.18
+  - @swagglar/themes@0.9.54
+  - @swagglar/use-hooks@0.1.7
 
 ## 0.13.0
 
@@ -2268,18 +2268,18 @@ No need to include it in published packages
 - 7278742: feat(components): allow logo in ScalarMenu to adjust width
 - 3ca88dc: feat(components): create useBindCx hook
 - f6cd5ed: feat: updates show hide icons
-  - @scalar/themes@0.9.53
-  - @scalar/code-highlight@0.0.17
-  - @scalar/use-hooks@0.1.6
+  - @swagglar/themes@0.9.53
+  - @swagglar/code-highlight@0.0.17
+  - @swagglar/use-hooks@0.1.6
 
 ## 0.12.76
 
 ### Patch Changes
 
 - Updated dependencies [1fa0d20]
-  - @scalar/themes@0.9.52
-  - @scalar/code-highlight@0.0.17
-  - @scalar/use-hooks@0.1.5
+  - @swagglar/themes@0.9.52
+  - @swagglar/code-highlight@0.0.17
+  - @swagglar/use-hooks@0.1.5
 
 ## 0.12.75
 
@@ -2288,9 +2288,9 @@ No need to include it in published packages
 - 6140275: fix(components): remove col on larger screens only use row
 - Updated dependencies [91123e8]
 - Updated dependencies [9002259]
-  - @scalar/themes@0.9.51
-  - @scalar/code-highlight@0.0.17
-  - @scalar/use-hooks@0.1.4
+  - @swagglar/themes@0.9.51
+  - @swagglar/code-highlight@0.0.17
+  - @swagglar/use-hooks@0.1.4
 
 ## 0.12.74
 
@@ -2299,9 +2299,9 @@ No need to include it in published packages
 - 324834d: style: sets z context to tooltip content
 - 1b06f64: fix(api-reference): conflicting styles with bulma, galaxy bug on docs
 - Updated dependencies [1b06f64]
-  - @scalar/code-highlight@0.0.16
-  - @scalar/themes@0.9.50
-  - @scalar/use-hooks@0.1.3
+  - @swagglar/code-highlight@0.0.16
+  - @swagglar/themes@0.9.50
+  - @swagglar/use-hooks@0.1.3
 
 ## 0.12.73
 
@@ -2310,9 +2310,9 @@ No need to include it in published packages
 - 28a6b05: style(components): scalar menu flex col for products
 - Updated dependencies [d379b81]
 - Updated dependencies [f67c3bc]
-  - @scalar/themes@0.9.49
-  - @scalar/code-highlight@0.0.15
-  - @scalar/use-hooks@0.1.2
+  - @swagglar/themes@0.9.49
+  - @swagglar/code-highlight@0.0.15
+  - @swagglar/use-hooks@0.1.2
 
 ## 0.12.72
 
@@ -2321,7 +2321,7 @@ No need to include it in published packages
 - 12fed75: Add header button and checkbox component
 - Updated dependencies [0adbfd5]
 - Updated dependencies [2a6117e]
-  - @scalar/use-hooks@0.1.1
+  - @swagglar/use-hooks@0.1.1
 
 ## 0.12.71
 
@@ -2333,11 +2333,11 @@ No need to include it in published packages
 
 ### Patch Changes
 
-- bfad6dc: feat(use-hooks): create @scalar/use-hooks with useColorMode and useClipboard
+- bfad6dc: feat(use-hooks): create @swagglar/use-hooks with useColorMode and useClipboard
 - c8fae11: fix(components): cleanup ScalarMenu and ScalarListbox
 - Updated dependencies [bfad6dc]
 - Updated dependencies [c3d9f3c]
-  - @scalar/use-hooks@0.1.0
+  - @swagglar/use-hooks@0.1.0
 
 ## 0.12.69
 
@@ -2352,8 +2352,8 @@ No need to include it in published packages
 - b5c1982: style(api-client): fix a handful of z-index and flex breakpoint issues
 - 7f1bd17: feat(components): create ScalarMenu component
 - Updated dependencies [0c07766]
-  - @scalar/themes@0.9.48
-  - @scalar/code-highlight@0.0.15
+  - @swagglar/themes@0.9.48
+  - @swagglar/code-highlight@0.0.15
 
 ## 0.12.67
 
@@ -2372,16 +2372,16 @@ No need to include it in published packages
 ### Patch Changes
 
 - Updated dependencies [a40999d]
-  - @scalar/code-highlight@0.0.15
-  - @scalar/themes@0.9.47
-  - @scalar/use-toasts@0.7.7
+  - @swagglar/code-highlight@0.0.15
+  - @swagglar/themes@0.9.47
+  - @swagglar/use-toasts@0.7.7
 
 ## 0.12.64
 
 ### Patch Changes
 
-- @scalar/themes@0.9.46
-- @scalar/code-highlight@0.0.14
+- @swagglar/themes@0.9.46
+- @swagglar/code-highlight@0.0.14
 
 ## 0.12.63
 
@@ -2390,8 +2390,8 @@ No need to include it in published packages
 - cf4e9c4: fix(components): resize and scroll scalar listbox and dropdown
 - bb3dc9d: fix(api-reference): improve endpoint and tag accessibility
 - Updated dependencies [bb3dc9d]
-  - @scalar/themes@0.9.45
-  - @scalar/code-highlight@0.0.14
+  - @swagglar/themes@0.9.45
+  - @swagglar/code-highlight@0.0.14
 
 ## 0.12.62
 
@@ -2400,8 +2400,8 @@ No need to include it in published packages
 - ad12c56: (style)api-client: fix client border bottom colors
 - ada8545: feat: add the sidebar button
 - Updated dependencies [ad12c56]
-  - @scalar/themes@0.9.44
-  - @scalar/code-highlight@0.0.14
+  - @swagglar/themes@0.9.44
+  - @swagglar/code-highlight@0.0.14
 
 ## 0.12.61
 
@@ -2409,16 +2409,16 @@ No need to include it in published packages
 
 - 197e3ae: (style)api-client: make input styles more consistent
 - Updated dependencies [197e3ae]
-  - @scalar/themes@0.9.43
-  - @scalar/code-highlight@0.0.14
+  - @swagglar/themes@0.9.43
+  - @swagglar/code-highlight@0.0.14
 
 ## 0.12.60
 
 ### Patch Changes
 
 - Updated dependencies [2456afa]
-  - @scalar/themes@0.9.42
-  - @scalar/code-highlight@0.0.14
+  - @swagglar/themes@0.9.42
+  - @swagglar/code-highlight@0.0.14
 
 ## 0.12.59
 
@@ -2431,14 +2431,14 @@ No need to include it in published packages
 ### Patch Changes
 
 - Updated dependencies [b4a93ab]
-  - @scalar/code-highlight@0.0.14
+  - @swagglar/code-highlight@0.0.14
 
 ## 0.12.57
 
 ### Patch Changes
 
 - 32ad241: fix: favors accent over blur color for active elment state
-  - @scalar/code-highlight@0.0.13
+  - @swagglar/code-highlight@0.0.13
 
 ## 0.12.56
 
@@ -2449,14 +2449,14 @@ No need to include it in published packages
 - 4e50d65: feat: adds watch icon
 - 4e50d65: feat: adds as prop to scalar tooltip
 - 6bbb815: fix(api-reference): search modal a11y improvements
-  - @scalar/code-highlight@0.0.13
+  - @swagglar/code-highlight@0.0.13
 
 ## 0.12.55
 
 ### Patch Changes
 
 - 971c04c: feat(api-client): create custom workspace selector
-  - @scalar/code-highlight@0.0.13
+  - @swagglar/code-highlight@0.0.13
 
 ## 0.12.54
 
@@ -2464,7 +2464,7 @@ No need to include it in published packages
 
 - 0c34a18: chore: updated vue package to 3.5
 - Updated dependencies [0c34a18]
-  - @scalar/code-highlight@0.0.13
+  - @swagglar/code-highlight@0.0.13
 
 ## 0.12.53
 
@@ -2483,7 +2483,7 @@ No need to include it in published packages
 ### Patch Changes
 
 - Updated dependencies [e911047]
-  - @scalar/code-highlight@0.0.12
+  - @swagglar/code-highlight@0.0.12
 
 ## 0.12.50
 
@@ -2491,7 +2491,7 @@ No need to include it in published packages
 
 - 513e0ad: feat: allow to disable the copy to clipboard button in ScalarCodeBlock
 - 5127a37: style: updates scalar modal animation
-  - @scalar/code-highlight@0.0.11
+  - @swagglar/code-highlight@0.0.11
 
 ## 0.12.49
 
@@ -2504,14 +2504,14 @@ No need to include it in published packages
 ### Patch Changes
 
 - dc20180: feat(api-client): custom icons for collections
-  - @scalar/code-highlight@0.0.11
+  - @swagglar/code-highlight@0.0.11
 
 ## 0.12.47
 
 ### Patch Changes
 
 - 7beeef3: fix: modal dark mode bg
-  - @scalar/code-highlight@0.0.11
+  - @swagglar/code-highlight@0.0.11
 
 ## 0.12.46
 
@@ -2526,14 +2526,14 @@ No need to include it in published packages
 - a08aa37: chore: add deleteable combobox
 - ee22a82: feat(components): add / update icons to match line icons
 - 6fd83dc: style: sets context bar back to previous position
-  - @scalar/code-highlight@0.0.11
+  - @swagglar/code-highlight@0.0.11
 
 ## 0.12.44
 
 ### Patch Changes
 
 - 0fc3460: feat(components): make markdown line clamping configurable
-  - @scalar/code-highlight@0.0.11
+  - @swagglar/code-highlight@0.0.11
 
 ## 0.12.43
 
@@ -2547,7 +2547,7 @@ No need to include it in published packages
 ### Patch Changes
 
 - Updated dependencies [18744d4]
-  - @scalar/code-highlight@0.0.11
+  - @swagglar/code-highlight@0.0.11
 
 ## 0.12.41
 
@@ -2555,7 +2555,7 @@ No need to include it in published packages
 
 - 9e8d40d: fix(components): use single scroll container for codeblock
 - c02202c: fix: scalar dropdown item dark mode background brightness
-  - @scalar/code-highlight@0.0.10
+  - @swagglar/code-highlight@0.0.10
 
 ## 0.12.40
 
@@ -2569,14 +2569,14 @@ No need to include it in published packages
 
 - 9bc0ae7: feat: update scalar icon disabled state
 - a792002: feat: add xl scalar modal
-  - @scalar/code-highlight@0.0.10
+  - @swagglar/code-highlight@0.0.10
 
 ## 0.12.38
 
 ### Patch Changes
 
 - 6babe66: fix(components): show icon for ScalarTextField errors
-  - @scalar/code-highlight@0.0.10
+  - @swagglar/code-highlight@0.0.10
 
 ## 0.12.37
 
@@ -2601,15 +2601,15 @@ No need to include it in published packages
 
 ### Patch Changes
 
-- 78db8f5: feat: use new @scalar/types package
-  - @scalar/code-highlight@0.0.10
+- 78db8f5: feat: use new @swagglar/types package
+  - @swagglar/code-highlight@0.0.10
 
 ## 0.12.33
 
 ### Patch Changes
 
 - 7bfee42: fix(components): don't clear loading state automatically
-  - @scalar/code-highlight@0.0.10
+  - @swagglar/code-highlight@0.0.10
 
 ## 0.12.32
 
@@ -2622,7 +2622,7 @@ No need to include it in published packages
 ### Patch Changes
 
 - Updated dependencies [c450bb3]
-  - @scalar/code-highlight@0.0.10
+  - @swagglar/code-highlight@0.0.10
 
 ## 0.12.30
 
@@ -2632,21 +2632,21 @@ No need to include it in published packages
 - 6f107e1: style(components): outline user icon
 - db96313: feat: set request sidebar item context menu
 - Updated dependencies [58e5912]
-  - @scalar/code-highlight@0.0.9
+  - @swagglar/code-highlight@0.0.9
 
 ## 0.12.29
 
 ### Patch Changes
 
 - Updated dependencies [b910fc1]
-  - @scalar/code-highlight@0.0.8
+  - @swagglar/code-highlight@0.0.8
 
 ## 0.12.28
 
 ### Patch Changes
 
 - 13b2f6d: fix: scalar icon chevron left update
-  - @scalar/code-highlight@0.0.7
+  - @swagglar/code-highlight@0.0.7
 
 ## 0.12.27
 
@@ -2659,7 +2659,7 @@ No need to include it in published packages
 ### Patch Changes
 
 - 3a6effa: feat(api-client): add response previews
-  - @scalar/code-highlight@0.0.7
+  - @swagglar/code-highlight@0.0.7
 
 ## 0.12.25
 
@@ -2667,14 +2667,14 @@ No need to include it in published packages
 
 - c1ada84: feat(api-client): add the ability to delete and rename folders and collections
 - c1ada84: fix: modal layout and size
-  - @scalar/code-highlight@0.0.7
+  - @swagglar/code-highlight@0.0.7
 
 ## 0.12.24
 
 ### Patch Changes
 
 - de25d01: feat(api-client): add the ability to delete and rename folders and collections
-  - @scalar/code-highlight@0.0.7
+  - @swagglar/code-highlight@0.0.7
 
 ## 0.12.23
 
@@ -2709,7 +2709,7 @@ No need to include it in published packages
 
 - a5f3a84: feat(components): create combo box component
 - 9a08f46: fix: set component font size to 13px
-  - @scalar/code-highlight@0.0.7
+  - @swagglar/code-highlight@0.0.7
 
 ## 0.12.18
 
@@ -2728,7 +2728,7 @@ No need to include it in published packages
 ### Patch Changes
 
 - ff59399: fix: api client spacing issues, and icon thickness
-  - @scalar/code-highlight@0.0.7
+  - @swagglar/code-highlight@0.0.7
 
 ## 0.12.15
 
@@ -2767,7 +2767,7 @@ No need to include it in published packages
 - e649da6: feat: set copy clipboard in scalar codeblock
 - a1d59de: fix: resize scalar modal
 - Updated dependencies [c2362ee]
-  - @scalar/code-highlight@0.0.7
+  - @swagglar/code-highlight@0.0.7
 
 ## 0.12.10
 
@@ -2775,7 +2775,7 @@ No need to include it in published packages
 
 - f1b5390: fix: remove tailwind preflight from api client app
 - Updated dependencies [9b035b0]
-  - @scalar/code-highlight@0.0.6
+  - @swagglar/code-highlight@0.0.6
 
 ## 0.12.9
 
@@ -2796,14 +2796,14 @@ No need to include it in published packages
 ### Patch Changes
 
 - 14e71cd: fix: api client top position on mobile
-  - @scalar/code-highlight@0.0.5
+  - @swagglar/code-highlight@0.0.5
 
 ## 0.12.6
 
 ### Patch Changes
 
 - c533665: fix: move css imports to style tags
-  - @scalar/code-highlight@0.0.5
+  - @swagglar/code-highlight@0.0.5
 
 ## 0.12.5
 
@@ -2819,25 +2819,25 @@ No need to include it in published packages
 - Updated dependencies [a298195]
 - Updated dependencies [326bd3d]
 - Updated dependencies [94e68ab]
-  - @scalar/oas-utils@0.2.5
-  - @scalar/code-highlight@0.0.5
+  - @swagglar/oas-utils@0.2.5
+  - @swagglar/code-highlight@0.0.5
 
 ## 0.12.3
 
 ### Patch Changes
 
 - 132acd4: fix: file upload and binary file ui
-- b981770: chore: introduce the new @scalar/api-reference-editor
+- b981770: chore: introduce the new @swagglar/api-reference-editor
 - fd18932: fix: scalar button loading state
 - 06471ed: feat: add scalar listbox id prop
-  - @scalar/code-highlight@0.0.4
+  - @swagglar/code-highlight@0.0.4
 
 ## 0.12.2
 
 ### Patch Changes
 
 - 65f7bf5: fix: scalar icon info update
-  - @scalar/code-highlight@0.0.4
+  - @swagglar/code-highlight@0.0.4
 
 ## 0.12.1
 
@@ -2845,7 +2845,7 @@ No need to include it in published packages
 
 - c20c7d0: style: minor improvements to the dropdown and listbox comppnents
 - Updated dependencies [c20c7d0]
-  - @scalar/oas-utils@0.2.4
+  - @swagglar/oas-utils@0.2.4
 
 ## 0.12.0
 
@@ -2866,7 +2866,7 @@ No need to include it in published packages
 
 - 5e92eab: feat(#doc-1996): themes css exports
 - Updated dependencies [5e92eab]
-  - @scalar/code-highlight@0.0.4
+  - @swagglar/code-highlight@0.0.4
 
 ## 0.11.5
 
@@ -2874,16 +2874,16 @@ No need to include it in published packages
 
 - 627e0e5: fix: docusaurus scalar codeblock border radius
 - Updated dependencies [362d47a]
-  - @scalar/oas-utils@0.2.3
-  - @scalar/code-highlight@0.0.3
+  - @swagglar/oas-utils@0.2.3
+  - @swagglar/code-highlight@0.0.3
 
 ## 0.11.4
 
 ### Patch Changes
 
 - 3d6ca80: fix: scalar modal component padding reset
-- 0fae180: chore: move client app to use @scalar/themes tailwind preset
-  - @scalar/code-highlight@0.0.3
+- 0fae180: chore: move client app to use @swagglar/themes tailwind preset
+  - @swagglar/code-highlight@0.0.3
 
 ## 0.11.3
 
@@ -2897,8 +2897,8 @@ No need to include it in published packages
 
 - a2cb3c3: Migrate away from unintended peer dependencies
 - Updated dependencies [a2cb3c3]
-  - @scalar/oas-utils@0.2.2
-  - @scalar/code-highlight@0.0.3
+  - @swagglar/oas-utils@0.2.2
+  - @swagglar/code-highlight@0.0.3
 
 ## 0.11.1
 
@@ -2907,8 +2907,8 @@ No need to include it in published packages
 - e0fc110: chore: patch bump all package
 - Updated dependencies [e0fc110]
 - Updated dependencies [f0acc89]
-  - @scalar/code-highlight@0.0.3
-  - @scalar/oas-utils@0.2.1
+  - @swagglar/code-highlight@0.0.3
+  - @swagglar/oas-utils@0.2.1
 
 ## 0.11.0
 
@@ -2930,8 +2930,8 @@ No need to include it in published packages
 - Updated dependencies [96347a1]
 - Updated dependencies [8494349]
 - Updated dependencies [6fbb57e]
-  - @scalar/oas-utils@0.2.0
-  - @scalar/code-highlight@0.0.2
+  - @swagglar/oas-utils@0.2.0
+  - @swagglar/code-highlight@0.0.2
 
 ## 0.10.1
 
@@ -2939,7 +2939,7 @@ No need to include it in published packages
 
 - 961690d: chore: export listbox component
 - Updated dependencies [c951512]
-  - @scalar/oas-utils@0.1.17
+  - @swagglar/oas-utils@0.1.17
 
 ## 0.10.0
 
@@ -2972,14 +2972,14 @@ No need to include it in published packages
 ### Patch Changes
 
 - Updated dependencies [cc5402c]
-  - @scalar/oas-utils@0.1.16
+  - @swagglar/oas-utils@0.1.16
 
 ## 0.7.14
 
 ### Patch Changes
 
 - Updated dependencies [f472998]
-  - @scalar/oas-utils@0.1.15
+  - @swagglar/oas-utils@0.1.15
 
 ## 0.7.13
 
@@ -2994,14 +2994,14 @@ No need to include it in published packages
 - 50480c7: feat: set type prop in scalar button component
 - Updated dependencies [7205137]
 - Updated dependencies [d369ac4]
-  - @scalar/oas-utils@0.1.14
+  - @swagglar/oas-utils@0.1.14
 
 ## 0.7.11
 
 ### Patch Changes
 
 - Updated dependencies [5aa656f]
-  - @scalar/oas-utils@0.1.13
+  - @swagglar/oas-utils@0.1.13
 
 ## 0.7.10
 
@@ -3011,7 +3011,7 @@ No need to include it in published packages
 - 925572f: fix: add scalar component scope to missing components
 - Updated dependencies [61b8ddc]
 - Updated dependencies [165b901]
-  - @scalar/oas-utils@0.1.12
+  - @swagglar/oas-utils@0.1.12
 
 ## 0.7.9
 
@@ -3031,7 +3031,7 @@ No need to include it in published packages
 
 - 624604e: style: adjust some icon sizes and allow overwriting classes
 - Updated dependencies [624604e]
-  - @scalar/oas-utils@0.1.11
+  - @swagglar/oas-utils@0.1.11
 
 ## 0.7.6
 
@@ -3057,7 +3057,7 @@ No need to include it in published packages
 
 - 45dc04b: fix: can’t release packages
 - Updated dependencies [45dc04b]
-  - @scalar/oas-utils@0.1.10
+  - @swagglar/oas-utils@0.1.10
 
 ## 0.7.2
 
@@ -3065,7 +3065,7 @@ No need to include it in published packages
 
 - 05e2e27: chore: add provenance statement
 - Updated dependencies [05e2e27]
-  - @scalar/oas-utils@0.1.9
+  - @swagglar/oas-utils@0.1.9
 
 ## 0.7.1
 
@@ -3073,7 +3073,7 @@ No need to include it in published packages
 
 - Updated dependencies [085a0c2]
 - Updated dependencies [fa10d45]
-  - @scalar/oas-utils@0.1.8
+  - @swagglar/oas-utils@0.1.8
 
 ## 0.7.0
 
@@ -3087,7 +3087,7 @@ No need to include it in published packages
 - 07211ad: chore: added new lint rule for type importing for better perf
 - 830b3c8: fix: remove ts extension from tailwind export
 - Updated dependencies [07211ad]
-  - @scalar/oas-utils@0.1.7
+  - @swagglar/oas-utils@0.1.7
 
 ## 0.6.1
 
@@ -3143,7 +3143,7 @@ No need to include it in published packages
 
 - 22f2858: chore: ran syncpack to update packages
 - Updated dependencies [22f2858]
-  - @scalar/oas-utils@0.1.6
+  - @swagglar/oas-utils@0.1.6
 
 ## 0.4.11
 
@@ -3151,7 +3151,7 @@ No need to include it in published packages
 
 - 3ba9774: feat: add better SSR support to ScalarCodeBlock
 - Updated dependencies [3ba9774]
-  - @scalar/oas-utils@0.1.5
+  - @swagglar/oas-utils@0.1.5
 
 ## 0.4.10
 

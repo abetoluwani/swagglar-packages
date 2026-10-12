@@ -1,4 +1,4 @@
-import type { OpenAPIV3_1 } from '@scalar/openapi-types'
+import type { OpenAPIV3_1 } from '@swagglar/openapi-types'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 
 import { logAuthenticationInstructions } from './log-authentication-instructions'

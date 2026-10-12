@@ -43,7 +43,7 @@ const resolveConnectionTimeoutMs = (overrideMs?: number): number => {
 }
 
 /** Marks an HTTP server that already has void WebSocket echo attached. */
-const VOID_WEBSOCKET_SERVER = Symbol('@scalar/void-server/websocket')
+const VOID_WEBSOCKET_SERVER = Symbol('@swagglar/void-server/websocket')
 
 type HttpServerWithVoidWebSocket = (HttpServer | ServerType) & {
   [VOID_WEBSOCKET_SERVER]?: WebSocketServer
@@ -83,7 +83,7 @@ const bindEchoHandlers = (ws: WebSocket, connectionTimeoutMs: number): void => {
  * @example
  * ```ts
  * import { serve } from '@hono/node-server'
- * import { attachVoidWebSocket, createVoidServer } from '@scalar/void-server'
+ * import { attachVoidWebSocket, createVoidServer } from '@swagglar/void-server'
  *
  * const app = createVoidServer()
  * const httpServer = serve({ fetch: app.fetch, port: 3000 })

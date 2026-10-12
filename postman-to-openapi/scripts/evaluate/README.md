@@ -1,6 +1,6 @@
 # Postman → OpenAPI evaluation harness
 
-A loop for regularly checking how well `@scalar/postman-to-openapi` handles real-world Postman collections. A runner script does the conversion and records structural metrics. A coding agent (or a human) then reads those results, rates the output against [`RUBRIC.md`](./RUBRIC.md), and files improvement ideas as individual markdown files.
+A loop for regularly checking how well `@swagglar/postman-to-openapi` handles real-world Postman collections. A runner script does the conversion and records structural metrics. A coding agent (or a human) then reads those results, rates the output against [`RUBRIC.md`](./RUBRIC.md), and files improvement ideas as individual markdown files.
 
 ## Layout
 
@@ -24,7 +24,7 @@ packages/postman-to-openapi/
 ```bash
 # 1. Drop Postman collection JSON files into fixtures/evaluate/input/
 # 2. From the repo root:
-pnpm --filter @scalar/postman-to-openapi evaluate
+pnpm --filter @swagglar/postman-to-openapi evaluate
 ```
 
 The runner:
@@ -32,7 +32,7 @@ The runner:
 - iterates every `.json` file in `fixtures/evaluate/input/`,
 - calls `convert()` on each one (catching errors per-file so one bad collection does not abort the run),
 - writes the resulting OpenAPI document to `fixtures/evaluate/output/<name>.json`,
-- runs `@scalar/openapi-parser` `validate()` against each output,
+- runs `@swagglar/openapi-parser` `validate()` against each output,
 - records structural metrics for both the input (request count, auth types, body modes, …) and the output (paths, operations, security schemes, response examples, …),
 - writes a machine-readable `fixtures/evaluate/reports/run-<timestamp>.json` summarising the whole run,
 - prints a compact pass/fail table to stdout.

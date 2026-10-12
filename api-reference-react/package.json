@@ -1,5 +1,5 @@
 {
-  "name": "@scalar/api-reference-react",
+  "name": "@swagglar/api-reference-react",
   "description": "The react client only integration for api references",
   "license": "MIT",
   "author": "Scalar (https://github.com/scalar)",
@@ -44,11 +44,11 @@
     "CHANGELOG.md"
   ],
   "dependencies": {
-    "@scalar/api-reference": "workspace:*",
-    "@scalar/types": "workspace:*"
+    "@swagglar/api-reference": "workspace:*",
+    "@swagglar/types": "workspace:*"
   },
   "devDependencies": {
-    "@scalar/helpers": "workspace:*",
+    "@swagglar/helpers": "workspace:*",
     "@types/react": "catalog:*",
     "@types/react-dom": "catalog:*",
     "@vitejs/plugin-react": "catalog:*",

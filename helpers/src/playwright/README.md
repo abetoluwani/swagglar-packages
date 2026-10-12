@@ -1,4 +1,4 @@
-# Playwright helpers (`@scalar/helpers/playwright`)
+# Playwright helpers (`@swagglar/helpers/playwright`)
 
 Shared Playwright utilities for Scalar packages. Today this folder is mainly the Docker-backed **test server** helper used so local E2E runs use the same browser environment as CI.
 

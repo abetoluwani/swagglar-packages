@@ -83,6 +83,6 @@ export const resolveGrammar = (lang: string | Grammar | CompiledGrammar): Compil
     `Language "${lang}" is not registered. ` +
       (known.length
         ? `Registered: ${known.join(', ')}.`
-        : `Import it and call registerLanguage(), or use loadLanguage() from "@scalar/highlight/lazy".`),
+        : `Import it and call registerLanguage(), or use loadLanguage() from "@swagglar/highlight/lazy".`),
   )
 }

@@ -5,9 +5,9 @@
  * sheet for Agent Chat.
  */
 
-@import "@scalar/components/vue-styles.css";
-@import "@scalar/sidebar/vue-styles.css";
-@import "@scalar/api-client/vue-styles.css";
+@import "@swagglar/components/vue-styles.css";
+@import "@swagglar/sidebar/vue-styles.css";
+@import "@swagglar/api-client/vue-styles.css";
 
 /* Agent Chat Tailwind Configuration */
 @import "./styles/tailwind.config.css";

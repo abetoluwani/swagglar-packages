@@ -18,9 +18,9 @@ Scalar is an open-source API platform for teams who want beautiful developer int
 ## Usage
 
 ```ts
-import { createWorkspaceStore } from '@scalar/workspace-store/client'
-import { createCodeExample } from '@scalar/blocks/code-example'
-import '@scalar/blocks/style.css'
+import { createWorkspaceStore } from '@swagglar/workspace-store/client'
+import { createCodeExample } from '@swagglar/blocks/code-example'
+import '@swagglar/blocks/style.css'
 
 // Load OpenAPI documents
 const store = createWorkspaceStore()

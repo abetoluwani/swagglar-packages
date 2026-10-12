@@ -1,4 +1,4 @@
-import type { ClientPlugin } from '@scalar/oas-utils/helpers'
+import type { ClientPlugin } from '@swagglar/oas-utils/helpers'
 import { ref } from 'vue'
 
 import { getScript } from '@/helpers/get-script'

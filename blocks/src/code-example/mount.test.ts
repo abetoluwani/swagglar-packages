@@ -1,4 +1,4 @@
-import { createWorkspaceStore } from '@scalar/workspace-store/client'
+import { createWorkspaceStore } from '@swagglar/workspace-store/client'
 import { afterEach, describe, expect, it } from 'vitest'
 import { nextTick } from 'vue'
 

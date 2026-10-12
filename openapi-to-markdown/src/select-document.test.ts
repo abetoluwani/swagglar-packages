@@ -1,5 +1,5 @@
-import { getPathItemOperation, getResolvedPathItem } from '@scalar/workspace-store/helpers/for-each-path-item-operation'
-import type { OpenApiDocument } from '@scalar/workspace-store/schemas/v3.2/strict/openapi-document'
+import { getPathItemOperation, getResolvedPathItem } from '@swagglar/workspace-store/helpers/for-each-path-item-operation'
+import type { OpenApiDocument } from '@swagglar/workspace-store/schemas/v3.2/strict/openapi-document'
 import { describe, expect, it } from 'vitest'
 
 import { createMarkdownFromOpenApi } from './browser'

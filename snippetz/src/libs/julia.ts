@@ -1,4 +1,4 @@
-import { isObjectLike } from '@scalar/helpers/object/is-object'
+import { isObjectLike } from '@swagglar/helpers/object/is-object'
 
 /**
  * Escapes a string for use in a Julia double-quoted string literal.

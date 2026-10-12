@@ -1,4 +1,4 @@
-import { parseMimeType } from '@scalar/helpers/http/mime-type'
+import { parseMimeType } from '@swagglar/helpers/http/mime-type'
 
 const decodeURIComponentSafe = (str: string) => {
   try {

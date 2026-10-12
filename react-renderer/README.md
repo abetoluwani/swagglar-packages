@@ -1,8 +1,8 @@
 # Scalar React Renderer
 
-[![Version](https://img.shields.io/npm/v/%40scalar/react-renderer)](https://www.npmjs.com/package/@scalar/react-renderer)
-[![Downloads](https://img.shields.io/npm/dm/%40scalar/react-renderer)](https://www.npmjs.com/package/@scalar/react-renderer)
-[![License](https://img.shields.io/npm/l/%40scalar%2Freact-renderer)](https://www.npmjs.com/package/@scalar/react-renderer)
+[![Version](https://img.shields.io/npm/v/%40scalar/react-renderer)](https://www.npmjs.com/package/@swagglar/react-renderer)
+[![Downloads](https://img.shields.io/npm/dm/%40scalar/react-renderer)](https://www.npmjs.com/package/@swagglar/react-renderer)
+[![License](https://img.shields.io/npm/l/%40scalar%2Freact-renderer)](https://www.npmjs.com/package/@swagglar/react-renderer)
 [![Discord](https://img.shields.io/discord/1135330207960678410?style=flat&color=5865F2)](https://discord.gg/scalar)
 
 A Vue component to render React components inside Vue.
@@ -23,14 +23,14 @@ Scalar is an open-source API platform for teams who want beautiful developer int
 ## Installation
 
 ```bash
-npm install @scalar/react-renderer
+npm install @swagglar/react-renderer
 ```
 
 ## Usage
 
 ```vue
 <script setup lang="ts">
-import { ReactRenderer } from '@scalar/react-renderer'
+import { ReactRenderer } from '@swagglar/react-renderer'
 import { MyReactComponent } from './components/MyReactComponent'
 </script>
 

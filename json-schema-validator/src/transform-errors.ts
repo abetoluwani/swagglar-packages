@@ -1,4 +1,4 @@
-import type { AnyObject } from '@scalar/types/utils'
+import type { AnyObject } from '@swagglar/types/utils'
 
 import { deduplicateErrors } from '@/deduplicate-errors'
 import { type AjvError, prettifyAjvErrors } from '@/prettify-ajv-errors'

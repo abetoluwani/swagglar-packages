@@ -1,13 +1,13 @@
 'use client'
 
-import type { ApiClientModal, ApiClientOptions, RoutePayload } from '@scalar/api-client/modal'
-import { generateHash } from '@scalar/helpers/string/generate-hash'
+import type { ApiClientModal, ApiClientOptions, RoutePayload } from '@swagglar/api-client/modal'
+import { generateHash } from '@swagglar/helpers/string/generate-hash'
 import { useEffect, useRef, useState } from 'react'
 
 import './style.css'
 
-import { isObjectEqual } from '@scalar/helpers/object/is-object-equal'
-import type { WorkspaceStore } from '@scalar/workspace-store/client'
+import { isObjectEqual } from '@swagglar/helpers/object/is-object-equal'
+import type { WorkspaceStore } from '@swagglar/workspace-store/client'
 
 import { getOrCreateApiClient } from './lazy-load'
 

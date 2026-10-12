@@ -1,19 +1,19 @@
 # Scalar components — full reference
 
-Source of truth — the **`@scalar/components`** package (icons in **`@scalar/icons`**). Read these from `node_modules/`:
+Source of truth — the **`@swagglar/components`** package (icons in **`@swagglar/icons`**). Read these from `node_modules/`:
 
-- `@scalar/components` `package.json` `exports` — the subpath → component map (below).
-- `@scalar/components` (package root) — the full list of named exports.
+- `@swagglar/components` `package.json` `exports` — the subpath → component map (below).
+- `@swagglar/components` (package root) — the full list of named exports.
 - The bundled TypeScript declarations (`*.d.ts`) shipped with each component — props, variants, and JSDoc.
-- The `@scalar/components` Storybook — live variants and controls.
-- `@scalar/icons` (package root) — the `ScalarIcon*` set.
+- The `@swagglar/components` Storybook — live variants and controls.
+- `@swagglar/icons` (package root) — the `ScalarIcon*` set.
 
 ## Conventions
 
 - **Vue 3** library, **scoped to `.scalar-app`**. Rendered markup must sit inside a `.scalar-app` root.
-- **Import from the subpath**, never the barrel: `import { ScalarButton } from '@scalar/components/button'`.
+- **Import from the subpath**, never the barrel: `import { ScalarButton } from '@swagglar/components/button'`.
 - **Styling** uses the Tailwind classes from [`tokens.md`](./tokens.md) via `cva` variants. Each component allows Tailwind class overrides through `useBindCx` (pass `class="…"`), so prefer overriding classes over writing CSS.
-- **Icons** come from `@scalar/icons` (1,500+ Phosphor icons), not the (deprecated) `ScalarIcon` component. Use `import { ScalarIconMagnifyingGlass } from '@scalar/icons'`, size with `size-*`, color with `text-*`.
+- **Icons** come from `@swagglar/icons` (1,500+ Phosphor icons), not the (deprecated) `ScalarIcon` component. Use `import { ScalarIconMagnifyingGlass } from '@swagglar/icons'`, size with `size-*`, color with `text-*`.
 
 ## Subpath → component map (34 subpaths)
 
@@ -21,42 +21,42 @@ Several subpaths export sub-components alongside the headline component; confirm
 
 | Subpath | Primary component(s) |
 |---|---|
-| `@scalar/components/button` | `ScalarButton` |
-| `@scalar/components/icon-button` | `ScalarIconButton` |
-| `@scalar/components/card` | `ScalarCard` (+ `ScalarCardHeader`, `ScalarCardSection`, `ScalarCardFooter`) |
-| `@scalar/components/checkbox-input` | `ScalarCheckbox*` (checkbox, group, radio group) |
-| `@scalar/components/code-block` | `ScalarCodeBlock` (+ copy) |
-| `@scalar/components/color-mode-toggle` | `ScalarColorModeToggle` |
-| `@scalar/components/combobox` | `ScalarCombobox`, `ScalarComboboxMultiselect` |
-| `@scalar/components/copy` | `ScalarCopy` |
-| `@scalar/components/dropdown` | `ScalarDropdown` (+ menu/item/divider parts) |
-| `@scalar/components/error-boundary` | `ScalarErrorBoundary` |
-| `@scalar/components/file-upload` | `ScalarFileUpload` |
-| `@scalar/components/floating` | `ScalarFloating`, `ScalarFloatingBackdrop` |
-| `@scalar/components/form` | `ScalarForm` (+ field/input/section/error parts) |
-| `@scalar/components/header` | `ScalarHeader`, `ScalarHeaderColumn`, `ScalarHeaderButton` |
-| `@scalar/components/hotkey` | `ScalarHotkey`, `ScalarHotkeyTooltip` |
-| `@scalar/components/icon` | `ScalarIcon` (legacy — prefer `@scalar/icons`) |
-| `@scalar/components/listbox` | `ScalarListbox` |
-| `@scalar/components/loading` | `ScalarLoading` (+ `useLoadingState`) |
-| `@scalar/components/markdown` | `ScalarMarkdown`, `ScalarMarkdownSummary` |
-| `@scalar/components/menu` | `ScalarMenu` (+ workspace/team/product parts) |
-| `@scalar/components/modal` | `ScalarModal` (+ `useModal`) |
-| `@scalar/components/popover` | `ScalarPopover` |
-| `@scalar/components/save-prompt` | `ScalarSavePrompt` |
-| `@scalar/components/search-input` | `ScalarSearchInput` |
-| `@scalar/components/search-results` | `ScalarSearchResults` (+ list/item) |
-| `@scalar/components/sidebar` | `ScalarSidebar` (+ section/group/item/search parts) |
-| `@scalar/components/teleport` | `ScalarTeleport` (+ `useTeleport`) |
-| `@scalar/components/text-area` | `ScalarTextArea` |
-| `@scalar/components/text-input` | `ScalarTextInput`, `ScalarTextInputCopy` |
-| `@scalar/components/theme-swatches` | `ScalarThemeSwatches` |
-| `@scalar/components/toggle` | `ScalarToggle`, `ScalarToggleGroup`, `ScalarToggleInput` |
-| `@scalar/components/tooltip` | `ScalarTooltip` (+ `useTooltip`) |
-| `@scalar/components/virtual-text` | `ScalarVirtualText` |
-| `@scalar/components/wrapping-text` | `ScalarWrappingText` |
+| `@swagglar/components/button` | `ScalarButton` |
+| `@swagglar/components/icon-button` | `ScalarIconButton` |
+| `@swagglar/components/card` | `ScalarCard` (+ `ScalarCardHeader`, `ScalarCardSection`, `ScalarCardFooter`) |
+| `@swagglar/components/checkbox-input` | `ScalarCheckbox*` (checkbox, group, radio group) |
+| `@swagglar/components/code-block` | `ScalarCodeBlock` (+ copy) |
+| `@swagglar/components/color-mode-toggle` | `ScalarColorModeToggle` |
+| `@swagglar/components/combobox` | `ScalarCombobox`, `ScalarComboboxMultiselect` |
+| `@swagglar/components/copy` | `ScalarCopy` |
+| `@swagglar/components/dropdown` | `ScalarDropdown` (+ menu/item/divider parts) |
+| `@swagglar/components/error-boundary` | `ScalarErrorBoundary` |
+| `@swagglar/components/file-upload` | `ScalarFileUpload` |
+| `@swagglar/components/floating` | `ScalarFloating`, `ScalarFloatingBackdrop` |
+| `@swagglar/components/form` | `ScalarForm` (+ field/input/section/error parts) |
+| `@swagglar/components/header` | `ScalarHeader`, `ScalarHeaderColumn`, `ScalarHeaderButton` |
+| `@swagglar/components/hotkey` | `ScalarHotkey`, `ScalarHotkeyTooltip` |
+| `@swagglar/components/icon` | `ScalarIcon` (legacy — prefer `@swagglar/icons`) |
+| `@swagglar/components/listbox` | `ScalarListbox` |
+| `@swagglar/components/loading` | `ScalarLoading` (+ `useLoadingState`) |
+| `@swagglar/components/markdown` | `ScalarMarkdown`, `ScalarMarkdownSummary` |
+| `@swagglar/components/menu` | `ScalarMenu` (+ workspace/team/product parts) |
+| `@swagglar/components/modal` | `ScalarModal` (+ `useModal`) |
+| `@swagglar/components/popover` | `ScalarPopover` |
+| `@swagglar/components/save-prompt` | `ScalarSavePrompt` |
+| `@swagglar/components/search-input` | `ScalarSearchInput` |
+| `@swagglar/components/search-results` | `ScalarSearchResults` (+ list/item) |
+| `@swagglar/components/sidebar` | `ScalarSidebar` (+ section/group/item/search parts) |
+| `@swagglar/components/teleport` | `ScalarTeleport` (+ `useTeleport`) |
+| `@swagglar/components/text-area` | `ScalarTextArea` |
+| `@swagglar/components/text-input` | `ScalarTextInput`, `ScalarTextInputCopy` |
+| `@swagglar/components/theme-swatches` | `ScalarThemeSwatches` |
+| `@swagglar/components/toggle` | `ScalarToggle`, `ScalarToggleGroup`, `ScalarToggleInput` |
+| `@swagglar/components/tooltip` | `ScalarTooltip` (+ `useTooltip`) |
+| `@swagglar/components/virtual-text` | `ScalarVirtualText` |
+| `@swagglar/components/wrapping-text` | `ScalarWrappingText` |
 
-(Plus `@scalar/components/helpers` for utilities, and CSS exports `style.css`, `tailwind.config.css`, `vue-styles.css`.)
+(Plus `@swagglar/components/helpers` for utilities, and CSS exports `style.css`, `tailwind.config.css`, `vue-styles.css`.)
 
 ## Grouped overview
 
@@ -78,7 +78,7 @@ Props:
 - `size`: `xs` | `sm` | `md` (default)
 - `is`: render as another element/component (default `'button'`; e.g. `is="a"` for a link)
 - `disabled`: visually disabled (does not block interaction; sets `aria-disabled`)
-- `icon`: a `ScalarIconComponent` from `@scalar/icons`
+- `icon`: a `ScalarIconComponent` from `@swagglar/icons`
 - `loader`: a `LoadingState` from `useLoadingState()` — shows a spinner, hides text/icon
 
 Variant → classes:
@@ -93,8 +93,8 @@ Variant → classes:
 
 ```vue
 <script setup lang="ts">
-import { ScalarButton } from '@scalar/components/button'
-import { ScalarIconAcorn } from '@scalar/icons'
+import { ScalarButton } from '@swagglar/components/button'
+import { ScalarIconAcorn } from '@swagglar/icons'
 </script>
 <template>
   <ScalarButton variant="solid" size="md" :icon="ScalarIconAcorn">Save</ScalarButton>

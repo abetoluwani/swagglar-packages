@@ -13,8 +13,8 @@
 export default {}
 </script>
 <script setup lang="ts">
-import type { ScalarIconComponent } from '@scalar/icons/types'
-import { useBindCx } from '@scalar/use-hooks/useBindCx'
+import type { ScalarIconComponent } from '@swagglar/icons/types'
+import { useBindCx } from '@swagglar/use-hooks/useBindCx'
 
 import { type Icon, ScalarIconLegacyAdapter } from '../ScalarIcon'
 

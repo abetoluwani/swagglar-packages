@@ -1,5 +1,5 @@
 /**
- * Stolen from |@scalar/helpers/object/is-object.ts|
+ * Stolen from |@swagglar/helpers/object/is-object.ts|
  * so we don't have to depend on it.
  */
 

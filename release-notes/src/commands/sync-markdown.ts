@@ -1,4 +1,4 @@
-import { buildReleaseNotesPreamble } from '@scalar/helpers/markdown/release-notes'
+import { buildReleaseNotesPreamble } from '@swagglar/helpers/markdown/release-notes'
 import { Command } from 'commander'
 
 import { type CliConfigOverrides, readReleaseNotesConfig } from '../config/read-config'

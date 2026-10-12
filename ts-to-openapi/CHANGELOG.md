@@ -1,4 +1,4 @@
-# @scalar/ts-to-openapi
+# @swagglar/ts-to-openapi
 
 ## 0.2.5
 

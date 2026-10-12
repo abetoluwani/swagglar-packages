@@ -1,4 +1,4 @@
-import type { ApiClientOptions } from '@scalar/api-client/modal'
+import type { ApiClientOptions } from '@swagglar/api-client/modal'
 
 /**
  * Creates a lazy singleton getter: the factory runs at most once, caches the resulting promise,
@@ -22,17 +22,17 @@ const makeLazySingleton = <T, Args extends unknown[] = []>(
 
 /** Lazy load the client modal creator */
 export const getClientModalCreator = makeLazySingleton(() =>
-  import('@scalar/api-client/modal').then(({ createApiClientModal }) => createApiClientModal),
+  import('@swagglar/api-client/modal').then(({ createApiClientModal }) => createApiClientModal),
 )
 
 /** Module-scoped singleton workspace store (lazy-loaded on first use). */
 export const getWorkspaceStoreSingleton = makeLazySingleton(() =>
-  import('@scalar/workspace-store/client').then(({ createWorkspaceStore }) => createWorkspaceStore()),
+  import('@swagglar/workspace-store/client').then(({ createWorkspaceStore }) => createWorkspaceStore()),
 )
 
 /** Module-scoped singleton workspace event bus (lazy-loaded on first use). */
 export const getWorkspaceEventBusSingleton = makeLazySingleton(() =>
-  import('@scalar/workspace-store/events').then(({ createWorkspaceEventBus }) => createWorkspaceEventBus()),
+  import('@swagglar/workspace-store/events').then(({ createWorkspaceEventBus }) => createWorkspaceEventBus()),
 )
 
 /**

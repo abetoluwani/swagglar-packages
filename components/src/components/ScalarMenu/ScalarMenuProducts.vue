@@ -17,8 +17,8 @@ import {
   ScalarIconBook,
   ScalarIconHouse,
   ScalarIconNotepad,
-} from '@scalar/icons'
-import { useBindCx } from '@scalar/use-hooks/useBindCx'
+} from '@swagglar/icons'
+import { useBindCx } from '@swagglar/use-hooks/useBindCx'
 
 import ScalarMenuProduct from './ScalarMenuProduct.vue'
 

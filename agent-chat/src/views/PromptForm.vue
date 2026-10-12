@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import { ScalarIconButton } from '@scalar/components/icon-button'
-import { ScalarLoading } from '@scalar/components/loading'
-import { ScalarTooltip } from '@scalar/components/tooltip'
+import { ScalarIconButton } from '@swagglar/components/icon-button'
+import { ScalarLoading } from '@swagglar/components/loading'
+import { ScalarTooltip } from '@swagglar/components/tooltip'
 import {
   ScalarIconArrowUp,
   ScalarIconCheck,
   ScalarIconLockSimple,
   ScalarIconPlus,
   ScalarIconX,
-} from '@scalar/icons'
+} from '@swagglar/icons'
 import { computed, useTemplateRef, watch } from 'vue'
 
 import ActionsDropdown from '@/components/ActionsDropdown.vue'

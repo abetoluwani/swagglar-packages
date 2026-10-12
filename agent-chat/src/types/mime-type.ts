@@ -1,3 +1,3 @@
-import type { ParsedMimeType } from '@scalar/helpers/http/mime-type'
+import type { ParsedMimeType } from '@swagglar/helpers/http/mime-type'
 
 export type MimeType = ParsedMimeType

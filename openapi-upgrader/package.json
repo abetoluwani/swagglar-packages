@@ -1,5 +1,5 @@
 {
-  "name": "@scalar/openapi-upgrader",
+  "name": "@swagglar/openapi-upgrader",
   "description": "Upgrade OpenAPI documents to the latest and greatest version",
   "license": "MIT",
   "author": "Scalar (https://github.com/scalar)",
@@ -76,11 +76,11 @@
   },
   "sideEffects": false,
   "dependencies": {
-    "@scalar/helpers": "workspace:*",
-    "@scalar/openapi-types": "workspace:*"
+    "@swagglar/helpers": "workspace:*",
+    "@swagglar/openapi-types": "workspace:*"
   },
   "devDependencies": {
-    "@scalar/types": "workspace:*",
+    "@swagglar/types": "workspace:*",
     "vite": "catalog:*"
   }
 }

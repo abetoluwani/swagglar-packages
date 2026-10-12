@@ -1,5 +1,5 @@
 import type { Result } from 'neverpanic'
-import { object, optional, record, string, type Static } from '@scalar/validation'
+import { object, optional, record, string, type Static } from '@swagglar/validation'
 
 import type { AgentChatError } from '@/entities/error/constants'
 

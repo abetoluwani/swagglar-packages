@@ -1,12 +1,12 @@
 import { writeFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 
-import type { Target } from '@scalar/snippetz'
-import { clients } from '@scalar/snippetz/clients'
+import type { Target } from '@swagglar/snippetz'
+import { clients } from '@swagglar/snippetz/clients'
 
 /**
  * Generator script to create C# enums from TypeScript clients configuration.
- * This script directly imports the clients array from @scalar/snippetz,
+ * This script directly imports the clients array from @swagglar/snippetz,
  * ensuring the C# enums stays in perfect sync with the TypeScript source of truth.
  */
 

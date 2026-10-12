@@ -15,7 +15,7 @@ import {
   ScalarIconBookOpenText,
   ScalarIconEnvelopeSimple,
   ScalarIconFileText,
-} from '@scalar/icons'
+} from '@swagglar/icons'
 
 import ScalarMenuLink from './ScalarMenuLink.vue'
 import ScalarMenuSection from './ScalarMenuSection.vue'

@@ -1,19 +1,19 @@
-import { parseJsonPointerSegments } from '@scalar/helpers/json/parse-json-pointer-segments'
-import { isObject } from '@scalar/helpers/object/is-object'
-import { bundle } from '@scalar/json-magic/bundle'
-import { convertToLocalRef } from '@scalar/json-magic/helpers/convert-to-local-ref'
-import { getId, getSchemas } from '@scalar/json-magic/helpers/get-schemas'
-import { getValueByPath } from '@scalar/json-magic/helpers/get-value-by-path'
-import { normalize } from '@scalar/json-magic/helpers/normalize'
-import { getRaw } from '@scalar/json-magic/magic-proxy'
-import { upgrade } from '@scalar/openapi-upgrader'
-import { deepClone } from '@scalar/workspace-store/helpers/deep-clone'
-import { coerceValue } from '@scalar/workspace-store/schemas/typebox-coerce'
+import { parseJsonPointerSegments } from '@swagglar/helpers/json/parse-json-pointer-segments'
+import { isObject } from '@swagglar/helpers/object/is-object'
+import { bundle } from '@swagglar/json-magic/bundle'
+import { convertToLocalRef } from '@swagglar/json-magic/helpers/convert-to-local-ref'
+import { getId, getSchemas } from '@swagglar/json-magic/helpers/get-schemas'
+import { getValueByPath } from '@swagglar/json-magic/helpers/get-value-by-path'
+import { normalize } from '@swagglar/json-magic/helpers/normalize'
+import { getRaw } from '@swagglar/json-magic/magic-proxy'
+import { upgrade } from '@swagglar/openapi-upgrader'
+import { deepClone } from '@swagglar/workspace-store/helpers/deep-clone'
+import { coerceValue } from '@swagglar/workspace-store/schemas/typebox-coerce'
 import {
   OpenAPIDocumentSchema,
   type OpenApiDocument,
   SchemaObjectSchema,
-} from '@scalar/workspace-store/schemas/v3.2/strict/openapi-document'
+} from '@swagglar/workspace-store/schemas/v3.2/strict/openapi-document'
 
 import { type KindPosition, getChildKind, referenceTargetSchemas } from './object-kinds'
 import { type SchemaPosition, getChildPosition, restoreBooleanSchemas } from './restore-boolean-schemas'
@@ -251,10 +251,10 @@ export const loadDocument = async (
     const errors: string[] = []
     const plugins =
       typeof process === 'undefined'
-        ? [(await import('@scalar/json-magic/bundle/plugins/browser')).fetchUrls()]
+        ? [(await import('@swagglar/json-magic/bundle/plugins/browser')).fetchUrls()]
         : [
-            (await import('@scalar/json-magic/bundle/plugins/node')).fetchUrls(),
-            (await import('@scalar/json-magic/bundle/plugins/node')).readFiles(),
+            (await import('@swagglar/json-magic/bundle/plugins/node')).fetchUrls(),
+            (await import('@swagglar/json-magic/bundle/plugins/node')).readFiles(),
           ]
     document = await bundle(upgraded, {
       plugins,

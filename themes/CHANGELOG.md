@@ -1,4 +1,4 @@
-# @scalar/themes
+# @swagglar/themes
 
 ## 0.18.0
 
@@ -99,7 +99,7 @@
 
   Update the shared theme reset so text inputs align to the logical start by default for RTL documents.
 
-  Add a `mergeObjects` deep-merge helper to `@scalar/helpers`, used by the localization layer to merge translation overrides onto the built-in locale.
+  Add a `mergeObjects` deep-merge helper to `@swagglar/helpers`, used by the localization layer to merge translation overrides onto the built-in locale.
 
 ## 0.16.1
 
@@ -113,7 +113,7 @@
 
 - [#9415](https://github.com/scalar/scalar/pull/9415): Ship the Scalar design-system agent skill with the package.
 
-  `@scalar/themes` now bundles the `scalar-design-system` skill (design tokens, theming, a `@scalar/components` reference, and a Paper design-tool bridge) under `skills/`. Agents do not auto-discover skills inside `node_modules`, so link or copy `node_modules/@scalar/themes/skills/scalar-design-system` into your project's `.claude/skills` to use it.
+  `@swagglar/themes` now bundles the `scalar-design-system` skill (design tokens, theming, a `@swagglar/components` reference, and a Paper design-tool bridge) under `skills/`. Agents do not auto-discover skills inside `node_modules`, so link or copy `node_modules/@swagglar/themes/skills/scalar-design-system` into your project's `.claude/skills` to use it.
 
 ### Patch Changes
 
@@ -131,7 +131,7 @@
 
 - [#9211](https://github.com/scalar/scalar/pull/9211): fix(components): add `highlighted` Tailwind variant for Radix menu item highlight state
 
-  Adds a new `highlighted` custom Tailwind variant (matching `[data-highlighted]`) to `@scalar/themes` and uses it in `ScalarDropdownButton` to restore the hover and keyboard-navigation highlight in the workspace and team picker dropdowns.
+  Adds a new `highlighted` custom Tailwind variant (matching `[data-highlighted]`) to `@swagglar/themes` and uses it in `ScalarDropdownButton` to restore the hover and keyboard-navigation highlight in the workspace and team picker dropdowns.
 
 ## 0.15.4
 
@@ -139,7 +139,7 @@
 
 - [#9198](https://github.com/scalar/scalar/pull/9198): fix(components): add `highlighted` Tailwind variant for Radix menu item highlight state
 
-  Adds a new `highlighted` custom Tailwind variant (matching `[data-highlighted]`) to `@scalar/themes` and uses it in `ScalarDropdownButton` to restore the hover and keyboard-navigation highlight in the workspace and team picker dropdowns.
+  Adds a new `highlighted` custom Tailwind variant (matching `[data-highlighted]`) to `@swagglar/themes` and uses it in `ScalarDropdownButton` to restore the hover and keyboard-navigation highlight in the workspace and team picker dropdowns.
 
 ## 0.15.3
 
@@ -200,7 +200,7 @@
 
 ### Patch Changes
 
-- [#7458](https://github.com/scalar/scalar/pull/7458) [`35af6bf`](https://github.com/scalar/scalar/commit/35af6bfce4bc4ae3d0fc5783ea36e0165e964361) Thanks [@marcalexiei](https://github.com/marcalexiei)! - fix: remove `@scalar/types` unused dependency
+- [#7458](https://github.com/scalar/scalar/pull/7458) [`35af6bf`](https://github.com/scalar/scalar/commit/35af6bfce4bc4ae3d0fc5783ea36e0165e964361) Thanks [@marcalexiei](https://github.com/marcalexiei)! - fix: remove `@swagglar/types` unused dependency
 
 ## 0.13.24
 
@@ -209,21 +209,21 @@
 - [#7306](https://github.com/scalar/scalar/pull/7306) [`5a108fc`](https://github.com/scalar/scalar/commit/5a108fcbc52ae7957731c23689896ba353b83d3b) Thanks [@hwkr](https://github.com/hwkr)! - feat(components): add ScalarThemeSwatches component
 
 - Updated dependencies [[`44aeef0`](https://github.com/scalar/scalar/commit/44aeef01073801165e339163462378b7b62ff68d), [`cbedfab`](https://github.com/scalar/scalar/commit/cbedfab576502069be27ceacbea145a917214e47), [`cbedfab`](https://github.com/scalar/scalar/commit/cbedfab576502069be27ceacbea145a917214e47)]:
-  - @scalar/types@0.5.0
+  - @swagglar/types@0.5.0
 
 ## 0.13.23
 
 ### Patch Changes
 
 - Updated dependencies [[`eb022f2`](https://github.com/scalar/scalar/commit/eb022f2c8f93c84a04c0093fefe8a1e05d6ec80d), [`6ec8c29`](https://github.com/scalar/scalar/commit/6ec8c299d912111b029e8058979d00968b70691a), [`eba18d0`](https://github.com/scalar/scalar/commit/eba18d06267a163a8f91396a66f817100ee59461)]:
-  - @scalar/types@0.4.0
+  - @swagglar/types@0.4.0
 
 ## 0.13.22
 
 ### Patch Changes
 
 - Updated dependencies [f3e17d8]
-  - @scalar/types@0.3.2
+  - @swagglar/types@0.3.2
 
 ## 0.13.21
 
@@ -231,14 +231,14 @@
 
 - 13dcd89: feat(themes): add text align to global reset
 - Updated dependencies [1e01464]
-  - @scalar/types@0.3.1
+  - @swagglar/types@0.3.1
 
 ## 0.13.20
 
 ### Patch Changes
 
 - Updated dependencies [008a0f3]
-  - @scalar/types@0.3.0
+  - @swagglar/types@0.3.0
 
 ## 0.13.19
 
@@ -251,7 +251,7 @@
 ### Patch Changes
 
 - Updated dependencies [005fba9]
-  - @scalar/types@0.2.16
+  - @swagglar/types@0.2.16
 
 ## 0.13.17
 
@@ -264,7 +264,7 @@
 ### Patch Changes
 
 - Updated dependencies [abe3842]
-  - @scalar/types@0.2.15
+  - @swagglar/types@0.2.15
 
 ## 0.13.15
 
@@ -272,14 +272,14 @@
 
 - 2b22eab: feat(themes): convert default color 1 to grey scale
 - Updated dependencies [792c937]
-  - @scalar/types@0.2.14
+  - @swagglar/types@0.2.14
 
 ## 0.13.14
 
 ### Patch Changes
 
 - Updated dependencies [50032be]
-  - @scalar/types@0.2.13
+  - @swagglar/types@0.2.13
 
 ## 0.13.13
 
@@ -287,7 +287,7 @@
 
 - 6c24be9: feat(components): update scalar hotkey design
 - Updated dependencies [6a88108]
-  - @scalar/types@0.2.12
+  - @swagglar/types@0.2.12
 
 ## 0.13.12
 
@@ -297,7 +297,7 @@
 - 3c1e3e3: fix: removes a level line height from reset
 - Updated dependencies [ccf875a]
 - Updated dependencies [94d6d0c]
-  - @scalar/types@0.2.11
+  - @swagglar/types@0.2.11
 
 ## 0.13.11
 
@@ -305,7 +305,7 @@
 
 - fb62e1b: feat: adds global base style for anchor tag
 - Updated dependencies [fb62e1b]
-  - @scalar/types@0.2.10
+  - @swagglar/types@0.2.10
 
 ## 0.13.10
 
@@ -313,7 +313,7 @@
 
 - 8a67f4f: fix(api-reference): classic layout improvements
 - Updated dependencies [591562f]
-  - @scalar/types@0.2.9
+  - @swagglar/types@0.2.9
 
 ## 0.13.9
 
@@ -321,7 +321,7 @@
 
 - 661c7e9: feat(themes): updates dark/light mode accent on default theme
 - Updated dependencies [c10e191]
-  - @scalar/types@0.2.8
+  - @swagglar/types@0.2.8
 
 ## 0.13.8
 
@@ -329,7 +329,7 @@
 
 - 3fdc2f2: feat(api-reference): unify inconsistent font styles across scalar client and ref, and improve consistency"
 - Updated dependencies [ad2e3e6]
-  - @scalar/types@0.2.7
+  - @swagglar/types@0.2.7
 
 ## 0.13.7
 
@@ -337,13 +337,13 @@
 
 - 2d7f995: refactor: use more common straight apostrophe ' instead of the real apostrophe ’
 - Updated dependencies [2d7f995]
-  - @scalar/types@0.2.6
+  - @swagglar/types@0.2.6
 
 ## 0.13.6
 
 ### Patch Changes
 
-- @scalar/types@0.2.5
+- @swagglar/types@0.2.5
 
 ## 0.13.5
 
@@ -351,7 +351,7 @@
 
 - 4bbbb32: feat(components): add sidebar sections
 - Updated dependencies [1468280]
-  - @scalar/types@0.2.4
+  - @swagglar/types@0.2.4
 
 ## 0.13.4
 
@@ -364,7 +364,7 @@
 ### Patch Changes
 
 - Updated dependencies [221e35f]
-  - @scalar/types@0.2.3
+  - @swagglar/types@0.2.3
 
 ## 0.13.2
 
@@ -372,7 +372,7 @@
 
 - ba84a3c: fix(themes): add alert color
 - 358eb63: fix(api-reference): fix markdown styles pt2
-  - @scalar/types@0.2.2
+  - @swagglar/types@0.2.2
 
 ## 0.13.1
 
@@ -388,14 +388,14 @@
 
 ### Patch Changes
 
-- @scalar/types@0.2.1
+- @swagglar/types@0.2.1
 
 ## 0.12.1
 
 ### Patch Changes
 
 - Updated dependencies [4440949]
-  - @scalar/types@0.2.1
+  - @swagglar/types@0.2.1
 
 ## 0.12.0
 
@@ -407,14 +407,14 @@
 
 - 5613e40: feat(components): scalar tooltip overhaul
 - Updated dependencies [483ca93]
-  - @scalar/types@0.2.0
+  - @swagglar/types@0.2.0
 
 ## 0.11.3
 
 ### Patch Changes
 
 - Updated dependencies [be8a6ec]
-  - @scalar/types@0.1.16
+  - @swagglar/types@0.1.16
 
 ## 0.11.2
 
@@ -425,7 +425,7 @@
 - Updated dependencies [0222ad4]
 - Updated dependencies [cb9428c]
 - Updated dependencies [67aa0f4]
-  - @scalar/types@0.1.15
+  - @swagglar/types@0.1.15
 
 ## 0.11.1
 
@@ -434,7 +434,7 @@
 - 8c7bad8: chore: move build tooling to esbuild
 - 2157fb4: add font exports back
 - Updated dependencies [8c7bad8]
-  - @scalar/types@0.1.14
+  - @swagglar/types@0.1.14
 
 ## 0.11.0
 
@@ -445,34 +445,34 @@
 ### Patch Changes
 
 - Updated dependencies [e8457cb]
-  - @scalar/types@0.1.13
+  - @swagglar/types@0.1.13
 
 ## 0.10.4
 
 ### Patch Changes
 
 - Updated dependencies [62c4ce3]
-  - @scalar/types@0.1.12
+  - @swagglar/types@0.1.12
 
 ## 0.10.3
 
 ### Patch Changes
 
 - Updated dependencies [eb4854d]
-  - @scalar/types@0.1.11
+  - @swagglar/types@0.1.11
 
 ## 0.10.2
 
 ### Patch Changes
 
-- @scalar/types@0.1.10
+- @swagglar/types@0.1.10
 
 ## 0.10.1
 
 ### Patch Changes
 
 - Updated dependencies [17e7d02]
-  - @scalar/types@0.1.9
+  - @swagglar/types@0.1.9
 
 ## 0.10.0
 
@@ -483,7 +483,7 @@
 ### Patch Changes
 
 - Updated dependencies [feaa314]
-  - @scalar/types@0.1.8
+  - @swagglar/types@0.1.8
 
 ## 0.9.86
 
@@ -491,7 +491,7 @@
 
 - Updated dependencies [9def02e]
 - Updated dependencies [3745d77]
-  - @scalar/types@0.1.7
+  - @swagglar/types@0.1.7
 
 ## 0.9.85
 
@@ -504,7 +504,7 @@
 ### Patch Changes
 
 - Updated dependencies [3783345]
-  - @scalar/types@0.1.6
+  - @swagglar/types@0.1.6
 
 ## 0.9.83
 
@@ -512,7 +512,7 @@
 
 - Updated dependencies [e09dab3]
 - Updated dependencies [04e27a1]
-  - @scalar/types@0.1.5
+  - @swagglar/types@0.1.5
 
 ## 0.9.82
 
@@ -521,7 +521,7 @@
 - Updated dependencies [8efedf3]
 - Updated dependencies [82a4ba8]
 - Updated dependencies [57feba6]
-  - @scalar/types@0.1.4
+  - @swagglar/types@0.1.4
 
 ## 0.9.81
 
@@ -529,7 +529,7 @@
 
 - Updated dependencies [543a16c]
 - Updated dependencies [57e96a0]
-  - @scalar/types@0.1.3
+  - @swagglar/types@0.1.3
 
 ## 0.9.80
 
@@ -537,14 +537,14 @@
 
 - Updated dependencies [7a8965c]
 - Updated dependencies [49dffff]
-  - @scalar/types@0.1.2
+  - @swagglar/types@0.1.2
 
 ## 0.9.79
 
 ### Patch Changes
 
 - Updated dependencies [39c0f47]
-  - @scalar/types@0.1.1
+  - @swagglar/types@0.1.1
 
 ## 0.9.78
 
@@ -559,21 +559,21 @@
 ### Patch Changes
 
 - Updated dependencies [5f9a8a2]
-  - @scalar/types@0.1.0
+  - @swagglar/types@0.1.0
 
 ## 0.9.76
 
 ### Patch Changes
 
 - Updated dependencies [fc6a45e]
-  - @scalar/types@0.0.41
+  - @swagglar/types@0.0.41
 
 ## 0.9.75
 
 ### Patch Changes
 
 - Updated dependencies [4d03e0f]
-  - @scalar/types@0.0.40
+  - @swagglar/types@0.0.40
 
 ## 0.9.74
 
@@ -581,14 +581,14 @@
 
 - Updated dependencies [bab7990]
 - Updated dependencies [2c621d4]
-  - @scalar/types@0.0.39
+  - @swagglar/types@0.0.39
 
 ## 0.9.73
 
 ### Patch Changes
 
 - Updated dependencies [7f1a40e]
-  - @scalar/types@0.0.38
+  - @swagglar/types@0.0.38
 
 ## 0.9.72
 
@@ -597,7 +597,7 @@
 - 89d8b75: feat: new ApiReferenceConfiguration type
 - Updated dependencies [89d8b75]
 - Updated dependencies [8a04b8d]
-  - @scalar/types@0.0.37
+  - @swagglar/types@0.0.37
 
 ## 0.9.71
 
@@ -610,7 +610,7 @@
 ### Patch Changes
 
 - Updated dependencies [4db5161]
-  - @scalar/types@0.0.36
+  - @swagglar/types@0.0.36
 
 ## 0.9.69
 
@@ -621,14 +621,14 @@
 - 8d9a2c0: feat: updates danger variable + add background alert variable
 - Updated dependencies [946a5df]
 - Updated dependencies [cf14cbb]
-  - @scalar/types@0.0.35
+  - @swagglar/types@0.0.35
 
 ## 0.9.68
 
 ### Patch Changes
 
 - e47a698: feat: updates danger variable + add background alert variable
-  - @scalar/types@0.0.34
+  - @swagglar/types@0.0.34
 
 ## 0.9.67
 
@@ -637,7 +637,7 @@
 - fa6afe8: chore: code formatting
 - Updated dependencies [54fdfcb]
 - Updated dependencies [fa6afe8]
-  - @scalar/types@0.0.33
+  - @swagglar/types@0.0.33
 
 ## 0.9.66
 
@@ -647,20 +647,20 @@
 - Updated dependencies [b5727ef]
 - Updated dependencies [34e6f52]
 - Updated dependencies [f2b082a]
-  - @scalar/types@0.0.32
+  - @swagglar/types@0.0.32
 
 ## 0.9.65
 
 ### Patch Changes
 
 - Updated dependencies [a30e7cc]
-  - @scalar/types@0.0.31
+  - @swagglar/types@0.0.31
 
 ## 0.9.64
 
 ### Patch Changes
 
-- @scalar/types@0.0.30
+- @swagglar/types@0.0.30
 
 ## 0.9.63
 
@@ -668,7 +668,7 @@
 
 - 51f3177: fix: removes inset from box shadow variable
 - Updated dependencies [be34e7d]
-  - @scalar/types@0.0.29
+  - @swagglar/types@0.0.29
 
 ## 0.9.62
 
@@ -679,14 +679,14 @@
 - 4f12fe4: feat(themes): add scalar danger color
 - Updated dependencies [702c386]
 - Updated dependencies [f1f39b0]
-  - @scalar/types@0.0.28
+  - @swagglar/types@0.0.28
 
 ## 0.9.61
 
 ### Patch Changes
 
 - Updated dependencies [b552db5]
-  - @scalar/types@0.0.27
+  - @swagglar/types@0.0.27
 
 ## 0.9.60
 
@@ -695,14 +695,14 @@
 - e866487: feat(components): create dark light toggle components
 - Updated dependencies [60cd6f1]
 - Updated dependencies [60cd6f1]
-  - @scalar/types@0.0.26
+  - @swagglar/types@0.0.26
 
 ## 0.9.59
 
 ### Patch Changes
 
 - 7b4ab2c: feat(components): make ScalarMenu into a dropdown
-  - @scalar/types@0.0.25
+  - @swagglar/types@0.0.25
 
 ## 0.9.58
 
@@ -715,7 +715,7 @@
 ### Patch Changes
 
 - Updated dependencies [c263aaf]
-  - @scalar/types@0.0.25
+  - @swagglar/types@0.0.25
 
 ## 0.9.56
 
@@ -728,14 +728,14 @@
 ### Patch Changes
 
 - Updated dependencies [fbef0c3]
-  - @scalar/types@0.0.24
+  - @swagglar/types@0.0.24
 
 ## 0.9.54
 
 ### Patch Changes
 
 - Updated dependencies [c2f5f08]
-  - @scalar/types@0.0.23
+  - @swagglar/types@0.0.23
 
 ## 0.9.53
 
@@ -743,7 +743,7 @@
 
 - Updated dependencies [baaad1c]
 - Updated dependencies [c984ac8]
-  - @scalar/types@0.0.22
+  - @swagglar/types@0.0.22
 
 ## 0.9.52
 
@@ -757,7 +757,7 @@
 
 - 91123e8: chore: export each theme individually for easier access
 - Updated dependencies [9d23f95]
-  - @scalar/types@0.0.21
+  - @swagglar/types@0.0.21
 
 ## 0.9.50
 
@@ -772,7 +772,7 @@
 - d379b81: feat(themes): expose tailwind preset as js not just ts
 - f67c3bc: feat: add framework themes
 - Updated dependencies [f67c3bc]
-  - @scalar/types@0.0.20
+  - @swagglar/types@0.0.20
 
 ## 0.9.48
 
@@ -785,13 +785,13 @@
 ### Patch Changes
 
 - a40999d: chore: added type safety rule noUncheckedIndexedAccess
-  - @scalar/types@0.0.19
+  - @swagglar/types@0.0.19
 
 ## 0.9.46
 
 ### Patch Changes
 
-- @scalar/types@0.0.19
+- @swagglar/types@0.0.19
 
 ## 0.9.45
 
@@ -799,7 +799,7 @@
 
 - bb3dc9d: fix(api-reference): improve endpoint and tag accessibility
 - Updated dependencies [fb798c8]
-  - @scalar/types@0.0.18
+  - @swagglar/types@0.0.18
 
 ## 0.9.44
 
@@ -823,7 +823,7 @@
 
 ### Patch Changes
 
-- @scalar/types@0.0.17
+- @swagglar/types@0.0.17
 
 ## 0.9.40
 
@@ -843,13 +843,13 @@
 
 - 4b8b611: fix: removes focus visible style from reset
 - Updated dependencies [dbbe38f]
-  - @scalar/types@0.0.16
+  - @swagglar/types@0.0.16
 
 ## 0.9.37
 
 ### Patch Changes
 
-- @scalar/types@0.0.15
+- @swagglar/types@0.0.15
 
 ## 0.9.36
 
@@ -857,7 +857,7 @@
 
 - d02d70c: style: updates border color presets
 - Updated dependencies [e911047]
-  - @scalar/types@0.0.14
+  - @swagglar/types@0.0.14
 
 ## 0.9.35
 
@@ -870,7 +870,7 @@
 ### Patch Changes
 
 - Updated dependencies [9dc2ab7]
-  - @scalar/types@0.0.13
+  - @swagglar/types@0.0.13
 
 ## 0.9.33
 
@@ -879,15 +879,15 @@
 - 1026d81: feat: adds themes high contrast selection
 - 07b5439: feat: enhances command palette navigation and style
 - Updated dependencies [8f12149]
-  - @scalar/types@0.0.12
+  - @swagglar/types@0.0.12
 
 ## 0.9.32
 
 ### Patch Changes
 
-- f961940: chore: add @scalar/types to dependency for ThemeId type
+- f961940: chore: add @swagglar/types to dependency for ThemeId type
 - Updated dependencies [f961940]
-  - @scalar/types@0.0.11
+  - @swagglar/types@0.0.11
 
 ## 0.9.31
 
@@ -929,7 +929,7 @@
 
 ### Patch Changes
 
-- 78db8f5: feat: use new @scalar/types package
+- 78db8f5: feat: use new @swagglar/types package
 
 ## 0.9.24
 
@@ -1061,7 +1061,7 @@
 
 ### Patch Changes
 
-- 0fae180: chore: move client app to use @scalar/themes tailwind preset
+- 0fae180: chore: move client app to use @swagglar/themes tailwind preset
 
 ## 0.9.2
 
@@ -1162,7 +1162,7 @@
 
 ### Patch Changes
 
-- 4d31b19: refactor: move theme labels to @scalar/themes
+- 4d31b19: refactor: move theme labels to @swagglar/themes
 
 ## 0.7.2
 
@@ -1385,7 +1385,7 @@
 ### Patch Changes
 
 - 75a69ba7: feat: add `theme` prop and improve theme support
-- 75a69ba7: refactor: rename @scalar/default-theme to @scalar/themes, add more themes
+- 75a69ba7: refactor: rename @scalar/default-theme to @swagglar/themes, add more themes
 
 ## 0.3.1
 
@@ -1421,4 +1421,4 @@
 
 ### Patch Changes
 
-- de4ff38: feat: add a new @scalar/themes package to import the variables and custom scrollbar CSS
+- de4ff38: feat: add a new @swagglar/themes package to import the variables and custom scrollbar CSS

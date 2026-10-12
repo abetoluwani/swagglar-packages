@@ -1,4 +1,4 @@
-import type { OpenAPIV3_2 } from '@scalar/openapi-types'
+import type { OpenAPIV3_2 } from '@swagglar/openapi-types'
 
 import { getPathFromUrl } from './get-open-auth-token-urls'
 

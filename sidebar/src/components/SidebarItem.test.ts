@@ -5,8 +5,8 @@ import {
   ScalarSidebarItem,
   ScalarSidebarItem as ScalarSidebarItemComponent,
   ScalarSidebarSection,
-} from '@scalar/components/sidebar'
-import { LibraryIcon } from '@scalar/icons/library'
+} from '@swagglar/components/sidebar'
+import { LibraryIcon } from '@swagglar/icons/library'
 import { mount } from '@vue/test-utils'
 import { describe, expect, it, vi } from 'vitest'
 

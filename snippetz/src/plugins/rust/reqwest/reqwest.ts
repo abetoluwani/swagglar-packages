@@ -1,4 +1,4 @@
-import type { Plugin } from '@scalar/types/snippetz'
+import type { Plugin } from '@swagglar/types/snippetz'
 
 import { buildQueryString, buildUrl, normalizeRequest, processHeaders } from '@/libs/http'
 import { createChain, formatJson, indent, wrapInDoubleQuotes } from '@/libs/rust'

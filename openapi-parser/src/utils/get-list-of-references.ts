@@ -1,4 +1,4 @@
-import type { AnyObject } from '@scalar/types/utils'
+import type { AnyObject } from '@swagglar/types/utils'
 
 import { traverse } from './traverse'
 

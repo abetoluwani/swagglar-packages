@@ -1,9 +1,9 @@
-import { isObject } from '@scalar/helpers/object/is-object'
-import { isPollutionKey } from '@scalar/helpers/object/prevent-pollution'
-import { bundle } from '@scalar/json-magic/bundle'
-import { join as joinDocuments } from '@scalar/json-magic/join'
-import type { Document as OpenApiDocumentV3_1 } from '@scalar/openapi-types/3.1'
-import type { UnknownObject } from '@scalar/types/utils'
+import { isObject } from '@swagglar/helpers/object/is-object'
+import { isPollutionKey } from '@swagglar/helpers/object/prevent-pollution'
+import { bundle } from '@swagglar/json-magic/bundle'
+import { join as joinDocuments } from '@swagglar/json-magic/join'
+import type { Document as OpenApiDocumentV3_1 } from '@swagglar/openapi-types/3.1'
+import type { UnknownObject } from '@swagglar/types/utils'
 
 import { upgrade } from '@/utils/upgrade'
 

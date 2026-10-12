@@ -1,5 +1,5 @@
 {
-  "name": "@scalar/json-magic",
+  "name": "@swagglar/json-magic",
   "description": "A collection of utilities for working with JSON objects, including diffing, conflict resolution, bundling and more.",
   "license": "MIT",
   "author": "Scalar (https://github.com/scalar)",
@@ -127,7 +127,7 @@
     "CHANGELOG.md"
   ],
   "dependencies": {
-    "@scalar/helpers": "workspace:*",
+    "@swagglar/helpers": "workspace:*",
     "pathe": "^2.0.3",
     "undici": "catalog:*",
     "yaml": "catalog:*"

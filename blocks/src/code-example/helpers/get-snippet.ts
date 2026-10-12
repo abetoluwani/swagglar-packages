@@ -1,5 +1,5 @@
-import type { ErrorResponse } from '@scalar/helpers/errors/normalize-error'
-import { type ClientId, type TargetId, snippetz } from '@scalar/snippetz'
+import type { ErrorResponse } from '@swagglar/helpers/errors/normalize-error'
+import { type ClientId, type TargetId, snippetz } from '@swagglar/snippetz'
 import type { Request as HarRequest } from 'har-format'
 
 /** Key used to hack around the invalid urls */

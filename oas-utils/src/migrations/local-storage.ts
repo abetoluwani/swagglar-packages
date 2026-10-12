@@ -1,4 +1,4 @@
-import type { LS_KEYS } from '@scalar/helpers/object/local-storage'
+import type { LS_KEYS } from '@swagglar/helpers/object/local-storage'
 import { parse } from 'flatted'
 
 import { DATA_VERSION_LS_LEY } from '@/migrations/data-version'

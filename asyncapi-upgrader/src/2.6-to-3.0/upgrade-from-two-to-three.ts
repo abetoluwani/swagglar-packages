@@ -1,6 +1,6 @@
-import { isObject } from '@scalar/helpers/object/is-object'
-import { slugify } from '@scalar/helpers/string/slugify'
-import type { UnknownObject } from '@scalar/types/utils'
+import { isObject } from '@swagglar/helpers/object/is-object'
+import { slugify } from '@swagglar/helpers/string/slugify'
+import type { UnknownObject } from '@swagglar/types/utils'
 
 /** The AsyncAPI version produced by this upgrade step. */
 const ASYNCAPI_VERSION = '3.0.0'
@@ -300,7 +300,7 @@ function buildOperation(
 /**
  * Slugify a channel path (e.g. `user/{id}/signedup` → `user-id-signedup`).
  *
- * `@scalar/helpers/string/slugify` drops non-word characters outright, but channel paths use `/`,
+ * `@swagglar/helpers/string/slugify` drops non-word characters outright, but channel paths use `/`,
  * `.`, `{`, and `}` as logical separators we want preserved as hyphens — so we pre-replace any run
  * of non-alphanumerics with a space and let the shared slugify collapse those into hyphens.
  */

@@ -1,5 +1,5 @@
-import { parseJsonPointerSegments } from '@scalar/helpers/json/parse-json-pointer-segments'
-import { isObject } from '@scalar/helpers/object/is-object'
+import { parseJsonPointerSegments } from '@swagglar/helpers/json/parse-json-pointer-segments'
+import { isObject } from '@swagglar/helpers/object/is-object'
 
 import { convertToLocalRef } from '@/helpers/convert-to-local-ref'
 import { getId, getSchemas } from '@/helpers/get-schemas'

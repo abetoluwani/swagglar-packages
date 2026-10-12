@@ -1,6 +1,6 @@
-import { isObject } from '@scalar/helpers/object/is-object'
-import { slugify } from '@scalar/helpers/string/slugify'
-import type { UnknownObject } from '@scalar/types/utils'
+import { isObject } from '@swagglar/helpers/object/is-object'
+import { slugify } from '@swagglar/helpers/string/slugify'
+import type { UnknownObject } from '@swagglar/types/utils'
 
 /** The AsyncAPI version produced by this upgrade step. */
 const ASYNCAPI_VERSION = '2.6.0'

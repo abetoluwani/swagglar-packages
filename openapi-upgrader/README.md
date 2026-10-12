@@ -7,9 +7,9 @@
 
 # Scalar OpenAPI Upgrader
 
-[![Version](https://img.shields.io/npm/v/@scalar/openapi-upgrader)](https://www.npmjs.com/package/@scalar/openapi-upgrader)
-[![Downloads](https://img.shields.io/npm/dm/@scalar/openapi-upgrader)](https://www.npmjs.com/package/@scalar/openapi-upgrader)
-[![License](https://img.shields.io/npm/l/@scalar/openapi-upgrader)](https://www.npmjs.com/package/@scalar/openapi-upgrader)
+[![Version](https://img.shields.io/npm/v/@swagglar/openapi-upgrader)](https://www.npmjs.com/package/@swagglar/openapi-upgrader)
+[![Downloads](https://img.shields.io/npm/dm/@swagglar/openapi-upgrader)](https://www.npmjs.com/package/@swagglar/openapi-upgrader)
+[![License](https://img.shields.io/npm/l/@swagglar/openapi-upgrader)](https://www.npmjs.com/package/@swagglar/openapi-upgrader)
 [![Discord](https://img.shields.io/discord/1135330207960678410?style=flat&color=5865F2)](https://discord.gg/scalar)
 
 Upgrade OpenAPI documents to the latest and greatest version

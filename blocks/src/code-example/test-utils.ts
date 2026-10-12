@@ -1,4 +1,4 @@
-import type { WorkspaceEventBus } from '@scalar/workspace-store/events'
+import type { WorkspaceEventBus } from '@swagglar/workspace-store/events'
 import { vi } from 'vitest'
 
 /** Mock event bus for all your testing needs */

@@ -15,7 +15,7 @@ import { type Schema, lazy, literal, object, optional, union } from '@/schema'
  * level of the input is re-scored once per branch — O(2^depth) CPU for a
  * linear-size value.
  *
- * This is reachable from untrusted input: `@scalar/workspace-store` calls
+ * This is reachable from untrusted input: `@swagglar/workspace-store` calls
  * `coerce(openapiSchema, document)` on user-supplied OpenAPI/AsyncAPI documents,
  * and the OpenAPI Schema Object is exactly this shape (`items` is recursive and
  * appears in two union branches). A sub-1KB document hangs the event loop for

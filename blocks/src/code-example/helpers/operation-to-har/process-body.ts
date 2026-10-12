@@ -1,9 +1,9 @@
-import { isXmlMediaType } from '@scalar/helpers/http/is-xml-media-type'
-import { getExampleValue, getExplicitExampleText } from '@scalar/workspace-store/helpers/get-example-value'
-import { getResolvedRef, mergeSiblingReferences } from '@scalar/workspace-store/helpers/get-resolved-ref'
-import { getResolvedRefDeep } from '@scalar/workspace-store/helpers/get-resolved-ref-deep'
-import { serializeStreamExample } from '@scalar/workspace-store/helpers/serialize-stream-example'
-import { unpackProxyObject } from '@scalar/workspace-store/helpers/unpack-proxy'
+import { isXmlMediaType } from '@swagglar/helpers/http/is-xml-media-type'
+import { getExampleValue, getExplicitExampleText } from '@swagglar/workspace-store/helpers/get-example-value'
+import { getResolvedRef, mergeSiblingReferences } from '@swagglar/workspace-store/helpers/get-resolved-ref'
+import { getResolvedRefDeep } from '@swagglar/workspace-store/helpers/get-resolved-ref-deep'
+import { serializeStreamExample } from '@swagglar/workspace-store/helpers/serialize-stream-example'
+import { unpackProxyObject } from '@swagglar/workspace-store/helpers/unpack-proxy'
 import {
   buildRequestBody,
   coerceLeafValueToSchemaType,
@@ -15,12 +15,12 @@ import {
   serializeFormPropertyWithEncoding,
   serializeMultipartArray,
   serializeMultipartBody,
-} from '@scalar/workspace-store/request-example'
+} from '@swagglar/workspace-store/request-example'
 import type {
   MediaTypeObject,
   RequestBodyObject,
   SchemaObject,
-} from '@scalar/workspace-store/schemas/v3.2/strict/openapi-document'
+} from '@swagglar/workspace-store/schemas/v3.2/strict/openapi-document'
 import type { Param, PostData } from 'har-format'
 
 import type { OperationToHarProps } from './operation-to-har'

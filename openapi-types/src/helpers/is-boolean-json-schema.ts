@@ -6,7 +6,7 @@
  * an object schema. This is different from `isBooleanSchema`, which checks
  * for an object schema with `type: 'boolean'`.
  *
- * Note: the strict `SchemaObject` types in `@scalar/openapi-types/3.0`,
+ * Note: the strict `SchemaObject` types in `@swagglar/openapi-types/3.0`,
  * `/3.1`, and `/3.2` do not include `boolean` in the union, but boolean
  * schemas are legal where `SchemaObject | ReferenceObject | boolean` is
  * accepted (for example inside `properties` or `additionalProperties`).

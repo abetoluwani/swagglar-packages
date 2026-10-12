@@ -1,8 +1,8 @@
 import { mkdir, stat, writeFile } from 'node:fs/promises'
 import { dirname } from 'node:path'
 
-import { buildReleaseNotesPreamble, serializeReleaseNotes } from '@scalar/helpers/markdown/release-notes'
-import { isObjectLike } from '@scalar/helpers/object/is-object'
+import { buildReleaseNotesPreamble, serializeReleaseNotes } from '@swagglar/helpers/markdown/release-notes'
+import { isObjectLike } from '@swagglar/helpers/object/is-object'
 
 import type { ReleaseNote } from '../types'
 

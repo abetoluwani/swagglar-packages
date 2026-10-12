@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import type { HttpMethod } from '@scalar/helpers/http/http-methods'
-import type { AvailableClients } from '@scalar/snippetz'
-import { createWorkspaceStore } from '@scalar/workspace-store/client'
+import type { HttpMethod } from '@swagglar/helpers/http/http-methods'
+import type { AvailableClients } from '@swagglar/snippetz'
+import { createWorkspaceStore } from '@swagglar/workspace-store/client'
 import { onBeforeUnmount, onMounted, ref } from 'vue'
 
 import { createCodeExample } from '../../src/code-example'

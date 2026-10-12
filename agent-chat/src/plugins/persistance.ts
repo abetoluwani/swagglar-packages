@@ -1,5 +1,5 @@
-import { debounce } from '@scalar/helpers/general/debounce'
-import type { WorkspacePlugin } from '@scalar/workspace-store/workspace-plugin'
+import { debounce } from '@swagglar/helpers/general/debounce'
+import type { WorkspacePlugin } from '@swagglar/workspace-store/workspace-plugin'
 
 import { authStorage } from '@/helpers'
 

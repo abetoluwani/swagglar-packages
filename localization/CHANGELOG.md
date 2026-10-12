@@ -1,4 +1,4 @@
-# @scalar/localization
+# @swagglar/localization
 
 ## 0.2.3
 

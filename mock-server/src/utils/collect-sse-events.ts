@@ -1,6 +1,6 @@
-import { parseMimeType } from '@scalar/helpers/http/mime-type'
-import type { OpenAPIV3_1 } from '@scalar/openapi-types'
-import { getResolvedRef } from '@scalar/workspace-store/helpers/get-resolved-ref'
+import { parseMimeType } from '@swagglar/helpers/http/mime-type'
+import type { OpenAPIV3_1 } from '@swagglar/openapi-types'
+import { getResolvedRef } from '@swagglar/workspace-store/helpers/get-resolved-ref'
 
 /**
  * How many events a schema-generated `text/event-stream` response emits.

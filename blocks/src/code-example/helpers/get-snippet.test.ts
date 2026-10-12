@@ -1,4 +1,4 @@
-import { AVAILABLE_CLIENTS, type ClientId, type TargetId } from '@scalar/snippetz'
+import { AVAILABLE_CLIENTS, type ClientId, type TargetId } from '@swagglar/snippetz'
 import type { Request as HarRequest } from 'har-format'
 import { describe, expect, it } from 'vitest'
 
@@ -19,14 +19,14 @@ const makeHarRequest = (overrides: Partial<HarRequest> = {}): HarRequest => ({
 })
 
 describe('getSnippet', () => {
-  it('generates a basic shell/curl example (@scalar/snippetz)', () => {
+  it('generates a basic shell/curl example (@swagglar/snippetz)', () => {
     const [error, result] = getSnippet('shell', 'curl', makeHarRequest())
 
     expect(error).toBeNull()
     expect(result).toEqual('curl https://example.com/users')
   })
 
-  it('generates a basic node/undici example (@scalar/snippetz)', () => {
+  it('generates a basic node/undici example (@swagglar/snippetz)', () => {
     const [error, result] = getSnippet('node', 'undici', makeHarRequest())
 
     expect(error).toBeNull()
@@ -37,7 +37,7 @@ describe('getSnippet', () => {
     `)
   })
 
-  it('generates a basic javascript/jquery example (@scalar/snippetz)', () => {
+  it('generates a basic javascript/jquery example (@swagglar/snippetz)', () => {
     const [error, result] = getSnippet('javascript', 'jquery', makeHarRequest())
 
     expect(error).toBeNull()

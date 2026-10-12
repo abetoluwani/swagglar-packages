@@ -1,6 +1,6 @@
 ---
 name: scalar-design-system
-description: Scalar's design system — design tokens, theming (@scalar/themes), CSS variables, and the @scalar/components library. Use when designing or implementing Scalar UI, especially with Paper (code-to-design / design-to-code), so output matches real Scalar tokens, colors, typography, spacing, and components instead of generic defaults.
+description: Scalar's design system — design tokens, theming (@swagglar/themes), CSS variables, and the @swagglar/components library. Use when designing or implementing Scalar UI, especially with Paper (code-to-design / design-to-code), so output matches real Scalar tokens, colors, typography, spacing, and components instead of generic defaults.
 ---
 
 # Scalar Design System
@@ -8,7 +8,7 @@ description: Scalar's design system — design tokens, theming (@scalar/themes),
 This skill is Scalar's design system, distilled for two jobs:
 
 1. **Designing Scalar UI in Paper** (`code-to-design`) — so a design uses Scalar's real palette, type, spacing, and component shapes from the first stroke, with no invented "design brief."
-2. **Turning a Paper design into code** (`design-to-code`) — so the output maps back to the correct `--scalar-*` variables, Tailwind classes, and `@scalar/components`.
+2. **Turning a Paper design into code** (`design-to-code`) — so the output maps back to the correct `--scalar-*` variables, Tailwind classes, and `@swagglar/components`.
 
 It complements the `code-to-design` and `design-to-code` plugin skills; this one supplies the Scalar-specific knowledge they lack.
 
@@ -73,7 +73,7 @@ Reference `--scalar-*` variables in CSS; in components, prefer the Tailwind clas
 
 ## Tailwind class mapping
 
-Scalar maps `--scalar-*` variables onto a custom Tailwind theme. In components, **use these classes** rather than raw variables. Source of truth: `@scalar/themes/tailwind.css`.
+Scalar maps `--scalar-*` variables onto a custom Tailwind theme. In components, **use these classes** rather than raw variables. Source of truth: `@swagglar/themes/tailwind.css`.
 
 - **Background:** `bg-b-1`, `bg-b-1.5`, `bg-b-2`, `bg-b-3`, `bg-b-accent`, `bg-b-btn`, `bg-b-tooltip`, `bg-b-danger`, `bg-b-alert`.
 - **Text:** `text-c-1`, `text-c-2`, `text-c-3`, `text-c-accent`, `text-c-ghost`, `text-c-disabled`, `text-c-btn`, `text-c-tooltip`, `text-c-danger`, `text-c-alert`.
@@ -85,13 +85,13 @@ Scalar maps `--scalar-*` variables onto a custom Tailwind theme. In components, 
 - **Spacing:** base unit is `4px`, so `p-1` = 4px, `p-2` = 8px, `gap-3` = 12px, etc. `h-header` = 48px.
 - **Breakpoints:** `xs` 400, `sm` 600, `md` 800, `lg` 1000, `xl` 1200.
 
-## Components — `@scalar/components`
+## Components — `@swagglar/components`
 
 A Vue 3 library (34 components) scoped to `.scalar-app`, styled with the Tailwind classes above via `cva` variants, and customizable through Tailwind class overrides (`useBindCx`). Import from the **subpath**, not the barrel:
 
 ```ts
-import { ScalarButton } from '@scalar/components/button'
-import { ScalarIconAcorn } from '@scalar/icons'
+import { ScalarButton } from '@swagglar/components/button'
+import { ScalarIconAcorn } from '@swagglar/icons'
 ```
 
 Headline components (full list in [`references/components.md`](./references/components.md)):
@@ -102,7 +102,7 @@ Headline components (full list in [`references/components.md`](./references/comp
 - **Layout / nav:** `ScalarHeader` (+ `ScalarHeaderColumn`), `ScalarSidebar`, `ScalarMenu`.
 - **Content:** `ScalarCard`, `ScalarCodeBlock`, `ScalarMarkdown`, `ScalarForm`, `ScalarLoading`.
 
-**Icons** come from `@scalar/icons` (1,500+ Phosphor icons as `ScalarIcon<Name>` components). Size with `size-*` (`size-4`, `size-5`) and color with `text-*`. `ScalarButton` takes an `:icon` prop.
+**Icons** come from `@swagglar/icons` (1,500+ Phosphor icons as `ScalarIcon<Name>` components). Size with `size-*` (`size-4`, `size-5`) and color with `text-*`. `ScalarButton` takes an `:icon` prop.
 
 ## Working in Paper
 
@@ -120,17 +120,17 @@ Paper writes literal HTML/CSS to the canvas with `px` sizes and hex colors, so t
 
 1. **Extract exact values from Paper** with `get_jsx` / `get_computed_styles` / `get_fill_image` — never read sizes or colors off a screenshot.
 2. **Map values back to tokens / Tailwind:** e.g. `#0099ff` → `--scalar-color-accent` / `text-c-accent`; `#fff` → `bg-b-1`; `#1b1b1b` → `text-c-1`; `0.5px #dfdfdf` border → `border`; `3px` radius → `rounded`; 16px Inter → `text-lg font-sans`. See [`references/paper.md`](./references/paper.md) for the full table.
-3. **Map elements to components:** button → `ScalarButton` (pick variant + size); card → `ScalarCard`; menu/select → `ScalarDropdown` / `ScalarListbox` / `ScalarCombobox`; dialog → `ScalarModal`; icon → an `@scalar/icons` `ScalarIcon*`. Import each from its subpath.
+3. **Map elements to components:** button → `ScalarButton` (pick variant + size); card → `ScalarCard`; menu/select → `ScalarDropdown` / `ScalarListbox` / `ScalarCombobox`; dialog → `ScalarModal`; icon → an `@swagglar/icons` `ScalarIcon*`. Import each from its subpath.
 4. **Where the component docs are** (to confirm a component, its props, and variants):
-   - `@scalar/components` `package.json` `exports` — the subpath → component map.
+   - `@swagglar/components` `package.json` `exports` — the subpath → component map.
    - The bundled TypeScript declarations (`*.d.ts`) shipped with each component — props, variants, and JSDoc.
-   - The `@scalar/components` Storybook — live variants and controls.
+   - The `@swagglar/components` Storybook — live variants and controls.
 5. **Output conventions:** wrap rendered output in `.scalar-app`; override styles with Tailwind classes via `useBindCx` (do not hand-write CSS); follow the `vue-components` skill for component code style.
 
 ## Source of truth
 
 When exact or current values matter, go to the package that owns them — read these from `node_modules/<package>/` (or the package on npm):
 
-- **Tokens & theming — `@scalar/themes`:** the compiled variables and the Tailwind `@theme` mapping ship as `@scalar/themes/style.css` and `@scalar/themes/tailwind.css`; the JS API (`getThemeStyles`, `presets`, `themeIds`, `ThemeId`) is exported from the package root (`@scalar/themes`).
-- **Components — `@scalar/components`:** the subpath import map is in the package's `package.json` `exports`; the full export list and per-component props/variants live in the bundled type declarations (`*.d.ts`).
-- **Icons — `@scalar/icons`:** the `ScalarIcon*` set is exported from the package root (`@scalar/icons`).
+- **Tokens & theming — `@swagglar/themes`:** the compiled variables and the Tailwind `@theme` mapping ship as `@swagglar/themes/style.css` and `@swagglar/themes/tailwind.css`; the JS API (`getThemeStyles`, `presets`, `themeIds`, `ThemeId`) is exported from the package root (`@swagglar/themes`).
+- **Components — `@swagglar/components`:** the subpath import map is in the package's `package.json` `exports`; the full export list and per-component props/variants live in the bundled type declarations (`*.d.ts`).
+- **Icons — `@swagglar/icons`:** the `ScalarIcon*` set is exported from the package root (`@swagglar/icons`).

@@ -1,4 +1,4 @@
-import type { UnknownObject } from '@scalar/types/utils'
+import type { UnknownObject } from '@swagglar/types/utils'
 
 import type { Filesystem, FilesystemEntry } from '@/types/index'
 

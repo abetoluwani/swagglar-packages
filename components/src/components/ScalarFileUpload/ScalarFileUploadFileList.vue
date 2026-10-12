@@ -10,8 +10,8 @@
 export default {}
 </script>
 <script setup lang="ts">
-import { formatBytes } from '@scalar/helpers/formatters/format-bytes'
-import { useBindCx } from '@scalar/use-hooks/useBindCx'
+import { formatBytes } from '@swagglar/helpers/formatters/format-bytes'
+import { useBindCx } from '@swagglar/use-hooks/useBindCx'
 
 import { ScalarButton } from '../ScalarButton'
 

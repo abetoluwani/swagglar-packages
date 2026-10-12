@@ -1,4 +1,4 @@
-import type { Target } from '@scalar/types/snippetz'
+import type { Target } from '@swagglar/types/snippetz'
 
 import { cLibcurl } from '@/plugins/c/libcurl'
 import { clojureCljhttp } from '@/plugins/clojure/clj_http'

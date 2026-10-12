@@ -14,8 +14,8 @@ export default {}
 </script>
 
 <script setup lang="ts">
-import type { ScalarIconComponent } from '@scalar/icons/types'
-import { cva, useBindCx } from '@scalar/use-hooks/useBindCx'
+import type { ScalarIconComponent } from '@swagglar/icons/types'
+import { cva, useBindCx } from '@swagglar/use-hooks/useBindCx'
 import type { Component } from 'vue'
 
 import type { Icon } from '../../'

@@ -1,5 +1,5 @@
-import { isObjectLike } from '@scalar/helpers/object/is-object'
-import type { HarRequest, Plugin, PluginConfiguration } from '@scalar/types/snippetz'
+import { isObjectLike } from '@swagglar/helpers/object/is-object'
+import type { HarRequest, Plugin, PluginConfiguration } from '@swagglar/types/snippetz'
 
 import { normalizeMethod, reduceQueryParams } from '@/libs/http'
 

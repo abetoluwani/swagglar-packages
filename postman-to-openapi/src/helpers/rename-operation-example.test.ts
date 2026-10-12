@@ -1,4 +1,4 @@
-import type { OpenAPIV3_1 } from '@scalar/openapi-types'
+import type { OpenAPIV3_1 } from '@swagglar/openapi-types'
 import { expect, it } from 'vitest'
 
 import { renameOperationExamples } from '@/helpers/rename-operation-example'

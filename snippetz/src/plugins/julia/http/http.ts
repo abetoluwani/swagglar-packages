@@ -1,4 +1,4 @@
-import type { HarRequest, Plugin, PluginConfiguration } from '@scalar/types/snippetz'
+import type { HarRequest, Plugin, PluginConfiguration } from '@swagglar/types/snippetz'
 
 import { normalizeMethod } from '@/libs/http'
 import { formatCollection, formatDict, formatPairVector, formatValue, indent, wrapInDoubleQuotes } from '@/libs/julia'

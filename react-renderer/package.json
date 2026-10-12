@@ -1,5 +1,5 @@
 {
-  "name": "@scalar/react-renderer",
+  "name": "@swagglar/react-renderer",
   "description": "Render React components in Vue",
   "license": "MIT",
   "author": "Scalar (https://github.com/scalar)",

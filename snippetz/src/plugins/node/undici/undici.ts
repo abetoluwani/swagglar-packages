@@ -1,4 +1,4 @@
-import type { Plugin } from '@scalar/types/snippetz'
+import type { Plugin } from '@swagglar/types/snippetz'
 
 import { buildQueryString, normalizeMethod } from '@/libs/http'
 import { Raw, objectToString } from '@/libs/javascript'

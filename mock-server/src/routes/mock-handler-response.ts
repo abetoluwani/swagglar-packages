@@ -1,8 +1,8 @@
-import { isXmlMediaType } from '@scalar/helpers/http/is-xml-media-type'
-import type { OpenAPIV3_1 } from '@scalar/openapi-types'
-import { getResolvedRef } from '@scalar/workspace-store/helpers/get-resolved-ref'
-import { getXmlBodyExample } from '@scalar/workspace-store/request-example'
-import type { SchemaObject } from '@scalar/workspace-store/schemas/v3.2/strict/openapi-document'
+import { isXmlMediaType } from '@swagglar/helpers/http/is-xml-media-type'
+import type { OpenAPIV3_1 } from '@swagglar/openapi-types'
+import { getResolvedRef } from '@swagglar/workspace-store/helpers/get-resolved-ref'
+import { getXmlBodyExample } from '@swagglar/workspace-store/request-example'
+import type { SchemaObject } from '@swagglar/workspace-store/schemas/v3.2/strict/openapi-document'
 import type { Context } from 'hono'
 import type { StatusCode } from 'hono/utils/http-status'
 

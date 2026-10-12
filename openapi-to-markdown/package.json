@@ -1,5 +1,5 @@
 {
-  "name": "@scalar/openapi-to-markdown",
+  "name": "@swagglar/openapi-to-markdown",
   "description": "Create plain Markdown from OpenAPI documents (for LLMs)",
   "license": "MIT",
   "author": "Scalar (https://github.com/scalar)",
@@ -46,11 +46,11 @@
     "CHANGELOG.md"
   ],
   "dependencies": {
-    "@scalar/code-highlight": "workspace:*",
-    "@scalar/helpers": "workspace:*",
-    "@scalar/json-magic": "workspace:*",
-    "@scalar/openapi-upgrader": "workspace:*",
-    "@scalar/workspace-store": "workspace:*",
+    "@swagglar/code-highlight": "workspace:*",
+    "@swagglar/helpers": "workspace:*",
+    "@swagglar/json-magic": "workspace:*",
+    "@swagglar/openapi-upgrader": "workspace:*",
+    "@swagglar/workspace-store": "workspace:*",
     "rehype-parse": "^9.0.1",
     "rehype-remark": "^10.0.1",
     "rehype-sanitize": "^6.0.0",
@@ -61,7 +61,7 @@
   },
   "devDependencies": {
     "@hono/node-server": "catalog:*",
-    "@scalar/galaxy": "workspace:*",
+    "@swagglar/galaxy": "workspace:*",
     "@types/mdast": "^4.0.4",
     "hono": "catalog:*",
     "vitest": "catalog:*"

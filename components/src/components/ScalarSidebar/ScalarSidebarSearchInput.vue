@@ -11,8 +11,8 @@
 export default {}
 </script>
 <script setup lang="ts">
-import { ScalarIconMagnifyingGlass, ScalarIconX } from '@scalar/icons'
-import { useBindCx } from '@scalar/use-hooks/useBindCx'
+import { ScalarIconMagnifyingGlass, ScalarIconX } from '@swagglar/icons'
+import { useBindCx } from '@swagglar/use-hooks/useBindCx'
 import { onMounted, ref } from 'vue'
 
 import { ScalarIconButton } from '../ScalarIconButton'

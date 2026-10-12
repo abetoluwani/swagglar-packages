@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { getHttpMethodInfo } from '@scalar/helpers/http/http-info'
-import { ScalarIconWebhooksLogo } from '@scalar/icons'
+import { getHttpMethodInfo } from '@swagglar/helpers/http/http-info'
+import { ScalarIconWebhooksLogo } from '@swagglar/icons'
 
 import HttpMethod from './HttpMethod.vue'
 

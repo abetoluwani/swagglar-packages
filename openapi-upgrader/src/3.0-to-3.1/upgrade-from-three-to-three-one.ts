@@ -1,6 +1,6 @@
-import { isSchemaPath } from '@scalar/helpers/openapi/is-schema-path'
-import type { OpenAPIV3_1 } from '@scalar/openapi-types'
-import type { UnknownObject } from '@scalar/types/utils'
+import { isSchemaPath } from '@swagglar/helpers/openapi/is-schema-path'
+import type { OpenAPIV3_1 } from '@swagglar/openapi-types'
+import type { UnknownObject } from '@swagglar/types/utils'
 
 import { traverse } from '@/helpers/traverse'
 

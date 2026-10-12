@@ -55,7 +55,7 @@ const sql: Grammar = {
         // block foreground, the same as the quoted identifiers above and the
         // same as `variable` everywhere else in the vocabulary. Scoping them
         // reads better against shiki's coverage but is worse in practice: it
-        // paints most of a statement, and `@scalar/code-highlight` renders
+        // paints most of a statement, and `@swagglar/code-highlight` renders
         // them muted, so colouring them here would break the compat floor.
 
         { match: '::|<>|!=|>=|<=|\\|\\||[-+*/%<>=]', scope: 'operator' },

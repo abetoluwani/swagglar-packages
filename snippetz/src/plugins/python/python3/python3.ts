@@ -1,4 +1,4 @@
-import type { HarRequest, Plugin } from '@scalar/types/snippetz'
+import type { HarRequest, Plugin } from '@swagglar/types/snippetz'
 
 import { accumulateRepeatedValue, buildQueryString, normalizeRequest } from '@/libs/http'
 import { formatPythonValue } from '@/plugins/python/requestsLike'

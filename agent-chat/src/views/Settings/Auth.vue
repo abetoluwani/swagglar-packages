@@ -1,18 +1,18 @@
 <script setup lang="ts">
-import { AuthSelector } from '@scalar/api-client/blocks/scalar-auth-selector-block'
-import type { ApiReferenceConfigurationRaw } from '@scalar/types/api-reference'
-import type { AuthStore } from '@scalar/workspace-store/entities/auth'
-import type { WorkspaceEventBus } from '@scalar/workspace-store/events'
+import { AuthSelector } from '@swagglar/api-client/blocks/scalar-auth-selector-block'
+import type { ApiReferenceConfigurationRaw } from '@swagglar/types/api-reference'
+import type { AuthStore } from '@swagglar/workspace-store/entities/auth'
+import type { WorkspaceEventBus } from '@swagglar/workspace-store/events'
 import {
   getSecurityRequirements,
   getSelectedSecurity,
   mergeSecurity,
-} from '@scalar/workspace-store/request-example'
-import type { XScalarEnvironment } from '@scalar/workspace-store/schemas/extensions/document/x-scalar-environments'
+} from '@swagglar/workspace-store/request-example'
+import type { XScalarEnvironment } from '@swagglar/workspace-store/schemas/extensions/document/x-scalar-environments'
 import type {
   OpenApiDocument,
   ServerObject,
-} from '@scalar/workspace-store/schemas/v3.2/strict/openapi-document'
+} from '@swagglar/workspace-store/schemas/v3.2/strict/openapi-document'
 import { useFocusWithin } from '@vueuse/core'
 import { computed, shallowRef, watch } from 'vue'
 

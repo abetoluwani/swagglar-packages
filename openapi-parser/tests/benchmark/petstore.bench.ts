@@ -10,7 +10,7 @@ describe('petstore', () => {
     await resolveOld(specification)
   })
 
-  bench('@scalar/openapi-parser', () => {
+  bench('@swagglar/openapi-parser', () => {
     // Action!
     resolveNew(specification)
   })

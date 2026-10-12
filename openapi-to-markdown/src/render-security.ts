@@ -1,5 +1,5 @@
-import { getResolvedRef } from '@scalar/workspace-store/helpers/get-resolved-ref'
-import type { OpenApiDocument } from '@scalar/workspace-store/schemas/v3.2/strict/openapi-document'
+import { getResolvedRef } from '@swagglar/workspace-store/helpers/get-resolved-ref'
+import type { OpenApiDocument } from '@swagglar/workspace-store/schemas/v3.2/strict/openapi-document'
 import type { ListItem, RootContent } from 'mdast'
 
 import { heading, item, list, paragraph, strong, text } from './markdown-nodes'

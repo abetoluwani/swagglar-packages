@@ -1,5 +1,5 @@
 {
-  "name": "@scalar/use-codemirror",
+  "name": "@swagglar/use-codemirror",
   "description": "CodeMirror for Vue",
   "license": "MIT",
   "author": "Scalar (https://github.com/scalar)",
@@ -63,7 +63,7 @@
     "vue": "catalog:*"
   },
   "devDependencies": {
-    "@scalar/themes": "workspace:*",
+    "@swagglar/themes": "workspace:*",
     "@vitejs/plugin-vue": "catalog:*",
     "vite": "catalog:*",
     "vitest": "catalog:*",

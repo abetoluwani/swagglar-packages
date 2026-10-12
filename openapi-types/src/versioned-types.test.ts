@@ -10,7 +10,7 @@ const packageRoot = join(dirname(fileURLToPath(import.meta.url)), '..')
 
 /**
  * The hand-written type declarations that are published alongside the package
- * (exposed as `@scalar/openapi-types/2.0`, `/3.0`, `/3.1` and `/3.2`).
+ * (exposed as `@swagglar/openapi-types/2.0`, `/3.0`, `/3.1` and `/3.2`).
  */
 const versions = ['2.0', '3.0', '3.1', '3.2']
 
@@ -66,7 +66,7 @@ describe('versioned-types', () => {
    * type-check a small consumer project against every common `tsconfig.json` flavor: modern
    * Node ESM and CommonJS projects (`nodenext` / `node16`), bundler-based projects, and legacy
    * CommonJS projects with `node10` resolution (which ignores the `exports` map entirely and
-   * resolves `@scalar/openapi-types/3.2` as a plain directory lookup).
+   * resolves `@swagglar/openapi-types/3.2` as a plain directory lookup).
    */
   const consumerConfigs: { name: string; packageJson: Record<string, unknown>; compilerOptions: ts.CompilerOptions }[] =
     [
@@ -118,7 +118,7 @@ describe('versioned-types', () => {
     const temporaryDirectory = mkdtempSync(join(tmpdir(), 'scalar-openapi-types-'))
 
     try {
-      // Make the package resolvable as `@scalar/openapi-types` from the consumer project
+      // Make the package resolvable as `@swagglar/openapi-types` from the consumer project
       mkdirSync(join(temporaryDirectory, 'node_modules', '@scalar'), { recursive: true })
       symlinkSync(packageRoot, join(temporaryDirectory, 'node_modules', '@scalar', 'openapi-types'), 'dir')
 
@@ -128,10 +128,10 @@ describe('versioned-types', () => {
       writeFileSync(
         entryFile,
         [
-          "import type { Document as Document20 } from '@scalar/openapi-types/2.0'",
-          "import type { Document as Document30 } from '@scalar/openapi-types/3.0'",
-          "import type { Document as Document31 } from '@scalar/openapi-types/3.1'",
-          "import type { Document as Document32 } from '@scalar/openapi-types/3.2'",
+          "import type { Document as Document20 } from '@swagglar/openapi-types/2.0'",
+          "import type { Document as Document30 } from '@swagglar/openapi-types/3.0'",
+          "import type { Document as Document31 } from '@swagglar/openapi-types/3.1'",
+          "import type { Document as Document32 } from '@swagglar/openapi-types/3.2'",
           '',
           'export type Documents = [Document20, Document30, Document31, Document32]',
           '',

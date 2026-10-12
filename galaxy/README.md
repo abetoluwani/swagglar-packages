@@ -1,8 +1,8 @@
 # Scalar Galaxy Example
 
-[![Version](https://img.shields.io/npm/v/%40scalar/galaxy)](https://www.npmjs.com/package/@scalar/galaxy)
-[![Downloads](https://img.shields.io/npm/dm/%40scalar/galaxy)](https://www.npmjs.com/package/@scalar/galaxy)
-[![License](https://img.shields.io/npm/l/%40scalar%2Fgalaxy)](https://www.npmjs.com/package/@scalar/galaxy)
+[![Version](https://img.shields.io/npm/v/%40scalar/galaxy)](https://www.npmjs.com/package/@swagglar/galaxy)
+[![Downloads](https://img.shields.io/npm/dm/%40scalar/galaxy)](https://www.npmjs.com/package/@swagglar/galaxy)
+[![License](https://img.shields.io/npm/l/%40scalar%2Fgalaxy)](https://www.npmjs.com/package/@swagglar/galaxy)
 [![Discord](https://img.shields.io/discord/1135330207960678410?style=flat&color=5865F2)](https://discord.gg/scalar)
 
 OpenAPI and AsyncAPI example documents in YAML and JSON to test OpenAPI and AsyncAPI tooling, run test suites or learn about OpenAPI and AsyncAPI.
@@ -23,7 +23,7 @@ Scalar is an open-source API platform for teams who want beautiful developer int
 ## Installation
 
 ```bash
-npm install @scalar/galaxy
+npm install @swagglar/galaxy
 ```
 
 ## Usage
@@ -52,25 +52,25 @@ npm install @scalar/galaxy
 ### Import as object
 
 ```ts
-import ScalarGalaxy from '@scalar/galaxy/latest.json'
+import ScalarGalaxy from '@swagglar/galaxy/latest.json'
 ```
 
 ### Import as JSON string
 
 ```ts
-import ScalarGalaxy from '@scalar/galaxy/latest.json?raw'
+import ScalarGalaxy from '@swagglar/galaxy/latest.json?raw'
 ```
 
 ### Import as YAML string
 
 ```ts
-import ScalarGalaxy from '@scalar/galaxy/latest.yaml?raw'
+import ScalarGalaxy from '@swagglar/galaxy/latest.yaml?raw'
 ```
 
 ### Import specific OpenAPI version
 
 ```ts
-import ScalarGalaxy from '@scalar/galaxy/3.1.json'
+import ScalarGalaxy from '@swagglar/galaxy/3.1.json'
 ```
 
 ### Serve the OpenAPI document using the CLI

@@ -15,7 +15,7 @@ For example,`<div v-if="breakpoints.md">` will remove the element from the DOM w
 
 ```vue
 <script setup lang="ts">
-import { useBreakpoints } from '@scalar/use-hooks/useBreakpoints'
+import { useBreakpoints } from '@swagglar/use-hooks/useBreakpoints'
 
 const { breakpoints } = useBreakpoints()
 </script>

@@ -8,7 +8,7 @@ This allows you to override tailwind classes from the parent component and `cx` 
 
 ```html
 <script setup>
-import { useBindCx, cva } from '@scalar/components'
+import { useBindCx, cva } from '@swagglar/components'
 
 defineProps<{ active?: boolean }>()
 
@@ -29,4 +29,4 @@ const variants = cva({
 
 ## Playground
 
-To see a live playground which mounts `MockComponent` see the [`@scalar/components` storybook](https://scalar-components.netlify.app/?path=/docs/playgrounds-usebindcx--docs).
+To see a live playground which mounts `MockComponent` see the [`@swagglar/components` storybook](https://scalar-components.netlify.app/?path=/docs/playgrounds-usebindcx--docs).

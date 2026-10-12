@@ -5,8 +5,8 @@
 import path from 'node:path'
 
 import SwaggerParser from '@apidevtools/swagger-parser'
-import type { Document as OpenApiDocumentV3_2, InfoObject as OpenApiInfoObjectV3_2 } from '@scalar/openapi-types/3.2'
-import type { AnyObject } from '@scalar/types/utils'
+import type { Document as OpenApiDocumentV3_2, InfoObject as OpenApiInfoObjectV3_2 } from '@swagglar/openapi-types/3.2'
+import type { AnyObject } from '@swagglar/types/utils'
 import { describe, expect, it } from 'vitest'
 
 import { readFiles } from '@/plugins/read-files/read-files'

@@ -1,13 +1,13 @@
 # Scalar AsyncAPI Validator
 
-[![Version](https://img.shields.io/npm/v/%40scalar/asyncapi-validator)](https://www.npmjs.com/package/@scalar/asyncapi-validator)
-[![Downloads](https://img.shields.io/npm/dm/%40scalar/asyncapi-validator)](https://www.npmjs.com/package/@scalar/asyncapi-validator)
-[![License](https://img.shields.io/npm/l/%40scalar%2Fasyncapi-validator)](https://www.npmjs.com/package/@scalar/asyncapi-validator)
+[![Version](https://img.shields.io/npm/v/%40scalar/asyncapi-validator)](https://www.npmjs.com/package/@swagglar/asyncapi-validator)
+[![Downloads](https://img.shields.io/npm/dm/%40scalar/asyncapi-validator)](https://www.npmjs.com/package/@swagglar/asyncapi-validator)
+[![License](https://img.shields.io/npm/l/%40scalar%2Fasyncapi-validator)](https://www.npmjs.com/package/@swagglar/asyncapi-validator)
 [![Discord](https://img.shields.io/discord/1135330207960678410?style=flat&color=5865F2)](https://discord.gg/scalar)
 
 Validate AsyncAPI documents against the AsyncAPI Specification. Supports AsyncAPI 2.x and 3.x.
 
-Built on [`@scalar/json-schema-validator`](https://www.npmjs.com/package/@scalar/json-schema-validator), using the official schemas from [`@asyncapi/specs`](https://www.npmjs.com/package/@asyncapi/specs).
+Built on [`@swagglar/json-schema-validator`](https://www.npmjs.com/package/@swagglar/json-schema-validator), using the official schemas from [`@asyncapi/specs`](https://www.npmjs.com/package/@asyncapi/specs).
 
 ---
 
@@ -25,7 +25,7 @@ Scalar is an open-source API platform for teams who want beautiful developer int
 ## Installation
 
 ```bash
-npm add @scalar/asyncapi-validator
+npm add @swagglar/asyncapi-validator
 ```
 
 ## Usage
@@ -33,7 +33,7 @@ npm add @scalar/asyncapi-validator
 Pass a JSON string, a YAML string, or an object:
 
 ```ts
-import { validate } from '@scalar/asyncapi-validator'
+import { validate } from '@swagglar/asyncapi-validator'
 
 const result = validate({
   asyncapi: '3.0.0',
@@ -59,7 +59,7 @@ This is schema-level validation. As the AsyncAPI project notes, JSON Schema alon
 ### Throw on error
 
 ```ts
-import { validate } from '@scalar/asyncapi-validator'
+import { validate } from '@swagglar/asyncapi-validator'
 
 try {
   validate(document, { throwOnError: true })

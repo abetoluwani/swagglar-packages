@@ -1,8 +1,8 @@
 /*
- * @scalar/highlight — token styles.
+ * @swagglar/highlight — token styles.
  *
  * There is no theme system here. Every color is derived from the `--scalar-*`
- * custom properties that `@scalar/themes` already defines, so a code block
+ * custom properties that `@swagglar/themes` already defines, so a code block
  * follows whatever theme preset the app is running and switches with
  * `.light-mode` / `.dark-mode` like everything else. Nothing is re-highlighted
  * when the theme changes; only these variables resolve differently.
@@ -39,7 +39,7 @@
 /* Defaults are the dark-mode values; they also apply when no mode class is
    present, which is the common case for a dark-first app shell.
  *
- * `.light-mode` is in this list too, and it matters. `@scalar/themes` defines
+ * `.light-mode` is in this list too, and it matters. `@swagglar/themes` defines
  * `--scalar-color-*` on the mode classes, not on `:root`, and a custom
  * property resolves its `var()` against the element it is declared on. A slot
  * declared only at `:root` therefore reads an undefined palette, becomes

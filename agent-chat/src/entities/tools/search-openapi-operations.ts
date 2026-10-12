@@ -1,5 +1,5 @@
-import type { OpenAPIV3_1 } from '@scalar/openapi-types'
-import { object, string, type Static } from '@scalar/validation'
+import type { OpenAPIV3_1 } from '@swagglar/openapi-types'
+import { object, string, type Static } from '@swagglar/validation'
 
 export const SEARCH_OPENAPI_OPERATIONS_TOOL_NAME = 'search-openapi-operations' as const
 

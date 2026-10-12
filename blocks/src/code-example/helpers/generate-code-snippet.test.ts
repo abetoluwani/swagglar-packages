@@ -1,6 +1,6 @@
-import type { AvailableClient } from '@scalar/snippetz'
-import type { XCodeSample } from '@scalar/workspace-store/schemas/extensions/operation'
-import type { OperationObject } from '@scalar/workspace-store/schemas/v3.2/strict/openapi-document'
+import type { AvailableClient } from '@swagglar/snippetz'
+import type { XCodeSample } from '@swagglar/workspace-store/schemas/extensions/operation'
+import type { OperationObject } from '@swagglar/workspace-store/schemas/v3.2/strict/openapi-document'
 import { consoleErrorSpy } from '@test/vitest.setup'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 

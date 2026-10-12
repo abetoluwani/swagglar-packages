@@ -1,5 +1,5 @@
-import type { OpenAPIV3, OpenAPIV3_1, OpenAPIV3_2 } from '@scalar/openapi-types'
-import type { UnknownObject } from '@scalar/types/utils'
+import type { OpenAPIV3, OpenAPIV3_1, OpenAPIV3_2 } from '@swagglar/openapi-types'
+import type { UnknownObject } from '@swagglar/types/utils'
 
 import { migrateThreeOneToThreeTwo } from '@/3.1-to-3.2/upgrade-from-three-one-to-three-two'
 

@@ -1,4 +1,4 @@
-import type { OpenAPIV3 } from '@scalar/openapi-types'
+import type { OpenAPIV3 } from '@swagglar/openapi-types'
 import { describe, expect, it } from 'vitest'
 
 import { upgradeFromTwoToThree } from './upgrade-from-two-to-three'

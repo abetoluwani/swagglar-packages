@@ -1,5 +1,5 @@
-import { getResolvedRef, mergeSiblingReferences } from '@scalar/workspace-store/helpers/get-resolved-ref'
-import type { EncodingObject, ResponseObject } from '@scalar/workspace-store/schemas/v3.2/strict/openapi-document'
+import { getResolvedRef, mergeSiblingReferences } from '@swagglar/workspace-store/helpers/get-resolved-ref'
+import type { EncodingObject, ResponseObject } from '@swagglar/workspace-store/schemas/v3.2/strict/openapi-document'
 import type { ListItem, RootContent } from 'mdast'
 
 import { inlineCode, item, list, paragraph, strong, text } from './markdown-nodes'

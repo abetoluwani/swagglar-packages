@@ -5,7 +5,7 @@
  * generate the appropriate Tailwind utilities for the sidebar.
  */
 
-@import "@scalar/components/tailwind.config.css"; /* Component Library Tailwind Configuration */
+@import "@swagglar/components/tailwind.config.css"; /* Component Library Tailwind Configuration */
 
 /* Search for Tailwind classes in the sidebar components */
 @source "../";

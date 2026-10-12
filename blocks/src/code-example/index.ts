@@ -1,5 +1,5 @@
 // Re-export commonly used workspace-store helpers
-export { getResolvedRefDeep } from '@scalar/workspace-store/helpers/get-resolved-ref-deep'
+export { getResolvedRefDeep } from '@swagglar/workspace-store/helpers/get-resolved-ref-deep'
 
 export type { CodeExampleProps } from './components/CodeExample.vue'
 export { default as CodeExample } from './components/CodeExample.vue'

@@ -1,4 +1,4 @@
-# @scalar/import
+# @swagglar/import
 
 ## 0.5.27
 
@@ -72,7 +72,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/helpers@0.4.1**
+- **@swagglar/helpers@0.4.1**
   - [#8420](https://github.com/scalar/scalar/pull/8420): fix TypeScript access to navigator.userAgentData in isMacOS without ts-expect-error
 
 ## 0.5.1
@@ -81,7 +81,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/helpers@0.4.0**
+- **@swagglar/helpers@0.4.0**
   - [#8336](https://github.com/scalar/scalar/pull/8336): feat: support flushing any pending operations
 
 ## 0.5.0
@@ -94,7 +94,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/helpers@0.3.0**
+- **@swagglar/helpers@0.3.0**
   - [#8322](https://github.com/scalar/scalar/pull/8322): chore: bump required node version to >=22 (LTS)
 
 ## 0.4.55
@@ -103,7 +103,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/helpers@0.2.18**
+- **@swagglar/helpers@0.2.18**
   - [#8314](https://github.com/scalar/scalar/pull/8314): chore: limit concurrent operations while migrating workspaces
 
 ## 0.4.54
@@ -112,7 +112,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/helpers@0.2.17**
+- **@swagglar/helpers@0.2.17**
   - [#8310](https://github.com/scalar/scalar/pull/8310): refactor: move helpers to the helpers package to share primitive helpers
 
 ## 0.4.53
@@ -121,7 +121,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/helpers@0.2.16**
+- **@swagglar/helpers@0.2.16**
   - [#8248](https://github.com/scalar/scalar/pull/8248): fix: local storage migration script
 
 ## 0.4.52
@@ -130,7 +130,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/helpers@0.2.15**
+- **@swagglar/helpers@0.2.15**
   - [#8212](https://github.com/scalar/scalar/pull/8212): chore: version bump
 
 ## 0.4.51
@@ -139,7 +139,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/helpers@0.2.14**
+- **@swagglar/helpers@0.2.14**
   - [#8207](https://github.com/scalar/scalar/pull/8207): chore: version bump
 
 ## 0.4.50
@@ -148,7 +148,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/helpers@0.2.13**
+- **@swagglar/helpers@0.2.13**
   - [#7826](https://github.com/scalar/scalar/pull/7826): feat: added migrator for v1 local storage to v2 indexdb
 
 ## 0.4.49
@@ -157,7 +157,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/helpers@0.2.12**
+- **@swagglar/helpers@0.2.12**
   - [#8178](https://github.com/scalar/scalar/pull/8178): chore: package bump due to ci failure
 
 ## 0.4.48
@@ -166,7 +166,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/helpers@0.2.11**
+- **@swagglar/helpers@0.2.11**
   - [#8016](https://github.com/scalar/scalar/pull/8016): feat: move history and auth into their own store
 
 ## 0.4.47
@@ -175,7 +175,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/helpers@0.2.10**
+- **@swagglar/helpers@0.2.10**
   - [#7963](https://github.com/scalar/scalar/pull/7963): feat: unify is-object helpers
 
 ## 0.4.46
@@ -184,7 +184,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/helpers@0.2.9**
+- **@swagglar/helpers@0.2.9**
   - [#7894](https://github.com/scalar/scalar/pull/7894): fix: the import and export of redirect to proxy
 
 ## 0.4.45
@@ -193,7 +193,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/helpers@0.2.8**
+- **@swagglar/helpers@0.2.8**
   - [#7751](https://github.com/scalar/scalar/pull/7751): fix: auth persistence
 
 ## 0.4.44
@@ -202,7 +202,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/helpers@0.2.7**
+- **@swagglar/helpers@0.2.7**
   - [#7720](https://github.com/scalar/scalar/pull/7720): feat: escape XML in json2xml
 
 ## 0.4.43
@@ -211,7 +211,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/helpers@0.2.6**
+- **@swagglar/helpers@0.2.6**
   - [#7661](https://github.com/scalar/scalar/pull/7661): fix: all issues for client modal v2 preparation
 
 ## 0.4.42
@@ -220,7 +220,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/helpers@0.2.5**
+- **@swagglar/helpers@0.2.5**
   - [#7605](https://github.com/scalar/scalar/pull/7605): fix: all issues for client modal v2 preparation
 
 ## 0.4.41
@@ -231,7 +231,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/helpers@0.2.4**
+- **@swagglar/helpers@0.2.4**
   - [#7581](https://github.com/scalar/scalar/pull/7581): fix: npm publish job
   - [#7567](https://github.com/scalar/scalar/pull/7567): feat: add code samples to client v2
 
@@ -241,7 +241,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/helpers@0.2.3**
+- **@swagglar/helpers@0.2.3**
   - [#7575](https://github.com/scalar/scalar/pull/7575): feat: add support for object examples + hide body when empty
 
 ## 0.4.39
@@ -249,7 +249,7 @@
 ### Patch Changes
 
 - Updated dependencies [[`f7c24e4`](https://github.com/scalar/scalar/commit/f7c24e4995580649dbc3cb87007a683f5dd91f7c)]:
-  - @scalar/helpers@0.2.2
+  - @swagglar/helpers@0.2.2
 
 ## 0.4.38
 
@@ -258,95 +258,95 @@
 - [#7506](https://github.com/scalar/scalar/pull/7506) [`72cd82f`](https://github.com/scalar/scalar/commit/72cd82fb8df63a9e5d0db1202978aebfefd0457a) Thanks [@marcalexiei](https://github.com/marcalexiei)! - fix: use caret version for `yaml`
 
 - Updated dependencies [[`21aa62e`](https://github.com/scalar/scalar/commit/21aa62e2ebdd262cb5aa53658c3b659736660722)]:
-  - @scalar/helpers@0.2.1
+  - @swagglar/helpers@0.2.1
 
 ## 0.4.37
 
 ### Patch Changes
 
 - Updated dependencies [[`9ec8adf`](https://github.com/scalar/scalar/commit/9ec8adfea017333dee5bc3949104232f7dc57f4a)]:
-  - @scalar/helpers@0.2.0
+  - @swagglar/helpers@0.2.0
 
 ## 0.4.36
 
 ### Patch Changes
 
-- [#7408](https://github.com/scalar/scalar/pull/7408) [`612eb05`](https://github.com/scalar/scalar/commit/612eb05f61ad97272206f1b7ff85a725131ca917) Thanks [@marcalexiei](https://github.com/marcalexiei)! - fix(import): remove `@scalar/openapi-parser` unused dependency
+- [#7408](https://github.com/scalar/scalar/pull/7408) [`612eb05`](https://github.com/scalar/scalar/commit/612eb05f61ad97272206f1b7ff85a725131ca917) Thanks [@marcalexiei](https://github.com/marcalexiei)! - fix(import): remove `@swagglar/openapi-parser` unused dependency
 
 - Updated dependencies [[`bfd814a`](https://github.com/scalar/scalar/commit/bfd814a4219660face190041cc4845182b56ab03), [`86f028d`](https://github.com/scalar/scalar/commit/86f028deb0b456f923edd261f5f4b0fa9b616b7d)]:
-  - @scalar/helpers@0.1.3
+  - @swagglar/helpers@0.1.3
 
 ## 0.4.35
 
 ### Patch Changes
 
 - Updated dependencies [[`d86f1d6`](https://github.com/scalar/scalar/commit/d86f1d6911ecbca70b011a2a0efb6d6e0eca59bb), [`cded2d6`](https://github.com/scalar/scalar/commit/cded2d6c087418c3c44731d344d0827a87b78b74)]:
-  - @scalar/helpers@0.1.2
-  - @scalar/openapi-parser@0.23.3
+  - @swagglar/helpers@0.1.2
+  - @swagglar/openapi-parser@0.23.3
 
 ## 0.4.34
 
 ### Patch Changes
 
 - Updated dependencies [[`9c9dbba`](https://github.com/scalar/scalar/commit/9c9dbbaa940667303f0ace59469fd78c2a741937), [`4bec1ba`](https://github.com/scalar/scalar/commit/4bec1ba332e919c4ee32dcfbfb07bd8ee42c4d74)]:
-  - @scalar/helpers@0.1.1
-  - @scalar/openapi-parser@0.23.2
+  - @swagglar/helpers@0.1.1
+  - @swagglar/openapi-parser@0.23.2
 
 ## 0.4.33
 
 ### Patch Changes
 
 - Updated dependencies [[`fddf294`](https://github.com/scalar/scalar/commit/fddf294b00dd8c9eb5c713c338f2ec6e3f62523d), [`c1ecd0c`](https://github.com/scalar/scalar/commit/c1ecd0c6096f3fbe2e3d8ad3794ea718bb6bce66), [`c1ecd0c`](https://github.com/scalar/scalar/commit/c1ecd0c6096f3fbe2e3d8ad3794ea718bb6bce66), [`2377b76`](https://github.com/scalar/scalar/commit/2377b76d050f8de70037b17a32d0dd1181d3311d)]:
-  - @scalar/helpers@0.1.0
-  - @scalar/openapi-parser@0.23.1
+  - @swagglar/helpers@0.1.0
+  - @swagglar/openapi-parser@0.23.1
 
 ## 0.4.32
 
 ### Patch Changes
 
 - Updated dependencies [[`2239843`](https://github.com/scalar/scalar/commit/2239843150ed16d1ca35b0b1f8e90cd3e35be7ce), [`6ec8c29`](https://github.com/scalar/scalar/commit/6ec8c299d912111b029e8058979d00968b70691a), [`9661e81`](https://github.com/scalar/scalar/commit/9661e81907d1a9b74ba30f270f2d6c8e49834cd5), [`134ff5f`](https://github.com/scalar/scalar/commit/134ff5f32aa6842696bf146c7e0817b1662905eb), [`c84b7c5`](https://github.com/scalar/scalar/commit/c84b7c5e81be83dacbdfcbf9cb1e558dfdc3faa1), [`134ff5f`](https://github.com/scalar/scalar/commit/134ff5f32aa6842696bf146c7e0817b1662905eb), [`eba18d0`](https://github.com/scalar/scalar/commit/eba18d06267a163a8f91396a66f817100ee59461), [`a821986`](https://github.com/scalar/scalar/commit/a821986332141e69d26885b2d2b32eb0c49f416c), [`e23229d`](https://github.com/scalar/scalar/commit/e23229dfbd9613b5047b28b57901f2fc5a6e33e6)]:
-  - @scalar/openapi-parser@0.23.0
-  - @scalar/helpers@0.0.13
+  - @swagglar/openapi-parser@0.23.0
+  - @swagglar/helpers@0.0.13
 
 ## 0.4.31
 
 ### Patch Changes
 
 - Updated dependencies [3f6d0b9]
-  - @scalar/helpers@0.0.12
-  - @scalar/openapi-parser@0.22.3
+  - @swagglar/helpers@0.0.12
+  - @swagglar/openapi-parser@0.22.3
 
 ## 0.4.30
 
 ### Patch Changes
 
-- @scalar/openapi-parser@0.22.2
+- @swagglar/openapi-parser@0.22.2
 
 ## 0.4.29
 
 ### Patch Changes
 
-- @scalar/openapi-parser@0.22.1
+- @swagglar/openapi-parser@0.22.1
 
 ## 0.4.28
 
 ### Patch Changes
 
 - Updated dependencies [4951456]
-  - @scalar/openapi-parser@0.22.0
+  - @swagglar/openapi-parser@0.22.0
 
 ## 0.4.27
 
 ### Patch Changes
 
-- @scalar/openapi-parser@0.21.2
+- @swagglar/openapi-parser@0.21.2
 
 ## 0.4.26
 
 ### Patch Changes
 
 - Updated dependencies [e1cdd00]
-  - @scalar/openapi-parser@0.21.1
+  - @swagglar/openapi-parser@0.21.1
 
 ## 0.4.25
 
@@ -355,37 +355,37 @@
 - Updated dependencies [a1f865c]
 - Updated dependencies [a1f865c]
 - Updated dependencies [dcf50ef]
-  - @scalar/openapi-parser@0.21.0
+  - @swagglar/openapi-parser@0.21.0
 
 ## 0.4.24
 
 ### Patch Changes
 
 - Updated dependencies [bff46e5]
-  - @scalar/helpers@0.0.11
-  - @scalar/openapi-parser@0.20.6
+  - @swagglar/helpers@0.0.11
+  - @swagglar/openapi-parser@0.20.6
 
 ## 0.4.23
 
 ### Patch Changes
 
 - Updated dependencies [39bbc0e]
-  - @scalar/openapi-parser@0.20.5
+  - @swagglar/openapi-parser@0.20.5
 
 ## 0.4.22
 
 ### Patch Changes
 
 - Updated dependencies [821717b]
-  - @scalar/helpers@0.0.10
-  - @scalar/openapi-parser@0.20.4
+  - @swagglar/helpers@0.0.10
+  - @swagglar/openapi-parser@0.20.4
 
 ## 0.4.21
 
 ### Patch Changes
 
 - Updated dependencies [b8c4b61]
-  - @scalar/openapi-parser@0.20.3
+  - @swagglar/openapi-parser@0.20.3
 
 ## 0.4.20
 
@@ -393,14 +393,14 @@
 
 - Updated dependencies [98c55d0]
 - Updated dependencies [0e747c7]
-  - @scalar/helpers@0.0.9
-  - @scalar/openapi-parser@0.20.2
+  - @swagglar/helpers@0.0.9
+  - @swagglar/openapi-parser@0.20.2
 
 ## 0.4.19
 
 ### Patch Changes
 
-- @scalar/openapi-parser@0.20.1
+- @swagglar/openapi-parser@0.20.1
 
 ## 0.4.18
 
@@ -410,16 +410,16 @@
 - Updated dependencies [66b18fc]
 - Updated dependencies [5f022b5]
 - Updated dependencies [c418e92]
-  - @scalar/openapi-parser@0.20.0
-  - @scalar/helpers@0.0.8
+  - @swagglar/openapi-parser@0.20.0
+  - @swagglar/helpers@0.0.8
 
 ## 0.4.17
 
 ### Patch Changes
 
 - Updated dependencies [e203e90]
-  - @scalar/openapi-parser@0.19.1
-  - @scalar/helpers@0.0.7
+  - @swagglar/openapi-parser@0.19.1
+  - @swagglar/helpers@0.0.7
 
 ## 0.4.16
 
@@ -427,7 +427,7 @@
 
 - Updated dependencies [952bde2]
 - Updated dependencies [2888e18]
-  - @scalar/openapi-parser@0.19.0
+  - @swagglar/openapi-parser@0.19.0
 
 ## 0.4.15
 
@@ -436,15 +436,15 @@
 - Updated dependencies [c345d2c]
 - Updated dependencies [c0d6793]
 - Updated dependencies [f3d0216]
-  - @scalar/openapi-parser@0.18.3
-  - @scalar/helpers@0.0.7
+  - @swagglar/openapi-parser@0.18.3
+  - @swagglar/helpers@0.0.7
 
 ## 0.4.14
 
 ### Patch Changes
 
 - Updated dependencies [1c2b9f3]
-  - @scalar/openapi-parser@0.18.2
+  - @swagglar/openapi-parser@0.18.2
 
 ## 0.4.13
 
@@ -452,23 +452,23 @@
 
 - 2d7f995: refactor: use more common straight apostrophe ' instead of the real apostrophe ’
 - Updated dependencies [2d7f995]
-  - @scalar/openapi-parser@0.18.1
-  - @scalar/helpers@0.0.6
+  - @swagglar/openapi-parser@0.18.1
+  - @swagglar/helpers@0.0.6
 
 ## 0.4.12
 
 ### Patch Changes
 
 - Updated dependencies [23b150b]
-  - @scalar/helpers@0.0.5
-  - @scalar/openapi-parser@0.18.0
+  - @swagglar/helpers@0.0.5
+  - @swagglar/openapi-parser@0.18.0
 
 ## 0.4.11
 
 ### Patch Changes
 
 - Updated dependencies [291f09d]
-  - @scalar/openapi-parser@0.18.0
+  - @swagglar/openapi-parser@0.18.0
 
 ## 0.4.10
 
@@ -480,22 +480,22 @@
 - Updated dependencies [4156f1d]
 - Updated dependencies [f823d45]
 - Updated dependencies [37c90b8]
-  - @scalar/helpers@0.0.4
-  - @scalar/openapi-parser@0.17.0
+  - @swagglar/helpers@0.0.4
+  - @swagglar/openapi-parser@0.17.0
 
 ## 0.4.9
 
 ### Patch Changes
 
 - Updated dependencies [11fabae]
-  - @scalar/openapi-parser@0.16.0
+  - @swagglar/openapi-parser@0.16.0
 
 ## 0.4.8
 
 ### Patch Changes
 
 - Updated dependencies [8bc9f20]
-  - @scalar/helpers@0.0.3
+  - @swagglar/helpers@0.0.3
 
 ## 0.4.7
 
@@ -508,8 +508,8 @@
 - Updated dependencies [8165b3b]
 - Updated dependencies [49c04cf]
 - Updated dependencies [f4332eb]
-  - @scalar/openapi-parser@0.15.0
-  - @scalar/helpers@0.0.2
+  - @swagglar/openapi-parser@0.15.0
+  - @swagglar/helpers@0.0.2
 
 ## 0.4.6
 
@@ -517,14 +517,14 @@
 
 - Updated dependencies [ee3eb77]
 - Updated dependencies [7ca47ab]
-  - @scalar/openapi-parser@0.14.0
-  - @scalar/oas-utils@0.4.2
+  - @swagglar/openapi-parser@0.14.0
+  - @swagglar/oas-utils@0.4.2
 
 ## 0.4.5
 
 ### Patch Changes
 
-- @scalar/oas-utils@0.4.1
+- @swagglar/oas-utils@0.4.1
 
 ## 0.4.4
 
@@ -533,8 +533,8 @@
 - Updated dependencies [1e87feb]
 - Updated dependencies [1e87feb]
 - Updated dependencies [cad6277]
-  - @scalar/openapi-parser@0.13.0
-  - @scalar/oas-utils@0.4.0
+  - @swagglar/openapi-parser@0.13.0
+  - @swagglar/oas-utils@0.4.0
 
 ## 0.4.3
 
@@ -543,24 +543,24 @@
 - Updated dependencies [151ef09]
 - Updated dependencies [442c0a3]
 - Updated dependencies [edf694b]
-  - @scalar/oas-utils@0.3.2
-  - @scalar/openapi-parser@0.12.0
+  - @swagglar/oas-utils@0.3.2
+  - @swagglar/openapi-parser@0.12.0
 
 ## 0.4.2
 
 ### Patch Changes
 
 - Updated dependencies [ea20eb4]
-  - @scalar/openapi-parser@0.11.1
-  - @scalar/oas-utils@0.3.1
+  - @swagglar/openapi-parser@0.11.1
+  - @swagglar/oas-utils@0.3.1
 
 ## 0.4.1
 
 ### Patch Changes
 
 - Updated dependencies [4440949]
-  - @scalar/oas-utils@0.3.1
-  - @scalar/openapi-parser@0.11.0
+  - @swagglar/oas-utils@0.3.1
+  - @swagglar/openapi-parser@0.11.0
 
 ## 0.4.0
 
@@ -574,30 +574,30 @@
 - Updated dependencies [30bab1d]
 - Updated dependencies [483ca93]
 - Updated dependencies [1d1470c]
-  - @scalar/openapi-parser@0.11.0
-  - @scalar/oas-utils@0.3.0
+  - @swagglar/openapi-parser@0.11.0
+  - @swagglar/oas-utils@0.3.0
 
 ## 0.3.27
 
 ### Patch Changes
 
-- @scalar/oas-utils@0.2.144
-- @scalar/openapi-parser@0.10.17
+- @swagglar/oas-utils@0.2.144
+- @swagglar/openapi-parser@0.10.17
 
 ## 0.3.26
 
 ### Patch Changes
 
 - Updated dependencies [67aa0f4]
-  - @scalar/oas-utils@0.2.143
-  - @scalar/openapi-parser@0.10.17
+  - @swagglar/oas-utils@0.2.143
+  - @swagglar/openapi-parser@0.10.17
 
 ## 0.3.25
 
 ### Patch Changes
 
 - Updated dependencies [cd6cf24]
-  - @scalar/oas-utils@0.2.142
+  - @swagglar/oas-utils@0.2.142
 
 ## 0.3.24
 
@@ -605,45 +605,45 @@
 
 - 8c7bad8: chore: move build tooling to esbuild
 - Updated dependencies [8c7bad8]
-  - @scalar/openapi-parser@0.10.17
-  - @scalar/oas-utils@0.2.141
+  - @swagglar/openapi-parser@0.10.17
+  - @swagglar/oas-utils@0.2.141
 
 ## 0.3.23
 
 ### Patch Changes
 
 - Updated dependencies [e8457cb]
-  - @scalar/oas-utils@0.2.140
-  - @scalar/openapi-parser@0.10.16
+  - @swagglar/oas-utils@0.2.140
+  - @swagglar/openapi-parser@0.10.16
 
 ## 0.3.22
 
 ### Patch Changes
 
 - Updated dependencies [d2f27f4]
-  - @scalar/oas-utils@0.2.139
+  - @swagglar/oas-utils@0.2.139
 
 ## 0.3.21
 
 ### Patch Changes
 
 - Updated dependencies [5d24800]
-  - @scalar/oas-utils@0.2.138
+  - @swagglar/oas-utils@0.2.138
 
 ## 0.3.20
 
 ### Patch Changes
 
-- @scalar/oas-utils@0.2.137
-- @scalar/openapi-parser@0.10.16
+- @swagglar/oas-utils@0.2.137
+- @swagglar/openapi-parser@0.10.16
 
 ## 0.3.19
 
 ### Patch Changes
 
 - Updated dependencies [eb4854d]
-  - @scalar/oas-utils@0.2.136
-  - @scalar/openapi-parser@0.10.16
+  - @swagglar/oas-utils@0.2.136
+  - @swagglar/openapi-parser@0.10.16
 
 ## 0.3.18
 
@@ -652,30 +652,30 @@
 - Updated dependencies [fa8ed84]
 - Updated dependencies [fa8ed84]
 - Updated dependencies [8d54857]
-  - @scalar/oas-utils@0.2.135
-  - @scalar/openapi-parser@0.10.16
+  - @swagglar/oas-utils@0.2.135
+  - @swagglar/openapi-parser@0.10.16
 
 ## 0.3.17
 
 ### Patch Changes
 
-- @scalar/oas-utils@0.2.134
-- @scalar/openapi-parser@0.10.16
+- @swagglar/oas-utils@0.2.134
+- @swagglar/openapi-parser@0.10.16
 
 ## 0.3.16
 
 ### Patch Changes
 
 - Updated dependencies [e489824]
-  - @scalar/oas-utils@0.2.133
+  - @swagglar/oas-utils@0.2.133
 
 ## 0.3.15
 
 ### Patch Changes
 
 - Updated dependencies [c5047ee]
-  - @scalar/openapi-parser@0.10.16
-  - @scalar/oas-utils@0.2.132
+  - @swagglar/openapi-parser@0.10.16
+  - @swagglar/oas-utils@0.2.132
 
 ## 0.3.14
 
@@ -683,28 +683,28 @@
 
 - Updated dependencies [4abe4f8]
 - Updated dependencies [4abe4f8]
-  - @scalar/openapi-parser@0.10.15
-  - @scalar/oas-utils@0.2.131
+  - @swagglar/openapi-parser@0.10.15
+  - @swagglar/oas-utils@0.2.131
 
 ## 0.3.13
 
 ### Patch Changes
 
-- @scalar/oas-utils@0.2.130
-- @scalar/openapi-parser@0.10.14
+- @swagglar/oas-utils@0.2.130
+- @swagglar/openapi-parser@0.10.14
 
 ## 0.3.12
 
 ### Patch Changes
 
-- @scalar/oas-utils@0.2.129
+- @swagglar/oas-utils@0.2.129
 
 ## 0.3.11
 
 ### Patch Changes
 
 - Updated dependencies [18b1be9]
-  - @scalar/oas-utils@0.2.128
+  - @swagglar/oas-utils@0.2.128
 
 ## 0.3.10
 
@@ -712,7 +712,7 @@
 
 - Updated dependencies [bf961b1]
 - Updated dependencies [a176b7e]
-  - @scalar/oas-utils@0.2.127
+  - @swagglar/oas-utils@0.2.127
 
 ## 0.3.9
 
@@ -720,8 +720,8 @@
 
 - Updated dependencies [a571d36]
 - Updated dependencies [cf5bf65]
-  - @scalar/oas-utils@0.2.126
-  - @scalar/openapi-parser@0.10.14
+  - @swagglar/oas-utils@0.2.126
+  - @swagglar/openapi-parser@0.10.14
 
 ## 0.3.8
 
@@ -731,38 +731,38 @@
 - Updated dependencies [e62e677]
 - Updated dependencies [04e27a1]
 - Updated dependencies [846d015]
-  - @scalar/openapi-parser@0.10.13
-  - @scalar/oas-utils@0.2.125
+  - @swagglar/openapi-parser@0.10.13
+  - @swagglar/oas-utils@0.2.125
 
 ## 0.3.7
 
 ### Patch Changes
 
 - Updated dependencies [0de80ae]
-  - @scalar/oas-utils@0.2.124
+  - @swagglar/oas-utils@0.2.124
 
 ## 0.3.6
 
 ### Patch Changes
 
 - Updated dependencies [52f6f4c]
-  - @scalar/oas-utils@0.2.123
-  - @scalar/openapi-parser@0.10.12
+  - @swagglar/oas-utils@0.2.123
+  - @swagglar/openapi-parser@0.10.12
 
 ## 0.3.5
 
 ### Patch Changes
 
-- @scalar/oas-utils@0.2.122
-- @scalar/openapi-parser@0.10.12
+- @swagglar/oas-utils@0.2.122
+- @swagglar/openapi-parser@0.10.12
 
 ## 0.3.4
 
 ### Patch Changes
 
 - Updated dependencies [cbc1d08]
-  - @scalar/openapi-parser@0.10.12
-  - @scalar/oas-utils@0.2.121
+  - @swagglar/openapi-parser@0.10.12
+  - @swagglar/oas-utils@0.2.121
 
 ## 0.3.3
 
@@ -770,22 +770,22 @@
 
 - Updated dependencies [0f13162]
 - Updated dependencies [0212daa]
-  - @scalar/openapi-parser@0.10.11
-  - @scalar/oas-utils@0.2.121
+  - @swagglar/openapi-parser@0.10.11
+  - @swagglar/oas-utils@0.2.121
 
 ## 0.3.2
 
 ### Patch Changes
 
 - Updated dependencies [cd75eeb]
-  - @scalar/oas-utils@0.2.120
-  - @scalar/openapi-parser@0.10.10
+  - @swagglar/oas-utils@0.2.120
+  - @swagglar/openapi-parser@0.10.10
 
 ## 0.3.1
 
 ### Patch Changes
 
-- @scalar/oas-utils@0.2.119
+- @swagglar/oas-utils@0.2.119
 
 ## 0.3.0
 
@@ -796,15 +796,15 @@
 ### Patch Changes
 
 - 14c5d22: fix: getting configuration for galaxy example
-  - @scalar/oas-utils@0.2.118
-  - @scalar/openapi-parser@0.10.10
+  - @swagglar/oas-utils@0.2.118
+  - @swagglar/openapi-parser@0.10.10
 
 ## 0.2.37
 
 ### Patch Changes
 
-- @scalar/oas-utils@0.2.117
-- @scalar/openapi-parser@0.10.10
+- @swagglar/oas-utils@0.2.117
+- @swagglar/openapi-parser@0.10.10
 
 ## 0.2.36
 
@@ -812,37 +812,37 @@
 
 - Updated dependencies [ab98841]
 - Updated dependencies [db9ebbc]
-  - @scalar/oas-utils@0.2.116
+  - @swagglar/oas-utils@0.2.116
 
 ## 0.2.35
 
 ### Patch Changes
 
 - Updated dependencies [0d8a24f]
-  - @scalar/openapi-parser@0.10.10
-  - @scalar/oas-utils@0.2.115
+  - @swagglar/openapi-parser@0.10.10
+  - @swagglar/oas-utils@0.2.115
 
 ## 0.2.34
 
 ### Patch Changes
 
 - Updated dependencies [fb22645]
-  - @scalar/oas-utils@0.2.114
+  - @swagglar/oas-utils@0.2.114
 
 ## 0.2.33
 
 ### Patch Changes
 
 - Updated dependencies [a31973c]
-  - @scalar/oas-utils@0.2.113
-  - @scalar/openapi-parser@0.10.9
+  - @swagglar/oas-utils@0.2.113
+  - @swagglar/openapi-parser@0.10.9
 
 ## 0.2.32
 
 ### Patch Changes
 
-- @scalar/oas-utils@0.2.112
-- @scalar/openapi-parser@0.10.9
+- @swagglar/oas-utils@0.2.112
+- @swagglar/openapi-parser@0.10.9
 
 ## 0.2.31
 
@@ -852,22 +852,22 @@
 - Updated dependencies [8a04b8d]
 - Updated dependencies [1459ce7]
 - Updated dependencies [8a04b8d]
-  - @scalar/oas-utils@0.2.111
-  - @scalar/openapi-parser@0.10.9
+  - @swagglar/oas-utils@0.2.111
+  - @swagglar/openapi-parser@0.10.9
 
 ## 0.2.30
 
 ### Patch Changes
 
-- @scalar/oas-utils@0.2.110
+- @swagglar/oas-utils@0.2.110
 
 ## 0.2.29
 
 ### Patch Changes
 
 - Updated dependencies [4db5161]
-  - @scalar/oas-utils@0.2.109
-  - @scalar/openapi-parser@0.10.9
+  - @swagglar/oas-utils@0.2.109
+  - @swagglar/openapi-parser@0.10.9
 
 ## 0.2.28
 
@@ -876,8 +876,8 @@
 - Updated dependencies [9fc97da]
 - Updated dependencies [12088f1]
 - Updated dependencies [c10bbf5]
-  - @scalar/oas-utils@0.2.108
-  - @scalar/openapi-parser@0.10.9
+  - @swagglar/oas-utils@0.2.108
+  - @swagglar/openapi-parser@0.10.9
 
 ## 0.2.27
 
@@ -885,15 +885,15 @@
 
 - Updated dependencies [e350f23]
 - Updated dependencies [738d21c]
-  - @scalar/openapi-parser@0.10.8
-  - @scalar/oas-utils@0.2.107
+  - @swagglar/openapi-parser@0.10.8
+  - @swagglar/oas-utils@0.2.107
 
 ## 0.2.26
 
 ### Patch Changes
 
 - Updated dependencies [ed92564]
-  - @scalar/oas-utils@0.2.106
+  - @swagglar/oas-utils@0.2.106
 
 ## 0.2.25
 
@@ -904,8 +904,8 @@
 - 4d30a35: fix: can’t parse HTML attributes with HTML tags inside
 - Updated dependencies [54fdfcb]
 - Updated dependencies [1223c1f]
-  - @scalar/oas-utils@0.2.105
-  - @scalar/openapi-parser@0.10.7
+  - @swagglar/oas-utils@0.2.105
+  - @swagglar/openapi-parser@0.10.7
 
 ## 0.2.24
 
@@ -917,8 +917,8 @@
 - Updated dependencies [b5727ef]
 - Updated dependencies [4de3124]
 - Updated dependencies [34e6f52]
-  - @scalar/openapi-parser@0.10.6
-  - @scalar/oas-utils@0.2.104
+  - @swagglar/openapi-parser@0.10.6
+  - @swagglar/oas-utils@0.2.104
 
 ## 0.2.23
 
@@ -927,8 +927,8 @@
 - Updated dependencies [0f5df68]
 - Updated dependencies [a30e7cc]
 - Updated dependencies [937f791]
-  - @scalar/oas-utils@0.2.103
-  - @scalar/openapi-parser@0.10.5
+  - @swagglar/oas-utils@0.2.103
+  - @swagglar/openapi-parser@0.10.5
 
 ## 0.2.22
 
@@ -938,16 +938,16 @@
 - Updated dependencies [ef98b9c]
 - Updated dependencies [a34f834]
 - Updated dependencies [ebdf762]
-  - @scalar/oas-utils@0.2.102
-  - @scalar/openapi-parser@0.10.4
+  - @swagglar/oas-utils@0.2.102
+  - @swagglar/openapi-parser@0.10.4
 
 ## 0.2.21
 
 ### Patch Changes
 
 - Updated dependencies [be34e7d]
-  - @scalar/oas-utils@0.2.101
-  - @scalar/openapi-parser@0.10.4
+  - @swagglar/oas-utils@0.2.101
+  - @swagglar/openapi-parser@0.10.4
 
 ## 0.2.20
 
@@ -956,22 +956,22 @@
 - Updated dependencies [12e7232]
 - Updated dependencies [901970f]
 - Updated dependencies [f1f39b0]
-  - @scalar/oas-utils@0.2.100
-  - @scalar/openapi-parser@0.10.4
+  - @swagglar/oas-utils@0.2.100
+  - @swagglar/openapi-parser@0.10.4
 
 ## 0.2.19
 
 ### Patch Changes
 
 - Updated dependencies [c803e2d]
-  - @scalar/oas-utils@0.2.99
+  - @swagglar/oas-utils@0.2.99
 
 ## 0.2.18
 
 ### Patch Changes
 
-- @scalar/oas-utils@0.2.98
-- @scalar/openapi-parser@0.10.4
+- @swagglar/oas-utils@0.2.98
+- @swagglar/openapi-parser@0.10.4
 
 ## 0.2.17
 
@@ -979,8 +979,8 @@
 
 - Updated dependencies [7df4472]
 - Updated dependencies [64df4fc]
-  - @scalar/oas-utils@0.2.97
-  - @scalar/openapi-parser@0.10.4
+  - @swagglar/oas-utils@0.2.97
+  - @swagglar/openapi-parser@0.10.4
 
 ## 0.2.16
 
@@ -988,50 +988,50 @@
 
 - Updated dependencies [cf0e7b1]
 - Updated dependencies [8dce84f]
-  - @scalar/oas-utils@0.2.96
-  - @scalar/openapi-parser@0.10.3
+  - @swagglar/oas-utils@0.2.96
+  - @swagglar/openapi-parser@0.10.3
 
 ## 0.2.15
 
 ### Patch Changes
 
 - Updated dependencies [3156ecd]
-  - @scalar/oas-utils@0.2.95
+  - @swagglar/oas-utils@0.2.95
 
 ## 0.2.14
 
 ### Patch Changes
 
 - Updated dependencies [a36fada]
-  - @scalar/oas-utils@0.2.94
+  - @swagglar/oas-utils@0.2.94
 
 ## 0.2.13
 
 ### Patch Changes
 
 - Updated dependencies [ca2d98b]
-  - @scalar/oas-utils@0.2.93
+  - @swagglar/oas-utils@0.2.93
 
 ## 0.2.12
 
 ### Patch Changes
 
 - Updated dependencies [02b4201]
-  - @scalar/oas-utils@0.2.92
+  - @swagglar/oas-utils@0.2.92
 
 ## 0.2.11
 
 ### Patch Changes
 
 - Updated dependencies [3791738]
-  - @scalar/openapi-parser@0.10.2
-  - @scalar/oas-utils@0.2.91
+  - @swagglar/openapi-parser@0.10.2
+  - @swagglar/oas-utils@0.2.91
 
 ## 0.2.10
 
 ### Patch Changes
 
-- @scalar/oas-utils@0.2.91
+- @swagglar/oas-utils@0.2.91
 
 ## 0.2.9
 
@@ -1039,14 +1039,14 @@
 
 - Updated dependencies [573d113]
 - Updated dependencies [c263aaf]
-  - @scalar/oas-utils@0.2.90
-  - @scalar/openapi-parser@0.10.1
+  - @swagglar/oas-utils@0.2.90
+  - @swagglar/openapi-parser@0.10.1
 
 ## 0.2.8
 
 ### Patch Changes
 
-- @scalar/oas-utils@0.2.89
+- @swagglar/oas-utils@0.2.89
 
 ## 0.2.7
 
@@ -1054,23 +1054,23 @@
 
 - Updated dependencies [fbef0c3]
 - Updated dependencies [fbef0c3]
-  - @scalar/openapi-parser@0.10.0
-  - @scalar/oas-utils@0.2.88
+  - @swagglar/openapi-parser@0.10.0
+  - @swagglar/oas-utils@0.2.88
 
 ## 0.2.6
 
 ### Patch Changes
 
 - Updated dependencies [8017ff9]
-  - @scalar/oas-utils@0.2.87
+  - @swagglar/oas-utils@0.2.87
 
 ## 0.2.5
 
 ### Patch Changes
 
 - Updated dependencies [6fef2f3]
-  - @scalar/openapi-parser@0.9.0
-  - @scalar/oas-utils@0.2.86
+  - @swagglar/openapi-parser@0.9.0
+  - @swagglar/oas-utils@0.2.86
 
 ## 0.2.4
 
@@ -1078,7 +1078,7 @@
 
 - Updated dependencies [3eb0d11]
 - Updated dependencies [b66a85c]
-  - @scalar/oas-utils@0.2.86
+  - @swagglar/oas-utils@0.2.86
 
 ## 0.2.3
 
@@ -1087,14 +1087,14 @@
 - Updated dependencies [3b4a788]
 - Updated dependencies [4c5be96]
 - Updated dependencies [4c5be96]
-  - @scalar/oas-utils@0.2.85
+  - @swagglar/oas-utils@0.2.85
 
 ## 0.2.2
 
 ### Patch Changes
 
 - Updated dependencies [9b4f85d]
-  - @scalar/oas-utils@0.2.84
+  - @swagglar/oas-utils@0.2.84
 
 ## 0.2.1
 
@@ -1103,7 +1103,7 @@
 - Updated dependencies [f524411]
 - Updated dependencies [10c9016]
 - Updated dependencies [b11294c]
-  - @scalar/oas-utils@0.2.83
+  - @swagglar/oas-utils@0.2.83
 
 ## 0.2.0
 
@@ -1114,14 +1114,14 @@
 ### Patch Changes
 
 - Updated dependencies [6389557]
-  - @scalar/oas-utils@0.2.82
+  - @swagglar/oas-utils@0.2.82
 
 ## 0.1.2
 
 ### Patch Changes
 
 - Updated dependencies [98e9cb2]
-  - @scalar/openapi-parser@0.8.10
+  - @swagglar/openapi-parser@0.8.10
 
 ## 0.1.1
 
@@ -1140,14 +1140,14 @@
 - Updated dependencies [4bcaa75]
 - Updated dependencies [9eb6650]
 - Updated dependencies [c98a99c]
-  - @scalar/oas-utils@0.2.72
+  - @swagglar/oas-utils@0.2.72
 
 ## 0.0.6
 
 ### Patch Changes
 
 - a40999d: chore: added type safety rule noUncheckedIndexedAccess
-  - @scalar/openapi-parser@0.8.9
+  - @swagglar/openapi-parser@0.8.9
 
 ## 0.0.5
 
@@ -1156,7 +1156,7 @@
 - 779cf35: feat: import from escaped JS object
 - Updated dependencies [757fade]
 - Updated dependencies [a607115]
-  - @scalar/openapi-parser@0.8.9
+  - @swagglar/openapi-parser@0.8.9
 
 ## 0.0.4
 
@@ -1170,7 +1170,7 @@
 ### Patch Changes
 
 - Updated dependencies [7323370]
-  - @scalar/openapi-parser@0.8.8
+  - @swagglar/openapi-parser@0.8.8
 
 ## 0.0.2
 
@@ -1182,4 +1182,4 @@
 
 ### Patch Changes
 
-- e930134: feat: new @scalar/import package :)
+- e930134: feat: new @swagglar/import package :)

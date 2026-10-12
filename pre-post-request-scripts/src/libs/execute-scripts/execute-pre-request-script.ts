@@ -1,4 +1,4 @@
-import type { RequestFactory, VariablesStore } from '@scalar/workspace-store/request-example'
+import type { RequestFactory, VariablesStore } from '@swagglar/workspace-store/request-example'
 
 import type { TestResult } from '@/libs/execute-scripts'
 

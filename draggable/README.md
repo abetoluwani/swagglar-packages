@@ -1,8 +1,8 @@
 # Scalar Draggable component
 
-[![Version](https://img.shields.io/npm/v/%40scalar/draggable)](https://www.npmjs.com/package/@scalar/draggable)
-[![Downloads](https://img.shields.io/npm/dm/%40scalar/draggable)](https://www.npmjs.com/package/@scalar/draggable)
-[![License](https://img.shields.io/npm/l/%40scalar%2Fdraggable)](https://www.npmjs.com/package/@scalar/draggable)
+[![Version](https://img.shields.io/npm/v/%40scalar/draggable)](https://www.npmjs.com/package/@swagglar/draggable)
+[![Downloads](https://img.shields.io/npm/dm/%40scalar/draggable)](https://www.npmjs.com/package/@swagglar/draggable)
+[![License](https://img.shields.io/npm/l/%40scalar%2Fdraggable)](https://www.npmjs.com/package/@swagglar/draggable)
 [![Discord](https://img.shields.io/discord/1135330207960678410?style=flat&color=5865F2)](https://discord.gg/scalar)
 
 ---
@@ -21,7 +21,7 @@ Scalar is an open-source API platform for teams who want beautiful developer int
 ## Installation
 
 ```bash
-npm install @scalar/draggable
+npm install @swagglar/draggable
 ```
 
 ## Usage

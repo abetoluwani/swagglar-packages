@@ -1,4 +1,4 @@
-# @scalar/icons
+# @swagglar/icons
 
 ## 0.7.6
 
@@ -22,7 +22,7 @@
 
 ### Patch Changes
 
-- [#9310](https://github.com/scalar/scalar/pull/9310): The library icon resolver (`@scalar/icons/library`) now eagerly bundles the `interface-content-folder` SVG and pre-populates the icon cache with it. This is the default fallback used by `<SidebarItem>` whenever an item doesn't specify a custom `x-scalar-icon`, so the most common path through the sidebar no longer waits on a per-icon dynamic chunk to resolve. The other 83 SVGs in the library remain lazy.
+- [#9310](https://github.com/scalar/scalar/pull/9310): The library icon resolver (`@swagglar/icons/library`) now eagerly bundles the `interface-content-folder` SVG and pre-populates the icon cache with it. This is the default fallback used by `<SidebarItem>` whenever an item doesn't specify a custom `x-scalar-icon`, so the most common path through the sidebar no longer waits on a per-icon dynamic chunk to resolve. The other 83 SVGs in the library remain lazy.
 
 ## 0.7.2
 
@@ -141,7 +141,7 @@ No need to include it in published packages
 
 ### Patch Changes
 
-- @scalar/use-hooks@0.2.1
+- @swagglar/use-hooks@0.2.1
 
 ## 0.4.0
 
@@ -152,50 +152,50 @@ No need to include it in published packages
 ### Patch Changes
 
 - Updated dependencies [483ca93]
-  - @scalar/use-hooks@0.2.0
+  - @swagglar/use-hooks@0.2.0
 
 ## 0.3.7
 
 ### Patch Changes
 
-- @scalar/use-hooks@0.1.50
+- @swagglar/use-hooks@0.1.50
 
 ## 0.3.6
 
 ### Patch Changes
 
-- @scalar/use-hooks@0.1.49
+- @swagglar/use-hooks@0.1.49
 
 ## 0.3.5
 
 ### Patch Changes
 
 - Updated dependencies [8c7bad8]
-  - @scalar/use-hooks@0.1.48
+  - @swagglar/use-hooks@0.1.48
 
 ## 0.3.4
 
 ### Patch Changes
 
-- @scalar/use-hooks@0.1.47
+- @swagglar/use-hooks@0.1.47
 
 ## 0.3.3
 
 ### Patch Changes
 
-- @scalar/use-hooks@0.1.46
+- @swagglar/use-hooks@0.1.46
 
 ## 0.3.2
 
 ### Patch Changes
 
-- @scalar/use-hooks@0.1.45
+- @swagglar/use-hooks@0.1.45
 
 ## 0.3.1
 
 ### Patch Changes
 
-- @scalar/use-hooks@0.1.44
+- @swagglar/use-hooks@0.1.44
 
 ## 0.3.0
 
@@ -207,18 +207,18 @@ No need to include it in published packages
 
 - 2b61d8e: docs(icons): update docs and storybook
 - Updated dependencies [2b61d8e]
-  - @scalar/use-hooks@0.1.43
+  - @swagglar/use-hooks@0.1.43
 
 ## 0.2.0
 
 ### Minor Changes
 
-- 363276e: feat(icons): add Phosphor icons to @scalar/icons
+- 363276e: feat(icons): add Phosphor icons to @swagglar/icons
 
 ### Patch Changes
 
 - Updated dependencies [363276e]
-  - @scalar/use-hooks@0.1.42
+  - @swagglar/use-hooks@0.1.42
 
 ## 0.1.3
 

@@ -1,4 +1,4 @@
-import type { RequestFactory } from '@scalar/workspace-store/request-example'
+import type { RequestFactory } from '@swagglar/workspace-store/request-example'
 import { describe, expect, it } from 'vitest'
 
 import type { ClientPlugin } from './client-plugins'

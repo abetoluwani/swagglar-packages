@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { cva, useBindCx } from '@scalar/use-hooks/useBindCx'
+import { cva, useBindCx } from '@swagglar/use-hooks/useBindCx'
 
 const {
   thumb = 'start',

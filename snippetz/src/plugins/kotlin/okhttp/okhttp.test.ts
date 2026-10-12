@@ -1,4 +1,4 @@
-import type { FormDataParam } from '@scalar/types/snippetz'
+import type { FormDataParam } from '@swagglar/types/snippetz'
 import { describe, expect, it } from 'vitest'
 
 import { kotlinOkhttp } from './okhttp'

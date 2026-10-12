@@ -1,4 +1,4 @@
-# @scalar/draggable
+# @swagglar/draggable
 
 ## 0.4.5
 

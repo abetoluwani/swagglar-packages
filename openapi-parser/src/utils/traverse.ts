@@ -1,4 +1,4 @@
-import type { AnyObject, UnknownObject } from '@scalar/types/utils'
+import type { AnyObject, UnknownObject } from '@swagglar/types/utils'
 
 /**
  * Recursively traverses the content and applies the transform function to each node.

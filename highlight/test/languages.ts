@@ -1,5 +1,5 @@
 /**
- * `standardLanguages` from `@scalar/code-highlight`, for the reference
+ * `standardLanguages` from `@swagglar/code-highlight`, for the reference
  * pipeline to highlight with. Only the grammars the sample corpus and the
  * edge-case table actually reach are registered — the differential tests
  * compare output, and loading the other highlight.js grammars would not

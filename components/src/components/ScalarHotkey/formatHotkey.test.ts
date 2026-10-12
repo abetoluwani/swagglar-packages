@@ -1,11 +1,11 @@
 import { describe, expect, it, vi } from 'vitest'
 
 // Mock the platform helper before importing the module under test
-vi.mock('@scalar/helpers/general/is-mac-os', () => ({
+vi.mock('@swagglar/helpers/general/is-mac-os', () => ({
   isMacOS: vi.fn(),
 }))
 
-import { isMacOS } from '@scalar/helpers/general/is-mac-os'
+import { isMacOS } from '@swagglar/helpers/general/is-mac-os'
 
 import { formatHotkeySymbols, getKeyLabel, getModifierKeySymbol } from './formatHotkey'
 

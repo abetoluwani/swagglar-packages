@@ -1,4 +1,4 @@
-import type { HarRequest } from '@scalar/types/snippetz'
+import type { HarRequest } from '@swagglar/types/snippetz'
 import { describe, expect, it } from 'vitest'
 
 import {

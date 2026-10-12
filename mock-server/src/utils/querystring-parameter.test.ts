@@ -1,4 +1,4 @@
-import type { OpenAPIV3_2 } from '@scalar/openapi-types'
+import type { OpenAPIV3_2 } from '@swagglar/openapi-types'
 import { describe, expect, it } from 'vitest'
 
 import { createMockServer } from '../create-mock-server'

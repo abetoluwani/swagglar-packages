@@ -2,7 +2,7 @@ import { getLanguage } from '../core/registry'
 import type { CompiledGrammar } from '../core/types'
 
 /**
- * `lowlightLanguageMappings`, copied verbatim from `@scalar/code-highlight`.
+ * `lowlightLanguageMappings`, copied verbatim from `@swagglar/code-highlight`.
  *
  * This runs before anything else and decides the `language-*` class on the
  * `<code>` element, so it has to stay byte-identical: `code.css` targets
@@ -140,7 +140,7 @@ const GRAMMAR_FOR: Record<string, string> = {
 }
 
 /**
- * Every key of `standardLanguages` in `@scalar/code-highlight`.
+ * Every key of `standardLanguages` in `@swagglar/code-highlight`.
  *
  * Kept so `keyof typeof standardLanguages` — which is how `ScalarCodeBlock`
  * derives its `StandardLanguageKey` prop type — resolves to the same union
@@ -171,7 +171,7 @@ export const STANDARD_LANGUAGE_NAMES = [
   'java',
   'javascript',
   'json',
-  // Kept in `StandardLanguageKey` for parity with `@scalar/code-highlight`,
+  // Kept in `StandardLanguageKey` for parity with `@swagglar/code-highlight`,
   // which highlights Julia via highlight.js. This zero-dependency package has
   // no hand-written Julia grammar yet, so it stays in `unsupportedLanguages`
   // and renders as plain escaped text until one is added.

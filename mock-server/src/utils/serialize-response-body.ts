@@ -1,9 +1,9 @@
-import { isXmlMediaType } from '@scalar/helpers/http/is-xml-media-type'
-import { parseMimeType } from '@scalar/helpers/http/mime-type'
-import type { OpenAPIV3_1 } from '@scalar/openapi-types'
-import { serializeXmlExample } from '@scalar/workspace-store/request-example'
-import { coerceValue } from '@scalar/workspace-store/schemas/typebox-coerce'
-import { SchemaObjectSchema } from '@scalar/workspace-store/schemas/v3.2/strict/openapi-document'
+import { isXmlMediaType } from '@swagglar/helpers/http/is-xml-media-type'
+import { parseMimeType } from '@swagglar/helpers/http/mime-type'
+import type { OpenAPIV3_1 } from '@swagglar/openapi-types'
+import { serializeXmlExample } from '@swagglar/workspace-store/request-example'
+import { coerceValue } from '@swagglar/workspace-store/schemas/typebox-coerce'
+import { SchemaObjectSchema } from '@swagglar/workspace-store/schemas/v3.2/strict/openapi-document'
 
 type Schema = NonNullable<OpenAPIV3_1.ComponentsObject['schemas']>[string]
 

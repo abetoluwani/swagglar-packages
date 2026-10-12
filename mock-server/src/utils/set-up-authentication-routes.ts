@@ -1,5 +1,5 @@
-import type { OpenAPI, OpenAPIV3, OpenAPIV3_1 } from '@scalar/openapi-types'
-import { getResolvedRef } from '@scalar/workspace-store/helpers/get-resolved-ref'
+import type { OpenAPI, OpenAPIV3, OpenAPIV3_1 } from '@swagglar/openapi-types'
+import { getResolvedRef } from '@swagglar/workspace-store/helpers/get-resolved-ref'
 import type { Hono } from 'hono'
 
 import { respondWithAuthorizePage } from '@/routes/respond-with-authorize-page'

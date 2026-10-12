@@ -1,4 +1,4 @@
-# @scalar/agent-chat
+# @swagglar/agent-chat
 
 Agent chat components
 

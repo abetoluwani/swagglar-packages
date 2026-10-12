@@ -1,6 +1,6 @@
 // Theming — imported in the same order as .storybook/preview.ts so the cascade resolves identically
-import '@scalar/themes/fonts.css'
-import '@scalar/themes/style.css'
+import '@swagglar/themes/fonts.css'
+import '@swagglar/themes/style.css'
 
 import { type App, type Component, createApp, h } from 'vue'
 
@@ -8,7 +8,7 @@ import '../../src/style.css'
 import '../../.storybook/preview.css'
 import './gallery.css'
 
-import { type ThemeVariantId, applyThemeVariant, defaultThemeVariant } from '@scalar/helpers/storybook/themes'
+import { type ThemeVariantId, applyThemeVariant, defaultThemeVariant } from '@swagglar/helpers/storybook/themes'
 
 /**
  * The component gallery that hosts Playwright's `mount()` fixture.

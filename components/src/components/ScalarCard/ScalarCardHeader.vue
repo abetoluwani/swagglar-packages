@@ -13,7 +13,7 @@
 export default {}
 </script>
 <script lang="ts" setup>
-import { useBindCx } from '@scalar/use-hooks/useBindCx'
+import { useBindCx } from '@swagglar/use-hooks/useBindCx'
 import { useId } from 'vue'
 
 import ScalarCardSection from './ScalarCardSection.vue'

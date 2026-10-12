@@ -6,7 +6,7 @@ import {
   expect,
   devices as playwrightDevices,
 } from '@playwright/test'
-import { defaultThemeVariant } from '@scalar/helpers/storybook/themes'
+import { defaultThemeVariant } from '@swagglar/helpers/storybook/themes'
 
 import {
   type ComponentTestOptions,

@@ -14,7 +14,7 @@ export default {}
 </script>
 
 <script setup lang="ts">
-import { cva, cx } from '@scalar/use-hooks/useBindCx'
+import { cva, cx } from '@swagglar/use-hooks/useBindCx'
 
 const { active, selected } = defineProps<{
   active?: boolean

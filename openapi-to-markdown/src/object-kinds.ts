@@ -1,4 +1,4 @@
-import type { coerceValue } from '@scalar/workspace-store/schemas/typebox-coerce'
+import type { coerceValue } from '@swagglar/workspace-store/schemas/typebox-coerce'
 import {
   CallbackObjectSchema,
   ExampleObjectSchema,
@@ -11,7 +11,7 @@ import {
   RequestBodyObjectSchema,
   ResponseObjectSchema,
   SecuritySchemeObjectSchema,
-} from '@scalar/workspace-store/schemas/v3.2/strict/openapi-document'
+} from '@swagglar/workspace-store/schemas/v3.2/strict/openapi-document'
 
 /** The OpenAPI objects outside of schemas that the linking pass tells apart. */
 export type ObjectKind =

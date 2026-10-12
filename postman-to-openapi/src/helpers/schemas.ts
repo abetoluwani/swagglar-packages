@@ -1,4 +1,4 @@
-import type { OpenAPIV3_1 } from '@scalar/openapi-types'
+import type { OpenAPIV3_1 } from '@swagglar/openapi-types'
 
 /**
  * Infers the schema of an OpenAPI object based on an example value.

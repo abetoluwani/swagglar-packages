@@ -1,4 +1,4 @@
-import type { XCodeSample } from '@scalar/workspace-store/schemas/extensions/operation'
+import type { XCodeSample } from '@swagglar/workspace-store/schemas/extensions/operation'
 import { describe, expect, it } from 'vitest'
 
 import type { ClientOptionGroup, CustomClientOption } from '../types'

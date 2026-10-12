@@ -1,4 +1,4 @@
-# @scalar/validation
+# @swagglar/validation
 
 ## 0.6.5
 

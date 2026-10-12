@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { validate } from '@scalar/asyncapi-validator'
-import { useCodeMirror } from '@scalar/use-codemirror'
+import { validate } from '@swagglar/asyncapi-validator'
+import { useCodeMirror } from '@swagglar/use-codemirror'
 import { computed, ref } from 'vue'
 
 import { EXAMPLES } from './examples'

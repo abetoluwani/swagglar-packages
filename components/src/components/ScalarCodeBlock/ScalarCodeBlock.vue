@@ -12,9 +12,9 @@ export default {}
 </script>
 <script lang="ts" setup>
 import ScalarCopyBackdrop from '@/components/ScalarCopy/ScalarCopyBackdrop.vue'
-import { standardLanguages, syntaxHighlight } from '@scalar/code-highlight'
-import { prettyPrintJson } from '@scalar/helpers/json/pretty-print-json'
-import { useBindCx } from '@scalar/use-hooks/useBindCx'
+import { standardLanguages, syntaxHighlight } from '@swagglar/code-highlight'
+import { prettyPrintJson } from '@swagglar/helpers/json/pretty-print-json'
+import { useBindCx } from '@swagglar/use-hooks/useBindCx'
 import { computed, useId } from 'vue'
 
 import { ScalarCodeBlockCopy } from '../ScalarCodeBlock'
@@ -148,7 +148,7 @@ const { cx } = useBindCx()
 </template>
 <style>
 @reference '../../style.css';
-@import '@scalar/code-highlight/css/code.css';
+@import '@swagglar/code-highlight/css/code.css';
 
 /** Disable font ligatures so code renders with literal characters */
 .scalar-code-block pre {

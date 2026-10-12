@@ -7,9 +7,9 @@
 
 # Scalar AsyncAPI Upgrader
 
-[![Version](https://img.shields.io/npm/v/@scalar/asyncapi-upgrader)](https://www.npmjs.com/package/@scalar/asyncapi-upgrader)
-[![Downloads](https://img.shields.io/npm/dm/@scalar/asyncapi-upgrader)](https://www.npmjs.com/package/@scalar/asyncapi-upgrader)
-[![License](https://img.shields.io/npm/l/@scalar/asyncapi-upgrader)](https://www.npmjs.com/package/@scalar/asyncapi-upgrader)
+[![Version](https://img.shields.io/npm/v/@swagglar/asyncapi-upgrader)](https://www.npmjs.com/package/@swagglar/asyncapi-upgrader)
+[![Downloads](https://img.shields.io/npm/dm/@swagglar/asyncapi-upgrader)](https://www.npmjs.com/package/@swagglar/asyncapi-upgrader)
+[![License](https://img.shields.io/npm/l/@swagglar/asyncapi-upgrader)](https://www.npmjs.com/package/@swagglar/asyncapi-upgrader)
 [![Discord](https://img.shields.io/discord/1135330207960678410?style=flat&color=5865F2)](https://discord.gg/scalar)
 
 Upgrade AsyncAPI documents to the latest and greatest version

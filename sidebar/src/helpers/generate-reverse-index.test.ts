@@ -1,4 +1,4 @@
-import type { TraversedEntry } from '@scalar/workspace-store/schemas/navigation'
+import type { TraversedEntry } from '@swagglar/workspace-store/schemas/navigation'
 import { describe, expect, it } from 'vitest'
 
 import { generateReverseIndex } from './generate-reverse-index'

@@ -1,4 +1,4 @@
-import type { OpenAPIV3_1 } from '@scalar/openapi-types'
+import type { OpenAPIV3_1 } from '@swagglar/openapi-types'
 
 /**
  * Recursively removes all undefined values from an object or array.

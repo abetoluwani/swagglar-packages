@@ -1,4 +1,4 @@
-import { type ThemeId, getThemeStyles, themeIds, themeLabels } from '@scalar/themes'
+import { type ThemeId, getThemeStyles, themeIds, themeLabels } from '@swagglar/themes'
 
 /** Id of the style element the theme decorator owns, so it can replace rather than stack styles. */
 const STYLE_ELEMENT_ID = 'scalar-storybook-theme'

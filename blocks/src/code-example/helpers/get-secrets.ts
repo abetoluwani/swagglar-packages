@@ -1,4 +1,4 @@
-import type { SecuritySchemeObjectSecret } from '@scalar/workspace-store/request-example'
+import type { SecuritySchemeObjectSecret } from '@swagglar/workspace-store/request-example'
 import { encode } from 'js-base64'
 
 /** Extract secrets from security schemes */

@@ -5,11 +5,11 @@
  * sheet for the sidebar.
  */
 
-@import "@scalar/themes/style.css"; /* Theme Base Styles and Reset */
-@import "@scalar/themes/tailwind.css"; /* Tailwind Theme + Config */
+@import "@swagglar/themes/style.css"; /* Theme Base Styles and Reset */
+@import "@swagglar/themes/tailwind.css"; /* Tailwind Theme + Config */
 
 /* Component Library Vue Styles */
-@import "@scalar/components/vue-styles.css";
+@import "@swagglar/components/vue-styles.css";
 
 /* Sidebar Tailwind Configuration */
 @import "./styles/tailwind.config.css";

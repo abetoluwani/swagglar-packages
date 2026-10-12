@@ -85,11 +85,11 @@ Default theme, light mode. Map the nearest Scalar token; if a Paper value has no
 | App header | `ScalarHeader` (`/header`) |
 | Side navigation | `ScalarSidebar` (`/sidebar`) |
 | Workspace / team picker | `ScalarMenu` (`/menu`) |
-| Icon | `@scalar/icons` `ScalarIcon<Name>` (`size-*`, `text-*`) |
+| Icon | `@swagglar/icons` `ScalarIcon<Name>` (`size-*`, `text-*`) |
 
 Pick a `ScalarButton` variant by how it reads in the design: solid dark fill → `solid`; bordered on light → `outlined`; text-only → `ghost`; subtle gradient → `gradient`; red/destructive → `danger`.
 
-To confirm a component's exact props and variants, read the bundled type declarations (`*.d.ts`) shipped with `@scalar/components`.
+To confirm a component's exact props and variants, read the bundled type declarations (`*.d.ts`) shipped with `@swagglar/components`.
 
 ## Token → Paper value (code-to-design)
 

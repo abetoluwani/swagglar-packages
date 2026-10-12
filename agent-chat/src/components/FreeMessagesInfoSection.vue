@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ScalarIconInfo, ScalarIconX } from '@scalar/icons'
+import { ScalarIconInfo, ScalarIconX } from '@swagglar/icons'
 import { ref } from 'vue'
 
 import { URLS } from '@/consts/urls'

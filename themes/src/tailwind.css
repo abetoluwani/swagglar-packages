@@ -37,5 +37,5 @@
  */
 @import "./tailwind/v3-reset.css";
 
-/* Method colors are selected dynamically from @scalar/helpers. */
+/* Method colors are selected dynamically from @swagglar/helpers. */
 @source inline("text-query bg-query/10");

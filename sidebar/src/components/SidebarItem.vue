@@ -8,9 +8,9 @@ import {
   ScalarSidebarIndent,
   ScalarSidebarItem,
   ScalarSidebarSection,
-} from '@scalar/components/sidebar'
-import { isPlainLeftClick } from '@scalar/helpers/dom/is-plain-left-click'
-import { LibraryIcon } from '@scalar/icons/library'
+} from '@swagglar/components/sidebar'
+import { isPlainLeftClick } from '@swagglar/helpers/dom/is-plain-left-click'
+import { LibraryIcon } from '@swagglar/icons/library'
 import { computed } from 'vue'
 
 import SidebarItemDecorator from '@/components/SidebarItemDecorator.vue'

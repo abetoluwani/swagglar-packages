@@ -1,5 +1,5 @@
-import { debounce } from '@scalar/helpers/general/debounce'
-import { safeLocalStorage } from '@scalar/helpers/object/local-storage'
+import { debounce } from '@swagglar/helpers/general/debounce'
+import { safeLocalStorage } from '@swagglar/helpers/object/local-storage'
 import { stringify } from 'flatted'
 
 import { Mutation } from '../mutator-record/mutations'
@@ -41,7 +41,7 @@ export function mutationFactory<T extends Record<string, any>>(
     },
     delete: (uid: T['uid'] | null | undefined) => {
       if (!uid) {
-        console.warn('[@scalar/object-utils] No uid provided to delete')
+        console.warn('[@swagglar/object-utils] No uid provided to delete')
         return
       }
       delete entityMap[uid]
@@ -57,7 +57,7 @@ export function mutationFactory<T extends Record<string, any>>(
     /** Update a nested property and track the mutation */
     edit: <P extends Path<T>>(uid: T['uid'] | null | undefined, path: P, value: PathValue<T, P>) => {
       if (!uid) {
-        console.warn('[@scalar/object-utils] No uid provided to edit', path, value)
+        console.warn('[@swagglar/object-utils] No uid provided to edit', path, value)
         return
       }
       const mutator = getMutator(uid)

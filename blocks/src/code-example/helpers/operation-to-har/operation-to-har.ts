@@ -1,13 +1,13 @@
-import { isElectron } from '@scalar/helpers/general/is-electron'
-import { getResolvedRef } from '@scalar/workspace-store/helpers/get-resolved-ref'
+import { isElectron } from '@swagglar/helpers/general/is-electron'
+import { getResolvedRef } from '@swagglar/workspace-store/helpers/get-resolved-ref'
 import {
   type SecuritySchemeObjectSecret,
   filterGlobalCookie,
   getDefaultHeaders,
   restoreConventionalDefaultHeaderNames,
-} from '@scalar/workspace-store/request-example'
-import type { XScalarCookie } from '@scalar/workspace-store/schemas/extensions/general/x-scalar-cookies'
-import type { OperationObject, ServerObject } from '@scalar/workspace-store/schemas/v3.2/strict/openapi-document'
+} from '@swagglar/workspace-store/request-example'
+import type { XScalarCookie } from '@swagglar/workspace-store/schemas/extensions/general/x-scalar-cookies'
+import type { OperationObject, ServerObject } from '@swagglar/workspace-store/schemas/v3.2/strict/openapi-document'
 import type { Request as HarRequest } from 'har-format'
 
 import { APP_VERSION } from '@/constants'

@@ -1,8 +1,8 @@
-import type { Document as OpenApiDocumentV2 } from '@scalar/openapi-types/2.0'
-import type { Document as OpenApiDocumentV3 } from '@scalar/openapi-types/3.0'
-import type { Document as OpenApiDocumentV3_1 } from '@scalar/openapi-types/3.1'
-import type { Document as OpenApiDocumentV3_2 } from '@scalar/openapi-types/3.2'
-import type { UnknownObject } from '@scalar/types/utils'
+import type { Document as OpenApiDocumentV2 } from '@swagglar/openapi-types/2.0'
+import type { Document as OpenApiDocumentV3 } from '@swagglar/openapi-types/3.0'
+import type { Document as OpenApiDocumentV3_1 } from '@swagglar/openapi-types/3.1'
+import type { Document as OpenApiDocumentV3_2 } from '@swagglar/openapi-types/3.2'
+import type { UnknownObject } from '@swagglar/types/utils'
 
 import type { ERRORS, OpenApiVersion } from '@/configuration'
 

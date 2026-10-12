@@ -1,4 +1,4 @@
-import type { OpenAPIV3_1 } from '@scalar/openapi-types'
+import type { OpenAPIV3_1 } from '@swagglar/openapi-types'
 import fs from 'node:fs'
 import path from 'node:path'
 import { describe, expect, it, test } from 'vitest'

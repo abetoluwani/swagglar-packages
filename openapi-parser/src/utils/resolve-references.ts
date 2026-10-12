@@ -1,5 +1,5 @@
-import { isObject, isObjectLike } from '@scalar/helpers/object/is-object'
-import type { AnyObject, UnknownObject } from '@scalar/types/utils'
+import { isObject, isObjectLike } from '@swagglar/helpers/object/is-object'
+import type { AnyObject, UnknownObject } from '@swagglar/types/utils'
 
 import { ERRORS } from '@/configuration'
 import type { ErrorObject, Filesystem, FilesystemEntry, ThrowOnErrorOption } from '@/types/index'

@@ -1,5 +1,5 @@
-import { isHttpMethod } from '@scalar/helpers/http/is-http-method'
-import { getResolvedRef, mergeSiblingReferences } from '@scalar/workspace-store/helpers/get-resolved-ref'
+import { isHttpMethod } from '@swagglar/helpers/http/is-http-method'
+import { getResolvedRef, mergeSiblingReferences } from '@swagglar/workspace-store/helpers/get-resolved-ref'
 import type {
   OpenApiDocument,
   OperationObject,
@@ -7,7 +7,7 @@ import type {
   PathItemObject,
   RequestBodyObject,
   ResponseObject,
-} from '@scalar/workspace-store/schemas/v3.2/strict/openapi-document'
+} from '@swagglar/workspace-store/schemas/v3.2/strict/openapi-document'
 import type { ListItem, RootContent } from 'mdast'
 
 import { field, heading, inlineCode, item, list, paragraph, strong, text } from './markdown-nodes'

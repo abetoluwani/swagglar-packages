@@ -3,14 +3,14 @@
  * Scalar Icon Legacy Adapter
  *
  * This component is used to help components that accept a ScalarIcon name
- * as a prop to accept a component instead to be compatible with `@scalar/icons`
+ * as a prop to accept a component instead to be compatible with `@swagglar/icons`
  * while staying backwards compatible with the legacy ScalarIcon component
  */
 export default {}
 </script>
 <script setup lang="ts">
-import type { ScalarIconComponent, ScalarIconProps } from '@scalar/icons/types'
-import { useBindCx } from '@scalar/use-hooks/useBindCx'
+import type { ScalarIconComponent, ScalarIconProps } from '@swagglar/icons/types'
+import { useBindCx } from '@swagglar/use-hooks/useBindCx'
 
 import ScalarIcon from './ScalarIcon.vue'
 import type { ScalarIconProps as LegacyScalarIconProps } from './types'

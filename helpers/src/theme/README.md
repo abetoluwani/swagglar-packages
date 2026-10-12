@@ -1,4 +1,4 @@
-# Theme helpers (`@scalar/helpers/theme`)
+# Theme helpers (`@swagglar/helpers/theme`)
 
 Utilities for Scalar’s color modes, which every theme ships as a pair of **`.light-mode`** and **`.dark-mode`** class selectors rather than as a media query.
 
@@ -20,12 +20,12 @@ Without a `window` it reports light, matching what the server renders. A `window
 
 A **resolved** color mode, `'light' | 'dark'`. Deliberately narrower than the mode a user can pick, which also includes `'system'` — that one is a preference which has to be resolved against the operating system before anything can be rendered, so by the time a mode reaches the DOM it is always one of these two.
 
-`@scalar/use-hooks/useColorMode` re-exports this type alongside its own `ColorMode`, and calls `applyColorMode` to do the class swap.
+`@swagglar/use-hooks/useColorMode` re-exports this type alongside its own `ColorMode`, and calls `applyColorMode` to do the class swap.
 
 ### Import
 
 ```ts
-import { type DarkLightMode, applyColorMode, getSystemColorMode } from '@scalar/helpers/theme/color-mode'
+import { type DarkLightMode, applyColorMode, getSystemColorMode } from '@swagglar/helpers/theme/color-mode'
 ```
 
 ## `load-css-variables` (`./load-css-variables`)
@@ -62,5 +62,5 @@ Unsupported forms (for example space-separated `rgb()` or slash alpha syntax) ar
 import {
   loadCssVariables,
   parseVariableValue,
-} from '@scalar/helpers/theme/load-css-variables'
+} from '@swagglar/helpers/theme/load-css-variables'
 ```

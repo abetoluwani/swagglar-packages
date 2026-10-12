@@ -5,7 +5,7 @@ import {
   createAsyncApiMockServer,
   createMockServer,
   isAsyncApiDocument,
-} from '@scalar/mock-server'
+} from '@swagglar/mock-server'
 import type { Hono } from 'hono'
 
 interface ServerConfig {

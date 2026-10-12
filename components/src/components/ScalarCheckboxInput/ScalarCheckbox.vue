@@ -15,7 +15,7 @@
 export default {}
 </script>
 <script setup lang="ts">
-import { ScalarIconCheck, ScalarIconMinus } from '@scalar/icons'
+import { ScalarIconCheck, ScalarIconMinus } from '@swagglar/icons'
 
 import type { ScalarCheckboxType } from './types'
 

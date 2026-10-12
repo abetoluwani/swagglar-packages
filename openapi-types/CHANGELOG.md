@@ -1,4 +1,4 @@
-# @scalar/openapi-types
+# @swagglar/openapi-types
 
 ## 0.9.7
 
@@ -267,7 +267,7 @@
 
 ### Minor Changes
 
-- b4f9f97: feat: new @scalar/openapi-types package
+- b4f9f97: feat: new @swagglar/openapi-types package
 
 ## 0.0.1
 

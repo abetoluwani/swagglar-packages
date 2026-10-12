@@ -9,7 +9,7 @@ import type { CompiledGrammar } from './core/types'
  * only ever highlights Python downloads only Python.
  *
  * Import this module only if you want that. `import python from
- * "@scalar/highlight/langs/python"` is the static equivalent and pulls in nothing
+ * "@swagglar/highlight/langs/python"` is the static equivalent and pulls in nothing
  * else.
  */
 const loaders = {

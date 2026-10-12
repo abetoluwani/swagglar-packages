@@ -1,4 +1,4 @@
-import { getHttpMethodInfo } from '@scalar/helpers/http/http-info'
+import { getHttpMethodInfo } from '@swagglar/helpers/http/http-info'
 import { mount } from '@vue/test-utils'
 import { describe, expect, it } from 'vitest'
 

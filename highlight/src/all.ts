@@ -46,7 +46,7 @@ import yaml from './langs/yaml'
  *
  * Meant for build-time rendering — static site generators, docs pipelines,
  * anything where bundle size is not a constraint. In a browser bundle prefer
- * `@scalar/highlight/lazy`, or import the two or three languages you actually use.
+ * `@swagglar/highlight/lazy`, or import the two or three languages you actually use.
  */
 export const languages: Grammar[] = [
   bash,
@@ -96,7 +96,7 @@ registerLanguage(...languages)
 /**
  * The root entry's surface, re-exported by name.
  *
- * `import { highlight } from '@scalar/highlight/all'` has to work without a
+ * `import { highlight } from '@swagglar/highlight/all'` has to work without a
  * second import, so everything `.` exports is listed here. Spelled out rather
  * than `export *` so the entry's surface is greppable and Biome's barrel-file
  * rules stay satisfied.

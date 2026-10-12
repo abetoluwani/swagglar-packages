@@ -1,4 +1,4 @@
-# @scalar/snippetz
+# @swagglar/snippetz
 
 ## 0.10.2
 
@@ -177,11 +177,11 @@
 - [#8771](https://github.com/scalar/scalar/pull/8771): feat(snippetz): migrate R code snippets from httr to httr2
 - [#8817](https://github.com/scalar/scalar/pull/8817): feat(snippetz): add a Laravel HTTP client plugin for PHP snippets
 
-  Added a new `php/laravel` client generator in `@scalar/snippetz`, including comprehensive request coverage for headers, cookies, auth, query params, JSON, multipart, form-encoded, binary, and fallback bodies.
+  Added a new `php/laravel` client generator in `@swagglar/snippetz`, including comprehensive request coverage for headers, cookies, auth, query params, JSON, multipart, form-encoded, binary, and fallback bodies.
 
   Updated generated client registries and schema wiring so the new client is available across Scalar:
-  - `@scalar/types` `GROUPED_CLIENTS` / `AVAILABLE_CLIENTS`
-  - `@scalar/workspace-store` reference-config schema
+  - `@swagglar/types` `GROUPED_CLIENTS` / `AVAILABLE_CLIENTS`
+  - `@swagglar/workspace-store` reference-config schema
   - generated docs and integration client enums
 
   Updated api-client expectations for the increased total built-in client count.
@@ -226,7 +226,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/types@0.7.3**
+- **@swagglar/types@0.7.3**
 
 ## 0.7.3
 
@@ -240,7 +240,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/types@0.7.2**
+- **@swagglar/types@0.7.2**
 
 ## 0.7.1
 
@@ -248,7 +248,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/types@0.7.1**
+- **@swagglar/types@0.7.1**
   - [#8381](https://github.com/scalar/scalar/pull/8381): feat: add mcp config support
 
 ## 0.7.0
@@ -261,7 +261,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/types@0.7.0**
+- **@swagglar/types@0.7.0**
   - [#8322](https://github.com/scalar/scalar/pull/8322): chore: bump required node version to >=22 (LTS)
 
 ## 0.6.19
@@ -270,7 +270,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/types@0.6.10**
+- **@swagglar/types@0.6.10**
 
 ## 0.6.18
 
@@ -278,7 +278,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/types@0.6.9**
+- **@swagglar/types@0.6.9**
 
 ## 0.6.17
 
@@ -286,7 +286,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/types@0.6.8**
+- **@swagglar/types@0.6.8**
   - [#8274](https://github.com/scalar/scalar/pull/8274): feat(agent): add config to hide search api
 
 ## 0.6.16
@@ -297,7 +297,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/types@0.6.7**
+- **@swagglar/types@0.6.7**
 
 ## 0.6.15
 
@@ -305,7 +305,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/types@0.6.6**
+- **@swagglar/types@0.6.6**
   - [#8212](https://github.com/scalar/scalar/pull/8212): chore: version bump
 
 ## 0.6.14
@@ -314,7 +314,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/types@0.6.5**
+- **@swagglar/types@0.6.5**
   - [#8207](https://github.com/scalar/scalar/pull/8207): chore: version bump
 
 ## 0.6.13
@@ -323,7 +323,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/types@0.6.4**
+- **@swagglar/types@0.6.4**
   - [#8174](https://github.com/scalar/scalar/pull/8174): feat: add `createAnySecurityScheme` config option to control generic auth scheme creation
 
 ## 0.6.12
@@ -332,7 +332,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/types@0.6.3**
+- **@swagglar/types@0.6.3**
 
 ## 0.6.11
 
@@ -340,7 +340,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/types@0.6.2**
+- **@swagglar/types@0.6.2**
 
 ## 0.6.10
 
@@ -348,7 +348,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/types@0.6.1**
+- **@swagglar/types@0.6.1**
   - [#8000](https://github.com/scalar/scalar/pull/8000): fix(agent): change enabled flag to disabled
   - [#7995](https://github.com/scalar/scalar/pull/7995): feat: enable/disable agent scalar
 
@@ -358,7 +358,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/types@0.6.0**
+- **@swagglar/types@0.6.0**
   - [#7959](https://github.com/scalar/scalar/pull/7959): feat(agent): add agent scalar to localhost
 
 ## 0.6.8
@@ -367,7 +367,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/types@0.5.10**
+- **@swagglar/types@0.5.10**
 
 ## 0.6.7
 
@@ -377,7 +377,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/types@0.5.9**
+- **@swagglar/types@0.5.9**
   - [#7866](https://github.com/scalar/scalar/pull/7866): chore: expose har types
 
 ## 0.6.6
@@ -392,7 +392,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/types@0.5.8**
+- **@swagglar/types@0.5.8**
 
 ## 0.6.4
 
@@ -400,7 +400,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/types@0.5.7**
+- **@swagglar/types@0.5.7**
 
 ## 0.6.3
 
@@ -408,7 +408,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/types@0.5.6**
+- **@swagglar/types@0.5.6**
   - [#7661](https://github.com/scalar/scalar/pull/7661): fix: all issues for client modal v2 preparation
 
 ## 0.6.2
@@ -417,7 +417,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/types@0.5.5**
+- **@swagglar/types@0.5.5**
   - [#7605](https://github.com/scalar/scalar/pull/7605): fix: all issues for client modal v2 preparation
 
 ## 0.6.1
@@ -428,7 +428,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/types@0.5.4**
+- **@swagglar/types@0.5.4**
   - [#7567](https://github.com/scalar/scalar/pull/7567): feat: add code samples to client v2
 
 ## 0.6.0
@@ -440,14 +440,14 @@
 ### Patch Changes
 
 - Updated dependencies [[`bb52d9a`](https://github.com/scalar/scalar/commit/bb52d9a21e53628270bab93c0f03b5731c9c97c6)]:
-  - @scalar/types@0.5.3
+  - @swagglar/types@0.5.3
 
 ## 0.5.5
 
 ### Patch Changes
 
 - Updated dependencies [[`72cd82f`](https://github.com/scalar/scalar/commit/72cd82fb8df63a9e5d0db1202978aebfefd0457a)]:
-  - @scalar/types@0.5.2
+  - @swagglar/types@0.5.2
 
 ## 0.5.4
 
@@ -458,14 +458,14 @@
 - [#7436](https://github.com/scalar/scalar/pull/7436) [`dd8e9dc`](https://github.com/scalar/scalar/commit/dd8e9dc118d3ae98180e2a93bd6ba11e982abbf8) Thanks [@hanspagel](https://github.com/hanspagel)! - refactor: move javascript util to language lib
 
 - Updated dependencies [[`bfd814a`](https://github.com/scalar/scalar/commit/bfd814a4219660face190041cc4845182b56ab03)]:
-  - @scalar/types@0.5.1
+  - @swagglar/types@0.5.1
 
 ## 0.5.3
 
 ### Patch Changes
 
 - Updated dependencies [[`44aeef0`](https://github.com/scalar/scalar/commit/44aeef01073801165e339163462378b7b62ff68d), [`cbedfab`](https://github.com/scalar/scalar/commit/cbedfab576502069be27ceacbea145a917214e47), [`cbedfab`](https://github.com/scalar/scalar/commit/cbedfab576502069be27ceacbea145a917214e47)]:
-  - @scalar/types@0.5.0
+  - @swagglar/types@0.5.0
 
 ## 0.5.2
 
@@ -474,14 +474,14 @@
 - [#6984](https://github.com/scalar/scalar/pull/6984) [`da7ab2f`](https://github.com/scalar/scalar/commit/da7ab2fb2e422b9cec2de5faba58ea83dd774808) Thanks [@xC0dex](https://github.com/xC0dex)! - feat: custom httpclient generator for C#
 
 - Updated dependencies [[`eb022f2`](https://github.com/scalar/scalar/commit/eb022f2c8f93c84a04c0093fefe8a1e05d6ec80d), [`6ec8c29`](https://github.com/scalar/scalar/commit/6ec8c299d912111b029e8058979d00968b70691a), [`eba18d0`](https://github.com/scalar/scalar/commit/eba18d06267a163a8f91396a66f817100ee59461)]:
-  - @scalar/types@0.4.0
+  - @swagglar/types@0.4.0
 
 ## 0.5.1
 
 ### Patch Changes
 
 - Updated dependencies [f3e17d8]
-  - @scalar/types@0.3.2
+  - @swagglar/types@0.3.2
 
 ## 0.5.0
 
@@ -492,28 +492,28 @@
 ### Patch Changes
 
 - Updated dependencies [1e01464]
-  - @scalar/types@0.3.1
+  - @swagglar/types@0.3.1
 
 ## 0.4.11
 
 ### Patch Changes
 
 - Updated dependencies [008a0f3]
-  - @scalar/types@0.3.0
+  - @swagglar/types@0.3.0
 
 ## 0.4.10
 
 ### Patch Changes
 
 - Updated dependencies [005fba9]
-  - @scalar/types@0.2.16
+  - @swagglar/types@0.2.16
 
 ## 0.4.9
 
 ### Patch Changes
 
 - Updated dependencies [abe3842]
-  - @scalar/types@0.2.15
+  - @swagglar/types@0.2.15
 
 ## 0.4.8
 
@@ -521,14 +521,14 @@
 
 - 40e79b9: fix(snippetz): use correct query format in ofetch snippets
 - Updated dependencies [792c937]
-  - @scalar/types@0.2.14
+  - @swagglar/types@0.2.14
 
 ## 0.4.7
 
 ### Patch Changes
 
 - Updated dependencies [50032be]
-  - @scalar/types@0.2.13
+  - @swagglar/types@0.2.13
 
 ## 0.4.6
 
@@ -541,7 +541,7 @@
 ### Patch Changes
 
 - Updated dependencies [6a88108]
-  - @scalar/types@0.2.12
+  - @swagglar/types@0.2.12
 
 ## 0.4.4
 
@@ -549,14 +549,14 @@
 
 - Updated dependencies [ccf875a]
 - Updated dependencies [94d6d0c]
-  - @scalar/types@0.2.11
+  - @swagglar/types@0.2.11
 
 ## 0.4.3
 
 ### Patch Changes
 
 - Updated dependencies [fb62e1b]
-  - @scalar/types@0.2.10
+  - @swagglar/types@0.2.10
 
 ## 0.4.2
 
@@ -564,14 +564,14 @@
 
 - fbb7daa: feat: improved rust/reqwest output
 - Updated dependencies [591562f]
-  - @scalar/types@0.2.9
+  - @swagglar/types@0.2.9
 
 ## 0.4.1
 
 ### Patch Changes
 
 - Updated dependencies [c10e191]
-  - @scalar/types@0.2.8
+  - @swagglar/types@0.2.8
 
 ## 0.4.0
 
@@ -581,9 +581,9 @@
 
 ### Patch Changes
 
-- d93f60c: chore(snippetz): move @scalar/types to dependencies
+- d93f60c: chore(snippetz): move @swagglar/types to dependencies
 - Updated dependencies [ad2e3e6]
-  - @scalar/types@0.2.7
+  - @swagglar/types@0.2.7
 
 ## 0.3.2
 
@@ -637,7 +637,7 @@
 
 ### Patch Changes
 
-- 2c621d4: refactor: move snippetz types to @scalar/types
+- 2c621d4: refactor: move snippetz types to @swagglar/types
 
 ## 0.2.15
 
@@ -729,7 +729,7 @@
 
 ### Patch Changes
 
-- 7595fc5: chore: migrate @scalar/snippetz to scalar/scalar
+- 7595fc5: chore: migrate @swagglar/snippetz to scalar/scalar
 
 ## 0.2.0
 
@@ -745,12 +745,12 @@
 - 893d1af: add ofetch
 - Updated dependencies [893d1af]
 - Updated dependencies [893d1af]
-  - @scalar/snippetz-plugin-node-ofetch@0.1.1
-  - @scalar/snippetz-plugin-js-ofetch@0.1.1
-  - @scalar/snippetz-core@0.1.4
-  - @scalar/snippetz-plugin-js-fetch@0.1.1
-  - @scalar/snippetz-plugin-node-fetch@0.1.2
-  - @scalar/snippetz-plugin-node-undici@0.1.6
+  - @swagglar/snippetz-plugin-node-ofetch@0.1.1
+  - @swagglar/snippetz-plugin-js-ofetch@0.1.1
+  - @swagglar/snippetz-core@0.1.4
+  - @swagglar/snippetz-plugin-js-fetch@0.1.1
+  - @swagglar/snippetz-plugin-node-fetch@0.1.2
+  - @swagglar/snippetz-plugin-node-undici@0.1.6
 
 ## 0.1.5
 
@@ -759,10 +759,10 @@
 - e352e5a: feat: add js fetch
 - Updated dependencies [0bef889]
 - Updated dependencies [e352e5a]
-  - @scalar/snippetz-plugin-js-fetch@0.1.0
-  - @scalar/snippetz-core@0.1.3
-  - @scalar/snippetz-plugin-node-fetch@0.1.1
-  - @scalar/snippetz-plugin-node-undici@0.1.5
+  - @swagglar/snippetz-plugin-js-fetch@0.1.0
+  - @swagglar/snippetz-core@0.1.3
+  - @swagglar/snippetz-plugin-node-fetch@0.1.1
+  - @swagglar/snippetz-plugin-node-undici@0.1.5
 
 ## 0.1.4
 
@@ -771,9 +771,9 @@
 - fbf21d2: feat: add snippetz-plugin-node-fetch
 - Updated dependencies [fbf21d2]
 - Updated dependencies [6d1dd21]
-  - @scalar/snippetz-core@0.1.2
-  - @scalar/snippetz-plugin-node-fetch@0.1.0
-  - @scalar/snippetz-plugin-node-undici@0.1.4
+  - @swagglar/snippetz-core@0.1.2
+  - @swagglar/snippetz-plugin-node-fetch@0.1.0
+  - @swagglar/snippetz-plugin-node-undici@0.1.4
 
 ## 0.1.3
 
@@ -783,8 +783,8 @@
 - 9d0c097: chore: rename snippetz-plugin-undici to snippetz-plugin-node-undici
 - Updated dependencies [31b9be4]
 - Updated dependencies [9d0c097]
-  - @scalar/snippetz-core@0.1.1
-  - @scalar/snippetz-plugin-node-undici@0.1.3
+  - @swagglar/snippetz-core@0.1.1
+  - @swagglar/snippetz-plugin-node-undici@0.1.3
 
 ## 0.1.2
 
@@ -793,8 +793,8 @@
 - eca1c31: chore: add a basic plugin architecture
 - Updated dependencies [92b5028]
 - Updated dependencies [eca1c31]
-  - @scalar/snippetz-core@0.1.0
-  - @scalar/snippetz-plugin-node-undici@0.1.2
+  - @swagglar/snippetz-core@0.1.0
+  - @swagglar/snippetz-plugin-node-undici@0.1.2
 
 ## 0.1.1
 

@@ -12,7 +12,7 @@
 export default {}
 </script>
 <script setup lang="ts">
-import { ScalarIconCaretDown } from '@scalar/icons'
+import { ScalarIconCaretDown } from '@swagglar/icons'
 
 import { ScalarFormInput } from '../ScalarForm'
 

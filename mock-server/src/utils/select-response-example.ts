@@ -1,6 +1,6 @@
-import type { OpenAPIV3_1 } from '@scalar/openapi-types'
-import { getResolvedRef } from '@scalar/workspace-store/helpers/get-resolved-ref'
-import type { ExampleObject } from '@scalar/workspace-store/schemas/v3.2/strict/example'
+import type { OpenAPIV3_1 } from '@swagglar/openapi-types'
+import { getResolvedRef } from '@swagglar/workspace-store/helpers/get-resolved-ref'
+import type { ExampleObject } from '@swagglar/workspace-store/schemas/v3.2/strict/example'
 
 type SelectedResponseExample = ExampleObject & { value: unknown; provenance?: 'serialized' | 'data' }
 

@@ -1,4 +1,4 @@
-import type { Plugin, PluginConfiguration } from '@scalar/types/snippetz'
+import type { Plugin, PluginConfiguration } from '@swagglar/types/snippetz'
 import { encode } from 'js-base64'
 
 import { buildQueryString, normalizeMethod } from '@/libs/http'

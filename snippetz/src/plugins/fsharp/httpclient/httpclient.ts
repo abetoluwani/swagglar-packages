@@ -1,4 +1,4 @@
-import type { Plugin } from '@scalar/types/snippetz'
+import type { Plugin } from '@swagglar/types/snippetz'
 
 /**
  * F# HttpClient plugin for generating HTTP request code

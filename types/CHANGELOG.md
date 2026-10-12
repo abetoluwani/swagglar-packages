@@ -1,4 +1,4 @@
-# @scalar/types
+# @swagglar/types
 
 ## 0.22.1
 
@@ -56,7 +56,7 @@
 
 ### Minor Changes
 
-- [#9675](https://github.com/scalar/scalar/pull/9675): feat: move schema-vocabulary translation keys from `common.*` into `schema.*` and drive localization through the new shared `@scalar/localization` engine.
+- [#9675](https://github.com/scalar/scalar/pull/9675): feat: move schema-vocabulary translation keys from `common.*` into `schema.*` and drive localization through the new shared `@swagglar/localization` engine.
 
   If you customize `localization.translations`, schema-related keys have moved namespace — for example `common.nullable` is now `schema.nullable` and `common.required` is now `schema.required`. Only `description`, `httpMethod`, and `path` remain under `common`.
 
@@ -107,7 +107,7 @@
 
 - [#9981](https://github.com/scalar/scalar/pull/9981): Load the modern ESM build of the API Reference by default
 
-  The generated HTML now loads the code-split ESM build (`.../@scalar/api-reference/esm.js`, added in #9871) as a `<script type="module">` by default, instead of the monolithic UMD bundle. Because it is code-split, less JavaScript blocks the first render.
+  The generated HTML now loads the code-split ESM build (`.../@swagglar/api-reference/esm.js`, added in #9871) as a `<script type="module">` by default, instead of the monolithic UMD bundle. Because it is code-split, less JavaScript blocks the first render.
 
   To keep the classic UMD bundle (loaded via `<script src>` and the `window.Scalar` global), set `cdn` to a UMD URL — for example to pin a version — or pass `bundle: false`. You can also pass `bundle: 'https://.../esm.js'` to load a specific ESM build.
 
@@ -117,18 +117,18 @@
 
 ### Patch Changes
 
-- [#9990](https://github.com/scalar/scalar/pull/9990): Fix `@scalar/types` leaking into the published type declarations. `@scalar/openapi-parser` referenced `@scalar/types` from its `.d.ts` files while only depending on it as a `devDependency`, so consumers hit `TS2307` (cannot find module). `@scalar/types` is now a regular dependency, and the package uses the shared `UnknownObject` and `AnyObject` utility types from `@scalar/types/utils` directly instead of defining its own local copies (`AnyObject` was added to `@scalar/types/utils` alongside the existing `UnknownObject`).
+- [#9990](https://github.com/scalar/scalar/pull/9990): Fix `@swagglar/types` leaking into the published type declarations. `@swagglar/openapi-parser` referenced `@swagglar/types` from its `.d.ts` files while only depending on it as a `devDependency`, so consumers hit `TS2307` (cannot find module). `@swagglar/types` is now a regular dependency, and the package uses the shared `UnknownObject` and `AnyObject` utility types from `@swagglar/types/utils` directly instead of defining its own local copies (`AnyObject` was added to `@swagglar/types/utils` alongside the existing `UnknownObject`).
 
-  The generic `AnyObject` and `UnknownObject` types are no longer re-exported from `@scalar/openapi-parser`. Import them from `@scalar/types/utils` instead.
+  The generic `AnyObject` and `UnknownObject` types are no longer re-exported from `@swagglar/openapi-parser`. Import them from `@swagglar/types/utils` instead.
 
 ## 0.18.3
 
 ### Patch Changes
 
-- [#9983](https://github.com/scalar/scalar/pull/9983): Bump the `zod` catalog to `^4.4.3` so the standalone bundle ships a single `zod` instead of two (`4.3.5` from `@scalar/types` plus `4.4.3` from the `ai` / `@ai-sdk` peer). This makes `standalone.js` ~68KB raw / ~18KB gzip smaller.
-- [#9967](https://github.com/scalar/scalar/pull/9967): Add a new `@scalar/openapi-validator` package that validates OpenAPI documents on its own. `@scalar/openapi-parser` now uses it under the hood.
+- [#9983](https://github.com/scalar/scalar/pull/9983): Bump the `zod` catalog to `^4.4.3` so the standalone bundle ships a single `zod` instead of two (`4.3.5` from `@swagglar/types` plus `4.4.3` from the `ai` / `@ai-sdk` peer). This makes `standalone.js` ~68KB raw / ~18KB gzip smaller.
+- [#9967](https://github.com/scalar/scalar/pull/9967): Add a new `@swagglar/openapi-validator` package that validates OpenAPI documents on its own. `@swagglar/openapi-parser` now uses it under the hood.
 
-  Two type-level changes in `@scalar/openapi-parser` are worth noting:
+  Two type-level changes in `@swagglar/openapi-parser` are worth noting:
   - `ErrorObject.path` is now `string | string[]` instead of `string[]`. Schema errors carry a JSON Pointer string, semantic errors carry path segments — both shapes were already produced at runtime, the type just says so now. Narrow with `Array.isArray` before treating it as a list.
   - The unused `ValidationOutcome` type and the internal `OpenApiDocument` alias are no longer exported.
 
@@ -156,7 +156,7 @@
 
 ### Patch Changes
 
-- [#9684](https://github.com/scalar/scalar/pull/9684): Type the `defaultHttpClient` config against the real client ids. `targetKey` and `clientKey` were plain `string`, so there was no autocomplete and no error when the value was wrong — for example passing the display title `'Fetch'` instead of the client id `'fetch'`, which silently did nothing. They are now typed to the actual targets and clients, in both the `@scalar/types` and `@scalar/schemas` definitions.
+- [#9684](https://github.com/scalar/scalar/pull/9684): Type the `defaultHttpClient` config against the real client ids. `targetKey` and `clientKey` were plain `string`, so there was no autocomplete and no error when the value was wrong — for example passing the display title `'Fetch'` instead of the client id `'fetch'`, which silently did nothing. They are now typed to the actual targets and clients, in both the `@swagglar/types` and `@swagglar/schemas` definitions.
 
 ## 0.17.0
 
@@ -204,7 +204,7 @@
 
   Update the shared theme reset so text inputs align to the logical start by default for RTL documents.
 
-  Add a `mergeObjects` deep-merge helper to `@scalar/helpers`, used by the localization layer to merge translation overrides onto the built-in locale.
+  Add a `mergeObjects` deep-merge helper to `@swagglar/helpers`, used by the localization layer to merge translation overrides onto the built-in locale.
 
 ### Patch Changes
 
@@ -314,13 +314,13 @@
 - [#9311](https://github.com/scalar/scalar/pull/9311): feat: add typed AsyncAPI WebSocket binding schema
   - Add `asyncApiWsBindingObject` for `bindings.ws` with `method`, `query`, `headers`, and `bindingVersion`
   - Add `asyncApiSchemaObjectOrReference` (Schema Object | Reference Object) for WebSocket binding fields that exclude Multi Format Schema Object
-  - Regenerate `@scalar/types/asyncapi/3.1` types
+  - Regenerate `@swagglar/types/asyncapi/3.1` types
 
 ## 0.12.0
 
 ### Minor Changes
 
-- [#9264](https://github.com/scalar/scalar/pull/9264): feat: add AsyncAPI 3.1 types and `@scalar/types/asyncapi/3.1` export
+- [#9264](https://github.com/scalar/scalar/pull/9264): feat: add AsyncAPI 3.1 types and `@swagglar/types/asyncapi/3.1` export
 - [#9297](https://github.com/scalar/scalar/pull/9297): feat: add asyncapi extensions
 
 ### Patch Changes
@@ -368,11 +368,11 @@
 
 - [#8817](https://github.com/scalar/scalar/pull/8817): feat(snippetz): add a Laravel HTTP client plugin for PHP snippets
 
-  Added a new `php/laravel` client generator in `@scalar/snippetz`, including comprehensive request coverage for headers, cookies, auth, query params, JSON, multipart, form-encoded, binary, and fallback bodies.
+  Added a new `php/laravel` client generator in `@swagglar/snippetz`, including comprehensive request coverage for headers, cookies, auth, query params, JSON, multipart, form-encoded, binary, and fallback bodies.
 
   Updated generated client registries and schema wiring so the new client is available across Scalar:
-  - `@scalar/types` `GROUPED_CLIENTS` / `AVAILABLE_CLIENTS`
-  - `@scalar/workspace-store` reference-config schema
+  - `@swagglar/types` `GROUPED_CLIENTS` / `AVAILABLE_CLIENTS`
+  - `@swagglar/workspace-store` reference-config schema
   - generated docs and integration client enums
 
   Updated api-client expectations for the increased total built-in client count.
@@ -408,7 +408,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/helpers@0.4.1**
+- **@swagglar/helpers@0.4.1**
   - [#8420](https://github.com/scalar/scalar/pull/8420): fix TypeScript access to navigator.userAgentData in isMacOS without ts-expect-error
 
 ## 0.7.2
@@ -417,7 +417,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/helpers@0.4.0**
+- **@swagglar/helpers@0.4.0**
   - [#8336](https://github.com/scalar/scalar/pull/8336): feat: support flushing any pending operations
 
 ## 0.7.1
@@ -436,7 +436,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/helpers@0.3.0**
+- **@swagglar/helpers@0.3.0**
   - [#8322](https://github.com/scalar/scalar/pull/8322): chore: bump required node version to >=22 (LTS)
 
 ## 0.6.10
@@ -445,7 +445,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/helpers@0.2.18**
+- **@swagglar/helpers@0.2.18**
   - [#8314](https://github.com/scalar/scalar/pull/8314): chore: limit concurrent operations while migrating workspaces
 
 ## 0.6.9
@@ -454,7 +454,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/helpers@0.2.17**
+- **@swagglar/helpers@0.2.17**
   - [#8310](https://github.com/scalar/scalar/pull/8310): refactor: move helpers to the helpers package to share primitive helpers
 
 ## 0.6.8
@@ -469,7 +469,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/helpers@0.2.16**
+- **@swagglar/helpers@0.2.16**
   - [#8248](https://github.com/scalar/scalar/pull/8248): fix: local storage migration script
 
 ## 0.6.6
@@ -480,7 +480,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/helpers@0.2.15**
+- **@swagglar/helpers@0.2.15**
   - [#8212](https://github.com/scalar/scalar/pull/8212): chore: version bump
 
 ## 0.6.5
@@ -491,7 +491,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/helpers@0.2.14**
+- **@swagglar/helpers@0.2.14**
   - [#8207](https://github.com/scalar/scalar/pull/8207): chore: version bump
 
 ## 0.6.4
@@ -502,7 +502,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/helpers@0.2.13**
+- **@swagglar/helpers@0.2.13**
   - [#7826](https://github.com/scalar/scalar/pull/7826): feat: added migrator for v1 local storage to v2 indexdb
 
 ## 0.6.3
@@ -511,7 +511,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/helpers@0.2.12**
+- **@swagglar/helpers@0.2.12**
   - [#8178](https://github.com/scalar/scalar/pull/8178): chore: package bump due to ci failure
 
 ## 0.6.2
@@ -520,7 +520,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/helpers@0.2.11**
+- **@swagglar/helpers@0.2.11**
   - [#8016](https://github.com/scalar/scalar/pull/8016): feat: move history and auth into their own store
 
 ## 0.6.1
@@ -532,7 +532,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/helpers@0.2.10**
+- **@swagglar/helpers@0.2.10**
   - [#7963](https://github.com/scalar/scalar/pull/7963): feat: unify is-object helpers
 
 ## 0.6.0
@@ -547,7 +547,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/helpers@0.2.9**
+- **@swagglar/helpers@0.2.9**
   - [#7894](https://github.com/scalar/scalar/pull/7894): fix: the import and export of redirect to proxy
 
 ## 0.5.9
@@ -562,7 +562,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/helpers@0.2.8**
+- **@swagglar/helpers@0.2.8**
   - [#7751](https://github.com/scalar/scalar/pull/7751): fix: auth persistence
 
 ## 0.5.7
@@ -571,7 +571,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/helpers@0.2.7**
+- **@swagglar/helpers@0.2.7**
   - [#7720](https://github.com/scalar/scalar/pull/7720): feat: escape XML in json2xml
 
 ## 0.5.6
@@ -582,7 +582,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/helpers@0.2.6**
+- **@swagglar/helpers@0.2.6**
   - [#7661](https://github.com/scalar/scalar/pull/7661): fix: all issues for client modal v2 preparation
 
 ## 0.5.5
@@ -593,7 +593,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/helpers@0.2.5**
+- **@swagglar/helpers@0.2.5**
   - [#7605](https://github.com/scalar/scalar/pull/7605): fix: all issues for client modal v2 preparation
 
 ## 0.5.4
@@ -604,7 +604,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/helpers@0.2.4**
+- **@swagglar/helpers@0.2.4**
   - [#7581](https://github.com/scalar/scalar/pull/7581): fix: npm publish job
   - [#7567](https://github.com/scalar/scalar/pull/7567): feat: add code samples to client v2
 
@@ -651,7 +651,7 @@
 - [#7094](https://github.com/scalar/scalar/pull/7094) [`eba18d0`](https://github.com/scalar/scalar/commit/eba18d06267a163a8f91396a66f817100ee59461) Thanks [@geoffgscott](https://github.com/geoffgscott)! - Migrate to workspace store as primary source of truth.
 
 - Updated dependencies [[`2239843`](https://github.com/scalar/scalar/commit/2239843150ed16d1ca35b0b1f8e90cd3e35be7ce)]:
-  - @scalar/openapi-types@0.5.1
+  - @swagglar/openapi-types@0.5.1
 
 ## 0.3.2
 
@@ -659,7 +659,7 @@
 
 - f3e17d8: fix(types): allow async callbacks for event handlers
 - Updated dependencies [f69e7cc]
-  - @scalar/openapi-types@0.5.0
+  - @swagglar/openapi-types@0.5.0
 
 ## 0.3.1
 
@@ -667,7 +667,7 @@
 
 - 1e01464: Adds a new ApiReferenceConfigWithSource type and make the base ApiReferenceConfig type agnostic of any document sources.
 - Updated dependencies [15c4240]
-  - @scalar/openapi-types@0.4.1
+  - @swagglar/openapi-types@0.4.1
 
 ## 0.3.0
 
@@ -678,7 +678,7 @@
 ### Patch Changes
 
 - Updated dependencies [008a0f3]
-  - @scalar/openapi-types@0.4.0
+  - @swagglar/openapi-types@0.4.0
 
 ## 0.2.16
 
@@ -709,7 +709,7 @@
 ### Patch Changes
 
 - 6a88108: feat: add option to expandAllResponses and expandAllModelSections
-  - @scalar/openapi-types@0.3.7
+  - @swagglar/openapi-types@0.3.7
 
 ## 0.2.11
 
@@ -718,7 +718,7 @@
 - ccf875a: feat: support x-scalar-credentials-location extension
 - 94d6d0c: fix: remove old ssr state and update nuxt for workspace store
 - Updated dependencies [ccf875a]
-  - @scalar/openapi-types@0.3.7
+  - @swagglar/openapi-types@0.3.7
 
 ## 0.2.10
 
@@ -732,7 +732,7 @@
 
 - 591562f: feat: add support for x-scalar-security-body extension
 - Updated dependencies [591562f]
-  - @scalar/openapi-types@0.3.6
+  - @swagglar/openapi-types@0.3.6
 
 ## 0.2.8
 
@@ -752,14 +752,14 @@
 
 - 2d7f995: refactor: use more common straight apostrophe ' instead of the real apostrophe ’
 - Updated dependencies [2d7f995]
-  - @scalar/openapi-types@0.3.5
+  - @swagglar/openapi-types@0.3.5
 
 ## 0.2.5
 
 ### Patch Changes
 
 - Updated dependencies [533469b]
-  - @scalar/openapi-types@0.3.4
+  - @swagglar/openapi-types@0.3.4
 
 ## 0.2.4
 
@@ -773,14 +773,14 @@
 
 - 221e35f: feat: added webhooks
 - Updated dependencies [221e35f]
-  - @scalar/openapi-types@0.3.3
+  - @swagglar/openapi-types@0.3.3
 
 ## 0.2.2
 
 ### Patch Changes
 
 - Updated dependencies [05c22c7]
-  - @scalar/openapi-types@0.3.2
+  - @swagglar/openapi-types@0.3.2
 
 ## 0.2.1
 
@@ -788,7 +788,7 @@
 
 - 4440949: chore: bumping packages
 - Updated dependencies [4440949]
-  - @scalar/openapi-types@0.3.1
+  - @swagglar/openapi-types@0.3.1
 
 ## 0.2.0
 
@@ -799,7 +799,7 @@
 ### Patch Changes
 
 - Updated dependencies [483ca93]
-  - @scalar/openapi-types@0.3.0
+  - @swagglar/openapi-types@0.3.0
 
 ## 0.1.16
 
@@ -816,7 +816,7 @@
 - cb9428c: Support additional query parameters for the OAuth authorization request (prompt, audience, anything), and handle OAuth authorization denials
 - 67aa0f4: fix: render correct queries with form data
 - Updated dependencies [cb9428c]
-  - @scalar/openapi-types@0.2.3
+  - @swagglar/openapi-types@0.2.3
 
 ## 0.1.14
 
@@ -824,7 +824,7 @@
 
 - 8c7bad8: chore: move build tooling to esbuild
 - Updated dependencies [8c7bad8]
-  - @scalar/openapi-types@0.2.2
+  - @swagglar/openapi-types@0.2.2
 
 ## 0.1.13
 
@@ -837,7 +837,7 @@
 ### Patch Changes
 
 - 62c4ce3: feat: SvelteKit API Reference integration
-  - @scalar/openapi-types@0.2.1
+  - @swagglar/openapi-types@0.2.1
 
 ## 0.1.11
 
@@ -850,7 +850,7 @@
 ### Patch Changes
 
 - Updated dependencies [fa8ed84]
-  - @scalar/openapi-types@0.2.1
+  - @swagglar/openapi-types@0.2.1
 
 ## 0.1.9
 
@@ -885,7 +885,7 @@
 - 04e27a1: feat: support x-default-scopes
 - Updated dependencies [e62e677]
 - Updated dependencies [82f16a5]
-  - @scalar/openapi-types@0.2.0
+  - @swagglar/openapi-types@0.2.0
 
 ## 0.1.4
 
@@ -938,7 +938,7 @@
 ### Patch Changes
 
 - bab7990: refactor: move HtmlRenderingConfiguration type to types package
-- 2c621d4: refactor: move snippetz types to @scalar/types
+- 2c621d4: refactor: move snippetz types to @swagglar/types
 
 ## 0.0.38
 
@@ -952,7 +952,7 @@
 
 - 89d8b75: feat: new ApiReferenceConfiguration type
 - 8a04b8d: fix: adds vendor specific mime type support
-  - @scalar/openapi-types@0.1.9
+  - @swagglar/openapi-types@0.1.9
 
 ## 0.0.36
 
@@ -967,14 +967,14 @@
 - 946a5df: feat: add front-end redirect
 - cf14cbb: fix: show _/_ mimetype in example response
 - Updated dependencies [c10bbf5]
-  - @scalar/openapi-types@0.1.9
+  - @swagglar/openapi-types@0.1.9
 
 ## 0.0.34
 
 ### Patch Changes
 
 - Updated dependencies [e350f23]
-  - @scalar/openapi-types@0.1.8
+  - @swagglar/openapi-types@0.1.8
 
 ## 0.0.33
 
@@ -982,7 +982,7 @@
 
 - 54fdfcb: chore: remove spec wording
 - fa6afe8: chore: code formatting
-  - @scalar/openapi-types@0.1.7
+  - @swagglar/openapi-types@0.1.7
 
 ## 0.0.32
 
@@ -1004,7 +1004,7 @@
 ### Patch Changes
 
 - Updated dependencies [f9bf5f1]
-  - @scalar/openapi-types@0.1.7
+  - @swagglar/openapi-types@0.1.7
 
 ## 0.0.29
 
@@ -1032,7 +1032,7 @@
 - 60cd6f1: feat: render the operation description from the new store
 - 60cd6f1: chore: deprecated the TransformedOperation type
 - Updated dependencies [13333e6]
-  - @scalar/openapi-types@0.1.6
+  - @swagglar/openapi-types@0.1.6
 
 ## 0.0.25
 
@@ -1076,7 +1076,7 @@
 ### Patch Changes
 
 - Updated dependencies [a607115]
-  - @scalar/openapi-types@0.1.5
+  - @swagglar/openapi-types@0.1.5
 
 ## 0.0.18
 
@@ -1089,7 +1089,7 @@
 ### Patch Changes
 
 - Updated dependencies [2b540b9]
-  - @scalar/openapi-types@0.1.4
+  - @swagglar/openapi-types@0.1.4
 
 ## 0.0.16
 
@@ -1102,7 +1102,7 @@
 ### Patch Changes
 
 - Updated dependencies [8759e7f]
-  - @scalar/openapi-types@0.1.3
+  - @swagglar/openapi-types@0.1.3
 
 ## 0.0.14
 
@@ -1110,7 +1110,7 @@
 
 - e911047: Add default exports
 - Updated dependencies [e911047]
-  - @scalar/openapi-types@0.1.2
+  - @swagglar/openapi-types@0.1.2
 
 ## 0.0.13
 
@@ -1128,21 +1128,21 @@
 
 ### Patch Changes
 
-- f961940: feat: remove @scalar/themes from the dependencies of @scalar/types
+- f961940: feat: remove @swagglar/themes from the dependencies of @swagglar/types
 
 ## 0.0.10
 
 ### Patch Changes
 
 - Updated dependencies [7beeef3]
-  - @scalar/themes@0.9.31
+  - @swagglar/themes@0.9.31
 
 ## 0.0.9
 
 ### Patch Changes
 
 - Updated dependencies [121bc7e]
-  - @scalar/themes@0.9.30
+  - @swagglar/themes@0.9.30
 
 ## 0.0.8
 
@@ -1151,8 +1151,8 @@
 - dc9aff2: chore: replace proprietary ScalarResponse with OpenAPI ResponseObject
 - Updated dependencies [c577cde]
 - Updated dependencies [dc9aff2]
-  - @scalar/themes@0.9.29
-  - @scalar/openapi-types@0.1.1
+  - @swagglar/themes@0.9.29
+  - @swagglar/openapi-types@0.1.1
 
 ## 0.0.7
 
@@ -1167,28 +1167,28 @@
 ### Patch Changes
 
 - Updated dependencies [b4f9f97]
-  - @scalar/openapi-types@0.1.0
+  - @swagglar/openapi-types@0.1.0
 
 ## 0.0.5
 
 ### Patch Changes
 
 - Updated dependencies [80a3c46]
-  - @scalar/themes@0.9.28
+  - @swagglar/themes@0.9.28
 
 ## 0.0.4
 
 ### Patch Changes
 
 - Updated dependencies [bb13304]
-  - @scalar/themes@0.9.27
+  - @swagglar/themes@0.9.27
 
 ## 0.0.3
 
 ### Patch Changes
 
 - Updated dependencies [abb8ddd]
-  - @scalar/themes@0.9.26
+  - @swagglar/themes@0.9.26
 
 ## 0.0.2
 
@@ -1200,6 +1200,6 @@
 
 ### Patch Changes
 
-- 78db8f5: feat: use new @scalar/types package
+- 78db8f5: feat: use new @swagglar/types package
 - Updated dependencies [78db8f5]
-  - @scalar/themes@0.9.25
+  - @swagglar/themes@0.9.25

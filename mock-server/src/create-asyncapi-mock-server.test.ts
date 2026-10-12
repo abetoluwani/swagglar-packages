@@ -69,7 +69,7 @@ describe('createAsyncApiMockServer', () => {
   it.each(['127.0.0.1', '10.0.0.1', '169.254.169.254', '[::1]'])(
     'refuses private network references: %s',
     async (host) => {
-      const bundlerRequire = createRequire(import.meta.resolve('@scalar/json-magic/bundle'))
+      const bundlerRequire = createRequire(import.meta.resolve('@swagglar/json-magic/bundle'))
       const { Agent } = bundlerRequire('undici') as typeof import('undici')
       const dispatch = vi.spyOn(Agent.prototype, 'dispatch')
       const fetch = vi
@@ -84,7 +84,7 @@ describe('createAsyncApiMockServer', () => {
   )
 
   it.each([false, true])('resolves public URL references (preloaded: %s)', async (preloaded) => {
-    const bundlerRequire = createRequire(import.meta.resolve('@scalar/json-magic/bundle'))
+    const bundlerRequire = createRequire(import.meta.resolve('@swagglar/json-magic/bundle'))
     const { Agent, MockAgent } = bundlerRequire('undici') as typeof import('undici')
     const transport = new MockAgent()
     transport.disableNetConnect()
@@ -112,7 +112,7 @@ describe('createAsyncApiMockServer', () => {
   })
 
   it('refuses redirects from public references to private addresses', async () => {
-    const bundlerRequire = createRequire(import.meta.resolve('@scalar/json-magic/bundle'))
+    const bundlerRequire = createRequire(import.meta.resolve('@swagglar/json-magic/bundle'))
     const { Agent, MockAgent } = bundlerRequire('undici') as typeof import('undici')
     const transport = new MockAgent()
     transport.disableNetConnect()

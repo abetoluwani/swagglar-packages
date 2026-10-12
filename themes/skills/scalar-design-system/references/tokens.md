@@ -1,10 +1,10 @@
 # Scalar tokens & theming — full reference
 
-Source of truth — the **`@scalar/themes`** package. Read these from `node_modules/@scalar/themes/`:
+Source of truth — the **`@swagglar/themes`** package. Read these from `node_modules/@swagglar/themes/`:
 
-- `@scalar/themes/style.css` — the compiled theme: reset, base tokens (radius, typography), and the default theme's light/dark variables.
-- `@scalar/themes/tailwind.css` — the `--scalar-*` → Tailwind `@theme` mapping.
-- `@scalar/themes` (package root) — JS API: `getThemeStyles`, `presets`, `themeIds`, `themeLabels`, `Theme`, `ThemeId`.
+- `@swagglar/themes/style.css` — the compiled theme: reset, base tokens (radius, typography), and the default theme's light/dark variables.
+- `@swagglar/themes/tailwind.css` — the `--scalar-*` → Tailwind `@theme` mapping.
+- `@swagglar/themes` (package root) — JS API: `getThemeStyles`, `presets`, `themeIds`, `themeLabels`, `Theme`, `ThemeId`.
 
 ## How the system works
 
@@ -106,7 +106,7 @@ In component code, prefer these classes over raw variables.
 
 ## Theme presets
 
-13 presets ship with the package (plus a `custom-theme-starter`). They are exposed via `presets`, `themePresets`, `themeIds`, and `themeLabels` from `@scalar/themes`. `themeIds` also includes `'none'` (base variables only, no color overrides).
+13 presets ship with the package (plus a `custom-theme-starter`). They are exposed via `presets`, `themePresets`, `themeIds`, and `themeLabels` from `@swagglar/themes`. `themeIds` also includes `'none'` (base variables only, no color overrides).
 
 `--scalar-color-1` / `--scalar-background-1` / `--scalar-color-accent` per mode:
 
@@ -131,11 +131,11 @@ In component code, prefer these classes over raw variables.
 ## Applying a theme in code
 
 ```ts
-import { getThemeStyles } from '@scalar/themes'
+import { getThemeStyles } from '@swagglar/themes'
 
 // CSS string for a theme (+ base variables + optional fonts + optional layer)
 const css = getThemeStyles('alternate', { layer: 'scalar-theme', variables: true, fonts: true })
 document.head.insertAdjacentHTML('beforeend', `<style>${css}</style>`)
 ```
 
-Or import the stylesheets directly: `@scalar/themes/style.css` (reset + base + default), `@scalar/themes/tailwind.css` (Tailwind integration), `@scalar/themes/fonts.css` (fonts only). A `ThemeId` is the type-safe union of all slugs; `presets[id].theme` is the raw CSS for one theme.
+Or import the stylesheets directly: `@swagglar/themes/style.css` (reset + base + default), `@swagglar/themes/tailwind.css` (Tailwind integration), `@swagglar/themes/fonts.css` (fonts only). A `ThemeId` is the type-safe union of all slugs; `presets[id].theme` is the raw CSS for one theme.

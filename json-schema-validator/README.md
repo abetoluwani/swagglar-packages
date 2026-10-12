@@ -1,13 +1,13 @@
 # Scalar JSON Schema Validator
 
-[![Version](https://img.shields.io/npm/v/%40scalar/json-schema-validator)](https://www.npmjs.com/package/@scalar/json-schema-validator)
-[![Downloads](https://img.shields.io/npm/dm/%40scalar/json-schema-validator)](https://www.npmjs.com/package/@scalar/json-schema-validator)
-[![License](https://img.shields.io/npm/l/%40scalar%2Fjson-schema-validator)](https://www.npmjs.com/package/@scalar/json-schema-validator)
+[![Version](https://img.shields.io/npm/v/%40scalar/json-schema-validator)](https://www.npmjs.com/package/@swagglar/json-schema-validator)
+[![Downloads](https://img.shields.io/npm/dm/%40scalar/json-schema-validator)](https://www.npmjs.com/package/@swagglar/json-schema-validator)
+[![License](https://img.shields.io/npm/l/%40scalar%2Fjson-schema-validator)](https://www.npmjs.com/package/@swagglar/json-schema-validator)
 [![Discord](https://img.shields.io/discord/1135330207960678410?style=flat&color=5865F2)](https://discord.gg/scalar)
 
 Validate documents against a JSON Schema with [Ajv](https://ajv.js.org/) and get short, human-friendly error messages.
 
-This is the shared validation engine behind [`@scalar/openapi-validator`](https://www.npmjs.com/package/@scalar/openapi-validator). It knows nothing about OpenAPI or AsyncAPI, so you can use it with any JSON Schema.
+This is the shared validation engine behind [`@swagglar/openapi-validator`](https://www.npmjs.com/package/@swagglar/openapi-validator). It knows nothing about OpenAPI or AsyncAPI, so you can use it with any JSON Schema.
 
 ---
 
@@ -25,7 +25,7 @@ Scalar is an open-source API platform for teams who want beautiful developer int
 ## Installation
 
 ```bash
-npm add @scalar/json-schema-validator
+npm add @swagglar/json-schema-validator
 ```
 
 ## Usage
@@ -33,7 +33,7 @@ npm add @scalar/json-schema-validator
 Pass a document (an object, or a JSON/YAML string) and a JSON Schema:
 
 ```ts
-import { validate } from '@scalar/json-schema-validator'
+import { validate } from '@swagglar/json-schema-validator'
 
 const schema = {
   $schema: 'https://json-schema.org/draft/2020-12/schema',
@@ -58,7 +58,7 @@ The dialect is picked automatically from the schema's `$schema` (JSON Schema dra
 When validating many documents against the same schema, compile it once:
 
 ```ts
-import { createValidator } from '@scalar/json-schema-validator'
+import { createValidator } from '@swagglar/json-schema-validator'
 
 const validateUser = createValidator(schema)
 

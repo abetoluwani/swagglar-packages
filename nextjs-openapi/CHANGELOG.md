@@ -1,4 +1,4 @@
-# @scalar/nextjs-openapi
+# @swagglar/nextjs-openapi
 
 ## 0.3.44
 
@@ -108,7 +108,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/types@0.7.3**
+- **@swagglar/types@0.7.3**
 
 - **@scalar/nextjs-api-reference@0.10.3**
 
@@ -118,7 +118,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/types@0.7.2**
+- **@swagglar/types@0.7.2**
 
 - **@scalar/nextjs-api-reference@0.10.2**
 
@@ -128,7 +128,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/types@0.7.1**
+- **@swagglar/types@0.7.1**
   - [#8381](https://github.com/scalar/scalar/pull/8381): feat: add mcp config support
 
 - **@scalar/nextjs-api-reference@0.10.1**
@@ -143,13 +143,13 @@
 
 #### Updated Dependencies
 
-- **@scalar/ts-to-openapi@0.2.0**
+- **@swagglar/ts-to-openapi@0.2.0**
   - [#8322](https://github.com/scalar/scalar/pull/8322): chore: bump required node version to >=22 (LTS)
 
 - **@scalar/nextjs-api-reference@0.10.0**
   - [#8322](https://github.com/scalar/scalar/pull/8322): chore: bump required node version to >=22 (LTS)
 
-- **@scalar/types@0.7.0**
+- **@swagglar/types@0.7.0**
   - [#8322](https://github.com/scalar/scalar/pull/8322): chore: bump required node version to >=22 (LTS)
 
 ## 0.2.52
@@ -158,7 +158,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/types@0.6.10**
+- **@swagglar/types@0.6.10**
 
 - **@scalar/nextjs-api-reference@0.9.26**
 
@@ -168,7 +168,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/types@0.6.9**
+- **@swagglar/types@0.6.9**
 
 - **@scalar/nextjs-api-reference@0.9.25**
 
@@ -178,7 +178,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/types@0.6.8**
+- **@swagglar/types@0.6.8**
   - [#8274](https://github.com/scalar/scalar/pull/8274): feat(agent): add config to hide search api
 
 - **@scalar/nextjs-api-reference@0.9.24**
@@ -189,7 +189,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/types@0.6.7**
+- **@swagglar/types@0.6.7**
 
 - **@scalar/nextjs-api-reference@0.9.23**
 
@@ -199,7 +199,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/types@0.6.6**
+- **@swagglar/types@0.6.6**
   - [#8212](https://github.com/scalar/scalar/pull/8212): chore: version bump
 
 - **@scalar/nextjs-api-reference@0.9.22**
@@ -210,7 +210,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/types@0.6.5**
+- **@swagglar/types@0.6.5**
   - [#8207](https://github.com/scalar/scalar/pull/8207): chore: version bump
 
 - **@scalar/nextjs-api-reference@0.9.21**
@@ -221,7 +221,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/types@0.6.4**
+- **@swagglar/types@0.6.4**
   - [#8174](https://github.com/scalar/scalar/pull/8174): feat: add `createAnySecurityScheme` config option to control generic auth scheme creation
 
 - **@scalar/nextjs-api-reference@0.9.20**
@@ -232,7 +232,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/types@0.6.3**
+- **@swagglar/types@0.6.3**
 
 - **@scalar/nextjs-api-reference@0.9.19**
 
@@ -242,7 +242,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/types@0.6.2**
+- **@swagglar/types@0.6.2**
 
 - **@scalar/nextjs-api-reference@0.9.18**
 
@@ -252,7 +252,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/types@0.6.1**
+- **@swagglar/types@0.6.1**
   - [#8000](https://github.com/scalar/scalar/pull/8000): fix(agent): change enabled flag to disabled
   - [#7995](https://github.com/scalar/scalar/pull/7995): feat: enable/disable agent scalar
 
@@ -264,7 +264,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/types@0.6.0**
+- **@swagglar/types@0.6.0**
   - [#7959](https://github.com/scalar/scalar/pull/7959): feat(agent): add agent scalar to localhost
 
 - **@scalar/nextjs-api-reference@0.9.16**
@@ -286,7 +286,7 @@
 
 - **@scalar/nextjs-api-reference@0.9.14**
 
-- **@scalar/types@0.5.10**
+- **@swagglar/types@0.5.10**
 
 ## 0.2.39
 
@@ -294,7 +294,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/types@0.5.9**
+- **@swagglar/types@0.5.9**
   - [#7866](https://github.com/scalar/scalar/pull/7866): chore: expose har types
 
 - **@scalar/nextjs-api-reference@0.9.13**
@@ -316,7 +316,7 @@
 
 - **@scalar/nextjs-api-reference@0.9.11**
 
-- **@scalar/types@0.5.8**
+- **@swagglar/types@0.5.8**
 
 ## 0.2.36
 
@@ -324,7 +324,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/types@0.5.7**
+- **@swagglar/types@0.5.7**
 
 - **@scalar/nextjs-api-reference@0.9.10**
 
@@ -344,7 +344,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/types@0.5.6**
+- **@swagglar/types@0.5.6**
   - [#7661](https://github.com/scalar/scalar/pull/7661): fix: all issues for client modal v2 preparation
 
 - **@scalar/nextjs-api-reference@0.9.9**
@@ -355,7 +355,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/types@0.5.5**
+- **@swagglar/types@0.5.5**
   - [#7605](https://github.com/scalar/scalar/pull/7605): fix: all issues for client modal v2 preparation
 
 - **@scalar/nextjs-api-reference@0.9.8**
@@ -368,10 +368,10 @@
 
 #### Updated Dependencies
 
-- **@scalar/ts-to-openapi@0.1.2**
+- **@swagglar/ts-to-openapi@0.1.2**
   - [#7581](https://github.com/scalar/scalar/pull/7581): fix: npm publish job
 
-- **@scalar/types@0.5.4**
+- **@swagglar/types@0.5.4**
   - [#7567](https://github.com/scalar/scalar/pull/7567): feat: add code samples to client v2
 
 - **@scalar/nextjs-api-reference@0.9.7**
@@ -382,7 +382,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/ts-to-openapi@0.1.1**
+- **@swagglar/ts-to-openapi@0.1.1**
   - [#7558](https://github.com/scalar/scalar/pull/7558): fix: exclude test files from `dist` folder
 
 - **@scalar/nextjs-api-reference@0.9.6**
@@ -392,8 +392,8 @@
 ### Patch Changes
 
 - Updated dependencies [[`bb52d9a`](https://github.com/scalar/scalar/commit/bb52d9a21e53628270bab93c0f03b5731c9c97c6)]:
-  - @scalar/types@0.5.3
-  - @scalar/ts-to-openapi@0.1.0
+  - @swagglar/types@0.5.3
+  - @swagglar/ts-to-openapi@0.1.0
   - @scalar/nextjs-api-reference@0.9.6
 
 ## 0.2.29
@@ -401,7 +401,7 @@
 ### Patch Changes
 
 - Updated dependencies [[`72cd82f`](https://github.com/scalar/scalar/commit/72cd82fb8df63a9e5d0db1202978aebfefd0457a)]:
-  - @scalar/types@0.5.2
+  - @swagglar/types@0.5.2
   - @scalar/nextjs-api-reference@0.9.5
 
 ## 0.2.28
@@ -416,8 +416,8 @@
 ### Patch Changes
 
 - Updated dependencies [[`bfd814a`](https://github.com/scalar/scalar/commit/bfd814a4219660face190041cc4845182b56ab03)]:
-  - @scalar/types@0.5.1
-  - @scalar/ts-to-openapi@0.1.0
+  - @swagglar/types@0.5.1
+  - @swagglar/ts-to-openapi@0.1.0
   - @scalar/nextjs-api-reference@0.9.3
 
 ## 0.2.26
@@ -425,9 +425,9 @@
 ### Patch Changes
 
 - Updated dependencies [[`44aeef0`](https://github.com/scalar/scalar/commit/44aeef01073801165e339163462378b7b62ff68d), [`55bb334`](https://github.com/scalar/scalar/commit/55bb3346d1f9ac964770acc90aa810266a972d96), [`cbedfab`](https://github.com/scalar/scalar/commit/cbedfab576502069be27ceacbea145a917214e47), [`cbedfab`](https://github.com/scalar/scalar/commit/cbedfab576502069be27ceacbea145a917214e47)]:
-  - @scalar/types@0.5.0
+  - @swagglar/types@0.5.0
   - @scalar/nextjs-api-reference@0.9.2
-  - @scalar/ts-to-openapi@0.1.0
+  - @swagglar/ts-to-openapi@0.1.0
 
 ## 0.2.25
 
@@ -441,16 +441,16 @@
 ### Patch Changes
 
 - Updated dependencies [[`eb022f2`](https://github.com/scalar/scalar/commit/eb022f2c8f93c84a04c0093fefe8a1e05d6ec80d), [`6ec8c29`](https://github.com/scalar/scalar/commit/6ec8c299d912111b029e8058979d00968b70691a), [`c713362`](https://github.com/scalar/scalar/commit/c7133623da7ac5f2cfe501ad55fffb89978f21f1), [`eba18d0`](https://github.com/scalar/scalar/commit/eba18d06267a163a8f91396a66f817100ee59461)]:
-  - @scalar/types@0.4.0
+  - @swagglar/types@0.4.0
   - @scalar/nextjs-api-reference@0.9.0
-  - @scalar/ts-to-openapi@0.1.0
+  - @swagglar/ts-to-openapi@0.1.0
 
 ## 0.2.23
 
 ### Patch Changes
 
 - Updated dependencies [f3e17d8]
-  - @scalar/types@0.3.2
+  - @swagglar/types@0.3.2
   - @scalar/nextjs-api-reference@0.8.23
 
 ## 0.2.22
@@ -458,7 +458,7 @@
 ### Patch Changes
 
 - Updated dependencies [1e01464]
-  - @scalar/types@0.3.1
+  - @swagglar/types@0.3.1
   - @scalar/nextjs-api-reference@0.8.22
 
 ## 0.2.21
@@ -466,7 +466,7 @@
 ### Patch Changes
 
 - Updated dependencies [008a0f3]
-  - @scalar/types@0.3.0
+  - @swagglar/types@0.3.0
   - @scalar/nextjs-api-reference@0.8.21
 
 ## 0.2.20
@@ -474,7 +474,7 @@
 ### Patch Changes
 
 - Updated dependencies [005fba9]
-  - @scalar/types@0.2.16
+  - @swagglar/types@0.2.16
   - @scalar/nextjs-api-reference@0.8.20
 
 ## 0.2.19
@@ -482,7 +482,7 @@
 ### Patch Changes
 
 - Updated dependencies [abe3842]
-  - @scalar/types@0.2.15
+  - @swagglar/types@0.2.15
   - @scalar/nextjs-api-reference@0.8.19
 
 ## 0.2.18
@@ -490,7 +490,7 @@
 ### Patch Changes
 
 - Updated dependencies [792c937]
-  - @scalar/types@0.2.14
+  - @swagglar/types@0.2.14
   - @scalar/nextjs-api-reference@0.8.18
 
 ## 0.2.17
@@ -498,7 +498,7 @@
 ### Patch Changes
 
 - Updated dependencies [50032be]
-  - @scalar/types@0.2.13
+  - @swagglar/types@0.2.13
   - @scalar/nextjs-api-reference@0.8.17
 
 ## 0.2.16
@@ -506,17 +506,17 @@
 ### Patch Changes
 
 - Updated dependencies [6a88108]
-  - @scalar/types@0.2.12
+  - @swagglar/types@0.2.12
   - @scalar/nextjs-api-reference@0.8.16
-  - @scalar/ts-to-openapi@0.1.0
+  - @swagglar/ts-to-openapi@0.1.0
 
 ## 0.2.15
 
 ### Patch Changes
 
 - @scalar/nextjs-api-reference@0.8.15
-- @scalar/ts-to-openapi@0.1.0
-- @scalar/types@0.2.11
+- @swagglar/ts-to-openapi@0.1.0
+- @swagglar/types@0.2.11
 
 ## 0.2.14
 
@@ -524,7 +524,7 @@
 
 - Updated dependencies [ccf875a]
 - Updated dependencies [94d6d0c]
-  - @scalar/types@0.2.11
+  - @swagglar/types@0.2.11
   - @scalar/nextjs-api-reference@0.8.14
 
 ## 0.2.13
@@ -532,7 +532,7 @@
 ### Patch Changes
 
 - Updated dependencies [fb62e1b]
-  - @scalar/types@0.2.10
+  - @swagglar/types@0.2.10
   - @scalar/nextjs-api-reference@0.8.13
 
 ## 0.2.12
@@ -540,7 +540,7 @@
 ### Patch Changes
 
 - Updated dependencies [591562f]
-  - @scalar/types@0.2.9
+  - @swagglar/types@0.2.9
   - @scalar/nextjs-api-reference@0.8.12
 
 ## 0.2.11
@@ -548,7 +548,7 @@
 ### Patch Changes
 
 - Updated dependencies [c10e191]
-  - @scalar/types@0.2.8
+  - @swagglar/types@0.2.8
   - @scalar/nextjs-api-reference@0.8.11
 
 ## 0.2.10
@@ -556,7 +556,7 @@
 ### Patch Changes
 
 - Updated dependencies [ad2e3e6]
-  - @scalar/types@0.2.7
+  - @swagglar/types@0.2.7
   - @scalar/nextjs-api-reference@0.8.10
 
 ## 0.2.9
@@ -565,22 +565,22 @@
 
 - Updated dependencies [2d7f995]
   - @scalar/nextjs-api-reference@0.8.9
-  - @scalar/types@0.2.6
-  - @scalar/ts-to-openapi@0.1.0
+  - @swagglar/types@0.2.6
+  - @swagglar/ts-to-openapi@0.1.0
 
 ## 0.2.8
 
 ### Patch Changes
 
 - @scalar/nextjs-api-reference@0.8.8
-- @scalar/types@0.2.5
+- @swagglar/types@0.2.5
 
 ## 0.2.7
 
 ### Patch Changes
 
 - Updated dependencies [1468280]
-  - @scalar/types@0.2.4
+  - @swagglar/types@0.2.4
   - @scalar/nextjs-api-reference@0.8.7
 
 ## 0.2.6
@@ -597,17 +597,17 @@
 - Updated dependencies [221e35f]
 - Updated dependencies [6ead9cd]
 - Updated dependencies [4156f1d]
-  - @scalar/types@0.2.3
+  - @swagglar/types@0.2.3
   - @scalar/nextjs-api-reference@0.8.5
-  - @scalar/ts-to-openapi@0.1.0
+  - @swagglar/ts-to-openapi@0.1.0
 
 ## 0.2.4
 
 ### Patch Changes
 
 - @scalar/nextjs-api-reference@0.8.4
-- @scalar/ts-to-openapi@0.1.0
-- @scalar/types@0.2.2
+- @swagglar/ts-to-openapi@0.1.0
+- @swagglar/types@0.2.2
 
 ## 0.2.3
 
@@ -615,8 +615,8 @@
 
 - 66e2768: Removed app router route group from url
   - @scalar/nextjs-api-reference@0.8.3
-  - @scalar/ts-to-openapi@0.1.0
-  - @scalar/types@0.2.1
+  - @swagglar/ts-to-openapi@0.1.0
+  - @swagglar/types@0.2.1
 
 ## 0.2.2
 
@@ -630,7 +630,7 @@
 ### Patch Changes
 
 - Updated dependencies [4440949]
-  - @scalar/types@0.2.1
+  - @swagglar/types@0.2.1
   - @scalar/nextjs-api-reference@0.8.1
 
 ## 0.2.0
@@ -642,16 +642,16 @@
 ### Patch Changes
 
 - Updated dependencies [483ca93]
-  - @scalar/ts-to-openapi@0.1.0
+  - @swagglar/ts-to-openapi@0.1.0
   - @scalar/nextjs-api-reference@0.8.0
-  - @scalar/types@0.2.0
+  - @swagglar/types@0.2.0
 
 ## 0.1.19
 
 ### Patch Changes
 
 - Updated dependencies [be8a6ec]
-  - @scalar/types@0.1.16
+  - @swagglar/types@0.1.16
   - @scalar/nextjs-api-reference@0.7.17
 
 ## 0.1.18
@@ -662,7 +662,7 @@
 - Updated dependencies [0222ad4]
 - Updated dependencies [cb9428c]
 - Updated dependencies [67aa0f4]
-  - @scalar/types@0.1.15
+  - @swagglar/types@0.1.15
   - @scalar/nextjs-api-reference@0.7.16
 
 ## 0.1.17
@@ -671,8 +671,8 @@
 
 - 8c7bad8: chore: move build tooling to esbuild
 - Updated dependencies [8c7bad8]
-  - @scalar/ts-to-openapi@0.0.6
-  - @scalar/types@0.1.14
+  - @swagglar/ts-to-openapi@0.0.6
+  - @swagglar/types@0.1.14
   - @scalar/nextjs-api-reference@0.7.15
 
 ## 0.1.16
@@ -681,7 +681,7 @@
 
 - Updated dependencies [e8457cb]
   - @scalar/nextjs-api-reference@0.7.14
-  - @scalar/types@0.1.13
+  - @swagglar/types@0.1.13
 
 ## 0.1.15
 
@@ -695,16 +695,16 @@
 ### Patch Changes
 
 - Updated dependencies [62c4ce3]
-  - @scalar/types@0.1.12
+  - @swagglar/types@0.1.12
   - @scalar/nextjs-api-reference@0.7.13
-  - @scalar/ts-to-openapi@0.0.5
+  - @swagglar/ts-to-openapi@0.0.5
 
 ## 0.1.13
 
 ### Patch Changes
 
 - Updated dependencies [eb4854d]
-  - @scalar/types@0.1.11
+  - @swagglar/types@0.1.11
   - @scalar/nextjs-api-reference@0.7.12
 
 ## 0.1.12
@@ -712,14 +712,14 @@
 ### Patch Changes
 
 - @scalar/nextjs-api-reference@0.7.11
-- @scalar/types@0.1.10
+- @swagglar/types@0.1.10
 
 ## 0.1.11
 
 ### Patch Changes
 
 - Updated dependencies [17e7d02]
-  - @scalar/types@0.1.9
+  - @swagglar/types@0.1.9
   - @scalar/nextjs-api-reference@0.7.10
 
 ## 0.1.10
@@ -727,7 +727,7 @@
 ### Patch Changes
 
 - Updated dependencies [feaa314]
-  - @scalar/types@0.1.8
+  - @swagglar/types@0.1.8
   - @scalar/nextjs-api-reference@0.7.9
 
 ## 0.1.9
@@ -736,7 +736,7 @@
 
 - Updated dependencies [9def02e]
 - Updated dependencies [3745d77]
-  - @scalar/types@0.1.7
+  - @swagglar/types@0.1.7
   - @scalar/nextjs-api-reference@0.7.8
 
 ## 0.1.8
@@ -751,7 +751,7 @@
 ### Patch Changes
 
 - Updated dependencies [3783345]
-  - @scalar/types@0.1.6
+  - @swagglar/types@0.1.6
   - @scalar/nextjs-api-reference@0.7.7
 
 ## 0.1.6
@@ -760,7 +760,7 @@
 
 - Updated dependencies [e09dab3]
 - Updated dependencies [04e27a1]
-  - @scalar/types@0.1.5
+  - @swagglar/types@0.1.5
   - @scalar/nextjs-api-reference@0.7.6
 
 ## 0.1.5
@@ -770,7 +770,7 @@
 - Updated dependencies [8efedf3]
 - Updated dependencies [82a4ba8]
 - Updated dependencies [57feba6]
-  - @scalar/types@0.1.4
+  - @swagglar/types@0.1.4
   - @scalar/nextjs-api-reference@0.7.5
 
 ## 0.1.4
@@ -779,7 +779,7 @@
 
 - Updated dependencies [543a16c]
 - Updated dependencies [57e96a0]
-  - @scalar/types@0.1.3
+  - @swagglar/types@0.1.3
   - @scalar/nextjs-api-reference@0.7.4
 
 ## 0.1.3
@@ -788,7 +788,7 @@
 
 - Updated dependencies [7a8965c]
 - Updated dependencies [49dffff]
-  - @scalar/types@0.1.2
+  - @swagglar/types@0.1.2
   - @scalar/nextjs-api-reference@0.7.3
 
 ## 0.1.2
@@ -796,7 +796,7 @@
 ### Patch Changes
 
 - Updated dependencies [39c0f47]
-  - @scalar/types@0.1.1
+  - @swagglar/types@0.1.1
   - @scalar/nextjs-api-reference@0.7.2
 
 ## 0.1.1
@@ -815,14 +815,14 @@
 
 - Updated dependencies [5f9a8a2]
   - @scalar/nextjs-api-reference@0.7.0
-  - @scalar/types@0.1.0
+  - @swagglar/types@0.1.0
 
 ## 0.0.44
 
 ### Patch Changes
 
 - Updated dependencies [fc6a45e]
-  - @scalar/types@0.0.41
+  - @swagglar/types@0.0.41
   - @scalar/nextjs-api-reference@0.6.1
 
 ## 0.0.43
@@ -831,7 +831,7 @@
 
 - Updated dependencies [4d03e0f]
 - Updated dependencies [dd38a68]
-  - @scalar/types@0.0.40
+  - @swagglar/types@0.0.40
   - @scalar/nextjs-api-reference@0.6.0
 
 ## 0.0.42
@@ -840,7 +840,7 @@
 
 - Updated dependencies [bab7990]
 - Updated dependencies [2c621d4]
-  - @scalar/types@0.0.39
+  - @swagglar/types@0.0.39
   - @scalar/nextjs-api-reference@0.5.15
 
 ## 0.0.41
@@ -848,7 +848,7 @@
 ### Patch Changes
 
 - Updated dependencies [7f1a40e]
-  - @scalar/types@0.0.38
+  - @swagglar/types@0.0.38
   - @scalar/nextjs-api-reference@0.5.14
 
 ## 0.0.40
@@ -857,16 +857,16 @@
 
 - Updated dependencies [89d8b75]
 - Updated dependencies [8a04b8d]
-  - @scalar/types@0.0.37
+  - @swagglar/types@0.0.37
   - @scalar/nextjs-api-reference@0.5.13
-  - @scalar/ts-to-openapi@0.0.5
+  - @swagglar/ts-to-openapi@0.0.5
 
 ## 0.0.39
 
 ### Patch Changes
 
 - Updated dependencies [4db5161]
-  - @scalar/types@0.0.36
+  - @swagglar/types@0.0.36
   - @scalar/nextjs-api-reference@0.5.12
 
 ## 0.0.38
@@ -876,17 +876,17 @@
 - Updated dependencies [946a5df]
 - Updated dependencies [c10bbf5]
 - Updated dependencies [cf14cbb]
-  - @scalar/types@0.0.35
+  - @swagglar/types@0.0.35
   - @scalar/nextjs-api-reference@0.5.11
-  - @scalar/ts-to-openapi@0.0.5
+  - @swagglar/ts-to-openapi@0.0.5
 
 ## 0.0.37
 
 ### Patch Changes
 
 - @scalar/nextjs-api-reference@0.5.10
-- @scalar/ts-to-openapi@0.0.5
-- @scalar/types@0.0.34
+- @swagglar/ts-to-openapi@0.0.5
+- @swagglar/types@0.0.34
 
 ## 0.0.36
 
@@ -895,8 +895,8 @@
 - fa6afe8: chore: code formatting
 - Updated dependencies [54fdfcb]
 - Updated dependencies [fa6afe8]
-  - @scalar/ts-to-openapi@0.0.5
-  - @scalar/types@0.0.33
+  - @swagglar/ts-to-openapi@0.0.5
+  - @swagglar/types@0.0.33
   - @scalar/nextjs-api-reference@0.5.9
 
 ## 0.0.35
@@ -907,7 +907,7 @@
 - Updated dependencies [b5727ef]
 - Updated dependencies [34e6f52]
 - Updated dependencies [f2b082a]
-  - @scalar/types@0.0.32
+  - @swagglar/types@0.0.32
   - @scalar/nextjs-api-reference@0.5.8
 
 ## 0.0.34
@@ -915,7 +915,7 @@
 ### Patch Changes
 
 - Updated dependencies [a30e7cc]
-  - @scalar/types@0.0.31
+  - @swagglar/types@0.0.31
   - @scalar/nextjs-api-reference@0.5.7
 
 ## 0.0.33
@@ -923,14 +923,14 @@
 ### Patch Changes
 
 - @scalar/nextjs-api-reference@0.5.6
-- @scalar/types@0.0.30
+- @swagglar/types@0.0.30
 
 ## 0.0.32
 
 ### Patch Changes
 
 - Updated dependencies [be34e7d]
-  - @scalar/types@0.0.29
+  - @swagglar/types@0.0.29
   - @scalar/nextjs-api-reference@0.5.5
 
 ## 0.0.31
@@ -939,7 +939,7 @@
 
 - Updated dependencies [702c386]
 - Updated dependencies [f1f39b0]
-  - @scalar/types@0.0.28
+  - @swagglar/types@0.0.28
   - @scalar/nextjs-api-reference@0.5.4
 
 ## 0.0.30
@@ -955,7 +955,7 @@
 ### Patch Changes
 
 - Updated dependencies [b552db5]
-  - @scalar/types@0.0.27
+  - @swagglar/types@0.0.27
   - @scalar/nextjs-api-reference@0.5.2
 
 ## 0.0.28
@@ -964,7 +964,7 @@
 
 - Updated dependencies [60cd6f1]
 - Updated dependencies [60cd6f1]
-  - @scalar/types@0.0.26
+  - @swagglar/types@0.0.26
   - @scalar/nextjs-api-reference@0.5.1
 
 ## 0.0.27
@@ -995,7 +995,7 @@
 ### Patch Changes
 
 - Updated dependencies [c263aaf]
-  - @scalar/types@0.0.25
+  - @swagglar/types@0.0.25
   - @scalar/nextjs-api-reference@0.4.106
 
 ## 0.0.23
@@ -1003,7 +1003,7 @@
 ### Patch Changes
 
 - Updated dependencies [fbef0c3]
-  - @scalar/types@0.0.24
+  - @swagglar/types@0.0.24
   - @scalar/nextjs-api-reference@0.4.105
 
 ## 0.0.22
@@ -1011,7 +1011,7 @@
 ### Patch Changes
 
 - Updated dependencies [c2f5f08]
-  - @scalar/types@0.0.23
+  - @swagglar/types@0.0.23
   - @scalar/nextjs-api-reference@0.4.104
 
 ## 0.0.21
@@ -1020,7 +1020,7 @@
 
 - Updated dependencies [baaad1c]
 - Updated dependencies [c984ac8]
-  - @scalar/types@0.0.22
+  - @swagglar/types@0.0.22
   - @scalar/nextjs-api-reference@0.4.103
 
 ## 0.0.20
@@ -1028,7 +1028,7 @@
 ### Patch Changes
 
 - Updated dependencies [9d23f95]
-  - @scalar/types@0.0.21
+  - @swagglar/types@0.0.21
   - @scalar/nextjs-api-reference@0.4.102
 
 ## 0.0.19
@@ -1036,7 +1036,7 @@
 ### Patch Changes
 
 - Updated dependencies [f67c3bc]
-  - @scalar/types@0.0.20
+  - @swagglar/types@0.0.20
   - @scalar/nextjs-api-reference@0.4.101
 
 ## 0.0.18
@@ -1045,14 +1045,14 @@
 
 - Updated dependencies [a40999d]
   - @scalar/nextjs-api-reference@0.4.100
-  - @scalar/ts-to-openapi@0.0.4
-  - @scalar/types@0.0.19
+  - @swagglar/ts-to-openapi@0.0.4
+  - @swagglar/types@0.0.19
 
 ## 0.0.17
 
 ### Patch Changes
 
-- @scalar/types@0.0.19
+- @swagglar/types@0.0.19
 - @scalar/nextjs-api-reference@0.4.99
 
 ## 0.0.16
@@ -1060,14 +1060,14 @@
 ### Patch Changes
 
 - Updated dependencies [fb798c8]
-  - @scalar/types@0.0.18
+  - @swagglar/types@0.0.18
   - @scalar/nextjs-api-reference@0.4.98
 
 ## 0.0.15
 
 ### Patch Changes
 
-- @scalar/types@0.0.17
+- @swagglar/types@0.0.17
 - @scalar/nextjs-api-reference@0.4.97
 
 ## 0.0.14
@@ -1076,13 +1076,13 @@
 
 - Updated dependencies [dbbe38f]
   - @scalar/nextjs-api-reference@0.4.96
-  - @scalar/types@0.0.16
+  - @swagglar/types@0.0.16
 
 ## 0.0.13
 
 ### Patch Changes
 
-- @scalar/types@0.0.15
+- @swagglar/types@0.0.15
 - @scalar/nextjs-api-reference@0.4.95
 
 ## 0.0.12
@@ -1091,8 +1091,8 @@
 
 - e911047: Add default exports
 - Updated dependencies [e911047]
-  - @scalar/ts-to-openapi@0.0.3
-  - @scalar/types@0.0.14
+  - @swagglar/ts-to-openapi@0.0.3
+  - @swagglar/types@0.0.14
   - @scalar/nextjs-api-reference@0.4.94
 
 ## 0.0.11
@@ -1107,7 +1107,7 @@
 ### Patch Changes
 
 - Updated dependencies [9dc2ab7]
-  - @scalar/types@0.0.13
+  - @swagglar/types@0.0.13
   - @scalar/nextjs-api-reference@0.4.92
 
 ## 0.0.9
@@ -1115,7 +1115,7 @@
 ### Patch Changes
 
 - Updated dependencies [8f12149]
-  - @scalar/types@0.0.12
+  - @swagglar/types@0.0.12
   - @scalar/nextjs-api-reference@0.4.91
 
 ## 0.0.8
@@ -1123,7 +1123,7 @@
 ### Patch Changes
 
 - Updated dependencies [f961940]
-  - @scalar/types@0.0.11
+  - @swagglar/types@0.0.11
   - @scalar/nextjs-api-reference@0.4.90
 
 ## 0.0.7
@@ -1132,8 +1132,8 @@
 
 - ed0bd1e: chore: upgrade typescript to 5.6.2
 - Updated dependencies [ed0bd1e]
-  - @scalar/ts-to-openapi@0.0.2
-  - @scalar/types@0.0.10
+  - @swagglar/ts-to-openapi@0.0.2
+  - @swagglar/types@0.0.10
   - @scalar/nextjs-api-reference@0.4.89
 
 ## 0.0.6
@@ -1148,14 +1148,14 @@
 ### Patch Changes
 
 - @scalar/nextjs-api-reference@0.4.87
-- @scalar/types@0.0.9
+- @swagglar/types@0.0.9
 
 ## 0.0.4
 
 ### Patch Changes
 
 - Updated dependencies [dc9aff2]
-  - @scalar/types@0.0.8
+  - @swagglar/types@0.0.8
   - @scalar/nextjs-api-reference@0.4.86
 
 ## 0.0.3
@@ -1165,7 +1165,7 @@
 - Updated dependencies [a07cfc8]
 - Updated dependencies [023ca15]
 - Updated dependencies [85872b6]
-  - @scalar/types@0.0.7
+  - @swagglar/types@0.0.7
   - @scalar/nextjs-api-reference@0.4.85
 
 ## 0.0.2
@@ -1184,5 +1184,5 @@
 - Updated dependencies [44e7e75]
 - Updated dependencies [89adf75]
   - @scalar/nextjs-api-reference@0.4.84
-  - @scalar/ts-to-openapi@0.0.1
-  - @scalar/types@0.0.6
+  - @swagglar/ts-to-openapi@0.0.1
+  - @swagglar/types@0.0.6

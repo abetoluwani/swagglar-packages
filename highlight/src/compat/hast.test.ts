@@ -16,7 +16,7 @@ import { describe, expect, it } from 'vitest'
 
 import '../all'
 
-import { syntaxHighlight as referenceHighlight } from '@scalar/code-highlight/code'
+import { syntaxHighlight as referenceHighlight } from '@swagglar/code-highlight/code'
 
 import { colorAgreement } from '../../test/colors'
 import { textFromHtml } from '../../test/html'

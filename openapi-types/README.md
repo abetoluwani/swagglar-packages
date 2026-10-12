@@ -1,8 +1,8 @@
 # Scalar OpenAPI Types
 
-[![Version](https://img.shields.io/npm/v/@scalar/openapi-types)](https://www.npmjs.com/package/@scalar/openapi-types)
-[![Downloads](https://img.shields.io/npm/dm/@scalar/openapi-types)](https://www.npmjs.com/package/@scalar/openapi-types)
-[![License](https://img.shields.io/npm/l/@scalar/openapi-types)](https://www.npmjs.com/package/@scalar/openapi-types)
+[![Version](https://img.shields.io/npm/v/@swagglar/openapi-types)](https://www.npmjs.com/package/@swagglar/openapi-types)
+[![Downloads](https://img.shields.io/npm/dm/@swagglar/openapi-types)](https://www.npmjs.com/package/@swagglar/openapi-types)
+[![License](https://img.shields.io/npm/l/@swagglar/openapi-types)](https://www.npmjs.com/package/@swagglar/openapi-types)
 [![Discord](https://img.shields.io/discord/1135330207960678410?style=flat&color=5865F2)](https://discord.gg/scalar)
 
 Strict, well-documented OpenAPI TypeScript types based on official JSON Schemas, with specification links in comments.
@@ -23,7 +23,7 @@ Scalar is an open-source API platform for teams who want beautiful developer int
 ## Installation
 
 ```bash
-npm add @scalar/openapi-types
+npm add @swagglar/openapi-types
 ```
 
 ## Versions
@@ -36,7 +36,7 @@ npm add @scalar/openapi-types
 ## Usage
 
 ```ts
-import type { Document } from '@scalar/openapi-types/3.2'
+import type { Document } from '@swagglar/openapi-types/3.2'
 
 const file: Document = {
   openapi: '3.2.0',
@@ -53,7 +53,7 @@ const file: Document = {
 If your bundler doesn't work with barrel files, you can explicitly import objects, too:
 
 ```ts
-import type { Document } from '@scalar/openapi-types/3.2/document'
+import type { Document } from '@swagglar/openapi-types/3.2/document'
 
 const file: Document = {
   openapi: '3.2.0',
@@ -67,7 +67,7 @@ const file: Document = {
 
 ## Helpers
 
-`@scalar/openapi-types/helpers` ships a small set of runtime helpers for working
+`@swagglar/openapi-types/helpers` ships a small set of runtime helpers for working
 with the type definitions above. They are written to work with `SchemaObject`
 across all supported OpenAPI versions (2.0, 3.0, 3.1, and 3.2).
 
@@ -80,7 +80,7 @@ the reference members out of a `SchemaObject | ReferenceObject` union from any
 supported OpenAPI version.
 
 ```ts
-import { isDereferenced } from '@scalar/openapi-types/helpers'
+import { isDereferenced } from '@swagglar/openapi-types/helpers'
 
 const schema = components.schemas?.Pet
 
@@ -111,8 +111,8 @@ or `minLength`) become accessible without a manual cast.
 | `isBooleanJsonSchema` | the schema itself is the literal `true` or `false`     |
 
 ```ts
-import { isArraySchema, isObjectSchema } from '@scalar/openapi-types/helpers'
-import type { SchemaObject } from '@scalar/openapi-types/3.1'
+import { isArraySchema, isObjectSchema } from '@swagglar/openapi-types/helpers'
+import type { SchemaObject } from '@swagglar/openapi-types/3.1'
 
 function describe(schema: SchemaObject) {
   if (isObjectSchema(schema)) {

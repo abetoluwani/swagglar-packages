@@ -5,7 +5,7 @@ Playwright snapshot tests render each component through a **gallery** page and c
 ## Overview
 
 1. **Gallery** — `./gallery` is a small Vite app that renders one story at a time into `#root`. Playwright starts **`pnpm preview:gallery`**, which builds the gallery and serves it on port **5101** — so there is no separate build step to remember. If a server is already running on that port it is reused (`reuseExistingServer`), and that server keeps serving whatever it built at startup: restart it after changing a story, or leave the port free and let Playwright manage it.
-2. **Docker browser** — Outside CI, tests connect to Playwright inside **`scalarapi/playwright-runner`** (version pinned in `@scalar/helpers` — see [`playwright/docker`](../../helpers/src/playwright/README.md)). CI runs inside the same image, so only the gallery `webServer` runs there.
+2. **Docker browser** — Outside CI, tests connect to Playwright inside **`scalarapi/playwright-runner`** (version pinned in `@swagglar/helpers` — see [`playwright/docker`](../../helpers/src/playwright/README.md)). CI runs inside the same image, so only the gallery `webServer` runs there.
 3. **Regression detection** — `toHaveScreenshot` diffs against committed PNGs; CI fails when snapshots drift without an update.
 
 > The gallery is served from a build rather than a dev server on purpose. Every `mount()` navigates, and 203 navigations against `vite dev` took 212s versus 36s against the build.

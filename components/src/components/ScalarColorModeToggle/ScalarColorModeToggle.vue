@@ -1,5 +1,5 @@
 <script lang="ts">
-import { useColorMode } from '@scalar/use-hooks/useColorMode'
+import { useColorMode } from '@swagglar/use-hooks/useColorMode'
 import { computed } from 'vue'
 
 import ScalarColorModeToggleButton from './ScalarColorModeToggleButton.vue'

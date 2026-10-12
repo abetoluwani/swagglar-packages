@@ -1,4 +1,4 @@
-import type { RequestFactory, VariableEntry, VariablesStore } from '@scalar/workspace-store/request-example'
+import type { RequestFactory, VariableEntry, VariablesStore } from '@swagglar/workspace-store/request-example'
 import { beforeAll, beforeEach, describe, expect, it, vi } from 'vitest'
 import type { Ref } from 'vue'
 

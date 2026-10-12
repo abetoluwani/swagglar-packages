@@ -1,5 +1,5 @@
 {
-  "name": "@scalar/helpers",
+  "name": "@swagglar/helpers",
   "description": "A collection of dependency free helpers",
   "license": "MIT",
   "author": "Scalar (https://github.com/scalar)",
@@ -141,7 +141,7 @@
   "sideEffects": false,
   "devDependencies": {
     "@playwright/test": "catalog:*",
-    "@scalar/themes": "workspace:*",
+    "@swagglar/themes": "workspace:*",
     "jsdom": "catalog:*",
     "vitest": "catalog:*"
   }

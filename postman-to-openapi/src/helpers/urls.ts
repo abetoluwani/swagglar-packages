@@ -1,5 +1,5 @@
-import { REGEX } from '@scalar/helpers/regex/regex-helpers'
-import type { OpenAPIV3_1 } from '@scalar/openapi-types'
+import { REGEX } from '@swagglar/helpers/regex/regex-helpers'
+import type { OpenAPIV3_1 } from '@swagglar/openapi-types'
 
 import type { ParsedUrl } from '@/types'
 

@@ -1,10 +1,10 @@
-import type { OpenAPIV3_2 } from '@scalar/openapi-types'
+import type { OpenAPIV3_2 } from '@swagglar/openapi-types'
 import {
   getQuerystringParameter,
   serializeQuerystringParameter,
-} from '@scalar/workspace-store/helpers/querystring-parameter'
-import { coerceValue } from '@scalar/workspace-store/schemas/typebox-coerce'
-import { ParameterObjectSchema } from '@scalar/workspace-store/schemas/v3.2/strict/openapi-document'
+} from '@swagglar/workspace-store/helpers/querystring-parameter'
+import { coerceValue } from '@swagglar/workspace-store/schemas/typebox-coerce'
+import { ParameterObjectSchema } from '@swagglar/workspace-store/schemas/v3.2/strict/openapi-document'
 import { describe, expect, it } from 'vitest'
 
 import { createMockServer } from '../create-mock-server'

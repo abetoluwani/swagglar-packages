@@ -1,7 +1,7 @@
 /**
  * The OpenAPI/Swagger versions supported by the parser.
  *
- * The JSON Schemas and schema validation now live in `@scalar/openapi-validator`.
+ * The JSON Schemas and schema validation now live in `@swagglar/openapi-validator`.
  * The parser only needs the list of versions for its own version detection.
  */
 export type OpenApiVersion = '2.0' | '3.0' | '3.1' | '3.2'

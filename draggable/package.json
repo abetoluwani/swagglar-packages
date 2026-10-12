@@ -1,5 +1,5 @@
 {
-  "name": "@scalar/draggable",
+  "name": "@swagglar/draggable",
   "description": "A simple vue wrapper around html drag and drop",
   "license": "MIT",
   "author": "Scalar (https://github.com/scalar)",
@@ -51,7 +51,7 @@
     "vue": "catalog:*"
   },
   "devDependencies": {
-    "@scalar/themes": "workspace:*",
+    "@swagglar/themes": "workspace:*",
     "@tailwindcss/vite": "catalog:*",
     "@vitejs/plugin-vue": "catalog:*",
     "vite": "catalog:*",

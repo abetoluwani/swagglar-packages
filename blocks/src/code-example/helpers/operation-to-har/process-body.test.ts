@@ -1,7 +1,7 @@
-import { snippetz } from '@scalar/snippetz'
-import { getExampleFromBody } from '@scalar/workspace-store/request-example'
-import { coerceValue } from '@scalar/workspace-store/schemas/typebox-coerce'
-import { EncodingObjectSchema, SchemaObjectSchema } from '@scalar/workspace-store/schemas/v3.2/strict/openapi-document'
+import { snippetz } from '@swagglar/snippetz'
+import { getExampleFromBody } from '@swagglar/workspace-store/request-example'
+import { coerceValue } from '@swagglar/workspace-store/schemas/typebox-coerce'
+import { EncodingObjectSchema, SchemaObjectSchema } from '@swagglar/workspace-store/schemas/v3.2/strict/openapi-document'
 import { describe, expect, it } from 'vitest'
 
 import { processBody } from './process-body'

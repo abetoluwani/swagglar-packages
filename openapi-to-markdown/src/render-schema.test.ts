@@ -1,4 +1,4 @@
-import type { SchemaObject } from '@scalar/workspace-store/schemas/v3.2/strict/openapi-document'
+import type { SchemaObject } from '@swagglar/workspace-store/schemas/v3.2/strict/openapi-document'
 import remarkStringify from 'remark-stringify'
 import { unified } from 'unified'
 import { describe, expect, it } from 'vitest'

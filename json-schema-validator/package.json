@@ -1,5 +1,5 @@
 {
-  "name": "@scalar/json-schema-validator",
+  "name": "@swagglar/json-schema-validator",
   "description": "Validate documents against a JSON Schema with Ajv and human-friendly errors",
   "license": "MIT",
   "author": "Scalar (https://github.com/scalar)",
@@ -43,8 +43,8 @@
   ],
   "sideEffects": false,
   "dependencies": {
-    "@scalar/helpers": "workspace:*",
-    "@scalar/types": "workspace:*",
+    "@swagglar/helpers": "workspace:*",
+    "@swagglar/types": "workspace:*",
     "ajv": "catalog:*",
     "ajv-draft-04": "catalog:*",
     "ajv-formats": "catalog:*",

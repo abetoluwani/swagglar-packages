@@ -1,8 +1,8 @@
 # Scalar Import
 
-[![Version](https://img.shields.io/npm/v/%40scalar/import)](https://www.npmjs.com/package/@scalar/import)
-[![Downloads](https://img.shields.io/npm/dm/%40scalar/import)](https://www.npmjs.com/package/@scalar/import)
-[![License](https://img.shields.io/npm/l/%40scalar%2Fimport)](https://www.npmjs.com/package/@scalar/import)
+[![Version](https://img.shields.io/npm/v/%40scalar/import)](https://www.npmjs.com/package/@swagglar/import)
+[![Downloads](https://img.shields.io/npm/dm/%40scalar/import)](https://www.npmjs.com/package/@swagglar/import)
+[![License](https://img.shields.io/npm/l/%40scalar%2Fimport)](https://www.npmjs.com/package/@swagglar/import)
 [![Discord](https://img.shields.io/discord/1135330207960678410?style=flat&color=5865F2)](https://discord.gg/scalar)
 
 Pass an URL to an OpenAPI document, a Swagger document, a Postman collection, a Scalar API reference, a Scalar Sandbox link … basically anything, and retrieve an OpenAPI document.
@@ -23,7 +23,7 @@ Scalar is an open-source API platform for teams who want beautiful developer int
 ## Installation
 
 ```bash
-npm install @scalar/import
+npm install @swagglar/import
 ```
 
 ## Usage
@@ -31,7 +31,7 @@ npm install @scalar/import
 Find any OpenAPI/Swagger document URL in any content:
 
 ```ts
-import { resolve } from '@scalar/import'
+import { resolve } from '@swagglar/import'
 
 // Get the raw file URL from a GitHub link
 const result = await resolve(

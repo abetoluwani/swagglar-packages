@@ -1,14 +1,14 @@
-import { HTTP_METHODS, type HttpMethod } from '@scalar/helpers/http/http-methods'
-import { isObject } from '@scalar/helpers/object/is-object'
+import { HTTP_METHODS, type HttpMethod } from '@swagglar/helpers/http/http-methods'
+import { isObject } from '@swagglar/helpers/object/is-object'
 import {
   forEachPathItemOperation,
   getPathItemOperation,
   getResolvedPathItem,
   setPathItemOperation,
-} from '@scalar/workspace-store/helpers/for-each-path-item-operation'
-import { getResolvedRef } from '@scalar/workspace-store/helpers/get-resolved-ref'
-import type { OperationMethod } from '@scalar/workspace-store/schemas/navigation'
-import type { OpenApiDocument, PathItemObject } from '@scalar/workspace-store/schemas/v3.2/strict/openapi-document'
+} from '@swagglar/workspace-store/helpers/for-each-path-item-operation'
+import { getResolvedRef } from '@swagglar/workspace-store/helpers/get-resolved-ref'
+import type { OperationMethod } from '@swagglar/workspace-store/schemas/navigation'
+import type { OpenApiDocument, PathItemObject } from '@swagglar/workspace-store/schemas/v3.2/strict/openapi-document'
 
 /** Identify one operation by path and method, operation ID, or JSON pointer. */
 export type OperationSelector =

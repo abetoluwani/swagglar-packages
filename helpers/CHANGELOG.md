@@ -1,4 +1,4 @@
-# @scalar/helpers
+# @swagglar/helpers
 
 ## 0.15.0
 
@@ -51,7 +51,7 @@
 ### Patch Changes
 
 - [#10150](https://github.com/scalar/scalar/pull/10150): Run the dockerized Playwright browser server with `--unsafe` so it honours the launch options the test runner sends it, letting snapshots taken locally match the ones CI produces
-- [#9666](https://github.com/scalar/scalar/pull/9666): Only normalize OpenAPI Reference Objects during bundling, never Schema Objects. `normalizeRefs` used to strip every sibling except `$ref` on any node outside `components/schemas`, which also hit inline schemas. In JSON Schema 2020-12 a `$ref` may legally carry sibling keywords — for example a `$defs`/`$dynamicAnchor` binding that specializes a generic template like `Paginated<T>` — and such schemas appear inline anywhere a schema is allowed (a response's `content.<media>.schema`, an `allOf` branch, …). Dropping those siblings discarded the binding, leaving `$dynamicRef` to resolve to the template's empty fallback and rendering an empty array (for example the `data` array of `GET /planets` in the Scalar Galaxy). Reference Objects are still normalized as before. A new `@scalar/helpers/openapi/is-schema-path` helper detects schema positions.
+- [#9666](https://github.com/scalar/scalar/pull/9666): Only normalize OpenAPI Reference Objects during bundling, never Schema Objects. `normalizeRefs` used to strip every sibling except `$ref` on any node outside `components/schemas`, which also hit inline schemas. In JSON Schema 2020-12 a `$ref` may legally carry sibling keywords — for example a `$defs`/`$dynamicAnchor` binding that specializes a generic template like `Paginated<T>` — and such schemas appear inline anywhere a schema is allowed (a response's `content.<media>.schema`, an `allOf` branch, …). Dropping those siblings discarded the binding, leaving `$dynamicRef` to resolve to the template's empty fallback and rendering an empty array (for example the `data` array of `GET /planets` in the Scalar Galaxy). Reference Objects are still normalized as before. A new `@swagglar/helpers/openapi/is-schema-path` helper detects schema positions.
 - [#10102](https://github.com/scalar/scalar/pull/10102): Allow response hooks to return a replacement Response before the client processes its body, status, and headers. Add the onResponseReceived configuration callback for API References. Existing hooks can still read responses and return nothing.
 - [#10140](https://github.com/scalar/scalar/pull/10140): Replace redundant type assertions with compiler-checked annotations, typed accumulators, and existing guards across helpers, API conversion, request handling, and schema rendering.
 
@@ -87,12 +87,12 @@
 
   This does change behaviour for documents that legitimately carry a property with one of those names, which JSON allows and a schema is free to describe. `diff` no longer compares such a property, so editing it on its own is not reported as a change, and a merge that previously surfaced it as a conflict now merges cleanly. The property still travels along when its parent object is added or updated wholesale, because a new subtree is emitted as a single value. This trade-off matches `preventPollution`, which the rest of the codebase already applies to untrusted keys.
 
-  `@scalar/helpers` gains an `isPollutionKey` predicate next to the existing `preventPollution`, so the list of dangerous keys lives in one place.
+  `@swagglar/helpers` gains an `isPollutionKey` predicate next to the existing `preventPollution`, so the list of dangerous keys lives in one place.
 
 - [#9918](https://github.com/scalar/scalar/pull/9918): Render sidebar navigation as anchor links instead of buttons.
-  - `@scalar/sidebar`: `ScalarSidebar` and `SidebarItem` accept a new `getHref` callback. When it returns a URL for an item, that item renders as a real link — this covers every entry except tag-group headings, which are section labels rather than navigation targets. Plain left clicks on the link still emit `selectItem` for in-app navigation (with the default navigation prevented), modified clicks are left to the browser so links can be opened in a new tab, and clicks on decorator content outside the link keep their native behavior. Items are built with the existing `button` slot on `ScalarSidebarItem` and `ScalarSidebarGroup`, so `@scalar/components` needs no new API to support this.
-  - `@scalar/api-reference`: the sidebar now passes `getHref` using the new SSR-safe `makeHrefFromId` helper, so the rendered sidebar contains real anchor tags whose paths match the URLs pushed to history (the hrefs are relative, so they do not carry the current query string). With path routing this makes the navigation crawlable and indexable by search engines; with hash routing and hash-base-path routing the fragment hrefs improve link semantics and open-in-new-tab behavior, but search engines do not treat fragments as separate URLs — configure `pathRouting` if URL discovery is the goal. Note that sidebar entries now follow standard link keyboard semantics (Enter activates them, Space scrolls the page), and links inside collapsed groups are only present in server-rendered HTML for groups that are expanded during SSR (for example via `defaultOpenAllTags`).
-  - `@scalar/helpers`: new `isPlainLeftClick` helper in `dom/is-plain-left-click` for deciding when a click should be hijacked for client-side navigation.
+  - `@swagglar/sidebar`: `ScalarSidebar` and `SidebarItem` accept a new `getHref` callback. When it returns a URL for an item, that item renders as a real link — this covers every entry except tag-group headings, which are section labels rather than navigation targets. Plain left clicks on the link still emit `selectItem` for in-app navigation (with the default navigation prevented), modified clicks are left to the browser so links can be opened in a new tab, and clicks on decorator content outside the link keep their native behavior. Items are built with the existing `button` slot on `ScalarSidebarItem` and `ScalarSidebarGroup`, so `@swagglar/components` needs no new API to support this.
+  - `@swagglar/api-reference`: the sidebar now passes `getHref` using the new SSR-safe `makeHrefFromId` helper, so the rendered sidebar contains real anchor tags whose paths match the URLs pushed to history (the hrefs are relative, so they do not carry the current query string). With path routing this makes the navigation crawlable and indexable by search engines; with hash routing and hash-base-path routing the fragment hrefs improve link semantics and open-in-new-tab behavior, but search engines do not treat fragments as separate URLs — configure `pathRouting` if URL discovery is the goal. Note that sidebar entries now follow standard link keyboard semantics (Enter activates them, Space scrolls the page), and links inside collapsed groups are only present in server-rendered HTML for groups that are expanded during SSR (for example via `defaultOpenAllTags`).
+  - `@swagglar/helpers`: new `isPlainLeftClick` helper in `dom/is-plain-left-click` for deciding when a click should be hijacked for client-side navigation.
 
 ### Patch Changes
 
@@ -115,7 +115,7 @@
     rendering where the value lands in the HTML stream verbatim.
   - Added `rel="noopener noreferrer"` to the remaining `target="_blank"` links.
 
-  Adds `isSafeUrl` and `sanitizeUrl` to `@scalar/helpers/url/is-safe-url`.
+  Adds `isSafeUrl` and `sanitizeUrl` to `@swagglar/helpers/url/is-safe-url`.
 
 ## 0.9.2
 
@@ -137,7 +137,7 @@
 
   Update the shared theme reset so text inputs align to the logical start by default for RTL documents.
 
-  Add a `mergeObjects` deep-merge helper to `@scalar/helpers`, used by the localization layer to merge translation overrides onto the built-in locale.
+  Add a `mergeObjects` deep-merge helper to `@swagglar/helpers`, used by the localization layer to merge translation overrides onto the built-in locale.
 
 ## 0.8.2
 
@@ -165,7 +165,7 @@
 
   Request construction now treats a bad merged URL as a first-class failure instead of throwing deep inside helpers. After `mergeUrls`, `resolveRequestFactoryUrl` rejects incomplete targets when strict mode applies: relative URLs, an empty server base, or path strings that still contain unresolved `{{variable}}` placeholders. Callers may set `allowMissingRequestServerBase` where a full absolute URL is intentionally optional (for example the embedded modal layout in `OperationBlock`, or API Reference `onBeforeRequest` hooks that build against the document origin).
 
-  `buildRequest` returns a `Result` (`ok` / `err`) with stable error codes such as `MISSING_REQUEST_SERVER_BASE`, `INVALID_REQUEST_FACTORY_URL`, and `BUILD_REQUEST_FAILED` for unexpected synchronous failures. Those failures are wrapped with `safeRun` from `@scalar/helpers`, which logs to `console.error` and maps throws to a string message on the result. The API Reference plugin path logs and skips `onBeforeRequest` when a preview request cannot be built, so user hooks never run against a half-built fetch payload.
+  `buildRequest` returns a `Result` (`ok` / `err`) with stable error codes such as `MISSING_REQUEST_SERVER_BASE`, `INVALID_REQUEST_FACTORY_URL`, and `BUILD_REQUEST_FAILED` for unexpected synchronous failures. Those failures are wrapped with `safeRun` from `@swagglar/helpers`, which logs to `console.error` and maps throws to a string message on the result. The API Reference plugin path logs and skips `onBeforeRequest` when a preview request cannot be built, so user hooks never run against a half-built fetch payload.
 
   Downstream packages (`api-client`, `api-reference`, `scalar-app` where applicable) unwrap the result, show toasts or logs, and avoid calling `sendRequest` until the URL is valid.
 
@@ -175,7 +175,7 @@
 
   The request body dropdown lists built-in types first, then any additional media types from the OpenAPI operation. Labels use the MIME essence (no `charset` in the label). The **Other** option is available again for a raw body: it does **not** add an automatic `Content-Type` header (users can set one manually). Code snippets avoid injecting `Content-Type: other`.
 
-  `getDefaultHeaders` and `filterDisabledDefaultHeaders` are exported from `@scalar/workspace-store/request-example`; the API client uses them for code snippets instead of a duplicate helper.
+  `getDefaultHeaders` and `filterDisabledDefaultHeaders` are exported from `@swagglar/workspace-store/request-example`; the API client uses them for code snippets instead of a duplicate helper.
 
 - [#9211](https://github.com/scalar/scalar/pull/9211): feat(helpers): add `normalizationForm` and `stripAccents` options to `slugify` and `slugger`
   - `normalizationForm` (`'NFC' | 'NFD' | 'NFKC' | 'NFKD'`, default `'NFC'`) passes the chosen form to `String.prototype.normalize()` before slugifying.
@@ -185,7 +185,7 @@
 
   Browsers strip selected forbidden headers from outgoing requests. When using the Scalar proxy (or running in Electron), we now rewrite a small allowlist (`Date`, `DNT`, and `Referer`) to `X-Scalar-*` headers so the proxy can forward the intended upstream headers without opening support for the full forbidden-header set.
 
-- [#9211](https://github.com/scalar/scalar/pull/9211): Add `@scalar/helpers/theme/load-css-variables` for parsing Scalar theme CSS into light/dark custom property maps (moved from scalar-app).
+- [#9211](https://github.com/scalar/scalar/pull/9211): Add `@swagglar/helpers/theme/load-css-variables` for parsing Scalar theme CSS into light/dark custom property maps (moved from scalar-app).
 
 ## 0.7.0
 
@@ -201,7 +201,7 @@
 
   Request construction now treats a bad merged URL as a first-class failure instead of throwing deep inside helpers. After `mergeUrls`, `resolveRequestFactoryUrl` rejects incomplete targets when strict mode applies: relative URLs, an empty server base, or path strings that still contain unresolved `{{variable}}` placeholders. Callers may set `allowMissingRequestServerBase` where a full absolute URL is intentionally optional (for example the embedded modal layout in `OperationBlock`, or API Reference `onBeforeRequest` hooks that build against the document origin).
 
-  `buildRequest` returns a `Result` (`ok` / `err`) with stable error codes such as `MISSING_REQUEST_SERVER_BASE`, `INVALID_REQUEST_FACTORY_URL`, and `BUILD_REQUEST_FAILED` for unexpected synchronous failures. Those failures are wrapped with `safeRun` from `@scalar/helpers`, which logs to `console.error` and maps throws to a string message on the result. The API Reference plugin path logs and skips `onBeforeRequest` when a preview request cannot be built, so user hooks never run against a half-built fetch payload.
+  `buildRequest` returns a `Result` (`ok` / `err`) with stable error codes such as `MISSING_REQUEST_SERVER_BASE`, `INVALID_REQUEST_FACTORY_URL`, and `BUILD_REQUEST_FAILED` for unexpected synchronous failures. Those failures are wrapped with `safeRun` from `@swagglar/helpers`, which logs to `console.error` and maps throws to a string message on the result. The API Reference plugin path logs and skips `onBeforeRequest` when a preview request cannot be built, so user hooks never run against a half-built fetch payload.
 
   Downstream packages (`api-client`, `api-reference`, `scalar-app` where applicable) unwrap the result, show toasts or logs, and avoid calling `sendRequest` until the URL is valid.
 
@@ -211,7 +211,7 @@
 
   The request body dropdown lists built-in types first, then any additional media types from the OpenAPI operation. Labels use the MIME essence (no `charset` in the label). The **Other** option is available again for a raw body: it does **not** add an automatic `Content-Type` header (users can set one manually). Code snippets avoid injecting `Content-Type: other`.
 
-  `getDefaultHeaders` and `filterDisabledDefaultHeaders` are exported from `@scalar/workspace-store/request-example`; the API client uses them for code snippets instead of a duplicate helper.
+  `getDefaultHeaders` and `filterDisabledDefaultHeaders` are exported from `@swagglar/workspace-store/request-example`; the API client uses them for code snippets instead of a duplicate helper.
 
 - [#9151](https://github.com/scalar/scalar/pull/9151): feat(helpers): add `normalizationForm` and `stripAccents` options to `slugify` and `slugger`
   - `normalizationForm` (`'NFC' | 'NFD' | 'NFKC' | 'NFKD'`, default `'NFC'`) passes the chosen form to `String.prototype.normalize()` before slugifying.
@@ -221,7 +221,7 @@
 
   Browsers strip selected forbidden headers from outgoing requests. When using the Scalar proxy (or running in Electron), we now rewrite a small allowlist (`Date`, `DNT`, and `Referer`) to `X-Scalar-*` headers so the proxy can forward the intended upstream headers without opening support for the full forbidden-header set.
 
-- [#9133](https://github.com/scalar/scalar/pull/9133): Add `@scalar/helpers/theme/load-css-variables` for parsing Scalar theme CSS into light/dark custom property maps (moved from scalar-app).
+- [#9133](https://github.com/scalar/scalar/pull/9133): Add `@swagglar/helpers/theme/load-css-variables` for parsing Scalar theme CSS into light/dark custom property maps (moved from scalar-app).
 
 ## 0.6.0
 
@@ -251,7 +251,7 @@
 
 ### Patch Changes
 
-- [#8952](https://github.com/scalar/scalar/pull/8952): Export shared Scalar custom header constants from `@scalar/helpers/http/scalar-headers` and consume them in request build/send flows.
+- [#8952](https://github.com/scalar/scalar/pull/8952): Export shared Scalar custom header constants from `@swagglar/helpers/http/scalar-headers` and consume them in request build/send flows.
 
 ## 0.5.1
 

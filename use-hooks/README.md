@@ -18,7 +18,7 @@ Scalar is an open-source API platform for teams who want beautiful developer int
 ## Installation
 
 ```bash
-npm add @scalar/use-hooks
+npm add @swagglar/use-hooks
 ```
 
 ## Available Hooks

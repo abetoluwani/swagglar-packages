@@ -1,4 +1,4 @@
-import { getExampleFromSchema } from '@scalar/workspace-store/request-example'
+import { getExampleFromSchema } from '@swagglar/workspace-store/request-example'
 
 /** The schema shape `getExampleFromSchema` accepts, so callers do not have to name it themselves. */
 export type ExampleSchema = Parameters<typeof getExampleFromSchema>[0]

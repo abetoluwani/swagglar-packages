@@ -1,4 +1,4 @@
-import type { ScalarIconComponent } from '@scalar/icons/types'
+import type { ScalarIconComponent } from '@swagglar/icons/types'
 import type { Component } from 'vue'
 
 import type { Icon } from '../ScalarIcon'

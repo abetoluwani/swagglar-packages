@@ -1,8 +1,8 @@
 # Scalar OpenAPI Parser
 
-[![Version](https://img.shields.io/npm/v/%40scalar/openapi-parser)](https://www.npmjs.com/package/@scalar/openapi-parser)
-[![Downloads](https://img.shields.io/npm/dm/%40scalar/openapi-parser)](https://www.npmjs.com/package/@scalar/openapi-parser)
-[![License](https://img.shields.io/npm/l/%40scalar%2Fopenapi-parser)](https://www.npmjs.com/package/@scalar/openapi-parser)
+[![Version](https://img.shields.io/npm/v/%40scalar/openapi-parser)](https://www.npmjs.com/package/@swagglar/openapi-parser)
+[![Downloads](https://img.shields.io/npm/dm/%40scalar/openapi-parser)](https://www.npmjs.com/package/@swagglar/openapi-parser)
+[![License](https://img.shields.io/npm/l/%40scalar%2Fopenapi-parser)](https://www.npmjs.com/package/@swagglar/openapi-parser)
 [![Discord](https://img.shields.io/discord/1135330207960678410?style=flat&color=5865F2)](https://discord.gg/scalar)
 
 Modern OpenAPI parser written in TypeScript with support for OpenAPI 3.2, 3.1, 3.0 and Swagger 2.0.
@@ -23,7 +23,7 @@ Scalar is an open-source API platform for teams who want beautiful developer int
 ## Installation
 
 ```bash
-npm add @scalar/openapi-parser
+npm add @swagglar/openapi-parser
 ```
 
 ## Usage
@@ -31,7 +31,7 @@ npm add @scalar/openapi-parser
 ### Validate
 
 ```ts
-import { validate } from '@scalar/openapi-parser'
+import { validate } from '@swagglar/openapi-parser'
 
 const file = `{
   "openapi": "3.1.0",
@@ -54,7 +54,7 @@ if (!valid) {
 ### Resolve references
 
 ```ts
-import { dereference } from '@scalar/openapi-parser'
+import { dereference } from '@swagglar/openapi-parser'
 
 const specification = `{
   "openapi": "3.1.0",
@@ -73,7 +73,7 @@ const { schema, errors } = await dereference(specification)
 The `dereference` function accepts an `onDereference` callback option that gets called whenever a reference is resolved. This can be useful for tracking which schemas are being dereferenced:
 
 ```ts
-import { dereference } from '@scalar/openapi-parser'
+import { dereference } from '@swagglar/openapi-parser'
 
 const { schema, errors } = await dereference(specification, {
   onDereference: ({ schema, ref, resolved }) => {
@@ -85,7 +85,7 @@ const { schema, errors } = await dereference(specification, {
 ### Modify an OpenAPI document
 
 ```ts
-import { filter } from '@scalar/openapi-parser'
+import { filter } from '@swagglar/openapi-parser'
 
 const specification = `{
   "openapi": "3.1.0",
@@ -107,7 +107,7 @@ const { specification } = filter(
 There's an `upgrade` command to upgrade all your OpenAPI documents to the latest OpenAPI version.
 
 ```ts
-import { upgrade } from '@scalar/openapi-parser'
+import { upgrade } from '@swagglar/openapi-parser'
 
 const { specification } = upgrade({
   swagger: '2.0',
@@ -134,7 +134,7 @@ requirements automatically.
 > ⚠️ This doesn't support Swagger 2.0 documents.
 
 ```ts
-import { sanitize } from '@scalar/openapi-parser'
+import { sanitize } from '@swagglar/openapi-parser'
 
 const result = sanitize({
   info: {
@@ -150,7 +150,7 @@ console.log(result)
 If you're more the then/catch type of guy, that's fine:
 
 ```ts
-import { validate } from '@scalar/openapi-parser'
+import { validate } from '@swagglar/openapi-parser'
 
 const specification = …
 
@@ -170,13 +170,13 @@ validate(specification, {
 If you just look for our types, you can install the package separately:
 
 ```bash
-npm add @scalar/openapi-types
+npm add @swagglar/openapi-types
 ```
 
 And use it like this:
 
 ```ts
-import type { OpenAPI } from '@scalar/openapi-types'
+import type { OpenAPI } from '@swagglar/openapi-types'
 
 const file: OpenAPI.Document = {
   openapi: '3.1.0',
@@ -193,10 +193,10 @@ const file: OpenAPI.Document = {
 You can reference other files, too. To do that, the parser needs to know what files are available.
 
 ```ts
-import { bundle } from "@scalar/json-magic/bundle"
-import { fetchUrls } from "@scalar/json-magic/bundle/plugins/browser"
-import { readFiles } from "@scalar/json-magic/bundle/plugins/node"
-import { dereference } from '@scalar/openapi-parser'
+import { bundle } from "@swagglar/json-magic/bundle"
+import { fetchUrls } from "@swagglar/json-magic/bundle/plugins/browser"
+import { readFiles } from "@swagglar/json-magic/bundle/plugins/node"
+import { dereference } from '@swagglar/openapi-parser'
 
 // Load a file and all referenced files
 const data = await bundle('./openapi.yaml', {
@@ -219,10 +219,10 @@ As you see, `bundle()` supports plugins. You can write your own plugin, if you'd
 Once the `fetchUrls` plugin is loaded, you can also just pass an URL:
 
 ```ts
-import { bundle } from "@scalar/json-magic/bundle"
-import { fetchUrls, parseJson, parseYaml } from "@scalar/json-magic/bundle/plugins/browser"
-import { readFiles } from "@scalar/json-magic/bundle/plugins/node"
-import { dereference } from '@scalar/openapi-parser'
+import { bundle } from "@swagglar/json-magic/bundle"
+import { fetchUrls, parseJson, parseYaml } from "@swagglar/json-magic/bundle/plugins/browser"
+import { readFiles } from "@swagglar/json-magic/bundle/plugins/node"
+import { dereference } from '@swagglar/openapi-parser'
 
 // Load a file and all referenced files
 const data = await bundle(
@@ -238,10 +238,10 @@ const data = await bundle(
 If you're using the package in a browser environment, you may run into CORS issues when fetching from URLs. You can intercept the requests, for example to use a proxy, though:
 
 ```ts
-import { bundle } from "@scalar/json-magic/bundle"
-import { fetchUrls, parseJson, parseYaml } from "@scalar/json-magic/bundle/plugins/browser"
-import { readFiles } from "@scalar/json-magic/bundle/plugins/node"
-import { dereference } from '@scalar/openapi-parser'
+import { bundle } from "@swagglar/json-magic/bundle"
+import { fetchUrls, parseJson, parseYaml } from "@swagglar/json-magic/bundle/plugins/browser"
+import { readFiles } from "@swagglar/json-magic/bundle/plugins/node"
+import { dereference } from '@swagglar/openapi-parser'
 
 // Load a file and all referenced files
 const result = await bundle(
@@ -250,7 +250,7 @@ const result = await bundle(
     plugins: [
       fetchUrls({
         fetch: (url) => fetch(url.replace('BANANA.net', 'jsdelivr.net')),
-      }).get('https://cdn.BANANA.net/npm/@scalar/galaxy/dist/latest.yaml'),
+      }).get('https://cdn.BANANA.net/npm/@swagglar/galaxy/dist/latest.yaml'),
     ],
   },
 )
@@ -261,12 +261,12 @@ const result = await bundle(
 If you were previously using the `load()` method and want to migrate to the latest bundle method, the following diff illustrates the changes to apply.
 
 ```diff
--import { dereference, load } from '@scalar/openapi-parser'
--import { fetchUrls } from '@scalar/openapi-parser/plugins/fetch-urls'
-+import { bundle } from "@scalar/json-magic/bundle"
-+import { fetchUrls, parseJson, parseYaml } from "@scalar/json-magic/bundle/plugins/browser"
-+import { readFiles } from "@scalar/json-magic/bundle/plugins/node"
-+import { dereference } from '@scalar/openapi-parser'
+-import { dereference, load } from '@swagglar/openapi-parser'
+-import { fetchUrls } from '@swagglar/openapi-parser/plugins/fetch-urls'
++import { bundle } from "@swagglar/json-magic/bundle"
++import { fetchUrls, parseJson, parseYaml } from "@swagglar/json-magic/bundle/plugins/browser"
++import { readFiles } from "@swagglar/json-magic/bundle/plugins/node"
++import { dereference } from '@swagglar/openapi-parser'
 
 // Load a file and all referenced files
 -const { filesystem } = await load(
@@ -276,7 +276,7 @@ If you were previously using the `load()` method and want to migrate to the late
     plugins: [
       fetchUrls({
         fetch: (url) => fetch(url.replace('BANANA.net', 'jsdelivr.net')),
-      }).get('https://cdn.BANANA.net/npm/@scalar/galaxy/dist/latest.yaml'),
+      }).get('https://cdn.BANANA.net/npm/@swagglar/galaxy/dist/latest.yaml'),
     ],
   },
 )

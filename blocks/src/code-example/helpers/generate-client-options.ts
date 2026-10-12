@@ -1,5 +1,5 @@
-import { AVAILABLE_CLIENTS, type AvailableClients, snippetz } from '@scalar/snippetz'
-import type { XCodeSample } from '@scalar/workspace-store/schemas/extensions/operation'
+import { AVAILABLE_CLIENTS, type AvailableClients, snippetz } from '@swagglar/snippetz'
+import type { XCodeSample } from '@swagglar/workspace-store/schemas/extensions/operation'
 import { capitalize } from 'vue'
 
 import type { ClientOptionGroup } from '../types'

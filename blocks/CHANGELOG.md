@@ -1,4 +1,4 @@
-# @scalar/blocks
+# @swagglar/blocks
 
 ## 0.4.0
 
@@ -123,7 +123,7 @@
 
 - [#9752](https://github.com/scalar/scalar/pull/9752): fix: stop vendoring a second copy of the themes reset in the standalone stylesheet
 
-  The blocks `style.css` build pulled in `@scalar/components/style.css`, which re-imports `@scalar/themes/style.css` — so the published stylesheet shipped two unlayered copies of the universal reset. Loaded after the other Scalar packages, the late duplicate clobbered component font sizes, padding, and colors. Blocks now composes the lean `@scalar/components/vue-styles.css` instead, matching how `@scalar/api-reference` and `@scalar/components` build their stylesheets, and exposes `./vue-styles.css` alongside `./style.css` and `./tailwind.config.css`.
+  The blocks `style.css` build pulled in `@swagglar/components/style.css`, which re-imports `@swagglar/themes/style.css` — so the published stylesheet shipped two unlayered copies of the universal reset. Loaded after the other Scalar packages, the late duplicate clobbered component font sizes, padding, and colors. Blocks now composes the lean `@swagglar/components/vue-styles.css` instead, matching how `@swagglar/api-reference` and `@swagglar/components` build their stylesheets, and exposes `./vue-styles.css` alongside `./style.css` and `./tailwind.config.css`.
 
 - [#9689](https://github.com/scalar/scalar/pull/9689): fix: multipart/form-data array-of-objects fields now serialize as a JSON array instead of a single object in generated request examples
 
@@ -155,6 +155,6 @@
 
 ### Minor Changes
 
-- [#8519](https://github.com/scalar/scalar/pull/8519): refactor: extract the code example block into `@scalar/blocks/code-example`. `api-client`, `api-client-react`, and `api-reference` now import `CodeExample`, `findClient`, `generateClientOptions`, and the related helpers from the new package. `workspace-store` exports `isParamDisabled` with an optional `defaultDisabled` argument.
+- [#8519](https://github.com/scalar/scalar/pull/8519): refactor: extract the code example block into `@swagglar/blocks/code-example`. `api-client`, `api-client-react`, and `api-reference` now import `CodeExample`, `findClient`, `generateClientOptions`, and the related helpers from the new package. `workspace-store` exports `isParamDisabled` with an optional `defaultDisabled` argument.
 
-  **Breaking (`@scalar/api-client`):** the `@scalar/api-client/blocks/operation-code-sample` and `@scalar/api-client/v2/blocks/operation-code-sample` export paths have been removed. Import from `@scalar/blocks/code-example` instead, and use the renamed `CodeExample` / `CodeExampleProps` (previously `OperationCodeSample` / `OperationCodeSampleProps`).
+  **Breaking (`@swagglar/api-client`):** the `@swagglar/api-client/blocks/operation-code-sample` and `@swagglar/api-client/v2/blocks/operation-code-sample` export paths have been removed. Import from `@swagglar/blocks/code-example` instead, and use the renamed `CodeExample` / `CodeExampleProps` (previously `OperationCodeSample` / `OperationCodeSampleProps`).

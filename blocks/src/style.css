@@ -5,11 +5,11 @@
  * sheet for Scalar Blocks.
  */
 
-@import "@scalar/themes/style.css"; /* Theme Base Styles and Reset */
-@import "@scalar/themes/tailwind.css"; /* Tailwind Theme + Config */
+@import "@swagglar/themes/style.css"; /* Theme Base Styles and Reset */
+@import "@swagglar/themes/tailwind.css"; /* Tailwind Theme + Config */
 
 /* Dependency Vue SFC styles */
-@import "@scalar/components/vue-styles.css";
+@import "@swagglar/components/vue-styles.css";
 
 /* Blocks Tailwind Configuration */
 @import "./styles/tailwind.config.css";

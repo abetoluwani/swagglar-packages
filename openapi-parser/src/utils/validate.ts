@@ -1,6 +1,6 @@
-import { isObject } from '@scalar/helpers/object/is-object'
-import { validate as validateDocument, validatePathParameters } from '@scalar/openapi-validator'
-import type { UnknownObject } from '@scalar/types/utils'
+import { isObject } from '@swagglar/helpers/object/is-object'
+import { validate as validateDocument, validatePathParameters } from '@swagglar/openapi-validator'
+import type { UnknownObject } from '@swagglar/types/utils'
 
 import { ERRORS, type OpenApiVersion } from '@/configuration'
 import type { ErrorObject, Filesystem, StrictOpenApiDocument, ThrowOnErrorOption, ValidateResult } from '@/types/index'
@@ -33,7 +33,7 @@ const withStrictSpecification = (
 /**
  * Validates an OpenAPI document.
  *
- * Schema and semantic validation are delegated to `@scalar/openapi-validator`.
+ * Schema and semantic validation are delegated to `@swagglar/openapi-validator`.
  * Reference resolution stays in the parser: references are resolved here and any
  * resolution errors are merged into the result, so the behaviour matches the
  * previous, self-contained validator.
@@ -60,7 +60,7 @@ export function validate(
 
     // Be lenient about a missing `info.version`: default it before validation so
     // documents that omit this required field still validate. The standalone
-    // `@scalar/openapi-validator` is strict and would otherwise reject them.
+    // `@swagglar/openapi-validator` is strict and would otherwise reject them.
     //
     // Semver recommends `0.1.0` as the starting version for initial development,
     // which makes it the right stand-in for a document that never declared one.

@@ -1,4 +1,4 @@
-# @scalar/code-highlight
+# @swagglar/code-highlight
 
 Central methods and themes for code highlighting in Scalar projects
 

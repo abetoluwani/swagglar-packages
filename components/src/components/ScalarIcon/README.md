@@ -1,5 +1,5 @@
 > [!IMPORTANT]  
-> Use `@scalar/icons` instead of this component for all new work
+> Use `@swagglar/icons` instead of this component for all new work
 
 # Adding Icons to ScalarIcons
 

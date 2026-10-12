@@ -1,4 +1,4 @@
-# @scalar/use-toasts
+# @swagglar/use-toasts
 
 ## 0.10.5
 
@@ -102,7 +102,7 @@
 
 ### Patch Changes
 
-- b981770: chore: introduce the new @scalar/api-reference-editor
+- b981770: chore: introduce the new @swagglar/api-reference-editor
 
 ## 0.7.2
 
@@ -167,7 +167,7 @@
 
 ### Patch Changes
 
-- a8c3045: build: re-introduce @scalar/use-toasts package
+- a8c3045: build: re-introduce @swagglar/use-toasts package
 
 ## 0.5.15
 

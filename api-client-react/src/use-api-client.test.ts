@@ -1,4 +1,4 @@
-import { generateHash } from '@scalar/helpers/string/generate-hash'
+import { generateHash } from '@swagglar/helpers/string/generate-hash'
 import { act, renderHook, waitFor } from '@testing-library/react'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 
@@ -16,7 +16,7 @@ vi.mock('./style.css', () => ({}))
 vi.mock('./lazy-load', () => ({
   getOrCreateApiClient: vi.fn(),
 }))
-vi.mock('@scalar/blocks/code-example', () => ({
+vi.mock('@swagglar/blocks/code-example', () => ({
   isClient: vi.fn(() => true),
 }))
 

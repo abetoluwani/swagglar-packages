@@ -1,5 +1,5 @@
-import type { TargetId } from '@scalar/types/snippetz'
-import type { XCodeSample } from '@scalar/workspace-store/schemas/extensions/operation'
+import type { TargetId } from '@swagglar/types/snippetz'
+import type { XCodeSample } from '@swagglar/workspace-store/schemas/extensions/operation'
 
 import type { ClientOptionGroup, CustomClientOption, CustomClientOptionGroup } from '../types'
 import { formatLanguage } from './format-language'

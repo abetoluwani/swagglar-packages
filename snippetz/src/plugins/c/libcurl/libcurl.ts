@@ -1,4 +1,4 @@
-import type { Plugin, PluginConfiguration } from '@scalar/types/snippetz'
+import type { Plugin, PluginConfiguration } from '@swagglar/types/snippetz'
 
 import { normalizeMethod } from '@/libs/http'
 

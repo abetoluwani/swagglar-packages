@@ -1,5 +1,5 @@
-import { isObject } from '@scalar/helpers/object/is-object'
-import type { UnknownObject } from '@scalar/types/utils'
+import { isObject } from '@swagglar/helpers/object/is-object'
+import type { UnknownObject } from '@swagglar/types/utils'
 
 import { cloneDocument } from '../helpers/clone-document'
 import { migrateObjects } from './migrate-objects'

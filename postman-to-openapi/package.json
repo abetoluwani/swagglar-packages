@@ -1,5 +1,5 @@
 {
-  "name": "@scalar/postman-to-openapi",
+  "name": "@swagglar/postman-to-openapi",
   "description": "Converts Postman collections to OpenAPI documents",
   "license": "MIT",
   "author": "Scalar (https://github.com/scalar)",
@@ -44,11 +44,11 @@
     "CHANGELOG.md"
   ],
   "dependencies": {
-    "@scalar/helpers": "workspace:*",
-    "@scalar/openapi-types": "workspace:*"
+    "@swagglar/helpers": "workspace:*",
+    "@swagglar/openapi-types": "workspace:*"
   },
   "devDependencies": {
-    "@scalar/openapi-parser": "workspace:*",
+    "@swagglar/openapi-parser": "workspace:*",
     "@types/node": "catalog:*",
     "vite": "catalog:*"
   }

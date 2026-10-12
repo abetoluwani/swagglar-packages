@@ -1,4 +1,4 @@
-import { isObject } from '@scalar/helpers/object/is-object'
+import { isObject } from '@swagglar/helpers/object/is-object'
 
 import { getId } from '@/helpers/get-schemas'
 import { getValueByPath } from '@/helpers/get-value-by-path'

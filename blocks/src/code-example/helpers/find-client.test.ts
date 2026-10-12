@@ -1,4 +1,4 @@
-import type { AvailableClients } from '@scalar/snippetz'
+import type { AvailableClients } from '@swagglar/snippetz'
 import { describe, expect, it } from 'vitest'
 
 import type { ClientOption, ClientOptionGroup, CustomClientOptionGroup } from '../types'

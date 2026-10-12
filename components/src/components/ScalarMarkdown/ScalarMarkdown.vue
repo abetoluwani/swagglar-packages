@@ -17,8 +17,8 @@ import {
   htmlFromMarkdown,
   isHeading,
   textFromNode,
-} from '@scalar/code-highlight'
-import { useBindCx } from '@scalar/use-hooks/useBindCx'
+} from '@swagglar/code-highlight'
+import { useBindCx } from '@swagglar/use-hooks/useBindCx'
 import { computed, useTemplateRef } from 'vue'
 
 import type { ScalarMarkdownProps } from './types'
@@ -87,7 +87,7 @@ const html = computed(() => {
     v-html="html" />
 </template>
 <style>
-@import '@scalar/code-highlight/css/code.css';
+@import '@swagglar/code-highlight/css/code.css';
 
 .scalar-app {
   /* Base container and variables */

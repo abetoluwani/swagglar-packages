@@ -1,9 +1,9 @@
 /**
  * Simple demo page for all Scalar code highlighting functions
  */
-import { presets } from '@scalar/themes'
+import { presets } from '@swagglar/themes'
 
-import '@scalar/themes/style.css'
+import '@swagglar/themes/style.css'
 
 import { syntaxHighlight } from '../src/code'
 import codeExampleLarge from '../src/constants?raw'

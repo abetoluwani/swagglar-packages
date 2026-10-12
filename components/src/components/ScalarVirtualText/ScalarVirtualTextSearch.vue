@@ -22,7 +22,7 @@ import {
   ScalarIconCaretUp,
   ScalarIconMagnifyingGlass,
   ScalarIconX,
-} from '@scalar/icons'
+} from '@swagglar/icons'
 import { nextTick, ref, watch } from 'vue'
 
 const props = defineProps<{

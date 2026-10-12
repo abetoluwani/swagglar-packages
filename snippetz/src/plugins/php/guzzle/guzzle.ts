@@ -1,4 +1,4 @@
-import type { Plugin } from '@scalar/types/snippetz'
+import type { Plugin } from '@swagglar/types/snippetz'
 
 import { normalizeMethod, reduceQueryParams } from '@/libs/http'
 import { Raw, objectToString } from '@/libs/php'

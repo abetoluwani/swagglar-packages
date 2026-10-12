@@ -4,9 +4,9 @@
 <div class="sb-hide">
 
 [![Storybook](https://img.shields.io/badge/storybook-%23e1618c?logo=storybook&logoColor=%23fff)](https://scalar-components.netlify.app/)
-[![Version](https://img.shields.io/npm/v/%40scalar/components)](https://www.npmjs.com/package/@scalar/components)
-[![Downloads](https://img.shields.io/npm/dm/%40scalar/components)](https://www.npmjs.com/package/@scalar/components)
-[![License](https://img.shields.io/npm/l/%40scalar%2Fcomponents)](https://www.npmjs.com/package/@scalar/components)
+[![Version](https://img.shields.io/npm/v/%40scalar/components)](https://www.npmjs.com/package/@swagglar/components)
+[![Downloads](https://img.shields.io/npm/dm/%40scalar/components)](https://www.npmjs.com/package/@swagglar/components)
+[![License](https://img.shields.io/npm/l/%40scalar%2Fcomponents)](https://www.npmjs.com/package/@swagglar/components)
 [![Discord](https://img.shields.io/discord/1135330207960678410?style=flat&color=5865F2)](https://discord.gg/scalar)
 
 </div>
@@ -36,7 +36,7 @@ Want to explore the components? Check out the [Storybook](https://scalar-compone
 ## Installation
 
 ```bash
-pnpm i @scalar/components
+pnpm i @swagglar/components
 ```
 
 ## Scoping
@@ -54,7 +54,7 @@ Because many Scalar applications are embedded into other websites the components
 To get started, import the CSS styles in your main setup file (e.g., main.ts, index.ts, or App.vue):
 
 ```ts
-import '@scalar/components/style.css'
+import '@swagglar/components/style.css'
 ```
 
 Then, you can use the components in your Vue components. For example:
@@ -63,7 +63,7 @@ Then, you can use the components in your Vue components. For example:
 <script
   setup
   lang="ts">
-  import { ScalarButton } from '@scalar/components/button'
+  import { ScalarButton } from '@swagglar/components/button'
 </script>
 <template>
   <ScalarButton />
@@ -131,7 +131,7 @@ All pull requests should include the following checklist:
 ```md
 ## Component Checklist
 
-- [ ] Exported from its subpath (e.g. `@scalar/components/example`) via `package.json` `exports` — not the barrel
+- [ ] Exported from its subpath (e.g. `@swagglar/components/example`) via `package.json` `exports` — not the barrel
 - [ ] Has JSDocs for all:
   - [ ] Components (with examples)
   - [ ] Props

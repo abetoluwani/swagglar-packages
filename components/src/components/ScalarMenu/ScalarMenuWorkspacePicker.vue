@@ -15,7 +15,7 @@ import {
   ScalarIconCaretRight,
   ScalarIconPlus,
   ScalarIconSwap,
-} from '@scalar/icons'
+} from '@swagglar/icons'
 import { DropdownMenu } from 'radix-vue/namespaced'
 
 import { ScalarDropdownButton, ScalarDropdownMenu } from '../ScalarDropdown'

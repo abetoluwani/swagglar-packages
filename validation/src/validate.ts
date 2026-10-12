@@ -142,7 +142,7 @@ const validateInner = (schema: Schema | undefined, value: unknown, cache: WeakMa
  *
  * @example
  * ```ts
- * import { number, object, string, validate } from '@scalar/validation'
+ * import { number, object, string, validate } from '@swagglar/validation'
  *
  * const schema = object({ id: number(), name: string() })
  * validate(schema, { id: 1, name: 'Ada' }) // true

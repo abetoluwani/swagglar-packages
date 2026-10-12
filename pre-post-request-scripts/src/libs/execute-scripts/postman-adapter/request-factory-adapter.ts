@@ -1,4 +1,4 @@
-import type { RequestFactory } from '@scalar/workspace-store/request-example'
+import type { RequestFactory } from '@swagglar/workspace-store/request-example'
 import { Request as PostmanRequest } from 'postman-collection'
 
 const assertSupported = (condition: boolean, message: string): void => {

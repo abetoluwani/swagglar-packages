@@ -1,5 +1,5 @@
 {
-  "name": "@scalar/asyncapi-upgrader",
+  "name": "@swagglar/asyncapi-upgrader",
   "description": "Upgrade AsyncAPI documents to the latest and greatest version",
   "license": "MIT",
   "author": "Scalar (https://github.com/scalar)",
@@ -76,10 +76,10 @@
   },
   "sideEffects": false,
   "dependencies": {
-    "@scalar/helpers": "workspace:*"
+    "@swagglar/helpers": "workspace:*"
   },
   "devDependencies": {
-    "@scalar/types": "workspace:*",
+    "@swagglar/types": "workspace:*",
     "vite": "catalog:*"
   }
 }

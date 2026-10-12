@@ -13,7 +13,7 @@
 export default {}
 </script>
 <script setup lang="ts">
-import { useBindCx } from '@scalar/use-hooks/useBindCx'
+import { useBindCx } from '@swagglar/use-hooks/useBindCx'
 import type { Component } from 'vue'
 
 const { is = 'label' } = defineProps<{

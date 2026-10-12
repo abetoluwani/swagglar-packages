@@ -1,4 +1,4 @@
-import { type Schema, type Static, array, coerce, object, string, validate } from '@scalar/validation'
+import { type Schema, type Static, array, coerce, object, string, validate } from '@swagglar/validation'
 import { n } from 'neverpanic'
 
 import { createError } from '@/entities/error/helpers'

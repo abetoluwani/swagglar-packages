@@ -2,10 +2,10 @@
 /**
  * Scalar icon button component
  *
- * Should be used in conjunction with an icon from `@scalar/icons`
+ * Should be used in conjunction with an icon from `@swagglar/icons`
  *
  * @example
- * import { ScalarIconAcorn } from '@scalar/icons'
+ * import { ScalarIconAcorn } from '@swagglar/icons'
  * ...
  * <ScalarIconButton
  *   :icon="ScalarIconAcorn"
@@ -15,7 +15,7 @@
 export default {}
 </script>
 <script setup lang="ts">
-import { cva, useBindCx } from '@scalar/use-hooks/useBindCx'
+import { cva, useBindCx } from '@swagglar/use-hooks/useBindCx'
 import { computed, useTemplateRef } from 'vue'
 
 import { BUTTON_VARIANT_STYLES } from '../ScalarButton/constants'

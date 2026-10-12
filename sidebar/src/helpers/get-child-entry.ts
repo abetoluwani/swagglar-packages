@@ -1,4 +1,4 @@
-import type { TraversedEntry } from '@scalar/workspace-store/schemas/navigation'
+import type { TraversedEntry } from '@swagglar/workspace-store/schemas/navigation'
 
 /**
  * Recursively searches for and returns the first child node (including the given node itself)

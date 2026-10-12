@@ -1,8 +1,8 @@
 # Scalar useToasts()
 
-[![Version](https://img.shields.io/npm/v/%40scalar/use-toasts)](https://www.npmjs.com/package/@scalar/use-toasts)
-[![Downloads](https://img.shields.io/npm/dm/%40scalar/use-toasts)](https://www.npmjs.com/package/@scalar/use-toasts)
-[![License](https://img.shields.io/npm/l/%40scalar%2Fuse-toasts)](https://www.npmjs.com/package/@scalar/use-toasts)
+[![Version](https://img.shields.io/npm/v/%40scalar/use-toasts)](https://www.npmjs.com/package/@swagglar/use-toasts)
+[![Downloads](https://img.shields.io/npm/dm/%40scalar/use-toasts)](https://www.npmjs.com/package/@swagglar/use-toasts)
+[![License](https://img.shields.io/npm/l/%40scalar%2Fuse-toasts)](https://www.npmjs.com/package/@swagglar/use-toasts)
 [![Discord](https://img.shields.io/discord/1135330207960678410?style=flat&color=5865F2)](https://discord.gg/8HeZcRGPFS)
 
 ---
@@ -21,7 +21,7 @@ Scalar is an open-source API platform for teams who want beautiful developer int
 ## Installation
 
 ```bash
-npm install @scalar/use-toasts
+npm install @swagglar/use-toasts
 ```
 
 ## Usage
@@ -29,7 +29,7 @@ npm install @scalar/use-toasts
 ```vue
 // App.vue
 <script setup>
-import { ScalarToasts } from '@scalar/use-toasts'
+import { ScalarToasts } from '@swagglar/use-toasts'
 </script>
 <template>
   <ScalarToasts />
@@ -39,7 +39,7 @@ import { ScalarToasts } from '@scalar/use-toasts'
 ```vue
 // ChildComponent.vue
 <script setup>
-import { useToasts } from '@scalar/use-toasts'
+import { useToasts } from '@swagglar/use-toasts'
 
 const { toast } = useToasts()
 

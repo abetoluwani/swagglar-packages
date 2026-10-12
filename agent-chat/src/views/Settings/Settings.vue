@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { ScalarColorModeToggle } from '@scalar/components/color-mode-toggle'
-import { ScalarModal, type ModalState } from '@scalar/components/modal'
-import { ScalarTextInput } from '@scalar/components/text-input'
-import { ScalarIconCaretDown, ScalarIconCaretRight } from '@scalar/icons'
-import { isOpenApiDocument } from '@scalar/workspace-store/schemas/type-guards'
+import { ScalarColorModeToggle } from '@swagglar/components/color-mode-toggle'
+import { ScalarModal, type ModalState } from '@swagglar/components/modal'
+import { ScalarTextInput } from '@swagglar/components/text-input'
+import { ScalarIconCaretDown, ScalarIconCaretRight } from '@swagglar/icons'
+import { isOpenApiDocument } from '@swagglar/workspace-store/schemas/type-guards'
 
 import { URLS } from '@/consts/urls'
 import { useState } from '@/state/state'

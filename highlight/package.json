@@ -1,5 +1,5 @@
 {
-  "name": "@scalar/highlight",
+  "name": "@swagglar/highlight",
   "description": "Scalar's code highlighter",
   "license": "MIT",
   "author": "Scalar (https://github.com/scalar)",
@@ -81,7 +81,7 @@
     "@types/hast": "^3.0.4"
   },
   "devDependencies": {
-    "@scalar/code-highlight": "workspace:*",
+    "@swagglar/code-highlight": "workspace:*",
     "highlight.js": "catalog:*",
     "rolldown": "catalog:*",
     "vitest": "catalog:*"

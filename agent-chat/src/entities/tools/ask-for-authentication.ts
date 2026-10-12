@@ -1,4 +1,4 @@
-import { object, string, type Static } from '@scalar/validation'
+import { object, string, type Static } from '@swagglar/validation'
 
 export const ASK_FOR_AUTHENTICATION_TOOL_NAME = 'ask-for-authentication' as const
 

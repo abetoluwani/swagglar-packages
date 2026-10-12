@@ -1,5 +1,5 @@
 <script lang="ts">
-import { useBindCx } from '@scalar/use-hooks/useBindCx'
+import { useBindCx } from '@swagglar/use-hooks/useBindCx'
 import { type Component, computed } from 'vue'
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars

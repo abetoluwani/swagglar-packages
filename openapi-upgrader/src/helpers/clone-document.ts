@@ -1,5 +1,5 @@
-import { isObject } from '@scalar/helpers/object/is-object'
-import type { UnknownObject } from '@scalar/types/utils'
+import { isObject } from '@swagglar/helpers/object/is-object'
+import type { UnknownObject } from '@swagglar/types/utils'
 
 /** Allow small shared values while capping amplified allocation, not ordinary document size. */
 const ALIAS_EXPANSION_ENTRY_FLOOR = 100_000

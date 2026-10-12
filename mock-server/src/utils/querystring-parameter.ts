@@ -1,9 +1,9 @@
-import { getFirstMediaType } from '@scalar/helpers/http/get-first-media-type'
-import { isJsonMediaType } from '@scalar/helpers/http/is-json-media-type'
-import { parseMimeType } from '@scalar/helpers/http/mime-type'
-import type { OpenAPIV3_2 } from '@scalar/openapi-types'
-import { getResolvedRef } from '@scalar/workspace-store/helpers/get-resolved-ref'
-import { getResolvedRefDeep } from '@scalar/workspace-store/helpers/get-resolved-ref-deep'
+import { getFirstMediaType } from '@swagglar/helpers/http/get-first-media-type'
+import { isJsonMediaType } from '@swagglar/helpers/http/is-json-media-type'
+import { parseMimeType } from '@swagglar/helpers/http/mime-type'
+import type { OpenAPIV3_2 } from '@swagglar/openapi-types'
+import { getResolvedRef } from '@swagglar/workspace-store/helpers/get-resolved-ref'
+import { getResolvedRefDeep } from '@swagglar/workspace-store/helpers/get-resolved-ref-deep'
 
 import {
   deserializeArrayParameter,

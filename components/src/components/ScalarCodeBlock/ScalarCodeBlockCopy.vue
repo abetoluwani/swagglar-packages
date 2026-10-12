@@ -12,7 +12,7 @@ export default {}
 </script>
 <script setup lang="ts">
 import { ScalarCopy } from '@/components/ScalarCopy'
-import { useBindCx } from '@scalar/use-hooks/useBindCx'
+import { useBindCx } from '@swagglar/use-hooks/useBindCx'
 import { computed } from 'vue'
 
 import { LANGUAGE_LABELS } from './constants'

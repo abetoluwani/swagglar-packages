@@ -1,8 +1,8 @@
 # Postman to OpenAPI Converter
 
-[![Version](https://img.shields.io/npm/v/%40scalar/postman-to-openapi)](https://www.npmjs.com/package/@scalar/postman-to-openapi)
-[![Downloads](https://img.shields.io/npm/dm/%40scalar/postman-to-openapi)](https://www.npmjs.com/package/@scalar/postman-to-openapi)
-[![License](https://img.shields.io/npm/l/%40scalar%2Fpostman-to-openapi)](https://www.npmjs.com/package/@scalar/postman-to-openapi)
+[![Version](https://img.shields.io/npm/v/%40scalar/postman-to-openapi)](https://www.npmjs.com/package/@swagglar/postman-to-openapi)
+[![Downloads](https://img.shields.io/npm/dm/%40scalar/postman-to-openapi)](https://www.npmjs.com/package/@swagglar/postman-to-openapi)
+[![License](https://img.shields.io/npm/l/%40scalar%2Fpostman-to-openapi)](https://www.npmjs.com/package/@swagglar/postman-to-openapi)
 [![Discord](https://img.shields.io/discord/1135330207960678410?style=flat&color=5865F2)](https://discord.gg/scalar)
 
 Convert Postman collections to [the open standard OpenAPI](https://github.com/OAI/OpenAPI-Specification). Free the postman!
@@ -23,13 +23,13 @@ Scalar is an open-source API platform for teams who want beautiful developer int
 ## Installation
 
 ```bash
-npm install @scalar/postman-to-openapi
+npm install @swagglar/postman-to-openapi
 ```
 
 ## Usage
 
 ```ts
-import { convert } from '@scalar/postman-to-openapi'
+import { convert } from '@swagglar/postman-to-openapi'
 
 // Free the postman!
 const result = await convert(myPostmanCollection)
@@ -42,7 +42,7 @@ console.log(result)
 Use `isPostmanCollection` to decide whether an input string should be parsed as a Postman collection before converting.
 
 ```ts
-import { convert, isPostmanCollection } from '@scalar/postman-to-openapi'
+import { convert, isPostmanCollection } from '@swagglar/postman-to-openapi'
 
 if (isPostmanCollection(input)) {
   const openApiDocument = convert(input)

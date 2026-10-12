@@ -1,7 +1,7 @@
-import { escapeJsonPointer } from '@scalar/helpers/json/escape-json-pointer'
-import { parseJsonPointerSegments } from '@scalar/helpers/json/parse-json-pointer-segments'
-import { isObject } from '@scalar/helpers/object/is-object'
-import type { UnknownObject } from '@scalar/types/utils'
+import { escapeJsonPointer } from '@swagglar/helpers/json/escape-json-pointer'
+import { parseJsonPointerSegments } from '@swagglar/helpers/json/parse-json-pointer-segments'
+import { isObject } from '@swagglar/helpers/object/is-object'
+import type { UnknownObject } from '@swagglar/types/utils'
 
 import { UpgradeIncompatibilityError } from '../upgrade-incompatibility-error'
 

@@ -1,5 +1,5 @@
-import { isObjectLike } from '@scalar/helpers/object/is-object'
-import type { OpenAPIV3_1 } from '@scalar/openapi-types'
+import { isObjectLike } from '@swagglar/helpers/object/is-object'
+import type { OpenAPIV3_1 } from '@swagglar/openapi-types'
 
 import { generateUniqueValue } from '@/helpers/generate-unique-value'
 import { getOperationExamples } from '@/helpers/get-operation-examples'

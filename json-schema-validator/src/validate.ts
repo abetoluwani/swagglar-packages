@@ -1,4 +1,4 @@
-import type { AnyObject } from '@scalar/types/utils'
+import type { AnyObject } from '@swagglar/types/utils'
 import Ajv, { type ValidateFunction } from 'ajv'
 import Ajv2020 from 'ajv/dist/2020.js'
 import Ajv04 from 'ajv-draft-04'

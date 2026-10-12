@@ -1,5 +1,5 @@
-import { createSpecificationValidator } from '@scalar/json-schema-validator'
-import type { AnyObject } from '@scalar/types/utils'
+import { createSpecificationValidator } from '@swagglar/json-schema-validator'
+import type { AnyObject } from '@swagglar/types/utils'
 
 import { detectVersion } from '@/detect-version'
 import { ERRORS } from '@/errors'
@@ -17,7 +17,7 @@ export type ValidateOptions = ThrowOnErrorOption & {
    * parameter can be declared through a `$ref`, and this validator does not
    * resolve references — running them on an unresolved document would report
    * false positives. Callers that resolve references first (bundle or
-   * dereference) can opt in; `@scalar/openapi-parser` leaves them off here and
+   * dereference) can opt in; `@swagglar/openapi-parser` leaves them off here and
    * runs `validatePathParameters` on the resolved document itself.
    *
    * @default false
@@ -42,12 +42,12 @@ const validateDocument = createSpecificationValidator<OpenApiVersion, ValidateOp
 /**
  * Validates a single OpenAPI document against the OpenAPI Specification.
  *
- * Schema validation is delegated to `@scalar/json-schema-validator`; version
+ * Schema validation is delegated to `@swagglar/json-schema-validator`; version
  * detection and the path-parameter semantic checks are OpenAPI-specific.
  *
  * This validator is strict about the specification: every required field,
  * including `info.version`, must be present. Callers that want to be lenient
- * (as `@scalar/openapi-parser` is) should fill in defaults before validating.
+ * (as `@swagglar/openapi-parser` is) should fill in defaults before validating.
  *
  * The input must be a self-contained document. This validator does not resolve
  * external `$ref`s, so bundle or dereference documents that span multiple files

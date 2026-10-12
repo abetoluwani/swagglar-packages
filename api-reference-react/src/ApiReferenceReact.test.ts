@@ -9,14 +9,14 @@ const resetVueBundlerGlobals = (): void => {
 describe('ApiReferenceReact', () => {
   afterEach(() => {
     vi.resetModules()
-    vi.doUnmock('@scalar/api-reference')
+    vi.doUnmock('@swagglar/api-reference')
     resetVueBundlerGlobals()
   })
 
   it('loads when Vue bundler flags are not pre-defined globally', async () => {
     resetVueBundlerGlobals()
 
-    vi.doMock('@scalar/api-reference', () => {
+    vi.doMock('@swagglar/api-reference', () => {
       // Simulate Vue's production bundler macro access.
       // The module import should not throw here.
       if (__VUE_PROD_HYDRATION_MISMATCH_DETAILS__) {

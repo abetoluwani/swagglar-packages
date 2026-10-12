@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Dialog, DialogPanel, DialogTitle } from '@headlessui/vue'
-import { ScalarIconX } from '@scalar/icons'
-import { cva, cx } from '@scalar/use-hooks/useBindCx'
+import { ScalarIconX } from '@swagglar/icons'
+import { cva, cx } from '@swagglar/use-hooks/useBindCx'
 import type { VariantProps } from 'cva'
 import { reactive } from 'vue'
 

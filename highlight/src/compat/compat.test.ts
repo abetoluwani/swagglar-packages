@@ -1,12 +1,12 @@
 /**
- * `@scalar/code-highlight` compatibility.
+ * `@swagglar/code-highlight` compatibility.
  *
  * Two things are checked here. First, the four assertions that
  * `packages/code-highlight/src/code/highlight.test.ts` makes today, ported
  * verbatim (renamed to drop the `should` prefix this repo does not use) —
  * a drop-in has to pass the tests the thing it replaces passes.
  * Second, a differential run against the real lowlight pipeline — imported
- * straight from `@scalar/code-highlight`, so the comparison tracks the
+ * straight from `@swagglar/code-highlight`, so the comparison tracks the
  * package we are replacing rather than a snapshot of it — over the shared
  * sample corpus, because "it compiles and the four tests pass" is not the
  * same as "the page looks the same".
@@ -26,8 +26,8 @@ import { describe, expect, it } from 'vitest'
 
 import '../all'
 
-import { syntaxHighlight as referenceHighlight } from '@scalar/code-highlight/code'
-import { standardLanguages as referenceStandardLanguages } from '@scalar/code-highlight/languages'
+import { syntaxHighlight as referenceHighlight } from '@swagglar/code-highlight/code'
+import { standardLanguages as referenceStandardLanguages } from '@swagglar/code-highlight/languages'
 
 import { colorAgreement } from '../../test/colors'
 import { textFromHtml } from '../../test/html'
@@ -55,9 +55,9 @@ const classesOf = (html: string): Set<string> => {
   return new Set([...html.matchAll(/<span class="(hljs-[^"]*)">/g)].map((m) => m[1]!))
 }
 
-// --- the tests @scalar/code-highlight ships today --------------------------
+// --- the tests @swagglar/code-highlight ships today --------------------------
 
-describe('syntaxHighlight — ported from @scalar/code-highlight', () => {
+describe('syntaxHighlight — ported from @swagglar/code-highlight', () => {
   const defaultOptions = { lang: 'javascript', languages: referenceLanguages }
 
   const codeExample = `
@@ -355,13 +355,13 @@ describe('colour agreement with code.css', () => {
 describe('compat surface', () => {
   it('keeps the standardLanguages key set, so StandardLanguageKey is unchanged', () => {
     // Compared against the real export rather than a copy of it. A language
-    // added to `@scalar/code-highlight` upstream would otherwise drop out of
+    // added to `@swagglar/code-highlight` upstream would otherwise drop out of
     // `StandardLanguageKey` silently, with this test still green.
     expect(Object.keys(standardLanguages).sort()).toEqual(Object.keys(referenceStandardLanguages).sort())
   })
 
   it('reports exactly which standard languages have no grammar', () => {
-    // Julia is a standard language in `@scalar/code-highlight` but has no
+    // Julia is a standard language in `@swagglar/code-highlight` but has no
     // hand-written grammar in this zero-dependency package yet, so it renders
     // as plain escaped text alongside plaintext.
     expect(unsupportedLanguages).toEqual(['julia', 'plaintext'])

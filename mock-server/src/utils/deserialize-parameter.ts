@@ -1,4 +1,4 @@
-import { isObjectLike } from '@scalar/helpers/object/is-object'
+import { isObjectLike } from '@swagglar/helpers/object/is-object'
 /**
  * Helpers for turning string-encoded request parameters back into the structured values that JSON
  * Schema validation expects, following the OpenAPI `style`/`explode` serialization rules.
@@ -38,7 +38,7 @@ export const resolveSerialization = (
  * Optional array/object parameters are commonly described as `anyOf: [{ type: 'array' }, { type: 'null' }]`
  * (for example FastAPI/Pydantic `Optional[List[str]]`). Without unwrapping these we would treat the value
  * as a plain string and skip style-aware deserialization. Mirrors `getStructuredType` in
- * `@scalar/workspace-store`'s `de-serialize-parameter`.
+ * `@swagglar/workspace-store`'s `de-serialize-parameter`.
  */
 const matchesComposedSchema = (
   schema: Record<string, unknown>,

@@ -1,5 +1,5 @@
-import type { OpenAPIV3_2 } from '@scalar/openapi-types'
-import { getResolvedRef } from '@scalar/workspace-store/helpers/get-resolved-ref'
+import type { OpenAPIV3_2 } from '@swagglar/openapi-types'
+import { getResolvedRef } from '@swagglar/workspace-store/helpers/get-resolved-ref'
 
 import type { MockServerLogger } from '@/types'
 

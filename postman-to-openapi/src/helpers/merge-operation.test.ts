@@ -1,4 +1,4 @@
-import type { OpenAPIV3_1 } from '@scalar/openapi-types'
+import type { OpenAPIV3_1 } from '@swagglar/openapi-types'
 import { assert, expect, it } from 'vitest'
 
 import { mergeOperations } from '@/helpers/merge-operation'

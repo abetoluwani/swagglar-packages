@@ -1,4 +1,4 @@
-import { isPollutionKey } from '@scalar/helpers/object/prevent-pollution'
+import { isPollutionKey } from '@swagglar/helpers/object/prevent-pollution'
 
 import type { Difference } from '@/diff/diff'
 

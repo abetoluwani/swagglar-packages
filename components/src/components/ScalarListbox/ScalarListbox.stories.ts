@@ -1,5 +1,5 @@
 import { placements } from '@floating-ui/utils'
-import { ScalarIconCaretDown } from '@scalar/icons'
+import { ScalarIconCaretDown } from '@swagglar/icons'
 import type { Meta, StoryObj } from '@storybook/vue3-vite'
 import { ref } from 'vue'
 

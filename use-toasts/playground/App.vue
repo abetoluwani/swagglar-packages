@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import '@scalar/themes/style.css'
+import '@swagglar/themes/style.css'
 
 import { ScalarToasts, useToasts } from '../src'
 

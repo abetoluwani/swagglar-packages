@@ -1,4 +1,4 @@
-import { preventPollution } from '@scalar/helpers/object/prevent-pollution'
+import { preventPollution } from '@swagglar/helpers/object/prevent-pollution'
 
 import { getSegmentsFromPath } from '@/helpers/get-segments-from-path'
 

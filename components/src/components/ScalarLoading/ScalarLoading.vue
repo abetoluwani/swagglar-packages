@@ -5,7 +5,7 @@
  * Displays a loading state for the application
  *
  * @example
- * import { ScalarLoading, useLoadingState } from '@scalar/components'
+ * import { ScalarLoading, useLoadingState } from '@swagglar/components'
  *
  * const loader = useLoadingState()
  * loader.start()
@@ -15,7 +15,7 @@
 export default {}
 </script>
 <script setup lang="ts">
-import { cva, useBindCx } from '@scalar/use-hooks/useBindCx'
+import { cva, useBindCx } from '@swagglar/use-hooks/useBindCx'
 import type { VariantProps } from 'cva'
 
 import type { LoadingState } from './types'

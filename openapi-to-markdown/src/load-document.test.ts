@@ -3,8 +3,8 @@ import { createServer } from 'node:http'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 
-import { getValueAtPath } from '@scalar/helpers/object/get-value-at-path'
-import { isObject } from '@scalar/helpers/object/is-object'
+import { getValueAtPath } from '@swagglar/helpers/object/get-value-at-path'
+import { isObject } from '@swagglar/helpers/object/is-object'
 import { describe, expect, it, vi } from 'vitest'
 
 import { createMarkdownFromOpenApi } from './create-markdown-from-openapi'
@@ -12,8 +12,8 @@ import { loadDocument } from './load-document'
 
 // Record what TypeBox casts, since linked inputs make every clone copy the reference graph.
 const coercedInputs = vi.hoisted((): unknown[] => [])
-vi.mock('@scalar/workspace-store/schemas/typebox-coerce', async (importOriginal) => {
-  const actual = await importOriginal<typeof import('@scalar/workspace-store/schemas/typebox-coerce')>()
+vi.mock('@swagglar/workspace-store/schemas/typebox-coerce', async (importOriginal) => {
+  const actual = await importOriginal<typeof import('@swagglar/workspace-store/schemas/typebox-coerce')>()
   return {
     ...actual,
     coerceValue: ((schema, value) => {

@@ -16,9 +16,9 @@
 export default {}
 </script>
 <script setup lang="ts">
-import { ScalarIconCheck, ScalarIconCopy } from '@scalar/icons'
-import type { ScalarIconComponent } from '@scalar/icons/types'
-import { useBindCx } from '@scalar/use-hooks/useBindCx'
+import { ScalarIconCheck, ScalarIconCopy } from '@swagglar/icons'
+import type { ScalarIconComponent } from '@swagglar/icons/types'
+import { useBindCx } from '@swagglar/use-hooks/useBindCx'
 import { computed } from 'vue'
 
 import ScalarCopyBackdrop from './ScalarCopyBackdrop.vue'

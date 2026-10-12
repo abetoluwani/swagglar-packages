@@ -1,5 +1,5 @@
 {
-  "name": "@scalar/use-hooks",
+  "name": "@swagglar/use-hooks",
   "description": "Utility hooks for Scalar",
   "license": "MIT",
   "author": "Scalar (https://github.com/scalar)",
@@ -47,9 +47,9 @@
     "CHANGELOG.md"
   ],
   "dependencies": {
-    "@scalar/helpers": "workspace:*",
-    "@scalar/use-toasts": "workspace:*",
-    "@scalar/validation": "workspace:*",
+    "@swagglar/helpers": "workspace:*",
+    "@swagglar/use-toasts": "workspace:*",
+    "@swagglar/validation": "workspace:*",
     "@vueuse/core": "catalog:*",
     "cva": "1.0.0-beta.4",
     "tailwind-merge": "3.5.0",

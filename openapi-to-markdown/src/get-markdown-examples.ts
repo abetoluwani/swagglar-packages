@@ -1,8 +1,8 @@
-import { isXmlMediaType } from '@scalar/helpers/http/is-xml-media-type'
-import { isObject } from '@scalar/helpers/object/is-object'
-import { getResolvedRef, mergeSiblingReferences } from '@scalar/workspace-store/helpers/get-resolved-ref'
-import { getExampleFromSchema, getXmlBodyExample } from '@scalar/workspace-store/request-example'
-import type { SchemaObject } from '@scalar/workspace-store/schemas/v3.2/strict/openapi-document'
+import { isXmlMediaType } from '@swagglar/helpers/http/is-xml-media-type'
+import { isObject } from '@swagglar/helpers/object/is-object'
+import { getResolvedRef, mergeSiblingReferences } from '@swagglar/workspace-store/helpers/get-resolved-ref'
+import { getExampleFromSchema, getXmlBodyExample } from '@swagglar/workspace-store/request-example'
+import type { SchemaObject } from '@swagglar/workspace-store/schemas/v3.2/strict/openapi-document'
 
 /** Example-bearing media types, parameters, and headers share the same precedence rules. */
 export type ExampleSource = {

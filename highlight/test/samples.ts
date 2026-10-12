@@ -338,7 +338,7 @@ done
 `,
 
   json: `{
-  "name": "@scalar/highlight",
+  "name": "@swagglar/highlight",
   "version": "0.1.0",
   "type": "module",
   "sideEffects": false,
@@ -416,7 +416,7 @@ A tiny, modular syntax highlighter. **What you import is what you ship.**
 ## Install
 
 \`\`\`bash
-npm install @scalar/highlight
+npm install @swagglar/highlight
 \`\`\`
 
 ## Why another one?

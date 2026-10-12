@@ -1,9 +1,9 @@
-import { REFERENCE_LS_KEYS, safeLocalStorage } from '@scalar/helpers/object/local-storage'
-import type { OpenAPIV3_1 } from '@scalar/openapi-types'
-import type { WorkspaceStore } from '@scalar/workspace-store/client'
-import type { AuthStore } from '@scalar/workspace-store/entities/auth'
-import { type Auth, AuthSchema } from '@scalar/workspace-store/entities/auth'
-import type { SecuritySchemeObjectSecret } from '@scalar/workspace-store/request-example'
+import { REFERENCE_LS_KEYS, safeLocalStorage } from '@swagglar/helpers/object/local-storage'
+import type { OpenAPIV3_1 } from '@swagglar/openapi-types'
+import type { WorkspaceStore } from '@swagglar/workspace-store/client'
+import type { AuthStore } from '@swagglar/workspace-store/entities/auth'
+import { type Auth, AuthSchema } from '@swagglar/workspace-store/entities/auth'
+import type { SecuritySchemeObjectSecret } from '@swagglar/workspace-store/request-example'
 import {
   getSecurityRequirements,
   getSecuritySchemes,
@@ -11,10 +11,10 @@ import {
   getSelectedServer,
   getServers,
   mergeSecurity,
-} from '@scalar/workspace-store/request-example'
-import { isOpenApiDocument } from '@scalar/workspace-store/schemas/type-guards'
-import { coerceValue } from '@scalar/workspace-store/schemas/typebox-coerce'
-import type { OpenApiDocument, OperationObject } from '@scalar/workspace-store/schemas/v3.2/strict/openapi-document'
+} from '@swagglar/workspace-store/request-example'
+import { isOpenApiDocument } from '@swagglar/workspace-store/schemas/type-guards'
+import { coerceValue } from '@swagglar/workspace-store/schemas/typebox-coerce'
+import type { OpenApiDocument, OperationObject } from '@swagglar/workspace-store/schemas/v3.2/strict/openapi-document'
 
 export function getOperations(doc: Partial<OpenAPIV3_1.Document>) {
   return Object.values(doc.paths ?? {}).flatMap((path) => Object.values(path ?? {})) as OperationObject[]

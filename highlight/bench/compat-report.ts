@@ -1,5 +1,5 @@
 /**
- * Swap report for `@scalar/code-highlight`.
+ * Swap report for `@swagglar/code-highlight`.
  *
  * Answers the three questions a reviewer actually has before flipping
  * `ScalarCodeBlock` over to this package:
@@ -13,7 +13,7 @@
  */
 import '../src/all'
 
-import { syntaxHighlight as referenceHighlight } from '@scalar/code-highlight/code'
+import { syntaxHighlight as referenceHighlight } from '@swagglar/code-highlight/code'
 
 import { syntaxHighlight } from '../src/compat/index'
 import { standardLanguages, unsupportedLanguages } from '../src/compat/languages'
@@ -190,6 +190,6 @@ const afterRate = throughput(() => {
 console.log('\n## Throughput, whole corpus, source in and HTML out\n')
 console.log('| pipeline | rate |')
 console.log('| --- | ---: |')
-console.log(`| @scalar/code-highlight (lowlight + rehype) | ${mb(beforeRate)} |`)
-console.log(`| @scalar/highlight/compat | ${mb(afterRate)} |`)
+console.log(`| @swagglar/code-highlight (lowlight + rehype) | ${mb(beforeRate)} |`)
+console.log(`| @swagglar/highlight/compat | ${mb(afterRate)} |`)
 console.log(`\nspeedup: ${(afterRate / beforeRate).toFixed(1)}×`)

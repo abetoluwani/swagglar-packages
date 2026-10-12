@@ -1,5 +1,5 @@
 {
-  "name": "@scalar/object-utils",
+  "name": "@swagglar/object-utils",
   "description": "Object manipulation utilities",
   "license": "MIT",
   "author": "Scalar (https://github.com/scalar)",
@@ -65,7 +65,7 @@
     "CHANGELOG.md"
   ],
   "dependencies": {
-    "@scalar/helpers": "workspace:*",
+    "@swagglar/helpers": "workspace:*",
     "flatted": "catalog:*",
     "just-clone": "^6.2.0",
     "ts-deepmerge": "^8.0.0"

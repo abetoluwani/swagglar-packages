@@ -1,5 +1,5 @@
-import { HTTP_METHODS } from '@scalar/helpers/http/http-methods'
-import type { OpenAPIV3_1 } from '@scalar/openapi-types'
+import { HTTP_METHODS } from '@swagglar/helpers/http/http-methods'
+import type { OpenAPIV3_1 } from '@swagglar/openapi-types'
 
 /**
  * Collects all example names used on parameters and requestBodies

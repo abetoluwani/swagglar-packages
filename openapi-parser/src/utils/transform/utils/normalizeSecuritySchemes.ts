@@ -1,4 +1,4 @@
-import type { AnyObject } from '@scalar/types/utils'
+import type { AnyObject } from '@swagglar/types/utils'
 
 export const normalizeSecuritySchemes = (definition: AnyObject) => {
   if (!definition.components?.securitySchemes) {

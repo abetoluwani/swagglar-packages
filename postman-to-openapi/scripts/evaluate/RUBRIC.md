@@ -17,7 +17,7 @@ Score each dimension **1-5** with a short note grounded in specifics from the in
 Did `convert()` return a document, or did it throw? For thrown errors, capture the error name and message verbatim from the run report. A throw is always a 1.
 
 ### 2. Description validity
-Did `@scalar/openapi-parser` `validate()` accept the output against the OpenAPI Specification? Invalid description documents are at most a 2; list the top few validation errors in the report.
+Did `@swagglar/openapi-parser` `validate()` accept the output against the OpenAPI Specification? Invalid description documents are at most a 2; list the top few validation errors in the report.
 
 ### 3. Request coverage
 Count of Postman requests vs. resulting OpenAPI operations. A 5 means every request became an operation with the correct method. A 3 means several requests were dropped or merged incorrectly.

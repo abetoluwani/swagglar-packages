@@ -1,4 +1,4 @@
-import { normalize } from '@scalar/json-magic/helpers/normalize'
+import { normalize } from '@swagglar/json-magic/helpers/normalize'
 import { describe, expect, it } from 'vitest'
 import { stringify as toYaml } from 'yaml'
 

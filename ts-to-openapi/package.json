@@ -1,5 +1,5 @@
 {
-  "name": "@scalar/ts-to-openapi",
+  "name": "@swagglar/ts-to-openapi",
   "description": "Convert typescript types to openapi spec compliant json",
   "license": "MIT",
   "author": "Scalar (https://github.com/scalar)",

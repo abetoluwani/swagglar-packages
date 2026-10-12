@@ -528,7 +528,7 @@ describe('parameters', () => {
 
       const result = createParameterObject(param, 'query', 'default')
 
-      // @ts-expect-error @scalar/openapi-types does not allow extensions here
+      // @ts-expect-error @swagglar/openapi-types does not allow extensions here
       expect(result['x-scalar-disabled']).toBe(true)
       expect(result.name).toBe('page')
       expect(result?.examples?.default?.value).toBe('1')
@@ -543,7 +543,7 @@ describe('parameters', () => {
 
       const result = createParameterObject(param, 'path', 'default')
 
-      // @ts-expect-error @scalar/openapi-types does not allow extensions here
+      // @ts-expect-error @swagglar/openapi-types does not allow extensions here
       expect(result['x-scalar-disabled']).toBe(true)
       expect(result?.name).toBe('userId')
       expect(result.required).toBe(true)
@@ -558,7 +558,7 @@ describe('parameters', () => {
 
       const result = createParameterObject(param, 'header', 'default')
 
-      // @ts-expect-error @scalar/openapi-types does not allow extensions here
+      // @ts-expect-error @swagglar/openapi-types does not allow extensions here
       expect(result?.['x-scalar-disabled']).toBe(true)
       expect(result.name).toBe('X-Custom-Header')
       expect(result?.examples?.default?.value).toBe('value')
@@ -573,7 +573,7 @@ describe('parameters', () => {
 
       const result = createParameterObject(param, 'query', 'default')
 
-      // @ts-expect-error @scalar/openapi-types does not allow extensions here
+      // @ts-expect-error @swagglar/openapi-types does not allow extensions here
       expect(result['x-scalar-disabled']).toBeUndefined()
     })
 
@@ -585,7 +585,7 @@ describe('parameters', () => {
 
       const result = createParameterObject(param, 'query', 'default')
 
-      // @ts-expect-error @scalar/openapi-types does not allow extensions here
+      // @ts-expect-error @swagglar/openapi-types does not allow extensions here
       expect(result['x-scalar-disabled']).toBeUndefined()
     })
   })
@@ -615,11 +615,11 @@ describe('parameters', () => {
       expect(result).toHaveLength(2)
       const pageParam = result.find((p: any) => p.name === 'page')
       expect(pageParam).toBeDefined()
-      // @ts-expect-error @scalar/openapi-types does not allow extensions here
+      // @ts-expect-error @swagglar/openapi-types does not allow extensions here
       expect(pageParam?.['x-scalar-disabled']).toBe(true)
       const limitParam = result.find((p: any) => p.name === 'limit')
       expect(limitParam).toBeDefined()
-      // @ts-expect-error @scalar/openapi-types does not allow extensions here
+      // @ts-expect-error @swagglar/openapi-types does not allow extensions here
       expect(limitParam?.['x-scalar-disabled']).toBeUndefined()
     })
 
@@ -647,11 +647,11 @@ describe('parameters', () => {
       expect(result).toHaveLength(2)
       const traceParam = result.find((p: any) => p.name === 'X-Trace-Id')
       expect(traceParam).toBeDefined()
-      // @ts-expect-error @scalar/openapi-types does not allow extensions here
+      // @ts-expect-error @swagglar/openapi-types does not allow extensions here
       expect(traceParam?.['x-scalar-disabled']).toBe(true)
       const requestIdParam = result.find((p: any) => p.name === 'X-Request-ID')
       expect(requestIdParam).toBeDefined()
-      // @ts-expect-error @scalar/openapi-types does not allow extensions here
+      // @ts-expect-error @swagglar/openapi-types does not allow extensions here
       expect(requestIdParam?.['x-scalar-disabled']).toBeUndefined()
     })
 
@@ -673,7 +673,7 @@ describe('parameters', () => {
       const result = extractParameters(request, 'default')
 
       expect(result).toHaveLength(1)
-      // @ts-expect-error @scalar/openapi-types does not allow extensions here
+      // @ts-expect-error @swagglar/openapi-types does not allow extensions here
       expect(result[0]?.['x-scalar-disabled']).toBe(true)
       expect(result[0]?.name).toBe('userId')
     })

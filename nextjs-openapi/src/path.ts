@@ -1,6 +1,6 @@
 import { extname, join } from 'node:path'
 
-import { generateResponses, getJSDocFromNode, getSchemaFromTypeNode } from '@scalar/ts-to-openapi'
+import { generateResponses, getJSDocFromNode, getSchemaFromTypeNode } from '@swagglar/ts-to-openapi'
 import type { OpenAPIV3_1 } from 'openapi-types'
 import {
   type Identifier,

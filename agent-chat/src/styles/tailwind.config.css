@@ -5,8 +5,8 @@
  * generate the appropriate Tailwind utilities for Agent Chat.
  */
 
-@import "@scalar/components/tailwind.config.css";
-@import "@scalar/api-client/tailwind.config.css";
+@import "@swagglar/components/tailwind.config.css";
+@import "@swagglar/api-client/tailwind.config.css";
 
 /* Search for Tailwind classes in Agent Chat */
 @source "../";

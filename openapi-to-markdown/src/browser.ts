@@ -1,4 +1,4 @@
-import type { OpenApiDocument } from '@scalar/workspace-store/schemas/v3.2/strict/openapi-document'
+import type { OpenApiDocument } from '@swagglar/workspace-store/schemas/v3.2/strict/openapi-document'
 
 import { createDocumentRenderer } from './render-document'
 import { type OpenApiRenderOptions, selectDocument } from './select-document'

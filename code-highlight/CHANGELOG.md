@@ -1,4 +1,4 @@
-# @scalar/code-highlight
+# @swagglar/code-highlight
 
 ## 0.4.7
 

@@ -1,5 +1,5 @@
 {
-  "name": "@scalar/openapi-types",
+  "name": "@swagglar/openapi-types",
   "description": "Modern OpenAPI types",
   "license": "MIT",
   "author": "Scalar (https://github.com/scalar)",

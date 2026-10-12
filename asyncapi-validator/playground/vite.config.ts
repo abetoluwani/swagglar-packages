@@ -10,7 +10,7 @@ export default defineConfig({
   plugins: [vue(), tailwindcss()],
   resolve: {
     alias: {
-      '@scalar/asyncapi-validator': resolve(import.meta.dirname, '../src/index.ts'),
+      '@swagglar/asyncapi-validator': resolve(import.meta.dirname, '../src/index.ts'),
       '@': resolve(import.meta.dirname, '../src'),
     },
   },

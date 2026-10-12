@@ -1,8 +1,8 @@
-# AGENTS.md – `@scalar/components`
+# AGENTS.md – `@swagglar/components`
 
 ## Package Overview
 
-`@scalar/components` is the shared Vue component library used across all Scalar UI packages. It includes buttons, inputs, modals, dropdowns, code blocks, icons, and other base components. Storybook is the primary development and testing environment.
+`@swagglar/components` is the shared Vue component library used across all Scalar UI packages. It includes buttons, inputs, modals, dropdowns, code blocks, icons, and other base components. Storybook is the primary development and testing environment.
 
 ## Visual Testing
 
@@ -16,7 +16,7 @@ pnpm dev    # Starts Storybook on http://localhost:5100
 Or from the repo root with Turbo (auto-builds dependencies):
 
 ```bash
-pnpm turbo --filter @scalar/components dev
+pnpm turbo --filter @swagglar/components dev
 ```
 
 Storybook runs on **port 5100** and renders all component stories.
@@ -31,10 +31,10 @@ Storybook runs on **port 5100** and renders all component stories.
 
 ### Downstream impact
 
-Components from this library are consumed by `@scalar/api-reference` and `@scalar/api-client`. After verifying changes in Storybook, also check the relevant downstream playground:
+Components from this library are consumed by `@swagglar/api-reference` and `@swagglar/api-client`. After verifying changes in Storybook, also check the relevant downstream playground:
 
-- **api-reference**: `pnpm turbo --filter @scalar/api-reference dev`
-- **api-client**: `pnpm turbo --filter @scalar/api-client dev`
+- **api-reference**: `pnpm turbo --filter @swagglar/api-reference dev`
+- **api-client**: `pnpm turbo --filter @swagglar/api-client dev`
 
 ### E2E tests
 
@@ -99,7 +99,7 @@ Use the two-script-block pattern: a plain `<script lang="ts">` block for compone
 export default {}
 </script>
 <script setup lang="ts">
-import { cva, useBindCx } from '@scalar/use-hooks/useBindCx'
+import { cva, useBindCx } from '@swagglar/use-hooks/useBindCx'
 
 const { label } = defineProps<{
   /** Visible label text */
@@ -120,7 +120,7 @@ const { cx } = useBindCx()
 Key conventions:
 - **`defineOptions({ inheritAttrs: false })`** + **`useBindCx()`** — lets consumers override Tailwind classes via the `class` attribute.
 - **`v-bind="cx(...)"`** on the root element merges component classes with consumer overrides.
-- **`cva()`** for variant-based styling (import from `@scalar/use-hooks/useBindCx`).
+- **`cva()`** for variant-based styling (import from `@swagglar/use-hooks/useBindCx`).
 - **Destructure props** with defaults: `const { size = 'md' } = defineProps<Props>()`.
 - **JSDoc** on every prop, slot (`defineSlots`), and emit (`defineEmits`).
 - For non-trivial props types, define them in a separate `types.ts` and import: `import type { ScalarExampleProps } from './types'`.
@@ -153,7 +153,7 @@ export * from './components/example'
 
 ### 6. Expose a subpath export in `package.json`
 
-Consumers must import components from their subpath (for example `@scalar/components/example`), not from the package barrel — importing from `@scalar/components` is blocked by lint so that bundles stay tree-shakeable. Add a matching entry to the `exports` map in `package.json`, keyed by the kebab-case directory name:
+Consumers must import components from their subpath (for example `@swagglar/components/example`), not from the package barrel — importing from `@swagglar/components` is blocked by lint so that bundles stay tree-shakeable. Add a matching entry to the `exports` map in `package.json`, keyed by the kebab-case directory name:
 
 ```jsonc
 "./example": {

@@ -1,4 +1,4 @@
-import '@scalar/themes/style.css'
+import '@swagglar/themes/style.css'
 import './style.css'
 
 import { createApp } from 'vue'

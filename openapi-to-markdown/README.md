@@ -1,8 +1,8 @@
 # Scalar OpenAPI to Markdown
 
-[![Version](https://img.shields.io/npm/v/%40scalar/openapi-to-markdown)](https://www.npmjs.com/package/@scalar/openapi-to-markdown)
-[![Downloads](https://img.shields.io/npm/dm/%40scalar/openapi-to-markdown)](https://www.npmjs.com/package/@scalar/openapi-to-markdown)
-[![License](https://img.shields.io/npm/l/%40scalar%2Fopenapi-to-markdown)](https://www.npmjs.com/package/@scalar/openapi-to-markdown)
+[![Version](https://img.shields.io/npm/v/%40scalar/openapi-to-markdown)](https://www.npmjs.com/package/@swagglar/openapi-to-markdown)
+[![Downloads](https://img.shields.io/npm/dm/%40scalar/openapi-to-markdown)](https://www.npmjs.com/package/@swagglar/openapi-to-markdown)
+[![License](https://img.shields.io/npm/l/%40scalar%2Fopenapi-to-markdown)](https://www.npmjs.com/package/@swagglar/openapi-to-markdown)
 [![Discord](https://img.shields.io/discord/1135330207960678410?style=flat&color=5865F2)](https://discord.gg/scalar)
 
 A Node.js package to generate LLM-friendly Markdown from OpenAPI documents.
@@ -23,13 +23,13 @@ Scalar is an open-source API platform for teams who want beautiful developer int
 ## Installation
 
 ```bash
-npm install @scalar/openapi-to-markdown
+npm install @swagglar/openapi-to-markdown
 ```
 
 ## Usage
 
 ```ts
-import { createMarkdownFromOpenApi } from '@scalar/openapi-to-markdown'
+import { createMarkdownFromOpenApi } from '@swagglar/openapi-to-markdown'
 
 const content = {
   openapi: '3.1.1',
@@ -75,7 +75,7 @@ It loads, upgrades, coerces, and resolves the document once. Each call uses the 
 `createMarkdownFromOpenApi`, and omitting a selector renders the complete document.
 
 ```ts
-import { createOpenApiMarkdownRenderer } from '@scalar/openapi-to-markdown'
+import { createOpenApiMarkdownRenderer } from '@swagglar/openapi-to-markdown'
 
 const renderer = await createOpenApiMarkdownRenderer(content)
 
@@ -102,7 +102,7 @@ later calls on the same renderer.
 You use the package with any Node.js framework. Here is an example for [Hono](https://hono.dev/):
 
 ```ts
-import { createMarkdownFromOpenApi } from '@scalar/openapi-to-markdown'
+import { createMarkdownFromOpenApi } from '@swagglar/openapi-to-markdown'
 import { Hono } from 'hono'
 
 // Generate Markdown from an OpenAPI document
@@ -180,12 +180,12 @@ Selection does not add support for every OpenAPI or JSON Schema keyword. Callbac
 ### Copying Markdown in the browser
 
 Use the browser entry point with an OpenAPI document already resolved by
-`@scalar/workspace-store`. It supports the same page selectors as the default
+`@swagglar/workspace-store`. It supports the same page selectors as the default
 entry point, without file loading or HTML minification.
 
 ```ts
 const { createMarkdownFromOpenApi } =
-  await import('@scalar/openapi-to-markdown/browser')
+  await import('@swagglar/openapi-to-markdown/browser')
 
 const markdown = await createMarkdownFromOpenApi(document, {
   operation: { path: '/users/{id}', method: 'get' },

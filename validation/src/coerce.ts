@@ -276,7 +276,7 @@ const coerceInner = (
     if (!warningState.emitted) {
       warningState.emitted = true
       console.warn(
-        `[@scalar/validation] coerce stopped at nesting depth ${MAX_COERCE_DEPTH}; deeper values are left as-is.`,
+        `[@swagglar/validation] coerce stopped at nesting depth ${MAX_COERCE_DEPTH}; deeper values are left as-is.`,
       )
     }
     return value
@@ -436,7 +436,7 @@ type SafeStatic<S extends Schema> = [Schema] extends [S] ? any : Static<S>
  *
  * @example
  * ```ts
- * import { coerce, number, object, string } from '@scalar/validation'
+ * import { coerce, number, object, string } from '@swagglar/validation'
  *
  * coerce(number(), 42) // 42
  * coerce(number(), 'nope') // 0 — invalid number uses default

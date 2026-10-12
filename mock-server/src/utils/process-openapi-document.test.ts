@@ -3,8 +3,8 @@ import { createServer } from 'node:http'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 
-import { getRaw } from '@scalar/json-magic/magic-proxy'
-import { getResolvedRef } from '@scalar/workspace-store/helpers/get-resolved-ref'
+import { getRaw } from '@swagglar/json-magic/magic-proxy'
+import { getResolvedRef } from '@swagglar/workspace-store/helpers/get-resolved-ref'
 import { describe, expect, it } from 'vitest'
 
 import { processOpenApiDocument } from './process-openapi-document'

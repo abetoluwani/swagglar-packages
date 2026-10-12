@@ -1,7 +1,7 @@
-import { normalizeError } from '@scalar/helpers/errors/normalize-error'
-import { isElectron } from '@scalar/helpers/general/is-electron'
-import { isStreamingContentType } from '@scalar/helpers/http/is-streaming-content-type'
-import type { RequestFactory, VariablesStore } from '@scalar/workspace-store/request-example'
+import { normalizeError } from '@swagglar/helpers/errors/normalize-error'
+import { isElectron } from '@swagglar/helpers/general/is-electron'
+import { isStreamingContentType } from '@swagglar/helpers/http/is-streaming-content-type'
+import type { RequestFactory, VariablesStore } from '@swagglar/workspace-store/request-example'
 
 import type { ConsoleContext } from '../context/console'
 import type { TestResult } from '../execute-post-response-script'

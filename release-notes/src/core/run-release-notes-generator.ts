@@ -1,7 +1,7 @@
 import { readFile } from 'node:fs/promises'
 import { dirname, resolve } from 'node:path'
 
-import { buildReleaseNotesPreamble } from '@scalar/helpers/markdown/release-notes'
+import { buildReleaseNotesPreamble } from '@swagglar/helpers/markdown/release-notes'
 
 import type { GithubOptions, PromptOptions, ReleaseNotesProduct, ReleaseNotesProvider } from '../config/types'
 import { writeReleaseNoteJson } from '../writers/write-release-notes-json'

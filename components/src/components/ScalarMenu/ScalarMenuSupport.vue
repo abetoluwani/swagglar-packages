@@ -11,7 +11,7 @@ export default {}
 </script>
 
 <script setup lang="ts">
-import { ScalarIconDiscordLogo, ScalarIconGithubLogo } from '@scalar/icons'
+import { ScalarIconDiscordLogo, ScalarIconGithubLogo } from '@swagglar/icons'
 
 import ScalarMenuLink from './ScalarMenuLink.vue'
 import ScalarMenuSection from './ScalarMenuSection.vue'

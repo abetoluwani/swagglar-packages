@@ -1,5 +1,5 @@
 {
-  "name": "@scalar/mock-server-docker",
+  "name": "@swagglar/mock-server-docker",
   "description": "Docker image for the Scalar Mock Server",
   "license": "MIT",
   "author": "Scalar (https://github.com/scalar)",
@@ -38,7 +38,7 @@
   },
   "dependencies": {
     "@scalar/hono-api-reference": "workspace:*",
-    "@scalar/mock-server": "workspace:*",
+    "@swagglar/mock-server": "workspace:*",
     "@hono/node-server": "catalog:*"
   },
   "devDependencies": {

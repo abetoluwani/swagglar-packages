@@ -1,4 +1,4 @@
-import { getStarterTheme, themePresets } from '@scalar/themes'
+import { getStarterTheme, themePresets } from '@swagglar/themes'
 import type { Meta, StoryObj } from '@storybook/vue3-vite'
 
 import ScalarThemeSwatches from './ScalarThemeSwatches.vue'

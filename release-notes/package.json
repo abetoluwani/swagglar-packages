@@ -1,5 +1,5 @@
 {
-  "name": "@scalar/release-notes",
+  "name": "@swagglar/release-notes",
   "description": "Generate curated release notes from Changesets changelogs with pluggable AI providers",
   "license": "MIT",
   "author": "Scalar (https://github.com/scalar)",
@@ -56,7 +56,7 @@
   },
   "sideEffects": false,
   "dependencies": {
-    "@scalar/helpers": "workspace:*",
+    "@swagglar/helpers": "workspace:*",
     "commander": "catalog:*",
     "zod": "catalog:*"
   },

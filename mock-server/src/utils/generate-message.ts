@@ -1,4 +1,4 @@
-import { getResolvedRefDeep } from '@scalar/workspace-store/helpers/get-resolved-ref-deep'
+import { getResolvedRefDeep } from '@swagglar/workspace-store/helpers/get-resolved-ref-deep'
 
 import type { MockMessage, ResolvedChannel, ResolvedMessage } from '@/transports/types'
 import { type ExampleSchema, generateResponseExample } from '@/utils/generate-response-example'

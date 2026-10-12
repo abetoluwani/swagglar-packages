@@ -1,5 +1,5 @@
 {
-  "name": "@scalar/snippetz",
+  "name": "@swagglar/snippetz",
   "license": "MIT",
   "author": "Scalar (https://github.com/scalar)",
   "homepage": "https://github.com/scalar/scalar",
@@ -247,8 +247,8 @@
     "CHANGELOG"
   ],
   "dependencies": {
-    "@scalar/helpers": "workspace:*",
-    "@scalar/types": "workspace:*",
+    "@swagglar/helpers": "workspace:*",
+    "@swagglar/types": "workspace:*",
     "js-base64": "catalog:*"
   },
   "devDependencies": {

@@ -1,5 +1,5 @@
 {
-  "name": "@scalar/types",
+  "name": "@swagglar/types",
   "description": "Types to work with Scalar packages",
   "license": "MIT",
   "author": "Scalar (https://github.com/scalar)",
@@ -129,7 +129,7 @@
     "CHANGELOG.md"
   ],
   "dependencies": {
-    "@scalar/helpers": "workspace:*",
+    "@swagglar/helpers": "workspace:*",
     "nanoid": "catalog:*",
     "type-fest": "catalog:*",
     "zod": "catalog:*"

@@ -1,4 +1,4 @@
-import { PETSTORE_URL_2_0, STRIPE_URL_3_0 } from '@scalar/helpers/url/oas-document-fixtures'
+import { PETSTORE_URL_2_0, STRIPE_URL_3_0 } from '@swagglar/helpers/url/oas-document-fixtures'
 import { bench, describe, expect } from 'vitest'
 
 import { upgradeFromTwoToThree } from './2.0-to-3.0/upgrade-from-two-to-three'

@@ -1,4 +1,4 @@
-# @scalar/helpers
+# @swagglar/helpers
 
 A collection of dependency free helpers
 

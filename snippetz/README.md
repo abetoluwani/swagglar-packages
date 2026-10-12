@@ -1,8 +1,8 @@
 # Snippetz
 
-[![Version](https://img.shields.io/npm/v/%40scalar/snippetz)](https://www.npmjs.com/package/@scalar/snippetz)
-[![Downloads](https://img.shields.io/npm/dm/%40scalar/snippetz)](https://www.npmjs.com/package/@scalar/snippetz)
-[![License](https://img.shields.io/npm/l/%40scalar%2Fsnippetz)](https://www.npmjs.com/package/@scalar/snippetz)
+[![Version](https://img.shields.io/npm/v/%40scalar/snippetz)](https://www.npmjs.com/package/@swagglar/snippetz)
+[![Downloads](https://img.shields.io/npm/dm/%40scalar/snippetz)](https://www.npmjs.com/package/@swagglar/snippetz)
+[![License](https://img.shields.io/npm/l/%40scalar%2Fsnippetz)](https://www.npmjs.com/package/@swagglar/snippetz)
 [![Discord](https://img.shields.io/discord/1135330207960678410?style=flat&color=5865F2)](https://discord.gg/scalar)
 
 A modern way to generate HTTP request examples for different languages and libraries.
@@ -23,13 +23,13 @@ Scalar is an open-source API platform for teams who want beautiful developer int
 ## Installation
 
 ```bash
-npm install @scalar/snippetz
+npm install @swagglar/snippetz
 ```
 
 ## Usage
 
 ```ts
-import { snippetz } from '@scalar/snippetz'
+import { snippetz } from '@swagglar/snippetz'
 
 const snippet = snippetz().print('node', 'undici', {
   url: 'https://example.com',
@@ -49,7 +49,7 @@ const snippet = snippetz().print('node', 'undici', {
 ### Get all plugins
 
 ```ts
-import { snippetz } from '@scalar/snippetz'
+import { snippetz } from '@swagglar/snippetz'
 
 const snippet = snippetz().plugins()
 
@@ -66,7 +66,7 @@ const snippet = snippetz().plugins()
 ### Check if a plugin is loaded
 
 ```ts
-import { snippetz } from '@scalar/snippetz'
+import { snippetz } from '@swagglar/snippetz'
 
 const snippet = snippetz().hasPlugin('node', 'undici')
 
@@ -80,7 +80,7 @@ const snippet = snippetz().hasPlugin('node', 'undici')
 You can also just use one specific plugin to keep your bundle size small.
 
 ```ts
-import { nodeUndici } from '@scalar/snippetz/plugins/node/undici'
+import { nodeUndici } from '@swagglar/snippetz/plugins/node/undici'
 
 const result = nodeUndici.generate({
   url: 'https://example.com',

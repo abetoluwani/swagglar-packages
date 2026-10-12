@@ -1,25 +1,25 @@
-import { createLimiter } from '@scalar/helpers/general/create-limiter'
-import { extractConfigSecrets, removeSecretFields } from '@scalar/helpers/general/extract-config-secrets'
-import { CONTENT_TYPES } from '@scalar/helpers/http/content-types'
-import { objectEntries } from '@scalar/helpers/object/object-entries'
-import { toJsonCompatible } from '@scalar/helpers/object/to-json-compatible'
-import { slugger } from '@scalar/helpers/string/slugger'
-import { extractServerFromPath } from '@scalar/helpers/url/extract-server-from-path'
-import { type ThemeId, presets } from '@scalar/themes'
-import type { Oauth2Flow } from '@scalar/types/entities'
-import { createWorkspaceStore } from '@scalar/workspace-store/client'
-import { type Auth, AuthSchema } from '@scalar/workspace-store/entities/auth'
-import { setPathItemOperation } from '@scalar/workspace-store/helpers/for-each-path-item-operation'
-import { createWorkspaceStorePersistence, generateWorkspaceUid } from '@scalar/workspace-store/persistence'
+import { createLimiter } from '@swagglar/helpers/general/create-limiter'
+import { extractConfigSecrets, removeSecretFields } from '@swagglar/helpers/general/extract-config-secrets'
+import { CONTENT_TYPES } from '@swagglar/helpers/http/content-types'
+import { objectEntries } from '@swagglar/helpers/object/object-entries'
+import { toJsonCompatible } from '@swagglar/helpers/object/to-json-compatible'
+import { slugger } from '@swagglar/helpers/string/slugger'
+import { extractServerFromPath } from '@swagglar/helpers/url/extract-server-from-path'
+import { type ThemeId, presets } from '@swagglar/themes'
+import type { Oauth2Flow } from '@swagglar/types/entities'
+import { createWorkspaceStore } from '@swagglar/workspace-store/client'
+import { type Auth, AuthSchema } from '@swagglar/workspace-store/entities/auth'
+import { setPathItemOperation } from '@swagglar/workspace-store/helpers/for-each-path-item-operation'
+import { createWorkspaceStorePersistence, generateWorkspaceUid } from '@swagglar/workspace-store/persistence'
 import {
   type XScalarEnvironments,
   xScalarEnvironmentSchema,
-} from '@scalar/workspace-store/schemas/extensions/document/x-scalar-environments'
-import { xScalarCookieSchema } from '@scalar/workspace-store/schemas/extensions/general/x-scalar-cookies'
-import type { XTagGroup } from '@scalar/workspace-store/schemas/extensions/tag'
-import type { InMemoryWorkspace } from '@scalar/workspace-store/schemas/inmemory-workspace'
-import { isOpenApiDocument } from '@scalar/workspace-store/schemas/type-guards'
-import { coerceValue } from '@scalar/workspace-store/schemas/typebox-coerce'
+} from '@swagglar/workspace-store/schemas/extensions/document/x-scalar-environments'
+import { xScalarCookieSchema } from '@swagglar/workspace-store/schemas/extensions/general/x-scalar-cookies'
+import type { XTagGroup } from '@swagglar/workspace-store/schemas/extensions/tag'
+import type { InMemoryWorkspace } from '@swagglar/workspace-store/schemas/inmemory-workspace'
+import { isOpenApiDocument } from '@swagglar/workspace-store/schemas/type-guards'
+import { coerceValue } from '@swagglar/workspace-store/schemas/typebox-coerce'
 import type {
   OperationObject,
   ParameterObject,
@@ -29,9 +29,9 @@ import type {
   RequestBodyObject,
   ServerObject,
   TagObject,
-} from '@scalar/workspace-store/schemas/v3.2/strict/openapi-document'
-import type { WorkspaceExtensions, WorkspaceMeta } from '@scalar/workspace-store/schemas/workspace'
-import { ColorModeSchema } from '@scalar/workspace-store/schemas/workspace'
+} from '@swagglar/workspace-store/schemas/v3.2/strict/openapi-document'
+import type { WorkspaceExtensions, WorkspaceMeta } from '@swagglar/workspace-store/schemas/workspace'
+import { ColorModeSchema } from '@swagglar/workspace-store/schemas/workspace'
 
 import { migrator } from '@/migrations/migrator'
 import type { v_2_5_0 } from '@/migrations/v-2.5.0/types.generated'

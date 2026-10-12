@@ -21,10 +21,10 @@ export default {}
 </script>
 
 <script lang="ts" setup>
-import { ServerVariablesForm } from '@scalar/api-client/components/Server'
-import { ScalarMarkdown } from '@scalar/components/markdown'
-import type { WorkspaceEventBus } from '@scalar/workspace-store/events'
-import type { ServerObject } from '@scalar/workspace-store/schemas/v3.2/strict/openapi-document'
+import { ServerVariablesForm } from '@swagglar/api-client/components/Server'
+import { ScalarMarkdown } from '@swagglar/components/markdown'
+import type { WorkspaceEventBus } from '@swagglar/workspace-store/events'
+import type { ServerObject } from '@swagglar/workspace-store/schemas/v3.2/strict/openapi-document'
 import { useId } from 'vue'
 
 import Selector from './Selector.vue'

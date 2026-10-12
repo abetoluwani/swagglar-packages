@@ -24,7 +24,7 @@
 export default {}
 </script>
 <script setup lang="ts">
-import { cva, useBindCx } from '@scalar/use-hooks/useBindCx'
+import { cva, useBindCx } from '@swagglar/use-hooks/useBindCx'
 
 import { ScalarIconLegacyAdapter } from '../ScalarIcon'
 import ScalarSidebarIndent from './ScalarSidebarIndent.vue'

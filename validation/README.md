@@ -1,4 +1,4 @@
-# `@scalar/validation`
+# `@swagglar/validation`
 
 Small, schema-first helpers to **check** unknown data and **coerce** it into predictable shapes. Schemas are plain JavaScript objects (easy to serialize or log), and TypeScript can infer output types with `Static`.
 
@@ -20,13 +20,13 @@ Scalar is an open-source API platform for teams who want beautiful developer int
 This package lives in the Scalar monorepo. In workspace consumers:
 
 ```bash
-pnpm add @scalar/validation
+pnpm add @swagglar/validation
 ```
 
 ## Quick start
 
 ```ts
-import { coerce, number, object, string, validate, type Static } from '@scalar/validation'
+import { coerce, number, object, string, validate, type Static } from '@swagglar/validation'
 
 const userSchema = object({
   id: number(),
@@ -88,7 +88,7 @@ Use **`validate`** when you need a yes/no. Use **`coerce`** when you want a stab
 | `evaluate(fn, schema)` | Runs `fn(value)` then validates `schema` | `Static<schema>` |
 
 ```ts
-import { lazy, object, string, union, literal } from '@scalar/validation'
+import { lazy, object, string, union, literal } from '@swagglar/validation'
 
 // Discriminated-style union
 const message = union([
@@ -100,7 +100,7 @@ const message = union([
 ### `evaluate` — parse then validate
 
 ```ts
-import { evaluate, number, string } from '@scalar/validation'
+import { evaluate, number, string } from '@swagglar/validation'
 
 const trimmed = evaluate((v) => (typeof v === 'string' ? v.trim() : v), string())
 
@@ -123,9 +123,9 @@ validate(trimmed, '  hi  ') // true (after trim)
 ## Development
 
 ```bash
-pnpm --filter @scalar/validation test
-pnpm --filter @scalar/validation types:check
-pnpm --filter @scalar/validation build
+pnpm --filter @swagglar/validation test
+pnpm --filter @swagglar/validation types:check
+pnpm --filter @swagglar/validation build
 ```
 
 ## License

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { javascript } from '@codemirror/lang-javascript'
-import { useCodeMirror } from '@scalar/use-codemirror'
+import { useCodeMirror } from '@swagglar/use-codemirror'
 import { ref, toRef } from 'vue'
 
 const props = defineProps<{

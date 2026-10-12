@@ -1,4 +1,4 @@
-import { isObject } from '@scalar/helpers/object/is-object'
+import { isObject } from '@swagglar/helpers/object/is-object'
 
 import { escapeJsonPointer } from '@/helpers/escape-json-pointer'
 import { getId } from '@/helpers/get-schemas'

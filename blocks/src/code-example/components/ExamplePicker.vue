@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import { ScalarButton } from '@scalar/components/button'
+import { ScalarButton } from '@swagglar/components/button'
 import {
   ScalarListbox,
   type ScalarListboxOption,
-} from '@scalar/components/listbox'
-import { ScalarIconCaretDown } from '@scalar/icons'
-import type { MediaTypeObject } from '@scalar/workspace-store/schemas/v3.2/strict/openapi-document'
+} from '@swagglar/components/listbox'
+import { ScalarIconCaretDown } from '@swagglar/icons'
+import type { MediaTypeObject } from '@swagglar/workspace-store/schemas/v3.2/strict/openapi-document'
 import { computed } from 'vue'
 
 const { examples = {} } = defineProps<{

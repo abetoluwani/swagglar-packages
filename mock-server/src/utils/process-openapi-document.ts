@@ -1,21 +1,21 @@
 import path from 'node:path'
 import { cwd } from 'node:process'
 
-import { bundle } from '@scalar/json-magic/bundle'
-import { fetchUrls, parseJson, parseYaml, readFiles } from '@scalar/json-magic/bundle/plugins/node'
-import { isFilePath } from '@scalar/json-magic/helpers/is-file-path'
-import { isHttpUrl } from '@scalar/json-magic/helpers/is-http-url'
-import { createMagicProxy } from '@scalar/json-magic/magic-proxy'
-import type { OpenAPIV3_1, OpenAPIV3_2 } from '@scalar/openapi-types'
-import { upgrade } from '@scalar/openapi-upgrader'
-import { openApiDocument, resolveOpenApiDocument } from '@scalar/workspace-store/plugins/bundler'
+import { bundle } from '@swagglar/json-magic/bundle'
+import { fetchUrls, parseJson, parseYaml, readFiles } from '@swagglar/json-magic/bundle/plugins/node'
+import { isFilePath } from '@swagglar/json-magic/helpers/is-file-path'
+import { isHttpUrl } from '@swagglar/json-magic/helpers/is-http-url'
+import { createMagicProxy } from '@swagglar/json-magic/magic-proxy'
+import type { OpenAPIV3_1, OpenAPIV3_2 } from '@swagglar/openapi-types'
+import { upgrade } from '@swagglar/openapi-upgrader'
+import { openApiDocument, resolveOpenApiDocument } from '@swagglar/workspace-store/plugins/bundler'
 
 /**
  * Processes an OpenAPI document by bundling external references, upgrading compatible input to OpenAPI 3.2,
  * and wrapping it so internal references stay intact but resolve lazily.
  *
  * Unlike a full dereference, the returned document keeps `$ref` nodes in place. Consumers
- * resolve them on demand with `getResolvedRef` from `@scalar/workspace-store`, which reads the
+ * resolve them on demand with `getResolvedRef` from `@swagglar/workspace-store`, which reads the
  * `$ref-value` exposed by the magic proxy. This avoids eagerly flattening (and duplicating)
  * the whole document up front.
  *

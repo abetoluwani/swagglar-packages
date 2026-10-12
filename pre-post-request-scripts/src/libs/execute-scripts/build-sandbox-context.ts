@@ -1,4 +1,4 @@
-import type { VariableEntry } from '@scalar/workspace-store/request-example'
+import type { VariableEntry } from '@swagglar/workspace-store/request-example'
 import { VariableList, VariableScope } from 'postman-collection'
 
 import type { SerializableScopes } from './postman-adapter/sandbox-protocol'

@@ -1,7 +1,7 @@
-import { unescapeJsonPointer } from '@scalar/helpers/json/unescape-json-pointer'
-import { isObject } from '@scalar/helpers/object/is-object'
-import { getResolvedRef, mergeSiblingReferences } from '@scalar/workspace-store/helpers/get-resolved-ref'
-import type { MaybeRefSchemaObject, SchemaObject } from '@scalar/workspace-store/schemas/v3.2/strict/schema'
+import { unescapeJsonPointer } from '@swagglar/helpers/json/unescape-json-pointer'
+import { isObject } from '@swagglar/helpers/object/is-object'
+import { getResolvedRef, mergeSiblingReferences } from '@swagglar/workspace-store/helpers/get-resolved-ref'
+import type { MaybeRefSchemaObject, SchemaObject } from '@swagglar/workspace-store/schemas/v3.2/strict/schema'
 import type { Emphasis, ListItem, PhrasingContent, RootContent } from 'mdast'
 
 import { inlineCode, item, list, paragraph, strong, text } from './markdown-nodes'

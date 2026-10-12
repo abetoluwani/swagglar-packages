@@ -1,4 +1,4 @@
-import type { Plugin, TargetId } from '@scalar/types/snippetz'
+import type { Plugin, TargetId } from '@swagglar/types/snippetz'
 
 import { accumulateRepeatedValue, normalizeMethod, reduceQueryParams } from '@/libs/http'
 import { Raw, escapeJsString, objectToString } from '@/libs/javascript'

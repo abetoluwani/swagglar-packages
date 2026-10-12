@@ -6,7 +6,7 @@ versions, document loader, machine, and Node runtime.
 
 ## Run
 
-Build `@scalar/openapi-to-markdown` and its dependencies in a separate worktree at
+Build `@swagglar/openapi-to-markdown` and its dependencies in a separate worktree at
 `f3c39a6723`, then build the current package. From the current package directory:
 
 ```sh

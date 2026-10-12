@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { ScalarLoading, useLoadingState } from '@scalar/components/loading'
-import { ScalarIconCheck, ScalarIconXCircle } from '@scalar/icons'
+import { ScalarLoading, useLoadingState } from '@swagglar/components/loading'
+import { ScalarIconCheck, ScalarIconXCircle } from '@swagglar/icons'
 import { computed } from 'vue'
 
 import { type UploadTmpDocumentState } from '@/hooks/use-upload-tmp-document'

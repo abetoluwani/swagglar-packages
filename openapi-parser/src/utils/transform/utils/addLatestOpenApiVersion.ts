@@ -1,4 +1,4 @@
-import type { AnyObject } from '@scalar/types/utils'
+import type { AnyObject } from '@swagglar/types/utils'
 
 export const DEFAULT_OPENAPI_VERSION = '3.1.1'
 

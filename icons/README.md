@@ -20,14 +20,14 @@ For a full list of available icons see [Phosphor Icons](https://phosphoricons.co
 ## Installation
 
 ```bash
-pnpm i @scalar/icons
+pnpm i @swagglar/icons
 ```
 
 ## Usage
 
 ```vue
 <script setup lang="ts">
-import { ScalarIconMagnifyingGlass } from '@scalar/icons'
+import { ScalarIconMagnifyingGlass } from '@swagglar/icons'
 </script>
 
 <template>

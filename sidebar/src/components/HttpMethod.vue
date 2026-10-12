@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { getHttpMethodInfo } from '@scalar/helpers/http/http-info'
-import type { HttpMethod } from '@scalar/helpers/http/http-methods'
-import { isHttpMethod } from '@scalar/helpers/http/is-http-method'
+import { getHttpMethodInfo } from '@swagglar/helpers/http/http-info'
+import type { HttpMethod } from '@swagglar/helpers/http/http-methods'
+import { isHttpMethod } from '@swagglar/helpers/http/is-http-method'
 import { computed, type Component } from 'vue'
 
 const props = defineProps<{

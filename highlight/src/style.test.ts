@@ -8,7 +8,7 @@ import { SCOPES, scopeClass } from './core/scopes'
 const css = readFileSync(new URL('../src/style.css', import.meta.url), 'utf8')
 
 /**
- * The default theme's palette, copied from `@scalar/themes`.
+ * The default theme's palette, copied from `@swagglar/themes`.
  *
  * Duplicated on purpose: these tests check that our stylesheet stays legible
  * against a known palette. Reading the live package would make the test pass
@@ -106,7 +106,7 @@ const rules = css.replace(/\/\*[\s\S]*?\*\//g, '')
  *
  * Only blocks whose selector list names the mode class count, and later
  * declarations replace earlier ones — which is what the cascade does for two
- * blocks of equal specificity. Both halves matter. `@scalar/themes` defines
+ * blocks of equal specificity. Both halves matter. `@swagglar/themes` defines
  * `--scalar-color-*` on the mode classes rather than on `:root`, and a custom
  * property resolves its `var()` against the element it is declared on, so a
  * slot declared only at `:root` reads an undefined palette and silently falls

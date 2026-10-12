@@ -123,34 +123,34 @@ export default {}
 </script>
 
 <script setup lang="ts">
-import { ScalarButton } from '@scalar/components/button'
+import { ScalarButton } from '@swagglar/components/button'
 import {
   ScalarCard,
   ScalarCardFooter,
   ScalarCardHeader,
   ScalarCardSection,
-} from '@scalar/components/card'
-import { ScalarCodeBlock } from '@scalar/components/code-block'
-import { ScalarCombobox } from '@scalar/components/combobox'
-import { ScalarVirtualText } from '@scalar/components/virtual-text'
-import { freezeElement } from '@scalar/helpers/dom/freeze-element'
-import { ScalarIconCaretDown } from '@scalar/icons'
-import { type WorkspaceEventBus } from '@scalar/workspace-store/events'
-import { getResolvedRef } from '@scalar/workspace-store/helpers/get-resolved-ref'
+} from '@swagglar/components/card'
+import { ScalarCodeBlock } from '@swagglar/components/code-block'
+import { ScalarCombobox } from '@swagglar/components/combobox'
+import { ScalarVirtualText } from '@swagglar/components/virtual-text'
+import { freezeElement } from '@swagglar/helpers/dom/freeze-element'
+import { ScalarIconCaretDown } from '@swagglar/icons'
+import { type WorkspaceEventBus } from '@swagglar/workspace-store/events'
+import { getResolvedRef } from '@swagglar/workspace-store/helpers/get-resolved-ref'
 import {
   getOperationExamples,
   resolveOperationExamples,
-} from '@scalar/workspace-store/helpers/operation-examples'
+} from '@swagglar/workspace-store/helpers/operation-examples'
 import {
   useExampleVisibility,
   useExternalExamples,
-} from '@scalar/workspace-store/helpers/use-external-examples'
-import type { SecuritySchemeObjectSecret } from '@scalar/workspace-store/request-example'
-import type { XScalarCookie } from '@scalar/workspace-store/schemas/extensions/general/x-scalar-cookies'
+} from '@swagglar/workspace-store/helpers/use-external-examples'
+import type { SecuritySchemeObjectSecret } from '@swagglar/workspace-store/request-example'
+import type { XScalarCookie } from '@swagglar/workspace-store/schemas/extensions/general/x-scalar-cookies'
 import type {
   OperationObject,
   ServerObject,
-} from '@scalar/workspace-store/schemas/v3.2/strict/openapi-document'
+} from '@swagglar/workspace-store/schemas/v3.2/strict/openapi-document'
 import {
   computed,
   onBeforeMount,

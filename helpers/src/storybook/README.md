@@ -1,8 +1,8 @@
-# Storybook helpers (`@scalar/helpers/storybook`)
+# Storybook helpers (`@swagglar/helpers/storybook`)
 
-Shared Storybook configuration for the Scalar packages that run one. Today that is `@scalar/components` and `@scalar/api-reference`, whose `.storybook` folders held byte-identical copies of this code before it moved here.
+Shared Storybook configuration for the Scalar packages that run one. Today that is `@swagglar/components` and `@swagglar/api-reference`, whose `.storybook` folders held byte-identical copies of this code before it moved here.
 
-Nothing in this folder is meant for consumers of `@scalar/helpers`. It is internal tooling that happens to live in the same package, the same way `@scalar/helpers/playwright` does.
+Nothing in this folder is meant for consumers of `@swagglar/helpers`. It is internal tooling that happens to live in the same package, the same way `@swagglar/helpers/playwright` does.
 
 ## `themes` (`./themes`)
 
@@ -10,7 +10,7 @@ The Scalar theme presets, expressed as Storybook toolbar options.
 
 ### `themeVariants`
 
-Every theme a story can render under, keyed by id. Built from `@scalar/themes`, plus two radius variants (`rounded-none` and `rounded-full`) that push `--scalar-radius` to either end of the scale so components can be snapshotted at both extremes.
+Every theme a story can render under, keyed by id. Built from `@swagglar/themes`, plus two radius variants (`rounded-none` and `rounded-full`) that push `--scalar-radius` to either end of the scale so components can be snapshotted at both extremes.
 
 The `default` variant injects nothing, because it is the theme the preview already loads. The `none` preset is dropped, because `getThemeStyles` resolves it back to the default preset anyway.
 
@@ -54,10 +54,10 @@ decorators: [
 ### Import
 
 ```ts
-import { applyScalarGlobals, scalarGlobalTypes, scalarInitialGlobals } from '@scalar/helpers/storybook/globals'
-import { type ThemeVariantId, defaultThemeVariant } from '@scalar/helpers/storybook/themes'
+import { applyScalarGlobals, scalarGlobalTypes, scalarInitialGlobals } from '@swagglar/helpers/storybook/globals'
+import { type ThemeVariantId, defaultThemeVariant } from '@swagglar/helpers/storybook/themes'
 ```
 
 ### Environment
 
-`themes` imports `@scalar/themes`, which is a **devDependency** of this package. Anything importing `@scalar/helpers/storybook/*` has to provide it, the same way `@scalar/helpers/playwright/docker` expects `@playwright/test`.
+`themes` imports `@swagglar/themes`, which is a **devDependency** of this package. Anything importing `@swagglar/helpers/storybook/*` has to provide it, the same way `@swagglar/helpers/playwright/docker` expects `@playwright/test`.

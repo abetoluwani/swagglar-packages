@@ -1,4 +1,4 @@
-import type { OpenAPIV3_1 } from '@scalar/openapi-types'
+import type { OpenAPIV3_1 } from '@swagglar/openapi-types'
 import Ajv2020 from 'ajv/dist/2020.js'
 import { describe, expect, it, vi } from 'vitest'
 

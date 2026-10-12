@@ -1,5 +1,5 @@
-import { isObject } from '@scalar/helpers/object/is-object'
-import type { UnknownObject } from '@scalar/types/utils'
+import { isObject } from '@swagglar/helpers/object/is-object'
+import type { UnknownObject } from '@swagglar/types/utils'
 
 /**
  * Add native navigation parents only when every group has an unambiguous mapping.

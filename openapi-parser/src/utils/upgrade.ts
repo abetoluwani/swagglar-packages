@@ -1,6 +1,6 @@
-import type { Document as OpenApiDocumentV3_1 } from '@scalar/openapi-types/3.1'
-import { upgrade as originalUpgrade } from '@scalar/openapi-upgrader'
-import type { UnknownObject } from '@scalar/types/utils'
+import type { Document as OpenApiDocumentV3_1 } from '@swagglar/openapi-types/3.1'
+import { upgrade as originalUpgrade } from '@swagglar/openapi-upgrader'
+import type { UnknownObject } from '@swagglar/types/utils'
 
 import type { Filesystem, UpgradeResult } from '@/types/index'
 

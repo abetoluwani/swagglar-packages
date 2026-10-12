@@ -1,4 +1,4 @@
-import { PETSTORE_URL_2_0 } from '@scalar/helpers/url/oas-document-fixtures'
+import { PETSTORE_URL_2_0 } from '@swagglar/helpers/url/oas-document-fixtures'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 

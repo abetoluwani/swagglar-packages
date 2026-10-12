@@ -17,7 +17,7 @@ export default {}
   lang="ts"
   generic="O extends Option = Option, G extends OptionGroup<O> = OptionGroup<O>">
 import { filterByOptionLabel } from '@/components/ScalarCombobox/filter-by-option-label'
-import { ScalarIconMagnifyingGlass, ScalarIconPlus } from '@scalar/icons'
+import { ScalarIconMagnifyingGlass, ScalarIconPlus } from '@swagglar/icons'
 import { computed, onMounted, ref, useId, watch } from 'vue'
 
 import { ScalarListboxCheckbox } from '../ScalarListbox'

@@ -1,4 +1,4 @@
-# @scalar/galaxy
+# @swagglar/galaxy
 
 ## 0.7.1
 
@@ -16,7 +16,7 @@
 
 ### Patch Changes
 
-- [#9980](https://github.com/scalar/scalar/pull/9980): Add an OpenAPI 3.2 example document, available as `@scalar/galaxy/3.2.yaml` and `@scalar/galaxy/3.2.json`. It is a copy of the 3.1 document on version `3.2.0`. The `latest` document still points at 3.1.
+- [#9980](https://github.com/scalar/scalar/pull/9980): Add an OpenAPI 3.2 example document, available as `@swagglar/galaxy/3.2.yaml` and `@swagglar/galaxy/3.2.json`. It is a copy of the 3.1 document on version `3.2.0`. The `latest` document still points at 3.1.
 
 ## 0.6.13
 
@@ -173,7 +173,7 @@
 
 ### Patch Changes
 
-- 525b7d7: feat: publish @scalar/galaxy in the Scalar Registry
+- 525b7d7: feat: publish @swagglar/galaxy in the Scalar Registry
 
 ## 0.5.5
 
@@ -404,7 +404,7 @@
 ### Patch Changes
 
 - e0fc110: chore: patch bump all package
-- f0acc89: chore: upgrade to new @scalar/openapi-parser version
+- f0acc89: chore: upgrade to new @swagglar/openapi-parser version
 
 ## 0.2.0
 

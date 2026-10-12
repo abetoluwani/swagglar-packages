@@ -1,13 +1,13 @@
 // Theming
-import '@scalar/themes/fonts.css'
-import '@scalar/themes/style.css'
+import '@swagglar/themes/fonts.css'
+import '@swagglar/themes/style.css'
 
 import type { Preview } from '@storybook/vue3-vite'
 
 import '../src/style.css'
 import './preview.css'
 
-import { applyScalarGlobals, scalarGlobalTypes, scalarInitialGlobals } from '@scalar/helpers/storybook/globals'
+import { applyScalarGlobals, scalarGlobalTypes, scalarInitialGlobals } from '@swagglar/helpers/storybook/globals'
 
 document.body.classList.add('scalar-app')
 

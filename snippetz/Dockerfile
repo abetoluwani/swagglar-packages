@@ -3,7 +3,7 @@ FROM ${BASE_IMAGE} AS builder
 WORKDIR /app
 
 # Build the package
-RUN pnpm --filter @scalar/snippetz build:playground
+RUN pnpm --filter @swagglar/snippetz build:playground
 
 FROM node:20-bullseye-slim AS runner
 # install simple http server for serving static content

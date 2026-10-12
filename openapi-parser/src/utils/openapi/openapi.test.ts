@@ -1,6 +1,6 @@
 import { join } from 'node:path'
 
-import type { AnyObject } from '@scalar/types/utils'
+import type { AnyObject } from '@swagglar/types/utils'
 import { describe, expect, it } from 'vitest'
 import { stringify } from 'yaml'
 

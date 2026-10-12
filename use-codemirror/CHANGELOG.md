@@ -1,4 +1,4 @@
-# @scalar/use-codemirror
+# @swagglar/use-codemirror
 
 ## 0.14.15
 
@@ -42,7 +42,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.20.9**
+- **@swagglar/components@0.20.9**
   - [#8453](https://github.com/scalar/scalar/pull/8453): refactor: remove @ts-expect-error from ScalarTextArea
 
 ## 0.14.8
@@ -51,7 +51,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.20.8**
+- **@swagglar/components@0.20.8**
 
 ## 0.14.7
 
@@ -59,7 +59,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.20.7**
+- **@swagglar/components@0.20.7**
 
 ## 0.14.6
 
@@ -67,7 +67,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.20.6**
+- **@swagglar/components@0.20.6**
   - [#8327](https://github.com/scalar/scalar/pull/8327): fix: markdown tables with specified width attributes in td/th break the layout
 
 ## 0.14.5
@@ -76,7 +76,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.20.5**
+- **@swagglar/components@0.20.5**
 
 ## 0.14.4
 
@@ -84,7 +84,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.20.4**
+- **@swagglar/components@0.20.4**
 
 ## 0.14.3
 
@@ -92,7 +92,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.20.3**
+- **@swagglar/components@0.20.3**
 
 ## 0.14.2
 
@@ -100,7 +100,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.20.2**
+- **@swagglar/components@0.20.2**
   - [#8366](https://github.com/scalar/scalar/pull/8366): fix(components): clean up search components and add snapshots
 
 ## 0.14.1
@@ -109,7 +109,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.20.1**
+- **@swagglar/components@0.20.1**
 
 ## 0.14.0
 
@@ -121,7 +121,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.20.0**
+- **@swagglar/components@0.20.0**
   - [#8322](https://github.com/scalar/scalar/pull/8322): chore: bump required node version to >=22 (LTS)
 
 ## 0.13.50
@@ -130,7 +130,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.19.15**
+- **@swagglar/components@0.19.15**
   - [#8319](https://github.com/scalar/scalar/pull/8319): fix(components): fix adjust sidebar section line height
 
 ## 0.13.49
@@ -139,7 +139,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.19.14**
+- **@swagglar/components@0.19.14**
 
 ## 0.13.48
 
@@ -147,7 +147,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.19.13**
+- **@swagglar/components@0.19.13**
 
 ## 0.13.47
 
@@ -155,7 +155,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.19.12**
+- **@swagglar/components@0.19.12**
   - [#8290](https://github.com/scalar/scalar/pull/8290): chore: update deps
 
 ## 0.13.46
@@ -164,7 +164,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.19.11**
+- **@swagglar/components@0.19.11**
   - [#8276](https://github.com/scalar/scalar/pull/8276): feat(components): standardize form inputs to have a height of 40px
 
 ## 0.13.45
@@ -173,7 +173,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.19.10**
+- **@swagglar/components@0.19.10**
 
 ## 0.13.44
 
@@ -181,7 +181,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.19.9**
+- **@swagglar/components@0.19.9**
   - [#8248](https://github.com/scalar/scalar/pull/8248): feat: slugs for headings with nested content
   - [#8248](https://github.com/scalar/scalar/pull/8248): feat: add optional chevron click handler for the sidebar
 
@@ -191,7 +191,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.19.8**
+- **@swagglar/components@0.19.8**
 
 ## 0.13.42
 
@@ -199,7 +199,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.19.7**
+- **@swagglar/components@0.19.7**
 
 ## 0.13.41
 
@@ -207,7 +207,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.19.6**
+- **@swagglar/components@0.19.6**
 
 ## 0.13.40
 
@@ -215,7 +215,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.19.5**
+- **@swagglar/components@0.19.5**
 
 ## 0.13.39
 
@@ -223,7 +223,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.19.4**
+- **@swagglar/components@0.19.4**
   - [#8178](https://github.com/scalar/scalar/pull/8178): chore: package bump due to ci failure
 
 ## 0.13.38
@@ -232,7 +232,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.19.3**
+- **@swagglar/components@0.19.3**
   - [#8155](https://github.com/scalar/scalar/pull/8155): fix(api-reference): bugs with cards rendering
 
 ## 0.13.37
@@ -241,7 +241,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.19.2**
+- **@swagglar/components@0.19.2**
   - [#8134](https://github.com/scalar/scalar/pull/8134): fix(components): change caret position to right
 
 ## 0.13.36
@@ -250,7 +250,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.19.1**
+- **@swagglar/components@0.19.1**
 
 ## 0.13.35
 
@@ -258,7 +258,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.19.0**
+- **@swagglar/components@0.19.0**
   - [#8081](https://github.com/scalar/scalar/pull/8081): feat(components): improve ScalarCodeBlock copy UI
   - [#8065](https://github.com/scalar/scalar/pull/8065): feat(components): add editor to ScalarMenu and optionally remove docs
 
@@ -268,7 +268,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.18.0**
+- **@swagglar/components@0.18.0**
   - [#8077](https://github.com/scalar/scalar/pull/8077): feat: support team workspaces
 
 ## 0.13.33
@@ -277,7 +277,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.17.6**
+- **@swagglar/components@0.17.6**
   - [#8070](https://github.com/scalar/scalar/pull/8070): chore: remove the import modal and change the workspace picker to support groups
 
 ## 0.13.32
@@ -286,7 +286,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.17.5**
+- **@swagglar/components@0.17.5**
 
 ## 0.13.31
 
@@ -294,7 +294,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.17.4**
+- **@swagglar/components@0.17.4**
 
 ## 0.13.30
 
@@ -302,7 +302,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.17.3**
+- **@swagglar/components@0.17.3**
 
 ## 0.13.29
 
@@ -310,7 +310,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.17.2**
+- **@swagglar/components@0.17.2**
   - [#7934](https://github.com/scalar/scalar/pull/7934): fix: z-index issues in addressBar
 
 ## 0.13.28
@@ -319,7 +319,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.17.1**
+- **@swagglar/components@0.17.1**
 
 ## 0.13.27
 
@@ -327,7 +327,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.17.0**
+- **@swagglar/components@0.17.0**
   - [#7959](https://github.com/scalar/scalar/pull/7959): feat(agent): add agent scalar to localhost
 
 ## 0.13.26
@@ -336,7 +336,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.16.32**
+- **@swagglar/components@0.16.32**
 
 ## 0.13.25
 
@@ -344,7 +344,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.16.31**
+- **@swagglar/components@0.16.31**
 
 ## 0.13.24
 
@@ -352,7 +352,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.16.30**
+- **@swagglar/components@0.16.30**
 
 ## 0.13.23
 
@@ -360,7 +360,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.16.29**
+- **@swagglar/components@0.16.29**
 
 ## 0.13.22
 
@@ -368,7 +368,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.16.28**
+- **@swagglar/components@0.16.28**
 
 ## 0.13.21
 
@@ -376,7 +376,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.16.27**
+- **@swagglar/components@0.16.27**
 
 ## 0.13.20
 
@@ -384,7 +384,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.16.26**
+- **@swagglar/components@0.16.26**
   - [#7846](https://github.com/scalar/scalar/pull/7846): Fix dev dep issue
 
 ## 0.13.19
@@ -393,7 +393,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.16.25**
+- **@swagglar/components@0.16.25**
 
 ## 0.13.18
 
@@ -401,7 +401,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.16.24**
+- **@swagglar/components@0.16.24**
   - [#7802](https://github.com/scalar/scalar/pull/7802): fix: Vue warning because of deprecated icon syntax
 
 ## 0.13.17
@@ -410,7 +410,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.16.23**
+- **@swagglar/components@0.16.23**
 
 ## 0.13.16
 
@@ -418,7 +418,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.16.22**
+- **@swagglar/components@0.16.22**
 
 ## 0.13.15
 
@@ -426,7 +426,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.16.21**
+- **@swagglar/components@0.16.21**
 
 ## 0.13.14
 
@@ -434,7 +434,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.16.20**
+- **@swagglar/components@0.16.20**
 
 ## 0.13.13
 
@@ -442,7 +442,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.16.19**
+- **@swagglar/components@0.16.19**
   - [#7725](https://github.com/scalar/scalar/pull/7725): fix(components): support slot for nested items icon
   - [#7693](https://github.com/scalar/scalar/pull/7693): feat: markdown default line height
 
@@ -452,7 +452,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.16.18**
+- **@swagglar/components@0.16.18**
 
 ## 0.13.11
 
@@ -460,7 +460,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.16.17**
+- **@swagglar/components@0.16.17**
   - [#7680](https://github.com/scalar/scalar/pull/7680): feat(components): simplify nested sidebar items styles
 
 ## 0.13.10
@@ -469,7 +469,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.16.16**
+- **@swagglar/components@0.16.16**
 
 ## 0.13.9
 
@@ -477,7 +477,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.16.15**
+- **@swagglar/components@0.16.15**
 
 ## 0.13.8
 
@@ -485,7 +485,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.16.14**
+- **@swagglar/components@0.16.14**
   - [#7654](https://github.com/scalar/scalar/pull/7654): fix(components): explicitly set line height for buttons and sections
 
 ## 0.13.7
@@ -494,7 +494,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.16.13**
+- **@swagglar/components@0.16.13**
   - [#7584](https://github.com/scalar/scalar/pull/7584): fix: remove internal unused export
     - `CARD_Heading_SYMBOL`
     - `FORM_GROUP_SYMBOL`
@@ -503,7 +503,7 @@
     - `MaybeElement`
     - `ScalarComboBox#isGroup`
 
-  - [#7584](https://github.com/scalar/scalar/pull/7584): fix: remove unused `@scalar/use-toasts` dependency
+  - [#7584](https://github.com/scalar/scalar/pull/7584): fix: remove unused `@swagglar/use-toasts` dependency
   - [#7604](https://github.com/scalar/scalar/pull/7604): fix(components): improve sidebar groups
   - [#7589](https://github.com/scalar/scalar/pull/7589): chore(components): upgrade to Storybook 10
 
@@ -513,7 +513,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.16.12**
+- **@swagglar/components@0.16.12**
   - [#7562](https://github.com/scalar/scalar/pull/7562): feat(components): remove headless ui from dropdown component
 
 ## 0.13.5
@@ -524,7 +524,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.16.11**
+- **@swagglar/components@0.16.11**
   - [#7581](https://github.com/scalar/scalar/pull/7581): fix: npm publish job
 
 ## 0.13.4
@@ -533,7 +533,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/components@0.16.10**
+- **@swagglar/components@0.16.10**
   - [#7531](https://github.com/scalar/scalar/pull/7531): feat(components): add discrete sidebar group buttons
 
 ## 0.13.3
@@ -541,21 +541,21 @@
 ### Patch Changes
 
 - Updated dependencies []:
-  - @scalar/components@0.16.9
+  - @swagglar/components@0.16.9
 
 ## 0.13.2
 
 ### Patch Changes
 
 - Updated dependencies [[`4ac6227`](https://github.com/scalar/scalar/commit/4ac62278d4205c34a1a302b756ef3632185876cf)]:
-  - @scalar/components@0.16.8
+  - @swagglar/components@0.16.8
 
 ## 0.13.1
 
 ### Patch Changes
 
 - Updated dependencies []:
-  - @scalar/components@0.16.7
+  - @swagglar/components@0.16.7
 
 ## 0.13.0
 
@@ -563,42 +563,42 @@
 
 - [#7486](https://github.com/scalar/scalar/pull/7486) [`18a7bcd`](https://github.com/scalar/scalar/commit/18a7bcd8ad00f9f7ee09a562167593c7ed07e01d) Thanks [@marcalexiei](https://github.com/marcalexiei)! - feat: hooks are now only exported from root
 
-  replace `@scalar/use-codemirror/hooks` with `@scalar/use-codemirror`
+  replace `@swagglar/use-codemirror/hooks` with `@swagglar/use-codemirror`
 
 ### Patch Changes
 
 - [#7486](https://github.com/scalar/scalar/pull/7486) [`18a7bcd`](https://github.com/scalar/scalar/commit/18a7bcd8ad00f9f7ee09a562167593c7ed07e01d) Thanks [@marcalexiei](https://github.com/marcalexiei)! - fix: remove unused `codemirror` dependency
 
 - Updated dependencies []:
-  - @scalar/components@0.16.6
+  - @swagglar/components@0.16.6
 
 ## 0.12.49
 
 ### Patch Changes
 
 - Updated dependencies [[`5aa0380`](https://github.com/scalar/scalar/commit/5aa0380adfcd173e58659fb5dd57df363d985583), [`62b5210`](https://github.com/scalar/scalar/commit/62b521092bafeb8e83e79222e13378c4a19defc8)]:
-  - @scalar/components@0.16.5
+  - @swagglar/components@0.16.5
 
 ## 0.12.48
 
 ### Patch Changes
 
 - Updated dependencies [[`5a108fc`](https://github.com/scalar/scalar/commit/5a108fcbc52ae7957731c23689896ba353b83d3b), [`cded2d6`](https://github.com/scalar/scalar/commit/cded2d6c087418c3c44731d344d0827a87b78b74)]:
-  - @scalar/components@0.16.4
+  - @swagglar/components@0.16.4
 
 ## 0.12.47
 
 ### Patch Changes
 
 - Updated dependencies [[`4bec1ba`](https://github.com/scalar/scalar/commit/4bec1ba332e919c4ee32dcfbfb07bd8ee42c4d74)]:
-  - @scalar/components@0.16.3
+  - @swagglar/components@0.16.3
 
 ## 0.12.46
 
 ### Patch Changes
 
 - Updated dependencies []:
-  - @scalar/components@0.16.2
+  - @swagglar/components@0.16.2
 
 ## 0.12.45
 
@@ -607,21 +607,21 @@
 - [#7226](https://github.com/scalar/scalar/pull/7226) [`bffef40`](https://github.com/scalar/scalar/commit/bffef4092e40d12052f8538267af71bc99b7172f) Thanks [@amritk](https://github.com/amritk)! - feat: added overview page for client v2
 
 - Updated dependencies []:
-  - @scalar/components@0.16.1
+  - @swagglar/components@0.16.1
 
 ## 0.12.44
 
 ### Patch Changes
 
 - Updated dependencies [[`348f8f6`](https://github.com/scalar/scalar/commit/348f8f6292ef41844fda1fdd3089a55d97adbc0e), [`c22fc4e`](https://github.com/scalar/scalar/commit/c22fc4e5acb49d648014a6100c724a5b33c59cde), [`6ec8c29`](https://github.com/scalar/scalar/commit/6ec8c299d912111b029e8058979d00968b70691a), [`8a5a6a0`](https://github.com/scalar/scalar/commit/8a5a6a052cc05b0902b05052c80cc429ebc5a730), [`704fa30`](https://github.com/scalar/scalar/commit/704fa302b2cdbb17b19ca2d742537ca163d58c1c), [`a26ced6`](https://github.com/scalar/scalar/commit/a26ced6f2897074f0c102d5ccbff55c6fd520e12), [`6a090a2`](https://github.com/scalar/scalar/commit/6a090a2e07ef961c56041c85ee9786180437593a), [`592533f`](https://github.com/scalar/scalar/commit/592533faf60b6a5ba27909a4ca0847ca9f04a96d), [`eba18d0`](https://github.com/scalar/scalar/commit/eba18d06267a163a8f91396a66f817100ee59461), [`c72a2c5`](https://github.com/scalar/scalar/commit/c72a2c59eb80e1f5e216c687229ff90bea88f554), [`0d9c945`](https://github.com/scalar/scalar/commit/0d9c945a696ea8b826d86f7b48ec6de4d85e64f0)]:
-  - @scalar/components@0.16.0
+  - @swagglar/components@0.16.0
 
 ## 0.12.43
 
 ### Patch Changes
 
 - Updated dependencies [f8efecd]
-  - @scalar/components@0.15.1
+  - @swagglar/components@0.15.1
 
 ## 0.12.42
 
@@ -631,20 +631,20 @@
 - Updated dependencies [a747da6]
 - Updated dependencies [c69cb71]
 - Updated dependencies [90d54b6]
-  - @scalar/components@0.15.0
+  - @swagglar/components@0.15.0
 
 ## 0.12.41
 
 ### Patch Changes
 
 - Updated dependencies [a9f8d56]
-  - @scalar/components@0.14.40
+  - @swagglar/components@0.14.40
 
 ## 0.12.40
 
 ### Patch Changes
 
-- @scalar/components@0.14.39
+- @swagglar/components@0.14.39
 
 ## 0.12.39
 
@@ -652,26 +652,26 @@
 
 - Updated dependencies [0b3c6fa]
 - Updated dependencies [bbceb27]
-  - @scalar/components@0.14.38
+  - @swagglar/components@0.14.38
 
 ## 0.12.38
 
 ### Patch Changes
 
 - Updated dependencies [db5b649]
-  - @scalar/components@0.14.37
+  - @swagglar/components@0.14.37
 
 ## 0.12.37
 
 ### Patch Changes
 
-- @scalar/components@0.14.36
+- @swagglar/components@0.14.36
 
 ## 0.12.36
 
 ### Patch Changes
 
-- @scalar/components@0.14.35
+- @swagglar/components@0.14.35
 
 ## 0.12.35
 
@@ -679,39 +679,39 @@
 
 - Updated dependencies [498f771]
 - Updated dependencies [8f2a2f2]
-  - @scalar/components@0.14.34
+  - @swagglar/components@0.14.34
 
 ## 0.12.34
 
 ### Patch Changes
 
-- @scalar/components@0.14.33
+- @swagglar/components@0.14.33
 
 ## 0.12.33
 
 ### Patch Changes
 
-- @scalar/components@0.14.32
+- @swagglar/components@0.14.32
 
 ## 0.12.32
 
 ### Patch Changes
 
 - Updated dependencies [2249fe3]
-  - @scalar/components@0.14.31
+  - @swagglar/components@0.14.31
 
 ## 0.12.31
 
 ### Patch Changes
 
-- @scalar/components@0.14.30
+- @swagglar/components@0.14.30
 
 ## 0.12.30
 
 ### Patch Changes
 
 - Updated dependencies [c470c60]
-  - @scalar/components@0.14.29
+  - @swagglar/components@0.14.29
 
 ## 0.12.29
 
@@ -719,19 +719,19 @@
 
 - Updated dependencies [f918582]
 - Updated dependencies [422cb2b]
-  - @scalar/components@0.14.28
+  - @swagglar/components@0.14.28
 
 ## 0.12.28
 
 ### Patch Changes
 
-- @scalar/components@0.14.27
+- @swagglar/components@0.14.27
 
 ## 0.12.27
 
 ### Patch Changes
 
-- @scalar/components@0.14.26
+- @swagglar/components@0.14.26
 
 ## 0.12.26
 
@@ -742,7 +742,7 @@
 - Updated dependencies [6c24be9]
 - Updated dependencies [638120c]
 - Updated dependencies [0804cfc]
-  - @scalar/components@0.14.25
+  - @swagglar/components@0.14.25
 
 ## 0.12.25
 
@@ -750,20 +750,20 @@
 
 - Updated dependencies [58b9321]
 - Updated dependencies [fbafeab]
-  - @scalar/components@0.14.24
+  - @swagglar/components@0.14.24
 
 ## 0.12.24
 
 ### Patch Changes
 
-- @scalar/components@0.14.23
+- @swagglar/components@0.14.23
 
 ## 0.12.23
 
 ### Patch Changes
 
 - Updated dependencies [dd00357]
-  - @scalar/components@0.14.22
+  - @swagglar/components@0.14.22
 
 ## 0.12.22
 
@@ -774,7 +774,7 @@
 - Updated dependencies [1af32c0]
 - Updated dependencies [f3d0216]
 - Updated dependencies [af22451]
-  - @scalar/components@0.14.21
+  - @swagglar/components@0.14.21
 
 ## 0.12.21
 
@@ -782,7 +782,7 @@
 
 - Updated dependencies [60c7bef]
 - Updated dependencies [cac47ea]
-  - @scalar/components@0.14.20
+  - @swagglar/components@0.14.20
 
 ## 0.12.20
 
@@ -794,14 +794,14 @@
 - Updated dependencies [85ee2ce]
 - Updated dependencies [97721b5]
 - Updated dependencies [85ee2ce]
-  - @scalar/components@0.14.19
+  - @swagglar/components@0.14.19
 
 ## 0.12.19
 
 ### Patch Changes
 
 - Updated dependencies [934dff9]
-  - @scalar/components@0.14.18
+  - @swagglar/components@0.14.18
 
 ## 0.12.18
 
@@ -811,7 +811,7 @@
 - Updated dependencies [4d89219]
 - Updated dependencies [244edda]
 - Updated dependencies [1db9130]
-  - @scalar/components@0.14.17
+  - @swagglar/components@0.14.17
 
 ## 0.12.17
 
@@ -820,14 +820,14 @@
 - Updated dependencies [ca77d70]
 - Updated dependencies [a696604]
 - Updated dependencies [3fdc2f2]
-  - @scalar/components@0.14.16
+  - @swagglar/components@0.14.16
 
 ## 0.12.16
 
 ### Patch Changes
 
 - 2d7f995: refactor: use more common straight apostrophe ' instead of the real apostrophe ’
-  - @scalar/components@0.14.15
+  - @swagglar/components@0.14.15
 
 ## 0.12.15
 
@@ -837,7 +837,7 @@
 - Updated dependencies [3393c83]
 - Updated dependencies [4f47b3c]
 - Updated dependencies [8e85856]
-  - @scalar/components@0.14.14
+  - @swagglar/components@0.14.14
 
 ## 0.12.14
 
@@ -845,32 +845,32 @@
 
 - Updated dependencies [c907685]
 - Updated dependencies [4bbbb32]
-  - @scalar/components@0.14.13
+  - @swagglar/components@0.14.13
 
 ## 0.12.13
 
 ### Patch Changes
 
-- @scalar/components@0.14.12
+- @swagglar/components@0.14.12
 
 ## 0.12.12
 
 ### Patch Changes
 
 - Updated dependencies [699df60]
-  - @scalar/components@0.14.11
+  - @swagglar/components@0.14.11
 
 ## 0.12.11
 
 ### Patch Changes
 
-- @scalar/components@0.14.10
+- @swagglar/components@0.14.10
 
 ## 0.12.10
 
 ### Patch Changes
 
-- @scalar/components@0.14.9
+- @swagglar/components@0.14.9
 
 ## 0.12.9
 
@@ -878,20 +878,20 @@
 
 - Updated dependencies [4156f1d]
 - Updated dependencies [177438d]
-  - @scalar/components@0.14.8
+  - @swagglar/components@0.14.8
 
 ## 0.12.8
 
 ### Patch Changes
 
-- @scalar/components@0.14.7
+- @swagglar/components@0.14.7
 
 ## 0.12.7
 
 ### Patch Changes
 
 - Updated dependencies [ba84a3c]
-  - @scalar/components@0.14.6
+  - @swagglar/components@0.14.6
 
 ## 0.12.6
 
@@ -899,13 +899,13 @@
 
 - Updated dependencies [f1c0c01]
 - Updated dependencies [df7efac]
-  - @scalar/components@0.14.5
+  - @swagglar/components@0.14.5
 
 ## 0.12.5
 
 ### Patch Changes
 
-- @scalar/components@0.14.4
+- @swagglar/components@0.14.4
 
 ## 0.12.4
 
@@ -915,13 +915,13 @@
 - Updated dependencies [cad6277]
 - Updated dependencies [ffa93fa]
 - Updated dependencies [cedca9b]
-  - @scalar/components@0.14.3
+  - @swagglar/components@0.14.3
 
 ## 0.12.3
 
 ### Patch Changes
 
-- @scalar/components@0.14.2
+- @swagglar/components@0.14.2
 
 ## 0.12.2
 
@@ -934,7 +934,7 @@
 ### Patch Changes
 
 - Updated dependencies [4440949]
-  - @scalar/components@0.14.1
+  - @swagglar/components@0.14.1
 
 ## 0.12.0
 
@@ -947,21 +947,21 @@
 - Updated dependencies [5613e40]
 - Updated dependencies [483ca93]
 - Updated dependencies [0efcab4]
-  - @scalar/components@0.14.0
+  - @swagglar/components@0.14.0
 
 ## 0.11.104
 
 ### Patch Changes
 
 - Updated dependencies [1843cfe]
-  - @scalar/components@0.13.59
+  - @swagglar/components@0.13.59
 
 ## 0.11.103
 
 ### Patch Changes
 
 - Updated dependencies [af38fa6]
-  - @scalar/components@0.13.58
+  - @swagglar/components@0.13.58
 
 ## 0.11.102
 
@@ -969,39 +969,39 @@
 
 - 8c7bad8: chore: move build tooling to esbuild
 - Updated dependencies [8c7bad8]
-  - @scalar/components@0.13.57
+  - @swagglar/components@0.13.57
 
 ## 0.11.101
 
 ### Patch Changes
 
-- @scalar/components@0.13.56
+- @swagglar/components@0.13.56
 
 ## 0.11.100
 
 ### Patch Changes
 
 - Updated dependencies [d2f27f4]
-  - @scalar/components@0.13.55
+  - @swagglar/components@0.13.55
 
 ## 0.11.99
 
 ### Patch Changes
 
-- @scalar/components@0.13.54
+- @swagglar/components@0.13.54
 
 ## 0.11.98
 
 ### Patch Changes
 
-- @scalar/components@0.13.53
+- @swagglar/components@0.13.53
 
 ## 0.11.97
 
 ### Patch Changes
 
 - Updated dependencies [1f8ac99]
-  - @scalar/components@0.13.52
+  - @swagglar/components@0.13.52
 
 ## 0.11.96
 
@@ -1009,7 +1009,7 @@
 
 - Updated dependencies [2b61d8e]
 - Updated dependencies [ab4cf5a]
-  - @scalar/components@0.13.51
+  - @swagglar/components@0.13.51
 
 ## 0.11.95
 
@@ -1017,20 +1017,20 @@
 
 - Updated dependencies [363276e]
 - Updated dependencies [a9f232a]
-  - @scalar/components@0.13.50
+  - @swagglar/components@0.13.50
 
 ## 0.11.94
 
 ### Patch Changes
 
 - Updated dependencies [cdaafe4]
-  - @scalar/components@0.13.49
+  - @swagglar/components@0.13.49
 
 ## 0.11.93
 
 ### Patch Changes
 
-- @scalar/components@0.13.48
+- @swagglar/components@0.13.48
 
 ## 0.11.92
 
@@ -1038,13 +1038,13 @@
 
 - Updated dependencies [5b19c90]
 - Updated dependencies [f705230]
-  - @scalar/components@0.13.47
+  - @swagglar/components@0.13.47
 
 ## 0.11.91
 
 ### Patch Changes
 
-- @scalar/components@0.13.46
+- @swagglar/components@0.13.46
 
 ## 0.11.90
 
@@ -1052,37 +1052,37 @@
 
 - Updated dependencies [799845f]
 - Updated dependencies [73f5553]
-  - @scalar/components@0.13.45
+  - @swagglar/components@0.13.45
 
 ## 0.11.89
 
 ### Patch Changes
 
-- @scalar/components@0.13.44
+- @swagglar/components@0.13.44
 
 ## 0.11.88
 
 ### Patch Changes
 
-- @scalar/components@0.13.43
+- @swagglar/components@0.13.43
 
 ## 0.11.87
 
 ### Patch Changes
 
-- @scalar/components@0.13.42
+- @swagglar/components@0.13.42
 
 ## 0.11.86
 
 ### Patch Changes
 
-- @scalar/components@0.13.41
+- @swagglar/components@0.13.41
 
 ## 0.11.85
 
 ### Patch Changes
 
-- @scalar/components@0.13.40
+- @swagglar/components@0.13.40
 
 ## 0.11.84
 
@@ -1090,7 +1090,7 @@
 
 - Updated dependencies [427c325]
 - Updated dependencies [9a2d008]
-  - @scalar/components@0.13.39
+  - @swagglar/components@0.13.39
 
 ## 0.11.83
 
@@ -1099,13 +1099,13 @@
 - Updated dependencies [0f13162]
 - Updated dependencies [cc1ec74]
 - Updated dependencies [2716898]
-  - @scalar/components@0.13.38
+  - @swagglar/components@0.13.38
 
 ## 0.11.82
 
 ### Patch Changes
 
-- @scalar/components@0.13.37
+- @swagglar/components@0.13.37
 
 ## 0.11.81
 
@@ -1113,26 +1113,26 @@
 
 - Updated dependencies [e0ee082]
 - Updated dependencies [1437882]
-  - @scalar/components@0.13.36
+  - @swagglar/components@0.13.36
 
 ## 0.11.80
 
 ### Patch Changes
 
-- @scalar/components@0.13.35
+- @swagglar/components@0.13.35
 
 ## 0.11.79
 
 ### Patch Changes
 
-- @scalar/components@0.13.34
+- @swagglar/components@0.13.34
 
 ## 0.11.78
 
 ### Patch Changes
 
 - Updated dependencies [4d03e0f]
-  - @scalar/components@0.13.33
+  - @swagglar/components@0.13.33
 
 ## 0.11.77
 
@@ -1140,40 +1140,40 @@
 
 - Updated dependencies [df4dee8]
 - Updated dependencies [8c5b0c6]
-  - @scalar/components@0.13.32
+  - @swagglar/components@0.13.32
 
 ## 0.11.76
 
 ### Patch Changes
 
 - Updated dependencies [3f99afc]
-  - @scalar/components@0.13.31
+  - @swagglar/components@0.13.31
 
 ## 0.11.75
 
 ### Patch Changes
 
-- @scalar/components@0.13.30
+- @swagglar/components@0.13.30
 
 ## 0.11.74
 
 ### Patch Changes
 
 - Updated dependencies [479a2ef]
-  - @scalar/components@0.13.29
+  - @swagglar/components@0.13.29
 
 ## 0.11.73
 
 ### Patch Changes
 
 - Updated dependencies [0d4520f]
-  - @scalar/components@0.13.28
+  - @swagglar/components@0.13.28
 
 ## 0.11.72
 
 ### Patch Changes
 
-- @scalar/components@0.13.27
+- @swagglar/components@0.13.27
 
 ## 0.11.71
 
@@ -1185,7 +1185,7 @@
 - Updated dependencies [8d9a2c0]
 - Updated dependencies [bd70ab6]
 - Updated dependencies [e55bfd2]
-  - @scalar/components@0.13.26
+  - @swagglar/components@0.13.26
 
 ## 0.11.70
 
@@ -1193,7 +1193,7 @@
 
 - Updated dependencies [e350f23]
 - Updated dependencies [e47a698]
-  - @scalar/components@0.13.25
+  - @swagglar/components@0.13.25
 
 ## 0.11.69
 
@@ -1201,7 +1201,7 @@
 
 - fa6afe8: chore: code formatting
 - Updated dependencies [825bc40]
-  - @scalar/components@0.13.24
+  - @swagglar/components@0.13.24
 
 ## 0.11.68
 
@@ -1209,14 +1209,14 @@
 
 - Updated dependencies [69da9e0]
 - Updated dependencies [f500435]
-  - @scalar/components@0.13.23
+  - @swagglar/components@0.13.23
 
 ## 0.11.67
 
 ### Patch Changes
 
 - Updated dependencies [abc40ce]
-  - @scalar/components@0.13.22
+  - @swagglar/components@0.13.22
 
 ## 0.11.66
 
@@ -1225,28 +1225,28 @@
 - Updated dependencies [9f2ec32]
 - Updated dependencies [9f2ec32]
 - Updated dependencies [28f23d9]
-  - @scalar/components@0.13.21
+  - @swagglar/components@0.13.21
 
 ## 0.11.65
 
 ### Patch Changes
 
 - Updated dependencies [0d8b4ea]
-  - @scalar/components@0.13.20
+  - @swagglar/components@0.13.20
 
 ## 0.11.64
 
 ### Patch Changes
 
 - e241e7d: chore: remove yjs
-  - @scalar/components@0.13.19
+  - @swagglar/components@0.13.19
 
 ## 0.11.63
 
 ### Patch Changes
 
 - Updated dependencies [42d08d7]
-  - @scalar/components@0.13.18
+  - @swagglar/components@0.13.18
 
 ## 0.11.62
 
@@ -1258,14 +1258,14 @@
 - Updated dependencies [5ab0663]
 - Updated dependencies [917214a]
 - Updated dependencies [776a4e2]
-  - @scalar/components@0.13.17
+  - @swagglar/components@0.13.17
 
 ## 0.11.61
 
 ### Patch Changes
 
 - Updated dependencies [aac6c86]
-  - @scalar/components@0.13.16
+  - @swagglar/components@0.13.16
 
 ## 0.11.60
 
@@ -1273,7 +1273,7 @@
 
 - Updated dependencies [97d8981]
 - Updated dependencies [1bee104]
-  - @scalar/components@0.13.15
+  - @swagglar/components@0.13.15
 
 ## 0.11.59
 
@@ -1287,7 +1287,7 @@
 
 - Updated dependencies [2ad0407]
 - Updated dependencies [e866487]
-  - @scalar/components@0.13.14
+  - @swagglar/components@0.13.14
 
 ## 0.11.57
 
@@ -1295,20 +1295,20 @@
 
 - Updated dependencies [e17ac68]
 - Updated dependencies [7b4ab2c]
-  - @scalar/components@0.13.13
+  - @swagglar/components@0.13.13
 
 ## 0.11.56
 
 ### Patch Changes
 
-- @scalar/components@0.13.12
+- @swagglar/components@0.13.12
 
 ## 0.11.55
 
 ### Patch Changes
 
 - Updated dependencies [794ae62]
-  - @scalar/components@0.13.11
+  - @swagglar/components@0.13.11
 
 ## 0.11.54
 
@@ -1317,47 +1317,47 @@
 - ec44fe1: refactor: make useCodeMirror testable
 - ec44fe1: chore: remove CodeMirror component
 - Updated dependencies [46ebb44]
-  - @scalar/components@0.13.10
+  - @swagglar/components@0.13.10
 
 ## 0.11.53
 
 ### Patch Changes
 
 - Updated dependencies [33c8393]
-  - @scalar/components@0.13.9
+  - @swagglar/components@0.13.9
 
 ## 0.11.52
 
 ### Patch Changes
 
 - Updated dependencies [c65f3fc]
-  - @scalar/components@0.13.8
+  - @swagglar/components@0.13.8
 
 ## 0.11.51
 
 ### Patch Changes
 
-- @scalar/components@0.13.7
+- @swagglar/components@0.13.7
 
 ## 0.11.50
 
 ### Patch Changes
 
 - Updated dependencies [23daedd]
-  - @scalar/components@0.13.6
+  - @swagglar/components@0.13.6
 
 ## 0.11.49
 
 ### Patch Changes
 
-- @scalar/components@0.13.5
+- @swagglar/components@0.13.5
 
 ## 0.11.48
 
 ### Patch Changes
 
 - Updated dependencies [749ebf1]
-  - @scalar/components@0.13.4
+  - @swagglar/components@0.13.4
 
 ## 0.11.47
 
@@ -1365,14 +1365,14 @@
 
 - b66a85c: fix: editor view rendering
 - Updated dependencies [b66a85c]
-  - @scalar/components@0.13.3
+  - @swagglar/components@0.13.3
 
 ## 0.11.46
 
 ### Patch Changes
 
 - Updated dependencies [a90d827]
-  - @scalar/components@0.13.2
+  - @swagglar/components@0.13.2
 
 ## 0.11.45
 
@@ -1384,7 +1384,7 @@
 - Updated dependencies [e199e9b]
 - Updated dependencies [1f730c6]
 - Updated dependencies [f30ce11]
-  - @scalar/components@0.13.1
+  - @swagglar/components@0.13.1
 
 ## 0.11.44
 
@@ -1396,20 +1396,20 @@
 - Updated dependencies [7278742]
 - Updated dependencies [3ca88dc]
 - Updated dependencies [f6cd5ed]
-  - @scalar/components@0.13.0
+  - @swagglar/components@0.13.0
 
 ## 0.11.43
 
 ### Patch Changes
 
-- @scalar/components@0.12.76
+- @swagglar/components@0.12.76
 
 ## 0.11.42
 
 ### Patch Changes
 
 - Updated dependencies [6140275]
-  - @scalar/components@0.12.75
+  - @swagglar/components@0.12.75
 
 ## 0.11.41
 
@@ -1417,14 +1417,14 @@
 
 - Updated dependencies [324834d]
 - Updated dependencies [1b06f64]
-  - @scalar/components@0.12.74
+  - @swagglar/components@0.12.74
 
 ## 0.11.40
 
 ### Patch Changes
 
 - Updated dependencies [28a6b05]
-  - @scalar/components@0.12.73
+  - @swagglar/components@0.12.73
 
 ## 0.11.39
 
@@ -1432,14 +1432,14 @@
 
 - 1e3214c: fix: replace scalarcodeblock with codemirror for response preview
 - Updated dependencies [12fed75]
-  - @scalar/components@0.12.72
+  - @swagglar/components@0.12.72
 
 ## 0.11.38
 
 ### Patch Changes
 
 - Updated dependencies [7abe0f9]
-  - @scalar/components@0.12.71
+  - @swagglar/components@0.12.71
 
 ## 0.11.37
 
@@ -1447,14 +1447,14 @@
 
 - Updated dependencies [bfad6dc]
 - Updated dependencies [c8fae11]
-  - @scalar/components@0.12.70
+  - @swagglar/components@0.12.70
 
 ## 0.11.36
 
 ### Patch Changes
 
 - Updated dependencies [0a34402]
-  - @scalar/components@0.12.69
+  - @swagglar/components@0.12.69
 
 ## 0.11.35
 
@@ -1463,33 +1463,33 @@
 - 0c07766: fix: sets selection style properly"
 - Updated dependencies [b5c1982]
 - Updated dependencies [7f1bd17]
-  - @scalar/components@0.12.68
+  - @swagglar/components@0.12.68
 
 ## 0.11.34
 
 ### Patch Changes
 
 - Updated dependencies [b717102]
-  - @scalar/components@0.12.67
+  - @swagglar/components@0.12.67
 
 ## 0.11.33
 
 ### Patch Changes
 
 - Updated dependencies [be50225]
-  - @scalar/components@0.12.66
+  - @swagglar/components@0.12.66
 
 ## 0.11.32
 
 ### Patch Changes
 
-- @scalar/components@0.12.65
+- @swagglar/components@0.12.65
 
 ## 0.11.31
 
 ### Patch Changes
 
-- @scalar/components@0.12.64
+- @swagglar/components@0.12.64
 
 ## 0.11.30
 
@@ -1497,7 +1497,7 @@
 
 - Updated dependencies [cf4e9c4]
 - Updated dependencies [bb3dc9d]
-  - @scalar/components@0.12.63
+  - @swagglar/components@0.12.63
 
 ## 0.11.29
 
@@ -1505,40 +1505,40 @@
 
 - Updated dependencies [ad12c56]
 - Updated dependencies [ada8545]
-  - @scalar/components@0.12.62
+  - @swagglar/components@0.12.62
 
 ## 0.11.28
 
 ### Patch Changes
 
 - Updated dependencies [197e3ae]
-  - @scalar/components@0.12.61
+  - @swagglar/components@0.12.61
 
 ## 0.11.27
 
 ### Patch Changes
 
-- @scalar/components@0.12.60
+- @swagglar/components@0.12.60
 
 ## 0.11.26
 
 ### Patch Changes
 
 - Updated dependencies [7700c50]
-  - @scalar/components@0.12.59
+  - @swagglar/components@0.12.59
 
 ## 0.11.25
 
 ### Patch Changes
 
-- @scalar/components@0.12.58
+- @swagglar/components@0.12.58
 
 ## 0.11.24
 
 ### Patch Changes
 
 - Updated dependencies [32ad241]
-  - @scalar/components@0.12.57
+  - @swagglar/components@0.12.57
 
 ## 0.11.23
 
@@ -1549,14 +1549,14 @@
 - Updated dependencies [4e50d65]
 - Updated dependencies [4e50d65]
 - Updated dependencies [6bbb815]
-  - @scalar/components@0.12.56
+  - @swagglar/components@0.12.56
 
 ## 0.11.22
 
 ### Patch Changes
 
 - Updated dependencies [971c04c]
-  - @scalar/components@0.12.55
+  - @swagglar/components@0.12.55
 
 ## 0.11.21
 
@@ -1564,27 +1564,27 @@
 
 - 0c34a18: chore: updated vue package to 3.5
 - Updated dependencies [0c34a18]
-  - @scalar/components@0.12.54
+  - @swagglar/components@0.12.54
 
 ## 0.11.20
 
 ### Patch Changes
 
 - Updated dependencies [f935fad]
-  - @scalar/components@0.12.53
+  - @swagglar/components@0.12.53
 
 ## 0.11.19
 
 ### Patch Changes
 
 - Updated dependencies [0ddd4f3]
-  - @scalar/components@0.12.52
+  - @swagglar/components@0.12.52
 
 ## 0.11.18
 
 ### Patch Changes
 
-- @scalar/components@0.12.51
+- @swagglar/components@0.12.51
 
 ## 0.11.17
 
@@ -1598,35 +1598,35 @@
 
 - Updated dependencies [513e0ad]
 - Updated dependencies [5127a37]
-  - @scalar/components@0.12.50
+  - @swagglar/components@0.12.50
 
 ## 0.11.15
 
 ### Patch Changes
 
 - Updated dependencies [d8baf4e]
-  - @scalar/components@0.12.49
+  - @swagglar/components@0.12.49
 
 ## 0.11.14
 
 ### Patch Changes
 
 - Updated dependencies [dc20180]
-  - @scalar/components@0.12.48
+  - @swagglar/components@0.12.48
 
 ## 0.11.13
 
 ### Patch Changes
 
 - Updated dependencies [7beeef3]
-  - @scalar/components@0.12.47
+  - @swagglar/components@0.12.47
 
 ## 0.11.12
 
 ### Patch Changes
 
 - Updated dependencies [b856652]
-  - @scalar/components@0.12.46
+  - @swagglar/components@0.12.46
 
 ## 0.11.11
 
@@ -1637,7 +1637,7 @@
 - Updated dependencies [a08aa37]
 - Updated dependencies [ee22a82]
 - Updated dependencies [6fd83dc]
-  - @scalar/components@0.12.45
+  - @swagglar/components@0.12.45
 
 ## 0.11.10
 
@@ -1685,7 +1685,7 @@
 
 ### Patch Changes
 
-- b981770: chore: introduce the new @scalar/api-reference-editor
+- b981770: chore: introduce the new @swagglar/api-reference-editor
 
 ## 0.11.2
 
@@ -1760,7 +1760,7 @@
 
 ### Minor Changes
 
-- 7fb8273: Migrate to @scalar/openapi-parser
+- 7fb8273: Migrate to @swagglar/openapi-parser
 
 ## 0.8.10
 
@@ -2013,7 +2013,7 @@
 
 ### Minor Changes
 
-- 0902d82c: \* refactor: add the CodeMirror component to @scalar/use-codemirror, use it everywhere
+- 0902d82c: \* refactor: add the CodeMirror component to @swagglar/use-codemirror, use it everywhere
   - feat: allow to pass forceDarkMode to the CodeMirror component
 
 ### Patch Changes

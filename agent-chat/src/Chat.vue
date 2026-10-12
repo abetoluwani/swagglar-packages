@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { useLazyApiClient } from '@scalar/api-client/modal/use-lazy-api-client'
-import { initializeWorkspaceEventHandlers } from '@scalar/api-client/v2/workspace-events'
+import { useLazyApiClient } from '@swagglar/api-client/modal/use-lazy-api-client'
+import { initializeWorkspaceEventHandlers } from '@swagglar/api-client/v2/workspace-events'
 import { onBeforeUnmount, onMounted, ref, useTemplateRef } from 'vue'
 
 import { useAgentKeyDocuments } from '@/hooks/use-agent-key-documents'
@@ -38,7 +38,7 @@ useLazyApiClient({
   eventBus,
   status: clientLoadingStatus,
   load: async () => {
-    const { createApiClientModal } = await import('@scalar/api-client/modal')
+    const { createApiClientModal } = await import('@swagglar/api-client/modal')
     return () => {
       if (!clientModalRef.value) {
         return null

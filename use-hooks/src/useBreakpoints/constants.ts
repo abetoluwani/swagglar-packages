@@ -1,7 +1,7 @@
 /**
  * Breakpoints for useBreakpoints hook
  *
- * Should match the tailwind breakpoints in \@scalar/themes
+ * Should match the tailwind breakpoints in \@swagglar/themes
  */
 export const screens = {
   /** Mobile */

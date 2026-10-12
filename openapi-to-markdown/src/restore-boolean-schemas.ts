@@ -1,4 +1,4 @@
-import { isObject } from '@scalar/helpers/object/is-object'
+import { isObject } from '@swagglar/helpers/object/is-object'
 
 /** Where a value sits in an OpenAPI description: a schema, a map of schemas, or anything else. */
 export type SchemaPosition = 'document' | 'schema' | 'map'

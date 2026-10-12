@@ -1,4 +1,4 @@
-import type { WorkspaceStore } from '@scalar/workspace-store/client'
+import type { WorkspaceStore } from '@swagglar/workspace-store/client'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { ref } from 'vue'
 

@@ -49,7 +49,7 @@
     "yaml": 531
   },
   "comparisonSizes": {
-    "@scalar/code-highlight syntaxHighlight": 130400
+    "@swagglar/code-highlight syntaxHighlight": 130400
   },
   "measuredAt": "2026-08-20T09:17:05.006Z",
   "node": "v24.19.0",

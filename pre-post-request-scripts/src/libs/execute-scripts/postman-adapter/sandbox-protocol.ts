@@ -1,4 +1,4 @@
-import type { VariableEntry } from '@scalar/workspace-store/request-example'
+import type { VariableEntry } from '@swagglar/workspace-store/request-example'
 
 import type { ConsoleContext } from '../context/console'
 import type { TestResult } from '../execute-post-response-script'

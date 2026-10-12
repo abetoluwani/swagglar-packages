@@ -10,8 +10,8 @@ export default {}
 import {
   ScalarIconArrowCounterClockwise,
   ScalarIconFloppyDisk,
-} from '@scalar/icons'
-import { useBindCx } from '@scalar/use-hooks/useBindCx'
+} from '@swagglar/icons'
+import { useBindCx } from '@swagglar/use-hooks/useBindCx'
 
 import { ScalarButton } from '../ScalarButton'
 import type { LoadingState } from '../ScalarLoading'

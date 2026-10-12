@@ -1,9 +1,9 @@
-import type { HttpMethod as HttpMethodType } from '@scalar/helpers/http/http-methods'
-import type { AvailableClient } from '@scalar/types/snippetz'
-import type { SecuritySchemeObjectSecret } from '@scalar/workspace-store/request-example'
-import { coerceValue } from '@scalar/workspace-store/schemas/typebox-coerce'
-import type { OperationObject, ServerObject } from '@scalar/workspace-store/schemas/v3.2/strict/openapi-document'
-import { SchemaObjectSchema } from '@scalar/workspace-store/schemas/v3.2/strict/openapi-document'
+import type { HttpMethod as HttpMethodType } from '@swagglar/helpers/http/http-methods'
+import type { AvailableClient } from '@swagglar/types/snippetz'
+import type { SecuritySchemeObjectSecret } from '@swagglar/workspace-store/request-example'
+import { coerceValue } from '@swagglar/workspace-store/schemas/typebox-coerce'
+import type { OperationObject, ServerObject } from '@swagglar/workspace-store/schemas/v3.2/strict/openapi-document'
+import { SchemaObjectSchema } from '@swagglar/workspace-store/schemas/v3.2/strict/openapi-document'
 import { enableAutoUnmount, mount } from '@vue/test-utils'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { nextTick, ref } from 'vue'
@@ -42,7 +42,7 @@ Object.defineProperty(document, 'execCommand', {
 })
 
 // Mock the useToasts hook
-vi.mock('@scalar/use-toasts', () => ({
+vi.mock('@swagglar/use-toasts', () => ({
   useToasts: () => ({
     toast: vi.fn(),
     initializeToasts: vi.fn(),

@@ -4,7 +4,7 @@
  * Derived from @url https://github.com/react-hook-form/react-hook-form/tree/011fad503cc8d4543892f8e847b9bd58c1d9400f/src/types/path
  *
  */
-import { preventPollution } from '@scalar/helpers/object/prevent-pollution'
+import { preventPollution } from '@swagglar/helpers/object/prevent-pollution'
 
 import type { ArrayKey, BrowserNativeObject, IsAny, IsEqual, IsTuple, Primitive, TupleKeys } from './common'
 

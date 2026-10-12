@@ -1,4 +1,4 @@
-import { getResolvedRefDeep } from '@scalar/workspace-store/helpers/get-resolved-ref-deep'
+import { getResolvedRefDeep } from '@swagglar/workspace-store/helpers/get-resolved-ref-deep'
 import Ajv2020 from 'ajv/dist/2020.js'
 import { describe, expect, it } from 'vitest'
 

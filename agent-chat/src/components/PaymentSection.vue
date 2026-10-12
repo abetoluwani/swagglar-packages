@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ScalarIconInfo } from '@scalar/icons'
+import { ScalarIconInfo } from '@swagglar/icons'
 
 import { useSignupLink } from '@/hooks/use-signup-link'
 

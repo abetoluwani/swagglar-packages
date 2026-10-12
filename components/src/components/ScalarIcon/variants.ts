@@ -1,4 +1,4 @@
-import { cva } from '@scalar/use-hooks/useBindCx'
+import { cva } from '@swagglar/use-hooks/useBindCx'
 
 /**
  * Variants for the ScalarIcon component

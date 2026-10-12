@@ -1,5 +1,5 @@
-import type { ScalarComboboxOption, ScalarComboboxOptionGroup } from '@scalar/components/combobox'
-import type { AvailableClients, ClientId, TargetId } from '@scalar/snippetz'
+import type { ScalarComboboxOption, ScalarComboboxOptionGroup } from '@swagglar/components/combobox'
+import type { AvailableClients, ClientId, TargetId } from '@swagglar/snippetz'
 
 /**
  * Represents a client option in the request example block.

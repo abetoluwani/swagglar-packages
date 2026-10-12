@@ -1,9 +1,9 @@
-import { isObject } from '@scalar/helpers/object/is-object'
+import { isObject } from '@swagglar/helpers/object/is-object'
 
 /**
  * The placeholder `getResolvedRefDeep` leaves behind wherever it had to cut a `$ref` cycle.
  *
- * The marker is owned by `@scalar/workspace-store`; the Ajv test in this file's suite resolves a real
+ * The marker is owned by `@swagglar/workspace-store`; the Ajv test in this file's suite resolves a real
  * recursive schema, so it fails here if that sentinel ever changes.
  */
 const CIRCULAR_MARKER = '[circular]'

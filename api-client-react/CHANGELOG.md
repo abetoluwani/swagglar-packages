@@ -1,4 +1,4 @@
-# @scalar/api-client-react
+# @swagglar/api-client-react
 
 ## 2.0.51
 
@@ -58,9 +58,9 @@
 
 ### Patch Changes
 
-- [#8519](https://github.com/scalar/scalar/pull/8519): refactor: extract the code example block into `@scalar/blocks/code-example`. `api-client`, `api-client-react`, and `api-reference` now import `CodeExample`, `findClient`, `generateClientOptions`, and the related helpers from the new package. `workspace-store` exports `isParamDisabled` with an optional `defaultDisabled` argument.
+- [#8519](https://github.com/scalar/scalar/pull/8519): refactor: extract the code example block into `@swagglar/blocks/code-example`. `api-client`, `api-client-react`, and `api-reference` now import `CodeExample`, `findClient`, `generateClientOptions`, and the related helpers from the new package. `workspace-store` exports `isParamDisabled` with an optional `defaultDisabled` argument.
 
-  **Breaking (`@scalar/api-client`):** the `@scalar/api-client/blocks/operation-code-sample` and `@scalar/api-client/v2/blocks/operation-code-sample` export paths have been removed. Import from `@scalar/blocks/code-example` instead, and use the renamed `CodeExample` / `CodeExampleProps` (previously `OperationCodeSample` / `OperationCodeSampleProps`).
+  **Breaking (`@swagglar/api-client`):** the `@swagglar/api-client/blocks/operation-code-sample` and `@swagglar/api-client/v2/blocks/operation-code-sample` export paths have been removed. Import from `@swagglar/blocks/code-example` instead, and use the renamed `CodeExample` / `CodeExampleProps` (previously `OperationCodeSample` / `OperationCodeSampleProps`).
 
 ## 2.0.27
 
@@ -169,7 +169,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/api-client@2.38.1**
+- **@swagglar/api-client@2.38.1**
   - [#8468](https://github.com/scalar/scalar/pull/8468): fix: example extraction, environment navigation and general UI fixes
   - [#8451](https://github.com/scalar/scalar/pull/8451): fix(api-client): default-close auth when not required
 
@@ -179,7 +179,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/api-client@2.38.0**
+- **@swagglar/api-client@2.38.0**
   - [#8444](https://github.com/scalar/scalar/pull/8444): feat: cache last response for an example
   - [#8424](https://github.com/scalar/scalar/pull/8424): fix(api-client): persist oauth credentials location
   - [#8428](https://github.com/scalar/scalar/pull/8428): fix: overflow issues for mac app version
@@ -191,7 +191,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/api-client@2.37.0**
+- **@swagglar/api-client@2.37.0**
   - [#8426](https://github.com/scalar/scalar/pull/8426): feat: sync with source flow with conflict resolution
 
 ## 1.4.7
@@ -200,10 +200,10 @@
 
 #### Updated Dependencies
 
-- **@scalar/api-client@2.36.2**
+- **@swagglar/api-client@2.36.2**
   - [#8414](https://github.com/scalar/scalar/pull/8414): fix(api-client): pass example picker attributes to button component
 
-- **@scalar/types@0.7.3**
+- **@swagglar/types@0.7.3**
 
 ## 1.4.6
 
@@ -211,7 +211,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/api-client@2.36.1**
+- **@swagglar/api-client@2.36.1**
   - [#8403](https://github.com/scalar/scalar/pull/8403): Persist auth url and token url in local storage
   - [#8402](https://github.com/scalar/scalar/pull/8402): Fix raw binary request bodies so uploaded files are sent correctly and code samples show file references.
   - [#8398](https://github.com/scalar/scalar/pull/8398): fix code snippet HAR request URL generation to URL-encode substituted path parameter values, matching request sending behavior.
@@ -225,7 +225,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/api-client@2.36.0**
+- **@swagglar/api-client@2.36.0**
   - [#8396](https://github.com/scalar/scalar/pull/8396): feat: preselect correct authentication for document and operation
   - [#8394](https://github.com/scalar/scalar/pull/8394): chore: rollback export document button
 
@@ -235,7 +235,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/api-client@2.35.0**
+- **@swagglar/api-client@2.35.0**
   - [#8349](https://github.com/scalar/scalar/pull/8349): feat: support operation example rename
   - [#8336](https://github.com/scalar/scalar/pull/8336): fix: layout with z-index and add support for mobile
   - [#8269](https://github.com/scalar/scalar/pull/8269): fix: prevent requests with empty path parameters
@@ -243,7 +243,7 @@
   - [#8253](https://github.com/scalar/scalar/pull/8253): feat(api-reference): support propertyNames enum for additionalProperties
   - [#8392](https://github.com/scalar/scalar/pull/8392): feat: support document download
 
-- **@scalar/types@0.7.2**
+- **@swagglar/types@0.7.2**
 
 ## 1.4.3
 
@@ -251,10 +251,10 @@
 
 #### Updated Dependencies
 
-- **@scalar/types@0.7.1**
+- **@swagglar/types@0.7.1**
   - [#8381](https://github.com/scalar/scalar/pull/8381): feat: add mcp config support
 
-- **@scalar/api-client@2.34.1**
+- **@swagglar/api-client@2.34.1**
 
 ## 1.4.2
 
@@ -262,7 +262,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/api-client@2.34.0**
+- **@swagglar/api-client@2.34.0**
   - [#8365](https://github.com/scalar/scalar/pull/8365): feat: store oauth flow refresh tokens on the auth store
   - [#8356](https://github.com/scalar/scalar/pull/8356): fix: make fallback theme reactive
 
@@ -272,7 +272,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/api-client@2.33.0**
+- **@swagglar/api-client@2.33.0**
   - [#8266](https://github.com/scalar/scalar/pull/8266): support operation level authentication and servers
 
 ## 1.4.0
@@ -285,10 +285,10 @@
 
 #### Updated Dependencies
 
-- **@scalar/api-client@2.32.0**
+- **@swagglar/api-client@2.32.0**
   - [#8322](https://github.com/scalar/scalar/pull/8322): chore: bump required node version to >=22 (LTS)
 
-- **@scalar/types@0.7.0**
+- **@swagglar/types@0.7.0**
   - [#8322](https://github.com/scalar/scalar/pull/8322): chore: bump required node version to >=22 (LTS)
 
 ## 1.3.107
@@ -297,11 +297,11 @@
 
 #### Updated Dependencies
 
-- **@scalar/api-client@2.31.3**
+- **@swagglar/api-client@2.31.3**
   - [#8313](https://github.com/scalar/scalar/pull/8313): fix: correctly cache schema examples
   - [#8254](https://github.com/scalar/scalar/pull/8254): fix: resolve OAuth2 URLs against interpolated server URL
 
-- **@scalar/types@0.6.10**
+- **@swagglar/types@0.6.10**
 
 ## 1.3.106
 
@@ -309,7 +309,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/api-client@2.31.2**
+- **@swagglar/api-client@2.31.2**
 
 ## 1.3.105
 
@@ -317,11 +317,11 @@
 
 #### Updated Dependencies
 
-- **@scalar/api-client@2.31.1**
+- **@swagglar/api-client@2.31.1**
   - [#8310](https://github.com/scalar/scalar/pull/8310): refactor: move helpers to the helpers package to share primitive helpers
   - [#8294](https://github.com/scalar/scalar/pull/8294): default createAnySecurityScheme to false and fix index clamp issue
 
-- **@scalar/types@0.6.9**
+- **@swagglar/types@0.6.9**
 
 ## 1.3.104
 
@@ -329,7 +329,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/api-client@2.31.0**
+- **@swagglar/api-client@2.31.0**
   - [#8290](https://github.com/scalar/scalar/pull/8290): chore: update deps
 
 ## 1.3.103
@@ -338,7 +338,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/api-client@2.30.0**
+- **@swagglar/api-client@2.30.0**
   - [#8255](https://github.com/scalar/scalar/pull/8255): fix: correctly handle circular references when deep resolving references
   - [#8234](https://github.com/scalar/scalar/pull/8234): support operation level authentication and servers
 
@@ -348,10 +348,10 @@
 
 #### Updated Dependencies
 
-- **@scalar/types@0.6.8**
+- **@swagglar/types@0.6.8**
   - [#8274](https://github.com/scalar/scalar/pull/8274): feat(agent): add config to hide search api
 
-- **@scalar/api-client@2.29.4**
+- **@swagglar/api-client@2.29.4**
 
 ## 1.3.101
 
@@ -359,11 +359,11 @@
 
 #### Updated Dependencies
 
-- **@scalar/api-client@2.29.3**
+- **@swagglar/api-client@2.29.3**
   - [#8248](https://github.com/scalar/scalar/pull/8248): fix: selecting multiply security schemes doesn't render Markdown in descriptions
   - [#8248](https://github.com/scalar/scalar/pull/8248): fix: remove unnecessary property truncation in example generation
 
-- **@scalar/types@0.6.7**
+- **@swagglar/types@0.6.7**
 
 ## 1.3.100
 
@@ -371,7 +371,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/api-client@2.29.2**
+- **@swagglar/api-client@2.29.2**
   - [#8219](https://github.com/scalar/scalar/pull/8219): chore: default to proxy for web layout
   - [#8220](https://github.com/scalar/scalar/pull/8220): chore: add guards for team workspaces
 
@@ -381,10 +381,10 @@
 
 #### Updated Dependencies
 
-- **@scalar/api-client@2.29.1**
+- **@swagglar/api-client@2.29.1**
   - [#8212](https://github.com/scalar/scalar/pull/8212): chore: version bump
 
-- **@scalar/types@0.6.6**
+- **@swagglar/types@0.6.6**
   - [#8212](https://github.com/scalar/scalar/pull/8212): chore: version bump
 
 ## 1.3.98
@@ -393,11 +393,11 @@
 
 #### Updated Dependencies
 
-- **@scalar/api-client@2.29.0**
+- **@swagglar/api-client@2.29.0**
   - [#8198](https://github.com/scalar/scalar/pull/8198): feat: handle workspace rename
   - [#8207](https://github.com/scalar/scalar/pull/8207): chore: version bump
 
-- **@scalar/types@0.6.5**
+- **@swagglar/types@0.6.5**
   - [#8207](https://github.com/scalar/scalar/pull/8207): chore: version bump
 
 ## 1.3.97
@@ -406,7 +406,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/api-client@2.28.0**
+- **@swagglar/api-client@2.28.0**
   - [#8162](https://github.com/scalar/scalar/pull/8162): feat: allow editing tags
   - [#8167](https://github.com/scalar/scalar/pull/8167): Accept header now defaults to the response content types defined in the OpenAPI spec instead of always using _/_
   - [#8197](https://github.com/scalar/scalar/pull/8197): fix: include path in redirect uri
@@ -419,7 +419,7 @@
   - [#8160](https://github.com/scalar/scalar/pull/8160): fix: update sidebar entry when the operation summary changes
   - [#8174](https://github.com/scalar/scalar/pull/8174): feat: add `createAnySecurityScheme` config option to control generic auth scheme creation
 
-- **@scalar/types@0.6.4**
+- **@swagglar/types@0.6.4**
   - [#8174](https://github.com/scalar/scalar/pull/8174): feat: add `createAnySecurityScheme` config option to control generic auth scheme creation
 
 ## 1.3.96
@@ -428,12 +428,12 @@
 
 #### Updated Dependencies
 
-- **@scalar/api-client@2.27.1**
+- **@swagglar/api-client@2.27.1**
   - [#8159](https://github.com/scalar/scalar/pull/8159): fix: do not mutate document after ingress
   - [#8158](https://github.com/scalar/scalar/pull/8158): fix: disable all listeners when modal is closed
   - [#8178](https://github.com/scalar/scalar/pull/8178): chore: package bump due to ci failure
 
-- **@scalar/types@0.6.3**
+- **@swagglar/types@0.6.3**
 
 ## 1.3.95
 
@@ -441,7 +441,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/api-client@2.27.0**
+- **@swagglar/api-client@2.27.0**
   - [#8135](https://github.com/scalar/scalar/pull/8135): feat: added support for OpenID Connect Discovery
   - [#8149](https://github.com/scalar/scalar/pull/8149): fix: prefill parameter inputs from parameter-level examples
   - [#8155](https://github.com/scalar/scalar/pull/8155): fix(api-reference): bugs with cards rendering
@@ -457,7 +457,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/api-client@2.26.2**
+- **@swagglar/api-client@2.26.2**
   - [#8120](https://github.com/scalar/scalar/pull/8120): refactor: make navigation router-agnostic
   - [#8075](https://github.com/scalar/scalar/pull/8075): Use Vue Transition for modal animation for better cross browser support.
   - [#8121](https://github.com/scalar/scalar/pull/8121): feat: added post response scripts/testing to api client v2
@@ -469,7 +469,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/api-client@2.26.1**
+- **@swagglar/api-client@2.26.1**
   - [#8072](https://github.com/scalar/scalar/pull/8072): fix: add `ModalClientContainer` to unify logic and styles across `Modal` and `ApiClientModal`.
   - [#8094](https://github.com/scalar/scalar/pull/8094): feat: open client to the correct example name
 
@@ -479,7 +479,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/api-client@2.26.0**
+- **@swagglar/api-client@2.26.0**
   - [#8069](https://github.com/scalar/scalar/pull/8069): Added full width and height classes to the DataTableCheckbox input so it renders correctly on Safari.
   - [#8108](https://github.com/scalar/scalar/pull/8108): feat: unify the api client desktop and web layout
   - [#8095](https://github.com/scalar/scalar/pull/8095): feat: support loading files into the store
@@ -496,7 +496,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/api-client@2.25.0**
+- **@swagglar/api-client@2.25.0**
   - [#8077](https://github.com/scalar/scalar/pull/8077): feat: support team workspaces
 
 ## 1.3.90
@@ -505,7 +505,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/api-client@2.24.0**
+- **@swagglar/api-client@2.24.0**
   - [#7989](https://github.com/scalar/scalar/pull/7989): fix: prevent API client modal from disappearing on reopen in Safari
   - [#8049](https://github.com/scalar/scalar/pull/8049): fix: gracefully handle import errors when importing from command palette
   - [#8061](https://github.com/scalar/scalar/pull/8061): fix: correctly display watch mode toggle state
@@ -519,7 +519,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/api-client@2.23.4**
+- **@swagglar/api-client@2.23.4**
   - [#8058](https://github.com/scalar/scalar/pull/8058): fix: correctly drop changes when modal closes
   - [#8059](https://github.com/scalar/scalar/pull/8059): fix: harden auth secret extraction plus tests
 
@@ -529,7 +529,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/api-client@2.23.3**
+- **@swagglar/api-client@2.23.3**
   - [#8035](https://github.com/scalar/scalar/pull/8035): fix: correctly resolve and validate refs
   - [#8033](https://github.com/scalar/scalar/pull/8033): fix: add failsafe to incorrect array parameter style
   - [#8043](https://github.com/scalar/scalar/pull/8043): fix: :deep selector for bun build
@@ -540,7 +540,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/api-client@2.23.2**
+- **@swagglar/api-client@2.23.2**
   - [#8027](https://github.com/scalar/scalar/pull/8027): feat(agent): add client side request tool
 
 ## 1.3.86
@@ -549,11 +549,11 @@
 
 #### Updated Dependencies
 
-- **@scalar/api-client@2.23.1**
+- **@swagglar/api-client@2.23.1**
   - [#8016](https://github.com/scalar/scalar/pull/8016): feat: move history and auth into their own store
   - [#7992](https://github.com/scalar/scalar/pull/7992): feat: hide code snippets without clients
 
-- **@scalar/types@0.6.2**
+- **@swagglar/types@0.6.2**
 
 ## 1.3.85
 
@@ -561,7 +561,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/api-client@2.23.0**
+- **@swagglar/api-client@2.23.0**
   - [#8005](https://github.com/scalar/scalar/pull/8005): feat: import modal for client v2
 
 ## 1.3.84
@@ -570,7 +570,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/api-client@2.22.3**
+- **@swagglar/api-client@2.22.3**
   - [#8004](https://github.com/scalar/scalar/pull/8004): fix: do not add a content type of none
   - [#7934](https://github.com/scalar/scalar/pull/7934): fix: z-index issues in addressBar
 
@@ -580,11 +580,11 @@
 
 #### Updated Dependencies
 
-- **@scalar/types@0.6.1**
+- **@swagglar/types@0.6.1**
   - [#8000](https://github.com/scalar/scalar/pull/8000): fix(agent): change enabled flag to disabled
   - [#7995](https://github.com/scalar/scalar/pull/7995): feat: enable/disable agent scalar
 
-- **@scalar/api-client@2.22.2**
+- **@swagglar/api-client@2.22.2**
   - [#7998](https://github.com/scalar/scalar/pull/7998): Made the inputs to useCommandPalette state reactive
   - [#7988](https://github.com/scalar/scalar/pull/7988): feat: restore old client search
   - [#8002](https://github.com/scalar/scalar/pull/8002): feat(agent): add inline agent chat
@@ -597,7 +597,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/api-client@2.22.1**
+- **@swagglar/api-client@2.22.1**
   - [#7965](https://github.com/scalar/scalar/pull/7965): Adds exports for creating external actions
 
 ## 1.3.81
@@ -606,12 +606,12 @@
 
 #### Updated Dependencies
 
-- **@scalar/api-client@2.22.0**
+- **@swagglar/api-client@2.22.0**
   - [#7959](https://github.com/scalar/scalar/pull/7959): feat(agent): add agent scalar to localhost
   - [#7929](https://github.com/scalar/scalar/pull/7929): fix: revert changes to the document when closing the modal
   - [#7932](https://github.com/scalar/scalar/pull/7932): feat: use getExample in the references responses
 
-- **@scalar/types@0.6.0**
+- **@swagglar/types@0.6.0**
   - [#7959](https://github.com/scalar/scalar/pull/7959): feat(agent): add agent scalar to localhost
 
 ## 1.3.80
@@ -620,7 +620,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/api-client@2.21.1**
+- **@swagglar/api-client@2.21.1**
   - [#7925](https://github.com/scalar/scalar/pull/7925): fix: allow collapsing documents
   - [#7926](https://github.com/scalar/scalar/pull/7926): Make V2 command palette extensible and improve types
 
@@ -630,7 +630,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/api-client@2.21.0**
+- **@swagglar/api-client@2.21.0**
   - [#7906](https://github.com/scalar/scalar/pull/7906): feat: remove parsing from codeinput and move to getExample
   - [#7897](https://github.com/scalar/scalar/pull/7897): feat: cancel request and stop streaming responses
 
@@ -640,10 +640,10 @@
 
 #### Updated Dependencies
 
-- **@scalar/api-client@2.20.2**
+- **@swagglar/api-client@2.20.2**
   - [#7894](https://github.com/scalar/scalar/pull/7894): fix: the import and export of redirect to proxy
 
-- **@scalar/types@0.5.10**
+- **@swagglar/types@0.5.10**
 
 ## 1.3.77
 
@@ -651,7 +651,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/api-client@2.20.1**
+- **@swagglar/api-client@2.20.1**
   - [#7888](https://github.com/scalar/scalar/pull/7888): fix: more robust parameter upsert and deletion
   - [#7889](https://github.com/scalar/scalar/pull/7889): fix: only attach the body to methods that allow
 
@@ -661,12 +661,12 @@
 
 #### Updated Dependencies
 
-- **@scalar/api-client@2.20.0**
+- **@swagglar/api-client@2.20.0**
   - [#7886](https://github.com/scalar/scalar/pull/7886): fix: cancel request when navigating away from operation page
   - [#7866](https://github.com/scalar/scalar/pull/7866): feat: save, revert and history support
   - [#7884](https://github.com/scalar/scalar/pull/7884): fix: sync state when rebuilding sidebar
 
-- **@scalar/types@0.5.9**
+- **@swagglar/types@0.5.9**
   - [#7866](https://github.com/scalar/scalar/pull/7866): chore: expose har types
 
 ## 1.3.75
@@ -675,7 +675,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/api-client@2.19.3**
+- **@swagglar/api-client@2.19.3**
   - [#7850](https://github.com/scalar/scalar/pull/7850): fix: remove unused workspace config
   - [#7865](https://github.com/scalar/scalar/pull/7865): fix: added contentType serialization support for params
 
@@ -685,7 +685,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/api-client@2.19.2**
+- **@swagglar/api-client@2.19.2**
   - [#7848](https://github.com/scalar/scalar/pull/7848): fix: allow multiple security requirements with different scopes
   - [#7852](https://github.com/scalar/scalar/pull/7852): fix: enable form rows by default
 
@@ -695,7 +695,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/api-client@2.19.1**
+- **@swagglar/api-client@2.19.1**
   - [#7828](https://github.com/scalar/scalar/pull/7828): fix: switch to upsert params due to race condition
   - [#7814](https://github.com/scalar/scalar/pull/7814): fix: additional properties generate invalid example
 
@@ -705,7 +705,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/api-client@2.19.0**
+- **@swagglar/api-client@2.19.0**
   - [#7821](https://github.com/scalar/scalar/pull/7821): Fix slot name for menu items
   - [#7786](https://github.com/scalar/scalar/pull/7786): chore: refactor mutators in workspace store
   - [#7753](https://github.com/scalar/scalar/pull/7753): feat: default headers and global cookies
@@ -718,7 +718,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/api-client@2.18.4**
+- **@swagglar/api-client@2.18.4**
   - [#7774](https://github.com/scalar/scalar/pull/7774): Adds exports to V2 client.
 
 ## 1.3.70
@@ -727,9 +727,9 @@
 
 #### Updated Dependencies
 
-- **@scalar/api-client@2.18.3**
+- **@swagglar/api-client@2.18.3**
 
-- **@scalar/types@0.5.8**
+- **@swagglar/types@0.5.8**
 
 ## 1.3.69
 
@@ -737,7 +737,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/api-client@2.18.2**
+- **@swagglar/api-client@2.18.2**
   - [#7765](https://github.com/scalar/scalar/pull/7765): fix: remove unneeded export from internal types and values
   - [#7728](https://github.com/scalar/scalar/pull/7728): fix: formBody handling in api client
   - [#7765](https://github.com/scalar/scalar/pull/7765): fix: remove unused files
@@ -748,7 +748,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/api-client@2.18.1**
+- **@swagglar/api-client@2.18.1**
   - [#7744](https://github.com/scalar/scalar/pull/7744): fix: pass hideClientButton config into client modal
   - [#7743](https://github.com/scalar/scalar/pull/7743): fix: complex auth
   - [#7740](https://github.com/scalar/scalar/pull/7740): fix: filter out readonly properties from requestBody
@@ -760,14 +760,14 @@
 
 #### Updated Dependencies
 
-- **@scalar/api-client@2.18.0**
+- **@swagglar/api-client@2.18.0**
   - [#7686](https://github.com/scalar/scalar/pull/7686): feat: add array + object functionality to code input
   - [#7585](https://github.com/scalar/scalar/pull/7585): feat: add copy url button on the addressbar
   - [#7713](https://github.com/scalar/scalar/pull/7713): fix: grab deprecated schema.example value
   - [#7723](https://github.com/scalar/scalar/pull/7723): fix: remove use-color-mode hook from modal
   - [#7730](https://github.com/scalar/scalar/pull/7730): fix: ensure path params work on the client
 
-- **@scalar/types@0.5.7**
+- **@swagglar/types@0.5.7**
 
 ## 1.3.66
 
@@ -775,7 +775,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/api-client@2.17.8**
+- **@swagglar/api-client@2.17.8**
   - [#7699](https://github.com/scalar/scalar/pull/7699): feat: added ui for oauth2 credentials location
   - [#7715](https://github.com/scalar/scalar/pull/7715): fix: remove scrollbar from buttons
 
@@ -785,7 +785,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/api-client@2.17.7**
+- **@swagglar/api-client@2.17.7**
   - [#7675](https://github.com/scalar/scalar/pull/7675): fix: ensure patch is uppercased
 
 ## 1.3.64
@@ -794,7 +794,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/api-client@2.17.6**
+- **@swagglar/api-client@2.17.6**
   - [#7630](https://github.com/scalar/scalar/pull/7630): feat: add clear button to password field
   - [#7673](https://github.com/scalar/scalar/pull/7673): fix: pass in reactive auth config to client
   - [#7664](https://github.com/scalar/scalar/pull/7664): fix: example resolution in request body
@@ -805,10 +805,10 @@
 
 #### Updated Dependencies
 
-- **@scalar/api-client@2.17.5**
+- **@swagglar/api-client@2.17.5**
   - [#7661](https://github.com/scalar/scalar/pull/7661): fix: all issues for client modal v2 preparation
 
-- **@scalar/types@0.5.6**
+- **@swagglar/types@0.5.6**
   - [#7661](https://github.com/scalar/scalar/pull/7661): fix: all issues for client modal v2 preparation
 
 ## 1.3.62
@@ -817,10 +817,10 @@
 
 #### Updated Dependencies
 
-- **@scalar/api-client@2.17.4**
+- **@swagglar/api-client@2.17.4**
   - [#7605](https://github.com/scalar/scalar/pull/7605): fix: all issues for client modal v2 preparation
 
-- **@scalar/types@0.5.5**
+- **@swagglar/types@0.5.5**
   - [#7605](https://github.com/scalar/scalar/pull/7605): fix: all issues for client modal v2 preparation
 
 ## 1.3.61
@@ -829,9 +829,9 @@
 
 #### Updated Dependencies
 
-- **@scalar/api-client@2.17.3**
+- **@swagglar/api-client@2.17.3**
 
-- **@scalar/types@0.5.4**
+- **@swagglar/types@0.5.4**
 
 ## 1.3.60
 
@@ -841,7 +841,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/api-client@2.17.2**
+- **@swagglar/api-client@2.17.2**
 
 ## 1.3.59
 
@@ -849,7 +849,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/api-client@2.17.1**
+- **@swagglar/api-client@2.17.1**
   - [#7562](https://github.com/scalar/scalar/pull/7562): feat(components): remove headless ui from dropdown component
 
 ## 1.3.58
@@ -858,14 +858,14 @@
 
 #### Updated Dependencies
 
-- **@scalar/api-client@2.17.0**
+- **@swagglar/api-client@2.17.0**
   - [#7580](https://github.com/scalar/scalar/pull/7580): feat: added default auth on client v2
   - [#7578](https://github.com/scalar/scalar/pull/7578): fix: ensure get schema examples are cached via options
   - [#7581](https://github.com/scalar/scalar/pull/7581): fix: npm publish job
   - [#7567](https://github.com/scalar/scalar/pull/7567): feat: add code samples to client v2
   - [#7565](https://github.com/scalar/scalar/pull/7565): feat: support markdown on parameter tooltip
 
-- **@scalar/types@0.5.4**
+- **@swagglar/types@0.5.4**
   - [#7567](https://github.com/scalar/scalar/pull/7567): feat: add code samples to client v2
 
 ## 1.3.57
@@ -874,7 +874,7 @@
 
 #### Updated Dependencies
 
-- **@scalar/api-client@2.16.0**
+- **@swagglar/api-client@2.16.0**
   - [#7564](https://github.com/scalar/scalar/pull/7564): feat: restore cursor position after path/method update
   - [#7528](https://github.com/scalar/scalar/pull/7528): feat: empty sidebar folders state
   - [#7561](https://github.com/scalar/scalar/pull/7561): feat: add accept header by default on the operation paramters
@@ -889,53 +889,53 @@
 ### Patch Changes
 
 - Updated dependencies [[`099237a`](https://github.com/scalar/scalar/commit/099237ad9cba4d29dcc5e742e39c3e42429a5817), [`2658415`](https://github.com/scalar/scalar/commit/2658415511787dd4554f6d6b47342bdf76d2cca8), [`bb52d9a`](https://github.com/scalar/scalar/commit/bb52d9a21e53628270bab93c0f03b5731c9c97c6), [`2f3a5bf`](https://github.com/scalar/scalar/commit/2f3a5bf26a16bf0733a9eb8bf0f47e2db161414f), [`a06c824`](https://github.com/scalar/scalar/commit/a06c824653af58839d897e9495f7489d6b5d12b9)]:
-  - @scalar/api-client@2.15.1
-  - @scalar/types@0.5.3
+  - @swagglar/api-client@2.15.1
+  - @swagglar/types@0.5.3
 
 ## 1.3.55
 
 ### Patch Changes
 
 - Updated dependencies [[`f7c24e4`](https://github.com/scalar/scalar/commit/f7c24e4995580649dbc3cb87007a683f5dd91f7c), [`10318b6`](https://github.com/scalar/scalar/commit/10318b6a59df49905225bdbd9e19044521cd4581), [`3f797b6`](https://github.com/scalar/scalar/commit/3f797b67489e07c4f3bf34a39b2175ed2d6f1465)]:
-  - @scalar/api-client@2.15.0
+  - @swagglar/api-client@2.15.0
 
 ## 1.3.54
 
 ### Patch Changes
 
 - Updated dependencies [[`72cd82f`](https://github.com/scalar/scalar/commit/72cd82fb8df63a9e5d0db1202978aebfefd0457a), [`21aa62e`](https://github.com/scalar/scalar/commit/21aa62e2ebdd262cb5aa53658c3b659736660722), [`72cd82f`](https://github.com/scalar/scalar/commit/72cd82fb8df63a9e5d0db1202978aebfefd0457a)]:
-  - @scalar/api-client@2.14.1
-  - @scalar/types@0.5.2
+  - @swagglar/api-client@2.14.1
+  - @swagglar/types@0.5.2
 
 ## 1.3.53
 
 ### Patch Changes
 
 - Updated dependencies [[`9ec8adf`](https://github.com/scalar/scalar/commit/9ec8adfea017333dee5bc3949104232f7dc57f4a), [`f446bbc`](https://github.com/scalar/scalar/commit/f446bbc0b8aec7fa7314603fd48471f06c1318d5)]:
-  - @scalar/api-client@2.14.0
+  - @swagglar/api-client@2.14.0
 
 ## 1.3.52
 
 ### Patch Changes
 
 - Updated dependencies [[`61c980c`](https://github.com/scalar/scalar/commit/61c980cebef219685a05f3a4cb1e379984922cd4), [`1bc2b45`](https://github.com/scalar/scalar/commit/1bc2b45b6eabd5c5045e77d67f59d202ab04d3fb), [`9342adc`](https://github.com/scalar/scalar/commit/9342adcd76e26a8e5eff75c1a2abee2c207b1487), [`62b5210`](https://github.com/scalar/scalar/commit/62b521092bafeb8e83e79222e13378c4a19defc8), [`bfd814a`](https://github.com/scalar/scalar/commit/bfd814a4219660face190041cc4845182b56ab03), [`1eafcbe`](https://github.com/scalar/scalar/commit/1eafcbeeaad3e611b9c8f365ce2961772b8e9494), [`86f028d`](https://github.com/scalar/scalar/commit/86f028deb0b456f923edd261f5f4b0fa9b616b7d)]:
-  - @scalar/api-client@2.13.0
-  - @scalar/types@0.5.1
+  - @swagglar/api-client@2.13.0
+  - @swagglar/types@0.5.1
 
 ## 1.3.51
 
 ### Patch Changes
 
 - Updated dependencies [[`6e1cb89`](https://github.com/scalar/scalar/commit/6e1cb89f71770601a5059449d68b409ffc87d332), [`44aeef0`](https://github.com/scalar/scalar/commit/44aeef01073801165e339163462378b7b62ff68d), [`cbedfab`](https://github.com/scalar/scalar/commit/cbedfab576502069be27ceacbea145a917214e47), [`1fbd809`](https://github.com/scalar/scalar/commit/1fbd809197bfaef77d7d3cb8cf7b657f397232a7), [`4cda566`](https://github.com/scalar/scalar/commit/4cda566c2dc2cf306e4e3597e292ae1c2dadd78c), [`cbedfab`](https://github.com/scalar/scalar/commit/cbedfab576502069be27ceacbea145a917214e47), [`a35f5cf`](https://github.com/scalar/scalar/commit/a35f5cf3bce49b0ffda758e95bd31c77109e3c5b), [`3ebff92`](https://github.com/scalar/scalar/commit/3ebff92f29d8d03d626d4000e8323528e794e755), [`4059e68`](https://github.com/scalar/scalar/commit/4059e68375d31ec0142a8019b385bc3ac82055fc), [`0486728`](https://github.com/scalar/scalar/commit/04867286af9156c4d8ffb688c2d200f1b5a7d752), [`cc9d90b`](https://github.com/scalar/scalar/commit/cc9d90b1a268a6c294adcb32f7ae8559c1dcc77e)]:
-  - @scalar/api-client@2.12.0
-  - @scalar/types@0.5.0
+  - @swagglar/api-client@2.12.0
+  - @swagglar/types@0.5.0
 
 ## 1.3.50
 
 ### Patch Changes
 
 - Updated dependencies [[`c7a4690`](https://github.com/scalar/scalar/commit/c7a4690cec484ee16cee8dcba7ef5cb0fbb98133), [`7859105`](https://github.com/scalar/scalar/commit/7859105f857633c8f3c945d67a21f7225844ed12), [`7ccd035`](https://github.com/scalar/scalar/commit/7ccd0351de104f78ef9c6e16538753d302c50d47)]:
-  - @scalar/api-client@2.11.0
+  - @swagglar/api-client@2.11.0
 
 ## 1.3.49
 
@@ -944,14 +944,14 @@
 - [#7241](https://github.com/scalar/scalar/pull/7241) [`2377b76`](https://github.com/scalar/scalar/commit/2377b76d050f8de70037b17a32d0dd1181d3311d) Thanks [@hanspagel](https://github.com/hanspagel)! - chore: use "current" not "latest" scalar registry url
 
 - Updated dependencies [[`fddf294`](https://github.com/scalar/scalar/commit/fddf294b00dd8c9eb5c713c338f2ec6e3f62523d), [`d6154a2`](https://github.com/scalar/scalar/commit/d6154a24d97fc28977def486f99b2eeee52d268c), [`2377b76`](https://github.com/scalar/scalar/commit/2377b76d050f8de70037b17a32d0dd1181d3311d)]:
-  - @scalar/api-client@2.10.0
+  - @swagglar/api-client@2.10.0
 
 ## 1.3.48
 
 ### Patch Changes
 
 - Updated dependencies []:
-  - @scalar/api-client@2.9.1
+  - @swagglar/api-client@2.9.1
 
 ## 1.3.47
 
@@ -960,8 +960,8 @@
 - [#7094](https://github.com/scalar/scalar/pull/7094) [`eba18d0`](https://github.com/scalar/scalar/commit/eba18d06267a163a8f91396a66f817100ee59461) Thanks [@geoffgscott](https://github.com/geoffgscott)! - Migrate to workspace store as primary source of truth.
 
 - Updated dependencies [[`0319b8a`](https://github.com/scalar/scalar/commit/0319b8a8652a50667776b2e9fd27c3e15b34f765), [`eb022f2`](https://github.com/scalar/scalar/commit/eb022f2c8f93c84a04c0093fefe8a1e05d6ec80d), [`729ad06`](https://github.com/scalar/scalar/commit/729ad06027c91abcc39866f39319f053d286b995), [`c22fc4e`](https://github.com/scalar/scalar/commit/c22fc4e5acb49d648014a6100c724a5b33c59cde), [`6ec8c29`](https://github.com/scalar/scalar/commit/6ec8c299d912111b029e8058979d00968b70691a), [`d34f31e`](https://github.com/scalar/scalar/commit/d34f31ee9e3ff360869c52f383b14431af520201), [`c162bb6`](https://github.com/scalar/scalar/commit/c162bb64b86e698427c1fce36f6d8a2b789e094a), [`6ca835e`](https://github.com/scalar/scalar/commit/6ca835e5afd3e8c603e073e7c83f2cdd961a0f69), [`7cda4c5`](https://github.com/scalar/scalar/commit/7cda4c5ecf237e17193391e223f9503c9f37f574), [`704fa30`](https://github.com/scalar/scalar/commit/704fa302b2cdbb17b19ca2d742537ca163d58c1c), [`573c5a6`](https://github.com/scalar/scalar/commit/573c5a6c5d71ecfda262532aa32dad382f9f71e4), [`0865e66`](https://github.com/scalar/scalar/commit/0865e662092f8521bf69b69d82486ec0cc6030dd), [`7c1e09e`](https://github.com/scalar/scalar/commit/7c1e09e86ce128adeefd209284a2ba49917adf2c), [`eba18d0`](https://github.com/scalar/scalar/commit/eba18d06267a163a8f91396a66f817100ee59461), [`0d9c945`](https://github.com/scalar/scalar/commit/0d9c945a696ea8b826d86f7b48ec6de4d85e64f0), [`f612140`](https://github.com/scalar/scalar/commit/f612140491d4e5088757ea5a3fef65ccd2785f08), [`d386ae2`](https://github.com/scalar/scalar/commit/d386ae2a7c9288c8e5c4750ab57920ab955cae06)]:
-  - @scalar/api-client@2.9.0
-  - @scalar/types@0.4.0
+  - @swagglar/api-client@2.9.0
+  - @swagglar/types@0.4.0
 
 ## 1.3.46
 
@@ -972,8 +972,8 @@
 - Updated dependencies [f3e17d8]
 - Updated dependencies [8e4c8c0]
 - Updated dependencies [f8efecd]
-  - @scalar/api-client@2.8.1
-  - @scalar/types@0.3.2
+  - @swagglar/api-client@2.8.1
+  - @swagglar/types@0.3.2
 
 ## 1.3.45
 
@@ -985,8 +985,8 @@
 - Updated dependencies [a747da6]
 - Updated dependencies [1e01464]
 - Updated dependencies [b998d57]
-  - @scalar/api-client@2.8.0
-  - @scalar/types@0.3.1
+  - @swagglar/api-client@2.8.0
+  - @swagglar/types@0.3.1
 
 ## 1.3.44
 
@@ -994,8 +994,8 @@
 
 - Updated dependencies [008a0f3]
 - Updated dependencies [f833196]
-  - @scalar/api-client@2.7.0
-  - @scalar/types@0.3.0
+  - @swagglar/api-client@2.7.0
+  - @swagglar/types@0.3.0
 
 ## 1.3.43
 
@@ -1003,14 +1003,14 @@
 
 - Updated dependencies [8ad6af0]
 - Updated dependencies [a46a700]
-  - @scalar/api-client@2.6.2
+  - @swagglar/api-client@2.6.2
 
 ## 1.3.42
 
 ### Patch Changes
 
 - Updated dependencies [eadd229]
-  - @scalar/api-client@2.6.1
+  - @swagglar/api-client@2.6.1
 
 ## 1.3.41
 
@@ -1019,41 +1019,41 @@
 - Updated dependencies [b858566]
 - Updated dependencies [170b890]
 - Updated dependencies [db5b649]
-  - @scalar/api-client@2.6.0
+  - @swagglar/api-client@2.6.0
 
 ## 1.3.40
 
 ### Patch Changes
 
-- @scalar/api-client@2.5.35
+- @swagglar/api-client@2.5.35
 
 ## 1.3.39
 
 ### Patch Changes
 
 - Updated dependencies [005fba9]
-  - @scalar/types@0.2.16
-  - @scalar/api-client@2.5.34
+  - @swagglar/types@0.2.16
+  - @swagglar/api-client@2.5.34
 
 ## 1.3.38
 
 ### Patch Changes
 
 - Updated dependencies [8f2a2f2]
-  - @scalar/api-client@2.5.33
+  - @swagglar/api-client@2.5.33
 
 ## 1.3.37
 
 ### Patch Changes
 
-- @scalar/api-client@2.5.32
+- @swagglar/api-client@2.5.32
 
 ## 1.3.36
 
 ### Patch Changes
 
 - Updated dependencies [f8fc81c]
-  - @scalar/api-client@2.5.31
+  - @swagglar/api-client@2.5.31
 
 ## 1.3.35
 
@@ -1061,14 +1061,14 @@
 
 - Updated dependencies [c173063]
 - Updated dependencies [c173063]
-  - @scalar/api-client@2.5.30
+  - @swagglar/api-client@2.5.30
 
 ## 1.3.34
 
 ### Patch Changes
 
 - Updated dependencies [5eedb97]
-  - @scalar/api-client@2.5.29
+  - @swagglar/api-client@2.5.29
 
 ## 1.3.33
 
@@ -1077,8 +1077,8 @@
 - Updated dependencies [c470c60]
 - Updated dependencies [abe3842]
 - Updated dependencies [5a7d388]
-  - @scalar/api-client@2.5.28
-  - @scalar/types@0.2.15
+  - @swagglar/api-client@2.5.28
+  - @swagglar/types@0.2.15
 
 ## 1.3.32
 
@@ -1087,22 +1087,22 @@
 - Updated dependencies [714b197]
 - Updated dependencies [792c937]
 - Updated dependencies [ee605d8]
-  - @scalar/api-client@2.5.27
-  - @scalar/types@0.2.14
+  - @swagglar/api-client@2.5.27
+  - @swagglar/types@0.2.14
 
 ## 1.3.31
 
 ### Patch Changes
 
 - Updated dependencies [50032be]
-  - @scalar/types@0.2.13
-  - @scalar/api-client@2.5.26
+  - @swagglar/types@0.2.13
+  - @swagglar/api-client@2.5.26
 
 ## 1.3.30
 
 ### Patch Changes
 
-- @scalar/api-client@2.5.25
+- @swagglar/api-client@2.5.25
 
 ## 1.3.29
 
@@ -1113,8 +1113,8 @@
 - Updated dependencies [5f022b5]
 - Updated dependencies [6a88108]
 - Updated dependencies [0804cfc]
-  - @scalar/api-client@2.5.24
-  - @scalar/types@0.2.12
+  - @swagglar/api-client@2.5.24
+  - @swagglar/types@0.2.12
 
 ## 1.3.28
 
@@ -1124,14 +1124,14 @@
 - Updated dependencies [58b9321]
 - Updated dependencies [68e4631]
 - Updated dependencies [376739d]
-  - @scalar/api-client@2.5.23
-  - @scalar/types@0.2.11
+  - @swagglar/api-client@2.5.23
+  - @swagglar/types@0.2.11
 
 ## 1.3.27
 
 ### Patch Changes
 
-- @scalar/api-client@2.5.22
+- @swagglar/api-client@2.5.22
 
 ## 1.3.26
 
@@ -1140,7 +1140,7 @@
 - Updated dependencies [c02c1c8]
 - Updated dependencies [b551707]
 - Updated dependencies [dd00357]
-  - @scalar/api-client@2.5.21
+  - @swagglar/api-client@2.5.21
 
 ## 1.3.25
 
@@ -1154,8 +1154,8 @@
 - Updated dependencies [c0d6793]
 - Updated dependencies [77e700b]
 - Updated dependencies [af22451]
-  - @scalar/api-client@2.5.20
-  - @scalar/types@0.2.11
+  - @swagglar/api-client@2.5.20
+  - @swagglar/types@0.2.11
 
 ## 1.3.24
 
@@ -1166,22 +1166,22 @@
 - Updated dependencies [fb62e1b]
 - Updated dependencies [cac47ea]
 - Updated dependencies [cac47ea]
-  - @scalar/api-client@2.5.19
-  - @scalar/types@0.2.10
+  - @swagglar/api-client@2.5.19
+  - @swagglar/types@0.2.10
 
 ## 1.3.23
 
 ### Patch Changes
 
 - Updated dependencies [591562f]
-  - @scalar/api-client@2.5.18
-  - @scalar/types@0.2.9
+  - @swagglar/api-client@2.5.18
+  - @swagglar/types@0.2.9
 
 ## 1.3.22
 
 ### Patch Changes
 
-- @scalar/api-client@2.5.17
+- @swagglar/api-client@2.5.17
 
 ## 1.3.21
 
@@ -1191,8 +1191,8 @@
 - Updated dependencies [244edda]
 - Updated dependencies [244edda]
 - Updated dependencies [9e81b17]
-  - @scalar/api-client@2.5.16
-  - @scalar/types@0.2.8
+  - @swagglar/api-client@2.5.16
+  - @swagglar/types@0.2.8
 
 ## 1.3.20
 
@@ -1205,8 +1205,8 @@
 - Updated dependencies [74fdc0e]
 - Updated dependencies [3fdc2f2]
 - Updated dependencies [972602f]
-  - @scalar/api-client@2.5.15
-  - @scalar/types@0.2.7
+  - @swagglar/api-client@2.5.15
+  - @swagglar/types@0.2.7
 
 ## 1.3.19
 
@@ -1214,8 +1214,8 @@
 
 - 2d7f995: refactor: use more common straight apostrophe ' instead of the real apostrophe ’
 - Updated dependencies [2d7f995]
-  - @scalar/api-client@2.5.14
-  - @scalar/types@0.2.6
+  - @swagglar/api-client@2.5.14
+  - @swagglar/types@0.2.6
 
 ## 1.3.18
 
@@ -1223,41 +1223,41 @@
 
 - Updated dependencies [533469b]
 - Updated dependencies [4f47b3c]
-  - @scalar/api-client@2.5.13
-  - @scalar/types@0.2.5
+  - @swagglar/api-client@2.5.13
+  - @swagglar/types@0.2.5
 
 ## 1.3.17
 
 ### Patch Changes
 
 - Updated dependencies [1468280]
-  - @scalar/types@0.2.4
-  - @scalar/api-client@2.5.12
+  - @swagglar/types@0.2.4
+  - @swagglar/api-client@2.5.12
 
 ## 1.3.16
 
 ### Patch Changes
 
-- @scalar/api-client@2.5.11
+- @swagglar/api-client@2.5.11
 
 ## 1.3.15
 
 ### Patch Changes
 
 - Updated dependencies [699df60]
-  - @scalar/api-client@2.5.10
+  - @swagglar/api-client@2.5.10
 
 ## 1.3.14
 
 ### Patch Changes
 
-- @scalar/api-client@2.5.9
+- @swagglar/api-client@2.5.9
 
 ## 1.3.13
 
 ### Patch Changes
 
-- @scalar/api-client@2.5.8
+- @swagglar/api-client@2.5.8
 
 ## 1.3.12
 
@@ -1265,7 +1265,7 @@
 
 - Updated dependencies [a5d010c]
 - Updated dependencies [b12cd8e]
-  - @scalar/api-client@2.5.7
+  - @swagglar/api-client@2.5.7
 
 ## 1.3.11
 
@@ -1277,20 +1277,20 @@
 - Updated dependencies [221e35f]
 - Updated dependencies [4156f1d]
 - Updated dependencies [711b435]
-  - @scalar/api-client@2.5.6
-  - @scalar/types@0.2.3
+  - @swagglar/api-client@2.5.6
+  - @swagglar/types@0.2.3
 
 ## 1.3.10
 
 ### Patch Changes
 
-- @scalar/api-client@2.5.5
+- @swagglar/api-client@2.5.5
 
 ## 1.3.9
 
 ### Patch Changes
 
-- @scalar/api-client@2.5.4
+- @swagglar/api-client@2.5.4
 
 ## 1.3.8
 
@@ -1298,8 +1298,8 @@
 
 - Updated dependencies [79975dd]
 - Updated dependencies [8165b3b]
-  - @scalar/api-client@2.5.3
-  - @scalar/types@0.2.2
+  - @swagglar/api-client@2.5.3
+  - @swagglar/types@0.2.2
 
 ## 1.3.7
 
@@ -1309,13 +1309,13 @@
 - Updated dependencies [3ad9393]
 - Updated dependencies [b461b62]
 - Updated dependencies [a47fa60]
-  - @scalar/api-client@2.5.2
+  - @swagglar/api-client@2.5.2
 
 ## 1.3.6
 
 ### Patch Changes
 
-- @scalar/api-client@2.5.1
+- @swagglar/api-client@2.5.1
 
 ## 1.3.5
 
@@ -1325,37 +1325,37 @@
 - Updated dependencies [0113b84]
 - Updated dependencies [cad6277]
 - Updated dependencies [ffa93fa]
-  - @scalar/api-client@2.5.0
-  - @scalar/types@0.2.1
+  - @swagglar/api-client@2.5.0
+  - @swagglar/types@0.2.1
 
 ## 1.3.4
 
 ### Patch Changes
 
 - Updated dependencies [151ef09]
-  - @scalar/api-client@2.4.4
+  - @swagglar/api-client@2.4.4
 
 ## 1.3.3
 
 ### Patch Changes
 
 - Updated dependencies [fbcce50]
-  - @scalar/api-client@2.4.3
+  - @swagglar/api-client@2.4.3
 
 ## 1.3.2
 
 ### Patch Changes
 
 - Updated dependencies [2efdf8e]
-  - @scalar/api-client@2.4.2
+  - @swagglar/api-client@2.4.2
 
 ## 1.3.1
 
 ### Patch Changes
 
 - Updated dependencies [4440949]
-  - @scalar/types@0.2.1
-  - @scalar/api-client@2.4.1
+  - @swagglar/types@0.2.1
+  - @swagglar/api-client@2.4.1
 
 ## 1.3.0
 
@@ -1371,8 +1371,8 @@
 - Updated dependencies [483ca93]
 - Updated dependencies [fe696ab]
 - Updated dependencies [20cf550]
-  - @scalar/api-client@2.4.0
-  - @scalar/types@0.2.0
+  - @swagglar/api-client@2.4.0
+  - @swagglar/types@0.2.0
 
 ## 1.2.34
 
@@ -1381,8 +1381,8 @@
 - Updated dependencies [6b4a3c3]
 - Updated dependencies [be8a6ec]
 - Updated dependencies [cd0722d]
-  - @scalar/api-client@2.3.34
-  - @scalar/types@0.1.16
+  - @swagglar/api-client@2.3.34
+  - @swagglar/types@0.1.16
 
 ## 1.2.33
 
@@ -1398,8 +1398,8 @@
 - Updated dependencies [ac16fca]
 - Updated dependencies [1966c5a]
 - Updated dependencies [ac16fca]
-  - @scalar/api-client@2.3.33
-  - @scalar/types@0.1.15
+  - @swagglar/api-client@2.3.33
+  - @swagglar/types@0.1.15
 
 ## 1.2.32
 
@@ -1408,23 +1408,23 @@
 - Updated dependencies [e42dfc0]
 - Updated dependencies [4483ac4]
 - Updated dependencies [4483ac4]
-  - @scalar/api-client@2.3.32
+  - @swagglar/api-client@2.3.32
 
 ## 1.2.31
 
 ### Patch Changes
 
 - Updated dependencies [8c7bad8]
-  - @scalar/api-client@2.3.31
-  - @scalar/types@0.1.14
+  - @swagglar/api-client@2.3.31
+  - @swagglar/types@0.1.14
 
 ## 1.2.30
 
 ### Patch Changes
 
 - Updated dependencies [e8457cb]
-  - @scalar/types@0.1.13
-  - @scalar/api-client@2.3.30
+  - @swagglar/types@0.1.13
+  - @swagglar/api-client@2.3.30
 
 ## 1.2.29
 
@@ -1432,14 +1432,14 @@
 
 - Updated dependencies [a4e5a2e]
 - Updated dependencies [701093e]
-  - @scalar/api-client@2.3.29
+  - @swagglar/api-client@2.3.29
 
 ## 1.2.28
 
 ### Patch Changes
 
 - Updated dependencies [5d24800]
-  - @scalar/api-client@2.3.28
+  - @swagglar/api-client@2.3.28
 
 ## 1.2.27
 
@@ -1455,16 +1455,16 @@
 - Updated dependencies [950772d]
 - Updated dependencies [f2b8732]
 - Updated dependencies [b3f599f]
-  - @scalar/api-client@2.3.27
-  - @scalar/types@0.1.12
+  - @swagglar/api-client@2.3.27
+  - @swagglar/types@0.1.12
 
 ## 1.2.26
 
 ### Patch Changes
 
 - Updated dependencies [eb4854d]
-  - @scalar/types@0.1.11
-  - @scalar/api-client@2.3.26
+  - @swagglar/types@0.1.11
+  - @swagglar/api-client@2.3.26
 
 ## 1.2.25
 
@@ -1474,8 +1474,8 @@
 - Updated dependencies [98fa8a0]
 - Updated dependencies [2109da5]
 - Updated dependencies [0ff02e3]
-  - @scalar/api-client@2.3.25
-  - @scalar/types@0.1.10
+  - @swagglar/api-client@2.3.25
+  - @swagglar/types@0.1.10
 
 ## 1.2.24
 
@@ -1484,8 +1484,8 @@
 - Updated dependencies [17e7d02]
 - Updated dependencies [3cb857d]
 - Updated dependencies [3cb857d]
-  - @scalar/types@0.1.9
-  - @scalar/api-client@2.3.24
+  - @swagglar/types@0.1.9
+  - @swagglar/api-client@2.3.24
 
 ## 1.2.23
 
@@ -1495,21 +1495,21 @@
 - Updated dependencies [85163e7]
 - Updated dependencies [301cf13]
 - Updated dependencies [85163e7]
-  - @scalar/api-client@2.3.23
+  - @swagglar/api-client@2.3.23
 
 ## 1.2.22
 
 ### Patch Changes
 
 - Updated dependencies [e489824]
-  - @scalar/api-client@2.3.22
+  - @swagglar/api-client@2.3.22
 
 ## 1.2.21
 
 ### Patch Changes
 
 - Updated dependencies [c5047ee]
-  - @scalar/api-client@2.3.21
+  - @swagglar/api-client@2.3.21
 
 ## 1.2.20
 
@@ -1524,15 +1524,15 @@
 - Updated dependencies [f4e1402]
 - Updated dependencies [e30339c]
 - Updated dependencies [4abe4f8]
-  - @scalar/api-client@2.3.20
-  - @scalar/types@0.1.8
+  - @swagglar/api-client@2.3.20
+  - @swagglar/types@0.1.8
 
 ## 1.2.19
 
 ### Patch Changes
 
 - Updated dependencies [44413b1]
-  - @scalar/api-client@2.3.19
+  - @swagglar/api-client@2.3.19
 
 ## 1.2.18
 
@@ -1541,14 +1541,14 @@
 - Updated dependencies [5b19c90]
 - Updated dependencies [9def02e]
 - Updated dependencies [3745d77]
-  - @scalar/api-client@2.3.18
-  - @scalar/types@0.1.7
+  - @swagglar/api-client@2.3.18
+  - @swagglar/types@0.1.7
 
 ## 1.2.17
 
 ### Patch Changes
 
-- @scalar/api-client@2.3.17
+- @swagglar/api-client@2.3.17
 
 ## 1.2.16
 
@@ -1557,7 +1557,7 @@
 - Updated dependencies [27f1c16]
 - Updated dependencies [27f1c16]
 - Updated dependencies [d970ff5]
-  - @scalar/api-client@2.3.16
+  - @swagglar/api-client@2.3.16
 
 ## 1.2.15
 
@@ -1566,14 +1566,14 @@
 - Updated dependencies [ce91adc]
 - Updated dependencies [61e094b]
 - Updated dependencies [e7fb3eb]
-  - @scalar/api-client@2.3.15
+  - @swagglar/api-client@2.3.15
 
 ## 1.2.14
 
 ### Patch Changes
 
 - Updated dependencies [abff210]
-  - @scalar/api-client@2.3.14
+  - @swagglar/api-client@2.3.14
 
 ## 1.2.13
 
@@ -1581,7 +1581,7 @@
 
 - Updated dependencies [bf961b1]
 - Updated dependencies [a176b7e]
-  - @scalar/api-client@2.3.13
+  - @swagglar/api-client@2.3.13
 
 ## 1.2.12
 
@@ -1592,8 +1592,8 @@
 - Updated dependencies [a571d36]
 - Updated dependencies [a097ea1]
 - Updated dependencies [3783345]
-  - @scalar/api-client@2.3.12
-  - @scalar/types@0.1.6
+  - @swagglar/api-client@2.3.12
+  - @swagglar/types@0.1.6
 
 ## 1.2.11
 
@@ -1603,15 +1603,15 @@
 - Updated dependencies [e09dab3]
 - Updated dependencies [b0a5481]
 - Updated dependencies [04e27a1]
-  - @scalar/api-client@2.3.11
-  - @scalar/types@0.1.5
+  - @swagglar/api-client@2.3.11
+  - @swagglar/types@0.1.5
 
 ## 1.2.10
 
 ### Patch Changes
 
 - Updated dependencies [0de80ae]
-  - @scalar/api-client@2.3.10
+  - @swagglar/api-client@2.3.10
 
 ## 1.2.9
 
@@ -1621,8 +1621,8 @@
 - Updated dependencies [ab6b166]
 - Updated dependencies [82a4ba8]
 - Updated dependencies [57feba6]
-  - @scalar/types@0.1.4
-  - @scalar/api-client@2.3.9
+  - @swagglar/types@0.1.4
+  - @swagglar/api-client@2.3.9
 
 ## 1.2.8
 
@@ -1631,15 +1631,15 @@
 - Updated dependencies [543a16c]
 - Updated dependencies [002a50e]
 - Updated dependencies [57e96a0]
-  - @scalar/types@0.1.3
-  - @scalar/api-client@2.3.8
+  - @swagglar/types@0.1.3
+  - @swagglar/api-client@2.3.8
 
 ## 1.2.7
 
 ### Patch Changes
 
 - Updated dependencies [46b40ca]
-  - @scalar/api-client@2.3.7
+  - @swagglar/api-client@2.3.7
 
 ## 1.2.6
 
@@ -1650,15 +1650,15 @@
 - Updated dependencies [0f13162]
 - Updated dependencies [49dffff]
 - Updated dependencies [49dffff]
-  - @scalar/types@0.1.2
-  - @scalar/api-client@2.3.6
+  - @swagglar/types@0.1.2
+  - @swagglar/api-client@2.3.6
 
 ## 1.2.5
 
 ### Patch Changes
 
 - Updated dependencies [0fb83f2]
-  - @scalar/api-client@2.3.5
+  - @swagglar/api-client@2.3.5
 
 ## 1.2.4
 
@@ -1667,7 +1667,7 @@
 - Updated dependencies [ed2b1fb]
 - Updated dependencies [ebc29d5]
 - Updated dependencies [58acdc6]
-  - @scalar/api-client@2.3.4
+  - @swagglar/api-client@2.3.4
 
 ## 1.2.3
 
@@ -1676,8 +1676,8 @@
 - Updated dependencies [cd75eeb]
 - Updated dependencies [39c0f47]
 - Updated dependencies [4093692]
-  - @scalar/api-client@2.3.3
-  - @scalar/types@0.1.1
+  - @swagglar/api-client@2.3.3
+  - @swagglar/types@0.1.1
 
 ## 1.2.2
 
@@ -1686,14 +1686,14 @@
 - Updated dependencies [1437882]
 - Updated dependencies [060ada9]
 - Updated dependencies [cf58fba]
-  - @scalar/api-client@2.3.2
+  - @swagglar/api-client@2.3.2
 
 ## 1.2.1
 
 ### Patch Changes
 
 - Updated dependencies [7bc87ef]
-  - @scalar/api-client@2.3.1
+  - @swagglar/api-client@2.3.1
 
 ## 1.2.0
 
@@ -1705,8 +1705,8 @@
 
 - Updated dependencies [5be9418]
 - Updated dependencies [5f9a8a2]
-  - @scalar/api-client@2.3.0
-  - @scalar/types@0.1.0
+  - @swagglar/api-client@2.3.0
+  - @swagglar/types@0.1.0
 
 ## 1.1.43
 
@@ -1715,14 +1715,14 @@
 - Updated dependencies [00a429f]
 - Updated dependencies [fc6a45e]
 - Updated dependencies [a0da28e]
-  - @scalar/api-client@2.2.63
-  - @scalar/types@0.0.41
+  - @swagglar/api-client@2.2.63
+  - @swagglar/types@0.0.41
 
 ## 1.1.42
 
 ### Patch Changes
 
-- @scalar/api-client@2.2.62
+- @swagglar/api-client@2.2.62
 
 ## 1.1.41
 
@@ -1730,8 +1730,8 @@
 
 - Updated dependencies [4d03e0f]
 - Updated dependencies [2bbbf01]
-  - @scalar/api-client@2.2.61
-  - @scalar/types@0.0.40
+  - @swagglar/api-client@2.2.61
+  - @swagglar/types@0.0.40
 
 ## 1.1.40
 
@@ -1739,7 +1739,7 @@
 
 - Updated dependencies [df4dee8]
 - Updated dependencies [23bac9d]
-  - @scalar/api-client@2.2.60
+  - @swagglar/api-client@2.2.60
 
 ## 1.1.39
 
@@ -1748,8 +1748,8 @@
 - Updated dependencies [bab7990]
 - Updated dependencies [2c621d4]
 - Updated dependencies [168e609]
-  - @scalar/types@0.0.39
-  - @scalar/api-client@2.2.59
+  - @swagglar/types@0.0.39
+  - @swagglar/api-client@2.2.59
 
 ## 1.1.38
 
@@ -1757,8 +1757,8 @@
 
 - Updated dependencies [4682a6f]
 - Updated dependencies [7f1a40e]
-  - @scalar/api-client@2.2.58
-  - @scalar/types@0.0.38
+  - @swagglar/api-client@2.2.58
+  - @swagglar/types@0.0.38
 
 ## 1.1.37
 
@@ -1771,15 +1771,15 @@
 - Updated dependencies [73513d3]
 - Updated dependencies [51b7c5c]
 - Updated dependencies [8a04b8d]
-  - @scalar/api-client@2.2.57
-  - @scalar/types@0.0.37
+  - @swagglar/api-client@2.2.57
+  - @swagglar/types@0.0.37
 
 ## 1.1.36
 
 ### Patch Changes
 
 - Updated dependencies [a5dc41f]
-  - @scalar/api-client@2.2.56
+  - @swagglar/api-client@2.2.56
 
 ## 1.1.35
 
@@ -1791,20 +1791,20 @@
 - Updated dependencies [98323b8]
 - Updated dependencies [eb3bb7f]
 - Updated dependencies [ea19156]
-  - @scalar/api-client@2.2.55
+  - @swagglar/api-client@2.2.55
 
 ## 1.1.34
 
 ### Patch Changes
 
 - Updated dependencies [fdd50b2]
-  - @scalar/api-client@2.2.54
+  - @swagglar/api-client@2.2.54
 
 ## 1.1.33
 
 ### Patch Changes
 
-- @scalar/api-client@2.2.53
+- @swagglar/api-client@2.2.53
 
 ## 1.1.32
 
@@ -1828,14 +1828,14 @@
 - Updated dependencies [5a46f1c]
 - Updated dependencies [a89510b]
 - Updated dependencies [48f24c9]
-  - @scalar/api-client@2.2.52
+  - @swagglar/api-client@2.2.52
 
 ## 1.1.31
 
 ### Patch Changes
 
 - Updated dependencies [58a8efd]
-  - @scalar/api-client@2.2.51
+  - @swagglar/api-client@2.2.51
 
 ## 1.1.30
 
@@ -1848,14 +1848,14 @@
 - Updated dependencies [debcb82]
 - Updated dependencies [738d21c]
 - Updated dependencies [459ad57]
-  - @scalar/api-client@2.2.50
+  - @swagglar/api-client@2.2.50
 
 ## 1.1.29
 
 ### Patch Changes
 
 - Updated dependencies [c62884d]
-  - @scalar/api-client@2.2.49
+  - @swagglar/api-client@2.2.49
 
 ## 1.1.28
 
@@ -1867,7 +1867,7 @@
 - Updated dependencies [8671902]
 - Updated dependencies [7ce8d4c]
 - Updated dependencies [4dedb68]
-  - @scalar/api-client@2.2.48
+  - @swagglar/api-client@2.2.48
 
 ## 1.1.27
 
@@ -1888,7 +1888,7 @@
 - Updated dependencies [bdddb12]
 - Updated dependencies [d2165a8]
 - Updated dependencies [4de3124]
-  - @scalar/api-client@2.2.47
+  - @swagglar/api-client@2.2.47
 
 ## 1.1.26
 
@@ -1898,7 +1898,7 @@
 - Updated dependencies [0b18abe]
 - Updated dependencies [e4f11d8]
 - Updated dependencies [2969dd0]
-  - @scalar/api-client@2.2.46
+  - @swagglar/api-client@2.2.46
 
 ## 1.1.25
 
@@ -1910,13 +1910,13 @@
 - Updated dependencies [0babd51]
 - Updated dependencies [28f23d9]
 - Updated dependencies [4df540f]
-  - @scalar/api-client@2.2.45
+  - @swagglar/api-client@2.2.45
 
 ## 1.1.24
 
 ### Patch Changes
 
-- @scalar/api-client@2.2.44
+- @swagglar/api-client@2.2.44
 
 ## 1.1.23
 
@@ -1925,14 +1925,14 @@
 - Updated dependencies [a34f834]
 - Updated dependencies [9c43ed7]
 - Updated dependencies [ebdf762]
-  - @scalar/api-client@2.2.43
+  - @swagglar/api-client@2.2.43
 
 ## 1.1.22
 
 ### Patch Changes
 
 - Updated dependencies [aa6ff86]
-  - @scalar/api-client@2.2.42
+  - @swagglar/api-client@2.2.42
 
 ## 1.1.21
 
@@ -1942,21 +1942,21 @@
 - Updated dependencies [4e6f0eb]
 - Updated dependencies [42d08d7]
 - Updated dependencies [2edbab2]
-  - @scalar/api-client@2.2.41
+  - @swagglar/api-client@2.2.41
 
 ## 1.1.20
 
 ### Patch Changes
 
 - Updated dependencies [6636051]
-  - @scalar/api-client@2.2.40
+  - @swagglar/api-client@2.2.40
 
 ## 1.1.19
 
 ### Patch Changes
 
 - Updated dependencies [8d4ab54]
-  - @scalar/api-client@2.2.39
+  - @swagglar/api-client@2.2.39
 
 ## 1.1.18
 
@@ -1974,7 +1974,7 @@
 - Updated dependencies [917214a]
 - Updated dependencies [42b58bf]
 - Updated dependencies [2ed681b]
-  - @scalar/api-client@2.2.38
+  - @swagglar/api-client@2.2.38
 
 ## 1.1.17
 
@@ -1982,7 +1982,7 @@
 
 - Updated dependencies [9276103]
 - Updated dependencies [de6cd98]
-  - @scalar/api-client@2.2.37
+  - @swagglar/api-client@2.2.37
 
 ## 1.1.16
 
@@ -1991,7 +1991,7 @@
 - Updated dependencies [ca381b6]
 - Updated dependencies [c803e2d]
 - Updated dependencies [ca381b6]
-  - @scalar/api-client@2.2.36
+  - @swagglar/api-client@2.2.36
 
 ## 1.1.15
 
@@ -2003,14 +2003,14 @@
 - Updated dependencies [b968e0f]
 - Updated dependencies [406eb48]
 - Updated dependencies [f1f8de9]
-  - @scalar/api-client@2.2.35
+  - @swagglar/api-client@2.2.35
 
 ## 1.1.14
 
 ### Patch Changes
 
 - Updated dependencies [ac86150]
-  - @scalar/api-client@2.2.34
+  - @swagglar/api-client@2.2.34
 
 ## 1.1.13
 
@@ -2024,14 +2024,14 @@
 - Updated dependencies [aff72f7]
 - Updated dependencies [cb09e76]
 - Updated dependencies [2ad0407]
-  - @scalar/api-client@2.2.33
+  - @swagglar/api-client@2.2.33
 
 ## 1.1.12
 
 ### Patch Changes
 
 - Updated dependencies [d3199be]
-  - @scalar/api-client@2.2.32
+  - @swagglar/api-client@2.2.32
 
 ## 1.1.11
 
@@ -2046,14 +2046,14 @@
 - Updated dependencies [ff3bdca]
 - Updated dependencies [197b7e1]
 - Updated dependencies [ee22e40]
-  - @scalar/api-client@2.2.31
+  - @swagglar/api-client@2.2.31
 
 ## 1.1.10
 
 ### Patch Changes
 
 - Updated dependencies [1785304]
-  - @scalar/api-client@2.2.30
+  - @swagglar/api-client@2.2.30
 
 ## 1.1.9
 
@@ -2064,34 +2064,34 @@
 - Updated dependencies [b291406]
 - Updated dependencies [46dce72]
 - Updated dependencies [58a2049]
-  - @scalar/api-client@2.2.29
+  - @swagglar/api-client@2.2.29
 
 ## 1.1.8
 
 ### Patch Changes
 
 - Updated dependencies [4f6ebab]
-  - @scalar/api-client@2.2.28
+  - @swagglar/api-client@2.2.28
 
 ## 1.1.7
 
 ### Patch Changes
 
 - Updated dependencies [3156ecd]
-  - @scalar/api-client@2.2.27
+  - @swagglar/api-client@2.2.27
 
 ## 1.1.6
 
 ### Patch Changes
 
-- @scalar/api-client@2.2.26
+- @swagglar/api-client@2.2.26
 
 ## 1.1.5
 
 ### Patch Changes
 
 - Updated dependencies [00feb3e]
-  - @scalar/api-client@2.2.25
+  - @swagglar/api-client@2.2.25
 
 ## 1.1.4
 
@@ -2100,21 +2100,21 @@
 - Updated dependencies [6890d7e]
 - Updated dependencies [ca2d98b]
 - Updated dependencies [6890d7e]
-  - @scalar/api-client@2.2.24
+  - @swagglar/api-client@2.2.24
 
 ## 1.1.3
 
 ### Patch Changes
 
 - Updated dependencies [02b4201]
-  - @scalar/api-client@2.2.23
+  - @swagglar/api-client@2.2.23
 
 ## 1.1.2
 
 ### Patch Changes
 
 - Updated dependencies [4619a8c]
-  - @scalar/api-client@2.2.22
+  - @swagglar/api-client@2.2.22
 
 ## 1.1.1
 
@@ -2122,7 +2122,7 @@
 
 - Updated dependencies [9b3a053]
 - Updated dependencies [d4b17f5]
-  - @scalar/api-client@2.2.21
+  - @swagglar/api-client@2.2.21
 
 ## 1.1.0
 
@@ -2133,14 +2133,14 @@
 ### Patch Changes
 
 - 90529fc: chore: upgrade to react 19
-  - @scalar/api-client@2.2.20
+  - @swagglar/api-client@2.2.20
 
 ## 1.0.110
 
 ### Patch Changes
 
 - Updated dependencies [53d99b7]
-  - @scalar/api-client@2.2.19
+  - @swagglar/api-client@2.2.19
 
 ## 1.0.109
 
@@ -2149,27 +2149,27 @@
 - Updated dependencies [3c7d7dd]
 - Updated dependencies [33c8393]
 - Updated dependencies [66905d2]
-  - @scalar/api-client@2.2.18
+  - @swagglar/api-client@2.2.18
 
 ## 1.0.108
 
 ### Patch Changes
 
 - Updated dependencies [c65f3fc]
-  - @scalar/api-client@2.2.17
+  - @swagglar/api-client@2.2.17
 
 ## 1.0.107
 
 ### Patch Changes
 
 - Updated dependencies [875a04a]
-  - @scalar/api-client@2.2.16
+  - @swagglar/api-client@2.2.16
 
 ## 1.0.106
 
 ### Patch Changes
 
-- @scalar/api-client@2.2.15
+- @swagglar/api-client@2.2.15
 
 ## 1.0.105
 
@@ -2177,14 +2177,14 @@
 
 - Updated dependencies [984e394]
 - Updated dependencies [40ec239]
-  - @scalar/api-client@2.2.14
+  - @swagglar/api-client@2.2.14
 
 ## 1.0.104
 
 ### Patch Changes
 
 - Updated dependencies [23daedd]
-  - @scalar/api-client@2.2.13
+  - @swagglar/api-client@2.2.13
 
 ## 1.0.103
 
@@ -2192,7 +2192,7 @@
 
 - Updated dependencies [fbef0c3]
 - Updated dependencies [fbef0c3]
-  - @scalar/api-client@2.2.12
+  - @swagglar/api-client@2.2.12
 
 ## 1.0.102
 
@@ -2203,7 +2203,7 @@
 - Updated dependencies [035d9af]
 - Updated dependencies [8687842]
 - Updated dependencies [e05c29f]
-  - @scalar/api-client@2.2.11
+  - @swagglar/api-client@2.2.11
 
 ## 1.0.101
 
@@ -2211,7 +2211,7 @@
 
 - Updated dependencies [749ebf1]
 - Updated dependencies [02e6a57]
-  - @scalar/api-client@2.2.10
+  - @swagglar/api-client@2.2.10
 
 ## 1.0.100
 
@@ -2225,14 +2225,14 @@
 - Updated dependencies [bccfa3a]
 - Updated dependencies [66c1573]
 - Updated dependencies [b66a85c]
-  - @scalar/api-client@2.2.9
+  - @swagglar/api-client@2.2.9
 
 ## 1.0.99
 
 ### Patch Changes
 
 - Updated dependencies [f2ec59d]
-  - @scalar/api-client@2.2.8
+  - @swagglar/api-client@2.2.8
 
 ## 1.0.98
 
@@ -2244,7 +2244,7 @@
 - Updated dependencies [3b4a788]
 - Updated dependencies [f4440f5]
 - Updated dependencies [4c5be96]
-  - @scalar/api-client@2.2.7
+  - @swagglar/api-client@2.2.7
 
 ## 1.0.97
 
@@ -2254,7 +2254,7 @@
 - Updated dependencies [0804d6b]
 - Updated dependencies [0076308]
 - Updated dependencies [13432e7]
-  - @scalar/api-client@2.2.6
+  - @swagglar/api-client@2.2.6
 
 ## 1.0.96
 
@@ -2269,7 +2269,7 @@
 - Updated dependencies [c2f5f08]
 - Updated dependencies [1f730c6]
 - Updated dependencies [8958af0]
-  - @scalar/api-client@2.2.5
+  - @swagglar/api-client@2.2.5
 
 ## 1.0.95
 
@@ -2279,13 +2279,13 @@
 - Updated dependencies [baaad1c]
 - Updated dependencies [642d112]
 - Updated dependencies [bae9997]
-  - @scalar/api-client@2.2.4
+  - @swagglar/api-client@2.2.4
 
 ## 1.0.94
 
 ### Patch Changes
 
-- @scalar/api-client@2.2.3
+- @swagglar/api-client@2.2.3
 
 ## 1.0.93
 
@@ -2293,7 +2293,7 @@
 
 - Updated dependencies [794a50d]
 - Updated dependencies [85a9aea]
-  - @scalar/api-client@2.2.2
+  - @swagglar/api-client@2.2.2
 
 ## 1.0.92
 
@@ -2305,7 +2305,7 @@
 - Updated dependencies [6c843e6]
 - Updated dependencies [1b06f64]
 - Updated dependencies [8066c8c]
-  - @scalar/api-client@2.2.1
+  - @swagglar/api-client@2.2.1
 
 ## 1.0.91
 
@@ -2314,7 +2314,7 @@
 - Updated dependencies [daa2663]
 - Updated dependencies [f67c3bc]
 - Updated dependencies [37abd4f]
-  - @scalar/api-client@2.2.0
+  - @swagglar/api-client@2.2.0
 
 ## 1.0.90
 
@@ -2325,13 +2325,13 @@
 - Updated dependencies [9b4def7]
 - Updated dependencies [44a7100]
 - Updated dependencies [1e3214c]
-  - @scalar/api-client@2.1.52
+  - @swagglar/api-client@2.1.52
 
 ## 1.0.89
 
 ### Patch Changes
 
-- @scalar/api-client@2.1.51
+- @swagglar/api-client@2.1.51
 
 ## 1.0.88
 
@@ -2340,7 +2340,7 @@
 - Updated dependencies [bfad6dc]
 - Updated dependencies [c8fae11]
 - Updated dependencies [c87353e]
-  - @scalar/api-client@2.1.50
+  - @swagglar/api-client@2.1.50
 
 ## 1.0.87
 
@@ -2350,7 +2350,7 @@
 - Updated dependencies [45342e3]
 - Updated dependencies [d0c93f5]
 - Updated dependencies [8b54fac]
-  - @scalar/api-client@2.1.49
+  - @swagglar/api-client@2.1.49
 
 ## 1.0.86
 
@@ -2360,7 +2360,7 @@
 - Updated dependencies [ac55d0f]
 - Updated dependencies [0c07766]
 - Updated dependencies [bdb48b0]
-  - @scalar/api-client@2.1.48
+  - @swagglar/api-client@2.1.48
 
 ## 1.0.85
 
@@ -2370,7 +2370,7 @@
 - Updated dependencies [8610c74]
 - Updated dependencies [af47a3e]
 - Updated dependencies [766a1fd]
-  - @scalar/api-client@2.1.47
+  - @swagglar/api-client@2.1.47
 
 ## 1.0.84
 
@@ -2385,14 +2385,14 @@
 - Updated dependencies [09a6fba]
 - Updated dependencies [be50225]
 - Updated dependencies [0a0ca71]
-  - @scalar/api-client@2.1.46
+  - @swagglar/api-client@2.1.46
 
 ## 1.0.83
 
 ### Patch Changes
 
 - Updated dependencies [b89da58]
-  - @scalar/api-client@2.1.45
+  - @swagglar/api-client@2.1.45
 
 ## 1.0.82
 
@@ -2400,7 +2400,7 @@
 
 - Updated dependencies [c3e76d9]
 - Updated dependencies [79d33da]
-  - @scalar/api-client@2.1.44
+  - @swagglar/api-client@2.1.44
 
 ## 1.0.81
 
@@ -2409,20 +2409,20 @@
 - Updated dependencies [a0421dd]
 - Updated dependencies [8c5d767]
 - Updated dependencies [6a2ec39]
-  - @scalar/api-client@2.1.43
+  - @swagglar/api-client@2.1.43
 
 ## 1.0.80
 
 ### Patch Changes
 
-- @scalar/api-client@2.1.42
+- @swagglar/api-client@2.1.42
 
 ## 1.0.79
 
 ### Patch Changes
 
 - Updated dependencies [823c14d]
-  - @scalar/api-client@2.1.41
+  - @swagglar/api-client@2.1.41
 
 ## 1.0.78
 
@@ -2434,7 +2434,7 @@
 - Updated dependencies [2275977]
 - Updated dependencies [e044d78]
 - Updated dependencies [e461e5b]
-  - @scalar/api-client@2.1.40
+  - @swagglar/api-client@2.1.40
 
 ## 1.0.77
 
@@ -2442,7 +2442,7 @@
 
 - Updated dependencies [bd8e253]
 - Updated dependencies [b9b42f6]
-  - @scalar/api-client@2.1.39
+  - @swagglar/api-client@2.1.39
 
 ## 1.0.76
 
@@ -2454,13 +2454,13 @@
 - Updated dependencies [0fb3a41]
 - Updated dependencies [417e0c7]
 - Updated dependencies [0e19781]
-  - @scalar/api-client@2.1.38
+  - @swagglar/api-client@2.1.38
 
 ## 1.0.75
 
 ### Patch Changes
 
-- @scalar/api-client@2.1.37
+- @swagglar/api-client@2.1.37
 
 ## 1.0.74
 
@@ -2469,7 +2469,7 @@
 - Updated dependencies [84bd664]
 - Updated dependencies [ada8545]
 - Updated dependencies [86104fd]
-  - @scalar/api-client@2.1.36
+  - @swagglar/api-client@2.1.36
 
 ## 1.0.73
 
@@ -2480,7 +2480,7 @@
 - Updated dependencies [9affbe3]
 - Updated dependencies [277f95c]
 - Updated dependencies [197e3ae]
-  - @scalar/api-client@2.1.35
+  - @swagglar/api-client@2.1.35
 
 ## 1.0.72
 
@@ -2492,13 +2492,13 @@
 - Updated dependencies [d7a6c55]
 - Updated dependencies [2456afa]
 - Updated dependencies [69bda25]
-  - @scalar/api-client@2.1.34
+  - @swagglar/api-client@2.1.34
 
 ## 1.0.71
 
 ### Patch Changes
 
-- @scalar/api-client@2.1.33
+- @swagglar/api-client@2.1.33
 
 ## 1.0.70
 
@@ -2512,13 +2512,13 @@
 - Updated dependencies [0706bc4]
 - Updated dependencies [86a3a82]
 - Updated dependencies [48afb7c]
-  - @scalar/api-client@2.1.32
+  - @swagglar/api-client@2.1.32
 
 ## 1.0.69
 
 ### Patch Changes
 
-- @scalar/api-client@2.1.31
+- @swagglar/api-client@2.1.31
 
 ## 1.0.68
 
@@ -2526,7 +2526,7 @@
 
 - Updated dependencies [6ecb7cc]
 - Updated dependencies [32ad241]
-  - @scalar/api-client@2.1.30
+  - @swagglar/api-client@2.1.30
 
 ## 1.0.67
 
@@ -2534,14 +2534,14 @@
 
 - Updated dependencies [c658a7a]
 - Updated dependencies [d51d303]
-  - @scalar/api-client@2.1.29
+  - @swagglar/api-client@2.1.29
 
 ## 1.0.66
 
 ### Patch Changes
 
 - Updated dependencies [dea4f88]
-  - @scalar/api-client@2.1.28
+  - @swagglar/api-client@2.1.28
 
 ## 1.0.65
 
@@ -2550,7 +2550,7 @@
 - e4caffd: fix: ensure react client app is torn down
 - Updated dependencies [4e50d65]
 - Updated dependencies [4e50d65]
-  - @scalar/api-client@2.1.27
+  - @swagglar/api-client@2.1.27
 
 ## 1.0.64
 
@@ -2560,21 +2560,21 @@
 - Updated dependencies [f8b81ee]
 - Updated dependencies [9e769df]
 - Updated dependencies [a80a931]
-  - @scalar/api-client@2.1.26
+  - @swagglar/api-client@2.1.26
 
 ## 1.0.63
 
 ### Patch Changes
 
 - ab022bd: feat: allow for multiple api-client caching
-  - @scalar/api-client@2.1.25
+  - @swagglar/api-client@2.1.25
 
 ## 1.0.62
 
 ### Patch Changes
 
 - Updated dependencies [8f4b4a2]
-  - @scalar/api-client@2.1.24
+  - @swagglar/api-client@2.1.24
 
 ## 1.0.61
 
@@ -2589,7 +2589,7 @@
 - Updated dependencies [c379e5a]
 - Updated dependencies [aebac4e]
 - Updated dependencies [4738228]
-  - @scalar/api-client@2.1.23
+  - @swagglar/api-client@2.1.23
 
 ## 1.0.60
 
@@ -2598,13 +2598,13 @@
 - 0c34a18: chore: updated vue package to 3.5
 - Updated dependencies [b8f9a95]
 - Updated dependencies [0c34a18]
-  - @scalar/api-client@2.1.22
+  - @swagglar/api-client@2.1.22
 
 ## 1.0.59
 
 ### Patch Changes
 
-- @scalar/api-client@2.1.21
+- @swagglar/api-client@2.1.21
 
 ## 1.0.58
 
@@ -2613,7 +2613,7 @@
 - Updated dependencies [0ddd4f3]
 - Updated dependencies [deb13b9]
 - Updated dependencies [b99799e]
-  - @scalar/api-client@2.1.20
+  - @swagglar/api-client@2.1.20
 
 ## 1.0.57
 
@@ -2625,7 +2625,7 @@
 - Updated dependencies [d02d70c]
 - Updated dependencies [e911047]
 - Updated dependencies [9a2d5ca]
-  - @scalar/api-client@2.1.19
+  - @swagglar/api-client@2.1.19
 
 ## 1.0.56
 
@@ -2635,7 +2635,7 @@
 - Updated dependencies [46a55ae]
 - Updated dependencies [5d996a8]
 - Updated dependencies [b26144c]
-  - @scalar/api-client@2.1.18
+  - @swagglar/api-client@2.1.18
 
 ## 1.0.55
 
@@ -2644,20 +2644,20 @@
 - Updated dependencies [8396e92]
 - Updated dependencies [6279c59]
 - Updated dependencies [5581a28]
-  - @scalar/api-client@2.1.17
+  - @swagglar/api-client@2.1.17
 
 ## 1.0.54
 
 ### Patch Changes
 
 - Updated dependencies [c9a0d57]
-  - @scalar/api-client@2.1.16
+  - @swagglar/api-client@2.1.16
 
 ## 1.0.53
 
 ### Patch Changes
 
-- @scalar/api-client@2.1.15
+- @swagglar/api-client@2.1.15
 
 ## 1.0.52
 
@@ -2666,7 +2666,7 @@
 - Updated dependencies [dea7b57]
 - Updated dependencies [008eca4]
 - Updated dependencies [9ba2c9f]
-  - @scalar/api-client@2.1.14
+  - @swagglar/api-client@2.1.14
 
 ## 1.0.51
 
@@ -2675,7 +2675,7 @@
 - Updated dependencies [cebca7a]
 - Updated dependencies [3b12248]
 - Updated dependencies [a78b0a6]
-  - @scalar/api-client@2.1.13
+  - @swagglar/api-client@2.1.13
 
 ## 1.0.50
 
@@ -2686,7 +2686,7 @@
 - Updated dependencies [07b5439]
 - Updated dependencies [513e0ad]
 - Updated dependencies [4a78aae]
-  - @scalar/api-client@2.1.12
+  - @swagglar/api-client@2.1.12
 
 ## 1.0.49
 
@@ -2697,7 +2697,7 @@
 - Updated dependencies [8554e60]
 - Updated dependencies [b4d1e1b]
 - Updated dependencies [d9ff13e]
-  - @scalar/api-client@2.1.11
+  - @swagglar/api-client@2.1.11
 
 ## 1.0.48
 
@@ -2705,7 +2705,7 @@
 
 - Updated dependencies [3647181]
 - Updated dependencies [e22c6ce]
-  - @scalar/api-client@2.1.10
+  - @swagglar/api-client@2.1.10
 
 ## 1.0.47
 
@@ -2715,7 +2715,7 @@
 - Updated dependencies [cd8ba1c]
 - Updated dependencies [8b6633d]
 - Updated dependencies [fb0d9a3]
-  - @scalar/api-client@2.1.9
+  - @swagglar/api-client@2.1.9
 
 ## 1.0.46
 
@@ -2723,13 +2723,13 @@
 
 - Updated dependencies [dc20180]
 - Updated dependencies [70857ed]
-  - @scalar/api-client@2.1.8
+  - @swagglar/api-client@2.1.8
 
 ## 1.0.45
 
 ### Patch Changes
 
-- @scalar/api-client@2.1.7
+- @swagglar/api-client@2.1.7
 
 ## 1.0.44
 
@@ -2743,13 +2743,13 @@
 - Updated dependencies [40850bb]
 - Updated dependencies [c92cfa0]
 - Updated dependencies [cdb8f55]
-  - @scalar/api-client@2.1.6
+  - @swagglar/api-client@2.1.6
 
 ## 1.0.43
 
 ### Patch Changes
 
-- @scalar/api-client@2.1.5
+- @swagglar/api-client@2.1.5
 
 ## 1.0.42
 
@@ -2757,7 +2757,7 @@
 
 - Updated dependencies [b856652]
 - Updated dependencies [2bab01a]
-  - @scalar/api-client@2.1.4
+  - @swagglar/api-client@2.1.4
 
 ## 1.0.41
 
@@ -2766,14 +2766,14 @@
 - Updated dependencies [ddeaada]
 - Updated dependencies [c1d39c5]
 - Updated dependencies [71278e1]
-  - @scalar/api-client@2.1.3
+  - @swagglar/api-client@2.1.3
 
 ## 1.0.40
 
 ### Patch Changes
 
 - Updated dependencies [feb6960]
-  - @scalar/api-client@2.1.2
+  - @swagglar/api-client@2.1.2
 
 ## 1.0.39
 
@@ -2781,7 +2781,7 @@
 
 - Updated dependencies [9351a90]
 - Updated dependencies [9486091]
-  - @scalar/api-client@2.1.1
+  - @swagglar/api-client@2.1.1
 
 ## 1.0.38
 
@@ -2804,26 +2804,26 @@
 - Updated dependencies [a002783]
 - Updated dependencies [c030024]
 - Updated dependencies [6fd83dc]
-  - @scalar/api-client@2.1.0
+  - @swagglar/api-client@2.1.0
 
 ## 1.0.37
 
 ### Patch Changes
 
 - Updated dependencies [e9253af]
-  - @scalar/api-client@2.0.64
+  - @swagglar/api-client@2.0.64
 
 ## 1.0.36
 
 ### Patch Changes
 
-- @scalar/api-client@2.0.63
+- @swagglar/api-client@2.0.63
 
 ## 1.0.35
 
 ### Patch Changes
 
-- @scalar/api-client@2.0.62
+- @swagglar/api-client@2.0.62
 
 ## 1.0.34
 
@@ -2834,21 +2834,21 @@
 - Updated dependencies [e67f5a8]
 - Updated dependencies [044fd7d]
 - Updated dependencies [152c016]
-  - @scalar/api-client@2.0.61
+  - @swagglar/api-client@2.0.61
 
 ## 1.0.33
 
 ### Patch Changes
 
 - Updated dependencies [c02202c]
-  - @scalar/api-client@2.0.60
+  - @swagglar/api-client@2.0.60
 
 ## 1.0.32
 
 ### Patch Changes
 
 - Updated dependencies [bbe5b49]
-  - @scalar/api-client@2.0.59
+  - @swagglar/api-client@2.0.59
 
 ## 1.0.31
 
@@ -2860,14 +2860,14 @@
 - Updated dependencies [8d615dc]
 - Updated dependencies [9bc0ae7]
 - Updated dependencies [8f24069]
-  - @scalar/api-client@2.0.58
+  - @swagglar/api-client@2.0.58
 
 ## 1.0.30
 
 ### Patch Changes
 
 - Updated dependencies [6babe66]
-  - @scalar/api-client@2.0.57
+  - @swagglar/api-client@2.0.57
 
 ## 1.0.29
 
@@ -2877,34 +2877,34 @@
 - Updated dependencies [f9c88a9]
 - Updated dependencies [5de17ce]
 - Updated dependencies [f3b9adf]
-  - @scalar/api-client@2.0.56
+  - @swagglar/api-client@2.0.56
 
 ## 1.0.28
 
 ### Patch Changes
 
-- @scalar/api-client@2.0.55
+- @swagglar/api-client@2.0.55
 
 ## 1.0.27
 
 ### Patch Changes
 
 - Updated dependencies [2db9eb8]
-  - @scalar/api-client@2.0.54
+  - @swagglar/api-client@2.0.54
 
 ## 1.0.26
 
 ### Patch Changes
 
 - Updated dependencies [78db8f5]
-  - @scalar/api-client@2.0.53
+  - @swagglar/api-client@2.0.53
 
 ## 1.0.25
 
 ### Patch Changes
 
 - Updated dependencies [cff5b1f]
-  - @scalar/api-client@2.0.52
+  - @swagglar/api-client@2.0.52
 
 ## 1.0.24
 
@@ -2914,13 +2914,13 @@
 - Updated dependencies [c386d64]
 - Updated dependencies [5c877b8]
 - Updated dependencies [1c81549]
-  - @scalar/api-client@2.0.51
+  - @swagglar/api-client@2.0.51
 
 ## 1.0.23
 
 ### Patch Changes
 
-- @scalar/api-client@2.0.50
+- @swagglar/api-client@2.0.50
 
 ## 1.0.22
 
@@ -2929,7 +2929,7 @@
 - Updated dependencies [56be4fe]
 - Updated dependencies [c450bb3]
 - Updated dependencies [75a5a64]
-  - @scalar/api-client@2.0.49
+  - @swagglar/api-client@2.0.49
 
 ## 1.0.21
 
@@ -2945,7 +2945,7 @@
 - Updated dependencies [520caff]
 - Updated dependencies [03e9bbb]
 - Updated dependencies [db96313]
-  - @scalar/api-client@2.0.48
+  - @swagglar/api-client@2.0.48
 
 ## 1.0.20
 
@@ -2957,14 +2957,14 @@
 - Updated dependencies [3023afe]
 - Updated dependencies [711ad03]
 - Updated dependencies [14ed31f]
-  - @scalar/api-client@2.0.47
+  - @swagglar/api-client@2.0.47
 
 ## 1.0.19
 
 ### Patch Changes
 
 - Updated dependencies [2f6180a]
-  - @scalar/api-client@2.0.46
+  - @swagglar/api-client@2.0.46
 
 ## 1.0.18
 
@@ -2976,7 +2976,7 @@
 - Updated dependencies [57f5691]
 - Updated dependencies [faf3ed9]
 - Updated dependencies [a1c73a0]
-  - @scalar/api-client@2.0.45
+  - @swagglar/api-client@2.0.45
 
 ## 1.0.17
 
@@ -2984,7 +2984,7 @@
 
 - Updated dependencies [d65dbcb]
 - Updated dependencies [9cc6311]
-  - @scalar/api-client@2.0.44
+  - @swagglar/api-client@2.0.44
 
 ## 1.0.16
 
@@ -2995,21 +2995,21 @@
 - Updated dependencies [13b2f6d]
 - Updated dependencies [cd028bd]
 - Updated dependencies [554df83]
-  - @scalar/api-client@2.0.43
+  - @swagglar/api-client@2.0.43
 
 ## 1.0.15
 
 ### Patch Changes
 
 - Updated dependencies [1062ceb]
-  - @scalar/api-client@2.0.42
+  - @swagglar/api-client@2.0.42
 
 ## 1.0.14
 
 ### Patch Changes
 
 - Updated dependencies [09d07d1]
-  - @scalar/api-client@2.0.41
+  - @swagglar/api-client@2.0.41
 
 ## 1.0.13
 
@@ -3017,7 +3017,7 @@
 
 - Updated dependencies [3a6effa]
 - Updated dependencies [dfa7434]
-  - @scalar/api-client@2.0.40
+  - @swagglar/api-client@2.0.40
 
 ## 1.0.12
 
@@ -3030,14 +3030,14 @@
 - Updated dependencies [c1ada84]
 - Updated dependencies [808eafb]
 - Updated dependencies [7853b8d]
-  - @scalar/api-client@2.0.39
+  - @swagglar/api-client@2.0.39
 
 ## 1.0.11
 
 ### Patch Changes
 
 - Updated dependencies [de25d01]
-  - @scalar/api-client@2.0.38
+  - @swagglar/api-client@2.0.38
 
 ## 1.0.10
 
@@ -3046,14 +3046,14 @@
 - Updated dependencies [b21b419]
 - Updated dependencies [7b58f10]
 - Updated dependencies [3d9e948]
-  - @scalar/api-client@2.0.37
+  - @swagglar/api-client@2.0.37
 
 ## 1.0.9
 
 ### Patch Changes
 
 - Updated dependencies [276e506]
-  - @scalar/api-client@2.0.36
+  - @swagglar/api-client@2.0.36
 
 ## 1.0.8
 
@@ -3061,7 +3061,7 @@
 
 - Updated dependencies [bf2895e]
 - Updated dependencies [5d2825a]
-  - @scalar/api-client@2.0.35
+  - @swagglar/api-client@2.0.35
 
 ## 1.0.7
 
@@ -3074,7 +3074,7 @@
 - Updated dependencies [a7ea3e3]
 - Updated dependencies [9243580]
 - Updated dependencies [12bd5b8]
-  - @scalar/api-client@2.0.34
+  - @swagglar/api-client@2.0.34
 
 ## 1.0.6
 
@@ -3085,14 +3085,14 @@
 - Updated dependencies [0bea5b6]
 - Updated dependencies [2c61c21]
 - Updated dependencies [19a50de]
-  - @scalar/api-client@2.0.33
+  - @swagglar/api-client@2.0.33
 
 ## 1.0.5
 
 ### Patch Changes
 
 - Updated dependencies [6123165]
-  - @scalar/api-client@2.0.32
+  - @swagglar/api-client@2.0.32
 
 ## 1.0.4
 
@@ -3100,14 +3100,14 @@
 
 - 240a618: feat: allow multiple api-clients on single page
 - Updated dependencies [240a618]
-  - @scalar/api-client@2.0.31
+  - @swagglar/api-client@2.0.31
 
 ## 1.0.3
 
 ### Patch Changes
 
 - Updated dependencies [b4199e9]
-  - @scalar/api-client@2.0.30
+  - @swagglar/api-client@2.0.30
 
 ## 1.0.2
 
@@ -3115,7 +3115,7 @@
 
 - 5d19345: feat(api-client-react): adds use client directive at the top of file for next.js
 - Updated dependencies [d5408e8]
-  - @scalar/api-client@2.0.29
+  - @swagglar/api-client@2.0.29
 
 ## 1.0.1
 
@@ -3143,7 +3143,7 @@
 - Updated dependencies [aee3783]
 - Updated dependencies [9ca5d7d]
 - Updated dependencies [d97bffd]
-  - @scalar/api-client@2.0.28
+  - @swagglar/api-client@2.0.28
 
 ## 0.5.44
 
@@ -3153,7 +3153,7 @@
 - Updated dependencies [c112f24]
 - Updated dependencies [83fc241]
 - Updated dependencies [2e1ef12]
-  - @scalar/api-client@2.0.27
+  - @swagglar/api-client@2.0.27
 
 ## 0.5.43
 
@@ -3163,7 +3163,7 @@
 - Updated dependencies [b0b3290]
 - Updated dependencies [7e01b12]
 - Updated dependencies [b7211fb]
-  - @scalar/api-client@2.0.26
+  - @swagglar/api-client@2.0.26
 
 ## 0.5.42
 
@@ -3179,7 +3179,7 @@
 - Updated dependencies [ec47287]
 - Updated dependencies [747e80e]
 - Updated dependencies [9d561b7]
-  - @scalar/api-client@2.0.25
+  - @swagglar/api-client@2.0.25
 
 ## 0.5.41
 
@@ -3188,48 +3188,48 @@
 - Updated dependencies [7076725]
 - Updated dependencies [1e72b03]
 - Updated dependencies [cbe984b]
-  - @scalar/api-client@2.0.24
+  - @swagglar/api-client@2.0.24
 
 ## 0.5.40
 
 ### Patch Changes
 
 - Updated dependencies [3928ac3]
-  - @scalar/api-client@2.0.23
+  - @swagglar/api-client@2.0.23
 
 ## 0.5.39
 
 ### Patch Changes
 
 - Updated dependencies [45b956f]
-  - @scalar/api-client@2.0.22
+  - @swagglar/api-client@2.0.22
 
 ## 0.5.38
 
 ### Patch Changes
 
 - Updated dependencies [d48e4ac]
-  - @scalar/api-client@2.0.21
+  - @swagglar/api-client@2.0.21
 
 ## 0.5.37
 
 ### Patch Changes
 
-- @scalar/api-client@2.0.20
+- @swagglar/api-client@2.0.20
 
 ## 0.5.36
 
 ### Patch Changes
 
 - Updated dependencies [a0bb23a]
-  - @scalar/api-client@2.0.19
+  - @swagglar/api-client@2.0.19
 
 ## 0.5.35
 
 ### Patch Changes
 
 - Updated dependencies [8654323]
-  - @scalar/api-client@2.0.18
+  - @swagglar/api-client@2.0.18
 
 ## 0.5.34
 
@@ -3238,7 +3238,7 @@
 - Updated dependencies [91b97fa]
 - Updated dependencies [05bc858]
 - Updated dependencies [05bc858]
-  - @scalar/api-client@2.0.17
+  - @swagglar/api-client@2.0.17
 
 ## 0.5.33
 
@@ -3254,14 +3254,14 @@
 - Updated dependencies [fe16789]
 - Updated dependencies [fc096b6]
 - Updated dependencies [ebdc9cf]
-  - @scalar/api-client@2.0.16
+  - @swagglar/api-client@2.0.16
 
 ## 0.5.32
 
 ### Patch Changes
 
 - Updated dependencies [f86a242]
-  - @scalar/api-client@2.0.15
+  - @swagglar/api-client@2.0.15
 
 ## 0.5.31
 
@@ -3270,21 +3270,21 @@
 - Updated dependencies [6b32eee]
 - Updated dependencies [1a675be]
 - Updated dependencies [a1d59de]
-  - @scalar/api-client@2.0.14
+  - @swagglar/api-client@2.0.14
 
 ## 0.5.30
 
 ### Patch Changes
 
 - Updated dependencies [618285e]
-  - @scalar/api-client@2.0.13
+  - @swagglar/api-client@2.0.13
 
 ## 0.5.29
 
 ### Patch Changes
 
 - Updated dependencies [0a33194]
-  - @scalar/api-client@2.0.12
+  - @swagglar/api-client@2.0.12
 
 ## 0.5.28
 
@@ -3293,7 +3293,7 @@
 - Updated dependencies [e8a7f82]
 - Updated dependencies [c16413d]
 - Updated dependencies [b9a7a4e]
-  - @scalar/api-client@2.0.11
+  - @swagglar/api-client@2.0.11
 
 ## 0.5.27
 
@@ -3301,7 +3301,7 @@
 
 - Updated dependencies [b65d1fa]
 - Updated dependencies [b655c7a]
-  - @scalar/api-client@2.0.10
+  - @swagglar/api-client@2.0.10
 
 ## 0.5.26
 
@@ -3310,7 +3310,7 @@
 - Updated dependencies [1bb94c7]
 - Updated dependencies [f1b5390]
 - Updated dependencies [ad7fd7e]
-  - @scalar/api-client@2.0.9
+  - @swagglar/api-client@2.0.9
 
 ## 0.5.25
 
@@ -3319,14 +3319,14 @@
 - Updated dependencies [ba3f5cb]
 - Updated dependencies [0b6e3aa]
 - Updated dependencies [d58841b]
-  - @scalar/api-client@2.0.8
+  - @swagglar/api-client@2.0.8
 
 ## 0.5.24
 
 ### Patch Changes
 
 - Updated dependencies [f2e3b0e]
-  - @scalar/api-client@2.0.7
+  - @swagglar/api-client@2.0.7
 
 ## 0.5.23
 
@@ -3338,7 +3338,7 @@
 - Updated dependencies [a5aedf5]
 - Updated dependencies [d6a2a4d]
 - Updated dependencies [cd5d1a4]
-  - @scalar/api-client@2.0.6
+  - @swagglar/api-client@2.0.6
 
 ## 0.5.22
 
@@ -3348,20 +3348,20 @@
 - Updated dependencies [8f06fcd]
 - Updated dependencies [8f06fcd]
 - Updated dependencies [cdfb8c5]
-  - @scalar/api-client@2.0.5
+  - @swagglar/api-client@2.0.5
 
 ## 0.5.21
 
 ### Patch Changes
 
-- @scalar/api-client@2.0.4
+- @swagglar/api-client@2.0.4
 
 ## 0.5.20
 
 ### Patch Changes
 
 - Updated dependencies [9f208d5]
-  - @scalar/api-client@2.0.3
+  - @swagglar/api-client@2.0.3
 
 ## 0.5.19
 
@@ -3370,7 +3370,7 @@
 - Updated dependencies [209a7e1]
 - Updated dependencies [429e928]
 - Updated dependencies [3ba80b9]
-  - @scalar/api-client@2.0.2
+  - @swagglar/api-client@2.0.2
 
 ## 0.5.18
 
@@ -3379,27 +3379,27 @@
 - Updated dependencies [ec52346]
 - Updated dependencies [ded1303]
 - Updated dependencies [6aae9fe]
-  - @scalar/api-client@2.0.1
+  - @swagglar/api-client@2.0.1
 
 ## 0.5.17
 
 ### Patch Changes
 
 - Updated dependencies [bd67d8f]
-  - @scalar/api-client@2.0.0
+  - @swagglar/api-client@2.0.0
 
 ## 0.5.16
 
 ### Patch Changes
 
-- @scalar/api-client@1.3.21
+- @swagglar/api-client@1.3.21
 
 ## 0.5.15
 
 ### Patch Changes
 
 - Updated dependencies [cefe804]
-  - @scalar/api-client@1.3.20
+  - @swagglar/api-client@1.3.20
 
 ## 0.5.14
 
@@ -3408,39 +3408,39 @@
 - 94e68ab: chore: upgrade typescript to 5.5
 - Updated dependencies [326bd3d]
 - Updated dependencies [94e68ab]
-  - @scalar/api-client@1.3.19
+  - @swagglar/api-client@1.3.19
 
 ## 0.5.13
 
 ### Patch Changes
 
 - Updated dependencies [06471ed]
-  - @scalar/api-client@1.3.18
+  - @swagglar/api-client@1.3.18
 
 ## 0.5.12
 
 ### Patch Changes
 
-- @scalar/api-client@1.3.17
+- @swagglar/api-client@1.3.17
 
 ## 0.5.11
 
 ### Patch Changes
 
-- @scalar/api-client@1.3.16
+- @swagglar/api-client@1.3.16
 
 ## 0.5.10
 
 ### Patch Changes
 
-- @scalar/api-client@1.3.15
+- @swagglar/api-client@1.3.15
 
 ## 0.5.9
 
 ### Patch Changes
 
 - Updated dependencies [b1fd179]
-  - @scalar/api-client@1.3.14
+  - @swagglar/api-client@1.3.14
 
 ## 0.5.8
 
@@ -3448,33 +3448,33 @@
 
 - Updated dependencies [88ae0a5]
 - Updated dependencies [5e92eab]
-  - @scalar/api-client@1.3.13
+  - @swagglar/api-client@1.3.13
 
 ## 0.5.7
 
 ### Patch Changes
 
 - Updated dependencies [362d47a]
-  - @scalar/api-client@1.3.12
+  - @swagglar/api-client@1.3.12
 
 ## 0.5.6
 
 ### Patch Changes
 
-- @scalar/api-client@1.3.11
+- @swagglar/api-client@1.3.11
 
 ## 0.5.5
 
 ### Patch Changes
 
 - Updated dependencies [db89d01]
-  - @scalar/api-client@1.3.10
+  - @swagglar/api-client@1.3.10
 
 ## 0.5.4
 
 ### Patch Changes
 
-- @scalar/api-client@1.3.9
+- @swagglar/api-client@1.3.9
 
 ## 0.5.3
 
@@ -3482,13 +3482,13 @@
 
 - a2cb3c3: Migrate away from unintended peer dependencies
 - Updated dependencies [a2cb3c3]
-  - @scalar/api-client@1.3.8
+  - @swagglar/api-client@1.3.8
 
 ## 0.5.2
 
 ### Patch Changes
 
-- @scalar/api-client@1.3.7
+- @swagglar/api-client@1.3.7
 
 ## 0.5.1
 
@@ -3497,7 +3497,7 @@
 - e0fc110: chore: patch bump all package
 - Updated dependencies [e0fc110]
 - Updated dependencies [f0acc89]
-  - @scalar/api-client@1.3.6
+  - @swagglar/api-client@1.3.6
 
 ## 0.5.0
 
@@ -3516,32 +3516,32 @@
 - Updated dependencies [b38c7ed]
 - Updated dependencies [6fbb57e]
 - Updated dependencies [e63b12d]
-  - @scalar/api-client@2.0.0
+  - @swagglar/api-client@2.0.0
 
 ## 0.4.4
 
 ### Patch Changes
 
-- @scalar/api-client@1.3.4
+- @swagglar/api-client@1.3.4
 
 ## 0.4.3
 
 ### Patch Changes
 
-- @scalar/api-client@1.3.3
+- @swagglar/api-client@1.3.3
 
 ## 0.4.2
 
 ### Patch Changes
 
-- @scalar/api-client@1.3.2
+- @swagglar/api-client@1.3.2
 
 ## 0.4.1
 
 ### Patch Changes
 
 - Updated dependencies [195ca18]
-  - @scalar/api-client@1.3.1
+  - @swagglar/api-client@1.3.1
 
 ## 0.4.0
 
@@ -3553,67 +3553,67 @@
 
 - Updated dependencies [7d3bc16]
 - Updated dependencies [7d3bc16]
-  - @scalar/api-client@1.3.0
+  - @swagglar/api-client@1.3.0
 
 ## 0.3.39
 
 ### Patch Changes
 
-- @scalar/api-client@1.2.39
+- @swagglar/api-client@1.2.39
 
 ## 0.3.38
 
 ### Patch Changes
 
 - Updated dependencies [cc5402c]
-  - @scalar/api-client@1.2.38
+  - @swagglar/api-client@1.2.38
 
 ## 0.3.37
 
 ### Patch Changes
 
 - Updated dependencies [d60cc10]
-  - @scalar/api-client@1.2.37
+  - @swagglar/api-client@1.2.37
 
 ## 0.3.36
 
 ### Patch Changes
 
 - Updated dependencies [da7cdb6]
-  - @scalar/api-client@1.2.36
+  - @swagglar/api-client@1.2.36
 
 ## 0.3.35
 
 ### Patch Changes
 
-- @scalar/api-client@1.2.35
+- @swagglar/api-client@1.2.35
 
 ## 0.3.34
 
 ### Patch Changes
 
 - Updated dependencies [be75488]
-  - @scalar/api-client@1.2.34
+  - @swagglar/api-client@1.2.34
 
 ## 0.3.33
 
 ### Patch Changes
 
 - Updated dependencies [cfba428]
-  - @scalar/api-client@1.2.33
+  - @swagglar/api-client@1.2.33
 
 ## 0.3.32
 
 ### Patch Changes
 
-- @scalar/api-client@1.2.32
+- @swagglar/api-client@1.2.32
 
 ## 0.3.31
 
 ### Patch Changes
 
 - Updated dependencies [5aa656f]
-  - @scalar/api-client@1.2.31
+  - @swagglar/api-client@1.2.31
 
 ## 0.3.30
 
@@ -3621,13 +3621,13 @@
 
 - Updated dependencies [504ff7a]
 - Updated dependencies [61b8ddc]
-  - @scalar/api-client@1.2.30
+  - @swagglar/api-client@1.2.30
 
 ## 0.3.29
 
 ### Patch Changes
 
-- @scalar/api-client@1.2.29
+- @swagglar/api-client@1.2.29
 
 ## 0.3.28
 
@@ -3635,20 +3635,20 @@
 
 - 1ce9661: feat: intro cards redesign
 - Updated dependencies [1ce9661]
-  - @scalar/api-client@1.2.28
+  - @swagglar/api-client@1.2.28
 
 ## 0.3.27
 
 ### Patch Changes
 
 - Updated dependencies [7ba851f]
-  - @scalar/api-client@1.2.27
+  - @swagglar/api-client@1.2.27
 
 ## 0.3.26
 
 ### Patch Changes
 
-- @scalar/api-client@1.2.26
+- @swagglar/api-client@1.2.26
 
 ## 0.3.25
 
@@ -3656,28 +3656,28 @@
 
 - Updated dependencies [79e3caa]
 - Updated dependencies [e022ee6]
-  - @scalar/api-client@1.2.25
+  - @swagglar/api-client@1.2.25
 
 ## 0.3.24
 
 ### Patch Changes
 
 - Updated dependencies [624604e]
-  - @scalar/api-client@1.2.24
+  - @swagglar/api-client@1.2.24
 
 ## 0.3.23
 
 ### Patch Changes
 
 - Updated dependencies [3a4ff3c]
-  - @scalar/api-client@1.2.23
+  - @swagglar/api-client@1.2.23
 
 ## 0.3.22
 
 ### Patch Changes
 
 - Updated dependencies [a13f853]
-  - @scalar/api-client@1.2.22
+  - @swagglar/api-client@1.2.22
 
 ## 0.3.21
 
@@ -3685,7 +3685,7 @@
 
 - Updated dependencies [f871c28]
 - Updated dependencies [3748dc5]
-  - @scalar/api-client@1.2.21
+  - @swagglar/api-client@1.2.21
 
 ## 0.3.20
 
@@ -3694,28 +3694,28 @@
 - Updated dependencies [0640c52]
 - Updated dependencies [84399ab]
 - Updated dependencies [a80345a]
-  - @scalar/api-client@1.2.20
+  - @swagglar/api-client@1.2.20
 
 ## 0.3.19
 
 ### Patch Changes
 
 - Updated dependencies [fa2cc5b]
-  - @scalar/api-client@1.2.19
+  - @swagglar/api-client@1.2.19
 
 ## 0.3.18
 
 ### Patch Changes
 
 - Updated dependencies [26d9146]
-  - @scalar/api-client@1.2.18
+  - @swagglar/api-client@1.2.18
 
 ## 0.3.17
 
 ### Patch Changes
 
 - Updated dependencies [d649691]
-  - @scalar/api-client@1.2.17
+  - @swagglar/api-client@1.2.17
 
 ## 0.3.16
 
@@ -3723,7 +3723,7 @@
 
 - 45dc04b: fix: can’t release packages
 - Updated dependencies [45dc04b]
-  - @scalar/api-client@1.2.16
+  - @swagglar/api-client@1.2.16
 
 ## 0.3.15
 
@@ -3731,13 +3731,13 @@
 
 - 05e2e27: chore: add provenance statement
 - Updated dependencies [05e2e27]
-  - @scalar/api-client@1.2.15
+  - @swagglar/api-client@1.2.15
 
 ## 0.3.14
 
 ### Patch Changes
 
-- @scalar/api-client@1.2.14
+- @swagglar/api-client@1.2.14
 
 ## 0.3.13
 
@@ -3745,81 +3745,81 @@
 
 - Updated dependencies [c68939c]
 - Updated dependencies [07211ad]
-  - @scalar/api-client@1.2.13
+  - @swagglar/api-client@1.2.13
 
 ## 0.3.12
 
 ### Patch Changes
 
 - Updated dependencies [c6e4385]
-  - @scalar/api-client@1.2.12
+  - @swagglar/api-client@1.2.12
 
 ## 0.3.11
 
 ### Patch Changes
 
-- @scalar/api-client@1.2.11
+- @swagglar/api-client@1.2.11
 
 ## 0.3.10
 
 ### Patch Changes
 
-- @scalar/api-client@1.2.10
+- @swagglar/api-client@1.2.10
 
 ## 0.3.9
 
 ### Patch Changes
 
-- @scalar/api-client@1.2.9
+- @swagglar/api-client@1.2.9
 
 ## 0.3.8
 
 ### Patch Changes
 
-- @scalar/api-client@1.2.8
+- @swagglar/api-client@1.2.8
 
 ## 0.3.7
 
 ### Patch Changes
 
-- @scalar/api-client@1.2.7
+- @swagglar/api-client@1.2.7
 
 ## 0.3.6
 
 ### Patch Changes
 
-- @scalar/api-client@1.2.6
+- @swagglar/api-client@1.2.6
 
 ## 0.3.5
 
 ### Patch Changes
 
-- @scalar/api-client@1.2.5
+- @swagglar/api-client@1.2.5
 
 ## 0.3.4
 
 ### Patch Changes
 
-- @scalar/api-client@1.2.4
+- @swagglar/api-client@1.2.4
 
 ## 0.3.3
 
 ### Patch Changes
 
-- @scalar/api-client@1.2.3
+- @swagglar/api-client@1.2.3
 
 ## 0.3.2
 
 ### Patch Changes
 
-- @scalar/api-client@1.2.2
+- @swagglar/api-client@1.2.2
 
 ## 0.3.1
 
 ### Patch Changes
 
 - Updated dependencies [d77acdd]
-  - @scalar/api-client@1.2.1
+  - @swagglar/api-client@1.2.1
 
 ## 0.3.0
 
@@ -3832,59 +3832,59 @@
 - 22f2858: chore: ran syncpack to update packages
 - Updated dependencies [22f2858]
 - Updated dependencies [0e64a36]
-  - @scalar/api-client@1.2.0
+  - @swagglar/api-client@1.2.0
 
 ## 0.2.22
 
 ### Patch Changes
 
-- @scalar/api-client@1.1.16
+- @swagglar/api-client@1.1.16
 
 ## 0.2.21
 
 ### Patch Changes
 
-- @scalar/api-client@1.1.15
+- @swagglar/api-client@1.1.15
 
 ## 0.2.20
 
 ### Patch Changes
 
-- @scalar/api-client@1.1.14
+- @swagglar/api-client@1.1.14
 
 ## 0.2.19
 
 ### Patch Changes
 
 - Updated dependencies [b0b757d]
-  - @scalar/api-client@1.1.13
+  - @swagglar/api-client@1.1.13
 
 ## 0.2.18
 
 ### Patch Changes
 
 - Updated dependencies [c14568f]
-  - @scalar/api-client@1.1.12
+  - @swagglar/api-client@1.1.12
 
 ## 0.2.17
 
 ### Patch Changes
 
 - Updated dependencies [8b0691b]
-  - @scalar/api-client@1.1.11
+  - @swagglar/api-client@1.1.11
 
 ## 0.2.16
 
 ### Patch Changes
 
 - Updated dependencies [999dfc9]
-  - @scalar/api-client@1.1.10
+  - @swagglar/api-client@1.1.10
 
 ## 0.2.15
 
 ### Patch Changes
 
-- @scalar/api-client@1.1.9
+- @swagglar/api-client@1.1.9
 
 ## 0.2.14
 
@@ -3894,38 +3894,38 @@
 - ae193a8: feat: sidebar border indents + theme polish
 - Updated dependencies [43421a6]
 - Updated dependencies [ae193a8]
-  - @scalar/api-client@1.1.8
+  - @swagglar/api-client@1.1.8
 
 ## 0.2.13
 
 ### Patch Changes
 
-- @scalar/api-client@1.1.7
+- @swagglar/api-client@1.1.7
 
 ## 0.2.12
 
 ### Patch Changes
 
-- @scalar/api-client@1.1.6
+- @swagglar/api-client@1.1.6
 
 ## 0.2.11
 
 ### Patch Changes
 
 - Updated dependencies [06c57ca]
-  - @scalar/api-client@1.1.5
+  - @swagglar/api-client@1.1.5
 
 ## 0.2.10
 
 ### Patch Changes
 
-- @scalar/api-client@1.1.4
+- @swagglar/api-client@1.1.4
 
 ## 0.2.9
 
 ### Patch Changes
 
-- @scalar/api-client@1.1.3
+- @swagglar/api-client@1.1.3
 
 ## 0.2.8
 
@@ -3945,59 +3945,59 @@
 
 - 2eda0a3: fix: allow api client address bar to be editable in react
 - Updated dependencies [c7241e8]
-  - @scalar/api-client@1.1.2
+  - @swagglar/api-client@1.1.2
 
 ## 0.2.5
 
 ### Patch Changes
 
 - Updated dependencies [61a97e2]
-  - @scalar/api-client@1.1.1
+  - @swagglar/api-client@1.1.1
 
 ## 0.2.4
 
 ### Patch Changes
 
 - Updated dependencies [31aae5e]
-  - @scalar/api-client@1.1.0
+  - @swagglar/api-client@1.1.0
 
 ## 0.2.3
 
 ### Patch Changes
 
 - Updated dependencies [e2491c1]
-  - @scalar/api-client@1.0.3
+  - @swagglar/api-client@1.0.3
 
 ## 0.2.2
 
 ### Patch Changes
 
-- @scalar/api-client@1.0.2
+- @swagglar/api-client@1.0.2
 
 ## 0.2.1
 
 ### Patch Changes
 
-- @scalar/api-client@1.0.1
+- @swagglar/api-client@1.0.1
 
 ## 0.2.0
 
 ### Minor Changes
 
-- 7fb8273: Migrate to @scalar/openapi-parser
+- 7fb8273: Migrate to @swagglar/openapi-parser
 
 ### Patch Changes
 
 - Updated dependencies [6036d25]
 - Updated dependencies [7fb8273]
-  - @scalar/api-client@1.0.0
+  - @swagglar/api-client@1.0.0
 
 ## 0.1.8
 
 ### Patch Changes
 
 - Updated dependencies [cecf074]
-  - @scalar/api-client@0.12.18
+  - @swagglar/api-client@0.12.18
 
 ## 0.1.7
 
@@ -4009,19 +4009,19 @@
 - Updated dependencies [ddc9b17]
 - Updated dependencies [775646a]
 - Updated dependencies [ef3a015]
-  - @scalar/api-client@0.12.17
+  - @swagglar/api-client@0.12.17
 
 ## 0.1.6
 
 ### Patch Changes
 
-- @scalar/api-client@0.12.16
+- @swagglar/api-client@0.12.16
 
 ## 0.1.5
 
 ### Patch Changes
 
-- @scalar/api-client@0.12.15
+- @swagglar/api-client@0.12.15
 
 ## 0.1.4
 
@@ -4040,14 +4040,14 @@
 ### Patch Changes
 
 - Updated dependencies [3b672cc]
-  - @scalar/api-client@0.12.14
+  - @swagglar/api-client@0.12.14
 
 ## 0.1.1
 
 ### Patch Changes
 
 - Updated dependencies [c5e8b13]
-  - @scalar/api-client@0.12.13
+  - @swagglar/api-client@0.12.13
 
 ## 0.1.0
 
@@ -4058,4 +4058,4 @@
 ### Patch Changes
 
 - Updated dependencies [5bc2ebf]
-  - @scalar/api-client@0.12.12
+  - @swagglar/api-client@0.12.12

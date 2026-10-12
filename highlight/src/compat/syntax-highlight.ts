@@ -128,7 +128,7 @@ const MIN_CREDENTIAL_LENGTH = 3
  * Replaces credential substrings in the finished HTML.
  *
  * Post-processing the serialized string, rather than the token stream, is what
- * `@scalar/code-highlight` does. It is kept here deliberately: a credential
+ * `@swagglar/code-highlight` does. It is kept here deliberately: a credential
  * that straddles a token boundary masks or fails to mask exactly as it does
  * today, so a swap cannot change what is visible on screen.
  */
@@ -147,7 +147,7 @@ const applyCredentialMask = (html: string, credentials: string | string[] | unde
 }
 
 /**
- * Drop-in replacement for `syntaxHighlight` from `@scalar/code-highlight`.
+ * Drop-in replacement for `syntaxHighlight` from `@swagglar/code-highlight`.
  *
  * Same signature, same `<pre><code class="hljs language-x">` envelope, same
  * `hljs-*` token classes, so `code.css` and every consumer of the returned

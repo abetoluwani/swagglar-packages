@@ -1,5 +1,5 @@
 import SwaggerParser from '@apidevtools/swagger-parser'
-import type { AnyObject } from '@scalar/types/utils'
+import type { AnyObject } from '@swagglar/types/utils'
 import { diff } from 'just-diff'
 import { expect, test } from 'vitest'
 
@@ -131,7 +131,7 @@ test.concurrent.each(fetched)('diff $file', { timeout: 15_000 }, async ({ file, 
           console.log('* PATH:', path.join('/'))
           console.log()
           console.log('[@apidevtools/swagger-parser]', get(oldSchema, path))
-          console.log('[@scalar/openapi-parser]', get(newSchema, path))
+          console.log('[@swagglar/openapi-parser]', get(newSchema, path))
           console.log()
         })
       }

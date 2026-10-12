@@ -1,5 +1,5 @@
-import type { ApiReferenceConfiguration } from '@scalar/api-reference'
-import { PETSTORE_URL_2_0 } from '@scalar/helpers/url/oas-document-fixtures'
+import type { ApiReferenceConfiguration } from '@swagglar/api-reference'
+import { PETSTORE_URL_2_0 } from '@swagglar/helpers/url/oas-document-fixtures'
 import { generate } from 'random-words'
 import { useEffect, useState } from 'react'
 

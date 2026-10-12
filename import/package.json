@@ -1,5 +1,5 @@
 {
-  "name": "@scalar/import",
+  "name": "@swagglar/import",
   "description": "Import any file, URL or content to get an OpenAPI document",
   "license": "MIT",
   "author": "Scalar (https://github.com/scalar)",
@@ -41,7 +41,7 @@
     "CHANGELOG.md"
   ],
   "dependencies": {
-    "@scalar/helpers": "workspace:*",
+    "@swagglar/helpers": "workspace:*",
     "yaml": "catalog:*"
   },
   "devDependencies": {}

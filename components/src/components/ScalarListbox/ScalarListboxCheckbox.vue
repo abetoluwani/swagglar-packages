@@ -13,7 +13,7 @@ export default {}
 </script>
 
 <script setup lang="ts">
-import { ScalarIconCheck } from '@scalar/icons'
+import { ScalarIconCheck } from '@swagglar/icons'
 
 defineProps<{
   selected?: boolean

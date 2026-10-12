@@ -1,4 +1,4 @@
-import type { HarRequest, PluginConfiguration } from '@scalar/types/snippetz'
+import type { HarRequest, PluginConfiguration } from '@swagglar/types/snippetz'
 
 import { accumulateRepeatedValue, normalizeMethod, reduceQueryParams } from '@/libs/http'
 

@@ -152,7 +152,7 @@ describe('generate-release-note', () => {
       })
 
     const note = await generateReleaseNote({
-      packageName: '@scalar/api-reference',
+      packageName: '@swagglar/api-reference',
       version: '1.61.0',
       date: '2026-06-22',
       changelogSection: '- fix(api-reference): schema composition',

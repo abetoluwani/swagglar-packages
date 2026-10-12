@@ -6,7 +6,7 @@ import { logger } from 'hono/logger'
 
 import { createMarkdownFromOpenApi } from '../src/index'
 
-const content = await readFile(new URL(import.meta.resolve('@scalar/galaxy/latest.yaml')), 'utf8')
+const content = await readFile(new URL(import.meta.resolve('@swagglar/galaxy/latest.yaml')), 'utf8')
 const markdown = await createMarkdownFromOpenApi(content)
 
 const app = new Hono()

@@ -1,5 +1,5 @@
 {
-  "name": "@scalar/blocks",
+  "name": "@swagglar/blocks",
   "description": "Render blocks for your OpenAPI documentation",
   "license": "MIT",
   "author": "Scalar (https://github.com/scalar)",
@@ -44,13 +44,13 @@
     "CHANGELOG.md"
   ],
   "dependencies": {
-    "@scalar/components": "workspace:*",
-    "@scalar/helpers": "workspace:*",
-    "@scalar/icons": "workspace:*",
-    "@scalar/snippetz": "workspace:*",
-    "@scalar/themes": "workspace:*",
-    "@scalar/types": "workspace:*",
-    "@scalar/workspace-store": "workspace:*",
+    "@swagglar/components": "workspace:*",
+    "@swagglar/helpers": "workspace:*",
+    "@swagglar/icons": "workspace:*",
+    "@swagglar/snippetz": "workspace:*",
+    "@swagglar/themes": "workspace:*",
+    "@swagglar/types": "workspace:*",
+    "@swagglar/workspace-store": "workspace:*",
     "@types/har-format": "^1.2.16",
     "js-base64": "catalog:*",
     "vue": "catalog:*"

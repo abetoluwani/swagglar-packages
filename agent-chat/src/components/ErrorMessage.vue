@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ScalarIconInfo } from '@scalar/icons'
+import { ScalarIconInfo } from '@swagglar/icons'
 
 import { AgentErrorCodes } from '@/entities/error/constants'
 import { type ChatError } from '@/hooks/use-chat-error'

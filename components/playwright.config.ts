@@ -1,5 +1,5 @@
 import { defineConfig } from '@playwright/test'
-import { type WebServer, getDockerServer } from '@scalar/helpers/playwright/docker'
+import { type WebServer, getDockerServer } from '@swagglar/helpers/playwright/docker'
 
 const CI = !!process.env.CI
 

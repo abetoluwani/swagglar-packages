@@ -1,5 +1,5 @@
-import { getValueAtPath } from '@scalar/helpers/object/get-value-at-path'
-import { mergeObjects } from '@scalar/helpers/object/merge-objects'
+import { getValueAtPath } from '@swagglar/helpers/object/get-value-at-path'
+import { mergeObjects } from '@swagglar/helpers/object/merge-objects'
 import type { PartialDeep } from 'type-fest'
 import {
   type ComputedRef,
@@ -67,7 +67,7 @@ export type LocalizationConfig<Translations extends Record<string, unknown>> = {
 /**
  * Shared injection key for the localization context.
  *
- * This lives at module scope so that every package consuming `@scalar/localization` injects the
+ * This lives at module scope so that every package consuming `@swagglar/localization` injects the
  * exact same symbol a provider used. Instances created through {@link createLocalization} may be
  * typed differently, so the key is intentionally untyped here and narrowed inside each instance.
  * This shared identity is what lets a component provided in one package be consumed from another.
@@ -86,7 +86,7 @@ const LOCALIZATION_SYMBOL: InjectionKey<unknown> = Symbol('scalar-localization')
 export const createLocalization = <Translations extends Record<string, unknown>, Key extends string>(
   config: LocalizationConfig<Translations>,
 ) => {
-  const { localeTranslations, defaultLocale, rtlLocales, logPrefix = '[@scalar/localization]' } = config
+  const { localeTranslations, defaultLocale, rtlLocales, logPrefix = '[@swagglar/localization]' } = config
 
   const resolveBuiltInLocale = (locale?: Locale): string => {
     if (!locale) {

@@ -1,8 +1,8 @@
 # Scalar Void Server
 
-[![Version](https://img.shields.io/npm/v/%40scalar/void-server)](https://www.npmjs.com/package/@scalar/void-server)
-[![Downloads](https://img.shields.io/npm/dm/%40scalar/void-server)](https://www.npmjs.com/package/@scalar/void-server)
-[![License](https://img.shields.io/npm/l/%40scalar%2Fvoid-server)](https://www.npmjs.com/package/@scalar/void-server)
+[![Version](https://img.shields.io/npm/v/%40scalar/void-server)](https://www.npmjs.com/package/@swagglar/void-server)
+[![Downloads](https://img.shields.io/npm/dm/%40scalar/void-server)](https://www.npmjs.com/package/@swagglar/void-server)
+[![License](https://img.shields.io/npm/l/%40scalar%2Fvoid-server)](https://www.npmjs.com/package/@swagglar/void-server)
 [![Discord](https://img.shields.io/discord/1135330207960678410?style=flat&color=5865F2)](https://discord.gg/scalar)
 
 An Hono server that responds with the request data. Kind of a mirror for HTTP requests.
@@ -36,14 +36,14 @@ It's running on <https://void.scalar.com>, feel free to use it.
 ## Installation
 
 ```bash
-npm add @scalar/void-server
+npm add @swagglar/void-server
 ```
 
 ## Usage
 
 ```ts
 import { serve } from '@hono/node-server'
-import { attachVoidWebSocket, createVoidServer } from '@scalar/void-server'
+import { attachVoidWebSocket, createVoidServer } from '@swagglar/void-server'
 
 const app = createVoidServer()
 

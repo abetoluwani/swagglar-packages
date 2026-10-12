@@ -1,4 +1,4 @@
-import { ScalarIconMagnifyingGlass } from '@scalar/icons'
+import { ScalarIconMagnifyingGlass } from '@swagglar/icons'
 import type { Meta, StoryObj } from '@storybook/vue3-vite'
 
 import ScalarSearchResultItem from './ScalarSearchResultItem.vue'

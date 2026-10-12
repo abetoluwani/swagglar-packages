@@ -1,8 +1,8 @@
 # Scalar Themes
 
-[![Version](https://img.shields.io/npm/v/%40scalar/themes)](https://www.npmjs.com/package/@scalar/themes)
-[![Downloads](https://img.shields.io/npm/dm/%40scalar/themes)](https://www.npmjs.com/package/@scalar/themes)
-[![License](https://img.shields.io/npm/l/%40scalar%2Fthemes)](https://www.npmjs.com/package/@scalar/themes)
+[![Version](https://img.shields.io/npm/v/%40scalar/themes)](https://www.npmjs.com/package/@swagglar/themes)
+[![Downloads](https://img.shields.io/npm/dm/%40scalar/themes)](https://www.npmjs.com/package/@swagglar/themes)
+[![License](https://img.shields.io/npm/l/%40scalar%2Fthemes)](https://www.npmjs.com/package/@swagglar/themes)
 [![Discord](https://img.shields.io/discord/1135330207960678410?style=flat&color=5865F2)](https://discord.gg/scalar)
 
 Scalar Themes provides a library of themes for all Scalar products and components. It also contains the base set of Scalar CSS variables and an associated [Tailwind](https://tailwindcss.com) preset which leverages those variables.
@@ -44,7 +44,7 @@ Because many Scalar applications are embedded into other websites the reset is s
 ## Installation
 
 ```bash
-pnpm i @scalar/themes
+pnpm i @swagglar/themes
 ```
 
 ### Usage via CSS Import (Basic)
@@ -52,13 +52,13 @@ pnpm i @scalar/themes
 To import the basic theme styles into your project, you can just import `style.css` which imports the reset, scrollbars, and a copy of the base [Scalar CSS variables](./src/base/variables.css) and [default theme](./src/presets/default.css).
 
 ```ts
-import '@scalar/themes/styles.css'
+import '@swagglar/themes/styles.css'
 ```
 
 To add a theme, you can import the theme from the presets directory.
 
 ```ts
-import '@scalar/themes/presets/alternate.css'
+import '@swagglar/themes/presets/alternate.css'
 ```
 
 ### Usage via JavaScript
@@ -66,7 +66,7 @@ import '@scalar/themes/presets/alternate.css'
 To use the themes package via JavaScript, you can use the [`getThemeStyles`](./src/index.ts#L123) function from the package. The function will generate CSS style string which you can then add to the head of your document.
 
 ```ts
-import { getThemeStyles } from '@scalar/themes'
+import { getThemeStyles } from '@swagglar/themes'
 
 const styles = getThemeStyles('alternate', { layer: 'scalar-theme' })
 document.head.insertAdjacentHTML('beforeend', `<style>${styles}</style>`)
@@ -81,8 +81,8 @@ To use the themes package with Tailwind, you first need to import the base style
 Then you can use the [tailwind config](https://tailwindcss.com/docs/theme#sharing-across-projects) in your Tailwind CSS to expose the [theme colors and variables](./src/tailwind/theme.css). The Scalar Tailwind config already contains a [preflight](https://tailwindcss.com/docs/preflight) and copy of the base [Tailwind theme](https://tailwindcss.com/docs/theme#extending-the-default-theme) so all you need to import from Tailwind is `tailwindcss/utilities.css`.
 
 ```css
-@import "@scalar/themes/style.css"; /* Theme Base Styles and Reset */
-@import "@scalar/themes/tailwind.css"; /* Tailwind Theme + Config */
+@import "@swagglar/themes/style.css"; /* Theme Base Styles and Reset */
+@import "@swagglar/themes/tailwind.css"; /* Tailwind Theme + Config */
 
 @import "tailwindcss/utilities.css"; /* Generate the Tailwind classes */
 ```

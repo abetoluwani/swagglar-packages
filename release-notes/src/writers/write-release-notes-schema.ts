@@ -1,7 +1,7 @@
 import { mkdir, readFile, writeFile } from 'node:fs/promises'
 import { dirname } from 'node:path'
 
-import { isObjectLike } from '@scalar/helpers/object/is-object'
+import { isObjectLike } from '@swagglar/helpers/object/is-object'
 import { z } from 'zod'
 
 import { releaseNotesFileSchema } from '../types'

@@ -1,5 +1,5 @@
-import { createSpecificationValidator } from '@scalar/json-schema-validator'
-import type { AnyObject } from '@scalar/types/utils'
+import { createSpecificationValidator } from '@swagglar/json-schema-validator'
+import type { AnyObject } from '@swagglar/types/utils'
 
 import { detectVersion } from '@/detect-version'
 import { ERRORS } from '@/errors'
@@ -23,7 +23,7 @@ const validateDocument = createSpecificationValidator({
 /**
  * Validates a single AsyncAPI document against the AsyncAPI Specification.
  *
- * Schema validation is delegated to `@scalar/json-schema-validator`; version
+ * Schema validation is delegated to `@swagglar/json-schema-validator`; version
  * detection is AsyncAPI-specific.
  *
  * This is schema-level validation. As the AsyncAPI project notes, JSON Schema

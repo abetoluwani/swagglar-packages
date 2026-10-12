@@ -1,9 +1,9 @@
-export type { ReferenceProps } from '@scalar/api-reference'
+export type { ReferenceProps } from '@swagglar/api-reference'
 /** Re-export types for ease of use */
 export type {
   AnyApiReferenceConfiguration,
   ApiReferenceConfiguration,
   ApiReferenceConfigurationWithMultipleSources,
-} from '@scalar/types/api-reference'
+} from '@swagglar/types/api-reference'
 
 export { ApiReferenceReact } from './ApiReferenceReact'

@@ -1,4 +1,4 @@
-# @scalar/release-notes
+# @swagglar/release-notes
 
 Generate curated release notes from Changesets-style `CHANGELOG.md` files and write a stable `RELEASE_NOTES.json` file, with optional derived Markdown output.
 
@@ -18,7 +18,7 @@ Scalar is an open-source API platform for teams who want beautiful developer int
 ## Install
 
 ```bash
-pnpm add -D @scalar/release-notes
+pnpm add -D @swagglar/release-notes
 ```
 
 ## CLI
@@ -43,7 +43,7 @@ scalar-release-notes \
 Create `release-notes.config.mjs`:
 
 ```js
-import { defineReleaseNotesConfig } from '@scalar/release-notes'
+import { defineReleaseNotesConfig } from '@swagglar/release-notes'
 
 export default defineReleaseNotesConfig({
   // A built-in provider name: 'anthropic' (default) or 'openai'.
@@ -77,7 +77,7 @@ For full control over how a provider is created, pass a provider object instead 
 
 JavaScript, JSON, and TypeScript config files are discovered by name. TypeScript config loading depends on your runtime being able to import `.ts` files, for example through `tsx`.
 
-The published JSON Schema for `RELEASE_NOTES.json` is available at `@scalar/release-notes/schema`.
+The published JSON Schema for `RELEASE_NOTES.json` is available at `@swagglar/release-notes/schema`.
 
 ## Pull request context
 
@@ -109,7 +109,7 @@ A built-in provider is selected by name (`'anthropic'` or `'openai'`) in the con
 Use Anthropic:
 
 ```js
-import { createAnthropicProvider, defineReleaseNotesConfig } from '@scalar/release-notes'
+import { createAnthropicProvider, defineReleaseNotesConfig } from '@swagglar/release-notes'
 
 export default defineReleaseNotesConfig({
   provider: createAnthropicProvider({
@@ -122,7 +122,7 @@ export default defineReleaseNotesConfig({
 Use OpenAI:
 
 ```js
-import { createOpenAIProvider, defineReleaseNotesConfig } from '@scalar/release-notes'
+import { createOpenAIProvider, defineReleaseNotesConfig } from '@swagglar/release-notes'
 
 export default defineReleaseNotesConfig({
   provider: createOpenAIProvider({
@@ -135,7 +135,7 @@ export default defineReleaseNotesConfig({
 Use a custom provider:
 
 ```js
-import { defineReleaseNotesConfig } from '@scalar/release-notes'
+import { defineReleaseNotesConfig } from '@swagglar/release-notes'
 
 export default defineReleaseNotesConfig({
   provider: {

@@ -25,7 +25,7 @@
 export default {}
 </script>
 <script setup lang="ts">
-import { useBindCx } from '@scalar/use-hooks/useBindCx'
+import { useBindCx } from '@swagglar/use-hooks/useBindCx'
 
 import ScalarSidebarButton from './ScalarSidebarButton.vue'
 import ScalarSidebarGroupToggle from './ScalarSidebarGroupToggle.vue'

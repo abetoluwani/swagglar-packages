@@ -1,6 +1,6 @@
-import { isObjectLike } from '@scalar/helpers/object/is-object'
-import { deduplicateErrors } from '@scalar/json-schema-validator'
-import type { AnyObject } from '@scalar/types/utils'
+import { isObjectLike } from '@swagglar/helpers/object/is-object'
+import { deduplicateErrors } from '@swagglar/json-schema-validator'
+import type { AnyObject } from '@swagglar/types/utils'
 
 import type { ErrorObject } from '@/types'
 

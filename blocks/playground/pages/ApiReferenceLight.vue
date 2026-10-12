@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import { ScalarTeleportRoot } from '@scalar/components/teleport'
-import type { HttpMethod as HttpMethodType } from '@scalar/helpers/http/http-methods'
-import { createWorkspaceStore } from '@scalar/workspace-store/client'
-import { createWorkspaceEventBus } from '@scalar/workspace-store/events'
-import { getResolvedRef } from '@scalar/workspace-store/helpers/get-resolved-ref'
+import { ScalarTeleportRoot } from '@swagglar/components/teleport'
+import type { HttpMethod as HttpMethodType } from '@swagglar/helpers/http/http-methods'
+import { createWorkspaceStore } from '@swagglar/workspace-store/client'
+import { createWorkspaceEventBus } from '@swagglar/workspace-store/events'
+import { getResolvedRef } from '@swagglar/workspace-store/helpers/get-resolved-ref'
 import type {
   OperationObject,
   ServerObject,
-} from '@scalar/workspace-store/schemas/v3.2/strict/openapi-document'
+} from '@swagglar/workspace-store/schemas/v3.2/strict/openapi-document'
 import { computed, onMounted, ref } from 'vue'
 
 import { CodeExample, generateClientOptions } from '../../src/code-example'

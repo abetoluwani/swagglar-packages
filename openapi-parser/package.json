@@ -1,5 +1,5 @@
 {
-  "name": "@scalar/openapi-parser",
+  "name": "@swagglar/openapi-parser",
   "description": "modern OpenAPI parser written in TypeScript",
   "license": "MIT",
   "author": "Scalar (https://github.com/scalar)",
@@ -53,12 +53,12 @@
   ],
   "sideEffects": false,
   "dependencies": {
-    "@scalar/helpers": "workspace:*",
-    "@scalar/json-magic": "workspace:*",
-    "@scalar/openapi-types": "workspace:*",
-    "@scalar/openapi-upgrader": "workspace:*",
-    "@scalar/openapi-validator": "workspace:*",
-    "@scalar/types": "workspace:*",
+    "@swagglar/helpers": "workspace:*",
+    "@swagglar/json-magic": "workspace:*",
+    "@swagglar/openapi-types": "workspace:*",
+    "@swagglar/openapi-upgrader": "workspace:*",
+    "@swagglar/openapi-validator": "workspace:*",
+    "@swagglar/types": "workspace:*",
     "yaml": "catalog:*"
   },
   "devDependencies": {

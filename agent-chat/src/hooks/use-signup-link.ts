@@ -5,7 +5,7 @@ import { useState } from '@/state/state'
 
 /**
  * Agent Scalar signup/upgrade URL for both full (agent.scalar.com) and embedded
- * (@scalar/api-reference) modes.
+ * (@swagglar/api-reference) modes.
  *
  * In embedded mode, includes register flow and optional docUrl when a temporary document was uploaded.
  */
@@ -21,7 +21,7 @@ export function useSignupLink(): {
       return dashboardUrl
     }
 
-    // we use mode 'preview' in @scalar/api-reference
+    // we use mode 'preview' in @swagglar/api-reference
     return uploadedTmpDocumentUrl.value
       ? `${dashboardUrl}/register?flow=oss-agent&docUrl=${uploadedTmpDocumentUrl.value}`
       : dashboardUrl

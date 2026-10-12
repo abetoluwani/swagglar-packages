@@ -1,5 +1,5 @@
-import { isObjectLike } from '@scalar/helpers/object/is-object'
-import type { UnknownObject } from '@scalar/types/utils'
+import { isObjectLike } from '@swagglar/helpers/object/is-object'
+import type { UnknownObject } from '@swagglar/types/utils'
 
 /**
  * Recursively traverses the content and applies the transform function to each node.

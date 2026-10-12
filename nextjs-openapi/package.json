@@ -1,5 +1,5 @@
 {
-  "name": "@scalar/nextjs-openapi",
+  "name": "@swagglar/nextjs-openapi",
   "description": "Automatically generate an OpenAPI schema from a Nextjs API",
   "license": "MIT",
   "author": "Scalar (https://github.com/scalar)",
@@ -39,8 +39,8 @@
   ],
   "dependencies": {
     "@scalar/nextjs-api-reference": "workspace:*",
-    "@scalar/ts-to-openapi": "workspace:*",
-    "@scalar/types": "workspace:*",
+    "@swagglar/ts-to-openapi": "workspace:*",
+    "@swagglar/types": "workspace:*",
     "fast-glob": "^3.3.3"
   },
   "devDependencies": {

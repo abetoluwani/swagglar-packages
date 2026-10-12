@@ -7,7 +7,7 @@ import ScalarColorModeToggle from './ScalarColorModeToggle.vue'
 // Mock the useColorMode hook
 const mockUseColorMode = vi.fn()
 
-vi.mock('@scalar/use-hooks/useColorMode', () => ({
+vi.mock('@swagglar/use-hooks/useColorMode', () => ({
   useColorMode: () => mockUseColorMode(),
 }))
 

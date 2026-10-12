@@ -1,4 +1,4 @@
-# @scalar/oas-utils
+# @swagglar/oas-utils
 
 Open API spec and Yaml handling utilities
 

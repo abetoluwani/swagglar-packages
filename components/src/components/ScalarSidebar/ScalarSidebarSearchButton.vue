@@ -13,8 +13,8 @@
 export default {}
 </script>
 <script setup lang="ts">
-import { ScalarIconMagnifyingGlass } from '@scalar/icons'
-import { useBindCx } from '@scalar/use-hooks/useBindCx'
+import { ScalarIconMagnifyingGlass } from '@swagglar/icons'
+import { useBindCx } from '@swagglar/use-hooks/useBindCx'
 
 const { shortcutLabel = 'Keyboard Shortcut:' } = defineProps<{
   shortcutLabel?: string

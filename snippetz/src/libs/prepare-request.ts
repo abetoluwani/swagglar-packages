@@ -1,4 +1,4 @@
-import type { HarRequest, PluginConfiguration } from '@scalar/types/snippetz'
+import type { HarRequest, PluginConfiguration } from '@swagglar/types/snippetz'
 import { Base64 } from 'js-base64'
 
 import { collectHeaders, joinUrlAndQuery, normalizeMethod, normalizeUrl } from './http'

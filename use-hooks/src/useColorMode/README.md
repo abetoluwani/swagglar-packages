@@ -10,7 +10,7 @@ classes to enable theme switching.
 
 ```vue
 <script setup lang="ts">
-import { useColorMode } from '@scalar/use-hooks/useColorMode'
+import { useColorMode } from '@swagglar/use-hooks/useColorMode'
 
 // Watches for changes in the color mode and applies the appropriate CSS classes
 useColorMode()
