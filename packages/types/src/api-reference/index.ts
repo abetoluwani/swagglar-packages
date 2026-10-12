@@ -1,0 +1,39 @@
+export type {
+  PluginAuthSecrets,
+  PluginAuthState,
+  PluginDocumentAuth,
+  PluginSelectedSecurity,
+} from './api-reference-plugin'
+export type { ApiReferenceInstance, CreateApiReference } from './html-api'
+export type { HtmlRenderingConfiguration } from './html-rendering-configuration'
+export type {
+  AnyApiReferenceConfiguration,
+  ApiClientConfiguration,
+  ApiClientTranslations,
+  ApiReferenceBuiltInLocale,
+  ApiReferenceConfiguration,
+  ApiReferenceConfigurationRaw,
+  ApiReferenceConfigurationWithMultipleSources,
+  ApiReferenceConfigurationWithSource,
+  ApiReferenceLocale,
+  ApiReferenceLocalization,
+  ApiReferencePlugin,
+  ApiReferenceTextDirection,
+  ApiReferenceTextDirectionPreference,
+  ApiReferenceTranslationKey,
+  ApiReferenceTranslations,
+  AuthenticationConfiguration,
+  BaseConfiguration,
+  ExternalUrls,
+  LifecycleHooks,
+  ModelsSectionLabel,
+  SecurityScheme,
+  SecuritySchemeApiKey,
+  SecuritySchemeHttp,
+  SecuritySchemeOauth2,
+  SecuritySchemeOpenIdConnect,
+  SourceConfiguration,
+  SpecificationExtension,
+  ViewComponent,
+} from './types'
+export { DEFAULT_MODELS_SECTION_LABEL, isConfigurationWithSources } from './types'

@@ -1,0 +1,177 @@
+/*
+  Custom reset (loosely) based on Tailwind Preflight
+
+  @see https://github.com/tailwindlabs/tailwindcss/blob/3.3/src/css/preflight.css
+*/
+
+/* Reset <body> in a layer  */
+@layer scalar-base {
+  body {
+    margin: 0;
+    line-height: inherit;
+  }
+}
+
+/* Use :where to lower specificity */
+:where(.scalar-app) {
+  /* Apply styles that are normally applied to `html`. */
+  font-family: var(--scalar-font);
+  line-height: 1.15;
+  color: var(--scalar-color-1);
+
+  -webkit-text-size-adjust: 100%;
+  -moz-tab-size: 4;
+  tab-size: 4;
+
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+    border-color: var(--scalar-border-color);
+
+    outline-width: 1px;
+    outline-style: none;
+    outline-color: var(--scalar-color-accent);
+
+    font-family: inherit;
+    font-feature-settings: inherit;
+    font-variation-settings: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+    text-decoration: inherit;
+    text-align: inherit;
+    line-height: inherit;
+    color: inherit;
+    margin: unset;
+    padding: unset;
+
+    /** Smooth text rendering */
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::before,
+  ::after {
+    --tw-content: "";
+  }
+
+  /** Remove the default background color. */
+  button,
+  input,
+  optgroup,
+  select,
+  textarea,
+  ::file-selector-button {
+    background: transparent;
+  }
+
+  /** Remove the default list style */
+  ol,
+  ul,
+  menu {
+    list-style: none;
+  }
+
+  /** Bring back a basic border style and focus outline for form controls */
+  input:where(:not([type="button"], [type="reset"], [type="submit"])),
+  select,
+  textarea {
+    border-radius: var(--scalar-radius-md);
+    border-width: 1px;
+  }
+
+  /**
+   * Align text form controls to the writing direction by default.
+   *
+   * The universal reset above sets `text-align: inherit`, which overrides the controls' built-in
+   * `start` alignment with whatever an ancestor resolves to — including a physical `left` from a
+   * Tailwind `text-left` utility, which does not flip for RTL. Re-asserting the logical `start`
+   * keeps inputs reading correctly in both LTR and RTL documents.
+   */
+  input,
+  select,
+  textarea {
+    text-align: start;
+  }
+
+  /** Style placeholder text */
+  input::placeholder,
+  text-area::placeholder,
+  ::-webkit-input-placeholder {
+    color: var(--scalar-color-3);
+    font-family: var(--scalar-font);
+  }
+
+  /** Remove chrome search input decorations */
+  input[type="search"]::-webkit-search-cancel-button,
+  input[type="search"]::-webkit-search-decoration {
+    appearance: none;
+  }
+
+  /* Fix for Safari displaying default caret next to `<summary>` */
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  /** Remove yellow/blue autofill indicator */
+  input:-webkit-autofill {
+    background-clip: text !important;
+    -webkit-text-fill-color: var(--scalar-color-1);
+  }
+
+  /** Add outline for focus visible */
+  :focus-visible {
+    outline-style: solid;
+  }
+
+  /** Set outline offset for buttons */
+  button:focus-visible,
+  [role="button"]:focus-visible {
+    outline-offset: -1px;
+  }
+
+  /** Set the default cursor for buttons. */
+  button,
+  [role="button"] {
+    cursor: pointer;
+  }
+
+  /** Make sure disabled buttons don't get the pointer cursor. */
+  :disabled {
+    cursor: default;
+  }
+
+  /**
+    1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+    2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+  */
+
+  img,
+  svg,
+  video,
+  canvas,
+  audio,
+  iframe,
+  embed,
+  object {
+    display: block; /* 1 */
+    vertical-align: middle; /* 2 */
+  }
+
+  /**
+   * Make elements with the HTML hidden attribute stay hidden by default.
+   *
+   * `hidden="until-found"` is deliberately excluded: that value asks the
+   * browser to keep the subtree hidden but still searchable, which it does
+   * with `content-visibility: hidden`. `display: none` overrides that and
+   * makes find-in-page skip the content, so an author reset written for plain
+   * `hidden` would silently disable the feature wherever it is used.
+   */
+  [hidden]:not([hidden="until-found"]) {
+    display: none;
+  }
+}

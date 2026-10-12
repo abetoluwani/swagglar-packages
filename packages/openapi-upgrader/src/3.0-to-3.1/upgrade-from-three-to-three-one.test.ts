@@ -1,0 +1,1304 @@
+import type { OpenAPIV3_1 } from '@scalar/openapi-types'
+import { describe, expect, it } from 'vitest'
+
+import { upgradeFromThreeToThreeOne } from './upgrade-from-three-to-three-one'
+
+describe('upgradeFromThreeToThreeOne', () => {
+  it.each([
+    ['base64', { contentEncoding: 'base64' }],
+    ['byte', { contentEncoding: 'base64' }],
+  ])('migrates nullable %s strings without losing null', (format, expected) => {
+    const result: OpenAPIV3_1.Document = upgradeFromThreeToThreeOne({
+      openapi: '3.0.4',
+      info: { title: 'Nullable formats', version: '1.0.0' },
+      paths: {},
+      components: { schemas: { File: { type: 'string', format, nullable: true, description: 'A file' } } },
+    })
+
+    expect(result.components?.schemas?.File).toStrictEqual({
+      type: ['string', 'null'],
+      description: 'A file',
+      ...expected,
+    })
+  })
+
+  it.each([
+    ['a', 'b'],
+    ['a', 'b', null],
+  ])('preserves nullable enum values %j', (...values) => {
+    const result: OpenAPIV3_1.Document = upgradeFromThreeToThreeOne({
+      openapi: '3.0.4',
+      info: { title: 'Nullable enum', version: '1.0.0' },
+      paths: {},
+      components: { schemas: { Choice: { type: 'string', enum: values, nullable: true } } },
+    })
+
+    expect(result.components?.schemas?.Choice).toStrictEqual({ type: ['string', 'null'], enum: values })
+  })
+
+  it.each(['minimum', 'maximum'] as const)('omits an exclusive %s without a bound', (bound) => {
+    const keyword = bound === 'minimum' ? 'exclusiveMinimum' : 'exclusiveMaximum'
+    const result: OpenAPIV3_1.Document = upgradeFromThreeToThreeOne({
+      openapi: '3.0.4',
+      info: { title: 'Bounds', version: '1.0.0' },
+      paths: {},
+      components: { schemas: { Number: { type: 'number', [keyword]: true } } },
+    })
+
+    expect(result.components?.schemas?.Number).toStrictEqual({ type: 'number' })
+  })
+
+  it.each([true, false])('preserves zero bounds with exclusivity %s', (exclusive) => {
+    const result: OpenAPIV3_1.Document = upgradeFromThreeToThreeOne({
+      openapi: '3.0.4',
+      info: { title: 'Bounds', version: '1.0.0' },
+      paths: {},
+      components: {
+        schemas: {
+          Number: {
+            type: 'number',
+            minimum: 0,
+            maximum: 0,
+            exclusiveMinimum: exclusive,
+            exclusiveMaximum: exclusive,
+          },
+        },
+      },
+    })
+
+    expect(result.components?.schemas?.Number).toStrictEqual(
+      exclusive
+        ? { type: 'number', exclusiveMinimum: 0, exclusiveMaximum: 0 }
+        : { type: 'number', minimum: 0, maximum: 0 },
+    )
+  })
+
+  it.each([false, true])('migrates reusable raw binary with nullable %s', (nullable) => {
+    const result: OpenAPIV3_1.Document = upgradeFromThreeToThreeOne({
+      openapi: '3.0.4',
+      info: { title: 'Binary', version: '1.0.0' },
+      paths: {},
+      components: {
+        schemas: {
+          File: {
+            type: 'string',
+            format: 'binary',
+            ...(nullable ? { nullable: true } : {}),
+            description: 'A file',
+            maxLength: 100,
+          },
+        },
+      },
+    })
+
+    expect(result.components?.schemas?.File).toStrictEqual({
+      contentMediaType: 'application/octet-stream',
+      description: 'A file',
+      maxLength: 100,
+    })
+  })
+
+  it.each(['application/octet-stream', 'image/png'])(
+    'preserves %s media metadata and binary constraints',
+    (mediaType) => {
+      const result: OpenAPIV3_1.Document = upgradeFromThreeToThreeOne({
+        openapi: '3.0.4',
+        info: { title: 'Binary', version: '1.0.0' },
+        paths: {
+          '/upload': {
+            post: {
+              requestBody: {
+                content: {
+                  [mediaType]: {
+                    schema: { type: 'string', format: 'binary', nullable: true, description: 'A file', maxLength: 100 },
+                    examples: { sample: { externalValue: 'https://example.com/file' } },
+                  },
+                },
+              },
+              responses: { '200': { description: 'OK' } },
+            },
+          },
+        },
+      })
+
+      expect(result.paths?.['/upload']?.post?.requestBody?.content[mediaType]).toStrictEqual({
+        schema: { description: 'A file', maxLength: 100 },
+        examples: { sample: { externalValue: 'https://example.com/file' } },
+      })
+    },
+  )
+
+  it.each([false, true])('migrates multipart binary fields and array items with nullable %s', (nullable) => {
+    const file = { type: 'string', format: 'binary', ...(nullable ? { nullable: true } : {}) }
+    const result: OpenAPIV3_1.Document = upgradeFromThreeToThreeOne({
+      openapi: '3.0.4',
+      info: { title: 'Multipart', version: '1.0.0' },
+      paths: {
+        '/upload': {
+          post: {
+            requestBody: {
+              content: {
+                'multipart/form-data': {
+                  schema: { type: 'object', properties: { file, files: { type: 'array', items: file } } },
+                  encoding: { file: { contentType: 'image/png' }, files: { contentType: 'image/jpeg' } },
+                },
+              },
+            },
+            responses: { '200': { description: 'OK' } },
+          },
+        },
+      },
+    })
+
+    expect(result.paths?.['/upload']?.post?.requestBody?.content['multipart/form-data']).toStrictEqual({
+      schema: {
+        type: 'object',
+        properties: {
+          file: { contentMediaType: 'application/octet-stream' },
+          files: { type: 'array', items: { contentMediaType: 'application/octet-stream' } },
+        },
+      },
+      encoding: { file: { contentType: 'image/png' }, files: { contentType: 'image/jpeg' } },
+    })
+  })
+
+  it('preserves non-binary schemas under application/octet-stream', () => {
+    const result: OpenAPIV3_1.Document = upgradeFromThreeToThreeOne({
+      openapi: '3.0.4',
+      info: { title: 'Binary', version: '1.0.0' },
+      paths: {
+        '/upload': {
+          post: {
+            requestBody: {
+              content: {
+                'application/octet-stream': {
+                  schema: { $ref: '#/components/schemas/File' },
+                },
+              },
+            },
+            responses: { '200': { description: 'OK' } },
+          },
+        },
+      },
+      components: { schemas: { File: { type: 'string', format: 'binary' } } },
+    })
+
+    expect(result.paths?.['/upload']?.post?.requestBody?.content['application/octet-stream']).toStrictEqual({
+      schema: { $ref: '#/components/schemas/File' },
+    })
+  })
+
+  it.each(['byte', 'base64'])('omits unknown media types for reusable %s schemas', (format) => {
+    const result: OpenAPIV3_1.Document = upgradeFromThreeToThreeOne({
+      openapi: '3.0.4',
+      info: { title: 'Encoded data', version: '1.0.0' },
+      paths: {},
+      components: {
+        schemas: {
+          File: { type: 'string', format },
+          Image: { type: 'string', format, contentMediaType: 'image/png' },
+        },
+      },
+    })
+
+    expect(result.components?.schemas).toStrictEqual({
+      File: { type: 'string', contentEncoding: 'base64' },
+      Image: { type: 'string', contentEncoding: 'base64', contentMediaType: 'image/png' },
+    })
+  })
+
+  it.each(['application/json', 'multipart/form-data'])(
+    'does not infer encoded data media types from %s',
+    (mediaType) => {
+      const result: OpenAPIV3_1.Document = upgradeFromThreeToThreeOne({
+        openapi: '3.0.4',
+        info: { title: 'Encoded data', version: '1.0.0' },
+        paths: {
+          '/upload': {
+            post: {
+              requestBody: {
+                content: {
+                  [mediaType]: {
+                    schema: {
+                      type: 'object',
+                      properties: {
+                        file: { type: 'string', format: 'byte', nullable: true },
+                        image: { type: 'string', format: 'byte', contentMediaType: 'image/png' },
+                      },
+                    },
+                  },
+                },
+              },
+              responses: { '200': { description: 'OK' } },
+            },
+          },
+        },
+      })
+
+      expect(result.paths?.['/upload']?.post?.requestBody?.content[mediaType].schema.properties).toStrictEqual({
+        file: { type: ['string', 'null'], contentEncoding: 'base64' },
+        image: { type: 'string', contentEncoding: 'base64', contentMediaType: 'image/png' },
+      })
+    },
+  )
+
+  describe('version', () => {
+    it(`doesn't modify Swagger 2.0 files`, () => {
+      const result: OpenAPIV3_1.Document = upgradeFromThreeToThreeOne({
+        swagger: '2.0',
+        info: {
+          title: 'Hello World',
+          version: '1.0.0',
+        },
+        paths: {},
+      })
+
+      expect(result.swagger).toBe('2.0')
+    })
+
+    it('changes the version to from 3.0.0 to 3.1.1', () => {
+      const result: OpenAPIV3_1.Document = upgradeFromThreeToThreeOne({
+        openapi: '3.0.0',
+        info: {
+          title: 'Hello World',
+          version: '1.0.0',
+        },
+        paths: {},
+      })
+
+      expect(result.openapi).toBe('3.1.1')
+    })
+
+    it('changes the version to 3.0.3 to 3.1.1', () => {
+      const result: OpenAPIV3_1.Document = upgradeFromThreeToThreeOne({
+        openapi: '3.0.3',
+        info: {
+          title: 'Hello World',
+          version: '1.0.0',
+        },
+        paths: {},
+      })
+
+      expect(result.openapi).toBe('3.1.1')
+    })
+  })
+
+  describe('nullable types', () => {
+    it('migrates nullable types', () => {
+      const result: OpenAPIV3_1.Document = upgradeFromThreeToThreeOne({
+        openapi: '3.0.0',
+        info: {
+          title: 'Hello World',
+          version: '1.0.0',
+        },
+        paths: {
+          '/test': {
+            get: {
+              responses: {
+                '200': {
+                  description: 'foobar',
+                  content: {
+                    'application/json': {
+                      schema: {
+                        type: 'string',
+                        nullable: true,
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      })
+
+      expect(result.paths?.['/test']?.get?.responses?.['200']?.content['application/json'].schema).toEqual({
+        type: ['string', 'null'],
+      })
+    })
+
+    it('migrates nullable types with properties', () => {
+      const result: OpenAPIV3_1.Document = upgradeFromThreeToThreeOne({
+        openapi: '3.0.0',
+        info: {
+          title: 'Hello World',
+          version: '1.0.0',
+        },
+        paths: {
+          '/test': {
+            get: {
+              responses: {
+                '200': {
+                  description: 'foobar',
+                  content: {
+                    'application/json': {
+                      schema: {
+                        nullable: true,
+                        properties: {
+                          name: {
+                            type: 'string',
+                          },
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      })
+
+      expect(result.paths?.['/test']?.get?.responses?.['200']?.content['application/json'].schema).toEqual({
+        nullable: true,
+        properties: {
+          name: {
+            type: 'string',
+          },
+        },
+      })
+    })
+
+    it('migrates a nullable `allOf` wrapping a `$ref`', () => {
+      const result: OpenAPIV3_1.Document = upgradeFromThreeToThreeOne({
+        openapi: '3.0.3',
+        info: { title: 'Hello World', version: '1.0.0' },
+        paths: {},
+        components: {
+          schemas: {
+            Pet: { type: 'object', properties: { id: { type: 'integer' } } },
+            Wrapper: {
+              type: 'object',
+              properties: {
+                pet: {
+                  nullable: true,
+                  allOf: [{ $ref: '#/components/schemas/Pet' }],
+                },
+              },
+            },
+          },
+        },
+      })
+
+      expect(result.components?.schemas?.Wrapper?.properties?.pet).toEqual({
+        anyOf: [{ $ref: '#/components/schemas/Pet' }, { type: 'null' }],
+      })
+    })
+
+    it('migrates a nullable `$ref` sibling', () => {
+      const result: OpenAPIV3_1.Document = upgradeFromThreeToThreeOne({
+        openapi: '3.0.3',
+        info: { title: 'Hello World', version: '1.0.0' },
+        paths: {},
+        components: {
+          schemas: {
+            Pet: { type: 'object', properties: { id: { type: 'integer' } } },
+            Wrapper: {
+              type: 'object',
+              properties: {
+                pet: {
+                  $ref: '#/components/schemas/Pet',
+                  nullable: true,
+                },
+              },
+            },
+          },
+        },
+      })
+
+      expect(result.components?.schemas?.Wrapper?.properties?.pet).toEqual({
+        anyOf: [{ $ref: '#/components/schemas/Pet' }, { type: 'null' }],
+      })
+    })
+
+    it('keeps other keywords when unwrapping a nullable `$ref`', () => {
+      const result: OpenAPIV3_1.Document = upgradeFromThreeToThreeOne({
+        openapi: '3.0.3',
+        info: { title: 'Hello World', version: '1.0.0' },
+        paths: {},
+        components: {
+          schemas: {
+            Pet: { type: 'object', properties: { id: { type: 'integer' } } },
+            Wrapper: {
+              type: 'object',
+              properties: {
+                pet: {
+                  description: 'The pet, or null',
+                  nullable: true,
+                  allOf: [{ $ref: '#/components/schemas/Pet' }],
+                },
+              },
+            },
+          },
+        },
+      })
+
+      expect(result.components?.schemas?.Wrapper?.properties?.pet).toEqual({
+        description: 'The pet, or null',
+        anyOf: [{ $ref: '#/components/schemas/Pet' }, { type: 'null' }],
+      })
+    })
+
+    it('wraps a nullable multi-member `allOf` without dropping members', () => {
+      const result: OpenAPIV3_1.Document = upgradeFromThreeToThreeOne({
+        openapi: '3.0.3',
+        info: { title: 'Hello World', version: '1.0.0' },
+        paths: {},
+        components: {
+          schemas: {
+            Pet: { type: 'object', properties: { id: { type: 'integer' } } },
+            Extra: { type: 'object', properties: { tag: { type: 'string' } } },
+            Wrapper: {
+              type: 'object',
+              properties: {
+                pet: {
+                  nullable: true,
+                  allOf: [{ $ref: '#/components/schemas/Pet' }, { $ref: '#/components/schemas/Extra' }],
+                },
+              },
+            },
+          },
+        },
+      })
+
+      expect(result.components?.schemas?.Wrapper?.properties?.pet).toEqual({
+        anyOf: [
+          { allOf: [{ $ref: '#/components/schemas/Pet' }, { $ref: '#/components/schemas/Extra' }] },
+          { type: 'null' },
+        ],
+      })
+    })
+  })
+
+  describe('exclusiveMinimum and exclusiveMaximum', () => {
+    it('migrate exclusiveMinimum and exclusiveMaximum', () => {
+      const result: OpenAPIV3_1.Document = upgradeFromThreeToThreeOne({
+        openapi: '3.0.0',
+        info: {
+          title: 'Hello World',
+          version: '1.0.0',
+        },
+        paths: {
+          '/test': {
+            get: {
+              responses: {
+                '200': {
+                  description: 'foobar',
+                  content: {
+                    'application/json': {
+                      schema: {
+                        type: 'integer',
+                        minimum: 1,
+                        exclusiveMinimum: true,
+                        maximum: 100,
+                        exclusiveMaximum: true,
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      })
+
+      expect(result.paths?.['/test']?.get?.responses?.['200']?.content['application/json'].schema).toEqual({
+        type: 'integer',
+        exclusiveMinimum: 1,
+        exclusiveMaximum: 100,
+      })
+    })
+  })
+
+  describe('migrates example to examples', () => {
+    it('uses arrays in schemas', () => {
+      const result: OpenAPIV3_1.Document = upgradeFromThreeToThreeOne({
+        openapi: '3.0.0',
+        info: {
+          title: 'Hello World',
+          version: '1.0.0',
+        },
+        paths: {
+          '/test': {
+            get: {
+              responses: {
+                '200': {
+                  description: 'foobar',
+                  content: {
+                    'application/json': {
+                      schema: {
+                        type: 'integer',
+                        example: 1,
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      })
+
+      expect(result.paths?.['/test']?.get?.responses?.['200']?.content['application/json'].schema).toEqual({
+        type: 'integer',
+        examples: [1],
+      })
+    })
+
+    it('uses example objects everywhere else', () => {
+      const result: OpenAPIV3_1.Document = upgradeFromThreeToThreeOne({
+        openapi: '3.0.0',
+        info: {
+          title: 'Hello World',
+          version: '1.0.0',
+        },
+        paths: {
+          '/test': {
+            get: {
+              parameters: [
+                {
+                  name: 'limit',
+                  in: 'query',
+                  schema: {
+                    type: 'integer',
+                    example: 10,
+                  },
+                  example: 10,
+                },
+              ],
+            },
+          },
+        },
+      })
+
+      expect(result.paths?.['/test']?.get?.parameters?.[0]).toEqual({
+        name: 'limit',
+        in: 'query',
+        schema: {
+          type: 'integer',
+          // array, because it's in a schema
+          examples: [10],
+        },
+        // object, because it's not in a schema
+        examples: {
+          default: {
+            value: 10,
+          },
+        },
+      })
+    })
+
+    it(`doesn't transform arrays into objects`, () => {
+      const result: OpenAPIV3_1.Document = upgradeFromThreeToThreeOne({
+        openapi: '3.0.0',
+        info: {
+          title: 'Sample API',
+          version: '1.0.0',
+          description: 'A simple example API',
+        },
+        tags: [
+          {
+            'name': 'users',
+            'description': 'Operations about users',
+            'x-internal': true,
+          },
+        ],
+        paths: {
+          '/users': {
+            post: {
+              tags: ['users'],
+              summary: 'hello',
+              description: 'Returns a list of users',
+              operationId: 'getUsers',
+              requestBody: {
+                content: {
+                  'application/json': {
+                    schema: {
+                      type: 'object',
+                      properties: {
+                        foobar: {
+                          type: 'array',
+                          example: ['Portfolio1', 'Portfolio2'],
+                          items: {
+                            type: 'string',
+                          },
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      })
+
+      expect(
+        result.paths?.['/users']?.post?.requestBody?.content['application/json'].schema.properties.foobar,
+      ).toStrictEqual({
+        type: 'array',
+        examples: [['Portfolio1', 'Portfolio2']],
+        items: {
+          type: 'string',
+        },
+      })
+    })
+
+    it('preserves existing examples map without double nesting', () => {
+      const result: OpenAPIV3_1.Document = upgradeFromThreeToThreeOne({
+        openapi: '3.0.0',
+        info: {
+          title: 'Hello World',
+          version: '1.0.0',
+        },
+        paths: {
+          '/test': {
+            post: {
+              responses: {
+                '201': {
+                  description: 'Created machine account subtype.',
+                  content: {
+                    'application/json': {
+                      schema: {
+                        type: 'object',
+                        required: ['technicalName', 'displayName', 'description'],
+                        properties: {
+                          id: {
+                            type: 'string',
+                            format: 'uuid',
+                            description: 'Unique identifier for the subtype.',
+                          },
+                          technicalName: {
+                            type: 'string',
+                            description: 'Technical name of the subtype.',
+                          },
+                        },
+                      },
+                      examples: {
+                        example: {
+                          value: {
+                            id: '43bdd144-4b17-4fce-a744-17c7fd3e717b',
+                            technicalName: 'foo',
+                            displayName: 'Mr Foo',
+                            description: 'fighters',
+                          },
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      })
+
+      // The examples map should be preserved as-is, not double-nested
+      const content = result.paths?.['/test']?.post?.responses?.['201']?.content['application/json']
+      expect(content.examples).toEqual({
+        example: {
+          value: {
+            id: '43bdd144-4b17-4fce-a744-17c7fd3e717b',
+            technicalName: 'foo',
+            displayName: 'Mr Foo',
+            description: 'fighters',
+          },
+        },
+      })
+
+      // Should NOT have double nesting like examples.examples or value.value
+      expect(content.examples).not.toHaveProperty('examples')
+    })
+
+    it('converts example to examples outside of examples map while preserving examples map', () => {
+      const result: OpenAPIV3_1.Document = upgradeFromThreeToThreeOne({
+        openapi: '3.0.0',
+        info: {
+          title: 'Hello World',
+          version: '1.0.0',
+        },
+        paths: {
+          '/test': {
+            get: {
+              parameters: [
+                {
+                  name: 'id',
+                  in: 'query',
+                  example: 'test-123',
+                },
+              ],
+              responses: {
+                '200': {
+                  description: 'Success',
+                  content: {
+                    'application/json': {
+                      schema: {
+                        type: 'object',
+                      },
+                      examples: {
+                        success: {
+                          value: {
+                            status: 'ok',
+                          },
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      })
+
+      // Parameter example should be converted to examples
+      expect(result.paths?.['/test']?.get?.parameters?.[0]).toEqual({
+        name: 'id',
+        in: 'query',
+        examples: {
+          default: {
+            value: 'test-123',
+          },
+        },
+      })
+
+      // Response examples map should be preserved as-is
+      const content = result.paths?.['/test']?.get?.responses?.['200']?.content['application/json']
+      expect(content.examples).toEqual({
+        success: {
+          value: {
+            status: 'ok',
+          },
+        },
+      })
+    })
+
+    it('converts example to examples for schema properties named "examples"', () => {
+      const result: OpenAPIV3_1.Document = upgradeFromThreeToThreeOne({
+        openapi: '3.0.0',
+        info: {
+          title: 'Hello World',
+          version: '1.0.0',
+        },
+        components: {
+          schemas: {
+            MySchema: {
+              type: 'object',
+              properties: {
+                examples: {
+                  type: 'object',
+                  description: 'A property named examples',
+                  example: { foo: 'bar' },
+                },
+                name: {
+                  type: 'string',
+                  example: 'John',
+                },
+              },
+            },
+          },
+        },
+      })
+
+      // The 'examples' property should have its 'example' converted to 'examples' array
+      expect(result.components?.schemas?.MySchema?.properties?.examples).toEqual({
+        type: 'object',
+        description: 'A property named examples',
+        examples: [{ foo: 'bar' }],
+      })
+
+      // The 'name' property should also have its 'example' converted
+      expect(result.components?.schemas?.MySchema?.properties?.name).toEqual({
+        type: 'string',
+        examples: ['John'],
+      })
+    })
+
+    it('does not convert a schema property named "example"', () => {
+      const result: OpenAPIV3_1.Document = upgradeFromThreeToThreeOne({
+        openapi: '3.0.0',
+        info: {
+          title: 'Hello World',
+          version: '1.0.0',
+        },
+        components: {
+          schemas: {
+            MySchema: {
+              type: 'object',
+              properties: {
+                documentation: { type: 'string', nullable: true },
+                example: { type: 'string', nullable: true },
+                platform: { type: 'string', nullable: true },
+              },
+            },
+          },
+        },
+      })
+
+      // The 'example' key is a property name, so it must stay a property, not become an examples array
+      expect(result.components?.schemas?.MySchema?.properties).toEqual({
+        documentation: { type: ['string', 'null'] },
+        example: { type: ['string', 'null'] },
+        platform: { type: ['string', 'null'] },
+      })
+    })
+
+    it('does not convert a schema named "example" in components/schemas', () => {
+      const result: OpenAPIV3_1.Document = upgradeFromThreeToThreeOne({
+        openapi: '3.0.0',
+        info: { title: 'Hello World', version: '1.0.0' },
+        components: {
+          schemas: {
+            example: { type: 'string', nullable: true },
+            other: { type: 'number' },
+          },
+        },
+      })
+
+      // The 'example' key is a schema name, so it must stay a schema entry, not become an examples array
+      expect(result.components?.schemas).toEqual({
+        example: { type: ['string', 'null'] },
+        other: { type: 'number' },
+      })
+    })
+
+    it('does not convert a "$defs" entry named "example"', () => {
+      const result: OpenAPIV3_1.Document = upgradeFromThreeToThreeOne({
+        openapi: '3.0.0',
+        info: { title: 'Hello World', version: '1.0.0' },
+        components: {
+          schemas: {
+            MySchema: {
+              type: 'object',
+              $defs: {
+                example: { type: 'string' },
+              },
+            },
+          },
+        },
+      })
+
+      expect((result.components?.schemas?.MySchema as OpenAPIV3_1.SchemaObject)?.$defs).toEqual({
+        example: { type: 'string' },
+      })
+    })
+
+    it('still converts a real "example" keyword nested under a property named "example"', () => {
+      const result: OpenAPIV3_1.Document = upgradeFromThreeToThreeOne({
+        openapi: '3.0.0',
+        info: { title: 'Hello World', version: '1.0.0' },
+        components: {
+          schemas: {
+            MySchema: {
+              type: 'object',
+              properties: {
+                example: { type: 'string', example: 'foo' },
+              },
+            },
+          },
+        },
+      })
+
+      // The outer 'example' stays a property; its inner 'example' keyword still becomes 'examples'
+      expect(result.components?.schemas?.MySchema?.properties).toEqual({
+        example: { type: 'string', examples: ['foo'] },
+      })
+    })
+
+    it('does not treat data inside an example value as a schema', () => {
+      const result: OpenAPIV3_1.Document = upgradeFromThreeToThreeOne({
+        openapi: '3.0.0',
+        info: { title: 'Hello World', version: '1.0.0' },
+        components: {
+          schemas: {
+            MySchema: {
+              type: 'string',
+              example: { type: 'string', nullable: true, exclusiveMinimum: true, minimum: 5, 'x-webhooks': { a: 1 } },
+            },
+          },
+        },
+      })
+
+      // The example is arbitrary data, so it is preserved verbatim inside the examples array
+      expect((result.components?.schemas?.MySchema as OpenAPIV3_1.SchemaObject)?.examples).toEqual([
+        { type: 'string', nullable: true, exclusiveMinimum: true, minimum: 5, 'x-webhooks': { a: 1 } },
+      ])
+    })
+
+    it('does not treat data inside a default value as a schema', () => {
+      const result: OpenAPIV3_1.Document = upgradeFromThreeToThreeOne({
+        openapi: '3.0.0',
+        info: { title: 'Hello World', version: '1.0.0' },
+        components: {
+          schemas: {
+            MySchema: {
+              type: 'object',
+              default: { nullable: true, type: 'anything' },
+            },
+          },
+        },
+      })
+
+      expect((result.components?.schemas?.MySchema as OpenAPIV3_1.SchemaObject)?.default).toEqual({
+        nullable: true,
+        type: 'anything',
+      })
+    })
+
+    it('does not treat the value of an Example Object as a schema', () => {
+      const result: OpenAPIV3_1.Document = upgradeFromThreeToThreeOne({
+        openapi: '3.0.0',
+        info: { title: 'Hello World', version: '1.0.0' },
+        paths: {
+          '/things': {
+            get: {
+              responses: {
+                '200': {
+                  description: 'ok',
+                  content: {
+                    'application/json': {
+                      schema: { type: 'object' },
+                      examples: {
+                        sample: { value: { type: 'string', nullable: true } },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      })
+
+      const mediaType = (result.paths?.['/things']?.get?.responses?.['200'] as OpenAPIV3_1.ResponseObject)?.content?.[
+        'application/json'
+      ]
+
+      // The example value is data, so it is preserved verbatim
+      expect((mediaType?.examples?.sample as OpenAPIV3_1.ExampleObject)?.value).toEqual({
+        type: 'string',
+        nullable: true,
+      })
+    })
+
+    it('still upgrades a schema property named "value" inside a schema named "examples"', () => {
+      const result: OpenAPIV3_1.Document = upgradeFromThreeToThreeOne({
+        openapi: '3.0.0',
+        info: { title: 'Hello World', version: '1.0.0' },
+        components: {
+          schemas: {
+            examples: {
+              type: 'object',
+              properties: {
+                value: { type: 'string', nullable: true },
+              },
+            },
+          },
+        },
+      })
+
+      // This 'value' is a real schema, not Example Object data, so nullable is still upgraded
+      expect(result.components?.schemas?.examples?.properties?.value).toEqual({ type: ['string', 'null'] })
+    })
+  })
+
+  describe('upgrading x-webhooks', () => {
+    it('renames x-webhooks to webhooks at the document root', () => {
+      const result: OpenAPIV3_1.Document = upgradeFromThreeToThreeOne({
+        openapi: '3.0.0',
+        info: { title: 'Hello World', version: '1.0.0' },
+        'x-webhooks': { onEvent: { post: { responses: { '200': { description: 'ok' } } } } },
+      })
+
+      expect(result.webhooks).toEqual({ onEvent: { post: { responses: { '200': { description: 'ok' } } } } })
+      expect((result as Record<string, unknown>)['x-webhooks']).toBeUndefined()
+    })
+
+    it('does not rename a schema property named x-webhooks', () => {
+      const result: OpenAPIV3_1.Document = upgradeFromThreeToThreeOne({
+        openapi: '3.0.0',
+        info: { title: 'Hello World', version: '1.0.0' },
+        components: {
+          schemas: {
+            MySchema: {
+              type: 'object',
+              properties: {
+                'x-webhooks': { type: 'string' },
+              },
+            },
+          },
+        },
+      })
+
+      expect(result.components?.schemas?.MySchema?.properties).toEqual({
+        'x-webhooks': { type: 'string' },
+      })
+    })
+  })
+
+  describe('describing File Upload Payloads', () => {
+    it('removes JSON type constraints for binary file uploads', () => {
+      const result: OpenAPIV3_1.Document = upgradeFromThreeToThreeOne({
+        openapi: '3.0.0',
+        info: {
+          title: 'Hello World',
+          version: '1.0.0',
+        },
+        paths: {
+          '/upload': {
+            post: {
+              requestBody: {
+                content: {
+                  'application/octet-stream': {
+                    schema: {
+                      type: 'string',
+                      format: 'binary',
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      })
+
+      expect(result.paths?.['/upload']?.post?.requestBody?.content['application/octet-stream']).toStrictEqual({
+        schema: {},
+      })
+    })
+
+    it('migrates base64 format to contentEncoding for image uploads', () => {
+      const result: OpenAPIV3_1.Document = upgradeFromThreeToThreeOne({
+        openapi: '3.0.0',
+        info: {
+          title: 'Hello World',
+          version: '1.0.0',
+        },
+        paths: {
+          '/upload': {
+            post: {
+              requestBody: {
+                content: {
+                  'image/png': {
+                    schema: {
+                      type: 'string',
+                      format: 'base64',
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      })
+
+      expect(result.paths?.['/upload']?.post?.requestBody?.content['image/png']).toEqual({
+        schema: {
+          type: 'string',
+          contentEncoding: 'base64',
+        },
+      })
+    })
+
+    it('migrates binary format for multipart file uploads', () => {
+      const result: OpenAPIV3_1.Document = upgradeFromThreeToThreeOne({
+        openapi: '3.0.0',
+        info: {
+          title: 'Hello World',
+          version: '1.0.0',
+        },
+        paths: {
+          '/upload': {
+            post: {
+              requestBody: {
+                content: {
+                  'multipart/form-data': {
+                    schema: {
+                      type: 'object',
+                      properties: {
+                        orderId: {
+                          type: 'integer',
+                        },
+                        fileName: {
+                          type: 'string',
+                          description: 'The file name',
+                          format: 'binary',
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      })
+
+      expect(result.paths?.['/upload']?.post?.requestBody?.content['multipart/form-data']).toEqual({
+        schema: {
+          type: 'object',
+          properties: {
+            orderId: {
+              type: 'integer',
+            },
+            fileName: {
+              description: 'The file name',
+              contentMediaType: 'application/octet-stream',
+            },
+          },
+        },
+      })
+    })
+  })
+
+  it('migrates byte format', () => {
+    const result: OpenAPIV3_1.Document = upgradeFromThreeToThreeOne({
+      openapi: '3.0.0',
+      info: {
+        title: 'Hello World',
+        version: '1.0.0',
+      },
+      paths: {
+        '/upload': {
+          post: {
+            requestBody: {
+              content: {
+                'image/png': {
+                  schema: {
+                    type: 'string',
+                    format: 'byte',
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    })
+
+    expect(result.paths?.['/upload']?.post?.requestBody?.content['image/png']).toEqual({
+      schema: {
+        type: 'string',
+        contentEncoding: 'base64',
+      },
+    })
+  })
+
+  describe.skip('declaring $schema', () => {
+    it('adds a $schema', () => {
+      const result: OpenAPIV3_1.Document = upgradeFromThreeToThreeOne({
+        openapi: '3.0.0',
+        info: {
+          title: 'Hello World',
+          version: '1.0.0',
+        },
+        paths: {},
+      })
+
+      expect(result.$schema).toBe('http://json-schema.org/draft-07/schema#')
+    })
+  })
+
+  describe('binary format handling with oneOf', () => {
+    it('correctly handles format: binary in oneOf schemas', () => {
+      const result: OpenAPIV3_1.Document = upgradeFromThreeToThreeOne({
+        openapi: '3.0.0',
+        info: {
+          title: 'Hello World',
+          version: '1.0.0',
+        },
+        paths: {
+          '/images/edits': {
+            post: {
+              requestBody: {
+                required: true,
+                content: {
+                  'multipart/form-data': {
+                    schema: {
+                      type: 'object',
+                      required: ['model', 'prompt'],
+                      properties: {
+                        model: {
+                          type: 'string',
+                          enum: ['Kolors'],
+                        },
+                        image: {
+                          oneOf: [
+                            {
+                              type: 'string',
+                              format: 'binary',
+                            },
+                            {
+                              type: 'string',
+                            },
+                          ],
+                        },
+                        prompt: {
+                          type: 'string',
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      })
+
+      expect(
+        result.paths?.['/images/edits']?.post?.requestBody?.content['multipart/form-data'].schema.properties.image
+          .oneOf[0],
+      ).toStrictEqual({
+        contentMediaType: 'application/octet-stream',
+      })
+    })
+  })
+
+  describe('webhooks', () => {
+    it('correctly upgrades x-webhooks to webhooks', () => {
+      const result: OpenAPIV3_1.Document = upgradeFromThreeToThreeOne({
+        openapi: '3.0.0',
+        info: {
+          title: 'Hello World',
+          version: '1.0.0',
+        },
+        'x-webhooks': {
+          'test': {
+            post: {
+              requestBody: {
+                required: true,
+                content: {
+                  'multipart/form-data': {
+                    schema: {
+                      type: 'string',
+                      example: 'test',
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      })
+
+      expect(result['webhooks']).toEqual({
+        'test': {
+          post: {
+            requestBody: {
+              required: true,
+              content: {
+                'multipart/form-data': {
+                  schema: {
+                    type: 'string',
+                    examples: ['test'],
+                  },
+                },
+              },
+            },
+          },
+        },
+      })
+    })
+  })
+})

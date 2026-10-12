@@ -1,0 +1,377 @@
+import { getFirstMediaType } from '@scalar/helpers/http/get-first-media-type';
+import { parseMimeType } from '@scalar/helpers/http/mime-type';
+import { getResolvedRef } from '@scalar/workspace-store/helpers/get-resolved-ref';
+import { getResolvedRefDeep } from '@scalar/workspace-store/helpers/get-resolved-ref-deep';
+import Ajv2020 from 'ajv/dist/2020.js';
+import addFormats from 'ajv-formats';
+import { getCookie } from 'hono/cookie';
+import { deserializeArrayParameter, deserializeObjectParameter, getObjectPropertyNames, isArraySchema, isObjectSchema, resolveSerialization, } from './deserialize-parameter.js';
+import { findQuerystringParameter, getQuerystringJsonSchema, parseQuerystringParameter } from './querystring-parameter.js';
+import { replaceCircularMarkers } from './replace-circular-markers.js';
+/**
+ * Prepare a resolved schema for Ajv by replacing the `'[circular]'` markers a recursive schema leaves
+ * behind. Ajv refuses to compile a schema that still carries one, which makes the body — or the whole
+ * parameter location built around it — fail open.
+ *
+ * Only Ajv sees this copy. Everything that reads the *shape* of a schema keeps reading the resolved
+ * one, because the rewrite may drop a keyword (a `oneOf` the cycle ran through, say) that the shape
+ * still depends on.
+ */
+const asCompilableSchema = (resolved) => replaceCircularMarkers(resolved);
+/**
+ * Header parameters named `Accept`, `Content-Type`, or `Authorization` are defined elsewhere in
+ * OpenAPI (through `content` and `security`), so the spec says such parameter definitions SHALL be
+ * ignored. We compare case-insensitively because header names are case-insensitive.
+ */
+const IGNORED_HEADER_PARAMETERS = new Set(['accept', 'content-type', 'authorization']);
+/**
+ * Collapse a `key -> string[]` map (as returned by Hono's `c.req.queries()`) into a `key -> string |
+ * string[]` map: a single value becomes a plain string, while repeated keys keep their array so
+ * array-valued object properties are not silently truncated to the first value.
+ */
+const mapRepeatedValues = (values) => {
+    const map = {};
+    for (const [key, list] of Object.entries(values)) {
+        map[key] = list.length > 1 ? list : (list[0] ?? '');
+    }
+    return map;
+};
+/**
+ * Build a JSON Schema object for the parameters declared `in` the given location, alongside a
+ * descriptor for each declared parameter.
+ *
+ * Parameters arrive as strings, so the caller compiles these with `coerceTypes: true` to let
+ * `type: integer`/`boolean` validate correctly. The descriptors let the middleware gather only
+ * declared values and deserialize array parameters by their `style`/`explode`. Returns `null` when
+ * there is nothing to validate.
+ */
+const buildParameterSchema = (parameters, location) => {
+    const properties = {};
+    const required = [];
+    const descriptors = [];
+    for (const parameterOrRef of parameters ?? []) {
+        const parameter = getResolvedRef(parameterOrRef);
+        if (parameter?.in !== location) {
+            continue;
+        }
+        // Per the OpenAPI spec, these header parameters are defined elsewhere and ignored as parameters.
+        if (location === 'header' && IGNORED_HEADER_PARAMETERS.has(parameter.name.toLowerCase())) {
+            continue;
+        }
+        const resolvedSchema = parameter.schema
+            ? getResolvedRefDeep(parameter.schema)
+            : undefined;
+        const { style, explode } = resolveSerialization(location, parameter.style, parameter.explode);
+        // Property names let exploded `form` objects be gathered from matching top-level query keys. They
+        // are collected through any `anyOf`/`oneOf`/`allOf` composition so a composed object schema does not
+        // fall back to free-form gathering and claim unrelated keys.
+        const propertyNames = getObjectPropertyNames(resolvedSchema);
+        descriptors.push({
+            name: parameter.name,
+            style,
+            explode,
+            isArray: isArraySchema(resolvedSchema),
+            isObject: isObjectSchema(resolvedSchema),
+            propertyNames,
+        });
+        if (resolvedSchema) {
+            properties[parameter.name] = asCompilableSchema(resolvedSchema);
+        }
+        if (parameter.required) {
+            required.push(parameter.name);
+        }
+    }
+    if (Object.keys(properties).length === 0 && required.length === 0) {
+        return null;
+    }
+    // Allow undeclared parameters to pass through; we only enforce what the operation declares.
+    return { schema: { type: 'object', properties, required, additionalProperties: true }, parameters: descriptors };
+};
+/**
+ * Merge path-item-level parameters with operation-level parameters.
+ *
+ * OpenAPI allows declaring `parameters` on the path item, where they apply to every operation under
+ * it. Operation-level parameters override path-item ones that share the same name and location.
+ */
+const mergeParameters = (pathItemParameters, operationParameters) => {
+    const byKey = new Map();
+    // Guard against malformed documents where `parameters` is not an array.
+    const pathItemList = Array.isArray(pathItemParameters) ? pathItemParameters : [];
+    const operationList = Array.isArray(operationParameters) ? operationParameters : [];
+    // Path-item parameters come first so that operation-level entries overwrite them by identity.
+    for (const parameterOrRef of [...pathItemList, ...operationList]) {
+        const parameter = getResolvedRef(parameterOrRef);
+        if (!parameter?.name || !parameter.in) {
+            continue;
+        }
+        byKey.set(`${parameter.in}:${parameter.name}`, parameterOrRef);
+    }
+    return [...byKey.values()];
+};
+/**
+ * Compile a single schema, failing open if it cannot compile.
+ *
+ * A malformed or uncompilable schema must not crash the server: we log and skip validation for that
+ * part only, consistent with how `x-seed` errors are swallowed during setup. Each schema is compiled
+ * in isolation so one broken schema never disables the others.
+ */
+const compileSchema = (ajv, schema, label) => {
+    if (schema === null || schema === undefined) {
+        return null;
+    }
+    try {
+        return ajv.compile(schema);
+    }
+    catch (error) {
+        console.error(`Error compiling ${label} validator, skipping validation for it:`, error);
+        return null;
+    }
+};
+/**
+ * Compile the validators for a single operation once, so they can be reused on every request.
+ */
+const compileValidators = (operation, pathItemParameters) => {
+    // Coerce string parameters to their declared types (integer, boolean, …).
+    const parameterAjv = new Ajv2020({ strict: false, allErrors: true, coerceTypes: true });
+    addFormats(parameterAjv);
+    // Do not coerce the JSON body; a JSON value already carries its type and coercion would mask errors.
+    const bodyAjv = new Ajv2020({ strict: false, allErrors: true });
+    addFormats(bodyAjv);
+    // Path-item parameters apply to every operation, so fold them in before building the schemas.
+    const parameters = mergeParameters(pathItemParameters, operation.parameters);
+    const pathParameters = buildParameterSchema(parameters, 'path');
+    const queryParameters = buildParameterSchema(parameters, 'query');
+    const headerParameters = buildParameterSchema(parameters, 'header');
+    const cookieParameters = buildParameterSchema(parameters, 'cookie');
+    const querystringParameter = findQuerystringParameter(operation, pathItemParameters);
+    const [querystringContentType, querystringMedia] = getFirstMediaType(querystringParameter?.content) ?? [];
+    const querystringSchema = querystringMedia?.schema;
+    const requestBody = getResolvedRef(operation.requestBody);
+    // Build the body schema defensively; resolving a malformed `$ref` should not crash setup.
+    let bodySchema = null;
+    try {
+        const jsonSchema = getResolvedRef(requestBody?.content?.['application/json'])?.schema;
+        bodySchema = jsonSchema ? asCompilableSchema(getResolvedRefDeep(jsonSchema)) : null;
+    }
+    catch (error) {
+        console.error('Error resolving request body schema, skipping body validation:', error);
+    }
+    return {
+        querystringParameter,
+        querystringJson: compileSchema(bodyAjv, getQuerystringJsonSchema(querystringParameter), 'querystring JSON properties'),
+        querystring: compileSchema(parseMimeType(querystringContentType).essence === 'application/x-www-form-urlencoded' ? parameterAjv : bodyAjv, querystringSchema === undefined ? null : asCompilableSchema(getResolvedRefDeep(querystringSchema)), 'querystring parameter'),
+        path: compileSchema(parameterAjv, pathParameters?.schema ?? null, 'path parameter'),
+        query: compileSchema(parameterAjv, queryParameters?.schema ?? null, 'query parameter'),
+        header: compileSchema(parameterAjv, headerParameters?.schema ?? null, 'header parameter'),
+        cookie: compileSchema(parameterAjv, cookieParameters?.schema ?? null, 'cookie parameter'),
+        pathParameters: pathParameters?.parameters ?? [],
+        queryParameters: queryParameters?.parameters ?? [],
+        headerParameters: headerParameters?.parameters ?? [],
+        cookieParameters: cookieParameters?.parameters ?? [],
+        body: compileSchema(bodyAjv, bodySchema, 'request body'),
+        // Required-body enforcement is independent of whether the body schema compiles.
+        bodyRequired: requestBody?.required === true,
+    };
+};
+/**
+ * Map Ajv errors into our violation shape. For non-body parameters (path, query, header, cookie) the
+ * offending parameter name is prepended to the message so the response is readable without
+ * cross-referencing the pointer.
+ */
+const mapErrors = (errors, location) => (errors ?? []).map((error) => {
+    const missingProperty = typeof error.params === 'object' && error.params && 'missingProperty' in error.params
+        ? String(error.params.missingProperty)
+        : '';
+    const path = error.instancePath || (missingProperty ? `/${missingProperty}` : '');
+    // A missing parameter surfaces as a top-level `required` error whose `missingProperty` is the
+    // parameter name. Phrase it as "<name> is required" instead of the confusing, self-referential
+    // "<name> must have required property '<name>'" that Ajv produces against the synthetic wrapper.
+    if (location !== 'body' && missingProperty && !error.instancePath) {
+        return { location, path, message: `${missingProperty} is required` };
+    }
+    const name = error.instancePath.replace(/^\//, '') || missingProperty;
+    const message = location !== 'body' && name ? `${name} ${error.message ?? ''}`.trim() : (error.message ?? '');
+    return { location, path, message };
+});
+/**
+ * Detect whether the request body should be treated as JSON. We only validate JSON bodies in this
+ * slice; an empty/absent Content-Type is treated as JSON to stay forgiving. This intentionally
+ * mirrors how `build-handler-context` parses the body, so we never validate a body the handler then
+ * fails to deliver as `req.body`.
+ */
+const isJsonRequest = (c) => {
+    const contentType = c.req.header('Content-Type')?.toLowerCase() ?? '';
+    return contentType === '' || contentType.includes('application/json');
+};
+/**
+ * Create a Hono middleware bound to a single resolved operation that enforces its request contract.
+ *
+ * Validators are compiled once here (at route-setup time) and reused on every request. On any
+ * violation the middleware short-circuits with a `422` and a `application/problem+json` body;
+ * otherwise it calls `next()` and the normal mock handler runs.
+ *
+ * TODO: Parity follow-ups, intentionally deferred — response validation, non-JSON body validation,
+ * and validation proxy mode.
+ */
+export const validateRequest = (operation, pathItemParameters) => {
+    const validators = compileValidators(operation, pathItemParameters);
+    return async (c, next) => {
+        const violations = [];
+        /**
+         * Gather declared parameter values for one location into a plain object for validation. Array and
+         * object parameters are deserialized by their `style`/`explode`; everything else is read as a
+         * single string. Values are looked up by declared name (rather than dumping every request value)
+         * so header names match case-insensitively and only declared parameters are enforced.
+         *
+         * `getValues` (repeated query keys) is only supplied for the query location, where exploded arrays
+         * need it. `getMap` returns the full key/value map for the location and is supplied for query and
+         * cookie, where exploded-`form` objects (and query `deepObject`) spread properties across keys —
+         * for cookies each object property is its own cookie (`Cookie: r=100; g=200`).
+         */
+        const gather = (descriptors, getValue, getValues, getMap) => {
+            // Names of every declared parameter in this location, so a free-form exploded object does not
+            // swallow a sibling parameter's key (e.g. a required free-form object satisfied by `?limit=5`).
+            const declaredNames = new Set(descriptors.map((descriptor) => descriptor.name));
+            const readAsObject = (descriptor) => deserializeObjectParameter({
+                style: descriptor.style,
+                explode: descriptor.explode,
+                single: getValue(descriptor.name),
+                map: getMap?.(),
+                name: descriptor.name,
+                propertyNames: descriptor.propertyNames,
+                reservedKeys: declaredNames,
+            });
+            const readAsArray = (descriptor) => deserializeArrayParameter({
+                style: descriptor.style,
+                explode: descriptor.explode,
+                single: getValue(descriptor.name),
+                multi: getValues?.(descriptor.name),
+            });
+            const data = {};
+            for (const descriptor of descriptors) {
+                let value;
+                if (descriptor.isArray && descriptor.isObject) {
+                    // A schema composed with `anyOf`/`oneOf`/`allOf` can look like both an array and an object, and
+                    // form encoding cannot say which the client meant. Prefer a non-empty array — that only happens
+                    // when the request carries the parameter's own (possibly repeated) key — and fall back to the
+                    // object reading otherwise. This parses array-style input (`?filter=1&filter=2`) as an array while
+                    // still letting object-style input (properties spread across other keys) be gathered as an object.
+                    // A lone empty value (`?filter=`) deserializes to `[]`, which is not array-shaped input, so it must
+                    // not short-circuit the object fallback; the empty array is only kept when no object value is found.
+                    const asArray = readAsArray(descriptor);
+                    value = Array.isArray(asArray) && asArray.length > 0 ? asArray : (readAsObject(descriptor) ?? asArray);
+                }
+                else if (descriptor.isObject) {
+                    value = readAsObject(descriptor);
+                }
+                else if (descriptor.isArray) {
+                    value = readAsArray(descriptor);
+                }
+                else {
+                    value = getValue(descriptor.name);
+                }
+                if (value !== undefined) {
+                    data[descriptor.name] = value;
+                }
+            }
+            return data;
+        };
+        // Validate each parameter location with its own request accessors. Values are coerced from strings.
+        // The differences between locations are only the accessors:
+        //  - query supplies `getValues` (repeated keys feed exploded arrays) and a `getMap` that keeps
+        //    repeated keys as arrays, so an array-valued object property (`filter[tags]=a&filter[tags]=b`)
+        //    survives deserialization;
+        //  - cookie supplies a `getMap` (each exploded `form` object property is its own cookie);
+        //  - header names are matched case-insensitively by Hono's `c.req.header`.
+        const parameterLocations = [
+            {
+                validator: validators.path,
+                descriptors: validators.pathParameters,
+                location: 'path',
+                getValue: (name) => c.req.param(name),
+            },
+            {
+                validator: validators.query,
+                descriptors: validators.queryParameters,
+                location: 'query',
+                getValue: (name) => c.req.query(name),
+                getValues: (name) => c.req.queries(name),
+                getMap: () => mapRepeatedValues(c.req.queries()),
+            },
+            {
+                validator: validators.header,
+                descriptors: validators.headerParameters,
+                location: 'header',
+                getValue: (name) => c.req.header(name),
+            },
+            {
+                validator: validators.cookie,
+                descriptors: validators.cookieParameters,
+                location: 'cookie',
+                getValue: (name) => getCookie(c, name),
+                getMap: () => getCookie(c),
+            },
+        ];
+        for (const { validator, descriptors, location, getValue, getValues, getMap } of parameterLocations) {
+            if (!validator) {
+                continue;
+            }
+            const data = gather(descriptors, getValue, getValues, getMap);
+            if (!validator(data)) {
+                violations.push(...mapErrors(validator.errors, location));
+            }
+        }
+        if (validators.querystringParameter) {
+            try {
+                const value = parseQuerystringParameter(c.req.url, validators.querystringParameter);
+                if (value === undefined) {
+                    if (validators.querystringParameter.required) {
+                        violations.push({ location: 'query', path: '', message: 'Query string is required' });
+                    }
+                }
+                else if (validators.querystringJson && !validators.querystringJson(value)) {
+                    violations.push(...mapErrors(validators.querystringJson.errors, 'query'));
+                }
+                else if (validators.querystring && !validators.querystring(value)) {
+                    violations.push(...mapErrors(validators.querystring.errors, 'query'));
+                }
+            }
+            catch {
+                violations.push({ location: 'query', path: '', message: 'Query string could not be decoded' });
+            }
+        }
+        // Request body — only `application/json` in this slice
+        if (validators.body || validators.bodyRequired) {
+            // Read from a clone so the original request stream stays intact for the mock or `x-handler`
+            // downstream. Consuming `c.req.text()` directly would leave `c.req.parseBody()` (used for
+            // form bodies) unable to reconstruct the body, so handlers would see it as undefined.
+            const raw = await c.req.raw.clone().text();
+            if (!raw) {
+                if (validators.bodyRequired) {
+                    violations.push({ location: 'body', path: '', message: 'Request body is required' });
+                }
+            }
+            else if (validators.body && isJsonRequest(c)) {
+                try {
+                    const parsed = JSON.parse(raw);
+                    if (!validators.body(parsed)) {
+                        violations.push(...mapErrors(validators.body.errors, 'body'));
+                    }
+                }
+                catch {
+                    // The client sent a non-empty JSON body that cannot be parsed, so it cannot satisfy the
+                    // schema regardless of whether the body is required.
+                    violations.push({ location: 'body', path: '', message: 'Request body must be valid JSON' });
+                }
+            }
+        }
+        if (violations.length > 0) {
+            // Use `c.body` (not `c.json`) so the `application/problem+json` content type is preserved;
+            // `c.json` would force `application/json`.
+            return c.body(JSON.stringify({ error: 'Request validation failed', violations }), 422, {
+                'Content-Type': 'application/problem+json',
+            });
+        }
+        await next();
+    };
+};

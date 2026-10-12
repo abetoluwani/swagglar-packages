@@ -1,0 +1,7 @@
+{
+  "extends": "../../tsconfig.json",
+  "include": ["src", "playground"],
+  "compilerOptions": {
+    "types": ["node"]
+  }
+}

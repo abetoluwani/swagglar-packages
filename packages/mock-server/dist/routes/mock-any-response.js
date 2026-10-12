@@ -1,0 +1,144 @@
+import { isXmlMediaType } from '@scalar/helpers/http/is-xml-media-type';
+import { getResolvedRef } from '@scalar/workspace-store/helpers/get-resolved-ref';
+import { getResolvedRefDeep } from '@scalar/workspace-store/helpers/get-resolved-ref-deep';
+import { getExampleFromSchema, getXmlBodyExample } from '@scalar/workspace-store/request-example';
+import { streamSSE } from 'hono/streaming';
+import { collectSseEvents, isEventStreamContentType } from '../utils/collect-sse-events.js';
+import { findPreferredResponseKey } from '../utils/find-preferred-response-key.js';
+import { generateResponseExample } from '../utils/generate-response-example.js';
+import { negotiateContentType } from '../utils/negotiate-content-type.js';
+import { normalizeResponseBody } from '../utils/normalize-response-body.js';
+import { parsePreferHeader } from '../utils/parse-prefer-header.js';
+import { pathParameters } from '../utils/path-parameters.js';
+import { selectResponseExample } from '../utils/select-response-example.js';
+import { serializeResponseBody } from '../utils/serialize-response-body.js';
+import { getStreamingResponse, sendStreamingResponse } from '../utils/streaming-response.js';
+/**
+ * Mock any response
+ */
+export function mockAnyResponse(c, operation, openapiVersion) {
+    // Note: the `onRequest` callback runs as middleware (see `create-mock-server`) so it also fires
+    // for requests rejected before reaching this handler.
+    // Parse the Prefer header (RFC 7240) so clients can request a specific
+    // response status (`code=`) and named example (`example=`).
+    const prefer = parsePreferHeader(c.req.header('Prefer'));
+    // Response selection:
+    // 1. An explicit `Prefer: code=<status>` that matches a defined response
+    // 2. Otherwise the preferred key (default, 200, 201 …)
+    // An unknown `code=` is ignored and falls back to the preferred key.
+    const preferredResponseKey = findPreferredResponseKey(Object.keys(operation.responses ?? {}));
+    const responseKey = prefer.code && operation.responses?.[prefer.code] ? prefer.code : preferredResponseKey;
+    const selectedResponse = responseKey ? getResolvedRef(operation.responses?.[responseKey]) : null;
+    if (!selectedResponse) {
+        c.status(500);
+        return c.json({ error: 'No response defined for this operation.' });
+    }
+    // Status code. `default` and range patterns like `2XX` map to their lowest concrete code (e.g. 200).
+    const statusCode = Number.parseInt(responseKey && responseKey !== 'default' ? responseKey.replace(/XX$/i, '00') : '200', 10);
+    // Headers
+    const headers = selectedResponse?.headers ?? {};
+    Object.keys(headers).forEach((header) => {
+        const headerObject = getResolvedRef(headers[header]);
+        // Headers need `includeDeprecated` but none of `generateResponseExample`'s other options — see
+        // the note on that helper for why passing them would change what declared headers emit.
+        const value = headerObject?.schema
+            ? getExampleFromSchema(getResolvedRefDeep(headerObject.schema), { includeDeprecated: true })
+            : null;
+        // Loose check on purpose: Hono *deletes* a header when handed `undefined`. This loop is the first
+        // thing to set the declared headers, so in practice a delete removes a header set earlier by
+        // middleware — `cors()` sets `Access-Control-Allow-Origin` before the handler runs.
+        if (value != null) {
+            c.header(header, value);
+        }
+    });
+    // For 204 No Content responses, we should not set Content-Type and should return null body
+    if (statusCode === 204) {
+        c.status(statusCode);
+        return c.body(null);
+    }
+    const supportedContentTypes = Object.keys(selectedResponse?.content ?? {});
+    // If no content types are defined, return the status with no body
+    if (supportedContentTypes.length === 0) {
+        c.status(statusCode);
+        return c.body(null);
+    }
+    // Content-Type
+    const acceptedContentType = negotiateContentType(c, selectedResponse.content);
+    c.header('Content-Type', acceptedContentType);
+    const acceptedResponse = selectedResponse?.content?.[acceptedContentType];
+    const streamingResponse = getStreamingResponse(acceptedResponse, acceptedContentType, {
+        exampleName: prefer.example,
+        variables: pathParameters(c),
+    });
+    if (streamingResponse) {
+        c.status(statusCode);
+        return sendStreamingResponse(c, streamingResponse);
+    }
+    const responseSchema = acceptedResponse?.schema ? getResolvedRefDeep(acceptedResponse.schema) : undefined;
+    /** Generates the response body from the schema, or returns `undefined` when there is no schema. */
+    const generateFromSchema = () => responseSchema ? generateResponseExample(responseSchema, pathParameters(c)) : undefined;
+    // Server-Sent Events are a framed, multi-event wire format, so they cannot go out as one buffered
+    // body: a client reading the stream expects `data:` lines terminated by a blank line. Everything
+    // else (JSON, XML, text) keeps taking the single-body path below.
+    if (isEventStreamContentType(acceptedContentType)) {
+        const events = collectSseEvents(acceptedResponse, {
+            exampleName: prefer.example,
+            generate: generateFromSchema,
+        });
+        c.status(statusCode);
+        // `streamSSE` sets the transport headers itself (`Content-Type`, `Cache-Control`, `Connection`,
+        // `Transfer-Encoding`), so those win over a value the document declared for the same header —
+        // they are what makes the stream readable. Every other declared header set above survives.
+        return streamSSE(c, async (stream) => {
+            for (const event of events) {
+                if (event.framed) {
+                    await stream.write(event.text);
+                }
+                else {
+                    await stream.writeSSE({ data: event.text });
+                }
+            }
+        });
+    }
+    // Body: a named/singular/first example if one is defined, otherwise generate
+    // a value from the schema. `Prefer: example=<name>` picks a named example.
+    const selectedExample = selectResponseExample(acceptedResponse, prefer.example);
+    c.status(statusCode);
+    if (isXmlMediaType(acceptedContentType)) {
+        const result = getXmlBodyExample(acceptedResponse?.schema, selectedExample, {
+            openapiVersion,
+            emptyString: 'string',
+            variables: pathParameters(c),
+            mode: 'read',
+        });
+        const error = result.diagnostics.find((diagnostic) => diagnostic.severity === 'error');
+        if (error) {
+            c.header('X-Scalar-XML-Error', error.code);
+        }
+        return result.xml === undefined ? c.body(null) : c.body(result.xml);
+    }
+    const provenance = selectedExample?.provenance;
+    const body = (() => {
+        if (selectedExample) {
+            return provenance ? selectedExample.value : normalizeResponseBody(selectedExample.value, responseSchema);
+        }
+        if (!responseSchema) {
+            return null;
+        }
+        const generated = generateFromSchema();
+        // Schema-level examples are authored values too, so retain their array normalization.
+        if (responseSchema.example !== undefined ||
+            (Array.isArray(responseSchema.examples) && responseSchema.examples.length)) {
+            return normalizeResponseBody(generated, responseSchema);
+        }
+        // The generator already chooses the value shape, including root union branches.
+        // Re-inferring it from sibling items would wrap a selected primitive in an array.
+        return generated;
+    })();
+    const serializedBody = serializeResponseBody(body, acceptedContentType, responseSchema, provenance);
+    // `JSON.stringify` returns `undefined` for an `undefined` body, which is an empty response.
+    if (serializedBody === undefined) {
+        return c.body(null);
+    }
+    return c.body(serializedBody);
+}

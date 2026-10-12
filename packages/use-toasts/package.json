@@ -1,0 +1,56 @@
+{
+  "name": "@scalar/use-toasts",
+  "description": "display toasts in Vue",
+  "license": "MIT",
+  "author": "Scalar (https://github.com/scalar)",
+  "homepage": "https://github.com/scalar/scalar",
+  "bugs": "https://github.com/scalar/scalar/issues/new/choose",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scalar/scalar.git",
+    "directory": "packages/use-toasts"
+  },
+  "keywords": [
+    "composable",
+    "notifcation",
+    "toast",
+    "vue",
+    "vue3"
+  ],
+  "version": "0.10.5",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "vite build && vue-tsc -p tsconfig.build.json",
+    "dev": "vite",
+    "preview": "vite preview",
+    "test": "vitest --run",
+    "types:check": "vue-tsc --noEmit"
+  },
+  "type": "module",
+  "main": "dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "CHANGELOG.md"
+  ],
+  "dependencies": {
+    "vue": "catalog:*",
+    "vue-sonner": "^1.3.2"
+  },
+  "devDependencies": {
+    "@scalar/themes": "workspace:*",
+    "@vitejs/plugin-vue": "catalog:*",
+    "@vue/test-utils": "catalog:*",
+    "vite": "catalog:*",
+    "vite-plugin-css-injected-by-js": "catalog:*",
+    "vitest": "catalog:*"
+  }
+}

@@ -1,0 +1,1 @@
+{"version":3,"file":"powershell.d.ts","sourceRoot":"","sources":["../../src/libs/powershell.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,UAAU,EAAE,mBAAmB,EAAE,MAAM,wBAAwB,CAAA;AAO7E,2EAA2E;AAC3E,eAAO,MAAM,kBAAkB,GAC7B,SAAS,mBAAmB,GAAG,mBAAmB,EAClD,UAAS,OAAO,CAAC,UAAU,CAAM,EACjC,gBAAgB,mBAAmB,KAClC,MAqCF,CAAA"}

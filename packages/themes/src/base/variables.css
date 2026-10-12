@@ -1,0 +1,153 @@
+:root {
+  --scalar-border-width: 0.5px;
+
+  /**
+   * The radius scale derives from --scalar-radius, so overriding that single variable rescales
+   * every corner in the UI. Setting it to 0 makes the whole interface square.
+   *
+   * Override --scalar-radius on :root. A custom property substitutes var() at the element where it
+   * is declared, so setting the base further down the tree (on .scalar-app, say) moves the base
+   * without moving anything derived from it.
+   *
+   * Any individual token may still be overridden on its own to break the ratio.
+   */
+  --scalar-radius: 3px;
+
+  /**
+   * Ceiling for the corners of anything that holds content.
+   *
+   * A large --scalar-radius must not curve a tall container so hard that it swallows what is inside
+   * it, which is what turns a dropdown into a crescent and a code block into a stadium. Every token
+   * below clamps to this, so pushing the base radius up rounds a component until it stops making
+   * sense, then stops.
+   *
+   * The ceiling sits above --scalar-radius-3xl, the largest step in the scale, so it never touches a
+   * default value. Only --scalar-radius-full is exempt, since a pill is supposed to run away.
+   */
+  --scalar-radius-max: 20px;
+
+  --scalar-radius-md: min(var(--scalar-radius), var(--scalar-radius-max)); /* 3px */
+  --scalar-radius-lg: min(calc(var(--scalar-radius) * 2), var(--scalar-radius-max)); /* 6px */
+  --scalar-radius-xl: min(calc(var(--scalar-radius) * 8 / 3), var(--scalar-radius-max)); /* 8px */
+  --scalar-radius-2xl: min(calc(var(--scalar-radius) * 4), var(--scalar-radius-max)); /* 12px */
+  --scalar-radius-3xl: min(calc(var(--scalar-radius) * 16 / 3), var(--scalar-radius-max)); /* 16px */
+  --scalar-radius-full: calc(var(--scalar-radius) * 9999); /* pill, deliberately uncapped */
+
+  /* TYPOGRAPHY ------------------------------------ */
+  --scalar-font:
+    "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji";
+  --scalar-font-code:
+    "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+  /** Font sizes for rendered text content (editor styles or static content) */
+  --scalar-heading-1: 24px; /* Editor Page heading */
+  --scalar-page-description: 16px;
+  --scalar-heading-2: 20px; /* Editor section headings */
+  --scalar-heading-3: 16px;
+  --scalar-heading-4: 16px;
+  --scalar-heading-5: 16px;
+  --scalar-heading-6: 16px;
+
+  --scalar-paragraph: 16px;
+  --scalar-small: 14px;
+  --scalar-mini: 13px;
+  --scalar-micro: 12px;
+  --scalar-bold: 600;
+  --scalar-semibold: 500;
+  --scalar-regular: 400;
+
+  /* Font sizes for interactive applications (not rendered text content) */
+  --scalar-font-size-1: 21px;
+  --scalar-font-size-2: 16px;
+  --scalar-font-size-3: 14px;
+  --scalar-font-size-4: 13px;
+  --scalar-font-size-5: 12px;
+  --scalar-font-size-6: 12px;
+  --scalar-font-size-7: 10px;
+
+  --scalar-line-height-1: 32px;
+  --scalar-line-height-2: 24px;
+  --scalar-line-height-3: 20px;
+  --scalar-line-height-4: 18px;
+  --scalar-line-height-5: 16px;
+
+  --scalar-font-normal: 400;
+  --scalar-font-medium: 500;
+  --scalar-font-bold: 700;
+
+  --scalar-text-decoration: none;
+  --scalar-text-decoration-hover: underline;
+  --scalar-link-font-weight: inherit;
+
+  --scalar-sidebar-indent: 20px;
+  --scalar-sidebar-padding: 12px;
+}
+
+.dark-mode {
+  color-scheme: dark;
+  --scalar-scrollbar-color: rgba(255, 255, 255, 0.18);
+  --scalar-scrollbar-color-active: rgba(255, 255, 255, 0.36);
+  --scalar-button-1: rgba(255, 255, 255, 1);
+  --scalar-button-1-hover: rgba(255, 255, 255, 0.9);
+  --scalar-button-1-color: black;
+
+  --scalar-shadow-1: 0 1px 3px 0 rgb(0, 0, 0, 0.1);
+  --scalar-shadow-2:
+    0 0 0 0.5px var(--scalar-border-color), rgba(15, 15, 15, 0.2) 0px 3px 6px, rgba(15, 15, 15, 0.4) 0px 9px 24px;
+
+  --scalar-lifted-brightness: 1.45;
+  --scalar-backdrop-brightness: 0.5;
+
+  --scalar-text-decoration-color: currentColor;
+  --scalar-text-decoration-color-hover: currentColor;
+}
+.light-mode {
+  color-scheme: light;
+  --scalar-scrollbar-color-active: rgba(0, 0, 0, 0.36);
+  --scalar-scrollbar-color: rgba(0, 0, 0, 0.18);
+  --scalar-button-1: rgba(0, 0, 0, 1);
+  --scalar-button-1-hover: rgba(0, 0, 0, 0.8);
+  --scalar-button-1-color: #fff;
+
+  --scalar-shadow-1: 0 1px 3px 0 rgba(0, 0, 0, 0.11);
+  --scalar-shadow-2: rgba(0, 0, 0, 0.08) 0px 13px 20px 0px, rgba(0, 0, 0, 0.08) 0px 3px 8px 0px, #eeeeed 0px 0 0 0.5px;
+
+  --scalar-lifted-brightness: 1;
+  --scalar-backdrop-brightness: 1;
+
+  --scalar-text-decoration-color: currentColor;
+  --scalar-text-decoration-color-hover: currentColor;
+}
+/* On some browsers, the light color scheme takes precedence when the light mode is active */
+.light-mode .dark-mode {
+  color-scheme: dark !important;
+}
+@media (max-width: 460px) {
+  :root {
+    --scalar-font-size-1: 22px;
+    --scalar-font-size-2: 14px;
+    --scalar-font-size-3: 12px;
+  }
+}
+
+@media (max-width: 720px) {
+  :root {
+    --scalar-heading-1: 24px;
+    --scalar-page-description: 20px;
+  }
+}
+
+/**
+ * Firefox snaps box-shadow geometry to whole device pixels, so on standard-DPI screens the 0.5px
+ * hairline rounds down to zero and shadow-border outlines disappear entirely. Use a full pixel in
+ * Firefox below retina density. The -moz-appearance supports query only matches in Gecko, so other
+ * engines (which antialias the half pixel into a faint line) keep the hairline everywhere.
+ */
+@media (max-resolution: 1.5dppx) {
+  @supports (-moz-appearance: none) {
+    :root {
+      --scalar-border-width: 1px;
+    }
+  }
+}
